@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 12 — Condensadores</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 16</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="index.html"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="aux_1.html"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="aux_2.html"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="aux_3.html"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="aux_4.html"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="aux_5.html"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="aux_6.html"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="aux_7.html"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="aux_8.html"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="aux_9.html"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="aux_10.html"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="aux_11.html"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link active" href="aux_12.html"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="aux_13.html"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="aux_14.html"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="aux_15.html"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="aux_16.html"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 4</div>
+    <div class="unit-pill u4 bg-u4">Dieléctricos · Aux 12–14</div>
+    <h1>Auxiliar 12: Condensadores con Dieléctricos</h1>
+    <p class="desc">Cómo los materiales dieléctricos modifican la capacitancia, la energía almacenada y las fuerzas en un condensador. Casos de inserción parcial y geometrías mixtas.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Capacitancia con dieléctrico: $C = \varepsilon_r C_0$</li>
+        <li>Energía almacenada: $U = Q^2/(2C) = \frac{1}{2}CV^2$</li>
+        <li>Condensador con dieléctrico parcialmente insertado</li>
+        <li>Fuerza sobre el dieléctrico como derivada de la energía</li>
+        <li>Condensadores en serie y paralelo con dieléctricos distintos</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Efecto del dieléctrico</h3>
+        <p>El dieléctrico se polariza y sus cargas superficiales reducen el campo interno efectivo. Esto permite almacenar más carga al mismo voltaje, aumentando $C$ por un factor $\varepsilon_r > 1$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>A carga fija vs voltaje fijo</h3>
+        <p>Si se inserta el dieléctrico a $Q$ fija: $V$ disminuye, $C$ aumenta, $U$ disminuye. Si se inserta a $V$ fijo: $Q$ aumenta, $C$ aumenta, $U$ aumenta. La batería aporta o recibe energía.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Dieléctrico parcialmente insertado</h3>
+        <p>El condensador se modela como dos condensadores en paralelo: uno con dieléctrico ($\varepsilon_r$) y uno sin él. La fuerza sobre el dieléctrico surge del gradiente de energía.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Fuerza = −dU/dx</h3>
+        <p>La fuerza sobre el dieléctrico es $F = -dU/dx$ a carga constante, o $F = +dU/dx$ a voltaje constante (incluyendo energía de la fuente). En ambos casos el dieléctrico es atraído hacia dentro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Capacitancia con dieléctrico</div>
+      <div class="formula-math">$$C = \varepsilon_r\,\varepsilon_0\,\frac{A}{d} \qquad (\text{placas paralelas})$$</div>
+      <div class="formula-desc">
+        $\varepsilon_r = \varepsilon/\varepsilon_0$ es la permitividad relativa del material. Para geometrías cilíndricas o esféricas, se reemplaza $\varepsilon_0$ por $\varepsilon = \varepsilon_r\varepsilon_0$ en la fórmula correspondiente.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Energía almacenada</div>
+      <div class="formula-math">$$U = \frac{Q^2}{2C} = \frac{1}{2}CV^2 = \frac{1}{2}QV$$</div>
+      <div class="formula-desc">
+        Equivalentemente: $U = \frac{\varepsilon}{2}\int E^2\,dV$ (densidad de energía $u = \frac{1}{2}\varepsilon E^2$).
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Dieléctrico parcialmente insertado (a voltaje V fijo)</div>
+      <div class="formula-math">$$C(x) = \frac{\varepsilon_0 b}{d}\left[\varepsilon_r\,x + (L - x)\right] \quad\Rightarrow\quad F = \frac{V^2}{2}\frac{dC}{dx} = \frac{\varepsilon_0(\varepsilon_r - 1)bV^2}{2d}$$</div>
+      <div class="formula-desc">
+        <code>x</code> longitud insertada · <code>b</code> ancho de las placas · <code>L</code> largo total. La fuerza es positiva (entra el dieléctrico).
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Cuándo usar qué expresión de energía</div>
+      <ul>
+        <li>A carga constante ($Q$ fija): $U = Q^2/(2C)$ → la energía disminuye al insertar el dieléctrico → fuerza hacia adentro.</li>
+        <li>A voltaje constante ($V$ fijo): $U = \frac{1}{2}CV^2$ → la energía aumenta, pero la batería hace trabajo extra que más que compensa.</li>
+        <li>En ambos casos la fuerza resultante atrae el dieléctrico hacia el interior del condensador.</li>
+        <li>Para calcular la fuerza: derivar $U$ respecto a la posición del dieléctrico (con cuidado del signo y qué se mantiene constante).</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="aux_11.html"><div class="nav-dir">← Anterior</div><div class="nav-title">Dipolos</div></a>
+    <a href="aux_13.html" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Dieléctricos</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 10 — Pre-control</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 16</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="index.html"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="aux_1.html"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="aux_2.html"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="aux_3.html"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="aux_4.html"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="aux_5.html"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="aux_6.html"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="aux_7.html"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="aux_8.html"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="aux_9.html"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link active" href="aux_10.html"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="aux_11.html"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="aux_12.html"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="aux_13.html"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="aux_14.html"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="aux_15.html"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="aux_16.html"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 3</div>
+    <div class="unit-pill u3 bg-u3">Pre-control y Dipolos · Aux 10–11</div>
+    <h1>Auxiliar 10: Pre-control</h1>
+    <p class="desc">Problemas integradores de tipo control que combinan Laplace, Poisson, condiciones de borde y el análisis completo de distribuciones de carga a partir de un potencial dado.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Obtener $\mathbf{E}$ y $\rho$ a partir de un potencial $V(\mathbf{r})$ dado</li>
+        <li>Verificar si $V$ satisface Laplace o Poisson en diferentes regiones</li>
+        <li>Condiciones de borde en interfaces: continuidad de $V$ y discontinuidad de $E_n$</li>
+        <li>Modelo del átomo de hidrógeno: distribución de carga nube electrónica</li>
+        <li>Problemas de geometrías asimétricas con potencial conocido</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>De V a ρ</h3>
+        <p>Dado $V$, se obtiene $\mathbf{E} = -\nabla V$ y luego $\rho = \varepsilon_0 \nabla \cdot \mathbf{E} = -\varepsilon_0 \nabla^2 V$. Esto permite "leer" la distribución de carga directamente del potencial.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Laplace vs Poisson por región</h3>
+        <p>Un potencial puede satisfacer Laplace en algunas regiones (vacío) y Poisson en otras (donde hay carga). El Laplaciano discrimina automáticamente dónde hay carga.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Condiciones de borde</h3>
+        <p>En una interfaz: el potencial $V$ es continuo siempre. La componente normal de $\mathbf{E}$ tiene una discontinuidad de $\sigma/\varepsilon_0$ si hay carga superficial.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Unicidad</h3>
+        <p>La solución de Poisson/Laplace es única si se conocen las condiciones de borde. Esto justifica que cualquier $V$ que satisfaga la ecuación y las condiciones es <em>la</em> solución.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Resumen: de V a todo</div>
+      <div class="formula-math">$$\mathbf{E} = -\nabla V \quad\Rightarrow\quad \rho = -\varepsilon_0\,\nabla^2 V \quad\Rightarrow\quad \sigma = \varepsilon_0(E_{n,\text{ext}} - E_{n,\text{int}})$$</div>
+      <div class="formula-desc">
+        Esta cadena permite extraer toda la información física de la distribución de cargas a partir de la función potencial.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Condiciones de borde en interfaz</div>
+      <div class="formula-math">$$V_1 = V_2 \qquad \varepsilon_0(E_{2n} - E_{1n}) = \sigma_{\text{libre}}$$</div>
+      <div class="formula-desc">
+        La componente tangencial de $\mathbf{E}$ siempre es continua. La normal salta en $\sigma/\varepsilon_0$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Laplaciano en esféricas (simetría esférica)</div>
+      <div class="formula-math">$$\nabla^2 V = \frac{1}{r^2}\frac{d}{dr}\!\left(r^2\frac{dV}{dr}\right)$$</div>
+      <div class="formula-desc">
+        Útil para potenciales de la forma $V(r)$. Si $V = A/r + B$, entonces $\nabla^2 V = 0$ para $r \neq 0$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia tipo control</div>
+      <ul>
+        <li>Si dan $V$: deriva para obtener $\mathbf{E}$, luego aplica divergencia para $\rho$. Identifica las regiones.</li>
+        <li>Verifica condiciones de borde en todas las interfaces: $V$ continuo, $E_n$ con salto $\sigma/\varepsilon_0$.</li>
+        <li>El potencial de un conductor es constante → el campo dentro es cero → $\rho$ interna es cero.</li>
+        <li>Un potencial físicamente válido debe ser finito en todo punto (excepto en la posición exacta de una carga puntual).</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="aux_9.html"><div class="nav-dir">← Anterior</div><div class="nav-title">Método de Carga Imagen</div></a>
+    <a href="aux_11.html" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Dipolos</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

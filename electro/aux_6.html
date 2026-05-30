@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 6 — Conductores</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 16</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="index.html"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="aux_1.html"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="aux_2.html"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="aux_3.html"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="aux_4.html"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="aux_5.html"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link active" href="aux_6.html"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="aux_7.html"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="aux_8.html"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="aux_9.html"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="aux_10.html"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="aux_11.html"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="aux_12.html"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="aux_13.html"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="aux_14.html"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="aux_15.html"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="aux_16.html"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 2</div>
+    <div class="unit-pill u2 bg-u2">Potencial y conductores · Aux 4–9</div>
+    <h1>Auxiliar 6: Conductores</h1>
+    <p class="desc">Propiedades electrostáticas de los conductores en equilibrio: campo nulo en su interior, carga solo en superficie y campo perpendicular al salir.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Las 4 propiedades de un conductor en equilibrio</li>
+        <li>Conductores con cavidades internas</li>
+        <li>Inducción de carga en las superficies interior y exterior</li>
+        <li>Campo eléctrico en la superficie: $\mathbf{E} = \sigma/\varepsilon_0\,\hat{n}$</li>
+        <li>Densidades superficiales de carga y su cálculo</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>E = 0 en el interior</h3>
+        <p>En equilibrio, los electrones libres se redistribuyen hasta anular el campo interno. Si hubiera campo, los electrones seguirían moviéndose, contradiciendo el equilibrio.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Carga en la superficie</h3>
+        <p>Por Gauss: si $\mathbf{E}=0$ en el interior, una superficie gaussiana justo dentro del conductor encierra carga cero. Toda carga libre queda en la superficie.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Conductor con cavidad</h3>
+        <p>Si hay una carga $q$ en la cavidad, la superficie interior acumula $-q$ (inducida) y la exterior $+q$ (si el conductor era neutro). El campo exterior es idéntico al de carga $+q$ puntual.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Campo en la superficie</h3>
+        <p>Justo fuera del conductor, $\mathbf{E}$ es perpendicular a la superficie y vale $\sigma/\varepsilon_0$. Las zonas puntiagudas tienen $\sigma$ grande → campo intenso (efecto corona).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Propiedades de conductor en equilibrio</div>
+      <div class="formula-math">$$\mathbf{E}_{\text{int}} = 0 \quad|\quad \rho_{\text{int}} = 0 \quad|\quad V = \text{cte} \quad|\quad \mathbf{E}_{\text{sup}} = \frac{\sigma}{\varepsilon_0}\hat{n}$$</div>
+      <div class="formula-desc">
+        Estas cuatro condiciones son equivalentes entre sí y se deducen unas de otras usando Gauss y la relación $\mathbf{E} = -\nabla V$.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Carga inducida en cavidad</div>
+      <div class="formula-math">$$q_{\text{sup. interior}} = -q_{\text{en cavidad}}$$</div>
+      <div class="formula-desc">
+        Por Gauss aplicado a una superficie dentro del conductor (donde $\mathbf{E}=0$): el flujo es cero, luego $Q_{\text{enc}} = 0$, es decir, $q_{\text{cavidad}} + q_{\text{sup. int}} = 0$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Secuencia lógica para resolver problemas con conductores</div>
+      <ul>
+        <li>Aplica Gauss con superficie dentro del conductor ($\mathbf{E}=0$) para determinar carga inducida en la cavidad interior.</li>
+        <li>La carga total del conductor se conserva: $q_{\text{ext}} = q_{\text{total}} - q_{\text{int}}$.</li>
+        <li>El potencial del conductor es constante (desconocido, a determinar por condiciones de borde).</li>
+        <li>El campo fuera solo depende de la distribución exterior; el campo en la cavidad solo de la carga dentro de ella.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="aux_5.html"><div class="nav-dir">← Anterior</div><div class="nav-title">Potencial y Conductores</div></a>
+    <a href="aux_7.html" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Conductores y Laplace</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

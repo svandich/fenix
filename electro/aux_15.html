@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 15 — Corrientes y Resistencias</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 16</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="index.html"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="aux_1.html"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="aux_2.html"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="aux_3.html"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="aux_4.html"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="aux_5.html"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="aux_6.html"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="aux_7.html"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="aux_8.html"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="aux_9.html"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="aux_10.html"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="aux_11.html"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="aux_12.html"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="aux_13.html"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="aux_14.html"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link active" href="aux_15.html"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="aux_16.html"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 5</div>
+    <div class="unit-pill u5 bg-u5">Corrientes y circuitos · Aux 15–16</div>
+    <h1>Auxiliar 15: Corrientes y Resistencias</h1>
+    <p class="desc">El campo eléctrico no solo ejerce fuerza: en medios conductores crea corriente. Esta unidad conecta los conceptos electrostáticos con la física del transporte de cargas.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Densidad de corriente $\mathbf{J}$ y corriente total $I = \int\mathbf{J}\cdot d\mathbf{S}$</li>
+        <li>Ley de Ohm local: $\mathbf{J} = \sigma_c\mathbf{E}$ (conductividad $\sigma_c$, no confundir con densidad de carga)</li>
+        <li>Ecuación de continuidad: $\nabla\cdot\mathbf{J} = -\partial\rho/\partial t$</li>
+        <li>Estado estacionario: $\nabla\cdot\mathbf{J} = 0$</li>
+        <li>Resistencia $R = V/I$ para geometrías simples y complejas</li>
+        <li>Potencia disipada: efecto Joule $P = \int\mathbf{E}\cdot\mathbf{J}\,dV = I^2R$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Densidad de corriente J</h3>
+        <p>$\mathbf{J}$ [A/m²] es el flujo de carga por unidad de área. La corriente $I$ que pasa por una superficie es el flujo de $\mathbf{J}$ a través de ella. El sentido positivo es el de movimiento de cargas positivas.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ley de Ohm local</h3>
+        <p>$\mathbf{J} = \sigma_c\mathbf{E}$ es la versión diferencial de $V = RI$. La conductividad $\sigma_c = 1/\rho_r$ (resistividad) depende del material y la temperatura, no de $I$ ni $V$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ecuación de continuidad</h3>
+        <p>Expresa la conservación local de carga: la corriente que sale de un volumen iguala la tasa de disminución de carga dentro. En estado estacionario, no hay acumulación: $\nabla\cdot\mathbf{J} = 0$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Efecto Joule</h3>
+        <p>Cuando $\mathbf{J}$ fluye con $\mathbf{E}$, el campo hace trabajo sobre las cargas que se disipa como calor. La densidad de potencia es $p = \mathbf{E}\cdot\mathbf{J} = \sigma_c E^2 = J^2/\sigma_c$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Corriente y densidad de corriente</div>
+      <div class="formula-math">$$I = \int_S \mathbf{J}\cdot d\mathbf{S} \qquad \mathbf{J} = \sigma_c\,\mathbf{E} \qquad [J] = \text{A/m}^2$$</div>
+      <div class="formula-desc">
+        $\sigma_c$ [S/m] es la conductividad eléctrica del material. No confundir con la densidad superficial de carga $\sigma$ [C/m²].
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Ecuación de continuidad</div>
+      <div class="formula-math">$$\nabla\cdot\mathbf{J} = -\frac{\partial\rho}{\partial t} \qquad \xrightarrow{\text{estacionario}} \qquad \nabla\cdot\mathbf{J} = 0$$</div>
+      <div class="formula-desc">
+        En estado estacionario, las líneas de $\mathbf{J}$ son cerradas (conservación de carga). Condición de borde: $J_{1n} = J_{2n}$ en interfaces (sin acumulación).
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Resistencia de conductor cilíndrico</div>
+      <div class="formula-math">$$R = \frac{\rho_r\,\ell}{A} = \frac{\ell}{\sigma_c\,A}$$</div>
+      <div class="formula-desc">
+        $\rho_r$ = resistividad [Ω·m] · $\ell$ = longitud · $A$ = área de sección transversal. Para geometrías complejas se integra $R = \int d\ell / (\sigma_c A)$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Potencia disipada — efecto Joule</div>
+      <div class="formula-math">$$P = \int_V \mathbf{E}\cdot\mathbf{J}\,dV = I^2R = V^2/R = VI$$</div>
+      <div class="formula-desc">
+        Unidad: W = J/s. Esta potencia se convierte íntegramente en calor en una resistencia pura.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Analogía con electrostática</div>
+      <ul>
+        <li>$\nabla\cdot\mathbf{J} = 0$ ↔ $\nabla\cdot\mathbf{E} = 0$ (Laplace): ambas son ecuaciones de flujo conservativo.</li>
+        <li>$\mathbf{J} = \sigma_c\mathbf{E}$ ↔ $\mathbf{D} = \varepsilon\mathbf{E}$: misma estructura matemática, distintas constantes de proporcionalidad.</li>
+        <li>Las condiciones de borde son análogas: $J_{n}$ continua ↔ $D_{n}$ continua (sin cargas libres).</li>
+        <li>Para calcular $R$: encuentra $\mathbf{E}$ a partir de Gauss o simetría, luego $V = -\int\mathbf{E}\cdot d\boldsymbol{\ell}$ e $I = \int\mathbf{J}\cdot d\mathbf{S}$, finalmente $R = V/I$.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="aux_14.html"><div class="nav-dir">← Anterior</div><div class="nav-title">Dieléctricos II</div></a>
+    <a href="aux_16.html" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Circuitos</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

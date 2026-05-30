@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 5 — Potencial y Conductores</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 16</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="index.html"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="aux_1.html"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="aux_2.html"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="aux_3.html"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="aux_4.html"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link active" href="aux_5.html"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="aux_6.html"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="aux_7.html"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="aux_8.html"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="aux_9.html"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="aux_10.html"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="aux_11.html"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="aux_12.html"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="aux_13.html"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="aux_14.html"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="aux_15.html"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="aux_16.html"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 2</div>
+    <div class="unit-pill u2 bg-u2">Potencial y conductores · Aux 4–9</div>
+    <h1>Auxiliar 5: Potencial Eléctrico y Conductores</h1>
+    <p class="desc">Introducción a las ecuaciones de Poisson y Laplace, y primeros encuentros con conductores: inducción de cargas, energía potencial y conductores como superficies equipotenciales.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Ecuación de Poisson: $\nabla^2 V = -\rho/\varepsilon_0$</li>
+        <li>Ecuación de Laplace: $\nabla^2 V = 0$ (en regiones sin carga)</li>
+        <li>Conductores: $V$ constante en todo el volumen</li>
+        <li>Carga inducida en superficies conductoras</li>
+        <li>Energía potencial $U = qV$ de una carga en un campo externo</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Ecuación de Poisson</h3>
+        <p>Es la versión diferencial de toda la electrostática: combina $\mathbf{E} = -\nabla V$ con $\nabla\cdot\mathbf{E} = \rho/\varepsilon_0$. Resolver Poisson nos da $V$ en todo el espacio.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ecuación de Laplace</h3>
+        <p>Caso especial de Poisson cuando $\rho = 0$. Sus soluciones son llamadas funciones armónicas y satisfacen el principio del valor medio: $V$ no tiene máximos ni mínimos locales.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Conductor = equipotencial</h3>
+        <p>En equilibrio, $\mathbf{E} = 0$ dentro del conductor, por lo que $\nabla V = 0$ y $V$ es constante. Toda la carga libre se redistribuye en la superficie.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Inducción de carga</h3>
+        <p>Una carga externa polariza el conductor: la cara más cercana acumula carga opuesta y la lejana carga del mismo signo, manteniendo $V$ constante en el conductor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Ecuación de Poisson</div>
+      <div class="formula-math">$$\nabla^2 V = -\frac{\rho}{\varepsilon_0}$$</div>
+      <div class="formula-desc">
+        Relación fundamental entre el potencial y la distribución de carga. Con condiciones de borde adecuadas, determina $V$ únicamente (teorema de unicidad).
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Ecuación de Laplace</div>
+      <div class="formula-math">$$\nabla^2 V = 0 \quad (\text{donde } \rho = 0)$$</div>
+      <div class="formula-desc">
+        En coordenadas esféricas con simetría azimutal: $V(r,\theta) = \sum_\ell (A_\ell r^\ell + B_\ell/r^{\ell+1})\,P_\ell(\cos\theta)$.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Energía potencial de una carga</div>
+      <div class="formula-math">$$U(\mathbf{r}) = qV(\mathbf{r})$$</div>
+      <div class="formula-desc">
+        Trabajo necesario para traer la carga $q$ desde infinito hasta $\mathbf{r}$. La fuerza es $\mathbf{F} = -\nabla U = q\mathbf{E}$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Poisson vs Laplace</div>
+      <ul>
+        <li>Poisson se usa donde hay carga: $\rho \neq 0$ (interior de un volumen cargado).</li>
+        <li>Laplace se usa donde no hay carga libre: el espacio vacío entre conductores.</li>
+        <li>En un conductor en equilibrio: $\mathbf{E} = 0$ dentro, $V$ = constante, $\rho = 0$ en el interior.</li>
+        <li>Las condiciones de borde ($V$ dado en las superficies) son lo que determina la solución única de Laplace.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="aux_4.html"><div class="nav-dir">← Anterior</div><div class="nav-title">Potencial Eléctrico</div></a>
+    <a href="aux_6.html" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Conductores</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

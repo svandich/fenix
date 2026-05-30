@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 1 — Campo Eléctrico</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 16</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="index.html"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link active" href="aux_1.html"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="aux_2.html"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="aux_3.html"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="aux_4.html"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="aux_5.html"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="aux_6.html"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="aux_7.html"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="aux_8.html"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="aux_9.html"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="aux_10.html"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="aux_11.html"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="aux_12.html"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="aux_13.html"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="aux_14.html"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="aux_15.html"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="aux_16.html"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 1</div>
+    <div class="unit-pill u1 bg-u1">Campo eléctrico · Aux 1–3</div>
+    <h1>Auxiliar 1: Campo Eléctrico</h1>
+    <p class="desc">Cálculo del campo eléctrico para distribuciones discretas y continuas de carga usando la Ley de Coulomb y el principio de superposición.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Ley de Coulomb: fuerza entre cargas puntuales</li>
+        <li>Principio de superposición del campo eléctrico</li>
+        <li>Densidades de carga: lineal $\lambda$, superficial $\sigma$, volumétrica $\rho$</li>
+        <li>Cálculo del campo por integración sobre distribuciones continuas</li>
+        <li>Equilibrio electrostático de cargas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Ley de Coulomb</h3>
+        <p>Toda carga puntual $q'$ crea un campo en el espacio. El campo en $\mathbf{r}$ debido a una carga en $\mathbf{r}'$ apunta desde $q'$ hacia el punto de observación y decae como $1/r^2$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Superposición</h3>
+        <p>El campo total de un conjunto de cargas es la suma vectorial de los campos individuales. Esto permite calcular distribuciones complejas sumando (o integrando) contribuciones.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Densidades de carga</h3>
+        <p>Para objetos extensos, la carga se distribuye en el espacio. Se usan $\lambda$ [C/m] para hilos, $\sigma$ [C/m²] para superficies, y $\rho$ [C/m³] para volúmenes.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Integración vectorial</h3>
+        <p>Cada elemento $dq$ contribuye $d\mathbf{E}$ al campo total. Se integra cada componente por separado; la simetría del problema suele cancelar algunas componentes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Ley de Coulomb — campo de carga puntual</div>
+      <div class="formula-math">$$\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0}\,\frac{q}{\|\mathbf{r}-\mathbf{r}'\|^2}\,\hat{r}_{rr'}$$</div>
+      <div class="formula-desc">
+        <code>q</code> carga fuente · <code>r</code> punto de observación · <code>r'</code> posición de la carga ·
+        <code>ε₀ = 8.85×10⁻¹² C²/N·m²</code>
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Campo de distribución continua</div>
+      <div class="formula-math">$$\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0}\int \frac{\rho(\mathbf{r}')}{|\mathbf{r}-\mathbf{r}'|^2}\,\hat{r}_{rr'}\,dV'$$</div>
+      <div class="formula-desc">
+        Reemplaza $\rho\,dV'$ por $\sigma\,dA'$ (superficie) o $\lambda\,d\ell'$ (línea) según la distribución.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Fuerza sobre una carga de prueba</div>
+      <div class="formula-math">$$\mathbf{F} = Q\,\mathbf{E}$$</div>
+      <div class="formula-desc">
+        <code>Q</code> carga de prueba · <code>E</code> campo evaluado en su posición.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para resolver problemas</div>
+      <ul>
+        <li>Dibuja el sistema: identifica la simetría antes de integrar.</li>
+        <li>Define un elemento diferencial de carga $dq$ en coordenadas adecuadas.</li>
+        <li>Escribe $d\mathbf{E}$ para ese elemento y argumenta qué componentes se cancelan por simetría.</li>
+        <li>Integra solo la componente sobreviviente. El resultado debe ser vectorial.</li>
+        <li>Verifica dimensiones: $[\mathbf{E}]$ = N/C = V/m.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="index.html"><div class="nav-dir">← Volver</div><div class="nav-title">Temario general</div></a>
+    <a href="aux_2.html" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Ley de Gauss</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
