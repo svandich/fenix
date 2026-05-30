@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas de Clase — UChile Plan Común</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body { display: block; }
+
+    .landing {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 24px 72px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    .course-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px 24px;
+      text-decoration: none;
+      color: var(--text);
+      display: block;
+      transition: border-color 0.15s, background 0.15s;
+      border-top-width: 3px;
+    }
+
+    .course-card:hover { background: var(--bg-card-2); }
+
+    .course-card--electro { border-top-color: var(--unit-1); }
+    .course-card--termo   { border-top-color: var(--unit-3); }
+
+    .card-icon {
+      font-size: 28px;
+      line-height: 1;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .card-status {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-top: 18px;
+    }
+
+    .status--done {
+      background: rgba(63, 185, 80, 0.12);
+      color: var(--unit-2);
+    }
+
+    .status--wip {
+      background: rgba(210, 153, 34, 0.12);
+      color: var(--unit-3);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-item .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-dimmed);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .meta-item .value {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+<div class="landing">
+
+  <div class="hero">
+    <div class="hero-tag">UChile · Plan Común</div>
+    <h1>Notas de Clase</h1>
+    <p>Hecho con IA, para salvar el semestre.</p>
+  </div>
+
+  <div class="course-grid">
+    <a class="course-card course-card--electro" href="electro/index.html">
+      <span class="card-icon">⚡</span>
+      <div class="card-title u1">Electromagnetismo</div>
+      <div class="card-desc">16 auxiliares · Campo eléctrico, potencial, conductores, dipolos, dieléctricos y circuitos</div>
+      <span class="card-status status--done">Completo</span>
+    </a>
+
+    <a class="course-card course-card--termo" href="termo/index.html">
+      <span class="card-icon">⚛️</span>
+      <div class="card-title u3">Termodinámica</div>
+      <div class="card-desc">12 auxiliares · Gas ideal, teoría cinética, primera y segunda ley, entropía</div>
+      <span class="card-status status--wip">En construcción</span>
+    </a>
+  </div>
+
+  <div class="meta">
+    <div class="meta-item">
+      <span class="label">Prompteado por</span>
+      <span class="value">Dmitri</span>
+    </div>
+    <div class="meta-item">
+      <span class="label">Basado en</span>
+      <span class="value">Clases de Clerc · Auxiliares de Electro</span>
+    </div>
+    <div class="meta-item">
+      <span class="label">Semestre</span>
+      <span class="value">Otoño 2026</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
