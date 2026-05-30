@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 8 — Capacidad Calórica</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Auxiliares 1 – 12</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="index.html"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="aux_1.html"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="aux_2.html"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="aux_3.html"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="aux_4.html"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="aux_5.html"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="aux_6.html"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="aux_7.html"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link active" href="aux_8.html"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="aux_9.html"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="aux_10.html"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="aux_11.html"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="aux_12.html"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 3</div>
+    <div class="unit-pill u3 bg-u3">Primera Ley · Aux 6–8</div>
+    <h1>Auxiliar 8: Capacidad Calórica</h1>
+    <p class="desc">Cuánto calor necesita un sistema para subir un grado de temperatura, cómo depende del proceso (a volumen o presión constante), y la relación $C_P - C_V = Nk_B$ para gas ideal.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Definición de capacidad calórica: $C = \bar{\delta}Q / dT$</li>
+        <li>Capacidad calórica a volumen constante: $C_V = (\partial U/\partial T)_V$</li>
+        <li>Capacidad calórica a presión constante: $C_P = C_V + Nk_B$</li>
+        <li>Razón de capacidades: $\gamma = C_P/C_V$</li>
+        <li>Gas ideal monoatómico: $C_V = \frac{3}{2}Nk_B$; diatómico: $C_V = \frac{5}{2}Nk_B$</li>
+        <li>Proceso adiabático reversible: $PV^\gamma = \text{cte}$</li>
+        <li>La energía interna del gas ideal no depende del volumen</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Capacidad calórica a $V$ constante, $C_V$</h3>
+        <p>Al calentar a volumen constante, no hay trabajo ($\bar{\delta}W = 0$), así que todo el calor va a energía interna: $\bar{\delta}Q = dU$. Por eso $C_V = (\partial U/\partial T)_V$. Para gas ideal monoatómico: $C_V = \frac{3}{2}Nk_B$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Capacidad calórica a $P$ constante, $C_P$</h3>
+        <p>Al calentar a presión constante, el gas también se expande y realiza trabajo. Se necesita más calor que en el proceso isocórico: $C_P > C_V$. La diferencia $C_P - C_V = Nk_B$ corresponde exactamente al trabajo de expansión.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Razón $\gamma = C_P/C_V$</h3>
+        <p>Para gas monoatómico: $\gamma = \frac{5/2}{3/2} = \frac{5}{3} \approx 1.67$. Para diatómico (con rotación): $\gamma = \frac{7/2}{5/2} = \frac{7}{5} = 1.4$. Este parámetro controla la pendiente de las adiabáticas en el diagrama $P$-$V$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Proceso adiabático</h3>
+        <p>Cuando $\bar{\delta}Q = 0$ y el proceso es reversible, la temperatura cambia con el volumen siguiendo $TV^{\gamma-1} = \text{cte}$ y $PV^\gamma = \text{cte}$. La adiabática es más empinada que la isotérmica en el diagrama $P$-$V$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Capacidad calórica a volumen constante</div>
+      <div class="formula-math">$$C_V = \left(\frac{\partial U}{\partial T}\right)_V \qquad \xrightarrow{\text{gas ideal monoatómico}} \quad C_V = \frac{3}{2}Nk_B$$</div>
+      <div class="formula-desc">
+        Gas diatómico (con rotación): $C_V = \frac{5}{2}Nk_B$.
+        El subíndice $V$ indica que el volumen se mantiene fijo durante la derivada.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Relación de Mayer (gas ideal)</div>
+      <div class="formula-math">$$C_P = C_V + Nk_B$$</div>
+      <div class="formula-desc">
+        Válida para cualquier gas ideal. La diferencia $Nk_B$ es el trabajo de expansión a presión constante:
+        $P\,\Delta V = Nk_B\,\Delta T$ (de la ecuación de estado).
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Ley de proceso adiabático reversible</div>
+      <div class="formula-math">$$PV^\gamma = \text{cte} \qquad TV^{\gamma-1} = \text{cte} \qquad T^\gamma P^{1-\gamma} = \text{cte}$$</div>
+      <div class="formula-desc">
+        $\gamma = C_P/C_V > 1$. Las tres formas son equivalentes (se derivan usando $PV = Nk_BT$).
+        La adiabática siempre tiene mayor pendiente que la isotérmica en el diagrama $P$-$V$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Razón de capacidades</div>
+      <div class="formula-math">$$\gamma = \frac{C_P}{C_V} = \frac{C_V + Nk_B}{C_V} = 1 + \frac{Nk_B}{C_V}$$</div>
+      <div class="formula-desc">
+        Monoatómico: $\gamma = 5/3$ · Diatómico (a temperatura moderada): $\gamma = 7/5 = 1.4$ · Poliatómico: $\gamma \to 1$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de la capacidad calórica</div>
+      <ul>
+        <li>$C_P > C_V$ siempre: a presión constante el gas tiene que "pagar" trabajo extra para expandirse.</li>
+        <li>Para el gas ideal $C_V$ no depende de $T$ (a temperaturas moderadas). Esto es consecuencia de que $U = \frac{3}{2}Nk_BT$ es lineal en $T$.</li>
+        <li>El número de grados de libertad determina $C_V$: cada grado de libertad aporta $\frac{1}{2}Nk_B$. Monoatómico: 3 traslacionales; diatómico: 3 traslacionales + 2 rotacionales = 5.</li>
+        <li>Para derivar $PV^\gamma = \text{cte}$: usar $dU = \bar{\delta}W$ (adiabático) + $dU = C_V\,dT$ + $PV = Nk_BT$.</li>
+        <li>La adiabática es más "dura" que la isotérmica: al comprimir adiabáticamente, la presión sube más porque la temperatura también sube.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="aux_7.html"><div class="nav-dir">← Anterior</div><div class="nav-title">Procesos Termodinámicos</div></a>
+    <a href="aux_9.html" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Segunda Ley: Clausius y Kelvin</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
