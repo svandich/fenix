@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aux 5 — Distribución de Maxwell</title>
+  <title>Cát. 5 — Distribución de Maxwell</title>
   <link rel="stylesheet" href="../styles/main.css">
   <script>
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
@@ -16,7 +16,7 @@
   <div class="sidebar-header">
     <a class="sidebar-logo" href="index.html">
       <span class="icon">⚛️</span>
-      <div><div class="name">Termodinámica</div><div class="subtitle">Auxiliares 1 – 12</div></div>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1 – 12</div></div>
     </a>
   </div>
   <div class="sidebar-nav">
@@ -48,7 +48,7 @@
   <div class="page-header">
     <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 2</div>
     <div class="unit-pill u2 bg-u2">Clase complementaria · Unidad 2</div>
-    <h1>Auxiliar 5: Distribución de Maxwell</h1>
+    <h1>Cátedra 5: Distribución de Maxwell</h1>
     <p class="desc">Distribución estadística de velocidades en un gas ideal en equilibrio: no todas las partículas tienen la misma rapidez, sino que siguen una distribución característica que depende de $T$ y $m$.</p>
   </div>
 
@@ -93,7 +93,7 @@
 
     <div class="formula-block u2">
       <div class="formula-label">Distribución de Maxwell-Boltzmann para una componente</div>
-      <div class="formula-math">$$f(v_x) = \sqrt{\frac{m}{2\pi k_BT}}\,\exp\!\left(-\frac{mv_x^2}{2k_BT}\right)$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_5_1.svg" alt=""></div>
       <div class="formula-desc">
         Gaussiana centrada en cero · $\int_{-\infty}^{\infty} f(v_x)\,dv_x = 1$.
         El ancho es $\sigma = \sqrt{k_BT/m}$: crece con $T$ y disminuye con $m$.
@@ -102,7 +102,7 @@
 
     <div class="formula-block u2">
       <div class="formula-label">Distribución de Maxwell para la rapidez</div>
-      <div class="formula-math">$$f(v) = 4\pi n\left(\frac{m}{2\pi k_BT}\right)^{3/2} v^2\,\exp\!\left(-\frac{mv^2}{2k_BT}\right)$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_5_2.svg" alt=""></div>
       <div class="formula-desc">
         $f(v)\,dv$ = fracción de partículas con rapidez entre $v$ y $v+dv$.
         El factor $v^2$ refleja el volumen del espacio de velocidades en coordenadas esféricas.
@@ -111,7 +111,7 @@
 
     <div class="formula-block u2">
       <div class="formula-label">Velocidades características</div>
-      <div class="formula-math">$$v_p = \sqrt{\frac{2k_BT}{m}} \quad \langle v\rangle = \sqrt{\frac{8k_BT}{\pi m}} \quad v_{\text{rms}} = \sqrt{\frac{3k_BT}{m}}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_5_3.svg" alt=""></div>
       <div class="formula-desc">
         Relación: $v_p : \langle v\rangle : v_{\text{rms}} = 1 : \sqrt{4/\pi} : \sqrt{3/2} \approx 1 : 1.13 : 1.22$.
         Las tres escalan como $\sqrt{T/m}$.
@@ -120,7 +120,7 @@
 
     <div class="formula-block u2">
       <div class="formula-label">Ley de efusión de Graham</div>
-      <div class="formula-math">$$\frac{r_1}{r_2} = \sqrt{\frac{m_2}{m_1}}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_5_4.svg" alt=""></div>
       <div class="formula-desc">
         $r$ tasa de efusión (partículas por unidad de tiempo).
         Gas más liviano ($m_1 < m_2$) efunde más rápido ($r_1 > r_2$).

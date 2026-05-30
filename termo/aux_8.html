@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aux 8 — Capacidad Calórica</title>
+  <title>Cát. 8 — Capacidad Calórica</title>
   <link rel="stylesheet" href="../styles/main.css">
   <script>
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
@@ -16,7 +16,7 @@
   <div class="sidebar-header">
     <a class="sidebar-logo" href="index.html">
       <span class="icon">⚛️</span>
-      <div><div class="name">Termodinámica</div><div class="subtitle">Auxiliares 1 – 12</div></div>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1 – 12</div></div>
     </a>
   </div>
   <div class="sidebar-nav">
@@ -47,8 +47,8 @@
 
   <div class="page-header">
     <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 3</div>
-    <div class="unit-pill u3 bg-u3">Primera Ley · Aux 6–8</div>
-    <h1>Auxiliar 8: Capacidad Calórica</h1>
+    <div class="unit-pill u3 bg-u3">Primera Ley · Cát. 6–8</div>
+    <h1>Cátedra 8: Capacidad Calórica</h1>
     <p class="desc">Cuánto calor necesita un sistema para subir un grado de temperatura, cómo depende del proceso (a volumen o presión constante), y la relación $C_P - C_V = Nk_B$ para gas ideal.</p>
   </div>
 
@@ -94,7 +94,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Capacidad calórica a volumen constante</div>
-      <div class="formula-math">$$C_V = \left(\frac{\partial U}{\partial T}\right)_V \qquad \xrightarrow{\text{gas ideal monoatómico}} \quad C_V = \frac{3}{2}Nk_B$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_8_1.svg" alt=""></div>
       <div class="formula-desc">
         Gas diatómico (con rotación): $C_V = \frac{5}{2}Nk_B$.
         El subíndice $V$ indica que el volumen se mantiene fijo durante la derivada.
@@ -103,7 +103,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Relación de Mayer (gas ideal)</div>
-      <div class="formula-math">$$C_P = C_V + Nk_B$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_8_2.svg" alt=""></div>
       <div class="formula-desc">
         Válida para cualquier gas ideal. La diferencia $Nk_B$ es el trabajo de expansión a presión constante:
         $P\,\Delta V = Nk_B\,\Delta T$ (de la ecuación de estado).
@@ -112,7 +112,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Ley de proceso adiabático reversible</div>
-      <div class="formula-math">$$PV^\gamma = \text{cte} \qquad TV^{\gamma-1} = \text{cte} \qquad T^\gamma P^{1-\gamma} = \text{cte}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_8_3.svg" alt=""></div>
       <div class="formula-desc">
         $\gamma = C_P/C_V > 1$. Las tres formas son equivalentes (se derivan usando $PV = Nk_BT$).
         La adiabática siempre tiene mayor pendiente que la isotérmica en el diagrama $P$-$V$.
@@ -121,7 +121,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Razón de capacidades</div>
-      <div class="formula-math">$$\gamma = \frac{C_P}{C_V} = \frac{C_V + Nk_B}{C_V} = 1 + \frac{Nk_B}{C_V}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_8_4.svg" alt=""></div>
       <div class="formula-desc">
         Monoatómico: $\gamma = 5/3$ · Diatómico (a temperatura moderada): $\gamma = 7/5 = 1.4$ · Poliatómico: $\gamma \to 1$.
       </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aux 11 — Mecánica Estadística y Función de Partición</title>
+  <title>Cát. 11 — Mecánica Estadística y Función de Partición</title>
   <link rel="stylesheet" href="../styles/main.css">
   <script>
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
@@ -16,7 +16,7 @@
   <div class="sidebar-header">
     <a class="sidebar-logo" href="index.html">
       <span class="icon">⚛️</span>
-      <div><div class="name">Termodinámica</div><div class="subtitle">Auxiliares 1 – 12</div></div>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1 – 12</div></div>
     </a>
   </div>
   <div class="sidebar-nav">
@@ -48,7 +48,7 @@
   <div class="page-header">
     <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 5</div>
     <div class="unit-pill u5 bg-u5">Clase complementaria · Unidad 5</div>
-    <h1>Auxiliar 11: Mecánica Estadística y Función de Partición</h1>
+    <h1>Cátedra 11: Mecánica Estadística y Función de Partición</h1>
     <p class="desc">Fundamentos estadísticos de la termodinámica: microestados, macroestados, la entropía de Boltzmann, y la función de partición como herramienta para calcular todas las propiedades termodinámicas.</p>
   </div>
 
@@ -94,7 +94,7 @@
 
     <div class="formula-block u5">
       <div class="formula-label">Entropía de Boltzmann</div>
-      <div class="formula-math">$$S = k_B\ln\Omega$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_11_1.svg" alt=""></div>
       <div class="formula-desc">
         $\Omega$ número de microestados compatibles con el macroestado · $k_B = 1.38\times10^{-23}$ J/K.
         Esta fórmula está grabada en la lápida de Boltzmann en Viena.
@@ -103,7 +103,7 @@
 
     <div class="formula-block u5">
       <div class="formula-label">Distribución de Boltzmann (ensamble canónico)</div>
-      <div class="formula-math">$$p_i = \frac{e^{-\epsilon_i/k_BT}}{Z} \qquad Z = \sum_j e^{-\epsilon_j/k_BT}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_11_2.svg" alt=""></div>
       <div class="formula-desc">
         $p_i$ probabilidad del microestado $i$ con energía $\epsilon_i$ · $Z$ función de partición (factor de normalización).
       </div>
@@ -111,7 +111,7 @@
 
     <div class="formula-block u5">
       <div class="formula-label">Energía interna desde la función de partición</div>
-      <div class="formula-math">$$U = -\frac{\partial \ln Z}{\partial \beta} \qquad \text{con} \quad \beta = \frac{1}{k_BT}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_11_3.svg" alt=""></div>
       <div class="formula-desc">
         Equivalentemente: $U = k_BT^2\,\dfrac{\partial \ln Z}{\partial T}$.
         Permite calcular $U$ sin resolver la mecánica microscópica explícitamente.
@@ -120,7 +120,7 @@
 
     <div class="formula-block u5">
       <div class="formula-label">Energía libre de Helmholtz</div>
-      <div class="formula-math">$$F = U - TS = -k_BT\ln Z$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_11_4.svg" alt=""></div>
       <div class="formula-desc">
         $F$ es la energía disponible para hacer trabajo a temperatura constante.
         De $F$ se derivan todas las demás magnitudes: $S = -(\partial F/\partial T)_V$, $P = -(\partial F/\partial V)_T$.

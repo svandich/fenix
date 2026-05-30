@@ -601,6 +601,14 @@ section h3 {
   .temario-table .aux-topics { display: none; }
 }
 
+/* ===== TYPST FORMULAS ===== */
+.typst-formula {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }

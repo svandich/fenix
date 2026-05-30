@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aux 7 — Procesos Termodinámicos</title>
+  <title>Cát. 7 — Procesos Termodinámicos</title>
   <link rel="stylesheet" href="../styles/main.css">
   <script>
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
@@ -16,7 +16,7 @@
   <div class="sidebar-header">
     <a class="sidebar-logo" href="index.html">
       <span class="icon">⚛️</span>
-      <div><div class="name">Termodinámica</div><div class="subtitle">Auxiliares 1 – 12</div></div>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1 – 12</div></div>
     </a>
   </div>
   <div class="sidebar-nav">
@@ -47,8 +47,8 @@
 
   <div class="page-header">
     <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 3</div>
-    <div class="unit-pill u3 bg-u3">Primera Ley · Aux 6–8</div>
-    <h1>Auxiliar 7: Procesos Termodinámicos</h1>
+    <div class="unit-pill u3 bg-u3">Primera Ley · Cát. 6–8</div>
+    <h1>Cátedra 7: Procesos Termodinámicos</h1>
     <p class="desc">Clasificación de los procesos según qué variable se mantiene constante, cálculo del trabajo como área bajo la curva $P$-$V$, y condiciones para la reversibilidad.</p>
   </div>
 
@@ -95,7 +95,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Trabajo en proceso cuasi-estático</div>
-      <div class="formula-math">$$W = -\int_{V_i}^{V_f} P\,dV \qquad \Leftrightarrow \qquad \text{área bajo la curva } P\text{-}V$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_7_1.svg" alt=""></div>
       <div class="formula-desc">
         $W > 0$ si el volumen disminuye (trabajo sobre el gas) · $W < 0$ si el volumen aumenta (el gas trabaja sobre el entorno).
       </div>
@@ -103,7 +103,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Proceso isotérmico — gas ideal</div>
-      <div class="formula-math">$$T = \text{cte} \;\Rightarrow\; PV = \text{cte} \;\Rightarrow\; W = Nk_BT\ln\!\frac{V_2}{V_1}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_7_2.svg" alt=""></div>
       <div class="formula-desc">
         La curva $P = Nk_BT/V$ es una hipérbola en el diagrama $P$-$V$.
         Como $\Delta U = 0$ (gas ideal), el calor absorbido iguala el trabajo realizado por el gas: $Q = -W$.
@@ -112,7 +112,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Proceso isocórico ($V = \text{cte}$)</div>
-      <div class="formula-math">$$dV = 0 \;\Rightarrow\; W = 0 \;\Rightarrow\; \Delta U = Q$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_7_3.svg" alt=""></div>
       <div class="formula-desc">
         Sin cambio de volumen, no hay trabajo mecánico. Todo el calor absorbido va directamente a la energía interna.
       </div>
@@ -120,7 +120,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Proceso isobárico ($P = \text{cte}$)</div>
-      <div class="formula-math">$$W = -P\,(V_f - V_i) = -P\,\Delta V \;\Rightarrow\; \Delta U = Q - P\Delta V$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_7_4.svg" alt=""></div>
       <div class="formula-desc">
         La presión constante es la condición natural cuando el sistema está expuesto a la atmósfera.
       </div>
@@ -136,7 +136,7 @@
         <li>El diagrama $P$-$V$ es tu mejor amigo: dibuja el proceso, identifica el área que representa el trabajo, y verifica el signo.</li>
         <li>Para procesos reversibles: el trabajo es único y mínimo (compresión) o máximo (expansión) entre todos los posibles caminos.</li>
         <li>Para el gas ideal isotérmico: $\Delta U = 0$, así que $Q = -W$. Nunca olvides verificar que la ecuación $PV = Nk_BT$ se satisface con $T$ constante.</li>
-        <li>El proceso adiabático se aborda en el próximo auxiliar, donde aparece el exponente $\gamma = C_P/C_V$.</li>
+        <li>El proceso adiabático se aborda en el próxima cátedra, donde aparece el exponente $\gamma = C_P/C_V$.</li>
       </ul>
     </div>
   </section>

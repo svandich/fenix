@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aux 12 — Transiciones de Fase</title>
+  <title>Cát. 12 — Transiciones de Fase</title>
   <link rel="stylesheet" href="../styles/main.css">
   <script>
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
@@ -16,7 +16,7 @@
   <div class="sidebar-header">
     <a class="sidebar-logo" href="index.html">
       <span class="icon">⚛️</span>
-      <div><div class="name">Termodinámica</div><div class="subtitle">Auxiliares 1 – 12</div></div>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1 – 12</div></div>
     </a>
   </div>
   <div class="sidebar-nav">
@@ -47,8 +47,8 @@
 
   <div class="page-header">
     <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 5</div>
-    <div class="unit-pill u5 bg-u5">Estadística y fases · Aux 11–12</div>
-    <h1>Auxiliar 12: Transiciones de Fase</h1>
+    <div class="unit-pill u5 bg-u5">Estadística y fases · Cát. 11–12</div>
+    <h1>Cátedra 12: Transiciones de Fase</h1>
     <p class="desc">Cómo y por qué la materia cambia de estado: el gas de van der Waals como modelo para gases reales, la clasificación de transiciones, el equilibrio de fases y la ecuación de Clausius-Clapeyron.</p>
   </div>
 
@@ -94,7 +94,7 @@
 
     <div class="formula-block u5">
       <div class="formula-label">Ecuación de van der Waals</div>
-      <div class="formula-math">$$\left(P + \frac{aN^2}{V^2}\right)\!\left(V - Nb\right) = Nk_BT$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_12_1.svg" alt=""></div>
       <div class="formula-desc">
         $a$ parámetro de atracción intermolecular · $b$ volumen excluido por partícula.
         Para $a = b = 0$ se recupera el gas ideal.
@@ -103,7 +103,7 @@
 
     <div class="formula-block u5">
       <div class="formula-label">Punto crítico de van der Waals</div>
-      <div class="formula-math">$$T_c = \frac{8a}{27k_Bb} \qquad P_c = \frac{a}{27b^2} \qquad V_c = 3Nb$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_12_2.svg" alt=""></div>
       <div class="formula-desc">
         Se obtiene de $(\partial P/\partial V)_T = 0$ y $(\partial^2 P/\partial V^2)_T = 0$ simultáneamente.
         Por encima de $T_c$ no hay transición líquido-vapor.
@@ -112,7 +112,7 @@
 
     <div class="formula-block u5">
       <div class="formula-label">Ecuación de Clausius-Clapeyron</div>
-      <div class="formula-math">$$\frac{dP}{dT} = \frac{L}{T\,\Delta V} = \frac{\Delta S}{\Delta V}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_12_3.svg" alt=""></div>
       <div class="formula-desc">
         $L = T\,\Delta S$ calor latente · $\Delta V$ cambio de volumen en la transición.
         Para vapor ideal ($\Delta V \approx Nk_BT/P$): $\dfrac{dP}{dT} \approx \dfrac{LP}{Nk_BT^2}$ → $P \propto e^{-L/Nk_BT}$.
@@ -121,7 +121,7 @@
 
     <div class="formula-block u5">
       <div class="formula-label">Regla de las fases de Gibbs</div>
-      <div class="formula-math">$$F = C - \mathcal{P} + 2$$</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/termo/aux_12_4.svg" alt=""></div>
       <div class="formula-desc">
         $F$ grados de libertad · $C$ número de componentes · $\mathcal{P}$ número de fases.
         Para agua pura ($C = 1$) en el punto triple ($\mathcal{P} = 3$): $F = 0$ (estado único).
