@@ -6,7 +6,7 @@ Repositorio de apuntes interactivos para cursos de ingeniería. Cada curso es un
 
 | Carpeta | Curso | Estado |
 |---------|-------|--------|
-| `electro/` | Electromagnetismo (Aux 1–16) | Completo |
+| `electro/` | Electromagnetismo (Aux 1–18) | Completo |
 | `termo/` | Termodinámica (cátedras, no auxiliares) | En construcción |
 
 ## Estructura
@@ -20,7 +20,7 @@ repo-root/
 ├── typst/
 │   ├── electro/aux_N.typ     ← Fuentes Typst de fórmulas (electro, N=1–16)
 │   └── termo/aux_N.typ       ← Fuentes Typst de fórmulas (termo, N=1–12, cátedras)
-├── typst-out/                ← SVGs compilados (gitignoreado, regenerar con npm run typst)
+├── typst-out/                ← SVGs compilados (regenerar con ./build.sh)
 │   ├── electro/aux_N_P.svg
 │   └── termo/aux_N_P.svg
 ├── scripts/
@@ -30,8 +30,8 @@ repo-root/
 │   ├── structure.md          ← Árbol de carpetas y convenciones
 │   ├── style-guide.md        ← Variables CSS, componentes, clases
 │   └── design-logic.md       ← Por qué se tomaron las decisiones de diseño
-├── package.json              ← npm run typst / typst:electro / typst:termo
-├── .gitignore                ← Excluye typst-out/ y node_modules/
+├── build.sh                  ← ./build.sh [curso] — compila Typst → SVG
+├── .gitignore                ← Excluye node_modules/
 └── CLAUDE.md                 ← Este archivo
 ```
 
@@ -43,7 +43,7 @@ Las fórmulas de display (`$$...$$`) se renderizan con **Typst**, no con MathJax
 
 **Flujo de trabajo:**
 1. Editar la fórmula en `typst/<curso>/aux_N.typ`
-2. Compilar: `npm run typst` (o solo un curso: `npm run typst:electro`)
+2. Compilar: `./build.sh` (o solo un curso: `./build.sh electro`)
 3. Refrescar el navegador — los SVGs en `typst-out/` se actualizan
 
 **Convenciones de los archivos `.typ`:**
@@ -82,7 +82,7 @@ Las fórmulas de display (`$$...$$`) se renderizan con **Typst**, no con MathJax
 5. Rellenar las 4 secciones: temas, conceptos, fórmulas, tips.
    - Las fórmulas de display van como `<img class="typst-formula" src="../typst-out/<curso>/aux_N_P.svg" alt="">`.
 6. Crear el archivo `typst/<curso>/aux_N.typ` con las fórmulas correspondientes.
-7. Compilar: `npm run typst:<curso>`.
+7. Compilar: `./build.sh <curso>`.
 8. Actualizar `index.html` del curso con una fila nueva en la tabla.
 
 ## Cómo agregar un curso nuevo
@@ -93,7 +93,7 @@ Las fórmulas de display (`$$...$$`) se renderizan con **Typst**, no con MathJax
 4. Reasignar los colores `--unit-1` a `--unit-5` a las unidades del nuevo curso.
 5. Crear las páginas `aux_N.html`.
 6. Crear `typst/nombre-curso/aux_N.typ` por cada auxiliar.
-7. Agregar el curso a `scripts/compile-typst.sh` (array `COURSES`) y a `package.json`.
+7. Agregar el curso al array `COURSES` en `scripts/compile-typst.sh`.
 
 Ver [docs/structure.md](docs/structure.md) para más detalle.
 
@@ -116,4 +116,4 @@ Ver [docs/structure.md](docs/structure.md) para más detalle.
 
 Abrir cualquier `index.html` directamente en el navegador (no requiere servidor).
 MathJax necesita conexión a internet para cargar desde CDN.
-Los SVGs en `typst-out/` deben existir — generarlos con `npm run typst` antes de abrir.
+Los SVGs en `typst-out/` están trackeados en git — regenerar con `./build.sh` si se editan los `.typ`.

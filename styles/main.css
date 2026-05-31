@@ -52,6 +52,7 @@
   --unit-3: #d29922; /* Pre-control/dipolos   Aux 10–11*/
   --unit-4: #f0883e; /* Dieléctricos          Aux 12–14*/
   --unit-5: #bc8cff; /* Corrientes/circuitos  Aux 15–16*/
+  --unit-6: #f472b6; /* Magnetismo            Aux 17–18*/
 
   --sidebar-w: 260px;
   --content-max: 820px;
@@ -538,12 +539,14 @@ section h3 {
 .u3 { color: var(--unit-3); border-color: var(--unit-3); }
 .u4 { color: var(--unit-4); border-color: var(--unit-4); }
 .u5 { color: var(--unit-5); border-color: var(--unit-5); }
+.u6 { color: var(--unit-6); border-color: var(--unit-6); }
 
 .bg-u1 { background: color-mix(in srgb, var(--unit-1) 12%, transparent); }
 .bg-u2 { background: color-mix(in srgb, var(--unit-2) 12%, transparent); }
 .bg-u3 { background: color-mix(in srgb, var(--unit-3) 12%, transparent); }
 .bg-u4 { background: color-mix(in srgb, var(--unit-4) 12%, transparent); }
 .bg-u5 { background: color-mix(in srgb, var(--unit-5) 12%, transparent); }
+.bg-u6 { background: color-mix(in srgb, var(--unit-6) 12%, transparent); }
 
 /* ===== NAV COLORS ===== */
 .dot-u1 { background: var(--unit-1); }
@@ -551,6 +554,7 @@ section h3 {
 .dot-u3 { background: var(--unit-3); }
 .dot-u4 { background: var(--unit-4); }
 .dot-u5 { background: var(--unit-5); }
+.dot-u6 { background: var(--unit-6); }
 
 /* ===== PREV/NEXT ===== */
 .page-nav {

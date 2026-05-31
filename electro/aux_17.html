@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 17 — Fuerza de Lorentz</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 18</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="index.html"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="aux_1.html"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="aux_2.html"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="aux_3.html"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="aux_4.html"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="aux_5.html"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="aux_6.html"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="aux_7.html"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="aux_8.html"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="aux_9.html"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="aux_10.html"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="aux_11.html"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="aux_12.html"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="aux_13.html"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="aux_14.html"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="aux_15.html"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="aux_16.html"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link active" href="aux_17.html"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="aux_18.html"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Temario</a> › Unidad 6</div>
+    <div class="unit-pill u6 bg-u6">Magnetismo · Aux 17–18</div>
+    <h1>Auxiliar 17: Fuerza de Lorentz</h1>
+    <p class="desc">El campo magnético ejerce fuerzas sobre cargas en movimiento y sobre corrientes. La fuerza de Lorentz unifica la fuerza eléctrica y magnética. La ley de Biot-Savart permite calcular el campo magnético generado por distribuciones de corriente arbitrarias.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Fuerza magnética sobre carga puntual: $\vec{F} = q\vec{v}\times\vec{B}$</li>
+        <li>Fuerza de Lorentz completa: $\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})$</li>
+        <li>Fuerza sobre cable conductor en campo magnético: $\vec{F} = \int I\,d\vec{\ell}\times\vec{B}$</li>
+        <li>Generalización a distribuciones superficiales ($\vec{K}$) y volumétricas ($\vec{J}$)</li>
+        <li>Ley de Biot-Savart: campo magnético de hilo, superficie y volumen de corriente</li>
+        <li>Campo magnético de cable infinito: $B = \mu_0 I / (2\pi r)$</li>
+        <li>Fuerza entre cables paralelos con corriente</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Fuerza magnética</h3>
+        <p>Solo actúa sobre cargas en movimiento. Es siempre perpendicular a $\vec{v}$ y a $\vec{B}$, por lo que no realiza trabajo. Determina la dirección de la trayectoria (movimiento circular) sin cambiar la rapidez.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Fuerza sobre corriente</h3>
+        <p>Una corriente $I$ en un tramo $d\vec{\ell}$ inmerso en campo $\vec{B}$ siente $d\vec{F} = I\,d\vec{\ell}\times\vec{B}$. Para distribuciones: reemplazar $I\,d\vec{\ell}$ por $\vec{K}\,dS$ o $\vec{J}\,dV$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Biot-Savart</h3>
+        <p>Análogo magnético de la ley de Coulomb: cada elemento de corriente $I\,d\vec{\ell}'$ contribuye a $\vec{B}$ con un campo proporcional a $\mu_0/4\pi$ e inversamente proporcional al cuadrado de la distancia.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Cable infinito</h3>
+        <p>Por Biot-Savart (o Ampère), un cable infinito con corriente $I$ genera $B = \mu_0 I/(2\pi r)$ en dirección azimutal. Cables paralelos con corrientes iguales se atraen; con corrientes opuestas se repelen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Fuerza de Lorentz</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/electro/aux_17_1.svg" alt=""></div>
+      <div class="formula-desc">
+        La fuerza magnética $\vec{F}_\text{mag} = q\vec{v}\times\vec{B}$ es perpendicular a $\vec{v}$, por lo que no realiza trabajo. La fuerza de Lorentz suma además el término eléctrico $q\vec{E}$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Fuerza sobre distribuciones de corriente</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/electro/aux_17_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Para un cable: integrar $I\,d\vec{\ell}\times\vec{B}$ a lo largo del trayecto. Para una lámina de corriente superficial $\vec{K}$: integrar sobre la superficie. Para corriente volumétrica $\vec{J}$: integrar sobre el volumen.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Ley de Biot-Savart — hilo</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/electro/aux_17_3.svg" alt=""></div>
+      <div class="formula-desc">
+        $\vec{r}$ es el punto de campo, $\vec{r}'$ es el punto fuente sobre el cable. El factor $(\vec{r}-\vec{r}')/|\vec{r}-\vec{r}'|^3$ equivale al versor $\hat{r}_{12}/r_{12}^2$ de la ley de Coulomb.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Ley de Biot-Savart — superficial y volumétrica</div>
+      <div class="formula-math"><img class="typst-formula" src="../typst-out/electro/aux_17_4.svg" alt=""></div>
+      <div class="formula-desc">
+        La misma estructura: reemplazar $I\,d\vec{\ell}'$ por $\vec{K}(\vec{r}')\,dS'$ para corrientes superficiales o por $\vec{J}(\vec{r}')\,dV'$ para corrientes volumétricas.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para problemas de fuerza magnética</div>
+      <ul>
+        <li>Identificar el tipo de fuente de corriente (hilo, plano, volumen) y calcular $\vec{B}$ por Biot-Savart o Ampère (si hay simetría).</li>
+        <li>Para la fuerza sobre un cable finito en el campo de otro, integrar $I\,d\vec{\ell}\times\vec{B}$ a lo largo del cable finito.</li>
+        <li>En el anillo giratorio: la corriente equivalente es $I = \lambda v = \lambda R\omega$; la fuerza magnética sobre cada elemento $d\ell$ del anillo da una componente radial que genera tensión.</li>
+        <li>La regla de la mano derecha determina la dirección de $\vec{B}$ y del producto cruz $\vec{v}\times\vec{B}$.</li>
+        <li>Cables paralelos: misma dirección de corriente → atracción; corrientes opuestas → repulsión. La fuerza por unidad de largo es $F/\ell = \mu_0 I_0 I_1 / (2\pi x)$.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="aux_16.html"><div class="nav-dir">← Anterior</div><div class="nav-title">Circuitos</div></a>
+    <a href="aux_18.html" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Ley de Ampère</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
