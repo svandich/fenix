@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 3 — Ley de Gauss Parte 2</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 18</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link active" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 1</div>
+    <div class="unit-pill u1 bg-u1">Campo eléctrico · Aux 1–3</div>
+    <h1>Auxiliar 3: Ley de Gauss — Parte 2</h1>
+    <p class="desc">Aplicaciones avanzadas de la Ley de Gauss: esferas con cavidades, densidades de carga variables y configuraciones con múltiples regiones.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Esferas macizas con cavidades internas</li>
+        <li>Cascarones esféricos concéntricos con distintas cargas</li>
+        <li>Cilindros infinitos con densidades de carga que varían con $r$</li>
+        <li>Planos infinitos cargados (conductor y no conductor)</li>
+        <li>Superposición para construir geometrías complejas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Esfera con cavidad</h3>
+        <p>Se trata como superposición de una esfera maciza menos una esfera maciza en la región de la cavidad. El campo en la cavidad de una distribución uniforme es constante.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Densidad variable $\rho(r)$</h3>
+        <p>Si $\rho$ depende de $r$, la carga encerrada se obtiene integrando: $Q_{\text{enc}} = \int_0^r \rho(r')\,4\pi r'^2\,dr'$. Gauss sigue aplicando si hay simetría esférica.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Plano infinito conductor</h3>
+        <p>El campo sale perpendicular a ambas caras. Para un plano conductor con densidad $\sigma$, el campo a cada lado es $E = \sigma/(2\varepsilon_0)$, resultando en $\sigma/\varepsilon_0$ total.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Múltiples regiones</h3>
+        <p>En problemas con varias capas, se aplica Gauss por separado en cada región, acumulando la carga encerrada conforme crece el radio de la superficie gaussiana.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Carga encerrada con densidad variable</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_3_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Para simetría esférica con $\rho = \rho(r)$. Análogamente, para simetría cilíndrica: $Q_{\text{enc}} = \int_0^r \rho(r')\,2\pi r' L\,dr'$.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Campo de plano infinito (no conductor, σ total)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_3_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Para un conductor, la carga se distribuye en superficies y el campo exterior es $\sigma/\varepsilon_0$ (con $E=0$ dentro).
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Superposición — esfera con cavidad</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_3_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Si la cavidad es esférica y desplazada del centro, el campo interior resulta ser <em>uniforme</em> y proporcional al vector de desplazamiento entre centros.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves para problemas multi-región</div>
+      <ul>
+        <li>Define claramente cada región y su límite antes de calcular.</li>
+        <li>Para cada región, escoge una superficie gaussiana concéntrica e integra solo la carga interior.</li>
+        <li>El campo debe ser continuo en regiones sin carga superficial.</li>
+        <li>En interfaces con $\sigma \neq 0$, el campo tiene una discontinuidad de $\sigma/\varepsilon_0$.</li>
+        <li>Verifica que tu resultado $\mathbf{E}(r)$ sea continuo donde no hay carga superficial.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_2/"><div class="nav-dir">← Anterior</div><div class="nav-title">Ley de Gauss</div></a>
+    <a href="../aux_4/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Potencial Eléctrico</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

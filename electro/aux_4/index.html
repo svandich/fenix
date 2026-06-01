@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 4 — Potencial Eléctrico</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 18</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link active" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 2</div>
+    <div class="unit-pill u2 bg-u2">Potencial y conductores · Aux 4–9</div>
+    <h1>Auxiliar 4: Potencial Eléctrico</h1>
+    <p class="desc">El potencial $V$ es la magnitud escalar que resume el campo vectorial $\mathbf{E}$. Es más fácil de calcular y permite obtener el campo tomando su gradiente.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Definición de potencial eléctrico $V(\mathbf{r})$</li>
+        <li>Relación $\mathbf{E} = -\nabla V$ e irrotacionalidad $\nabla\times\mathbf{E} = 0$</li>
+        <li>Potencial de cargas puntuales y distribuciones continuas</li>
+        <li>Diferencia de potencial: $V(b) - V(a) = -\int_a^b \mathbf{E}\cdot d\boldsymbol{\ell}$</li>
+        <li>Superficies equipotenciales y su relación con $\mathbf{E}$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Potencial como energía por carga</h3>
+        <p>$V(\mathbf{r})$ es la energía potencial que tendría una carga unitaria en ese punto. Mover una carga $q$ de $a$ a $b$ requiere trabajo $W = q(V_b - V_a)$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Irrotacionalidad</h3>
+        <p>El campo eléctrostático es conservativo: $\nabla\times\mathbf{E} = 0$. Esto garantiza que la diferencia de potencial no depende del camino de integración.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Superposición de potenciales</h3>
+        <p>Como $V$ es escalar, la superposición es algebraica (no vectorial). Basta sumar los potenciales de cada carga, sin preocuparse por componentes.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Equipotenciales</h3>
+        <p>Son superficies de $V$ constante. El campo $\mathbf{E}$ siempre es perpendicular a ellas y apunta hacia potencial decreciente. Las superficies de un conductor son equipotenciales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Potencial de carga puntual (referencia en ∞)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Convenio usual: $V(\infty) = 0$. El potencial es positivo para cargas positivas y negativo para negativas.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Campo a partir del potencial</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_2.svg" alt=""></div>
+      <div class="formula-desc">
+        En coordenadas esféricas: $E_r = -\partial V/\partial r$. En coordenadas cartesianas: $E_x = -\partial V/\partial x$, etc.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Diferencia de potencial</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_3.svg" alt=""></div>
+      <div class="formula-desc">
+        La integral es independiente del camino. Elige el más conveniente (usualmente a lo largo del campo o perpendicular a él).
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Potencial de distribución continua</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Integral escalar, mucho más simple que la integral vectorial de Coulomb.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para calcular V y E</div>
+      <ul>
+        <li>Si ya tienes $\mathbf{E}$: integra a lo largo de un camino conveniente para obtener $V$.</li>
+        <li>Si tienes la distribución de carga: calcula $V$ por superposición escalar (más fácil) y luego deriva para obtener $\mathbf{E} = -\nabla V$.</li>
+        <li>La referencia de $V$ es libre; convencionalmente $V(\infty) = 0$, pero en planos o cilindros infinitos se elige otra referencia.</li>
+        <li>Equipotenciales ⊥ líneas de campo. Donde el campo es intenso, las equipotenciales están más juntas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_3/"><div class="nav-dir">← Anterior</div><div class="nav-title">Ley de Gauss — Parte 2</div></a>
+    <a href="../aux_5/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Potencial y Conductores</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

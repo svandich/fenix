@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 2 — Ley de Gauss</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 18</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link active" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 1</div>
+    <div class="unit-pill u1 bg-u1">Campo eléctrico · Aux 1–3</div>
+    <h1>Auxiliar 2: Ley de Gauss</h1>
+    <p class="desc">La Ley de Gauss relaciona el flujo eléctrico a través de una superficie cerrada con la carga encerrada. Es el método más eficiente para sistemas con simetría.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Flujo eléctrico $\Phi_E$ a través de superficies</li>
+        <li>Ley de Gauss en forma integral: $\oint \mathbf{E}\cdot d\mathbf{S} = Q_{\text{enc}}/\varepsilon_0$</li>
+        <li>Forma diferencial: $\nabla\cdot\mathbf{E} = \rho/\varepsilon_0$</li>
+        <li>Elección de la superficie gaussiana y condiciones de simetría</li>
+        <li>Aplicación a esferas, cilindros y planos infinitos</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Flujo eléctrico</h3>
+        <p>El flujo mide cuánto campo eléctrico "atraviesa" una superficie. Si el campo es paralelo a la superficie, el flujo es cero; si es perpendicular, es máximo.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Superficie gaussiana</h3>
+        <p>Superficie imaginaria cerrada que elegimos para aplicar la ley. Debe coincidir con la simetría del problema para que $\mathbf{E}$ sea constante (o cero) en ella.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Carga encerrada</h3>
+        <p>Solo importa la carga dentro de la superficie gaussiana. Las cargas externas no contribuyen al flujo neto, aunque sí afectan el campo local.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Forma diferencial</h3>
+        <p>Equivalente local de la ley de Gauss: la divergencia del campo en un punto es proporcional a la densidad de carga en ese punto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Ley de Gauss — forma integral</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_2_1.svg" alt=""></div>
+      <div class="formula-desc">
+        El flujo neto de $\mathbf{E}$ a través de cualquier superficie cerrada es $Q_{\text{enc}}/\varepsilon_0$.
+        <code>Q_enc</code> = carga total dentro de la superficie.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Ley de Gauss — forma diferencial</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_2_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Relaciona la divergencia de $\mathbf{E}$ con la densidad volumétrica de carga local $\rho$.
+        Equivalente a la forma integral por el teorema de la divergencia.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Campo de esfera con carga Q y radio R</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_2_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Fuera se comporta como carga puntual; dentro crece linealmente si la carga está distribuida uniformemente.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Cuándo usar Gauss vs Coulomb</div>
+      <ul>
+        <li><strong>Gauss:</strong> cuando hay simetría esférica, cilíndrica o planar. El campo debe ser uniforme en la superficie gaussiana.</li>
+        <li><strong>Coulomb:</strong> para geometrías sin simetría o para verificar resultados de Gauss.</li>
+        <li>La simetría permite sacar $E$ fuera de la integral: $\oint \mathbf{E}\cdot d\mathbf{S} = E\cdot A_{\text{gaussiana}}$.</li>
+        <li>Siempre calcula $Q_{\text{enc}}$ correctamente: integra $\rho$ solo dentro de tu superficie.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_1/"><div class="nav-dir">← Anterior</div><div class="nav-title">Campo Eléctrico</div></a>
+    <a href="../aux_3/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Ley de Gauss — Parte 2</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

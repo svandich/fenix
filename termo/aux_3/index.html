@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 3 — Teoría Cinética y Presión</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1 – 12</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link active" href="../aux_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 2</div>
+    <div class="unit-pill u2 bg-u2">Gas ideal y cinética · Cát. 3–5</div>
+    <h1>Cátedra 3: Teoría Cinética y Presión</h1>
+    <p class="desc">Derivación microscópica de la ecuación de estado del gas ideal: la presión surge de las colisiones de partículas con las paredes del recipiente.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Modelo de gas ideal: partículas puntiformes sin interacción, solo choques elásticos</li>
+        <li>Transferencia de momentum en una colisión con la pared</li>
+        <li>Cálculo de la presión a partir de colisiones: $P = \frac{1}{3}nm\langle v^2\rangle$</li>
+        <li>Sistema isotrópico: el gas no tiene dirección preferida</li>
+        <li>Superposición de presiones parciales por dirección</li>
+        <li>Relación $PV = \frac{2}{3}U$: presión y energía interna</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Gas ideal</h3>
+        <p>Modelo formado por partículas puntiformes de masa $m$ que no interactúan entre sí (o solo se golpean elásticamente). La única energía es cinética. Es una excelente aproximación para gases reales a baja densidad.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Presión como fuerza de colisión</h3>
+        <p>Una partícula que choca elásticamente con la pared transfiere un impulso $\Delta p = 2mv_x$ (perpendicular a la pared). La presión es la fuerza total por unidad de área, acumulando los efectos de todos los choques.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Sistema isotrópico</h3>
+        <p>En equilibrio, el gas no tiene dirección preferida: $\langle v_x^2 \rangle = \langle v_y^2 \rangle = \langle v_z^2 \rangle = \tfrac{1}{3}\langle v^2 \rangle$. Esto permite calcular la presión usando solo la componente normal a la pared.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Densidad de partículas $n$</h3>
+        <p>Se define $n = N/V$ como el número de partículas por unidad de volumen. La presión es proporcional a $n$: más partículas por volumen → más colisiones por segundo → más presión.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Impulso en una colisión elástica con la pared</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_3_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $m$ masa de la partícula · $v_x$ componente de velocidad perpendicular a la pared.
+        El signo de $v_x$ se invierte; la pared queda estacionaria.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Presión del gas ideal (teoría cinética)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_3_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $n = N/V$ densidad numérica · $m$ masa por partícula · $\langle v^2 \rangle$ velocidad cuadrática media.
+        El factor $\tfrac{1}{3}$ viene de la isotropía: $\langle v_x^2 \rangle = \tfrac{1}{3}\langle v^2 \rangle$.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Relación presión–energía interna</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_3_3.svg" alt=""></div>
+      <div class="formula-desc">
+        $U$ energía interna total (puramente cinética para gas ideal).
+        Esta relación conecta una magnitud macroscópica ($PV$) con el mundo microscópico ($U$).
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Ecuación de estado del gas ideal</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_3_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $N$ número de partículas · $k_B = 1.38\times10^{-23}$ J/K · $T$ temperatura absoluta.
+        Equivalentemente: $PV = \nu RT$ con $\nu$ moles y $R = N_A k_B = 8.314$ J/(mol·K).
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia de la derivación</div>
+      <ul>
+        <li>La idea central es contar cuántas partículas chocan con la pared por unidad de tiempo y calcular el impulso de cada choque.</li>
+        <li>La isotropía es clave: en equilibrio no hay dirección preferida, así que solo la componente $v_x$ contribuye a la presión sobre la pared perpendicular a $x$.</li>
+        <li>El factor $\frac{1}{2}$ viene de que solo las partículas que se mueven <em>hacia</em> la pared chocan con ella (no las que se alejan).</li>
+        <li>El resultado $PV = \frac{2}{3}U$ es notable: una propiedad macroscópica ($PV$) está directamente ligada a la energía microscópica total $U$.</li>
+        <li>La ecuación $PV = Nk_BT$ no es un axioma: es un <em>resultado derivado</em> de la teoría cinética más la definición de temperatura.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_2/"><div class="nav-dir">← Anterior</div><div class="nav-title">Historia: Calor y Máquinas</div></a>
+    <a href="../aux_4/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Temperatura y Equilibrio Térmico</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

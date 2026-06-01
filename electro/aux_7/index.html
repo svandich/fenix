@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 7 — Conductores y Laplace</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 18</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link active" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 2</div>
+    <div class="unit-pill u2 bg-u2">Potencial y conductores · Aux 4–9</div>
+    <h1>Auxiliar 7: Conductores y Ecuación de Laplace</h1>
+    <p class="desc">Solución de la ecuación de Laplace en coordenadas esféricas, esfera conductora en campo uniforme, e introducción a condensadores y capacitancia.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Solución general de Laplace en coordenadas esféricas con polinomios de Legendre</li>
+        <li>Esfera conductora puesta en un campo eléctrico uniforme externo $\mathbf{E}_0$</li>
+        <li>Capacitancia: $C = Q/\Delta V$ y su cálculo para geometrías simples</li>
+        <li>Energía almacenada en un condensador</li>
+        <li>Condensadores en serie y paralelo</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Laplace en esfera</h3>
+        <p>Con simetría azimutal, la solución general es $V = \sum_\ell (A_\ell r^\ell + B_\ell r^{-(\ell+1)}) P_\ell(\cos\theta)$. Los coeficientes se fijan con las condiciones de borde.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Esfera en campo uniforme</h3>
+        <p>El campo uniforme impone $V \to -E_0 r\cos\theta$ lejos. La esfera (a $V=0$) distorsiona el campo: la solución combina el campo uniforme con un dipolo inducido.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Capacitancia</h3>
+        <p>Mide cuánta carga puede acumular un sistema por unidad de voltaje. Depende solo de la geometría, no de $Q$ ni $V$ individualmente. Unidad: Farad [F] = C/V.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Energía del condensador</h3>
+        <p>La energía almacenada en el campo eléctrico es $U = \frac{1}{2}CV^2 = Q^2/(2C)$. Esta energía es la que se libera al descargar el condensador.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Esfera conductora (radio R, V=0) en campo uniforme E₀</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_7_1.svg" alt=""></div>
+      <div class="formula-desc">
+        El primer término es el campo uniforme; el segundo es el dipolo inducido. La densidad superficial: $\sigma = 3\varepsilon_0 E_0\cos\theta$.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Capacitancia</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_7_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Placas paralelas: $C = \varepsilon_0 A/d$ · Cilíndrico: $C = 2\pi\varepsilon_0 L/\ln(b/a)$ · Esférico: $C = 4\pi\varepsilon_0 ab/(b-a)$.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Energía almacenada</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_7_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Equivalentemente: $U = \frac{\varepsilon_0}{2}\int E^2\,dV$ (energía almacenada en el campo eléctrico).
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Combinación de condensadores</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_7_4.svg" alt=""></div>
+      <div class="formula-desc">
+        En serie: mismo $Q$, voltajes se suman. En paralelo: mismo $V$, cargas se suman.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Resolver Laplace paso a paso</div>
+      <ul>
+        <li>Identifica la simetría (esférica, cilíndrica, planar) para elegir coordenadas.</li>
+        <li>Escribe la solución general con coeficientes indeterminados.</li>
+        <li>Aplica condición lejana: el potencial debe coincidir con el campo externo para $r\to\infty$.</li>
+        <li>Aplica condición de borde en el conductor ($V = V_0$) para determinar los coeficientes restantes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_6/"><div class="nav-dir">← Anterior</div><div class="nav-title">Conductores</div></a>
+    <a href="../aux_8/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Conductores II</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

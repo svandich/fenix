@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 1 — Introducción a la Termodinámica</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1 – 12</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link active" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 1</div>
+    <div class="unit-pill u1 bg-u1">Introducción · Cát. 1–2</div>
+    <h1>Cátedra 1: Introducción a la Termodinámica</h1>
+    <p class="desc">Qué estudia la termodinámica, cómo surgen las propiedades macroscópicas de sistemas con muchos constituyentes, y por qué el equilibrio es el concepto central.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Definición de termodinámica: física del calor y la transferencia de energía</li>
+        <li>Sistemas macroscópicos: materia compuesta de muchos constituyentes (~$10^{23}$)</li>
+        <li>Fluctuaciones y su escala: $\Delta \propto 1/\sqrt{N}$</li>
+        <li>Variables macroscópicas: $T$, $P$, $V$, $N$, $U$</li>
+        <li>Variables intensivas (no dependen del tamaño) vs. extensivas (proporcionales al tamaño)</li>
+        <li>Equilibrio termodinámico: estado de máxima probabilidad</li>
+        <li>Irreversibilidad macroscópica vs. reversibilidad microscópica</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Sistema macroscópico</h3>
+        <p>Un sistema formado por un número enorme de constituyentes ($N \sim 10^{23}$). Sus propiedades medibles son promedios estadísticos: aunque cada partícula fluctúa, el promedio es extremadamente estable.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Fluctuaciones</h3>
+        <p>Las variables macroscópicas fluctúan alrededor de su valor promedio en una escala $\sim 1/\sqrt{N}$. Para $N \sim 10^{23}$, las fluctuaciones relativas son de orden $10^{-11}$: prácticamente imperceptibles.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Variables intensivas y extensivas</h3>
+        <p>Las variables <em>extensivas</em> escalan con el tamaño del sistema: $V$, $N$, $U$. Las variables <em>intensivas</em> no dependen del tamaño: $T$, $P$. Al juntar dos sistemas iguales, $T$ no cambia pero $V$ se duplica.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Equilibrio termodinámico</h3>
+        <p>Estado en que las variables macroscópicas no cambian con el tiempo. Es el estado de <em>máxima probabilidad</em> del sistema: la enorme mayoría de los microestados compatibles con las condiciones macroscópicas corresponden a ese estado.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Fluctuación relativa de una variable macroscópica</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_1_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $\Delta X$ fluctuación típica · $\langle X \rangle$ valor promedio · $N$ número de constituyentes.
+        Para $N \sim 10^{23}$ la fluctuación relativa es $\sim 10^{-12}$.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Variables de estado del gas ideal</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_1_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Solo tres de estas cuatro variables son independientes: la ecuación de estado las relaciona.
+        <code>$k_B = 1.38\times10^{-23}$ J/K</code>
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Número de Avogadro y orden de magnitud</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_1_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Un mol de gas a condiciones normales contiene $N_A$ moléculas. La escala atómica (ångström) es $10^5$ veces menor que la escala humana.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Ideas centrales de la introducción</div>
+      <ul>
+        <li>La termodinámica emerge de tener <em>muchos</em> constituyentes: no es aplicable a sistemas de pocas partículas.</li>
+        <li>Las leyes microscópicas son reversibles en el tiempo ($t \to -t$), pero el comportamiento macroscópico es irreversible. Esto no es una contradicción: es consecuencia de la probabilidad.</li>
+        <li>El equilibrio no es que "nada ocurre": es que el sistema está en el estado más probable. Las fluctuaciones microscópicas siguen ocurriendo.</li>
+        <li>Distinguir intensiva de extensiva es crucial para no cometer errores al escalar sistemas.</li>
+        <li>La termodinámica histórica nació de un problema práctico: entender las máquinas de vapor para mejorar su eficiencia.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../"><div class="nav-dir">← Volver</div><div class="nav-title">Temario general</div></a>
+    <a href="../aux_2/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Historia: Calor y Máquinas</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

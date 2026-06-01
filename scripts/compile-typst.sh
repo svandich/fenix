@@ -14,11 +14,11 @@ fi
 
 for course in "${COURSES[@]}"; do
   echo "── $course ──────────────────────────────"
-  mkdir -p "typst-out/$course"
   for f in "typst/$course"/aux_*.typ; do
     [ -f "$f" ] || continue
     base=$(basename "$f" .typ)
-    typst compile "$f" "typst-out/$course/${base}_{p}.svg" 2>&1 \
+    mkdir -p "$course/$base"
+    typst compile "$f" "$course/$base/${base}_{p}.svg" 2>&1 \
       | grep -v 'is deprecated' || true
     echo "  compiled: $base"
   done

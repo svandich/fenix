@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 7 — Procesos Termodinámicos</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1 – 12</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link active" href="../aux_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 3</div>
+    <div class="unit-pill u3 bg-u3">Primera Ley · Cát. 6–8</div>
+    <h1>Cátedra 7: Procesos Termodinámicos</h1>
+    <p class="desc">Clasificación de los procesos según qué variable se mantiene constante, cálculo del trabajo como área bajo la curva $P$-$V$, y condiciones para la reversibilidad.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Proceso cuasi-estático: definición y condiciones (sin histéresis, sin fricción)</li>
+        <li>Proceso reversible vs. irreversible</li>
+        <li>Isotérmico ($T = \text{cte}$): hipérbola en diagrama $P$-$V$</li>
+        <li>Adiabático ($\bar{\delta}Q = 0$): sin flujo de calor, pared adiabática</li>
+        <li>Isocórico ($V = \text{cte}$): sin trabajo, todo el calor va a $\Delta U$</li>
+        <li>Isobárico ($P = \text{cte}$): el más fácil de integrar en laboratorio</li>
+        <li>Trabajo como área bajo la curva $P$-$V$</li>
+        <li>Trabajo en proceso isotérmico del gas ideal: $W = -Nk_BT\ln(V_f/V_i)$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Proceso cuasi-estático</h3>
+        <p>Se realiza infinitamente despacio, de modo que en cada instante el sistema está en equilibrio y las variables macroscópicas ($P$, $T$, $V$) están bien definidas. Permite usar la ecuación de estado en todo momento. Es una idealización: en la práctica se aproxima haciendo el proceso muy lento.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Proceso reversible</h3>
+        <p>Un proceso cuasi-estático <em>y</em> sin fricción (sin memoria). Puede invertirse exactamente: el sistema y el entorno quedan en su estado original. Los procesos reales siempre son irreversibles debido a la fricción y a las inhomogeneidades.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Proceso adiabático</h3>
+        <p>No hay intercambio de calor con el entorno ($\bar{\delta}Q = 0$). Se puede lograr con paredes perfectamente aislantes, o haciéndolo tan rápido que el calor no tiene tiempo de fluir. En procesos adiabáticos, todo el trabajo va a energía interna.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Diagrama $P$-$V$</h3>
+        <p>Representación del proceso en el plano presión-volumen. El trabajo realizado <em>por</em> el gas en un proceso cuasi-estático es el área bajo la curva (con signo). Un ciclo completo en el diagrama $P$-$V$ encierra un área que representa el trabajo neto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Trabajo en proceso cuasi-estático</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_7_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $W > 0$ si el volumen disminuye (trabajo sobre el gas) · $W < 0$ si el volumen aumenta (el gas trabaja sobre el entorno).
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Proceso isotérmico — gas ideal</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_7_2.svg" alt=""></div>
+      <div class="formula-desc">
+        La curva $P = Nk_BT/V$ es una hipérbola en el diagrama $P$-$V$.
+        Como $\Delta U = 0$ (gas ideal), el calor absorbido iguala el trabajo realizado por el gas: $Q = -W$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Proceso isocórico ($V = \text{cte}$)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_7_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Sin cambio de volumen, no hay trabajo mecánico. Todo el calor absorbido va directamente a la energía interna.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Proceso isobárico ($P = \text{cte}$)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_7_4.svg" alt=""></div>
+      <div class="formula-desc">
+        La presión constante es la condición natural cuando el sistema está expuesto a la atmósfera.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Cómo resolver problemas de procesos</div>
+      <ul>
+        <li>Identifica qué variable se mantiene constante: eso define el tipo de proceso y simplifica la integral del trabajo.</li>
+        <li>El diagrama $P$-$V$ es tu mejor amigo: dibuja el proceso, identifica el área que representa el trabajo, y verifica el signo.</li>
+        <li>Para procesos reversibles: el trabajo es único y mínimo (compresión) o máximo (expansión) entre todos los posibles caminos.</li>
+        <li>Para el gas ideal isotérmico: $\Delta U = 0$, así que $Q = -W$. Nunca olvides verificar que la ecuación $PV = Nk_BT$ se satisface con $T$ constante.</li>
+        <li>El proceso adiabático se aborda en el próxima cátedra, donde aparece el exponente $\gamma = C_P/C_V$.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_6/"><div class="nav-dir">← Anterior</div><div class="nav-title">Primera Ley de la Termodinámica</div></a>
+    <a href="../aux_8/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Capacidad Calórica</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

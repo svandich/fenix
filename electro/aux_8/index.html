@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 8 — Conductores II</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 18</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link active" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 2</div>
+    <div class="unit-pill u2 bg-u2">Potencial y conductores · Aux 4–9</div>
+    <h1>Auxiliar 8: Conductores II</h1>
+    <p class="desc">Conductores con múltiples cavidades y cargas, blindaje electrostático, y cómo las cargas externas no afectan lo que ocurre dentro de una cavidad.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Esferas conductoras con múltiples cavidades y cargas puntuales en cada una</li>
+        <li>Distribución de cargas inducidas en todas las superficies (interior y exterior)</li>
+        <li>Blindaje electrostático: independencia del campo en la cavidad de influencias externas</li>
+        <li>Efecto de conectar conductores a tierra (poner a $V = 0$)</li>
+        <li>Conductores concéntricos con cargas libres</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Múltiples cavidades</h3>
+        <p>Cada cavidad actúa de forma independiente. Si la cavidad $i$ tiene carga $q_i$, la superficie interior de esa cavidad tiene $-q_i$. La superficie exterior acumula la suma total.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Blindaje electrostático</h3>
+        <p>El campo dentro de una cavidad de un conductor depende solo de las cargas en esa cavidad, no de lo que hay fuera. El conductor "apantalla" completamente el interior.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Conductor a tierra</h3>
+        <p>Conectar a tierra fuerza $V = 0$. La carga del conductor puede cambiar (fluye hacia/desde tierra) para mantener ese potencial. Permite calcular la nueva distribución.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Conservación de carga</h3>
+        <p>Si el conductor está aislado, la carga total se conserva: $q_{\text{total}} = q_{\text{int. cav. 1}} + q_{\text{int. cav. 2}} + \ldots + q_{\text{superficie exterior}}$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Carga inducida por cavidad</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_8_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $Q_{\text{total}}$ es la carga con que fue fabricado el conductor. La superficie exterior acumula el resto.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Teorema de unicidad (clave para blindaje)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_8_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Si $V$ es constante en todas las superficies de una cavidad, la solución de Laplace en su interior depende solo de esas condiciones, no de lo exterior.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Cómo abordar problemas de múltiples cavidades</div>
+      <ul>
+        <li>Para cada cavidad: aplica Gauss con superficie dentro del conductor para hallar $q$ en la cara interior.</li>
+        <li>Suma algebraicamente todas las cargas inducidas interiores y la carga "libre" del conductor para obtener la carga en la superficie exterior.</li>
+        <li>El campo fuera del conductor equivale al de una carga puntual igual a la carga en la superficie exterior, ubicada en el centro.</li>
+        <li>Las cargas externas NO cambian el campo dentro de ninguna cavidad.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_7/"><div class="nav-dir">← Anterior</div><div class="nav-title">Conductores y Laplace</div></a>
+    <a href="../aux_9/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Método de Carga Imagen</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
