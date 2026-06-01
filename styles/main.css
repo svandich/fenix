@@ -78,7 +78,7 @@ body {
 /* ===== SIDEBAR ===== */
 .sidebar {
   width: var(--sidebar-w);
-  min-height: 100vh;
+  height: 100vh;
   background: var(--bg-sidebar);
   border-right: 1px solid var(--border);
   position: fixed;
