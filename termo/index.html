@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Termodinámica — Temario</title>
   <link rel="stylesheet" href="../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -15,7 +19,7 @@
       <span class="icon">⚛️</span>
       <div>
         <div class="name">Termodinámica</div>
-        <div class="subtitle">Cátedras 1 – 12</div>
+        <div class="subtitle">Cátedras 1–20 · CC 1–7</div>
       </div>
     </a>
   </div>
@@ -48,6 +52,23 @@
     <div class="nav-section-title">Estadística y fases</div>
     <a class="nav-link" href="aux_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
     <a class="nav-link" href="aux_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="aux_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="aux_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="aux_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="aux_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="aux_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="aux_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="aux_21/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="aux_22/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="aux_23/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="aux_24/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="aux_25/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="aux_26/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="aux_27/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
   </div>
 </nav>
 
@@ -58,7 +79,7 @@
     <div class="hero">
       <div class="hero-tag">Notas de clase</div>
       <h1>Cátedras de<br>Termodinámica</h1>
-      <p>Resumen de las 12 cátedras del curso: temario, conceptos clave y fórmulas fundamentales. Basado en las clases del DFI, Universidad de Chile. Haz clic en cualquier cátedra para ver su explicación detallada.</p>
+      <p>Resumen de las 20 cátedras del curso y 7 clases complementarias: temario, conceptos clave y fórmulas fundamentales. Basado en las clases del DFI, Universidad de Chile. Haz clic en cualquier entrada para ver su explicación detallada.</p>
     </div>
 
     <!-- UNIDAD 1: Introducción -->
@@ -196,6 +217,113 @@
             <td class="aux-num">12</td>
             <td class="aux-name"><a href="aux_12/">Transiciones de Fase</a></td>
             <td class="aux-topics">Gas de van der Waals · Transiciones 1.° y 2.° orden · Equilibrio de fases · Ecuación de Clausius-Clapeyron</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- UNIDAD 6: Estadística avanzada -->
+    <div class="unit-group">
+      <div class="unit-group-header">
+        <div class="unit-line" style="background:var(--unit-5)"></div>
+        <h2 class="u5">Estadística Avanzada y Potenciales Termodinámicos</h2>
+        <span class="unit-range">Cát. 13 – 20</span>
+      </div>
+      <table class="temario-table">
+        <thead>
+          <tr><th>#</th><th>Cátedra</th><th>Temas principales</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="aux-num">13</td>
+            <td class="aux-name"><a href="aux_13/">Función de Partición Canónica</a></td>
+            <td class="aux-topics">Ensemble canónico · Distribución de Boltzmann $P_r = e^{-\beta E_r}/Z$ · Energía media $\langle E\rangle = -\partial\ln Z/\partial\beta$ · $F = -k_BT\ln Z$</td>
+          </tr>
+          <tr>
+            <td class="aux-num">14</td>
+            <td class="aux-name"><a href="aux_14/">Ensemble Canónico y Termodinámica</a></td>
+            <td class="aux-topics">$S$, $p$, $\mu$ desde $F = -k_BT\ln Z$ · Gas ideal $Z_N = Z_1^N/N!$ · Entropía de Sackur-Tetrode · Relaciones de Maxwell de $F$</td>
+          </tr>
+          <tr>
+            <td class="aux-num">15</td>
+            <td class="aux-name"><a href="aux_15/">Potenciales Termodinámicos</a></td>
+            <td class="aux-topics">Transformada de Legendre · $U$, $F$, $H$, $G$ y sus variables naturales · Cuatro relaciones de Maxwell · Gibbs-Helmholtz</td>
+          </tr>
+          <tr>
+            <td class="aux-num">16</td>
+            <td class="aux-name"><a href="aux_16/">Sistemas Multicomponentes</a></td>
+            <td class="aux-topics">$\mu_i = (\partial G/\partial N_i)_{T,p}$ · Mezclas ideales $\mu_i = \mu_i^0 + k_BT\ln x_i$ · Gibbs-Duhem · Equilibrio químico</td>
+          </tr>
+          <tr>
+            <td class="aux-num">17</td>
+            <td class="aux-name"><a href="aux_17/">Fluctuaciones Termodinámicas</a></td>
+            <td class="aux-topics">$\sigma_E^2 = k_BT^2C_V$ · Fluctuaciones relativas $\sim 1/\sqrt{N}$ · Equivalencia de ensembles · Teorema fluctuación-disipación</td>
+          </tr>
+          <tr>
+            <td class="aux-num">18</td>
+            <td class="aux-name"><a href="aux_18/">Transformadas de Legendre y Gran Potencial</a></td>
+            <td class="aux-topics">Gran potencial $\Omega = -pV$ · Coeficientes de respuesta $C_p$, $\kappa_T$, $\alpha_p$ · $C_p - C_V = TV\alpha_p^2/\kappa_T$ · Velocidad del sonido</td>
+          </tr>
+          <tr>
+            <td class="aux-num">19</td>
+            <td class="aux-name"><a href="aux_19/">Gran Ensemble Canónico</a></td>
+            <td class="aux-topics">$\Xi = \sum_{N,r} e^{\beta(\mu N - E_r)}$ · $pV = k_BT\ln\Xi$ · Fermi-Dirac · Bose-Einstein · Condensación</td>
+          </tr>
+          <tr>
+            <td class="aux-num">20</td>
+            <td class="aux-name"><a href="aux_20/">Síntesis del Curso</a></td>
+            <td class="aux-topics">Los tres ensembles · Entropía de Gibbs $S = -k_B\sum P_r\ln P_r$ · Euler: $G = N\mu$ · Fotones: distribución de Planck</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CLASES COMPLEMENTARIAS -->
+    <div class="unit-group">
+      <div class="unit-group-header">
+        <div class="unit-line" style="background:var(--unit-3)"></div>
+        <h2 class="u3">Clases Complementarias</h2>
+        <span class="unit-range">CC 1 – 7</span>
+      </div>
+      <table class="temario-table">
+        <thead>
+          <tr><th>#</th><th>Clase</th><th>Temas principales</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="aux-num">CC1</td>
+            <td class="aux-name"><a href="aux_21/">Conceptos Fundamentales</a></td>
+            <td class="aux-topics">Sistema y entorno · Variables de estado · Equilibrio termodinámico · Proceso cuasi-estático · Calor vs. trabajo · Primer principio</td>
+          </tr>
+          <tr>
+            <td class="aux-num">CC2</td>
+            <td class="aux-name"><a href="aux_22/">Temperatura y Escala Absoluta</a></td>
+            <td class="aux-topics">Ley cero · Escala Kelvin · $\langle E_k\rangle = \tfrac{3}{2}k_BT$ · Definición estadística $1/T = (\partial S/\partial U)_{V,N}$</td>
+          </tr>
+          <tr>
+            <td class="aux-num">CC3</td>
+            <td class="aux-name"><a href="aux_23/">Procesos Termodinámicos</a></td>
+            <td class="aux-topics">Isotérmico · Isocórico · Isobárico · Adiabático · Diagrama $p$-$V$ · Resumen de $W$, $Q$, $\Delta U$ para gas ideal</td>
+          </tr>
+          <tr>
+            <td class="aux-num">CC4</td>
+            <td class="aux-name"><a href="aux_24/">Procesos Adiabáticos</a></td>
+            <td class="aux-topics">Derivación de $pV^\gamma = \text{cte}$ · $\gamma$ y grados de libertad · Velocidad del sonido adiabática · Gradiente atmosférico</td>
+          </tr>
+          <tr>
+            <td class="aux-num">CC5</td>
+            <td class="aux-name"><a href="aux_25/">Modelo Atómico y Equipartición</a></td>
+            <td class="aux-topics">Grados de libertad moleculares · $C_V = (f/2)Nk_B$ · Falla clásica a baja $T$ · Modelo de Einstein · Dulong-Petit</td>
+          </tr>
+          <tr>
+            <td class="aux-num">CC6</td>
+            <td class="aux-name"><a href="aux_26/">Entropía y Segunda Ley</a></td>
+            <td class="aux-topics">$dS = \bar{\delta}Q_{rev}/T$ · Desigualdad de Clausius · $S = k_B\ln\Omega$ · Irreversibilidad · Entropía de mezcla · Tercera ley</td>
+          </tr>
+          <tr>
+            <td class="aux-num">CC7</td>
+            <td class="aux-name"><a href="aux_27/">Métodos Matemáticos</a></td>
+            <td class="aux-topics">Derivadas parciales · Regla cíclica · Diferencial exacto (Schwarz) · Transformada de Legendre · Aproximación de Stirling</td>
           </tr>
         </tbody>
       </table>

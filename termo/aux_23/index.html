@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC3 — Procesos Termodinámicos</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../aux_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../aux_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../aux_21/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../aux_22/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link active" href="../aux_23/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../aux_24/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../aux_25/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../aux_26/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../aux_27/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u3 bg-u3">Clase Complementaria · CC 3</div>
+    <h1>CC3: Procesos Termodinámicos</h1>
+    <p class="desc">Análisis detallado de los cuatro procesos básicos — isotérmico, adiabático, isobárico, isocórico — para un gas ideal: trabajo, calor y cambio de energía interna en cada caso, con representación en el diagrama $p$-$V$.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Proceso isotérmico ($T =$ cte): $\Delta U = 0$ para gas ideal, $W = -Q = Nk_BT\ln(V_f/V_i)$</li>
+        <li>Proceso isocórico ($V =$ cte): $W = 0$, $Q = \Delta U = NC_V\Delta T$</li>
+        <li>Proceso isobárico ($p =$ cte): $Q = \Delta H = NC_p\Delta T$, $W = -p\Delta V$</li>
+        <li>Proceso adiabático ($Q = 0$): $pV^\gamma =$ cte, $\Delta U = W = NC_V\Delta T$</li>
+        <li>Representación en el diagrama $p$-$V$: el trabajo es el área bajo la curva</li>
+        <li>Comparación de los cuatro procesos para el mismo cambio de volumen</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Diagrama $p$-$V$</h3>
+        <p>Representación gráfica de los procesos cuasi-estáticos. El trabajo neto $W = -\oint p\,dV$ es el área encerrada por el ciclo (positivo si se recorre en sentido horario). Las isotermas son hipérbolas ($p \propto 1/V$); las adiabáticas son más empinadas ($p \propto V^{-\gamma}$).</p>
+      </div>
+      <div class="concept-card">
+        <h3>Gas ideal: $\Delta U$ solo depende de $\Delta T$</h3>
+        <p>Para gas ideal, $U = NC_VT$ (solo función de $T$). En cualquier proceso que devuelva el sistema a la misma temperatura, $\Delta U = 0$. Por eso en el isotérmico $Q = -W$: todo el calor absorbido se convierte en trabajo.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Adiabática vs. isotérmica</h3>
+        <p>La adiabática es más empinada que la isotérmica en el diagrama $p$-$V$ porque al comprimir adiabáticamente la temperatura sube, aumentando $p$ más que a $T$ constante. El factor es $\gamma = C_p/C_V > 1$: la adiabática cae como $V^{-\gamma}$, la isotérmica como $V^{-1}$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Entalpía en el proceso isobárico</h3>
+        <p>A $p$ constante, $Q_p = \Delta H = \Delta U + p\Delta V$: el calor va a cambiar la energía interna Y a realizar trabajo de expansión. Por eso $C_p > C_V$: se necesita más calor para subir $T$ a $p$ constante que a $V$ constante.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Resumen de los cuatro procesos (gas ideal)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_23_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Tabla de referencia rápida. Convención: $W > 0$ si el entorno realiza trabajo sobre el sistema; $Q > 0$ si el sistema absorbe calor. $\Delta U = Q + W$ en todos los casos.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Proceso adiabático reversible</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_23_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $\gamma = C_p/C_V$. Las tres formas son equivalentes — útil la que involucra las variables dadas. Para gas monoatómico ideal $\gamma = 5/3$; para diatómico $\gamma = 7/5$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de los procesos básicos</div>
+      <ul>
+        <li>El trabajo es el área bajo la curva en el diagrama $p$-$V$: para el mismo cambio de volumen, el proceso isotérmico realiza más trabajo que el adiabático (isotérmica más alta que adiabática en la expansión).</li>
+        <li>Para gas ideal: $\Delta U = 0$ ↔ $\Delta T = 0$ ↔ proceso isotérmico. Esto no vale en general — un gas real puede tener $\Delta U \neq 0$ a $T$ constante (efecto Joule-Thomson).</li>
+        <li>El proceso isobárico es el más común en la práctica de laboratorio (presión atmosférica constante). La entalpía $H$ es la función natural para este proceso: $Q_p = \Delta H$.</li>
+        <li>Una expansión libre (en el vacío, $p_{ext} = 0$) tiene $W = 0$ y si es adiabática también $Q = 0$, por lo que $\Delta U = 0$ — pero el proceso es irreversible y genera entropía. No es un proceso cuasi-estático.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_22/"><div class="nav-dir">← Anterior</div><div class="nav-title">CC2: Temperatura</div></a>
+    <a href="../aux_24/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">CC4: Procesos Adiabáticos</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

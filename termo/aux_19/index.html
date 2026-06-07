@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 19 — Gran Ensemble Canónico</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link active" href="../aux_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../aux_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../aux_21/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../aux_22/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../aux_23/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../aux_24/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../aux_25/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../aux_26/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../aux_27/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Potenciales y sistemas</div>
+    <div class="unit-pill u5 bg-u5">Potenciales y sistemas · Cát. 18–20</div>
+    <h1>Cátedra 19: Gran Ensemble Canónico</h1>
+    <p class="desc">Sistemas abiertos que intercambian partículas con un reservorio: la gran función de partición $\Xi$ generaliza $Z$ a $N$ variable, y conduce naturalmente a las estadísticas cuánticas de Fermi-Dirac y Bose-Einstein.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Ensemble gran canónico ($\mu VT$): $T$ y $\mu$ fijos, $N$ y $E$ fluctúan</li>
+        <li>Gran función de partición $\Xi = \sum_{N,r} e^{\beta(\mu N - E_{N,r})}$</li>
+        <li>Gran potencial $\Omega = -k_BT\ln\Xi = -pV$</li>
+        <li>Número medio de partículas $\langle N\rangle = k_BT\,\partial\ln\Xi/\partial\mu$</li>
+        <li>Estadística de Fermi-Dirac: fermiones (electrones, protones) — principio de exclusión</li>
+        <li>Estadística de Bose-Einstein: bosones (fotones, fonones) — condensación</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Ensemble gran canónico</h3>
+        <p>El sistema puede intercambiar tanto energía como partículas con el reservorio. Las variables fijas son $T$, $V$ y $\mu$ (potencial químico del reservorio). En el equilibrio: $\mu_{sistema} = \mu_{reservorio}$. Es el ensemble más natural para partículas cuánticas.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Fugacidad $z = e^{\beta\mu}$</h3>
+        <p>Variable natural del gran ensemble: $\Xi = \sum_N z^N Z_N$. Para gases clásicos a alta temperatura, $z \ll 1$; para fermiones a baja temperatura, $z \to \infty$ (límite cuántico). La fugacidad es la "actividad" del gas en química.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Distribución de Fermi-Dirac</h3>
+        <p>Ocupación media del nivel $\varepsilon$ por fermiones: $\bar{n}_{FD}(\varepsilon) = 1/(e^{\beta(\varepsilon-\mu)}+1) \in [0,1]$. A $T=0$: $\bar{n}_{FD} = 1$ para $\varepsilon < \mu = \varepsilon_F$ (energía de Fermi) y $0$ para $\varepsilon > \mu$. El Mar de Fermi.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Distribución de Bose-Einstein</h3>
+        <p>Ocupación media del nivel $\varepsilon$ por bosones: $\bar{n}_{BE}(\varepsilon) = 1/(e^{\beta(\varepsilon-\mu)}-1) \in [0,\infty)$. Sin límite de ocupación. A $T \to 0$, si $\mu \to 0^-$, todos los bosones colapsan al estado fundamental: condensación de Bose-Einstein.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Gran función de partición</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_19_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Suma sobre todos los valores de $N$ y todos los microestados $r$ para cada $N$. $z = e^{\beta\mu}$ es la fugacidad. $Z_N$ es la función de partición canónica con $N$ partículas fijas.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Variables termodinámicas del gran canónico</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_19_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Análogo a $F = -k_BT\ln Z$ del canónico, aquí $pV = k_BT\ln\Xi$. Toda la termodinámica se extrae de $\ln\Xi$ derivando respecto de $\beta$, $z$ y $V$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Distribuciones cuánticas</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_19_3.svg" alt=""></div>
+      <div class="formula-desc">
+        El $+1$ (fermiones) impone el principio de exclusión: $\bar{n} \leq 1$. El $-1$ (bosones) permite cualquier ocupación. En el límite $e^{\beta(\varepsilon-\mu)} \gg 1$ (alta $T$ o baja densidad), ambas $\to e^{-\beta(\varepsilon-\mu)}$: distribución de Maxwell-Boltzmann.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Temperatura de Fermi y de Bose</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_19_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $T_F$: temperatura por encima de la cual los electrones se comportan clásicamente ($T_F \sim 10^4$ K en metales — siempre cuánticos a temperatura ambiente). $T_{BE}$: temperatura de condensación para bosones de masa $m$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves del gran ensemble y estadísticas cuánticas</div>
+      <ul>
+        <li>El gran ensemble es matemáticamente más cómodo para partículas cuánticas indistinguibles: la suma sobre $N$ "absorbe" el factorial $N!$ que aparece en el canónico, y las distribuciones de Fermi-Dirac y Bose-Einstein emergen naturalmente.</li>
+        <li>Para fermiones a $T \ll T_F$ (caso de los electrones en metales), solo los estados cerca de $\varepsilon_F$ contribuyen a propiedades térmicas — el "mar de Fermi" está completamente lleno y solo los electrones en la "superficie de Fermi" se excitan.</li>
+        <li>Para bosones, el límite $\mu \to 0^-$ marca la condensación: por debajo de $T_{BE}$, una fracción macroscópica de partículas ocupa el estado fundamental (condensado de Bose-Einstein). Es un orden colectivo cuántico.</li>
+        <li>En el límite clásico ($z \ll 1$), ambas estadísticas cuánticas coinciden con Maxwell-Boltzmann: $\bar{n} \approx e^{-\beta(\varepsilon-\mu)} \ll 1$ — la ocupación de cada estado es mucho menor que 1.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_18/"><div class="nav-dir">← Anterior</div><div class="nav-title">Transform. de Legendre</div></a>
+    <a href="../aux_20/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Síntesis del Curso</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

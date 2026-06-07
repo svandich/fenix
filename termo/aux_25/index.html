@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC5 — Modelo Atómico y Equipartición</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../aux_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../aux_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../aux_21/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../aux_22/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../aux_23/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../aux_24/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link active" href="../aux_25/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../aux_26/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../aux_27/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u3 bg-u3">Clase Complementaria · CC 5</div>
+    <h1>CC5: Modelo Atómico y Equipartición</h1>
+    <p class="desc">La hipótesis atómica conecta la estructura microscópica de la materia con las propiedades termodinámicas macroscópicas. El teorema de equipartición de la energía predice los calores específicos de gases a partir de sus grados de libertad moleculares.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Hipótesis atómica: materia compuesta de átomos y moléculas con masa y estructura interna</li>
+        <li>Grados de libertad: traslación (3), rotación (lineal: 2, no lineal: 3) y vibración (2 por modo)</li>
+        <li>Teorema de equipartición: $\langle E_k\rangle = \tfrac{1}{2}k_BT$ por grado de libertad cuadrático</li>
+        <li>Predicciones para $C_V$: monoatómico $\tfrac{3}{2}Nk_B$, diatómico $\tfrac{5}{2}Nk_B$ (sin vibración)</li>
+        <li>Falla clásica: equipartición predice $C_V$ constante, pero experimentalmente varía con $T$</li>
+        <li>Corrección cuántica: congelación de grados de libertad a baja temperatura (Einstein, Debye)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Teorema de equipartición</h3>
+        <p>A temperatura $T$, cada grado de libertad que aparece cuadráticamente en el Hamiltoniano contribuye $\tfrac{1}{2}k_BT$ a la energía media. Grados traslacionales: $\tfrac{1}{2}mv_x^2$, etc. Grados vibracionales: energía cinética + potencial $\to$ $k_BT$ por modo vibracional.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Grados de libertad de moléculas</h3>
+        <p>Monoatómico: 3 traslacionales. Diatómico: 3 traslacionales + 2 rotacionales + 2 vibracionales (1 modo). Poliatómico lineal: 3T + 2R + vibraciones. Poliatómico no lineal: 3T + 3R + vibraciones. A temperatura ordinaria, la vibración suele estar "congelada" cuánticamente.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Falla de la equipartición clásica</h3>
+        <p>Clásicamente $C_V$ debería ser constante (independiente de $T$). Pero experimentalmente $C_V$ de los sólidos cae a cero cuando $T\to 0$ (ley de Dulong-Petit falla en el frío). Einstein (1907) y Debye (1912) explicaron esto con cuantización de los modos vibracionales.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Temperatura de Einstein $\Theta_E$</h3>
+        <p>$\Theta_E = \hbar\omega_E/k_B$: temperatura por encima de la cual un modo vibracional está clásicamente activo. Para $T \gg \Theta_E$: el modo contribuye $k_BT$ (clásico). Para $T \ll \Theta_E$: el modo está congelado, contribución $\propto e^{-\Theta_E/T} \to 0$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Teorema de equipartición de la energía</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_25_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Válido para cualquier grado de libertad $\xi_i$ que aparezca cuadráticamente en $H$. La energía total media es $U = (f/2)Nk_BT$, donde $f$ es el número total de grados de libertad activos.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Capacidades caloríficas según estructura molecular</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_25_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $f=3$ (monoatómico): $C_V = \tfrac{3}{2}Nk_B$, $\gamma=5/3$. $f=5$ (diatómico sin vibración): $C_V = \tfrac{5}{2}Nk_B$, $\gamma=7/5$. $f=7$ (diatómico con vibración): $C_V = \tfrac{7}{2}Nk_B$, $\gamma=9/7$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Capacidad calórica de Einstein (sólido)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_25_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Límites: $T \gg \Theta_E$: $C_V \to 3Nk_B$ (Dulong-Petit). $T \ll \Theta_E$: $C_V \to 0$ (tercera ley). El modelo de Debye mejora el comportamiento a baja $T$: $C_V \propto T^3$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves del modelo atómico y equipartición</div>
+      <ul>
+        <li>El teorema de equipartición es clásico — requiere que la energía del modo sea continua. Cuando $k_BT \ll \hbar\omega$ (energía del cuanto del modo), el modo está "congelado" y no contribuye a $C_V$.</li>
+        <li>El hidrógeno molecular ($H_2$) muestra experimentalmente la congelación de grados de libertad: a temperatura ambiente solo están activos los 3 traslacionales y 2 rotacionales ($C_V = \frac{5}{2}Nk_B$); la vibración se activa solo por encima de ~3000 K.</li>
+        <li>La ley de Dulong-Petit ($C_V = 3Nk_B$ para sólidos monoatómicos) predice bien a temperatura ordinaria pero falla a baja temperatura — esto motivó la revolución cuántica de Einstein en termodinámica.</li>
+        <li>El número de grados de libertad no es siempre obvio: en sólidos, cada átomo tiene 3 modos vibracionales, cada uno con energía cinética + potencial = $2 \times \frac{1}{2}k_BT = k_BT$ → $C_V = 3Nk_B$ total (Dulong-Petit).</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_24/"><div class="nav-dir">← Anterior</div><div class="nav-title">CC4: Procesos Adiabáticos</div></a>
+    <a href="../aux_26/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">CC6: Entropía y Segunda Ley</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
