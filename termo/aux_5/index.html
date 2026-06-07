@@ -9,6 +9,7 @@
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
 
@@ -157,6 +158,52 @@
         <li>La temperatura entra en la forma $mv^2/(2k_BT)$: lo relevante es la energía cinética comparada con $k_BT$.</li>
         <li>La cola a altas velocidades es exponencial: crece lentamente en escala logarítmica. En astrofísica, esa cola es la que permite que el Sol brille.</li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q5_1">
+        <div class="quiz-question">1. ¿Cuál es el orden correcto de las tres velocidades características de Maxwell?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q5_1" value="0"><span class="opt-letter">A</span><span class="opt-text">$v_{\text{rms}} < \langle v \rangle < v_p$</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_1" value="1"><span class="opt-letter">B</span><span class="opt-text">$v_p < \langle v \rangle < v_{\text{rms}}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_1" value="2"><span class="opt-letter">C</span><span class="opt-text">$\langle v \rangle < v_p < v_{\text{rms}}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Las tres son iguales en equilibrio térmico</span></label>
+        </div>
+        <button class="quiz-btn" onclick="checkQuiz('q5_1', 1)">Verificar</button>
+        <script type="text/explanation" id="q5_1-exp">Las fórmulas dan $v_p = \sqrt{2k_BT/m}$, $\langle v\rangle = \sqrt{8k_BT/\pi m}$, $v_{\text{rms}} = \sqrt{3k_BT/m}$. Sus ratios son $1 : \sqrt{4/\pi} : \sqrt{3/2} \approx 1 : 1.13 : 1.22$. La cola de alta velocidad de la distribución "tira" la media y el rms hacia valores mayores que el pico $v_p$.</script>
+        <div class="quiz-feedback" id="q5_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q5_2">
+        <div class="quiz-question">2. ¿Por qué $f(v = 0) = 0$ en la distribución de Maxwell para la rapidez?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q5_2" value="0"><span class="opt-letter">A</span><span class="opt-text">La mecánica cuántica prohíbe que una partícula esté en reposo exacto</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El factor $v^2$ proviene del volumen de la cáscara esférica en el espacio de velocidades y se anula en $v = 0$</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Es una convención de normalización sin significado físico profundo</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_2" value="3"><span class="opt-letter">D</span><span class="opt-text">La distribución gaussiana de cada componente tiene un mínimo en cero</span></label>
+        </div>
+        <button class="quiz-btn" onclick="checkQuiz('q5_2', 1)">Verificar</button>
+        <script type="text/explanation" id="q5_2-exp">$f(v)$ se obtiene integrando la gaussiana en 3D sobre una cáscara esférica de radio $v$ y grosor $dv$. El volumen de esa cáscara es $4\pi v^2\, dv$, que aporta el factor $v^2$ en $f(v) \propto v^2 e^{-mv^2/2k_BT}$. En $v = 0$ esa cáscara tiene área nula, por eso $f(0) = 0$, aunque la gaussiana de cada componente $f(v_x)$ sí tiene su máximo en cero.</script>
+        <div class="quiz-feedback" id="q5_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q5_3">
+        <div class="quiz-question">3. Según la ley de efusión de Graham, ¿qué gas sale más rápido por un orificio pequeño: $^{235}$UF$_6$ (masa ligeramente menor) o $^{238}$UF$_6$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q5_3" value="0"><span class="opt-letter">A</span><span class="opt-text">El $^{238}$UF$_6$, porque es más masivo y tiene mayor momentum</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_3" value="1"><span class="opt-letter">B</span><span class="opt-text">El $^{235}$UF$_6$, porque al ser más liviano tiene mayor velocidad media y efunde más rápido</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Ambos efunden a la misma tasa; la ley de Graham solo aplica a gases puros</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende de la temperatura; a altas $T$ la diferencia de masa no importa</span></label>
+        </div>
+        <button class="quiz-btn" onclick="checkQuiz('q5_3', 1)">Verificar</button>
+        <script type="text/explanation" id="q5_3-exp">La tasa de efusión es $r \propto 1/\sqrt{m}$. El $^{235}$UF$_6$ tiene menor masa molecular, así que efunde algo más rápido. La diferencia es pequeña (~0.4%), pero real y suficiente para separar isótopos. Esta técnica de difusión gaseosa se usó históricamente para enriquecer uranio en el Proyecto Manhattan.</script>
+        <div class="quiz-feedback" id="q5_3-fb"></div>
+      </div>
+
     </div>
   </section>
 

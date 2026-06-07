@@ -9,6 +9,7 @@
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
 
@@ -149,6 +150,52 @@
         <li>La Revolución Industrial no fue solo tecnológica: transformó la sociedad, creó el proletariado urbano y motivó las primeras leyes laborales.</li>
         <li>El calor latente explica por qué el hielo enfría tan bien las bebidas: absorbe mucha energía sin subir de temperatura.</li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q2_1">
+        <div class="quiz-question">1. ¿Cuál fue la innovación clave de Watt sobre la máquina de Newcomen?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Usar vapor sobrecalentado a mayor presión</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El condensador separado, que mantiene el cilindro siempre caliente</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La válvula reguladora de presión de seguridad</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_1" value="3"><span class="opt-letter">D</span><span class="opt-text">El pistón de doble efecto que aprovecha ambas carreras</span></label>
+        </div>
+        <button class="quiz-btn" onclick="checkQuiz('q2_1', 1)">Verificar</button>
+        <script type="text/explanation" id="q2_1-exp">Newcomen enfriaba y recalentaba el mismo cilindro en cada ciclo, desperdiciando mucha energía. Watt separó el condensador: el vapor se condensa en una cámara fría aparte mientras el cilindro se mantiene siempre caliente. Esto redujo drásticamente el consumo de combustible.</script>
+        <div class="quiz-feedback" id="q2_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q2_2">
+        <div class="quiz-question">2. El experimento de Rumford (taladrado de cañones) refutó la teoría del calórico porque…</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Mostró que el calórico tiene masa medible y puede pesarse</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El calor generado por fricción no tiene límite, lo que no puede explicarse con un fluido que se agota</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Demostró que el calor fluye espontáneamente de cuerpos fríos a calientes</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El cañón se enfrió en lugar de calentarse durante el taladrado</span></label>
+        </div>
+        <button class="quiz-btn" onclick="checkQuiz('q2_2', 1)">Verificar</button>
+        <script type="text/explanation" id="q2_2-exp">Si el calor fuera un fluido ("calórico"), en algún momento se agotaría. Rumford mostró que el taladrado producía calor indefinidamente mientras se aplicara trabajo mecánico. Eso es incompatible con un fluido finito: el calor debe ser movimiento, no sustancia.</script>
+        <div class="quiz-feedback" id="q2_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q2_3">
+        <div class="quiz-question">3. Al fundir hielo a 0 °C se absorbe calor sin que la temperatura cambie. ¿Qué demuestra esto sobre calor y temperatura?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Que calor y temperatura son el mismo concepto físico</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Que el calor es energía en tránsito, distinto de la temperatura, que mide el estado cinético del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Que los termómetros no funcionan correctamente durante las transiciones de fase</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Que la temperatura de los líquidos siempre permanece constante</span></label>
+        </div>
+        <button class="quiz-btn" onclick="checkQuiz('q2_3', 1)">Verificar</button>
+        <script type="text/explanation" id="q2_3-exp">El calor latente de fusión del hielo ($L \approx 334$ kJ/kg) va a romper los enlaces del cristal, no a aumentar la energía cinética de las moléculas. La temperatura mide la energía cinética media: si esa no cambia, $T$ no cambia. El calor es energía que fluye; la temperatura es el estado del sistema.</script>
+        <div class="quiz-feedback" id="q2_3-fb"></div>
+      </div>
+
     </div>
   </section>
 

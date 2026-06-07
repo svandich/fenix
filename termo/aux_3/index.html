@@ -9,6 +9,7 @@
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
 
@@ -157,6 +158,52 @@
         <li>El resultado $PV = \frac{2}{3}U$ es notable: una propiedad macroscópica ($PV$) está directamente ligada a la energía microscópica total $U$.</li>
         <li>La ecuación $PV = Nk_BT$ no es un axioma: es un <em>resultado derivado</em> de la teoría cinética más la definición de temperatura.</li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q3_1">
+        <div class="quiz-question">1. ¿De dónde surge el factor $\frac{1}{3}$ en la expresión $P = \frac{1}{3}nm\langle v^2 \rangle$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Solo 1/3 de las partículas tienen suficiente energía para alcanzar la pared</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La isotropía del gas implica $\langle v_x^2 \rangle = \frac{1}{3}\langle v^2 \rangle$</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_1" value="2"><span class="opt-letter">C</span><span class="opt-text">El recipiente cúbico tiene tres pares de paredes opuestas y se promedia sobre ellos</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Es una constante de proporcionalidad empírica sin derivación exacta</span></label>
+        </div>
+        <button class="quiz-btn" onclick="checkQuiz('q3_1', 1)">Verificar</button>
+        <script type="text/explanation" id="q3_1-exp">En equilibrio el gas es isotrópico: no tiene dirección preferida. Por simetría, $\langle v_x^2 \rangle = \langle v_y^2 \rangle = \langle v_z^2 \rangle$. Como $\langle v^2 \rangle = \langle v_x^2 \rangle + \langle v_y^2 \rangle + \langle v_z^2 \rangle = 3\langle v_x^2 \rangle$, se obtiene $\langle v_x^2 \rangle = \frac{1}{3}\langle v^2 \rangle$. Ese es exactamente el factor $\frac{1}{3}$.</script>
+        <div class="quiz-feedback" id="q3_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q3_2">
+        <div class="quiz-question">2. La relación $PV = \frac{2}{3}U$ es notable porque…</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Prueba que la presión y el volumen son siempre inversamente proporcionales</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Muestra que el producto $PV$ es constante para cualquier gas real</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Conecta una magnitud macroscópica observable ($PV$) directamente con la energía cinética microscópica total $U$</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Solo se verifica experimentalmente a temperaturas bajas y densidades altas</span></label>
+        </div>
+        <button class="quiz-btn" onclick="checkQuiz('q3_2', 2)">Verificar</button>
+        <script type="text/explanation" id="q3_2-exp">$P$ y $V$ son cantidades medibles a escala humana, mientras que $U$ es la energía cinética de $\sim 10^{23}$ partículas. La derivación de la teoría cinética conecta estos dos mundos sin postulados adicionales. Nótese que $PV = \frac{2}{3}U$ combinado con $PV = Nk_BT$ da $U = \frac{3}{2}Nk_BT$, la energía interna del gas ideal.</script>
+        <div class="quiz-feedback" id="q3_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q3_3">
+        <div class="quiz-question">3. En el cálculo de la presión, ¿por qué solo contribuyen las partículas con velocidad perpendicular $v_x > 0$ (las que se mueven hacia la pared)?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Las partículas con $v_x < 0$ tienen menor energía cinética y no producen impacto</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Solo las que se dirigen hacia la pared pueden colisionar con ella; las que se alejan nunca la alcanzan</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Las leyes de Newton son asimétricas respecto a la dirección del movimiento</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Las partículas con $v_x < 0$ ya fueron contadas en el ciclo anterior del recipiente</span></label>
+        </div>
+        <button class="quiz-btn" onclick="checkQuiz('q3_3', 1)">Verificar</button>
+        <script type="text/explanation" id="q3_3-exp">La pared está en una posición fija. Una partícula con $v_x < 0$ se aleja de esa pared y se acerca a la pared opuesta. Para calcular la presión sobre una pared en particular, solo cuentan las partículas que se mueven hacia ella, lo que introduce el factor $\frac{1}{2}$ al integrar solo sobre el semiespacio $v_x > 0$.</script>
+        <div class="quiz-feedback" id="q3_3-fb"></div>
+      </div>
+
     </div>
   </section>
 
