@@ -165,7 +165,7 @@
     <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
     <div class="quiz">
 
-      <div class="quiz-q" id="q4_1">
+      <div class="quiz-q" id="q4_1" data-correct="1">
         <div class="quiz-question">1. ¿Qué mide microscópicamente la temperatura en un gas ideal?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q4_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía potencial media de interacción entre partículas</span></label>
@@ -173,12 +173,11 @@
           <label class="quiz-option"><input type="radio" name="q4_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La densidad de partículas por unidad de volumen</span></label>
           <label class="quiz-option"><input type="radio" name="q4_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La velocidad máxima posible en el sistema</span></label>
         </div>
-        <button class="quiz-btn" onclick="checkQuiz('q4_1', 1)">Verificar</button>
         <script type="text/explanation" id="q4_1-exp">Por definición cinética, $\frac{1}{2}m\langle v^2\rangle = \frac{3}{2}k_BT$. La temperatura es la variable macroscópica que cuantifica la energía cinética media de traslación. Para el gas ideal no existe energía potencial entre partículas, por eso $U = \frac{3}{2}Nk_BT$ es pura energía cinética.</script>
         <div class="quiz-feedback" id="q4_1-fb"></div>
       </div>
 
-      <div class="quiz-q" id="q4_2">
+      <div class="quiz-q" id="q4_2" data-correct="1">
         <div class="quiz-question">2. La Ley Cero establece: "si A está en equilibrio térmico con B, y B con C, entonces A está en equilibrio térmico con C". ¿Para qué sirve esta ley?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q4_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Para calcular cuánta energía fluye entre dos sistemas en contacto</span></label>
@@ -186,12 +185,11 @@
           <label class="quiz-option"><input type="radio" name="q4_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Determina en qué dirección fluye el calor entre dos cuerpos</span></label>
           <label class="quiz-option"><input type="radio" name="q4_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Demuestra que la energía interna se conserva en sistemas aislados</span></label>
         </div>
-        <button class="quiz-btn" onclick="checkQuiz('q4_2', 1)">Verificar</button>
         <script type="text/explanation" id="q4_2-exp">La Ley Cero fundamenta el concepto de temperatura y el funcionamiento de los termómetros. Si el termómetro (B) se termaliza con el sistema a medir (A) y previamente se calibró con una referencia (C), entonces A y C tienen la misma temperatura. Sin la transitividad de la Ley Cero, medir $T$ no tendría sentido.</script>
         <div class="quiz-feedback" id="q4_2-fb"></div>
       </div>
 
-      <div class="quiz-q" id="q4_3">
+      <div class="quiz-q" id="q4_3" data-correct="1">
         <div class="quiz-question">3. Para gas ideal monoatómico, $U = \frac{3}{2}Nk_BT$. Si se duplica $N$ manteniendo $T$ constante, ¿qué ocurre con $U$?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q4_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Permanece igual, porque $T$ no cambia y $U$ depende solo de $T$</span></label>
@@ -199,7 +197,6 @@
           <label class="quiz-option"><input type="radio" name="q4_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$U$ aumenta por un factor $\sqrt{2}$</span></label>
           <label class="quiz-option"><input type="radio" name="q4_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende también del volumen que ocupa el gas</span></label>
         </div>
-        <button class="quiz-btn" onclick="checkQuiz('q4_3', 1)">Verificar</button>
         <script type="text/explanation" id="q4_3-exp">De $U = \frac{3}{2}Nk_BT$: si $T$ es constante y $N$ se duplica, $U$ se duplica. Aunque $U$ del gas ideal depende solo de $T$ para una muestra dada, $U$ también es proporcional a $N$ (variable extensiva). Hay el doble de partículas, cada una con la misma energía cinética promedio $\frac{3}{2}k_BT$.</script>
         <div class="quiz-feedback" id="q4_3-fb"></div>
       </div>

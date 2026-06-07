@@ -661,23 +661,23 @@ section h3 {
 
 .quiz-option.correct {
   border-color: #3fb950;
-  background: color-mix(in srgb, #3fb950 10%, transparent);
+  background: rgba(63, 185, 80, 0.10);
 }
 .quiz-option.correct .opt-letter {
   color: #3fb950;
   border-color: #3fb950;
-  background: color-mix(in srgb, #3fb950 15%, transparent);
+  background: rgba(63, 185, 80, 0.15);
 }
 .quiz-option.correct .opt-text { color: var(--text); }
 
 .quiz-option.incorrect {
   border-color: #f85149;
-  background: color-mix(in srgb, #f85149 10%, transparent);
+  background: rgba(248, 81, 73, 0.10);
 }
 .quiz-option.incorrect .opt-letter {
   color: #f85149;
   border-color: #f85149;
-  background: color-mix(in srgb, #f85149 15%, transparent);
+  background: rgba(248, 81, 73, 0.15);
 }
 .quiz-option.incorrect .opt-text { color: var(--text); }
 

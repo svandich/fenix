@@ -9,6 +9,7 @@
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
 
@@ -156,6 +157,49 @@
         <li>El ciclo de Carnot en el diagrama $P$-$V$ es un cuadrilátero curvo de dos isotermas + dos adiabáticas. El trabajo neto es el área encerrada.</li>
         <li>"La entropía del universo aumenta en cada proceso irreversible" es la esencia de la Segunda Ley.</li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q10_1" data-correct="2">
+        <div class="quiz-question">1. ¿Por qué la eficiencia del ciclo de Carnot $\eta_C = 1 - T_f/T_c$ es el máximo posible entre esos dos focos?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q10_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque usa gas ideal como fluido de trabajo, que es el más eficiente disponible</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque opera con exactamente cuatro etapas; más etapas aumentarían las pérdidas</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque es el único ciclo completamente reversible; toda irreversibilidad produce entropía y reduce la eficiencia</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque Carnot demostró algebraicamente que no existe otro ciclo posible entre esos focos</span></label>
+        </div>
+        <script type="text/explanation" id="q10_1-exp">El teorema de Carnot establece que la eficiencia máxima entre dos focos la alcanza la máquina reversible. Toda irreversibilidad (fricción, gradientes de temperatura finitos, relajaciones lentas) produce entropía y "desperdicia" capacidad de hacer trabajo: la eficiencia cae por debajo de $\eta_C$. La máquina de Carnot es la única que alcanza el máximo porque opera de forma completamente reversible, independientemente del fluido de trabajo usado.</script>
+        <div class="quiz-feedback" id="q10_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q10_2" data-correct="1">
+        <div class="quiz-question">2. ¿Por qué la entropía $S$ definida por $dS = \bar{\delta}Q_{\text{rev}}/T$ es función de estado, aunque $\bar{\delta}Q$ no lo sea?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q10_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque $S = Q \cdot T$ y la temperatura siempre es función de estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque dividir $\bar{\delta}Q_{\text{rev}}$ por $T$ actúa como "factor integrante" que convierte el diferencial inexacto en uno exacto</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque $S$ solo se define para procesos reversibles, donde $Q$ sí es función de estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la desigualdad de Clausius garantiza que $S$ siempre aumenta, lo que la hace unívoca</span></label>
+        </div>
+        <script type="text/explanation" id="q10_2-exp">$\bar{\delta}Q$ es inexacto: su integral entre dos estados depende del camino. Sin embargo, $\oint \bar{\delta}Q_{\text{rev}}/T = 0$ para cualquier ciclo reversible (demostrable usando el ciclo de Carnot). Eso implica que existe una función $S$ tal que $dS = \bar{\delta}Q_{\text{rev}}/T$. Dividir por $T$ es el "factor integrante" matemático que convierte el diferencial inexacto en exacto.</script>
+        <div class="quiz-feedback" id="q10_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q10_3" data-correct="2">
+        <div class="quiz-question">3. Un gas ideal se expande libremente en un recipiente aislado (expansión de Joule): $\Delta T = 0$, $Q = 0$, $W = 0$. ¿Qué ocurre con la entropía del gas?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q10_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$\Delta S = 0$, porque $Q = 0$ y por definición $dS = \bar{\delta}Q/T$</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$\Delta S < 0$, porque el proceso es irreversible y la entropía debe disminuir</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$\Delta S > 0$: aunque $Q = 0$, el proceso es irreversible; $\Delta S$ se calcula con un proceso reversible equivalente entre los mismos estados</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_3" value="3"><span class="opt-letter">D</span><span class="opt-text">La entropía no está definida porque el proceso no es cuasi-estático</span></label>
+        </div>
+        <script type="text/explanation" id="q10_3-exp">$dS = \bar{\delta}Q_{\text{rev}}/T$ solo vale para procesos reversibles. Para calcular $\Delta S$ del proceso irreversible, se diseña un proceso reversible entre los mismos estados inicial y final: por ejemplo, una expansión isotérmica reversible de $V_i$ a $V_f$. En ese proceso $Q_{\text{rev}} = Nk_BT\ln(V_f/V_i) > 0$, así que $\Delta S = Nk_B\ln(V_f/V_i) > 0$. La entropía del gas aumenta aunque no intercambie calor con el entorno.</script>
+        <div class="quiz-feedback" id="q10_3-fb"></div>
+      </div>
+
     </div>
   </section>
 

@@ -9,6 +9,7 @@
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
 
@@ -157,6 +158,49 @@
         <li>Para derivar $PV^\gamma = \text{cte}$: usar $dU = \bar{\delta}W$ (adiabático) + $dU = C_V\,dT$ + $PV = Nk_BT$.</li>
         <li>La adiabática es más "dura" que la isotérmica: al comprimir adiabáticamente, la presión sube más porque la temperatura también sube.</li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q8_1" data-correct="1">
+        <div class="quiz-question">1. ¿Por qué $C_P > C_V$ para cualquier gas ideal?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q8_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque a presión constante la temperatura del gas sube más rápido</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque a presión constante el gas se expande y hay que suministrar calor adicional para ese trabajo de expansión</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a volumen constante parte del calor se pierde por las paredes del recipiente</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque $C_P$ incluye la energía potencial entre moléculas y $C_V$ no</span></label>
+        </div>
+        <script type="text/explanation" id="q8_1-exp">A volumen constante, $W = 0$ y todo el calor va a $\Delta U$. A presión constante, el gas se expande: $P\Delta V = Nk_B\Delta T$ de trabajo extra que el gas realiza sobre el entorno, y que hay que "reponer" con más calor. Por eso $C_P = C_V + Nk_B$. La diferencia $Nk_B$ es exactamente el trabajo de expansión por kelvin de temperatura ganada.</script>
+        <div class="quiz-feedback" id="q8_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q8_2" data-correct="2">
+        <div class="quiz-question">2. Para gas monoatómico ideal, $\gamma = 5/3$. ¿Cómo se compara la pendiente de una adiabática con la de una isoterma en el diagrama $P$-$V$ para el mismo punto?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q8_2" value="0"><span class="opt-letter">A</span><span class="opt-text">La adiabática es más plana (menos empinada) que la isoterma</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Tienen la misma pendiente en el punto de cruce</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_2" value="2"><span class="opt-letter">C</span><span class="opt-text">La adiabática es más empinada que la isoterma</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende del valor de la presión en ese punto</span></label>
+        </div>
+        <script type="text/explanation" id="q8_2-exp">La isoterma sigue $PV = \text{cte}$, con pendiente $dP/dV = -P/V$. La adiabática sigue $PV^\gamma = \text{cte}$, con pendiente $dP/dV = -\gamma P/V$. Como $\gamma > 1$, la adiabática cae más rápido: es más empinada. Físicamente, al comprimir adiabáticamente la temperatura también sube, lo que incrementa la presión más que en una compresión isotérmica.</script>
+        <div class="quiz-feedback" id="q8_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q8_3" data-correct="1">
+        <div class="quiz-question">3. ¿Cuántos grados de libertad tiene un gas diatómico a temperatura moderada y cuál es su $C_V$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q8_3" value="0"><span class="opt-letter">A</span><span class="opt-text">3 grados (solo traslación): $C_V = \frac{3}{2}Nk_B$</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_3" value="1"><span class="opt-letter">B</span><span class="opt-text">5 grados (3 traslación + 2 rotación): $C_V = \frac{5}{2}Nk_B$</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_3" value="2"><span class="opt-letter">C</span><span class="opt-text">6 grados (3 traslación + 3 rotación): $C_V = 3Nk_B$</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_3" value="3"><span class="opt-letter">D</span><span class="opt-text">7 grados (traslación + rotación + vibración): $C_V = \frac{7}{2}Nk_B$</span></label>
+        </div>
+        <script type="text/explanation" id="q8_3-exp">A temperatura moderada solo se activan 3 grados traslacionales y 2 rotacionales (la rotación alrededor del eje de la molécula está "congelada" cuánticamente por tener un momento de inercia ínfimo). Cada grado aporta $\frac{1}{2}Nk_B$, dando $C_V = \frac{5}{2}Nk_B$ y $\gamma = 7/5 = 1.4$. A temperaturas muy altas sí se activa la vibración y $C_V \to \frac{7}{2}Nk_B$.</script>
+        <div class="quiz-feedback" id="q8_3-fb"></div>
+      </div>
+
     </div>
   </section>
 

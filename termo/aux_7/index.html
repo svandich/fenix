@@ -9,6 +9,7 @@
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
 
@@ -156,6 +157,49 @@
         <li>Para el gas ideal isotérmico: $\Delta U = 0$, así que $Q = -W$. Nunca olvides verificar que la ecuación $PV = Nk_BT$ se satisface con $T$ constante.</li>
         <li>El proceso adiabático se aborda en el próxima cátedra, donde aparece el exponente $\gamma = C_P/C_V$.</li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q7_1" data-correct="1">
+        <div class="quiz-question">1. En un proceso isocórico ($V = \text{cte}$), ¿cómo queda la Primera Ley?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q7_1" value="0"><span class="opt-letter">A</span><span class="opt-text">$Q = 0$: sin cambio de volumen no hay transferencia de calor</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_1" value="1"><span class="opt-letter">B</span><span class="opt-text">$W = 0$: todo el calor absorbido va íntegramente a la energía interna, $Q = \Delta U$</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_1" value="2"><span class="opt-letter">C</span><span class="opt-text">$\Delta U = 0$: el calor absorbido iguala el trabajo realizado</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Tanto $Q$ como $\Delta U$ son cero porque no hay movimiento</span></label>
+        </div>
+        <script type="text/explanation" id="q7_1-exp">El trabajo mecánico de expansión/compresión es $W = -\int P\,dV$. A volumen constante $dV = 0$, por lo que $W = 0$. La Primera Ley queda $\Delta U = Q + 0 = Q$: el calor absorbido va íntegramente a cambiar la energía interna. Esto define directamente $C_V = \Delta U / \Delta T = Q / \Delta T$ a volumen constante.</script>
+        <div class="quiz-feedback" id="q7_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q7_2" data-correct="2">
+        <div class="quiz-question">2. En el diagrama $P$-$V$, ¿qué representa el área bajo la curva de un proceso cuasi-estático?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q7_2" value="0"><span class="opt-letter">A</span><span class="opt-text">La variación de energía interna $\Delta U$ del gas</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El calor $Q$ absorbido en el proceso</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_2" value="2"><span class="opt-letter">C</span><span class="opt-text">La integral $\int P\,dV$, que es el trabajo realizado por el gas sobre el entorno (con signo)</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_2" value="3"><span class="opt-letter">D</span><span class="opt-text">La variación de entropía $T\,\Delta S$</span></label>
+        </div>
+        <script type="text/explanation" id="q7_2-exp">El trabajo realizado por el gas sobre el entorno es $W_{\text{por gas}} = \int_{V_i}^{V_f} P\,dV$, que geometricamente es el área bajo la curva $P(V)$. Con el convenio donde $W > 0$ es trabajo sobre el sistema, $W = -\int P\,dV$. En una expansión ($V_f > V_i$) el área es positiva y el gas realiza trabajo positivo sobre el entorno.</script>
+        <div class="quiz-feedback" id="q7_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q7_3" data-correct="1">
+        <div class="quiz-question">3. En un proceso isotérmico del gas ideal, el trabajo sobre el gas es $W = Nk_BT\ln(V_i/V_f)$. Si el gas se expande ($V_f > V_i$), ¿cuál es el signo de $W$ y qué significa?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q7_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$W > 0$: el entorno realiza trabajo positivo sobre el gas al expandirlo</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$W < 0$: el gas realiza trabajo positivo sobre el entorno al expandirse</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$W = 0$: en un proceso isotérmico la temperatura fija el trabajo en cero</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_3" value="3"><span class="opt-letter">D</span><span class="opt-text">El signo depende de si $Nk_BT$ es mayor o menor que $\ln(V_f/V_i)$</span></label>
+        </div>
+        <script type="text/explanation" id="q7_3-exp">$W = Nk_BT\ln(V_i/V_f) = -Nk_BT\ln(V_f/V_i)$. Si $V_f > V_i$, entonces $\ln(V_f/V_i) > 0$ y $W < 0$. En el convenio donde $W > 0$ es trabajo sobre el sistema, un valor negativo significa que el gas trabaja sobre el entorno: empuja el pistón al expandirse. Como $\Delta U = 0$ (isotérmico, gas ideal), el calor absorbido del entorno es $Q = -W > 0$.</script>
+        <div class="quiz-feedback" id="q7_3-fb"></div>
+      </div>
+
     </div>
   </section>
 

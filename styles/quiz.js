@@ -1,13 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.quiz-option').forEach(function (label) {
-    label.addEventListener('click', function () {
-      var input = label.querySelector('input[type="radio"]');
-      if (input.disabled) return;
-      var name = input.name;
-      document.querySelectorAll('input[name="' + name + '"]').forEach(function (r) {
-        r.closest('.quiz-option').classList.remove('selected');
+  document.querySelectorAll('.quiz-options').forEach(function (group) {
+    var quizQ = group.closest('.quiz-q');
+    group.querySelectorAll('input[type="radio"]').forEach(function (radio) {
+      radio.addEventListener('change', function () {
+        if (radio.disabled) return;
+        group.querySelectorAll('.quiz-option').forEach(function (opt) {
+          opt.classList.remove('selected');
+        });
+        radio.closest('.quiz-option').classList.add('selected');
+        if (quizQ && quizQ.dataset.correct !== undefined) {
+          checkQuiz(quizQ.id, parseInt(quizQ.dataset.correct));
+        }
       });
-      label.classList.add('selected');
     });
   });
 });
@@ -25,7 +29,8 @@ function checkQuiz(id, correct) {
     else if (i === sel) opt.classList.add('incorrect');
   });
 
-  q.querySelector('.quiz-btn').disabled = true;
+  var btn = q.querySelector('.quiz-btn');
+  if (btn) btn.disabled = true;
 
   var expEl = document.getElementById(id + '-exp');
   var explanation = expEl ? expEl.textContent : '';
@@ -37,5 +42,8 @@ function checkQuiz(id, correct) {
   fb.innerHTML = prefix + explanation;
   fb.style.display = 'block';
 
-  if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([fb]);
+  if (window.MathJax) {
+    var p = MathJax.startup ? MathJax.startup.promise : Promise.resolve();
+    p.then(function () { return MathJax.typesetPromise([fb]); });
+  }
 }

@@ -156,7 +156,7 @@
     <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
     <div class="quiz">
 
-      <div class="quiz-q" id="q1_1">
+      <div class="quiz-q" id="q1_1" data-correct="1">
         <div class="quiz-question">1. ¿Cuál es el orden de magnitud de la fluctuación relativa $\Delta X / \langle X \rangle$ para un sistema con $N \sim 10^{23}$ partículas?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q1_1" value="0"><span class="opt-letter">A</span><span class="opt-text">$\sim 10^{-3}$</span></label>
@@ -164,12 +164,11 @@
           <label class="quiz-option"><input type="radio" name="q1_1" value="2"><span class="opt-letter">C</span><span class="opt-text">$\sim 10^{-23}$</span></label>
           <label class="quiz-option"><input type="radio" name="q1_1" value="3"><span class="opt-letter">D</span><span class="opt-text">$\sim 1$ (del mismo orden que el promedio)</span></label>
         </div>
-        <button class="quiz-btn" onclick="checkQuiz('q1_1', 1)">Verificar</button>
         <script type="text/explanation" id="q1_1-exp">La fluctuación relativa escala como $1/\sqrt{N}$. Para $N \sim 10^{23}$ se obtiene $1/\sqrt{10^{23}} \approx 10^{-11.5} \sim 10^{-11}$. Este valor es tan pequeño que las variables macroscópicas parecen perfectamente estables.</script>
         <div class="quiz-feedback" id="q1_1-fb"></div>
       </div>
 
-      <div class="quiz-q" id="q1_2">
+      <div class="quiz-q" id="q1_2" data-correct="2">
         <div class="quiz-question">2. Al juntar dos sistemas idénticos, ¿qué ocurre con la temperatura $T$ y el volumen $V$?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q1_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Ambas se duplican</span></label>
@@ -177,12 +176,11 @@
           <label class="quiz-option"><input type="radio" name="q1_2" value="2"><span class="opt-letter">C</span><span class="opt-text">$T$ permanece igual y $V$ se duplica</span></label>
           <label class="quiz-option"><input type="radio" name="q1_2" value="3"><span class="opt-letter">D</span><span class="opt-text">$T$ se duplica y $V$ permanece igual</span></label>
         </div>
-        <button class="quiz-btn" onclick="checkQuiz('q1_2', 2)">Verificar</button>
         <script type="text/explanation" id="q1_2-exp">La temperatura es una variable intensiva: no depende del tamaño del sistema. Al unir dos sistemas idénticos $T$ no cambia. El volumen es extensivo: escala con el tamaño del sistema, por lo que se duplica. Lo mismo ocurre con $U$ y $N$.</script>
         <div class="quiz-feedback" id="q1_2-fb"></div>
       </div>
 
-      <div class="quiz-q" id="q1_3">
+      <div class="quiz-q" id="q1_3" data-correct="2">
         <div class="quiz-question">3. Las leyes microscópicas son reversibles en el tiempo ($t \to -t$), pero el comportamiento macroscópico es irreversible. ¿Por qué esto no es una contradicción?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q1_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque las leyes cuánticas sí son irreversibles</span></label>
@@ -190,7 +188,6 @@
           <label class="quiz-option"><input type="radio" name="q1_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque la irreversibilidad es estadística: los estados fuera del equilibrio son abrumadoramente improbables</span></label>
           <label class="quiz-option"><input type="radio" name="q1_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la termodinámica ignora deliberadamente la mecánica microscópica</span></label>
         </div>
-        <button class="quiz-btn" onclick="checkQuiz('q1_3', 2)">Verificar</button>
         <script type="text/explanation" id="q1_3-exp">Las ecuaciones de Newton son simétricas bajo $t \to -t$: si algo puede ocurrir hacia adelante, también puede ocurrir hacia atrás. Sin embargo, para $N \sim 10^{23}$ partículas, la probabilidad de que el sistema evolucione espontáneamente hacia un estado de menor desorden es astronómicamente pequeña. La irreversibilidad macroscópica es una consecuencia estadística, no dinámica.</script>
         <div class="quiz-feedback" id="q1_3-fb"></div>
       </div>

@@ -9,6 +9,7 @@
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
 
@@ -157,6 +158,49 @@
         <li>La rayita $\bar{\delta}$ es una notación importante: recuerda que $Q$ y $W$ dependen del camino, no del estado final y del inicial.</li>
         <li>Para el gas ideal isotérmico: $\Delta U = 0$ (pues $U$ depende solo de $T$), entonces $Q = -W$: todo el calor absorbido se convierte en trabajo.</li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q6_1" data-correct="2">
+        <div class="quiz-question">1. ¿Cuál de las siguientes magnitudes es una función de estado?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q6_1" value="0"><span class="opt-letter">A</span><span class="opt-text">El calor $Q$ absorbido en un proceso</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El trabajo $W$ realizado sobre el sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía interna $U$</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La suma $Q + W$ en un proceso particular</span></label>
+        </div>
+        <script type="text/explanation" id="q6_1-exp">$U$ es función de estado: $\Delta U$ depende solo de los estados inicial y final, no del camino. $Q$ y $W$ por separado sí dependen del proceso (son diferenciales inexactos). Su suma en cualquier proceso específico tampoco es función de estado, pero su diferencia para un par de estados sí lo es: $\Delta U = Q + W$ es siempre la misma independientemente del camino.</script>
+        <div class="quiz-feedback" id="q6_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q6_2" data-correct="2">
+        <div class="quiz-question">2. Para un gas ideal en un proceso isotérmico, $\Delta U = 0$. ¿Qué implica la Primera Ley?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q6_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Tanto $Q$ como $W$ son cero; no ocurre nada</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_2" value="1"><span class="opt-letter">B</span><span class="opt-text">$Q = W$: el calor absorbido iguala el trabajo recibido</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_2" value="2"><span class="opt-letter">C</span><span class="opt-text">$Q = -W$: el calor absorbido por el gas iguala el trabajo que este realiza sobre el entorno</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El proceso isotérmico es imposible en un gas ideal</span></label>
+        </div>
+        <script type="text/explanation" id="q6_2-exp">De la Primera Ley: $\Delta U = Q + W$. Con $\Delta U = 0$ se obtiene $Q = -W$. Con el convenio donde $W > 0$ es trabajo sobre el sistema, una expansión da $W < 0$ (el gas trabaja sobre el entorno) y $Q > 0$ (el gas absorbe calor del entorno). Todo el calor absorbido se convierte en trabajo. Esto no viola la Segunda Ley porque el proceso no es cíclico.</script>
+        <div class="quiz-feedback" id="q6_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q6_3" data-correct="2">
+        <div class="quiz-question">3. ¿Por qué se escribe $\bar{\delta}Q$ y $\bar{\delta}W$ con rayita, pero $dU$ sin rayita?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q6_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Por convención histórica sin significado físico profundo</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque $Q$ y $W$ son siempre negativos, mientras que $U$ es positiva</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque $Q$ y $W$ dependen del camino (diferenciales inexactos), mientras que $dU$ es diferencial exacta de una función de estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque $Q$ y $W$ no tienen unidades del sistema internacional</span></label>
+        </div>
+        <script type="text/explanation" id="q6_3-exp">Un diferencial exacto $df$ implica que existe una función $f$ cuya diferencial total es $df$; su integral entre dos puntos no depende del camino. Para $U$, esta función existe. Para $Q$ y $W$, no: la integral $\int \bar{\delta}Q$ entre dos estados depende del proceso seguido. La rayita $\bar\delta$ es la notación que recuerda esto cada vez que se escribe la ecuación.</script>
+        <div class="quiz-feedback" id="q6_3-fb"></div>
+      </div>
+
     </div>
   </section>
 

@@ -9,6 +9,7 @@
     MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
 
@@ -149,6 +150,49 @@
         <li>La "flecha del tiempo" termodinámica viene de la Segunda Ley: los procesos macroscópicos irreversibles evolucionan en la dirección que aumenta el desorden (entropía).</li>
         <li>La eficiencia $\eta$ siempre se calcula con respecto a $Q_c$ (calor absorbido del foco caliente), no con respecto al trabajo total.</li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q9_1" data-correct="1">
+        <div class="quiz-question">1. ¿Cuál es la diferencia fundamental entre la Primera y la Segunda Ley?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q9_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La Primera Ley aplica solo a gases; la Segunda aplica a todos los sistemas</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La Primera Ley establece la conservación de energía; la Segunda establece la dirección de los procesos espontáneos</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La Primera Ley es cuantitativa; la Segunda Ley es solo una afirmación cualitativa</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La Primera Ley aplica a procesos reversibles; la Segunda solo a irreversibles</span></label>
+        </div>
+        <script type="text/explanation" id="q9_1-exp">La Primera Ley cuantifica cuánta energía hay y que se conserva. Pero no prohíbe, por ejemplo, que el calor fluya espontáneamente de frío a caliente: eso también conservaría energía. La Segunda Ley establece qué procesos ocurren realmente en la naturaleza: da la "flecha del tiempo" termodinámica. Ambas leyes son necesarias para describir completamente los sistemas termodinámicos.</script>
+        <div class="quiz-feedback" id="q9_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q9_2" data-correct="1">
+        <div class="quiz-question">2. Un refrigerador extrae calor de un compartimento frío y lo expulsa al ambiente más caliente. ¿Viola esto el principio de Clausius?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q9_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Sí, porque el calor fluye de un cuerpo frío a uno caliente</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_2" value="1"><span class="opt-letter">B</span><span class="opt-text">No, porque el refrigerador consume trabajo eléctrico externo como efecto adicional</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Sí, porque viola la conservación de energía al transferir más calor del que recibe</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_2" value="3"><span class="opt-letter">D</span><span class="opt-text">No, porque el principio de Clausius solo aplica a máquinas térmicas, no a refrigeradores</span></label>
+        </div>
+        <script type="text/explanation" id="q9_2-exp">Clausius dice que es imposible que el único efecto de un proceso sea transferir calor de frío a caliente. El refrigerador tiene un efecto adicional: consume trabajo eléctrico $W$. Por eso no lo viola. La energía se conserva: $Q_c = Q_f + W$ (el foco caliente recibe el calor extraído del frío más el trabajo eléctrico convertido en calor).</script>
+        <div class="quiz-feedback" id="q9_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q9_3" data-correct="2">
+        <div class="quiz-question">3. La eficiencia de una máquina térmica es $\eta = W/Q_c$. ¿Puede alcanzar $\eta = 1$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q9_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Sí, si la máquina está perfectamente aislada del entorno</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Sí, si todos los procesos internos son completamente reversibles</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_3" value="2"><span class="opt-letter">C</span><span class="opt-text">No, porque la Segunda Ley exige que siempre se expulse calor al foco frío ($Q_f > 0$)</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Sí, en sistemas cuánticos operando a temperatura cercana al cero absoluto</span></label>
+        </div>
+        <script type="text/explanation" id="q9_3-exp">De la Primera Ley: $Q_c = W + Q_f$. Si $\eta = 1$ entonces $W = Q_c$, lo que requiere $Q_f = 0$: no se expulsa calor al foco frío. Pero eso es exactamente lo que prohíbe el enunciado de Kelvin-Planck: "ningún proceso puede extraer calor de un único foco y convertirlo íntegramente en trabajo". Siempre $Q_f > 0$, por tanto siempre $\eta < 1$.</script>
+        <div class="quiz-feedback" id="q9_3-fb"></div>
+      </div>
+
     </div>
   </section>
 
