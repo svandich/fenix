@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC4 — Procesos Adiabáticos</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link active" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u3 bg-u3">Clase Complementaria · CC 4</div>
+    <h1>CC4: Procesos Adiabáticos</h1>
+    <p class="desc">Derivación rigurosa de la relación $pV^\gamma = \text{cte}$ para procesos adiabáticos reversibles, con aplicaciones al sonido, la atmósfera y el ciclo de Carnot. Análisis del trabajo adiabático y el papel de $\gamma$.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Derivación de $pV^\gamma = \text{cte}$ desde la primera ley con $Q = 0$</li>
+        <li>Relaciones equivalentes: $TV^{\gamma-1} = \text{cte}$ y $T^\gamma p^{1-\gamma} = \text{cte}$</li>
+        <li>Trabajo en proceso adiabático: $W = NC_V(T_f - T_i) = (p_fV_f - p_iV_i)/(1-\gamma)$</li>
+        <li>La adiabática es siempre más empinada que la isotérmica en el diagrama $p$-$V$</li>
+        <li>Aplicaciones: velocidad del sonido adiabática, gradiente adiabático en la atmósfera</li>
+        <li>Relación entre $C_p$, $C_V$ y $\gamma$ para gases con distintos grados de libertad</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Derivación de $pV^\gamma = \text{cte}$</h3>
+        <p>De $dU = -p\,dV$ (adiabático cuasi-estático) y $dU = NC_V\,dT$: $NC_V\,dT = -p\,dV$. Con $p = Nk_BT/V$ se obtiene $NC_V\,dT/T = -Nk_B\,dV/V$. Integrando: $\ln T + (\gamma-1)\ln V = \text{cte}$, es decir $TV^{\gamma-1} = \text{cte}$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>$\gamma$ y los grados de libertad</h3>
+        <p>Por equipartición, $C_V = (f/2)Nk_B$ donde $f$ es el número de grados de libertad. Entonces $\gamma = C_p/C_V = (f+2)/f$. Gas monoatómico: $f=3$, $\gamma=5/3$. Diatómico (T moderada): $f=5$, $\gamma=7/5$. Diatómico (T alta, vibración activa): $f=7$, $\gamma=9/7$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Velocidad del sonido</h3>
+        <p>El sonido se propaga adiabáticamente (oscilaciones rápidas sin tiempo para intercambio de calor). Newton calculó $v_s = \sqrt{p/\rho}$ (isotérmico, incorrecto). Laplace corrigió con la compresibilidad adiabática: $v_s = \sqrt{\gamma p/\rho} = \sqrt{\gamma k_BT/m}$, en acuerdo con el experimento.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Gradiente adiabático atmosférico</h3>
+        <p>Una masa de aire que asciende se expande adiabáticamente y se enfría. El gradiente de temperatura adiabático seco es $dT/dz = -g/C_p \approx -9.8$ K/km. Si el gradiente real es mayor (atmósfera más inestable), hay convección; si es menor, la atmósfera es estable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Ley del proceso adiabático reversible</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_4_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $f$: grados de libertad por molécula. Equivalentemente $TV^{\gamma-1} = \text{cte}$ y $T^\gamma p^{1-\gamma} = \text{cte}$. La adiabática es más empinada que la isotérmica ($pV = \text{cte}$) porque $\gamma > 1$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Trabajo en el proceso adiabático</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_4_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Como $Q=0$, $\Delta U = W_{ad} = NC_V\Delta T$. En expansión adiabática ($V_f > V_i$), $T_f < T_i$ y $W_{ad} < 0$ (el sistema realiza trabajo a expensas de su energía interna).
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Velocidad del sonido adiabática</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_4_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Para aire a 20°C: $v_s \approx 343$ m/s. La corrección de Laplace ($\gamma$ en lugar de 1) aumenta la velocidad predicha por Newton en un factor $\sqrt{\gamma} \approx 1.18$, eliminando la discrepancia experimental.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de los procesos adiabáticos</div>
+      <ul>
+        <li>La derivación de $pV^\gamma = \text{cte}$ usa solo la primera ley con $Q=0$ y la definición de $C_V$ — no requiere ningún modelo microscópico. $\gamma$ es el único parámetro que depende del gas.</li>
+        <li>Las tres formas ($pV^\gamma$, $TV^{\gamma-1}$, $T^\gamma p^{1-\gamma}$) son matemáticamente equivalentes; conviene usar la que involucra las variables conocidas del problema.</li>
+        <li>La distinción entre compresibilidades adiabática e isotérmica fue histórica: Newton midió $v_s$ en el aire y obtuvo un valor 18% menor al experimental. Laplace identificó que las oscilaciones de presión en el sonido son adiabáticas, no isotérmicas.</li>
+        <li>El gradiente adiabático en la atmósfera tiene consecuencias meteorológicas directas: la inestabilidad convectiva (tormentas) ocurre cuando el gradiente real supera el adiabático.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q24_1" data-correct="1">
+        <div class="quiz-question">1. ¿De dónde se deriva la ley del proceso adiabático reversible $pV^\gamma = \text{cte}$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q24_1" value="0"><span class="opt-letter">A</span><span class="opt-text">De la segunda ley y el principio de máxima entropía aplicado a procesos sin intercambio de calor</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Del primer principio con $Q=0$: $NC_V\,dT = -p\,dV$, que combinado con la ecuación de estado $p = Nk_BT/V$ y la relación $k_B = C_p - C_V$ da, al integrar, $TV^{\gamma-1} = \text{cte}$, equivalente a $pV^\gamma = \text{cte}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_1" value="2"><span class="opt-letter">C</span><span class="opt-text">De la ecuación de van der Waals para gases reales donde $\gamma$ depende de las correcciones intermoleculares</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_1" value="3"><span class="opt-letter">D</span><span class="opt-text">De la condición de equilibrio mecánico del gas sin intercambio de materia con el entorno</span></label>
+        </div>
+        <script type="text/explanation" id="q24_1-exp">Para un proceso adiabático reversible ($Q=0$): $dU = \bar{\delta}W \Rightarrow NC_V\,dT = -p\,dV$. Con $p = Nk_BT/V$ (gas ideal): $NC_V\,dT = -\frac{Nk_BT}{V}\,dV \Rightarrow \frac{dT}{T} = -\frac{k_B}{C_V}\frac{dV}{V}$. Usando $k_B = C_p - C_V$ y $\gamma = C_p/C_V$: $\frac{dT}{T} = -(\gamma-1)\frac{dV}{V}$. Integrando: $\ln T + (\gamma-1)\ln V = \text{cte}$, es decir $TV^{\gamma-1} = \text{cte}$. Multiplicando por $\frac{Nk_B}{V^\gamma}$: $pV^\gamma = \text{cte}$. Solo se usó el primer principio y la ecuación de estado ideal, sin ningún modelo microscópico adicional.</script>
+        <div class="quiz-feedback" id="q24_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q24_2" data-correct="1">
+        <div class="quiz-question">2. El gas diatómico tiene $\gamma = 7/5$ a temperatura ambiente, pero podría acercarse a $\gamma = 9/7$ a muy alta temperatura. ¿Por qué cambia $\gamma$ con la temperatura?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q24_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque a alta temperatura las moléculas diatómicas se disocian y se comportan como gas monoatómico ($\gamma = 5/3$)</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_2" value="1"><span class="opt-letter">B</span><span class="opt-text">A temperatura ambiente solo están activos los 3 grados traslacionales y 2 rotacionales ($f=5$, $\gamma=7/5$). A alta temperatura, los modos vibracionales se activan cuánticamente ($f=7$), dando $\gamma = (f+2)/f = 9/7$</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque $C_p$ aumenta con la temperatura más rápido que $C_V$, haciendo que su cociente $\gamma$ crezca</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el gas deja de ser ideal a alta temperatura y la corrección de van der Waals modifica $\gamma$</span></label>
+        </div>
+        <script type="text/explanation" id="q24_2-exp">$\gamma = C_p/C_V = (f+2)/f$ donde $f$ es el número de grados de libertad activos. Los grados de libertad cuánticos se "activan" cuando $k_BT \gg \hbar\omega_{modo}$: a temperaturas bajas, solo los modos de menor energía (traslación y rotación) están activos. Los modos vibracionales tienen energía cuántica $\hbar\omega_{vib}$ más alta: en el H$_2$ la temperatura de activación vibracional es $\sim 3000$ K. Por eso a temperatura ambiente $f=5$ y $\gamma=7/5$, pero por encima de esa temperatura $f\to 7$ y $\gamma\to 9/7$. Este comportamiento no tiene explicación clásica — es un resultado cuántico que motivó la teoría de Einstein.</script>
+        <div class="quiz-feedback" id="q24_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q24_3" data-correct="1">
+        <div class="quiz-question">3. Un meteorólogo mide un gradiente de temperatura en la atmósfera de 12 K/km (mayor que el gradiente adiabático seco $\approx 9.8$ K/km). ¿Qué implica esto?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q24_3" value="0"><span class="opt-letter">A</span><span class="opt-text">La atmósfera es estable y no habrá convección: el aire no tiene suficiente energía para subir</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_3" value="1"><span class="opt-letter">B</span><span class="opt-text">La atmósfera es inestable: una burbuja de aire que asciende se enfría 9.8 K/km (adiabáticamente), pero su entorno se enfría 12 K/km, así que la burbuja resulta más caliente y liviana que el entorno y sigue ascendiendo espontáneamente — hay convección</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Hay una inversión térmica: la temperatura aumenta con la altura en lugar de disminuir</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_3" value="3"><span class="opt-letter">D</span><span class="opt-text">La presión atmosférica es anómalamente alta, haciendo que el gradiente de temperatura supere el valor adiabático</span></label>
+        </div>
+        <script type="text/explanation" id="q24_3-exp">El gradiente adiabático seco ($\approx -9.8$ K/km) es la tasa de enfriamiento de una parcela de aire que asciende sin intercambio de calor. Si el gradiente ambiental real es mayor (el entorno se enfría más rápido, p.ej. $-12$ K/km), una parcela que sube queda más caliente que su entorno: como $T_{parcela} > T_{entorno}$, tiene menor densidad y sigue subiendo por flotabilidad. Este estado se llama inestabilidad convectiva o superadiabático, y es el mecanismo de las tormentas convectivas y cumulonimbos. Si el gradiente real es menor que el adiabático (inversión térmica), el aire es estable y la convección no ocurre.</script>
+        <div class="quiz-feedback" id="q24_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cc_3/"><div class="nav-dir">← Anterior</div><div class="nav-title">CC3: Procesos Básicos</div></a>
+    <a href="../cc_5/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">CC5: Modelo Atómico</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

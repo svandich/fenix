@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC6 — Entropía y Segunda Ley</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link active" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u3 bg-u3">Clase Complementaria · CC 6</div>
+    <h1>CC6: Entropía y Segunda Ley</h1>
+    <p class="desc">Análisis profundo del concepto de entropía desde la perspectiva macroscópica (Clausius) y microscópica (Boltzmann), con enfoque en su significado como medida de desorden, la irreversibilidad y las implicaciones de la segunda ley.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Definición macroscópica: $dS = \bar{\delta}Q_{rev}/T$ y la desigualdad de Clausius $dS \geq \bar{\delta}Q/T$</li>
+        <li>Definición estadística de Boltzmann: $S = k_B\ln\Omega$</li>
+        <li>Conexión entre las dos definiciones para el gas ideal</li>
+        <li>Producción de entropía en procesos irreversibles: $\Delta S_{univ} > 0$</li>
+        <li>Entropía de mezcla: $\Delta S_{mix} = -Nk_B\sum_i x_i\ln x_i$</li>
+        <li>Tercera ley de la termodinámica: $S \to 0$ cuando $T \to 0$ (cristal perfecto)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Entropía de Clausius</h3>
+        <p>$dS = \bar{\delta}Q_{rev}/T$ define $S$ como función de estado a través de procesos reversibles. La desigualdad de Clausius $\oint \bar{\delta}Q/T \leq 0$ para cualquier ciclo establece que $S$ nunca decrece en un sistema aislado: $\Delta S_{univ} \geq 0$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Entropía de Boltzmann: $S = k_B\ln\Omega$</h3>
+        <p>$\Omega$ es el número de microestados compatibles con el macroestado. El sistema tiende hacia el macroestado de mayor $\Omega$ (mayor entropía) porque es estadísticamente abrumadoramente probable. La irreversibilidad es estadística, no absoluta.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Irreversibilidad y generación de entropía</h3>
+        <p>Todo proceso real genera entropía: $\Delta S_{univ} = \Delta S_{sistema} + \Delta S_{entorno} > 0$. La entropía generada es una medida de la "imperfección" del proceso — la diferencia con el trabajo máximo extraíble en condiciones reversibles.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Tercera ley</h3>
+        <p>El postulado de Nernst: $S \to 0$ cuando $T \to 0$ para cualquier sistema en equilibrio en su estado de mínima energía. Implica que es imposible alcanzar el cero absoluto en un número finito de pasos. También: $C_V \to 0$ cuando $T \to 0$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Definición de entropía y desigualdad de Clausius</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_6_1.svg" alt=""></div>
+      <div class="formula-desc">
+        La igualdad vale para procesos reversibles; la desigualdad estricta para irreversibles. $\Delta S_{univ} = \Delta S_{sistema} + \Delta S_{entorno}$: la entropía total del universo nunca decrece.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Entropía de Boltzmann</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_6_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $\Omega$: número de microestados del macroestado. La segunda fórmula da $\Omega$ para una distribución con $N_i$ partículas en el nivel $i$. Con la aproximación de Stirling ($\ln N! \approx N\ln N - N$) se recupera $S = -Nk_B\sum_i p_i\ln p_i$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Entropía del gas ideal (Sackur-Tetrode)</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_6_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Expresión exacta para gas ideal monoatómico, resultado del ensemble canónico. Es extensiva (proporcional a $N$) gracias al factor $N!$ en $Z_N$. Consistente con la tercera ley: $S \to 0$ cuando $\lambda_{th} \to \infty$ (pero el gas ideal cuántico falla a bajas $T$).
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de la entropía y la segunda ley</div>
+      <ul>
+        <li>La entropía no es "desorden" en un sentido vago — es el logaritmo del número de microestados compatibles con el macroestado. Cuantas más formas tiene el sistema de organizarse microscópicamente para dar el mismo macroestado, mayor su entropía.</li>
+        <li>La irreversibilidad macroscópica emerge de la enorme asimetría estadística: los estados de alta entropía son exponencialmente más numerosos. Ver el gas de un lado del recipiente al otro es posible pero estadísticamente imposible ($\Omega_{un\,lado}/\Omega_{todo} \sim 2^{-N}$ con $N \sim 10^{23}$).</li>
+        <li>$\Delta S = 0$ en un proceso reversible adiabático (isentrópico). $\Delta S > 0$ para cualquier proceso irreversible — incluso si el sistema se enfría o cede calor, la entropía del universo sube.</li>
+        <li>La tercera ley tiene consecuencias prácticas: implica que las entropías absolutas son medibles (fijando $S = 0$ a $T = 0$) y que los coeficientes de expansión y las capacidades caloríficas deben tender a cero cuando $T \to 0$.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q26_1" data-correct="2">
+        <div class="quiz-question">1. Un proceso ocurre con $Q = 0$ (adiabático) pero es irreversible (p.ej. expansión libre de Joule). ¿Qué ocurre con la entropía del sistema?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q26_1" value="0"><span class="opt-letter">A</span><span class="opt-text">$\Delta S = 0$, porque $Q = 0$ y por definición $dS = \bar{\delta}Q/T$</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_1" value="1"><span class="opt-letter">B</span><span class="opt-text">$\Delta S < 0$, porque el proceso irreversible "consume" entropía del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_1" value="2"><span class="opt-letter">C</span><span class="opt-text">$\Delta S > 0$: la fórmula $dS = \bar{\delta}Q/T$ solo aplica para procesos reversibles. Para calcular $\Delta S$ del proceso irreversible, se diseña un proceso reversible entre los mismos estados inicial y final y se calcula $\int\bar{\delta}Q_{rev}/T$, que resulta positivo</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La entropía no está definida para procesos irreversibles: solo se puede calcular en procesos cuasi-estáticos</span></label>
+        </div>
+        <script type="text/explanation" id="q26_1-exp">$S$ es una función de estado: $\Delta S$ entre dos estados solo depende de los estados, no del proceso. Para calcular $\Delta S$ de un proceso irreversible, se conectan los mismos estados inicial y final mediante un proceso reversible imaginario y se integra $\bar{\delta}Q_{rev}/T$. Para la expansión libre de Joule de un gas ideal ($V_i \to V_f$, $\Delta T = 0$, $Q=W=0$), el proceso reversible equivalente es una expansión isotérmica: $Q_{rev} = Nk_BT\ln(V_f/V_i) > 0$, dando $\Delta S = Nk_B\ln(V_f/V_i) > 0$. La entropía del gas aumenta aunque no haya intercambio de calor — la irreversibilidad genera entropía internamente.</script>
+        <div class="quiz-feedback" id="q26_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q26_2" data-correct="1">
+        <div class="quiz-question">2. La entropía de mezcla $\Delta S_{mix} = -Nk_B\sum_i x_i\ln x_i > 0$. Si los dos gases mezclados fueran de la misma especie (idénticos), ¿qué ocurriría?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q26_2" value="0"><span class="opt-letter">A</span><span class="opt-text">La entropía de mezcla sería el doble, porque hay el doble de partículas en juego</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_2" value="1"><span class="opt-letter">B</span><span class="opt-text">La entropía de mezcla sería cero: mezclar un gas con sí mismo no cambia el número de microestados $\Omega$ — no se puede distinguir el estado "mezclado" del inicial. Este es el argumento central de la paradoja de Gibbs</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_2" value="2"><span class="opt-letter">C</span><span class="opt-text">La entropía de mezcla sería $-Nk_B\ln 2$, porque la fracción molar de cada componente es $1/2$</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_2" value="3"><span class="opt-letter">D</span><span class="opt-text">La entropía de mezcla sería igual que si los gases fueran distintos, porque el número de partículas es el mismo</span></label>
+        </div>
+        <script type="text/explanation" id="q26_2-exp">Si ambos gases son idénticos, "mezclarlos" no crea ningún nuevo microestado accesible: las partículas de la izquierda y de la derecha son indistinguibles, así que el estado "mezclado" es físicamente el mismo que el inicial. $\Delta\Omega = 0$ y por tanto $\Delta S = k_B\ln(\Omega_f/\Omega_i) = 0$. Esto es precisamente la paradoja de Gibbs: la fórmula clásica (sin el factor $N!$ de las partículas indistinguibles) daría $\Delta S_{mix} = Nk_B\ln 2 > 0$ incluso para gases idénticos — un resultado absurdo. La resolución correcta (mecánica estadística cuántica con partículas indistinguibles) da $\Delta S_{mix} = 0$ para especies idénticas.</script>
+        <div class="quiz-feedback" id="q26_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q26_3" data-correct="1">
+        <div class="quiz-question">3. La tercera ley establece $S \to 0$ cuando $T \to 0$. ¿Por qué implica esto que los coeficientes de expansión térmica $\alpha_p$ y las capacidades caloríficas $C_V$ deben tender a cero?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q26_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque a $T = 0$ los átomos dejan de moverse y no pueden realizar ningún cambio</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Si $S(0) = 0$, entonces $C_V = T(\partial S/\partial T)_V$ y $\alpha_p = (1/V)(\partial V/\partial T)_p = -(1/V)(\partial S/\partial p)_T$ (Maxwell): para que $S$ sea continua y valga 0 en $T=0$, sus derivadas respecto de $T$ y $p$ también deben tender a cero conforme $T\to 0$</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a $T = 0$ todas las sustancias se convierten en superconductoras y su resistencia (y por tanto expansión y calor) es cero</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la tercera ley fue definida precisamente para que $C_V$ y $\alpha_p$ sean cero en el cero absoluto, no es una consecuencia derivada</span></label>
+        </div>
+        <script type="text/explanation" id="q26_3-exp">De las relaciones termodinámicas: $C_V = T(\partial S/\partial T)_V$. Si $S(T=0) = 0$ y $S$ debe ser continua y no negativa, entonces $S$ debe crecer desde 0 conforme $T$ sube desde 0. Si $\partial S/\partial T \to c > 0$ finito cuando $T\to 0$, entonces $C_V = Tc \to 0$. De forma análoga, $\alpha_p = -(1/V)(\partial S/\partial p)_T$ (relación de Maxwell de $G$): si $S(T\to 0) \to 0$ independientemente del valor de $p$, entonces $(\partial S/\partial p)_{T\to 0} \to 0$ y $\alpha_p \to 0$. Esto se confirma experimentalmente: $C_V \propto T^3$ (Debye) o $C_V \propto T$ (electrones en metales) cerca del cero absoluto, y $\alpha_p$ también tiende a cero.</script>
+        <div class="quiz-feedback" id="q26_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cc_5/"><div class="nav-dir">← Anterior</div><div class="nav-title">CC5: Modelo Atómico</div></a>
+    <a href="../cc_7/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">CC7: Métodos Matemáticos</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 16 — Sistemas Multicomponentes</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link active" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Estadística avanzada</div>
+    <div class="unit-pill u5 bg-u5">Estadística avanzada · Cát. 13–17</div>
+    <h1>Cátedra 16: Sistemas Multicomponentes</h1>
+    <p class="desc">Extensión de la termodinámica a mezclas y sistemas con varias especies químicas: el potencial químico $\mu_i$ governa el equilibrio entre componentes, la ecuación de Gibbs-Duhem limita los grados de libertad, y la regla de las fases se generaliza.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Potencial químico $\mu_i = (\partial G/\partial N_i)_{T,p,N_{j\neq i}}$: coste en energía de Gibbs de agregar la especie $i$</li>
+        <li>Condición de equilibrio en mezclas: $\mu_i$ igual en todas las fases para cada componente</li>
+        <li>Ecuación de Gibbs-Duhem: $SdT - Vdp + \sum_i N_i\,d\mu_i = 0$</li>
+        <li>Mezclas ideales: $\mu_i = \mu_i^0(T,p) + k_BT\ln x_i$, entropía de mezcla</li>
+        <li>Equilibrio químico: $\sum_i \nu_i \mu_i = 0$ y constante de equilibrio $K(T)$</li>
+        <li>Regla de las fases de Gibbs generalizada: $F = C - \mathcal{P} + 2$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Potencial químico de la especie $i$</h3>
+        <p>$\mu_i = (\partial G/\partial N_i)_{T,p}$ es el cambio en energía de Gibbs al agregar una molécula de la especie $i$ a $T$ y $p$ fijos. En el equilibrio entre fases, $\mu_i^{(\alpha)} = \mu_i^{(\beta)}$ para cada componente $i$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ecuación de Gibbs-Duhem</h3>
+        <p>$S\,dT - V\,dp + \sum_i N_i\,d\mu_i = 0$ es una restricción entre los cambios de las variables intensivas. Para un sistema con $C$ componentes, de los $C+2$ variables intensivas $(T,p,\mu_1,\ldots,\mu_C)$ solo $C+1$ son independientes.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Mezcla ideal</h3>
+        <p>$\mu_i = \mu_i^0(T,p) + k_BT\ln x_i$, donde $x_i = N_i/N$ es la fracción molar. La entropía de mezcla $\Delta S_{mix} = -Nk_B \sum_i x_i\ln x_i \geq 0$ es siempre positiva: la mezcla espontánea aumenta la entropía.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Equilibrio químico</h3>
+        <p>Para la reacción $\sum_i \nu_i A_i = 0$ (con $\nu_i > 0$ para productos, $\nu_i < 0$ para reactivos), el equilibrio exige $\sum_i \nu_i \mu_i = 0$. De aquí se obtiene la constante $K(T) = \prod_i x_i^{\nu_i}$, que depende solo de $T$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Diferencial de Gibbs para mezclas</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_16_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Generaliza $dG$ a $C$ componentes. A $T$ y $p$ fijos, el sistema evoluciona hacia menor $G$; en el equilibrio $G$ es mínima y $dG = 0$ implica $\sum_i \mu_i\,dN_i = 0$ con las condiciones de conservación.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Potencial químico en mezcla ideal</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_16_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $\mu_i^0$ es el potencial del componente puro a las mismas $T$ y $p$. Como $x_i \leq 1$, el término $k_BT\ln x_i \leq 0$: diluir un componente reduce su potencial químico, lo que impulsa la mezcla espontánea.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Ecuación de Gibbs-Duhem</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_16_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Consecuencia de la extensividad de $G = \sum_i N_i\mu_i$. Limita los cambios simultáneos de $T$, $p$ y los $\mu_i$: solo $C+1$ de los $C+2$ potenciales intensivos son independientes.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Condición de equilibrio químico</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_16_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $\nu_i$ son los coeficientes estequiométricos (positivos para productos). $\Delta G^0 = \sum_i \nu_i\mu_i^0$ es la variación de energía de Gibbs estándar. $K$ crece con $T$ si la reacción es endotérmica ($\Delta H > 0$).
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de sistemas multicomponentes</div>
+      <ul>
+        <li>El potencial químico $\mu_i$ es la variable que se iguala en el equilibrio entre fases — exactamente como $T$ se iguala en el equilibrio térmico y $p$ en el mecánico.</li>
+        <li>La entropía de mezcla $\Delta S_{mix} = -Nk_B \sum_i x_i\ln x_i$ es siempre positiva: mezclar gases ideales es irreversible aunque no haya interacciones. Recuperar la separación requiere trabajo.</li>
+        <li>La ecuación de Gibbs-Duhem impone que en una mezcla binaria a $T$ y $p$ fijos, si $\mu_1$ sube con $x_1$, entonces $\mu_2$ baja con $x_1$ (compensación).</li>
+        <li>La constante de equilibrio $K(T)$ depende solo de $T$ (no de $p$ para gases ideales) y sigue la ecuación de van't Hoff: $d\ln K/dT = \Delta H^0/(k_BT^2)$.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q16_1" data-correct="1">
+        <div class="quiz-question">1. Dos fases $\alpha$ y $\beta$ de un sistema bicomponente están en equilibrio. ¿Qué condición deben cumplir los potenciales químicos de cada especie?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q16_1" value="0"><span class="opt-letter">A</span><span class="opt-text">$\mu_1^{(\alpha)} + \mu_2^{(\alpha)} = \mu_1^{(\beta)} + \mu_2^{(\beta)}$ (la suma total de potenciales es igual en ambas fases)</span></label>
+          <label class="quiz-option"><input type="radio" name="q16_1" value="1"><span class="opt-letter">B</span><span class="opt-text">$\mu_i^{(\alpha)} = \mu_i^{(\beta)}$ para cada componente $i$ por separado: el potencial químico de la especie $i$ debe igualarse en ambas fases, exactamente como $T$ y $P$ se igualan en equilibrio térmico y mecánico</span></label>
+          <label class="quiz-option"><input type="radio" name="q16_1" value="2"><span class="opt-letter">C</span><span class="opt-text">$\mu_1^{(\alpha)} = \mu_2^{(\beta)}$ y $\mu_2^{(\alpha)} = \mu_1^{(\beta)}$ (los potenciales se cruzan entre fases)</span></label>
+          <label class="quiz-option"><input type="radio" name="q16_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Solo $T$ y $P$ deben ser iguales; los potenciales químicos son libres de diferir entre fases</span></label>
+        </div>
+        <script type="text/explanation" id="q16_1-exp">En el equilibrio, el sistema minimiza $G$ a $T$ y $P$ fijos. Si $\mu_i^{(\alpha)} \neq \mu_i^{(\beta)}$, los átomos/moléculas de especie $i$ migrarán espontáneamente de la fase de mayor $\mu_i$ a la de menor $\mu_i$ (para reducir $G$). El equilibrio se alcanza cuando $\mu_i^{(\alpha)} = \mu_i^{(\beta)}$ para todos los componentes $i$ simultáneamente. Esta condición, junto con $T^{(\alpha)} = T^{(\beta)}$ y $P^{(\alpha)} = P^{(\beta)}$, determina completamente el equilibrio de fases.</script>
+        <div class="quiz-feedback" id="q16_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q16_2" data-correct="2">
+        <div class="quiz-question">2. Al mezclar dos gases ideales A y B a temperatura constante, sin interacciones entre ellos, ¿qué ocurre con la entropía del sistema?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q16_2" value="0"><span class="opt-letter">A</span><span class="opt-text">La entropía no cambia: los gases ideales no interactúan, así que la mezcla no altera el número de microestados</span></label>
+          <label class="quiz-option"><input type="radio" name="q16_2" value="1"><span class="opt-letter">B</span><span class="opt-text">La entropía disminuye: el sistema se vuelve más "ordenado" al mezclar las especies</span></label>
+          <label class="quiz-option"><input type="radio" name="q16_2" value="2"><span class="opt-letter">C</span><span class="opt-text">La entropía aumenta: $\Delta S_{mix} = -Nk_B\sum_i x_i\ln x_i > 0$, porque al mezclar cada molécula tiene más volumen accesible (accede al volumen total) — el número de microestados crece aunque no haya interacciones</span></label>
+          <label class="quiz-option"><input type="radio" name="q16_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende de las masas moleculares de A y B: si son iguales, $\Delta S = 0$; si son distintas, $\Delta S > 0$</span></label>
+        </div>
+        <script type="text/explanation" id="q16_2-exp">La entropía de mezcla $\Delta S_{mix} = -Nk_B\sum_i x_i\ln x_i \geq 0$ siempre, con igualdad solo si hay una única especie ($x_i = 1$ para una especie y 0 para las demás). El origen microscópico: al mezclar, cada molécula de tipo A puede ocupar todo el volumen $V$ en lugar de solo su volumen inicial $x_A V$; el número de posiciones accesibles aumenta por un factor $1/x_A > 1$, incrementando $\Omega$ y por tanto $S$. Esto ocurre aunque no haya interacciones: es puramente combinatorio. Por eso separar una mezcla de gases ideales requiere trabajo.</script>
+        <div class="quiz-feedback" id="q16_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q16_3" data-correct="1">
+        <div class="quiz-question">3. La ecuación de Gibbs-Duhem $S\,dT - V\,dp + \sum_i N_i\,d\mu_i = 0$ establece una restricción entre las variables intensivas. ¿Qué implica para un sistema de un componente?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q16_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Que $T$, $P$ y $\mu$ son siempre constantes en el equilibrio</span></label>
+          <label class="quiz-option"><input type="radio" name="q16_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Que de los tres potenciales intensivos ($T$, $P$, $\mu$), solo dos son independientes: conocidos $T$ y $P$, el potencial químico $\mu(T,P)$ queda completamente determinado</span></label>
+          <label class="quiz-option"><input type="radio" name="q16_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Que $\mu$ es siempre cero para sistemas de un componente en equilibrio</span></label>
+          <label class="quiz-option"><input type="radio" name="q16_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Que la energía libre de Gibbs $G = N\mu$ es mínima cuando $dT = dP = 0$</span></label>
+        </div>
+        <script type="text/explanation" id="q16_3-exp">Para $C=1$ componente, Gibbs-Duhem es $S\,dT - V\,dp + N\,d\mu = 0$, que se puede reescribir como $d\mu = -s\,dT + v\,dp$ (con $s = S/N$, $v = V/N$). Esto significa que $\mu$ no es independiente: viene determinado por $T$ y $P$. En general, para $C$ componentes, de los $C+2$ potenciales intensivos ($T$, $P$, $\mu_1,\ldots,\mu_C$), solo $C+1$ son independientes. Esta es la base de la regla de las fases de Gibbs: el número de grados de libertad de un sistema de $C$ componentes y $\mathcal{P}$ fases es $F = C - \mathcal{P} + 2$.</script>
+        <div class="quiz-feedback" id="q16_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_15/"><div class="nav-dir">← Anterior</div><div class="nav-title">Potenciales Termodinámicos</div></a>
+    <a href="../cat_17/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Fluctuaciones</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

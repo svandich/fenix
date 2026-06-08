@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 20 — Síntesis del Curso</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link active" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Potenciales y sistemas</div>
+    <div class="unit-pill u5 bg-u5">Potenciales y sistemas · Cát. 18–20</div>
+    <h1>Cátedra 20: Síntesis del Curso</h1>
+    <p class="desc">Cierre integrador: los tres ensembles, los cuatro potenciales, las cuatro relaciones de Maxwell, y el puente completo entre mecánica estadística y termodinámica clásica. Una vista de pájaro de todo el edificio conceptual.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Los tres ensembles: microcanónico $(E,V,N)$, canónico $(T,V,N)$, gran canónico $(T,V,\mu)$</li>
+        <li>Los cuatro potenciales: $U$, $F$, $H$, $G$ y sus variables naturales</li>
+        <li>Las cuatro relaciones de Maxwell y cómo derivarlas sistemáticamente</li>
+        <li>Entropía de Gibbs $S = -k_B\sum_r P_r\ln P_r$: unificación de la entropía estadística</li>
+        <li>Identidad de Euler e identificación de $G = N\mu$</li>
+        <li>Aplicaciones de síntesis: gas de fotones (radiación de cuerpo negro), gas de Fermi degenerado</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Equivalencia de ensembles</h3>
+        <p>Los tres ensembles dan los mismos resultados termodinámicos en el límite $N\to\infty$. La elección del ensemble es de conveniencia matemática, no física. Para sistemas finitos (nanoestructuras, biología), los ensembles difieren y hay que elegir con cuidado.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Entropía de Gibbs</h3>
+        <p>$S = -k_B\sum_r P_r\ln P_r$ es la definición general de entropía estadística. Se reduce a $S = k_B\ln\Omega$ (Boltzmann) en el microcanónico (todos los estados igualmente probables). Es idéntica a la entropía de Shannon de la teoría de información.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Identidad de Euler</h3>
+        <p>La extensividad de $U$ implica $U = TS - pV + \mu N$ (Euler). De aquí: $G = \mu N$, $F = -pV + \mu N$. La ecuación de Gibbs-Duhem $SdT - Vdp + Nd\mu = 0$ es la diferencial de la identidad de Euler.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Radiación de cuerpo negro</h3>
+        <p>Gas de fotones con $\mu = 0$ (el número de fotones no se conserva) y estadística de Bose-Einstein: $\bar{n}(\omega) = 1/(e^{\hbar\omega/k_BT}-1)$. La energía espectral es la distribución de Planck; integrada da $u = aT^4$ (ley de Stefan-Boltzmann).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Entropía de Gibbs (forma general)</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_20_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Maximizar $S$ sujeto a las restricciones del ensemble reproduce cada distribución: uniforme (microcanónico), Boltzmann (canónico), Boltzmann-fugacidad (gran canónico). Es el principio de máxima entropía de Jaynes.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Identidad de Euler y Gibbs-Duhem</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_20_2.svg" alt=""></div>
+      <div class="formula-desc">
+        La extensividad de $U$ obliga $G = N\mu$ (a $T$, $p$ fijos). Gibbs-Duhem reduce los grados de libertad: en un sistema de un componente, $T$ y $p$ determinan completamente $\mu$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Distribución de Planck (fotones)</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_20_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Resultado de Bose-Einstein con $\mu=0$. La ley $u \propto T^4$ (Stefan-Boltzmann) es una consecuencia directa del análisis dimensional más la estadística cuántica.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Capacidad calórica del gas de Fermi degenerado</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_20_4.svg" alt=""></div>
+      <div class="formula-desc">
+        A bajas temperaturas, solo los electrones en una capa de espesor $k_BT$ alrededor de $\varepsilon_F$ se excitan. $C_V \propto T$ (lineal) a diferencia del $C_V = $ cte del gas clásico. Confirmado experimentalmente en metales.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Síntesis: el edificio de la termodinámica estadística</div>
+      <ul>
+        <li>Todo parte de un postulado: en el equilibrio, el sistema maximiza la entropía $S = -k_B\sum P_r\ln P_r$ sujeto a las restricciones del ensemble. De ahí salen las distribuciones y toda la termodinámica.</li>
+        <li>El ensemble correcto depende de las variables fijas: microcanónico para sistemas aislados (difícil matemáticamente), canónico para $T$, $V$, $N$ fijos (el más usado), gran canónico para $T$, $V$, $\mu$ fijos (ideal para cuántica).</li>
+        <li>Las relaciones de Maxwell no son solo fórmulas útiles — son la manifestación de que los potenciales termodinámicos son funciones de estado (sus diferenciales son exactos). Esto es consecuencia de la existencia del equilibrio.</li>
+        <li>La conexión estadística ↔ termodinámica se resume en: conocida la función de partición ($Z$, $\Xi$, o $\Omega$ microcanónica), toda la termodinámica se obtiene derivando. La física microscópica entra solo a través del espectro de energías $\{E_r\}$.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q20_1" data-correct="1">
+        <div class="quiz-question">1. La entropía de Gibbs $S = -k_B\sum_r P_r\ln P_r$ se reduce a $S = k_B\ln\Omega$ de Boltzmann en el ensemble microcanónico. ¿Por qué?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q20_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque en el microcanónico solo existe un microestado posible, con $P_r = 1$</span></label>
+          <label class="quiz-option"><input type="radio" name="q20_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque en el microcanónico todos los $\Omega$ microestados accesibles son igualmente probables: $P_r = 1/\Omega$ para cada uno. La suma $-k_B\sum_{r=1}^{\Omega}(1/\Omega)\ln(1/\Omega) = -k_B\cdot\Omega\cdot(1/\Omega)(-\ln\Omega) = k_B\ln\Omega$</span></label>
+          <label class="quiz-option"><input type="radio" name="q20_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque Boltzmann definió $S = k_B\ln\Omega$ como caso particular de la más general fórmula de Gibbs</span></label>
+          <label class="quiz-option"><input type="radio" name="q20_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque en el microcanónico la energía está fija, así que no hay fluctuaciones y $S$ es constante</span></label>
+        </div>
+        <script type="text/explanation" id="q20_1-exp">El postulado del microcanónico establece que todos los $\Omega$ microestados compatibles con $(E,V,N)$ son igualmente probables: $P_r = 1/\Omega$. Substituyendo en la entropía de Gibbs: $S = -k_B\sum_{r=1}^{\Omega}P_r\ln P_r = -k_B\sum_{r=1}^{\Omega}\frac{1}{\Omega}\ln\frac{1}{\Omega} = -k_B\cdot\Omega\cdot\frac{1}{\Omega}\cdot(-\ln\Omega) = k_B\ln\Omega$. La fórmula de Boltzmann es el caso especial de la de Gibbs cuando la distribución es uniforme. En el ensemble canónico, la distribución de Boltzmann no es uniforme y hay que usar la expresión completa de Gibbs.</script>
+        <div class="quiz-feedback" id="q20_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q20_2" data-correct="1">
+        <div class="quiz-question">2. Para la radiación de cuerpo negro (fotones), el potencial químico es $\mu = 0$. ¿Por qué?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q20_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque los fotones no tienen carga eléctrica y por tanto no tienen potencial asociado</span></label>
+          <label class="quiz-option"><input type="radio" name="q20_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque los fotones no se conservan: pueden ser creados y destruidos libremente por la pared del cavidad a cualquier temperatura. La condición de equilibrio $\partial F/\partial N = \mu = 0$ minimiza $F$ sin restricción en el número de fotones</span></label>
+          <label class="quiz-option"><input type="radio" name="q20_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque los fotones no tienen masa en reposo, y $\mu = mc^2$ para partículas sin masa es cero</span></label>
+          <label class="quiz-option"><input type="radio" name="q20_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la energía de los fotones es proporcional a su frecuencia, no a su número</span></label>
+        </div>
+        <script type="text/explanation" id="q20_2-exp">En un sistema donde el número de partículas $N$ es fijo, el equilibrio a $T$, $V$ constantes minimiza $F$ con $N$ como constante, y $\mu = (\partial F/\partial N)_{T,V}$ puede tomar cualquier valor. Para fotones, $N$ no está conservado: la pared del cavity puede absorber o emitir fotones libremente. Esto equivale a minimizar $F$ sin restricción en $N$, lo que requiere $\mu = 0$ en el equilibrio (condición $\partial F/\partial N = 0$). Con $\mu = 0$, la distribución de Bose-Einstein para fotones es $\bar{n}(\omega) = 1/(e^{\hbar\omega/k_BT}-1)$, que es la distribución de Planck, origen de la ley de Stefan-Boltzmann $u \propto T^4$.</script>
+        <div class="quiz-feedback" id="q20_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q20_3" data-correct="2">
+        <div class="quiz-question">3. La identidad de Euler $U = TS - PV + \mu N$ implica que $G = N\mu$ para un sistema de un componente. ¿Qué consecuencia práctica tiene esto?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q20_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Que la energía interna del sistema siempre es proporcional a $N$, independientemente de $T$ y $P$</span></label>
+          <label class="quiz-option"><input type="radio" name="q20_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Que la energía libre de Gibbs no puede medirse experimentalmente, solo calcularse teóricamente</span></label>
+          <label class="quiz-option"><input type="radio" name="q20_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Que conocer $\mu(T,P)$ equivale a conocer toda la termodinámica del sistema ($G = N\mu$, de donde se extraen $S$, $V$ y $U$), y que las transiciones de fase ocurren exactamente cuando $\mu$ se iguala entre las fases coexistentes</span></label>
+          <label class="quiz-option"><input type="radio" name="q20_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Que $G$ es siempre positiva porque $\mu > 0$ para cualquier sistema estable</span></label>
+        </div>
+        <script type="text/explanation" id="q20_3-exp">La extensividad de $G$ obliga $G = N\mu(T,P)$: el potencial de Gibbs por partícula es exactamente $\mu$. Esto tiene dos consecuencias fundamentales: (1) Conocer $\mu(T,P)$ basta para calcular toda la termodinámica: $S = -N(\partial\mu/\partial T)_P$, $V = N(\partial\mu/\partial P)_T$, $U = G + TS - PV = N\mu + NT(\partial\mu/\partial T)_P - \ldots$. (2) El equilibrio entre fases ocurre cuando $\mu^{(liq)}(T,P) = \mu^{(gas)}(T,P)$, es decir, cuando el potencial químico por partícula se iguala. Las curvas de coexistencia en el diagrama $P$-$T$ son exactamente las curvas donde esto ocurre.</script>
+        <div class="quiz-feedback" id="q20_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_19/"><div class="nav-dir">← Anterior</div><div class="nav-title">Gran Ensemble Canónico</div></a>
+    <a href="../cc_1/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">CC1: Conceptos Fundamentales</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

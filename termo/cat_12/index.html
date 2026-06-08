@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 12 — Transiciones de Fase</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link active" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 5</div>
+    <div class="unit-pill u5 bg-u5">Estadística y fases · Cát. 11–12</div>
+    <h1>Cátedra 12: Transiciones de Fase</h1>
+    <p class="desc">Cómo y por qué la materia cambia de estado: el gas de van der Waals como modelo para gases reales, la clasificación de transiciones, el equilibrio de fases y la ecuación de Clausius-Clapeyron.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Gas de van der Waals: correcciones al gas ideal por volumen finito e interacciones</li>
+        <li>Isotermas de van der Waals y la región inestable (bucle de Maxwell)</li>
+        <li>Transiciones de primer orden: calor latente, coexistencia de fases</li>
+        <li>Transiciones de segundo orden: sin calor latente, divergencia de $C_P$</li>
+        <li>Diagrama de fases: curvas de coexistencia, punto triple, punto crítico</li>
+        <li>Regla de las fases de Gibbs: $F = C - P + 2$</li>
+        <li>Ecuación de Clausius-Clapeyron: pendiente de las curvas de coexistencia</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Gas de van der Waals</h3>
+        <p>Corrige el gas ideal con dos parámetros: $a$ (atracción entre moléculas, reduce la presión efectiva) y $b$ (volumen excluido por molécula). La ecuación $(P + aN^2/V^2)(V - Nb) = Nk_BT$ reproduce el comportamiento de gases reales y predice la licuefacción.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Transición de primer orden</h3>
+        <p>El sistema salta discontinuamente entre dos fases (p.ej. líquido → vapor). Hay calor latente $L$: se absorbe energía sin que cambie $T$. La presión y temperatura de coexistencia satisfacen la ecuación de Clausius-Clapeyron.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Punto crítico</h3>
+        <p>Temperatura y presión críticas $(T_c, P_c)$ donde la distinción entre líquido y vapor desaparece. Por encima del punto crítico existe el fluido supercrítico. En el punto crítico, $C_P \to \infty$ y la compresibilidad diverge.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Equilibrio de fases</h3>
+        <p>Dos fases coexisten cuando tienen el mismo potencial químico $\mu$, la misma temperatura y la misma presión. La curva de coexistencia en el diagrama $P$-$T$ separa las regiones de estabilidad de cada fase; el punto triple es donde coexisten tres fases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Ecuación de van der Waals</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_12_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $a$ parámetro de atracción intermolecular · $b$ volumen excluido por partícula.
+        Para $a = b = 0$ se recupera el gas ideal.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Punto crítico de van der Waals</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_12_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Se obtiene de $(\partial P/\partial V)_T = 0$ y $(\partial^2 P/\partial V^2)_T = 0$ simultáneamente.
+        Por encima de $T_c$ no hay transición líquido-vapor.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Ecuación de Clausius-Clapeyron</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_12_3.svg" alt=""></div>
+      <div class="formula-desc">
+        $L = T\,\Delta S$ calor latente · $\Delta V$ cambio de volumen en la transición.
+        Para vapor ideal ($\Delta V \approx Nk_BT/P$): $\dfrac{dP}{dT} \approx \dfrac{LP}{Nk_BT^2}$ → $P \propto e^{-L/Nk_BT}$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Regla de las fases de Gibbs</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_12_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $F$ grados de libertad · $C$ número de componentes · $\mathcal{P}$ número de fases.
+        Para agua pura ($C = 1$) en el punto triple ($\mathcal{P} = 3$): $F = 0$ (estado único).
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de las transiciones de fase</div>
+      <ul>
+        <li>El gas de van der Waals es el modelo más simple que captura la transición líquido-vapor. Sus isotermas por debajo de $T_c$ tienen una región no física (presión que sube al aumentar el volumen), que se corrige con la construcción de Maxwell.</li>
+        <li>En una transición de primer orden, al calentar a presión constante la temperatura se queda "fija" en el punto de coexistencia hasta que toda la fase cambia: el calor latente va a reorganizar la estructura, no a subir $T$.</li>
+        <li>La ecuación de Clausius-Clapeyron explica por qué el agua hierve a menos de 100°C en la montaña (menor $P$) y por qué el hielo se funde bajo presión ($dP/dT < 0$ para agua, anomalía del agua).</li>
+        <li>Las transiciones de segundo orden (p.ej. ferro–paramagnetismo, superconductividad) no tienen calor latente: el calor específico diverge en $T_c$.</li>
+        <li>El potencial químico $\mu = (\partial F/\partial N)_{T,V}$ es la variable que se iguala en el equilibrio entre fases: $\mu_{\text{líq}} = \mu_{\text{vap}}$.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q12_1" data-correct="1">
+        <div class="quiz-question">1. En una transición de fase de primer orden a presión constante (p.ej. ebullición del agua), ¿qué ocurre con la temperatura mientras coexisten las dos fases?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q12_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Sube linealmente con el calor aportado, al igual que fuera de la transición</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Se mantiene constante: el calor aportado se usa íntegramente como calor latente para cambiar de fase, sin subir la temperatura</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Baja, porque la fase líquida cede calor a la fase gaseosa para sustentarla</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Oscila entre la temperatura del líquido y la del vapor hasta que una fase desaparece</span></label>
+        </div>
+        <script type="text/explanation" id="q12_1-exp">En una transición de primer orden, las dos fases coexisten a una temperatura (y presión) fija. Todo el calor que se aporta al sistema va a romper los enlaces intermoleculares de la fase condensada y a reorganizar la estructura: esto es el calor latente $L$. Mientras existan las dos fases, $T$ no cambia. Solo cuando toda la fase líquida se ha evaporado la temperatura vuelve a subir.</script>
+        <div class="quiz-feedback" id="q12_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q12_2" data-correct="2">
+        <div class="quiz-question">2. Por encima del punto crítico $(T > T_c,\ P > P_c)$ de un fluido, ¿qué ocurre con la distinción entre líquido y vapor?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q12_2" value="0"><span class="opt-letter">A</span><span class="opt-text">El fluido solo puede existir en fase gaseosa por encima del punto crítico</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El fluido solo puede existir en fase líquida, porque la presión alta lo comprime</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_2" value="2"><span class="opt-letter">C</span><span class="opt-text">La distinción entre líquido y vapor desaparece: existe un fluido supercrítico que no presenta transición discontinua entre fases y puede pasar continuamente de densidades altas a bajas</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El fluido se convierte en sólido porque la presión supercrítica lo solidifica</span></label>
+        </div>
+        <script type="text/explanation" id="q12_2-exp">El punto crítico es el extremo de la curva de coexistencia líquido-vapor. Por encima de $T_c$, la diferencia entre las dos fases (densidad, entropía) se reduce a cero. El fluido supercrítico tiene propiedades intermedias entre líquido y gas y puede comprimirse continuamente desde baja densidad (gas) hasta alta densidad (líquido) sin ninguna transición discontinua. Esta propiedad se aprovecha en extracción con $\text{CO}_2$ supercrítico.</script>
+        <div class="quiz-feedback" id="q12_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q12_3" data-correct="1">
+        <div class="quiz-question">3. La curva de coexistencia sólido-líquido del agua tiene pendiente $dP/dT < 0$ (el punto de fusión baja al aumentar la presión). Según Clausius-Clapeyron, $dP/dT = L/(T\Delta V)$, ¿cuál es la causa?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q12_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque el calor latente de fusión del agua es negativo (la fusión libera calor)</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque el hielo es menos denso que el agua líquida: al fundir, el volumen disminuye ($\Delta V = V_{liq} - V_{sol} < 0$), lo que invierte el signo de $dP/dT$</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque la temperatura de fusión del agua no depende de la presión (la curva es vertical en el diagrama $P$-$T$)</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el punto triple del agua está a una temperatura superior a 0°C, invirtiendo la curva</span></label>
+        </div>
+        <script type="text/explanation" id="q12_3-exp">La ecuación de Clausius-Clapeyron es $dP/dT = L/(T\Delta V)$. Para la curva sólido-líquido, $L > 0$ (la fusión absorbe calor) y $T > 0$, así que el signo de $dP/dT$ depende solo de $\Delta V = V_{liq} - V_{sol}$. Para el agua, el hielo flota: $\rho_{hielo} < \rho_{agua}$, es decir $V_{sol} > V_{liq}$, por tanto $\Delta V < 0$. Esto hace $dP/dT < 0$: aumentar la presión funde el hielo. Esta anomalía del agua (y del bismuto, silicio, y pocos otros materiales) tiene consecuencias en glaciología y en la formación de patines de hielo.</script>
+        <div class="quiz-feedback" id="q12_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_11/"><div class="nav-dir">← Anterior</div><div class="nav-title">Mecánica Estadística</div></a>
+    <a href="../cat_13/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Función de Partición</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

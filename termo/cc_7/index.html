@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC7 — Métodos Matemáticos</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link active" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u3 bg-u3">Clase Complementaria · CC 7</div>
+    <h1>CC7: Métodos Matemáticos en Termodinámica</h1>
+    <p class="desc">Herramientas matemáticas esenciales para la termodinámica: derivadas parciales, la regla cíclica, integrales de línea, condición de diferencial exacto y transformadas de Legendre. La maquinaria que hace posible derivar todas las relaciones del curso.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Derivadas parciales: notación y significado de $(\partial f/\partial x)_y$</li>
+        <li>Regla cíclica (o triple producto): $(\partial x/\partial y)_z(\partial y/\partial z)_x(\partial z/\partial x)_y = -1$</li>
+        <li>Diferenciales exactos e inexactos: condición de Schwarz $\partial^2 f/\partial x\partial y = \partial^2 f/\partial y\partial x$</li>
+        <li>Integrales de línea en el espacio termodinámico: dependencia del camino</li>
+        <li>Transformada de Legendre: cómo cambiar variables naturales conservando información</li>
+        <li>Aproximación de Stirling y su uso en combinatoria estadística</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Regla cíclica</h3>
+        <p>Para tres variables ligadas por una ecuación de estado $f(x,y,z)=0$: $\left(\frac{\partial x}{\partial y}\right)_z \left(\frac{\partial y}{\partial z}\right)_x \left(\frac{\partial z}{\partial x}\right)_y = -1$. Usada extensamente para relacionar coeficientes termodinámicos: p.ej. $(\partial p/\partial T)_V = -(\partial p/\partial V)_T(\partial V/\partial T)_p$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Diferencial exacto</h3>
+        <p>$df = M(x,y)dx + N(x,y)dy$ es exacto si $(\partial M/\partial y)_x = (\partial N/\partial x)_y$ (condición de Schwarz). Si es exacto, $\int_A^B df = f(B) - f(A)$ independiente del camino. $dU$, $dS$, $dF$, $dH$, $dG$ son exactos. $\bar{\delta}Q$ y $\bar{\delta}W$ no lo son.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Transformada de Legendre</h3>
+        <p>Dada $f(x)$, su transformada de Legendre es $g(p) = f(x) - px$ donde $p = df/dx$. Intercambia la variable $x$ por su derivada conjugada $p$ sin perder información (la función original se recupera invirtiendo la transformada). En termodinámica, intercambia pares $(S,T)$ o $(V,p)$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Aproximación de Stirling</h3>
+        <p>$\ln N! \approx N\ln N - N$ para $N \gg 1$. Equivalentemente $N! \approx (N/e)^N\sqrt{2\pi N}$. Esencial para calcular $\ln\Omega$ en sistemas macroscópicos. Error relativo: $O(1/N)$. Para $N \sim 10^{23}$, la aproximación es prácticamente exacta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Regla cíclica y regla de la cadena</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_7_1.svg" alt=""></div>
+      <div class="formula-desc">
+        La regla cíclica es válida para cualquier ecuación de estado $f(x,y,z) = 0$. Notar el signo $-1$ (no $+1$): se usa para derivar relaciones como $(\partial p/\partial T)_V = \alpha_p/\kappa_T$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Condición de diferencial exacto (Schwarz)</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_7_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Esta condición es la que genera las relaciones de Maxwell al aplicarse a los diferenciales de los potenciales termodinámicos. Verificar que un diferencial es exacto prueba que la magnitud es función de estado.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Transformada de Legendre</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_7_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Ejemplo termodinámico: $U \to F = U - TS$ intercambia $S$ (variable natural) por $T = (\partial U/\partial S)_V$ (su conjugada). La transformada inversa recupera $U$: $U = F + TS$ con $S = -(\partial F/\partial T)_V$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Aproximación de Stirling</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_7_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Usada para calcular $\ln\Omega = \ln(N!/\prod_i N_i!)$. Con Stirling: $\ln\Omega \approx -N\sum_i p_i\ln p_i$ donde $p_i = N_i/N$ — esto lleva directamente a la entropía de Boltzmann como $S = k_B\ln\Omega = -Nk_B\sum_i p_i\ln p_i$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de los métodos matemáticos</div>
+      <ul>
+        <li>La regla cíclica tiene el signo $-1$ — esto siempre sorprende, pero es correcto. Viene de que al mover sobre una curva de nivel $f = \text{cte}$, los cambios de $x$, $y$, $z$ están relacionados por un determinante Jacobiano.</li>
+        <li>La condición de Schwarz (diferencial exacto) es tanto el origen de las relaciones de Maxwell como la prueba de que $U$, $S$, etc. son funciones de estado. Si $\bar{\delta}Q$ fuera exacto, no habría segunda ley.</li>
+        <li>La transformada de Legendre preserva toda la información termodinámica — no pierde nada. Esto contrasta con, por ejemplo, integrar sobre variables: aquí sí se pierde información. Es un cambio de variables, no una proyección.</li>
+        <li>La aproximación de Stirling es tan buena para $N \sim 10^{23}$ que el error es absolutamente inapreciable. Para $N = 100$: error $\sim 1\%$. Para $N = 10^{23}$: error $\sim 10^{-23}\%$ — irrelevante para cualquier aplicación física.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q27_1" data-correct="1">
+        <div class="quiz-question">1. La regla cíclica establece $\left(\frac{\partial x}{\partial y}\right)_z\left(\frac{\partial y}{\partial z}\right)_x\left(\frac{\partial z}{\partial x}\right)_y = -1$. ¿Por qué el resultado es $-1$ y no $+1$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q27_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Por convención histórica de los termodinámicos del siglo XIX que definieron el trabajo con un signo particular</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque las tres variables están ligadas por una ecuación de estado $f(x,y,z)=0$: al moverse sobre la superficie $f=0$, los cambios de $x$, $y$, $z$ están correlacionados con un signo negativo que proviene del determinante jacobiano de la restricción</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque la temperatura siempre tiene signo negativo en relación a la presión y el volumen</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque los tres coeficientes son siempre negativos individualmente, y el producto de tres negativos es negativo</span></label>
+        </div>
+        <script type="text/explanation" id="q27_1-exp">Dada $f(x,y,z) = 0$, las derivadas parciales implícitas satisfacen: $(\partial x/\partial y)_z = -(\partial f/\partial y)_z/(\partial f/\partial x)_z$ (diferenciación implícita). El producto cíclico: $(\partial x/\partial y)_z(\partial y/\partial z)_x(\partial z/\partial x)_y = -\frac{\partial f/\partial y}{\partial f/\partial x}\cdot\frac{-\partial f/\partial z}{\partial f/\partial y}\cdot\frac{-\partial f/\partial x}{\partial f/\partial z} = -1$. El signo $-1$ surge de la restricción: moverse sobre la superficie $f=0$ en la dirección de $x$ creciente obliga a $y$ y $z$ a variar de forma que no todos pueden crecer simultáneamente — aparece el signo negativo. Un error clásico es olvidar el $-1$ y escribir $+1$.</script>
+        <div class="quiz-feedback" id="q27_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q27_2" data-correct="1">
+        <div class="quiz-question">2. Para verificar si $df = M(x,y)\,dx + N(x,y)\,dy$ es un diferencial exacto, se aplica la condición de Schwarz. ¿Qué establece esta condición?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q27_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Que $M$ y $N$ deben ser funciones positivas para que el diferencial sea exacto</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Que $\left(\frac{\partial M}{\partial y}\right)_x = \left(\frac{\partial N}{\partial x}\right)_y$: la igualdad de las derivadas cruzadas (que expresa que el orden de diferenciación es irrelevante). Si se cumple, existe $f$ tal que $\partial f/\partial x = M$ y $\partial f/\partial y = N$</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Que $M\,dx + N\,dy = 0$ para que el proceso sea cuasi-estático</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Que $M^2 + N^2 = $ cte, es decir que el "módulo" del diferencial es constante a lo largo del camino</span></label>
+        </div>
+        <script type="text/explanation" id="q27_2-exp">Si $f(x,y)$ existe, entonces $M = \partial f/\partial x$ y $N = \partial f/\partial y$. La condición de Schwarz exige que las derivadas cruzadas sean iguales: $\partial^2 f/\partial y\partial x = \partial^2 f/\partial x\partial y$, es decir $(\partial M/\partial y)_x = (\partial N/\partial x)_y$. Si se cumple, el diferencial es exacto e $\int_A^B df = f(B)-f(A)$ independientemente del camino. Las cuatro relaciones de Maxwell son exactamente las condiciones de Schwarz aplicadas a los diferenciales de $U$, $F$, $H$ y $G$: son la prueba matemática de que estos potenciales son funciones de estado.</script>
+        <div class="quiz-feedback" id="q27_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q27_3" data-correct="1">
+        <div class="quiz-question">3. La aproximación de Stirling $\ln N! \approx N\ln N - N$ es extremadamente precisa para $N \sim 10^{23}$. ¿De dónde viene esta precisión?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q27_3" value="0"><span class="opt-letter">A</span><span class="opt-text">La aproximación de Stirling es una identidad exacta, no una aproximación: no tiene error para ningún $N$</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_3" value="1"><span class="opt-letter">B</span><span class="opt-text">El error de Stirling es $O(\ln N)$, mientras que el término principal $\ln N! \approx N\ln N$ es $O(N\ln N)$: el error relativo es $\sim\ln N/N \sim 53/10^{23} \approx 10^{-22}$, absolutamente inapreciable para propósitos físicos</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque los errores de Stirling se cancelan al tomar diferencias de entropía $\Delta S = S_f - S_i$</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la constante de Boltzmann $k_B$ es muy pequeña, haciendo que el error absoluto en $S = k_B\ln\Omega$ sea físicamente cero</span></label>
+        </div>
+        <script type="text/explanation" id="q27_3-exp">La fórmula completa de Stirling es $\ln N! = N\ln N - N + \frac{1}{2}\ln(2\pi N) + O(1/N)$. El término dominante es $N\ln N \sim 10^{23}\cdot 53 \approx 5\times10^{24}$. El error al omitir $\frac{1}{2}\ln(2\pi N) \approx \frac{1}{2}\ln(10^{23}) \approx 27$ es del orden de $27/5\times10^{24} \sim 10^{-23}$: inconcebiblemente pequeño. En la práctica, para $N = 100$ el error ya es solo del 1%. Para $N \sim 10^{23}$, la aproximación básica $N\ln N - N$ es perfecta — y con el término $\frac{1}{2}\ln(2\pi N)$ es prácticamente exacta incluso para $N \sim 10$.</script>
+        <div class="quiz-feedback" id="q27_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cc_6/"><div class="nav-dir">← Anterior</div><div class="nav-title">CC6: Entropía y Segunda Ley</div></a>
+    <a href="../" class="next"><div class="nav-dir">↑ Volver</div><div class="nav-title">Temario general</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

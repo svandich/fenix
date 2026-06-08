@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 18 — Transformadas de Legendre y Gran Potencial</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link active" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Potenciales y sistemas</div>
+    <div class="unit-pill u5 bg-u5">Potenciales y sistemas · Cát. 18–20</div>
+    <h1>Cátedra 18: Transformadas de Legendre y Gran Potencial</h1>
+    <p class="desc">Revisión sistemática de la estructura matemática de los potenciales termodinámicos y presentación del gran potencial $\Omega(T,V,\mu) = -pV$, natural en el ensemble gran canónico donde $N$ fluctúa.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Estructura matemática de la transformada de Legendre: intercambio de variables conjugadas</li>
+        <li>Los cinco potenciales: $U$, $F$, $H$, $G$ y $\Omega$ (gran potencial)</li>
+        <li>Gran potencial $\Omega(T,V,\mu) = F - \mu N = -pV$</li>
+        <li>Cuadrado de Born: mnemotecnia para los cuatro potenciales clásicos y sus relaciones de Maxwell</li>
+        <li>Coeficientes de respuesta: $C_V$, $C_p$, $\kappa_T$, $\kappa_S$, $\alpha_p$</li>
+        <li>Relaciones entre coeficientes: $C_p - C_V = TV\alpha_p^2/\kappa_T$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Gran potencial $\Omega$</h3>
+        <p>$\Omega = F - \mu N = U - TS - \mu N = -pV$. Es el potencial natural del ensemble gran canónico (variables $T$, $V$, $\mu$ fijos). Análogamente a $F = -k_BT\ln Z$ en el canónico, $\Omega = -k_BT\ln\Xi$ donde $\Xi$ es la gran función de partición.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Coeficientes de respuesta</h3>
+        <p>Caracterizan cómo responde el sistema a perturbaciones: $C_p = T(\partial S/\partial T)_p$ (calor específico a presión constante), $\kappa_T = -(1/V)(\partial V/\partial p)_T$ (compresibilidad), $\alpha_p = (1/V)(\partial V/\partial T)_p$ (expansión térmica). Todos son medibles experimentalmente.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Cuadrado de Born</h3>
+        <p>Diagrama mnemotécnico que organiza $U$, $F$, $H$, $G$ en un cuadrado con sus variables naturales en los vértices ($S$, $V$, $T$, $p$). Permite leer las derivadas y las relaciones de Maxwell sin memorizar — solo hay que conocer la estructura del cuadrado.</p>
+      </div>
+      <div class="concept-card">
+        <h3>$C_p > C_V$ siempre</h3>
+        <p>$C_p - C_V = TV\alpha_p^2/\kappa_T \geq 0$ porque $\alpha_p^2 \geq 0$ y $\kappa_T > 0$ (estabilidad mecánica). Para el gas ideal: $C_p - C_V = Nk_B$. La diferencia es pequeña en sólidos ($V$ casi incompresible) y grande en gases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Diferencial del gran potencial</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_18_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Variables naturales de $\Omega$: $T$, $V$, $\mu$. De aquí: $S = -(\partial\Omega/\partial T)_{V,\mu}$, $p = -(\partial\Omega/\partial V)_{T,\mu}$, $N = -(\partial\Omega/\partial\mu)_{T,V}$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Relación entre coeficientes de respuesta</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_18_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Identidad exacta válida para cualquier sistema simple. Para gas ideal: $\alpha_p = 1/T$, $\kappa_T = 1/p$, recuperando $C_p - C_V = Nk_B$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Ecuación de estado energética</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_18_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Relación derivada de la relación de Maxwell de $F$. Para gas ideal ($p = Nk_BT/V$), $(\partial p/\partial T)_V = p/T$, entonces $(\partial U/\partial V)_T = 0$: la energía del gas ideal no depende del volumen (confirmación de la experiencia de Joule).
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Relación $C_p/C_V$ y velocidad del sonido</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_18_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $\kappa_S = -(1/V)(\partial V/\partial p)_S$ es la compresibilidad adiabática. El sonido se propaga adiabáticamente ($\kappa_S < \kappa_T$, por tanto $v_s$ real es mayor que la estimación isotérmica de Newton).
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de los potenciales y coeficientes</div>
+      <ul>
+        <li>El gran potencial $\Omega = -pV$ parece trivial, pero encierra toda la física del ensemble gran canónico: $\ln\Xi = pV/(k_BT)$, de donde se extraen $\langle N\rangle$, $U$, $S$ y las fluctuaciones.</li>
+        <li>La identidad $C_p - C_V = TV\alpha_p^2/\kappa_T$ es más que una fórmula: expresa que el calor extra de $C_p$ respecto de $C_V$ se debe al trabajo de expansión contra la presión constante.</li>
+        <li>El cuadrado de Born no es solo mnemotecnia: refleja la estructura geométrica simpléctica del espacio termodinámico. Las cuatro relaciones de Maxwell son las cuatro "diagonales" del cuadrado.</li>
+        <li>La diferencia $\kappa_T/\kappa_S = \gamma > 1$ explica por qué Newton subestimó la velocidad del sonido: asumió compresión isotérmica cuando en realidad es adiabática.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q18_1" data-correct="1">
+        <div class="quiz-question">1. La identidad $C_p - C_V = TV\alpha_p^2/\kappa_T \geq 0$ muestra que $C_p \geq C_V$ siempre. ¿Cuál es la interpretación física?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q18_1" value="0"><span class="opt-letter">A</span><span class="opt-text">A presión constante el gas es menos eficiente porque la expansión genera calor adicional por fricción</span></label>
+          <label class="quiz-option"><input type="radio" name="q18_1" value="1"><span class="opt-letter">B</span><span class="opt-text">A presión constante, parte del calor aportado realiza trabajo de expansión $p\,dV$ (que no sube $T$), mientras que a volumen fijo todo el calor va a aumentar la temperatura interna: por eso se necesita más calor a presión constante para el mismo $\Delta T$</span></label>
+          <label class="quiz-option"><input type="radio" name="q18_1" value="2"><span class="opt-letter">C</span><span class="opt-text">A volumen constante la temperatura sube más rápido porque no hay pérdida de calor por la pared</span></label>
+          <label class="quiz-option"><input type="radio" name="q18_1" value="3"><span class="opt-letter">D</span><span class="opt-text">$C_V$ incluye solo la energía cinética traslacional, mientras $C_p$ incluye también la rotacional</span></label>
+        </div>
+        <script type="text/explanation" id="q18_1-exp">A volumen constante ($dV = 0$), todo el calor $\bar{\delta}Q = dU$ aumenta la energía interna del gas. A presión constante, cuando el gas se calienta también se expande: $\bar{\delta}Q = dU + p\,dV$. El término $p\,dV$ es trabajo realizado por el gas sobre el entorno — esa energía no sube $T$. Por tanto, para conseguir el mismo $\Delta T$, se necesita más calor a presión constante ($C_p > C_V$). Para el gas ideal: $C_p - C_V = Nk_B$, independientemente del gas. $\alpha_p^2/\kappa_T$ vale cero para sistemas incompresibles (sólidos y líquidos), haciendo $C_p \approx C_V$ en ese caso.</script>
+        <div class="quiz-feedback" id="q18_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q18_2" data-correct="1">
+        <div class="quiz-question">2. Newton calculó la velocidad del sonido como $v_s = \sqrt{P/\rho}$ (compresión isotérmica) y obtuvo un valor ~18% menor al experimental. ¿Cuál fue su error?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q18_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Newton usó una densidad incorrecta del aire que no incluía el vapor de agua</span></label>
+          <label class="quiz-option"><input type="radio" name="q18_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Las oscilaciones de presión en el sonido son adiabáticas (tan rápidas que no hay tiempo para intercambio de calor): la compresibilidad relevante es $\kappa_S = \kappa_T/\gamma$, no $\kappa_T$, dando $v_s = \sqrt{\gamma P/\rho}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q18_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Newton no conocía la ecuación de estado del gas ideal $PV = NkT$, esencial para el cálculo</span></label>
+          <label class="quiz-option"><input type="radio" name="q18_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Newton cometió un error de un factor $1/\gamma$ en la derivación de la fórmula de ondas</span></label>
+        </div>
+        <script type="text/explanation" id="q18_2-exp">La velocidad del sonido es $v_s = 1/\sqrt{\rho\kappa}$, donde $\kappa$ es la compresibilidad apropiada al proceso. Newton usó $\kappa_T$ (isotérmica), pero el sonido se propaga tan rápido que las compresiones son adiabáticas: el gas no tiene tiempo de intercambiar calor con el entorno. Laplace corrigió esto en 1816 usando $\kappa_S = \kappa_T/\gamma$: $v_s = \sqrt{\gamma P/\rho} = \sqrt{\gamma k_BT/m}$. El factor $\sqrt{\gamma} = \sqrt{7/5} \approx 1.18$ explica exactamente el 18% de discrepancia de Newton. Para el aire a 20°C: $v_s \approx 343$ m/s.</script>
+        <div class="quiz-feedback" id="q18_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q18_3" data-correct="1">
+        <div class="quiz-question">3. El gran potencial $\Omega = F - \mu N$ satisface $\Omega = -PV$. ¿Por qué esta aparentemente simple igualdad es notable?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q18_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque la presión siempre es negativa en el gran ensemble, haciendo $\Omega$ positivo</span></label>
+          <label class="quiz-option"><input type="radio" name="q18_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque es una consecuencia de la extensividad: a $T$ y $\mu$ fijos, $\Omega$ solo puede ser proporcional a $V$ (la única variable extensiva), y el coeficiente es $-P$ por el diferencial de $\Omega$. Esto implica $\ln\Xi = PV/(k_BT)$, conectando la gran función de partición con la ecuación de estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q18_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque el gran potencial siempre es negativo (pues $P > 0$ y $V > 0$), lo que garantiza la estabilidad del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q18_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque es la definición de presión en el ensemble gran canónico, no un resultado derivado</span></label>
+        </div>
+        <script type="text/explanation" id="q18_3-exp">La igualdad $\Omega = -PV$ es una consecuencia de la extensividad de la termodinámica. A $T$ y $\mu$ fijos (intensivos), $\Omega$ debe ser extensivo, es decir, proporcional a $V$ (la única variable extensiva en el gran canónico). El coeficiente se identifica como $-P$ de $d\Omega = -S\,dT - P\,dV - N\,d\mu$. De ahí, $\Omega = -PV$ exactamente. Esto implica que la gran función de partición $\Xi = e^{-\Omega/k_BT} = e^{PV/k_BT}$, lo que conecta directamente $\ln\Xi$ con la ecuación de estado $PV$: toda la termodinámica se obtiene de $\ln\Xi$ diferenciando.</script>
+        <div class="quiz-feedback" id="q18_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_17/"><div class="nav-dir">← Anterior</div><div class="nav-title">Fluctuaciones</div></a>
+    <a href="../cat_19/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Gran Ensemble Canónico</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 11 — Mecánica Estadística y Función de Partición</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link active" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 5</div>
+    <div class="unit-pill u5 bg-u5">Clase complementaria · Unidad 5</div>
+    <h1>Cátedra 11: Mecánica Estadística y Función de Partición</h1>
+    <p class="desc">Fundamentos estadísticos de la termodinámica: microestados, macroestados, la entropía de Boltzmann, y la función de partición como herramienta para calcular todas las propiedades termodinámicas.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Microestados ($\omega$) y macroestados: cuántas formas hay de realizar un macroestado</li>
+        <li>Entropía de Boltzmann: $S = k_B\ln\Omega$</li>
+        <li>Maximización de la entropía: el equilibrio como estado de máxima probabilidad</li>
+        <li>Distribución de Boltzmann: probabilidad de un estado con energía $\epsilon_i$</li>
+        <li>Función de partición canónica: $Z = \sum_i e^{-\epsilon_i/k_BT}$</li>
+        <li>Energía libre de Helmholtz: $F = -k_BT\ln Z$</li>
+        <li>Derivación de magnitudes termodinámicas desde $Z$: $U$, $S$, $P$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Microestados y macroestados</h3>
+        <p>Un <em>macroestado</em> se describe por las variables macroscópicas ($T$, $P$, $V$, $U$). Un <em>microestado</em> especifica el estado completo de todas las partículas. $\Omega$ es el número de microestados compatibles con el macroestado dado. El equilibrio corresponde al macroestado con mayor $\Omega$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Entropía de Boltzmann</h3>
+        <p>$S = k_B\ln\Omega$ conecta la descripción estadística (microestados) con la termodinámica (entropía). El logaritmo aparece porque queremos que la entropía sea extensiva: $\Omega$ de dos sistemas independientes se multiplica, pero sus entropías deben sumarse.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Distribución de Boltzmann</h3>
+        <p>La probabilidad de encontrar el sistema en un microestado de energía $\epsilon_i$ es $p_i = e^{-\epsilon_i/k_BT}/Z$. El factor $e^{-\epsilon/k_BT}$ se llama factor de Boltzmann. A mayor temperatura, los estados de alta energía son más accesibles.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Función de partición $Z$</h3>
+        <p>$Z = \sum_i e^{-\epsilon_i/k_BT}$ suma sobre todos los microestados. Es el "generador" de toda la termodinámica: diferenciando $\ln Z$ con respecto a $T$ y $V$ se obtienen $U$, $P$, $S$ y $F$. El nombre viene del alemán <em>Zustandssumme</em> (suma de estados).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Entropía de Boltzmann</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_11_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $\Omega$ número de microestados compatibles con el macroestado · $k_B = 1.38\times10^{-23}$ J/K.
+        Esta fórmula está grabada en la lápida de Boltzmann en Viena.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Distribución de Boltzmann (ensamble canónico)</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_11_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $p_i$ probabilidad del microestado $i$ con energía $\epsilon_i$ · $Z$ función de partición (factor de normalización).
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Energía interna desde la función de partición</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_11_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Equivalentemente: $U = k_BT^2\,\dfrac{\partial \ln Z}{\partial T}$.
+        Permite calcular $U$ sin resolver la mecánica microscópica explícitamente.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Energía libre de Helmholtz</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_11_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $F$ es la energía disponible para hacer trabajo a temperatura constante.
+        De $F$ se derivan todas las demás magnitudes: $S = -(\partial F/\partial T)_V$, $P = -(\partial F/\partial V)_T$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ La lógica de la mecánica estadística</div>
+      <ul>
+        <li>La termodinámica clásica postuló la entropía; la mecánica estadística la <em>derivó</em> de principios más fundamentales (probabilidades de microestados).</li>
+        <li>La función de partición $Z$ codifica toda la física del sistema. Una vez que conoces $Z$ en función de $T$ y $V$, puedes calcular cualquier propiedad termodinámica.</li>
+        <li>El factor de Boltzmann $e^{-\epsilon/k_BT}$ tiene una interpretación física directa: la probabilidad relativa de un estado con energía $\epsilon$ comparado con el estado de energía cero.</li>
+        <li>A $T \to 0$: solo el estado de menor energía está poblado. A $T \to \infty$: todos los estados son igualmente probables.</li>
+        <li>La distribución de Maxwell (aux. 5) es un caso particular de la distribución de Boltzmann aplicada a los estados de traslación de las moléculas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q11_1" data-correct="1">
+        <div class="quiz-question">1. ¿Por qué la entropía de Boltzmann $S = k_B\ln\Omega$ usa el logaritmo de $\Omega$ y no $\Omega$ directamente?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q11_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque sin el logaritmo la entropía podría ser negativa para $\Omega < 1$</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Para que la entropía sea extensiva: $\Omega$ de dos sistemas independientes se multiplica, pero las entropías deben sumarse; el logaritmo convierte la multiplicación en suma</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque Boltzmann definió el logaritmo por analogía con la entropía de Clausius $dS = \bar{\delta}Q/T$</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Por convención matemática para que $S$ tenga unidades de energía dividida por temperatura</span></label>
+        </div>
+        <script type="text/explanation" id="q11_1-exp">Si dos sistemas independientes tienen $\Omega_1$ y $\Omega_2$ microestados, el sistema combinado tiene $\Omega = \Omega_1 \cdot \Omega_2$ microestados. La entropía debe ser extensiva (sumarse): $S = S_1 + S_2$. Esto exige $S \propto \ln\Omega$, porque $\ln(\Omega_1\cdot\Omega_2) = \ln\Omega_1 + \ln\Omega_2$. El logaritmo es la única función que convierte la multiplicación de $\Omega$ en la suma de entropías.</script>
+        <div class="quiz-feedback" id="q11_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q11_2" data-correct="2">
+        <div class="quiz-question">2. Un sistema tiene dos estados con energías $\epsilon_1 < \epsilon_2$. Al aumentar la temperatura $T$, la probabilidad del estado de mayor energía $\epsilon_2$...</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q11_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Disminuye: los estados de alta energía siempre son menos probables, independientemente de $T$</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="1"><span class="opt-letter">B</span><span class="opt-text">No cambia: la distribución de Boltzmann no depende de $T$ en el cociente de probabilidades</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Aumenta: el factor de Boltzmann $e^{-\epsilon/k_BT}$ se vuelve más uniforme a $T$ alta; en el límite $T\to\infty$ ambos estados son igualmente probables</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Puede aumentar o disminuir dependiendo del valor concreto de $\epsilon_2 - \epsilon_1$</span></label>
+        </div>
+        <script type="text/explanation" id="q11_2-exp">La probabilidad de un estado con energía $\epsilon$ es $p \propto e^{-\epsilon/k_BT}$. A temperatura baja ($k_BT \ll \epsilon_2-\epsilon_1$), el factor $e^{-\epsilon_2/k_BT} \approx 0$: el estado de alta energía está prácticamente despoblado. A temperatura alta ($k_BT \gg \epsilon_2-\epsilon_1$), $e^{-\epsilon/k_BT} \approx 1$ para todos los estados: todos son igualmente probables. Así, la probabilidad del estado de mayor energía siempre aumenta con $T$.</script>
+        <div class="quiz-feedback" id="q11_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q11_3" data-correct="1">
+        <div class="quiz-question">3. ¿Cómo se obtiene la energía interna media $U$ a partir de la función de partición $Z$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q11_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$U = Z \cdot k_BT$, porque $Z$ ya encierra toda la energía del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$U = -\dfrac{\partial \ln Z}{\partial \beta}$ con $\beta = 1/(k_BT)$: derivar el logaritmo de $Z$ respecto de $\beta$ extrae la energía media ponderada por la distribución de Boltzmann</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$U = \ln Z / T$, por analogía con la energía libre $F = -k_BT\ln Z$</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="3"><span class="opt-letter">D</span><span class="opt-text">$U = Z^2 k_B$, porque la energía es cuadrática en la función de partición</span></label>
+        </div>
+        <script type="text/explanation" id="q11_3-exp">Por definición, $U = \langle E\rangle = \sum_i \epsilon_i p_i = \sum_i \epsilon_i e^{-\beta\epsilon_i}/Z$. Esta suma es exactamente $-\partial\ln Z/\partial\beta$, porque $\partial\ln Z/\partial\beta = (1/Z)\partial Z/\partial\beta = (1/Z)\sum_i(-\epsilon_i)e^{-\beta\epsilon_i} = -\langle E\rangle$. Equivalentemente, $U = k_BT^2(\partial\ln Z/\partial T)$.</script>
+        <div class="quiz-feedback" id="q11_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_10/"><div class="nav-dir">← Anterior</div><div class="nav-title">Entropía y Ciclo de Carnot</div></a>
+    <a href="../cat_12/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Transiciones de Fase</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

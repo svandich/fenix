@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC1 — Conceptos Fundamentales</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link active" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u3 bg-u3">Clase Complementaria · CC 1</div>
+    <h1>CC1: Conceptos Fundamentales</h1>
+    <p class="desc">Clase de apoyo introductoria: definiciones precisas de sistema, entorno, variables de estado y equilibrio termodinámico. Base necesaria para seguir el resto del curso con solidez conceptual.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Sistema y entorno: fronteras diatérmicas, adiabáticas, rígidas y permeables</li>
+        <li>Estado termodinámico: variables de estado extensivas ($U$, $V$, $N$) e intensivas ($T$, $p$, $\mu$)</li>
+        <li>Equilibrio termodinámico: condiciones de equilibrio térmico, mecánico y químico</li>
+        <li>Procesos cuasi-estáticos: sucesión de estados de equilibrio</li>
+        <li>Calor y trabajo: formas de intercambiar energía — diferencia fundamental</li>
+        <li>Primer principio: $\Delta U = Q + W$ (convención de signos y su significado)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Variables de estado</h3>
+        <p>Describen completamente el estado de equilibrio: $T$, $p$, $V$, $N$, $U$, $S$. No dependen de cómo llegó el sistema al estado — dependen solo del estado actual. Calor $Q$ y trabajo $W$ no son variables de estado: dependen del proceso.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Equilibrio termodinámico</h3>
+        <p>El sistema está en equilibrio cuando sus variables macroscópicas no cambian con el tiempo. Requiere: equilibrio térmico ($T$ uniforme), mecánico ($p$ uniforme) y químico ($\mu$ uniforme). La termodinámica describe solo estados de equilibrio.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Proceso cuasi-estático</h3>
+        <p>Secuencia de estados de equilibrio, ejecutada infinitamente lenta. Es el proceso ideal reversible: puede recorrerse en ambas direcciones. Los procesos reales son irreversibles y generan entropía. Los cuasi-estáticos son el límite teórico de mayor eficiencia.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Calor vs. Trabajo</h3>
+        <p>Ambos son formas de transferir energía, pero cualitativamente distintas: el trabajo transfiere energía en forma organizada (macroscópicamente coordinada); el calor lo hace en forma desorganizada (microscópicamente aleatoria). Solo el trabajo es completamente convertible.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Primer principio de la termodinámica</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_1_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $Q > 0$: el sistema absorbe calor. $W > 0$: el entorno realiza trabajo sobre el sistema (convención de la física — en química se usa $W = -p\Delta V$ con signo contrario). $U$ es función de estado; $Q$ y $W$ no lo son.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Trabajo de presión-volumen</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_1_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Para proceso cuasi-estático. El trabajo es el área bajo la curva en el diagrama $p$-$V$. Su valor depende del camino (no es diferencial exacto): $\bar{\delta}W = -p\,dV$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Condiciones de equilibrio entre dos sistemas</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_1_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Equilibrio térmico (frontera diatérmica), mecánico (frontera móvil) y químico (frontera permeable) respectivamente. La variable que se iguala está conjugada a la variable extensiva que puede intercambiarse.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves conceptuales de la base</div>
+      <ul>
+        <li>La termodinámica es una teoría de estados de equilibrio — no describe cómo llega el sistema al equilibrio, sino las relaciones entre los estados de equilibrio. La dinámica hacia el equilibrio es la no-equilibrio, fuera del alcance estricto del curso.</li>
+        <li>La distinción calor/trabajo es fundamental: el calor transfiere entropía, el trabajo no. Esta asimetría es la raíz de todas las limitaciones termodinámicas (segunda ley).</li>
+        <li>Los procesos cuasi-estáticos son idealizaciones útiles — todo proceso real es irreversible en algún grado. La irreversibilidad siempre genera entropía adicional.</li>
+        <li>La notación $\bar{\delta}Q$ y $\bar{\delta}W$ (con barra) marca diferenciales inexactos: su integral depende del camino, no solo del estado inicial y final. $dU$ sí es diferencial exacto.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q21_1" data-correct="2">
+        <div class="quiz-question">1. ¿Cuál de las siguientes es una variable de estado?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q21_1" value="0"><span class="opt-letter">A</span><span class="opt-text">El calor $Q$ absorbido en un proceso isobárico</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El trabajo $W$ realizado por el sistema en una expansión</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía interna $U$: solo depende del estado actual del sistema (su temperatura, volumen, composición), no del proceso que lo llevó a ese estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="3"><span class="opt-letter">D</span><span class="opt-text">El calor latente de vaporización $L$, que es constante para una sustancia</span></label>
+        </div>
+        <script type="text/explanation" id="q21_1-exp">Las variables de estado son aquellas cuyo valor en un estado de equilibrio no depende de cómo llegó el sistema a ese estado: $U$, $T$, $P$, $V$, $S$, $N$, $H$, $F$, $G$, $\mu$. Sus diferenciales son exactos ($dU$, $dT$, etc.). El calor $Q$ y el trabajo $W$ no son variables de estado: dependen del proceso (del camino). La misma diferencia de estado puede alcanzarse con distintos valores de $Q$ y $W$. Por eso se escribe $\bar{\delta}Q$ y $\bar{\delta}W$ con diferencial inexacto, no $dQ$.</script>
+        <div class="quiz-feedback" id="q21_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q21_2" data-correct="1">
+        <div class="quiz-question">2. ¿Cuál es la diferencia fundamental entre calor y trabajo como formas de transferir energía?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q21_2" value="0"><span class="opt-letter">A</span><span class="opt-text">El trabajo puede transferir más energía por unidad de tiempo que el calor</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El trabajo transfiere energía de forma organizada (movimiento macroscópicamente coordinado de partículas) y es completamente convertible; el calor lo hace de forma desorganizada (agitación térmica aleatoria) y no puede convertirse íntegramente en trabajo</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_2" value="2"><span class="opt-letter">C</span><span class="opt-text">El calor siempre fluye del cuerpo caliente al frío, mientras el trabajo puede realizarse en cualquier dirección</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El trabajo modifica la energía cinética del sistema; el calor modifica solo la energía potencial</span></label>
+        </div>
+        <script type="text/explanation" id="q21_2-exp">La asimetría calor-trabajo es la esencia de la segunda ley. El trabajo es energía transferida en forma macroscópicamente organizada (p.ej., un pistón que empuja el gas, todos los átomos del pistón moviéndose coordinadamente en la misma dirección). El calor es energía transferida en forma de agitación térmica aleatoria — microscópicamente desordenada. Esta diferencia es fundamental: el trabajo puede convertirse íntegramente en calor (por ejemplo, mediante fricción), pero el calor no puede convertirse íntegramente en trabajo (segunda ley). El trabajo transfiere energía sin transferir entropía; el calor transfiere ambas.</script>
+        <div class="quiz-feedback" id="q21_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q21_3" data-correct="1">
+        <div class="quiz-question">3. La notación $\bar{\delta}Q$ (diferencial con barra) en lugar de $dQ$ indica que...</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q21_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$\bar{\delta}Q$ es siempre menor que $dU$ en magnitud</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$\bar{\delta}Q$ es un diferencial inexacto: $\int_A^B\bar{\delta}Q$ depende del camino tomado entre los estados $A$ y $B$, no solo de los estados. No existe ninguna función $Q(T,V,N)$ cuya diferencial sea $\bar{\delta}Q$</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$\bar{\delta}Q$ se mide en unidades diferentes a las de $dU$ (calorías en lugar de julios)</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="3"><span class="opt-letter">D</span><span class="opt-text">$\bar{\delta}Q$ representa el calor del entorno en lugar del calor del sistema</span></label>
+        </div>
+        <script type="text/explanation" id="q21_3-exp">Un diferencial exacto $df$ tiene la propiedad de que $\int_A^B df = f(B) - f(A)$, independientemente del camino. $dU$ es exacto porque $U$ es función de estado. En cambio, $\bar{\delta}Q$ es inexacto: si se va del estado $A$ al $B$ por distintos caminos (isotérmico, adiabático, isobárico, etc.), se obtienen valores diferentes de $\int\bar{\delta}Q$. Esto refleja que no existe una función "calor almacenado" — el calor es una forma de transferencia energética, no una propiedad del estado del sistema. Lo mismo vale para $\bar{\delta}W$.</script>
+        <div class="quiz-feedback" id="q21_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_20/"><div class="nav-dir">← Anterior</div><div class="nav-title">Síntesis del Curso</div></a>
+    <a href="../cc_2/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">CC2: Temperatura</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

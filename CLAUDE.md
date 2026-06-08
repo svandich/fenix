@@ -7,7 +7,7 @@ Repositorio de apuntes interactivos para cursos de ingeniería. Cada curso es un
 | Carpeta | Curso | Estado |
 |---------|-------|--------|
 | `electro/` | Electromagnetismo (Aux 1–18) | Completo |
-| `termo/` | Termodinámica (cátedras, no auxiliares) | En construcción |
+| `termo/` | Termodinámica (Cat 1–20 + CC 1–7) | En construcción |
 
 ## Estructura
 
@@ -16,11 +16,12 @@ repo-root/
 ├── styles/main.css           ← CSS compartido por todos los cursos
 ├── styles/fonts/             ← Inter + JetBrains Mono (locales)
 ├── electro/                  ← index.html + aux_N/index.html × 18
-├── termo/                    ← index.html + aux_N/index.html × 12
+├── termo/                    ← index.html + cat_N/index.html × 20 + cc_N/index.html × 7
 ├── typst/
 │   ├── electro/aux_N.typ     ← Fuentes Typst de fórmulas (electro, N=1–16)
-│   └── termo/aux_N.typ       ← Fuentes Typst de fórmulas (termo, N=1–12, cátedras)
-│   (los SVGs compilados viven en <curso>/aux_N/ junto con el index.html)
+│   ├── termo/cat_N.typ       ← Fuentes Typst de cátedras (N=1–20)
+│   └── termo/cc_N.typ        ← Fuentes Typst de clases complementarias (N=1–7)
+│   (los SVGs compilados viven en <curso>/<página>/ junto con el index.html)
 ├── scripts/
 │   ├── compile-typst.sh      ← Compila todos los .typ → SVG
 │   └── update-html.py        ← (ya ejecutado) migró $$...$$ → <img> en los HTML
@@ -40,7 +41,7 @@ Ver [docs/structure.md](docs/structure.md) para el árbol completo y las reglas 
 Las fórmulas de display (`$$...$$`) se renderizan con **Typst**, no con MathJax.
 
 **Flujo de trabajo:**
-1. Editar la fórmula en `typst/<curso>/aux_N.typ`
+1. Editar la fórmula en `typst/<curso>/<página>.typ` (ej. `cat_3.typ`, `cc_1.typ`, `aux_5.typ`)
 2. Compilar: `./build.sh` (o solo un curso: `./build.sh electro`)
 3. Refrescar el navegador — los SVGs en `typst-out/` se actualizan
 
@@ -51,8 +52,9 @@ Las fórmulas de display (`$$...$$`) se renderizan con **Typst**, no con MathJax
   #set page(width: auto, height: auto, margin: (x: 0.5em, y: 0.3em), fill: none)
   #set text(fill: rgb("#e6edf3"), size: 13pt)
   ```
-- El SVG N° P de `aux_N.typ` se compila a `<curso>/aux_N/aux_N_P.svg` (junto al HTML)
-- En el HTML, cada fórmula es `<div class="formula-math"><img class="typst-formula" src="aux_N_P.svg" alt=""></div>`
+- El SVG N° P de `<página>.typ` se compila a `<curso>/<página>/<página>_P.svg` (junto al HTML)
+  - Ejemplos: `cat_3.typ` → `termo/cat_3/cat_3_1.svg`; `cc_1.typ` → `termo/cc_1/cc_1_1.svg`; `aux_5.typ` → `electro/aux_5/aux_5_1.svg`
+- En el HTML, cada fórmula es `<div class="formula-math"><img class="typst-formula" src="<página>_P.svg" alt=""></div>`
 
 **MathJax** se mantiene en `<head>` para el math inline (`$...$`) en texto de descripciones. Las fórmulas de display ya no usan MathJax.
 
@@ -71,27 +73,31 @@ Las fórmulas de display (`$$...$$`) se renderizan con **Typst**, no con MathJax
 
 ## Cómo agregar una página nueva a un curso existente
 
-> **Nota:** En `electro/` las páginas se llaman "auxiliares"; en `termo/` se llaman "cátedras". Cada página vive en su propia subcarpeta: `aux_N/index.html`.
+> **Nota:** El prefijo de carpeta varía por curso y tipo:
+> - `electro/`: auxiliares → `aux_N/`
+> - `termo/`: cátedras → `cat_N/`; clases complementarias → `cc_N/`
+>
+> Cada página vive en su propia subcarpeta con un `index.html`.
 
-1. Crear la carpeta `<curso>/aux_N/` y copiar `electro/aux_1/index.html` como plantilla.
+1. Crear la carpeta `<curso>/<página>/` (ej. `termo/cat_21/`) y copiar una página existente del mismo curso como plantilla.
 2. Cambiar el número, título y unidad (`u1`–`u5`) en `.page-header`.
-3. Actualizar el `<h1>` para usar "Auxiliar N:" (electro) o "Cátedra N:" (termo).
+3. Actualizar el `<h1>` para usar "Auxiliar N:" (electro), "Cátedra N:" o "CC N:" (termo).
 4. Marcar el link correcto como `active` en la sidebar.
 5. Rellenar las 4 secciones: temas, conceptos, fórmulas, tips.
-   - Las fórmulas de display van como `<img class="typst-formula" src="aux_N_P.svg" alt="">` (SVGs en la misma carpeta).
+   - Las fórmulas de display van como `<img class="typst-formula" src="<página>_P.svg" alt="">` (SVGs en la misma carpeta).
    - CSS: `href="../../styles/main.css"` (dos niveles arriba).
-6. Crear el archivo `typst/<curso>/aux_N.typ` con las fórmulas correspondientes.
+6. Crear el archivo `typst/<curso>/<página>.typ` con las fórmulas correspondientes.
 7. Compilar: `./build.sh <curso>`.
-8. Actualizar `index.html` del curso con una fila nueva en la tabla (link: `aux_N/`).
+8. Actualizar `index.html` del curso con una fila nueva en la tabla (link: `<página>/`).
 
 ## Cómo agregar un curso nuevo
 
 1. `mkdir nombre-curso/` en el root.
 2. Copiar `electro/index.html` como base del temario.
-3. Actualizar CSS link en las páginas aux: `href="../../styles/main.css"` (dos niveles).
+3. Actualizar CSS link en las páginas: `href="../../styles/main.css"` (dos niveles).
 4. Reasignar los colores `--unit-1` a `--unit-5` a las unidades del nuevo curso.
-5. Crear las carpetas `aux_N/` con `index.html` dentro de cada una.
-6. Crear `typst/nombre-curso/aux_N.typ` por cada auxiliar.
+5. Crear las carpetas `<página>/` con `index.html` dentro de cada una (usando el prefijo que corresponda: `aux_N/`, `cat_N/`, etc.).
+6. Crear `typst/nombre-curso/<página>.typ` por cada página.
 7. Agregar el curso al array `COURSES` en `scripts/compile-typst.sh`.
 
 Ver [docs/structure.md](docs/structure.md) para más detalle.

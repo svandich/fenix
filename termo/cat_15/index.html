@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 15 — Potenciales Termodinámicos</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link active" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Estadística avanzada</div>
+    <div class="unit-pill u5 bg-u5">Estadística avanzada · Cát. 13–17</div>
+    <h1>Cátedra 15: Potenciales Termodinámicos</h1>
+    <p class="desc">Los cuatro potenciales termodinámicos — $U$, $F$, $H$, $G$ — se obtienen por transformadas de Legendre de la energía interna. Cada uno es el potencial "natural" para condiciones experimentales distintas.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Energía interna $U(S,V,N)$: potencial fundamental con variables naturales $S$, $V$, $N$</li>
+        <li>Transformada de Legendre: cómo cambiar de variables naturales sin perder información</li>
+        <li>Energía libre de Helmholtz $F(T,V,N) = U - TS$</li>
+        <li>Entalpía $H(S,p,N) = U + pV$: natural para procesos a presión constante</li>
+        <li>Energía libre de Gibbs $G(T,p,N) = H - TS = F + pV$</li>
+        <li>Las cuatro relaciones de Maxwell a partir de los cuatro potenciales</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Transformada de Legendre</h3>
+        <p>Intercambia una variable extensiva por su conjugada intensiva sin perder información termodinámica. Ejemplo: $F = U - TS$ intercambia $S$ (extensiva) por $T$ (intensiva), pasando de variables naturales $(S,V,N)$ a $(T,V,N)$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Entalpía $H$</h3>
+        <p>$H = U + pV$ tiene variables naturales $(S,p,N)$. A presión constante, $\Delta H = Q_p$: el calor absorbido a $p$ fija es directamente la variación de entalpía. Útil en reacciones químicas a presión atmosférica.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Energía de Gibbs $G$</h3>
+        <p>$G = H - TS$ tiene variables naturales $(T,p,N)$. Es la condición de equilibrio a $T$ y $p$ constantes: $G$ es mínimo en el equilibrio. Determina la dirección de reacciones y transiciones de fase a condiciones de laboratorio.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Relaciones de Maxwell</h3>
+        <p>Cada potencial genera una relación de Maxwell por igualdad de derivadas cruzadas. Las cuatro son: $(\partial T/\partial V)_S = -(\partial p/\partial S)_V$; $(\partial T/\partial p)_S = (\partial V/\partial S)_p$; $(\partial S/\partial V)_T = (\partial p/\partial T)_V$; $(\partial S/\partial p)_T = -(\partial V/\partial T)_p$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Los cuatro diferenciales exactos</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_15_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Las variables naturales de cada potencial son los diferenciales de los términos que aparecen en su diferencial. Las variables conjugadas son los coeficientes.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Relaciones entre potenciales</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_15_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Cada potencial se obtiene del anterior por transformada de Legendre. $G = F + pV = H - TS$. En el límite termodinámico: $G = N\mu$ (extensividad de $G$).
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Relación de Gibbs-Helmholtz</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_15_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Permite obtener $U$ a partir de $F(T)$ sin necesidad de calcular $S$ por separado. Análogamente, $H = -T^2[\partial(G/T)/\partial T]_p$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Relación de Maxwell de $G$</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_15_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Relaciona la variación de entropía con la presión con el coeficiente de expansión térmica $\alpha = (1/V)(\partial V/\partial T)_p$. Implica que $(\partial S/\partial p)_T = -V\alpha$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de los potenciales termodinámicos</div>
+      <ul>
+        <li>La elección del potencial correcto depende de qué variables están fijas: usa $F$ si $T$, $V$, $N$ fijos; $G$ si $T$, $p$, $N$ fijos; $H$ si $S$, $p$ fijos (poco común); $U$ si $S$, $V$, $N$ fijos (sistema aislado).</li>
+        <li>$G = N\mu$ es una consecuencia de la extensividad: $G$ es la única combinación de potencial con variables naturales $(T,p)$ que es extensiva, lo que obliga $G \propto N$.</li>
+        <li>Las relaciones de Gibbs-Helmholtz son muy útiles en experimentos: miden $G$ o $F$ en función de $T$ y obtienen $H$ o $U$ sin necesidad de medir directamente $S$.</li>
+        <li>Las relaciones de Maxwell son identidades exactas — no asumen modelo microscópico alguno. Se aplican a cualquier sistema en equilibrio.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q15_1" data-correct="2">
+        <div class="quiz-question">1. ¿Cuál es el potencial termodinámico natural para un proceso a temperatura $T$ y presión $P$ constantes (condiciones típicas de laboratorio)?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q15_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía interna $U(S,V,N)$, porque contiene toda la información termodinámica del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La entalpía $H(S,p,N)$, porque la presión es la variable fija en el proceso</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía libre de Gibbs $G(T,p,N)$: tiene exactamente $T$ y $P$ como variables naturales, y $G$ es mínima en el equilibrio a $T$, $p$, $N$ fijos</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La energía libre de Helmholtz $F(T,V,N)$, porque incluye la temperatura como variable natural</span></label>
+        </div>
+        <script type="text/explanation" id="q15_1-exp">Cada potencial es "natural" para ciertas condiciones: $U$ para sistemas aislados ($S,V,N$ fijos), $F$ para baño térmico a volumen fijo ($T,V,N$), $H$ para procesos isoentrópicos a presión fija ($S,p,N$, raro en la práctica), y $G$ para baño térmico a presión constante ($T,p,N$). Las condiciones de laboratorio más habituales son $T$ y $P$ fijos (recipiente abierto en contacto con la atmósfera y un termostato), lo que hace de $G$ la función más usada en química y biología. El equilibrio ocurre cuando $G$ es mínima y $dG = 0$.</script>
+        <div class="quiz-feedback" id="q15_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q15_2" data-correct="1">
+        <div class="quiz-question">2. A presión constante, $Q_p = \Delta H$. ¿Por qué el calor absorbido a presión fija es la variación de entalpía y no de energía interna?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q15_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque $H = U + TS$ y a presión constante el término $TS$ absorbe el calor adicional</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque $dH = dU + p\,dV + V\,dp$: a $p$ constante ($dp=0$) queda $dH = dU + p\,dV = \bar{\delta}Q + \bar{\delta}W + p\,dV = \bar{\delta}Q$ (con $\bar{\delta}W = -p\,dV$). El calor va a cambiar $U$ y a realizar trabajo de expansión</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a presión constante $\Delta U = 0$ para cualquier sustancia, así que todo el calor es $\Delta H$</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque $H$ es la única función de estado que depende directamente del calor transferido</span></label>
+        </div>
+        <script type="text/explanation" id="q15_2-exp">El primer principio da $\bar{\delta}Q = dU - \bar{\delta}W = dU + p\,dV$ (para trabajo $pV$ con convención $\bar{\delta}W = -p\,dV$). A presión constante: $\bar{\delta}Q_p = dU + p\,dV = d(U+pV) = dH$. Así que $Q_p = \Delta H$. El calor se divide entre cambiar la energía interna ($\Delta U$) y realizar trabajo de expansión ($p\Delta V$); la entalpía recoge ambas contribuciones automáticamente. Por esto las tablas de energía de reacción en química se dan como $\Delta H$ (la reacción ocurre a presión atmosférica constante).</script>
+        <div class="quiz-feedback" id="q15_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q15_3" data-correct="1">
+        <div class="quiz-question">3. ¿Cuántas relaciones de Maxwell independientes se obtienen de los cuatro potenciales $U$, $F$, $H$, $G$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q15_3" value="0"><span class="opt-letter">A</span><span class="opt-text">2: una por cada par conjugado de variables $(S,T)$ y $(V,P)$</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_3" value="1"><span class="opt-letter">B</span><span class="opt-text">4: cada potencial genera una relación de Maxwell por la igualdad de sus derivadas cruzadas; las cuatro son independientes entre sí</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_3" value="2"><span class="opt-letter">C</span><span class="opt-text">8: dos por cada potencial, una por cada par de variables naturales</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_3" value="3"><span class="opt-letter">D</span><span class="opt-text">1: todas son equivalentes y se pueden derivar una de la otra</span></label>
+        </div>
+        <script type="text/explanation" id="q15_3-exp">Cada diferencial exacto $dU$, $dF$, $dH$, $dG$ tiene dos términos (sin contar $\mu dN$), y la igualdad de sus derivadas cruzadas genera una relación de Maxwell. Las cuatro son: de $U$: $(\partial T/\partial V)_S = -(\partial P/\partial S)_V$; de $F$: $(\partial S/\partial V)_T = (\partial P/\partial T)_V$; de $H$: $(\partial T/\partial P)_S = (\partial V/\partial S)_P$; de $G$: $(\partial S/\partial P)_T = -(\partial V/\partial T)_P$. Estas cuatro relaciones son distintas e independientes — conectan derivadas de magnitudes que aparentemente no están relacionadas.</script>
+        <div class="quiz-feedback" id="q15_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_14/"><div class="nav-dir">← Anterior</div><div class="nav-title">Ensemble Canónico</div></a>
+    <a href="../cat_16/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Sistemas Multicomponentes</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 14 — Ensemble Canónico y Termodinámica</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–20 · CC 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link active" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Estadística avanzada</div>
+    <div class="unit-pill u5 bg-u5">Estadística avanzada · Cát. 13–17</div>
+    <h1>Cátedra 14: Ensemble Canónico y Termodinámica</h1>
+    <p class="desc">Cómo derivar las variables termodinámicas — $S$, $p$, $\mu$ — directamente de la energía libre de Helmholtz $F = -k_BT\ln Z$, cerrando el puente entre mecánica estadística y termodinámica clásica.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Energía libre de Helmholtz $F(T,V,N) = -k_BT\ln Z$: potencial natural del ensemble canónico</li>
+        <li>Derivación de $S$, $p$ y $\mu$ como derivadas de $F$</li>
+        <li>Relaciones de Maxwell: igualdad de derivadas cruzadas de $F$</li>
+        <li>Gas ideal canónico: $Z_N = Z_1^N/N!$, función de partición de una partícula $Z_1 = V/\lambda_{th}^3$</li>
+        <li>Aplicación: calor específico del gas ideal desde $\langle E \rangle$</li>
+        <li>Condiciones de equilibrio entre dos sistemas en contacto térmico</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Energía libre de Helmholtz $F$</h3>
+        <p>$F = U - TS$ es el potencial termodinámico con variables naturales $T$, $V$, $N$. En el ensemble canónico $F = -k_BT\ln Z$, de modo que toda la termodinámica se extrae derivando $\ln Z$. $F$ es mínima en el equilibrio a $T$, $V$, $N$ fijos.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Relaciones de Maxwell de $F$</h3>
+        <p>Como $dF = -S\,dT - p\,dV + \mu\,dN$ es diferencial exacto, las derivadas cruzadas son iguales: $(\partial S/\partial V)_T = (\partial p/\partial T)_V$. Esta identidad relaciona la expansión térmica con la dependencia de la entropía en el volumen.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Gas ideal: longitud de onda térmica</h3>
+        <p>$\lambda_{th} = h/\sqrt{2\pi m k_BT}$ es la longitud de onda de de Broglie térmica. $Z_1 = V/\lambda_{th}^3$: cuando $V/N \gg \lambda_{th}^3$ el sistema es clásico (las funciones de onda no se solapan).</p>
+      </div>
+      <div class="concept-card">
+        <h3>Potencial químico $\mu$</h3>
+        <p>$\mu = (\partial F/\partial N)_{T,V}$ es el costo en energía libre de agregar una partícula. Para el gas ideal: $\mu = k_BT\ln(N\lambda_{th}^3/V) < 0$ a densidades bajas. En el equilibrio entre fases, $\mu$ es el mismo en ambas fases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Diferencial de la energía libre de Helmholtz</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_14_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Variables naturales de $F$: $T$, $V$, $N$. De aquí se leen las derivadas:
+        $S = -(\partial F/\partial T)_V$, $p = -(\partial F/\partial V)_T$, $\mu = (\partial F/\partial N)_T$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Entropía y presión desde $Z$</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_14_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Ambas se obtienen de $F = -k_BT\ln Z$. Para el gas ideal se recupera $pV = Nk_BT$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Gas ideal — función de partición</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_14_3.svg" alt=""></div>
+      <div class="formula-desc">
+        El factor $N!$ corrige el doble conteo de partículas indistinguibles. De $\ln Z_N$ se recupera $F$, $S = Nk_B[5/2 - \ln(N\lambda_{th}^3/V)]$ (entropía de Sackur-Tetrode) y $U = \tfrac{3}{2}Nk_BT$.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Relación de Maxwell de $F$</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_14_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Identidad que relaciona la variación de entropía con el volumen con el coeficiente de presión-temperatura. Útil para calcular $(\partial U/\partial V)_T = T(\partial p/\partial T)_V - p$ (ecuación de estado energética).
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves del ensemble canónico</div>
+      <ul>
+        <li>El ensemble canónico es el más usado en la práctica porque las condiciones $T$, $V$, $N$ fijos se corresponden con experimentos de laboratorio reales (baño térmico).</li>
+        <li>La entropía de Sackur-Tetrode $S = Nk_B[5/2 - \ln(N\lambda_{th}^3/V)]$ es exactamente extensiva gracias al $N!$ en el denominador de $Z_N$ — esto resuelve la paradoja de Gibbs.</li>
+        <li>Las relaciones de Maxwell son consecuencia directa de que $F$ es una función de estado (diferencial exacto). Son herramientas potentes porque conectan cantidades que parecen independientes.</li>
+        <li>A altas temperaturas o bajas densidades ($N\lambda_{th}^3/V \ll 1$), el gas cuántico se comporta como gas clásico: el ensemble canónico y el de Maxwell-Boltzmann coinciden.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q14_1" data-correct="2">
+        <div class="quiz-question">1. ¿Cuál es el criterio de equilibrio termodinámico a temperatura $T$, volumen $V$ y número de partículas $N$ fijos?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q14_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía interna $U$ es mínima</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La entropía $S$ es máxima</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía libre de Helmholtz $F = U - TS$ es mínima: el sistema balancea minimizar $U$ (preferir estados de baja energía) y maximizar $S$ (preferir estados de alta entropía), y $F$ captura exactamente ese balance a $T$ fija</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La función de partición $Z$ es máxima</span></label>
+        </div>
+        <script type="text/explanation" id="q14_1-exp">En el ensemble canónico ($T$, $V$, $N$ fijos), el potencial natural es $F = U - TS = -k_BT\ln Z$. El sistema evoluciona hacia el estado de menor $F$: en el equilibrio $dF = 0$ a $T$, $V$, $N$ constantes. Físicamente, $F$ balancea la minimización de energía (que favorece los estados de menor $U$) contra la maximización de entropía (que favorece los estados con mayor $\Omega$). El equilibrio es el compromiso óptimo a la temperatura dada.</script>
+        <div class="quiz-feedback" id="q14_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q14_2" data-correct="1">
+        <div class="quiz-question">2. La entropía de Sackur-Tetrode del gas ideal incluye el factor $N!$ en el denominador de $Z_N = Z_1^N/N!$. ¿Qué problema resuelve este factor?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q14_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Penaliza los estados de alta energía, haciendo la distribución más realista</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Resuelve la paradoja de Gibbs: sin él, la entropía de mezcla de dos gases idénticos sería positiva (absurdo). El $N!$ corrige el doble conteo de configuraciones de partículas indistinguibles, haciendo $S$ extensiva</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Garantiza que la presión calculada desde $F$ siempre sea positiva para el gas ideal</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Hace que la función de partición converja para todo valor de $T$ y $V$</span></label>
+        </div>
+        <script type="text/explanation" id="q14_2-exp">Sin el $N!$, $Z_N = Z_1^N$ cuenta $N!$ veces el mismo estado físico (el resultado de permutar partículas indistinguibles). Esto produce una entropía no extensiva que crece incorrectamente al juntar dos sistemas idénticos (paradoja de Gibbs: la entropía de mezcla de gases iguales debería ser cero). El factor $N!$ en el denominador elimina exactamente ese doble conteo y da la entropía de Sackur-Tetrode, que es correctamente extensiva y consistent con la tercera ley.</script>
+        <div class="quiz-feedback" id="q14_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q14_3" data-correct="1">
+        <div class="quiz-question">3. La relación de Maxwell $(\partial S/\partial V)_T = (\partial P/\partial T)_V$ se deriva de $F$. ¿Cuál es su origen matemático?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q14_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Del teorema de equipartición aplicado a las variables de estado de $F$</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_3" value="1"><span class="opt-letter">B</span><span class="opt-text">De que $dF = -S\,dT - P\,dV$ es un diferencial exacto: la igualdad de derivadas cruzadas (condición de Schwarz) da $-(\partial S/\partial V)_T = -(\partial P/\partial T)_V$, es decir $(\partial S/\partial V)_T = (\partial P/\partial T)_V$</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_3" value="2"><span class="opt-letter">C</span><span class="opt-text">De la ecuación de estado del gas ideal $PV = Nk_BT$, que impone esta relación entre $S$, $V$ y $P$</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Del principio de aumento de entropía aplicado a procesos isotérmicos</span></label>
+        </div>
+        <script type="text/explanation" id="q14_3-exp">Como $F$ es una función de estado, su diferencial $dF = -S\,dT - P\,dV$ es exacto. La condición de Schwarz (igualdad de las derivadas cruzadas) exige: $\frac{\partial}{\partial V}\left(-S\right)_T = \frac{\partial}{\partial T}\left(-P\right)_V$, es decir $-\left(\frac{\partial S}{\partial V}\right)_T = -\left(\frac{\partial P}{\partial T}\right)_V$. Esto es una identidad exacta válida para cualquier sistema en equilibrio — no asume ningún modelo microscópico. Es la relación de Maxwell de $F$, y se usa para calcular $(\partial U/\partial V)_T = T(\partial P/\partial T)_V - P$.</script>
+        <div class="quiz-feedback" id="q14_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_13/"><div class="nav-dir">← Anterior</div><div class="nav-title">Función de Partición</div></a>
+    <a href="../cat_15/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Potenciales Termodinámicos</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
