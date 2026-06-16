@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 23 — Ciclo de Carnot y Teorema de Equipartición</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link active" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 7</div>
+    <div class="unit-pill u6 bg-u6">Ciclos y Máquinas · Cát. 21–23</div>
+    <h1>Cátedra 23: Ciclo de Carnot y Teorema de Equipartición</h1>
+    <p class="desc">Dos resultados centrales: se construye el ciclo de Carnot en el diagrama $P$-$V$ (dos isotermas y dos adiabáticas) y se deriva $\eta=1-Q_0/Q_{in}$ por reducción al absurdo; luego se demuestra el teorema de equipartición $\langle\varepsilon\rangle=k_BT/2$ por grado de libertad cuadrático y separable, aplicándolo al gas ideal en 3D y en 2D.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Construcción explícita del ciclo de Carnot: $1\to2$ isotermo a $T_{alta}$, $2\to3$ adiabático, $3\to4$ isotermo a $T_{baja}$, $4\to1$ adiabático</li>
+        <li>Demostración por contradicción de que ninguna máquina puede ser más eficiente que la de Carnot operando entre los mismos dos focos</li>
+        <li>Eficiencia de Carnot: $\eta = W/Q_{in} = 1-Q_0/Q_{in}$, y su independencia de los detalles del fluido de trabajo</li>
+        <li>Teorema de equipartición: para cada grado de libertad separable y cuadrático en contacto con un termostato, $\langle\varepsilon\rangle = k_BT/2$</li>
+        <li>Demostración vía cambio de variable $y=p\sqrt{\beta}$ e integración gaussiana</li>
+        <li>Aplicación al gas ideal monoatómico en 3D: $\langle E\rangle = \tfrac{3}{2}Nk_BT$ (recupera $C_V=\tfrac{3}{2}Nk$)</li>
+        <li>Aplicación al gas ideal en 2D: $\langle E\rangle = Nk_BT$, y comparación de $C_V$ entre 2D y 3D</li>
+        <li>Extensión a sistemas más complejos: moléculas diatómicas con grados de libertad vibracionales (modelo masa-resorte)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Demostración por contradicción de Carnot</h3>
+        <p>Se supone que existe una máquina real más eficiente que la de Carnot operando entre los mismos focos $T_1$ y $T_0$. Se conecta esta máquina hipotética con una máquina de Carnot operando en reversa (como refrigerador), de forma que ambas produzcan o consuman el mismo trabajo. El resultado neto sería un flujo espontáneo de calor desde el foco frío al caliente sin trabajo externo — una violación directa del enunciado de Clausius. Por lo tanto, ninguna máquina puede superar la eficiencia de Carnot entre esos dos focos.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Universalidad de la eficiencia de Carnot</h3>
+        <p>Como consecuencia de la demostración por contradicción, $\eta_{Carnot} = 1 - T_0/T_1$ no depende del fluido de trabajo (gas ideal, vapor, lo que sea) — solo de las dos temperaturas de los focos. Esto es notable: Carnot llegó a esta conclusión sin saber nada de mecánica estadística, solo razonando sobre la imposibilidad de violar la segunda ley.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Teorema de equipartición</h3>
+        <p>Si la energía de un sistema es separable en una suma de términos, cada uno dependiente de una sola coordenada $q_j$ o momento $p_j$, y ese término es cuadrático ($\varepsilon(p_j)=\alpha p_j^2$), entonces en equilibrio con un termostato a temperatura $T$ ese grado de libertad contribuye exactamente $\langle\varepsilon\rangle = k_BT/2$ a la energía media, sin importar el valor de $\alpha$ (masa, constante elástica, momento de inercia, etc.).</p>
+      </div>
+      <div class="concept-card">
+        <h3>De la equipartición a la capacidad calórica</h3>
+        <p>El teorema explica de forma inmediata por qué un gas ideal monoatómico en 3D tiene $C_V=\tfrac{3}{2}Nk$ (tres grados de libertad cuadráticos de traslación: $v_x^2,v_y^2,v_z^2$) y por qué en 2D tendría $C_V=Nk$ (solo dos). Generaliza naturalmente a moléculas con grados de libertad rotacionales o vibracionales: cada uno cuadrático y separable suma $k_BT/2$ más a la energía media, lo cual permite predecir capacidades caloríficas de sistemas mucho más complejos que el gas ideal simple.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Ciclo de Carnot: las cuatro etapas</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_23_1.svg" alt=""></div>
+      <div class="formula-desc">
+        El ciclo recorre: expansión isotérmica a $T_1$ (absorbe $Q_{in}$), expansión adiabática (se enfría hasta $T_0$ sin flujo de calor), compresión isotérmica a $T_0$ (cede $Q_0$), compresión adiabática (vuelve a $T_1$). El trabajo neto es el área encerrada en el diagrama $P$-$V$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Eficiencia de Carnot</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_23_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $\eta$ es universal: depende solo de las temperaturas de los focos, no del fluido de trabajo. Es el límite superior absoluto de eficiencia para cualquier máquina térmica operando entre $T_1$ y $T_0$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Teorema de equipartición</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_23_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Para cualquier grado de libertad $p_j$ separable y cuadrático ($\varepsilon=\alpha p_j^2$) en contacto con un termostato a temperatura $T$, su energía media es exactamente $k_BT/2$ — independiente de $\alpha$. Se demuestra con el cambio de variable $y=p_j\sqrt{\alpha\beta}$ y la integral gaussiana, usando $\beta=1/k_BT$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Energía del gas ideal en 3D y 2D</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_23_4.svg" alt=""></div>
+      <div class="formula-desc">
+        En 3D cada partícula tiene tres grados de libertad cuadráticos ($v_x^2,v_y^2,v_z^2$), dando $\langle E\rangle=\tfrac32 Nk_BT$ — el resultado que ya conocíamos desde la teoría cinética, ahora obtenido de forma mucho más general. En 2D solo hay dos, dando $\langle E\rangle=Nk_BT$ y por tanto $C_V=Nk_B$, menor que en 3D.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Dos herramientas que se usan en todo el resto del curso</div>
+      <ul>
+        <li>La demostración por contradicción de Carnot es el arquetipo de cómo se demuestran límites termodinámicos: se asume que existe algo "mejor" que viola el límite propuesto, se combina con un proceso conocido (la máquina de Carnot en reversa), y se llega a una contradicción con un principio ya aceptado (Clausius). Este patrón de razonamiento reaparece constantemente en termodinámica.</li>
+        <li>El teorema de equipartición requiere dos hipótesis simultáneas: separabilidad (la energía total es una suma de términos independientes) y cuadraticidad (cada término es proporcional al cuadrado de su coordenada). Si falta cualquiera de las dos, el resultado $k_BT/2$ no se aplica directamente — por ejemplo, grados de libertad cuánticos "congelados" a baja temperatura no equiparten su energía clásicamente.</li>
+        <li>La equipartición no dice nada sobre la energía potencial de interacción entre partículas (eso requeriría términos no separables). Por eso funciona perfectamente para el gas ideal (sin interacciones) pero hay que tener cuidado al aplicarla a gases reales o sólidos con fuerzas de enlace complejas.</li>
+        <li>Cada grado de libertad cuadrático aporta $k_BT/2$ sin importar su "tamaño" físico (masa grande o pequeña, constante elástica grande o chica) — toda la dependencia de esos parámetros queda absorbida en las fluctuaciones de la coordenada, no en la energía media. Esto es contraintuitivo la primera vez que se ve.</li>
+        <li>La eficiencia de Carnot $\eta=1-T_0/T_1$ es un techo, no un objetivo alcanzable: cualquier máquina real tiene pérdidas (fricción, procesos no cuasi-estáticos, conducción térmica imperfecta) que la alejan de ese límite. Aun así, es la referencia universal contra la cual se compara toda máquina térmica real.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q23_1" data-correct="2">
+        <div class="quiz-question">1. En la demostración por contradicción de que nada supera a la máquina de Carnot, se supone que existe una máquina hipotética más eficiente operando entre los mismos focos $T_1>T_0$. ¿Cuál es el paso clave que lleva a la contradicción?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q23_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Se demuestra que esa máquina violaría directamente la conservación de la energía al producir más trabajo del que entra</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Se calcula su capacidad calórica y se encuentra que sería negativa, lo cual es físicamente imposible</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Se conecta esa máquina hipotética con una máquina de Carnot operando en reversa (como refrigerador) ajustada para producir/consumir el mismo trabajo neto; el resultado combinado sería un flujo espontáneo de calor del foco frío al caliente sin trabajo externo, violando el enunciado de Clausius</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Se muestra que tal máquina requeriría temperaturas negativas en algún punto del ciclo</span></label>
+        </div>
+        <script type="text/explanation" id="q23_1-exp">El paso clave es acoplar la máquina hipotética "mejor" (que produce más trabajo por unidad de calor absorbido, $\eta_{hip}>\eta_{Carnot}$) con una máquina de Carnot operando en reversa entre los mismos dos focos, ajustando las escalas para que ambas intercambien exactamente el mismo trabajo $W$. Al hacer el balance neto de calor en los dos focos, se encuentra que el conjunto combinado transporta una cantidad neta de calor desde el foco frío hacia el foco caliente sin que se haya realizado trabajo externo neto sobre el sistema combinado — esto es precisamente lo que el enunciado de Clausius prohíbe. La única salida de esta contradicción es que la máquina hipotética "mejor" no puede existir: $\eta_{Carnot}$ es el techo de eficiencia entre esos dos focos.</script>
+        <div class="quiz-feedback" id="q23_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q23_2" data-correct="3">
+        <div class="quiz-question">2. El teorema de equipartición exige que la energía sea "separable" y "cuadrática" en una coordenada dada. ¿Qué significa exactamente "separable" en este contexto?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q23_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Que el sistema puede dividirse físicamente en dos partes separadas por una pared</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Que cada partícula del sistema tiene una energía cinética distinta de las demás</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Que la temperatura del sistema no varía con la posición</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Que la energía total se puede escribir como una suma donde un término depende únicamente de la coordenada de interés (por ejemplo $p_j$) y el resto de la expresión no depende de esa coordenada en absoluto</span></label>
+        </div>
+        <script type="text/explanation" id="q23_2-exp">Separabilidad significa que se puede escribir $E(q_1,...,q_n,p_1,...,p_n) = \varepsilon(p_j) + \varepsilon'(\text{resto de las variables})$, donde $\varepsilon(p_j)$ depende únicamente de $p_j$ y $\varepsilon'$ no depende de $p_j$ para nada. Esta propiedad es la que permite, en la integral de la función de partición, factorizar la integral sobre $p_j$ de todas las demás integrales: las integrales sobre el resto de las variables aparecen idénticas en numerador y denominador (al calcular el valor esperado) y se cancelan exactamente, dejando una expresión que depende solo de $\varepsilon(p_j)$. Sin esta cancelación no se podría aislar la contribución de un solo grado de libertad a la energía media.</script>
+        <div class="quiz-feedback" id="q23_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q23_3" data-correct="1">
+        <div class="quiz-question">3. Un gas ideal bidimensional (partículas confinadas a moverse en un plano) tiene energía cinética $\varepsilon = \tfrac12 m v_x^2 + \tfrac12 m v_y^2$ por partícula. Según el teorema de equipartición, ¿cuál es la energía interna total $\langle E\rangle$ para $N$ partículas, y cómo se compara con el caso 3D?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q23_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$\langle E\rangle = \tfrac32 Nk_BT$, igual que en 3D, porque la energía cinética siempre tiene la misma forma funcional independientemente de la dimensión</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$\langle E\rangle = Nk_BT$, menor que el resultado en 3D ($\tfrac32 Nk_BT$), porque solo hay dos grados de libertad cuadráticos y separables ($v_x^2$ y $v_y^2$) en vez de tres</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$\langle E\rangle = \tfrac{2}{3}Nk_BT$, obtenido escalando el resultado 3D por la razón de dimensiones</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_3" value="3"><span class="opt-letter">D</span><span class="opt-text">No se puede calcular sin conocer la masa exacta de las partículas del gas</span></label>
+        </div>
+        <script type="text/explanation" id="q23_3-exp">Cada componente cuadrática y separable de la energía (en este caso $\tfrac12 mv_x^2$ y $\tfrac12 mv_y^2$) aporta exactamente $k_BT/2$ a la energía media, sin importar el valor de $m$ (la masa se cancela en la demostración, ya que solo entra como el coeficiente $\alpha$ del término cuadrático). Con dos grados de libertad por partícula, $\langle\varepsilon\rangle = 2\times(k_BT/2) = k_BT$ por partícula, y para $N$ partículas $\langle E\rangle = Nk_BT$. Comparado con el caso 3D ($\langle E\rangle=\tfrac32 Nk_BT$, con tres grados de libertad), el resultado 2D es menor exactamente en la proporción del número de grados de libertad: 2 contra 3. Esto también implica $C_V^{2D}=Nk_B < C_V^{3D}=\tfrac32 Nk_B$.</script>
+        <div class="quiz-feedback" id="q23_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_22/"><div class="nav-dir">← Anterior</div><div class="nav-title">Máquinas Térmicas</div></a>
+    <a href="../cat_24/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Equipartición y Pauli</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

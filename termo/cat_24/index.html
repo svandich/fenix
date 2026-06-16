@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 24 — Equipartición Avanzada y Estadística Cuántica</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link active" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 8</div>
+    <div class="unit-pill u7 bg-u7">Gases Reales y Transporte · Cát. 24–28</div>
+    <h1>Cátedra 24: Equipartición Avanzada y Estadística Cuántica</h1>
+    <p class="desc">Cierre del teorema de equipartición con un ejemplo rico —una "varita" rígida con grados de libertad traslacionales y rotacionales— y primer contacto con la física cuántica que gobierna los gases reales: el principio de exclusión de Pauli, fermiones y bosones, y la corrección $N!$ en la función de partición de partículas indistinguibles.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Repaso del teorema de equipartición: cada grado de libertad cuadrático y separable aporta $k_BT/2$ a la energía media</li>
+        <li>Modelo de una "varita" rígida: energía de traslación del centro de masa más energía de rotación vía el tensor de inercia $I$</li>
+        <li>El tensor de inercia en ejes principales: $E_\text{rot} = \sum_j I_j\omega_j^2/2$, con hasta 3 grados de libertad rotacionales</li>
+        <li>Conteo de grados de libertad cuadráticos según la geometría del objeto (varita delgada: 2 rotaciones; objeto general: 3)</li>
+        <li>El principio de exclusión de Pauli: dos fermiones no pueden ocupar el mismo estado cuántico</li>
+        <li>Fermiones (electrones, protones, neutrones, quarks) versus bosones (fotones, gluones) y su origen en las interacciones fundamentales</li>
+        <li>Por qué la indistinguibilidad cuántica obliga a corregir la función de partición de $N$ partículas: $Z_N \approx Z_1^N/N!$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>La varita rígida y su tensor de inercia</h3>
+        <p>Un objeto extendido tiene energía cinética de traslación del centro de masa, $mv_\text{cm}^2/2$, más energía de rotación en torno a sus ejes principales. En ejes principales el tensor de inercia es diagonal, así que $E_\text{rot} = \sum_{j=1}^3 I_j\omega_j^2/2$: el análogo rotacional exacto de $mv^2/2$, con $I_j$ jugando el papel de "masa para girar" en cada eje.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Geometría determina los grados de libertad</h3>
+        <p>Si el objeto es una varita perfectamente delgada, rotar en torno a su propio eje largo es despreciable (momento de inercia casi nulo en esa dirección), así que solo quedan 2 modos de rotación útiles. Para un objeto con tres dimensiones comparables, los 3 modos rotacionales son relevantes: 3 traslacionales + 3 rotacionales = 6 grados de libertad cuadráticos, y por equipartición $\langle\varepsilon\rangle = 6\cdot(k_BT/2) = 3k_BT$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Principio de exclusión de Pauli</h3>
+        <p>Es un principio —una observación repetida de la naturaleza, no algo derivado desde primeros principios— que establece que dos fermiones (electrones, protones, neutrones, quarks) nunca pueden ocupar exactamente el mismo estado cuántico. Los bosones (fotones, gluones, mediadores de las interacciones fundamentales) no tienen esta restricción.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Indistinguibilidad y el factor $N!$</h3>
+        <p>A escala atómica no existen "patentes": no se puede monitorear continuamente cuál partícula es cuál. Combinado con el principio de Pauli (que prohíbe que dos partículas ocupen la misma configuración), el conteo correcto de configuraciones distintas de $N$ partículas indistinguibles introduce un factor $1/N!$: $Z_N \approx Z_1^N/N!$, la aproximación que se usará para describir gases reales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Equipartición para la varita rígida (6 g.l. cuadráticos)</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_24_1.svg" alt=""></div>
+      <div class="formula-desc">
+        La energía media de la "varita" tiene una parte traslacional ($mv_\text{cm}^2/2$, 3 g.l.) y una rotacional ($\sum_j I_j\omega_j^2/2$, hasta 3 g.l.). Si los 6 grados de libertad son cuadráticos e independientes, equipartición da $\langle\varepsilon\rangle = 3k_BT$ por partícula — el doble que un gas monoatómico simple.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Tensor de inercia y energía rotacional</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_24_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $I_j$ mide la dificultad de hacer girar el sistema en torno al eje principal $j$: se calcula integrando la densidad de masa ponderada por la distancia al eje al cuadrado. En ejes principales el tensor diagonaliza y la energía rotacional es la suma de tres términos análogos a $mv^2/2$, uno por eje.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Función de partición de $N$ partículas indistinguibles</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_24_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Si las partículas fueran distinguibles, $Z_N$ sería simplemente $Z_1^N$. La indistinguibilidad cuántica (y el principio de Pauli para fermiones) obliga a dividir por $N!$: cada una de las $N!$ permutaciones de etiquetas describe el mismo estado físico, así que se cuenta una sola vez. Esta corrección es esencial para obtener una entropía extensiva (resuelve la paradoja de Gibbs).
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Principio de exclusión de Pauli</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_24_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Para fermiones, la probabilidad de que dos partículas ocupen exactamente la misma configuración cuántica es cero. Esta restricción es la razón física profunda detrás de la estructura de la materia: por qué los electrones se ordenan en capas atómicas y por qué la materia ordinaria no se colapsa sobre sí misma.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ De la equipartición clásica a la estadística cuántica</div>
+      <ul>
+        <li>Equipartición es un resultado puramente clásico: cualquier grado de libertad separable y cuadrático en la energía aporta $k_BT/2$, sin importar si es traslación, rotación o vibración. Lo único que cambia entre problemas es <em>cuántos</em> grados de libertad cuadráticos hay, y eso depende de la geometría microscópica del sistema.</li>
+        <li>El tensor de inercia no es un objeto exótico: es exactamente el análogo rotacional de la masa. Así como $m$ mide la resistencia a acelerar linealmente, $I_j$ mide la resistencia a girar en torno a un eje específico — y en ejes principales se comporta como tres "masas rotacionales" independientes.</li>
+        <li>El principio de exclusión de Pauli no se deriva de primeros principios en este curso: es una observación experimental repetida miles de veces, exactamente como ocurre con cualquier principio físico fundamental (igual que la conservación de la energía o las leyes de Newton en su momento).</li>
+        <li>El factor $1/N!$ no es un truco combinatorio cosmético: nace de que, a nivel microscópico, las partículas idénticas no tienen "matrícula" — no hay manera física de rastrear cuál es cuál. Por eso la indistinguibilidad cuántica entra directamente en la función de partición clásica como una corrección necesaria.</li>
+        <li>Este resultado, $Z_N \approx Z_1^N/N!$, es la puerta de entrada a la cátedra siguiente: una vez que se sabe contar bien los estados de $N$ partículas, se puede calcular la energía libre y de ahí toda la termodinámica de un gas, real o ideal.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q24_1" data-correct="2">
+        <div class="quiz-question">1. Para la "varita" rígida con 3 grados de libertad de traslación y 3 de rotación (todos cuadráticos), el teorema de equipartición predice que la energía media por partícula es:</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q24_1" value="0"><span class="opt-letter">A</span><span class="opt-text">$\langle\varepsilon\rangle = k_BT/2$, igual que un grado de libertad cualquiera</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_1" value="1"><span class="opt-letter">B</span><span class="opt-text">$\langle\varepsilon\rangle = (3/2)k_BT$, igual que un gas monoatómico simple</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_1" value="2"><span class="opt-letter">C</span><span class="opt-text">$\langle\varepsilon\rangle = 3k_BT$, porque hay 6 grados de libertad cuadráticos (3 traslacionales + 3 rotacionales) y cada uno aporta $k_BT/2$</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_1" value="3"><span class="opt-letter">D</span><span class="opt-text">$\langle\varepsilon\rangle = 6k_BT$, porque hay 6 grados de libertad y cada uno aporta $k_BT$ completo</span></label>
+        </div>
+        <script type="text/explanation" id="q24_1-exp">El teorema de equipartición dice que cada grado de libertad separable y cuadrático en la energía aporta exactamente $k_BT/2$ a la energía media, sin importar su naturaleza física. La varita rígida tiene energía cinética de traslación del centro de masa ($mv_x^2/2 + mv_y^2/2 + mv_z^2/2$: 3 g.l.) más energía de rotación en ejes principales ($I_1\omega_1^2/2 + I_2\omega_2^2/2 + I_3\omega_3^2/2$: hasta 3 g.l. más, dependiendo de la geometría). Si los 6 son cuadráticos e independientes, la energía media total es $6\times(k_BT/2) = 3k_BT$. Esto es el doble que un gas monoatómico ideal simple (que solo tiene 3 g.l. de traslación, $\langle\varepsilon\rangle=3k_BT/2$), precisamente porque la varita puede almacenar energía también en su rotación.</script>
+        <div class="quiz-feedback" id="q24_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q24_2" data-correct="1">
+        <div class="quiz-question">2. Si la "varita" es extremadamente delgada (como una aguja ideal), ¿cuántos grados de libertad rotacionales cuadráticos contribuyen realmente a la energía, y por qué?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q24_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Los 3, porque cualquier objeto rígido tiene siempre exactamente 3 ejes de rotación independientes</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Solo 2, porque el momento de inercia en torno al eje largo de la varita es casi nulo (la masa está concentrada sobre el eje), así que esa rotación no almacena energía apreciable</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Solo 1, porque una varita delgada solo puede rotar en un plano</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_2" value="3"><span class="opt-letter">D</span><span class="opt-text">0, porque los objetos delgados no pueden rotar por definición</span></label>
+        </div>
+        <script type="text/explanation" id="q24_2-exp">El momento de inercia respecto a un eje se calcula integrando la masa ponderada por la distancia al cuadrado a ese eje: $I_j = \int \rho(\vec{r})(r_\perp^j)^2\,dV$. Para una varita idealmente delgada, la masa está casi toda sobre su eje largo, así que la distancia perpendicular a ese eje es casi cero para toda la masa, y por lo tanto $I_\text{eje largo}\approx 0$. Una rotación en torno a ese eje no cambia la configuración física observable y no almacena energía cinética apreciable (formalmente, $E = I\omega^2/2 \to 0$ aunque $\omega$ sea grande). Quedan entonces solo las 2 rotaciones en torno a los ejes perpendiculares al eje largo, que sí mueven masa significativa y sí almacenan energía. Por eso el conteo de grados de libertad cuadráticos depende explícitamente de la geometría del objeto, no es un número universal.</script>
+        <div class="quiz-feedback" id="q24_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q24_3" data-correct="3">
+        <div class="quiz-question">3. La función de partición de $N$ partículas indistinguibles se escribe $Z_N \approx Z_1^N/N!$ en vez de simplemente $Z_1^N$. ¿Cuál es la razón física de fondo para dividir por $N!$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q24_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Es una corrección matemática arbitraria que se introduce solo para que las unidades cuadren dimensionalmente</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque $N!$ es el número de formas de elegir $N$ partículas de un conjunto más grande de candidatos</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Es una aproximación que solo es válida para gases a muy baja temperatura, donde domina la condensación de Bose-Einstein</span></label>
+          <label class="quiz-option"><input type="radio" name="q24_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque a nivel microscópico las partículas idénticas no se pueden etiquetar ni rastrear individualmente (no tienen "patente"); cada una de las $N!$ permutaciones de asignar partículas a configuraciones describe el mismo estado físico, así que sumar sobre configuraciones etiquetadas (como en $Z_1^N$) sobrecuenta cada estado físico distinto $N!$ veces</span></label>
+        </div>
+        <script type="text/explanation" id="q24_3-exp">Cuando se escribe $Z_1^N$, se está sumando sobre todas las asignaciones posibles de "la partícula 1 está en el estado $r_1$, la partícula 2 está en el estado $r_2$", etc., tratando a las partículas como si tuvieran etiquetas distinguibles. Pero a escala atómica las partículas idénticas (electrones, átomos del mismo tipo) no tienen ninguna propiedad física que permita distinguir "esta" de "aquella": no hay manera de monitorear continuamente la trayectoria de cada una para saber cuál es cuál, especialmente después de colisiones. Por lo tanto, las $N!$ permutaciones de qué partícula etiquetada ocupa qué configuración corresponden todas al mismo estado físico real, y $Z_1^N$ las cuenta como $N!$ estados distintos en vez de uno. Dividir por $N!$ corrige este sobreconteo. (Esta corrección es además necesaria para obtener una entropía extensiva — es la resolución de la paradoja de Gibbs — y se vuelve exacta, en vez de aproximada, cuando se usa la estadística cuántica completa de Fermi-Dirac o Bose-Einstein.)</script>
+        <div class="quiz-feedback" id="q24_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_23/"><div class="nav-dir">← Anterior</div><div class="nav-title">Ciclo de Carnot</div></a>
+    <a href="../cat_25/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Hacia Gases Reales</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

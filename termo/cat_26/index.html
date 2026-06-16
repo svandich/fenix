@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 26 — Ecuación de van der Waals</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link active" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 8</div>
+    <div class="unit-pill u7 bg-u7">Gases Reales y Transporte · Cát. 24–28</div>
+    <h1>Cátedra 26: Ecuación de van der Waals y Transición Líquido-Gas</h1>
+    <p class="desc">Simulaciones moleculares muestran cómo un mismo potencial de interacción produce gas, líquido y sólido según la temperatura. A partir del teorema del virial (resultado de la CC10) se deriva intuitivamente la ecuación de van der Waals, y se introduce el criterio de estabilidad/compresibilidad que anticipa la coexistencia de fases.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Simulaciones moleculares: el mismo potencial de interacción produce gas, líquido y sólido (cristal) al enfriar</li>
+        <li>La anomalía del agua: se expande al congelar por la estructura hexagonal del hielo</li>
+        <li>Repaso del teorema del virial: $P = Nk_BT/V$ corregido por un término $\mathcal{O}(N^2/V^2)$ que viene de la interacción de pares (detalle completo en CC10)</li>
+        <li>Derivación intuitiva de van der Waals: corrección de volumen excluido ($V \to V-Nb$) y corrección de presión efectiva por atracción ($P \to P + aN^2/V^2$)</li>
+        <li>La isoterma $P$-$V$ de van der Waals deja de ser monótona por debajo de una temperatura crítica</li>
+        <li>El coeficiente de compresibilidad $\kappa_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T$ como criterio de estabilidad mecánica</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Del virial a van der Waals</h3>
+        <p>El teorema del virial (CC10) muestra que la corrección a la ecuación de gas ideal por interacciones de pares es $P = Nk_BT/V\,(1 + n\gamma_1)$, con $n=N/V$ la densidad y $\gamma_1$ una integral sobre el potencial de interacción. Aproximando esa integral por zonas (repulsiva dura, atractiva exponencial) se llega exactamente a la forma de van der Waals.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Efecto de tamaño (volumen excluido)</h3>
+        <p>Las partículas no pueden penetrarse: cada una "bloquea" un volumen característico $b$ a las demás. El volumen disponible para el movimiento ya no es $V$ sino $V - Nb$, lo que corrige la ecuación de gas ideal a $P(V-Nb) = Nk_BT$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Presión efectiva (atracción)</h3>
+        <p>Cada partícula siente la atracción de sus $N-1$ vecinas. Como la interacción tipo dipolo-dipolo decae como $1/r^6$, su efecto integrado sobre el volumen escala como $N/V$ por partícula, dando una corrección de presión $\propto N^2/V^2$. La presión que un observador mide en la pared es menor que la "presión cinética" pura: $P_\text{efectiva} = P + aN^2/V^2$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Compresibilidad y estabilidad</h3>
+        <p>$\kappa_T = -\frac{1}{V}(\partial V/\partial P)_T > 0$ es la condición de estabilidad mecánica: al comprimir un sistema estable, su presión interna aumenta y se opone (fuerza restitutiva). Cuando la isoterma de van der Waals no es monótona, hay una región con $\kappa_T < 0$ —mecánicamente inestable— que el sistema evita separándose en dos fases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Corrección del virial a la presión (interacción de pares)</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_26_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Resultado general del teorema del virial (derivado con detalle en CC10): la primera corrección a la ley de gas ideal viene de la interacción entre pares de partículas, con $\gamma_1$ una integral sobre el potencial $U(r)$.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Volumen excluido y presión efectiva</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_26_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Los dos ingredientes intuitivos de van der Waals: el volumen disponible se reduce por el tamaño de las partículas ($b$), y la presión "real" se reduce por la atracción entre ellas ($a$).
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Ecuación de estado de van der Waals</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_26_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Derivada por van der Waals en 1873 (Premio Nobel 1910). Reduce al gas ideal cuando $a, b \to 0$. Las constantes $a$ y $b$ se tabulan experimentalmente para cada sustancia (agua, argón, nitrógeno, etc.).
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Coeficiente de compresibilidad isotérmica</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_26_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $\kappa_T > 0$ en las ramas estables de la isoterma (presión decreciente con el volumen); $\kappa_T < 0$ en la región intermedia de la curva de van der Waals para $T < T_c$, que es mecánicamente inestable.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ De la interacción microscópica a la ecuación de estado</div>
+      <ul>
+        <li>Van der Waals no es una ecuación ad hoc: se puede derivar (de forma aproximada pero rigurosa) a partir del teorema del virial, suponiendo que la energía típica de interacción $U_0$ es mucho menor que $k_BT$ (gas diluido/poco interactuante).</li>
+        <li>La derivación "con las manos" —volumen excluido más presión efectiva— da exactamente la misma estructura que el cálculo formal con diagramas de interacción, porque ambos ingredientes (repulsión de corto alcance, atracción de largo alcance) son los mismos.</li>
+        <li>Que la isoterma $P(V)$ deje de ser monótona para $T<T_c$ no es un error de la ecuación: es la señal matemática de que el sistema real se separa en dos fases en esa región, en vez de seguir la curva de van der Waals literalmente.</li>
+        <li>El criterio $\kappa_T>0$ es completamente general (no solo para van der Waals): cualquier ecuación de estado que prediga $\kappa_T<0$ en algún rango está señalando una región de coexistencia de fases, no un estado homogéneo real.</li>
+        <li>Esta clase deja el problema "a medio resolver" a propósito: el "loop" no físico de van der Waals para $T<T_c$ se resuelve en la próxima clase con la construcción de Maxwell.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q26_1" data-correct="2">
+        <div class="quiz-question">1. En la ecuación de van der Waals $(P + aN^2/V^2)(V-Nb) = Nk_BT$, ¿qué representan físicamente las constantes $a$ y $b$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q26_1" value="0"><span class="opt-letter">A</span><span class="opt-text">$a$ es la masa molar y $b$ es el número de Avogadro</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_1" value="1"><span class="opt-letter">B</span><span class="opt-text">$a$ es el volumen excluido por partícula y $b$ da cuenta de la atracción entre partículas</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_1" value="2"><span class="opt-letter">C</span><span class="opt-text">$b$ es el volumen excluido por partícula (efecto de tamaño: no pueden penetrarse) y $a$ da cuenta de la intensidad de la atracción entre partículas (reduce la presión efectiva medida en la pared)</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Ambas son constantes universales, iguales para todos los gases</span></label>
+        </div>
+        <script type="text/explanation" id="q26_1-exp">El parámetro $b$ surge del efecto de tamaño: como las partículas no pueden penetrarse (sus densidades de carga internas son muy altas), el volumen realmente disponible para el movimiento es $V-Nb$, no $V$. El parámetro $a$ surge del efecto de atracción: cada partícula siente la atracción de las $N-1$ restantes, lo que reduce la presión que efectivamente se mide en la pared respecto a la que tendría un gas ideal sin interacciones; esa reducción se escribe como $-aN^2/V^2$, así que la "presión efectiva" que aparece en la ecuación de estado es $P+aN^2/V^2$. Ambas constantes son específicas de cada sustancia (dependen del potencial de interacción microscópico) y se tabulan experimentalmente: por ejemplo el agua tiene valores de $a$ y $b$ muy distintos a los del argón o el nitrógeno.</script>
+        <div class="quiz-feedback" id="q26_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q26_2" data-correct="1">
+        <div class="quiz-question">2. El teorema del virial da $P = \frac{Nk_BT}{V}(1+n\gamma_1)$ con $n=N/V$. ¿Bajo qué supuesto se deriva esta expansión, y qué tipo de interacción domina el primer término de corrección?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q26_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Se supone que el gas está a muy alta densidad, y domina la interacción de cuatro o más partículas simultáneamente</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Se supone que el gas está suficientemente diluido (la probabilidad de que tres partículas interactúen simultáneamente es baja), y el primer término de corrección viene exclusivamente de la interacción de pares</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Se supone que las partículas no interactúan en absoluto, recuperando siempre el gas ideal exacto</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Se supone que la temperatura es cercana al cero absoluto, donde domina la estadística cuántica</span></label>
+        </div>
+        <script type="text/explanation" id="q26_2-exp">La expansión del virial es una expansión en la densidad $n=N/V$: cuando el gas está suficientemente diluido, la probabilidad de que tres o más partículas estén simultáneamente cerca (a distancia de interacción) es mucho menor que la de que solo dos lo estén. Esto permite separar la energía de interacción total en una suma de interacciones de pares (despreciando interacciones de a tres, cuatro, etc.), usando lo que en la clase complementaria se llamaron diagramas de interacción. El término $n\gamma_1$ es exactamente esa corrección de pares; $\gamma_1$ es una integral sobre el potencial de interacción $U(r)$ entre dos partículas, de la forma $\gamma_1 = 2\pi\int_0^\infty r^2\left(1-e^{-\beta U(r)}\right)dr$. Las correcciones de orden mayor (a tres, cuatro partículas) corresponden a potencias más altas de la densidad, y son despreciables en el límite diluido.</script>
+        <div class="quiz-feedback" id="q26_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q26_3" data-correct="3">
+        <div class="quiz-question">3. Para $T$ menor que cierta temperatura crítica, la isoterma $P(V)$ de van der Waals deja de ser monótona y aparece una región con $(\partial P/\partial V)_T > 0$. ¿Qué significa esto en términos del coeficiente de compresibilidad $\kappa_T$, y por qué es físicamente problemático?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q26_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Significa $\kappa_T = 0$ exactamente, es decir, el gas se vuelve perfectamente incompresible en esa región</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_3" value="1"><span class="opt-letter">B</span><span class="opt-text">No es problemático: simplemente indica que el gas se comporta como un sólido en esa región</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Significa que $\kappa_T$ se hace infinito, lo cual señala el punto crítico exacto en todo ese rango de volúmenes</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Significa $\kappa_T < 0$: al comprimir el sistema (reducir $V$) la presión interna disminuye en vez de aumentar, por lo que no hay fuerza restitutiva. Un sistema homogéneo en ese estado sería mecánicamente inestable y se separa en dos fases coexistentes</span></label>
+        </div>
+        <script type="text/explanation" id="q26_3-exp">El coeficiente de compresibilidad isotérmica se define $\kappa_T = -\frac{1}{V}(\partial V/\partial P)_T$, y su signo está ligado al signo de $(\partial P/\partial V)_T$: si $P$ decrece con $V$ (lo usual, $(\partial P/\partial V)_T<0$), entonces $\kappa_T>0$, estabilidad mecánica normal (al comprimir, la presión interna sube y se opone a seguir comprimiendo, como cualquier objeto elástico). Pero en la región anómala de van der Waals para $T<T_c$, $P$ crece con $V$, es decir $(\partial P/\partial V)_T>0$, lo que da $\kappa_T<0$: al comprimir el sistema, su presión interna cae, y entonces nada se opone a seguir comprimiéndolo —es una respuesta divergente, mecánicamente inestable—. Un sistema real nunca permanece homogéneo en esa región: se separa espontáneamente en dos fases (líquido y gas) con distinta densidad pero la misma presión, evitando así la zona inestable. Esto es exactamente lo que la próxima clase formaliza con la construcción de Maxwell.</script>
+        <div class="quiz-feedback" id="q26_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_25/"><div class="nav-dir">← Anterior</div><div class="nav-title">Hacia Gases Reales</div></a>
+    <a href="../cat_27/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Coexistencia de Fases</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

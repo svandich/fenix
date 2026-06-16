@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC9 — La Entropía de Clausius</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link active" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u6 bg-u6">Clase Complementaria · CC 9</div>
+    <h1>CC9: La Entropía de Clausius</h1>
+    <p class="desc">A partir del cociente $Q/T$ que se conserva en la máquina ideal de Carnot, Clausius define la entropía. Esta clase recorre los cuatro principios de la termodinámica, el experimento clásico del hielo que no se calienta mientras se funde, la relación entre entropía y desorden molecular, la energía libre, y la pregunta abierta sobre si la entropía define la flecha del tiempo.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Los cuatro principios de la termodinámica: ley cero (la temperatura tiene sentido), primera ley (energía), segunda ley (entropía), tercera ley ($T=0$ es inalcanzable)</li>
+        <li>Definición de Clausius: $\Delta S = Q/T$ a temperatura constante, ilustrada con el experimento del hielo fundiéndose a 273 K</li>
+        <li>Por qué el hielo no se calienta mientras se está fundiendo, aunque esté en contacto con un fluido más caliente</li>
+        <li>Relación entre entropía y desorden molecular: sólido (orden, baja $S$) → líquido → gas (mayor desorden, mayor $S$)</li>
+        <li>La energía libre $F = E - TS$ como cantidad que el sistema minimiza en equilibrio</li>
+        <li>La "muerte entrópica" del universo y el destino de los sistemas que alcanzan equilibrio total</li>
+        <li>El debate abierto sobre si el crecimiento de la entropía define la dirección de la flecha del tiempo</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Los cuatro principios</h3>
+        <p>Curiosamente numerados fuera de orden histórico: el primero en descubrirse fue la segunda ley (entropía), seguido por la conservación de la energía (primera ley); más tarde se formalizaron la ley cero (que da sentido a la temperatura) y la tercera ley (la inalcanzabilidad de $T=0$, que requiere infinitos procesos sucesivos de enfriamiento).</p>
+      </div>
+      <div class="concept-card">
+        <h3>El hielo que no se calienta</h3>
+        <p>Mientras hay hielo y agua coexistiendo a 273 K, todo el calor que entra se usa para fundir el hielo (cambiar de fase), no para subir la temperatura. La entropía del agua que se forma aumenta en $Q/T$ aunque la temperatura permanezca fija — el ejemplo canónico de $\Delta S = Q/T$ a $T$ constante.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Entropía y desorden</h3>
+        <p>Un sólido cristalino tiene las moléculas en una configuración geométrica que minimiza su energía potencial: baja entropía. Un líquido tiene moléculas caóticas, desordenadas y dispersas: mayor entropía y, además, mayor energía potencial total. El aumento de entropía del universo se traduce, a escala molecular, en aumento de desorden.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Energía libre y equilibrio</h3>
+        <p>No es sólo la entropía la que se maximiza: cada partícula de materia "busca" minimizar su energía libre $F = E - TS$. Minimizar $F$ a $T$ fija equivale exactamente a maximizar la entropía total del universo (sistema + entorno), porque ceder energía al entorno aumenta la entropía de éste más de lo que disminuye la del sistema, si la cesión ocurre a temperatura suficientemente alta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Definición de Clausius de la entropía</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_9_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Si el calor $Q$ sale de un cuerpo a temperatura $T$, su entropía disminuye en $Q/T$; si entra, aumenta en esa misma cantidad. Cuando fluye calor a través del cosmos, fluye entropía con él. En una máquina de Carnot ideal, la entropía que entra a $T_y$ es exactamente igual a la que sale a $T_0$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Segunda ley: la entropía total nunca disminuye</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_9_2.svg" alt=""></div>
+      <div class="formula-desc">
+        En máquinas reales (irreversibles) la entropía que sale es siempre mayor que la que entra: hay producción neta de entropía debida a la fricción y a procesos no cuasi-estáticos. El estado de equilibrio es, precisamente, el estado de entropía máxima — donde la entropía deja de crecer porque no puede suceder otra cosa.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Energía libre</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_9_3.svg" alt=""></div>
+      <div class="formula-desc">
+        A temperatura y volumen constantes, el sistema evoluciona minimizando $F = E - TS$, no maximizando directamente la entropía del sistema aislado: la diferencia es que $F$ ya contabiliza el intercambio de entropía con el entorno a través del término $-TS$.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de la entropía de Clausius</div>
+      <ul>
+        <li>La entropía de Clausius nace directamente del resultado de Carnot: en el ciclo ideal $Q_y/T_y = Q_0/T_0$, es decir, el cociente calor/temperatura es una cantidad conservada. Clausius generaliza esto a una función de estado $S$ con $dS = \bar\delta Q/T$.</li>
+        <li>El experimento del hielo es importante porque muestra que la temperatura no siempre aumenta cuando entra calor: durante un cambio de fase, el calor latente se invierte en reorganizar la estructura molecular (aumentando $S$), no en agitación térmica adicional.</li>
+        <li>"Equilibrio termodinámico" no significa ausencia de movimiento — significa que toda la energía disponible se ha distribuido entre los grados de libertad microscópicos de manera estadísticamente estable. Por eso el equilibrio es el estado de máxima entropía, no de mínima energía cinética.</li>
+        <li>La "muerte entrópica" del universo es la extrapolación de que, si la entropía del universo crece sin límite, eventualmente todo alcanzará una misma temperatura y ninguna máquina (incluida la vida misma, que depende de flujos de calor) podrá funcionar.</li>
+        <li>La pregunta de si la entropía "define" la flecha del tiempo sigue abierta: a nivel microscópico las leyes de la física son reversibles en el tiempo (no se distingue una colisión de partículas filmada hacia adelante o hacia atrás), pero a escala macroscópica el crecimiento de la entropía da una dirección clara y observable al paso del tiempo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="qcc9_1" data-correct="2">
+        <div class="quiz-question">1. En el experimento de la clase, un cubo de hielo a 273 K se sumerge en un fluido a 295 K. ¿Por qué el hielo no se calienta (no sube su temperatura) mientras se está derritiendo?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc9_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque el hielo es un mal conductor térmico y el calor del fluido no logra penetrar hasta el centro del cubo</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque la segunda ley prohíbe que el calor fluya del fluido caliente hacia el hielo más frío</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque mientras coexisten hielo y agua a 273 K, todo el calor que entra se invierte en el cambio de fase (fundir hielo, reorganizando la estructura molecular y aumentando la entropía), no en subir la temperatura; la temperatura sólo empieza a subir cuando todo el hielo se ha fundido</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el hielo tiene capacidad calórica infinita a 273 K exactamente, así que cualquier cantidad de calor produce un cambio de temperatura nulo</span></label>
+        </div>
+        <script type="text/explanation" id="qcc9_1-exp">Mientras hielo y agua líquida coexisten a la misma temperatura (273 K a presión atmosférica), el sistema está en un cambio de fase: el calor que fluye desde el fluido más caliente se usa íntegramente para romper la estructura cristalina ordenada del hielo y transformarlo en agua líquida desordenada, no para aumentar la energía cinética media de las moléculas (que es lo que mide la temperatura). Esto es exactamente lo que describe $\Delta S = Q/T$ a $T$ constante: la entropía del agua aumenta proporcionalmente al calor latente absorbido, mientras la temperatura permanece fija en 273 K. Sólo una vez que todo el hielo se ha derretido, el calor adicional vuelve a manifestarse como aumento de temperatura del agua líquida.</script>
+        <div class="quiz-feedback" id="qcc9_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qcc9_2" data-correct="3">
+        <div class="quiz-question">2. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre la energía libre $F = E - TS$ y el equilibrio termodinámico a temperatura y volumen constantes?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc9_2" value="0"><span class="opt-letter">A</span><span class="opt-text">El sistema siempre maximiza su propia entropía $S$ sin importar qué ocurra con la energía $E$</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El sistema siempre minimiza su energía $E$ sin importar qué ocurra con la entropía $S$</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_2" value="2"><span class="opt-letter">C</span><span class="opt-text">El sistema maximiza simultáneamente tanto $E$ como $S$ por separado, sin que exista ninguna relación entre ambas</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El sistema minimiza $F = E - TS$, lo cual equivale a maximizar la entropía total del universo (sistema más entorno): ceder energía al entorno a temperatura $T$ aumenta la entropía de éste en $E/T$, compensando o superando la pérdida de entropía del sistema</span></label>
+        </div>
+        <script type="text/explanation" id="qcc9_2-exp">La energía libre $F = E - TS$ es la cantidad correcta a minimizar cuando el sistema está en contacto con un entorno a temperatura constante $T$ (en vez de estar aislado). La razón es que minimizar $F$ no es lo mismo que minimizar $E$ ni que maximizar $S$ por separado: es un compromiso. Si el sistema cede energía $\delta E$ al entorno a temperatura $T$, la entropía del entorno aumenta en $\delta E/T$. La entropía total (sistema + entorno) aumenta siempre que el sistema evolucione en la dirección de menor $F$, porque $\delta F = \delta E - T\delta S \le 0$ es equivalente a que la entropía total crezca. Por eso "minimizar $F$" es la forma práctica de aplicar la segunda ley a un sistema que no está aislado sino en contacto térmico con un entorno grande.</script>
+        <div class="quiz-feedback" id="qcc9_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qcc9_3" data-correct="1">
+        <div class="quiz-question">3. Según la discusión final de la clase sobre la "flecha del tiempo", ¿qué distingue el comportamiento microscópico del macroscópico respecto a la dirección del tiempo?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc9_3" value="0"><span class="opt-letter">A</span><span class="opt-text">A nivel microscópico el tiempo también tiene una dirección clara, idéntica a la macroscópica, porque las leyes de Newton ya distinguen pasado de futuro</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_3" value="1"><span class="opt-letter">B</span><span class="opt-text">A nivel microscópico (p. ej. la colisión de dos átomos) las leyes de la física son igualmente válidas hacia adelante o hacia atrás en el tiempo (no se podría distinguir si una película de la colisión se proyecta al revés); a nivel macroscópico, el crecimiento de la entropía (p. ej. una pelota que pierde altura en cada rebote) sí define una dirección observable del tiempo</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_3" value="2"><span class="opt-letter">C</span><span class="opt-text">A nivel microscópico la entropía siempre decrece, mientras que a nivel macroscópico siempre crece, por eso son consistentes entre sí</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Esta es una pregunta completamente resuelta: se sabe con certeza que el segundo principio es la única causa física de la flecha del tiempo, y no existe debate científico al respecto</span></label>
+        </div>
+        <script type="text/explanation" id="qcc9_3-exp">El ejemplo de la clase compara dos escenarios: (1) la colisión elástica de dos átomos, donde una filmación reproducida al revés se vería igualmente "correcta" según las leyes de la física, porque a nivel microscópico las ecuaciones son simétricas bajo inversión temporal; (2) una pelota cayendo y rebotando, donde los rebotes se hacen cada vez más pequeños — si la película se proyectara al revés (rebotes creciendo) se notaría inmediatamente que algo anda mal, porque eso violaría el crecimiento de la entropía. La clase deja explícitamente abierta la pregunta de si el crecimiento de la entropía es la causa fundamental de la flecha del tiempo o simplemente una consecuencia observada en sistemas macroscópicos — el profesor menciona que es un tema de debate activo, no resuelto.</script>
+        <div class="quiz-feedback" id="qcc9_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cc_8/"><div class="nav-dir">← Anterior</div><div class="nav-title">CC8: Máquinas de Carnot</div></a>
+    <a href="../cc_10/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">CC10: Teorema del Virial</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

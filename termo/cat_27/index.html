@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 27 — Coexistencia de Fases</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link active" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 8</div>
+    <div class="unit-pill u7 bg-u7">Gases Reales y Transporte · Cát. 24–28</div>
+    <h1>Cátedra 27: Coexistencia de Fases y Condiciones de Equilibrio</h1>
+    <p class="desc">Se resuelve el problema dejado abierto en la clase anterior: la región no monótona de la isoterma de van der Waals se reemplaza por una meseta de presión constante (construcción de Maxwell). Maximizando la entropía total de un sistema dividido en dos subsistemas se derivan las tres condiciones de coexistencia: igual temperatura, igual presión, igual potencial químico.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>El punto crítico como punto de inflexión doble: $(\partial P/\partial V)_T = 0$ y $(\partial^2 P/\partial V^2)_T = 0$ simultáneamente, lo que fija $T_c$, $V_c$, $P_c$</li>
+        <li>Para $T<T_c$ la isoterma de van der Waals tiene un "loop" no físico; experimentalmente se observa una meseta de presión constante</li>
+        <li>La construcción de Maxwell: cómo reemplazar el loop por la meseta correcta (igual presión, fases coexistiendo)</li>
+        <li>Maximización de la entropía total $S=S_1+S_2$ de un sistema aislado dividido en dos subsistemas en contacto</li>
+        <li>Las tres condiciones de equilibrio entre fases: térmico ($T_1=T_2$), mecánico ($P_1=P_2$), de partículas ($\mu_1=\mu_2$)</li>
+        <li>El potencial químico como variable natural para describir coexistencia: $\mu(T,P)$ vía transformada de Legendre desde $\mu(T,V)$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Punto crítico</h3>
+        <p>Es el único punto de la isoterma $T=T_c$ donde la curva $P(V)$ tiene un punto de inflexión horizontal: $(\partial P/\partial V)_T=0$ y $(\partial^2P/\partial V^2)_T=0$ a la vez. Por encima de $T_c$ la isoterma es siempre monótona (un solo fluido); por debajo, aparece el "loop" que señala coexistencia de fases.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Construcción de Maxwell</h3>
+        <p>La región inestable ($\kappa_T<0$) de la isoterma de van der Waals no se observa en la naturaleza: el sistema real sigue una meseta horizontal (presión de vapor constante) mientras las dos fases coexisten en proporciones variables. La posición exacta de la meseta se fija pidiendo que las áreas por encima y por debajo de ella, respecto a la curva de van der Waals, sean iguales.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Maximización de la entropía total</h3>
+        <p>Para un sistema aislado con energía, volumen y número de partículas totales fijos, dividido en dos subsistemas que pueden intercambiar $E$, $V$ y $N$, el equilibrio corresponde al máximo de $S=S_1+S_2$. Como $dE$, $dV$, $dN$ de cada subsistema son independientes, cada coeficiente de la diferencial debe anularse por separado, lo que da las tres condiciones de igualdad.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Potencial químico como "presión de partículas"</h3>
+        <p>$\mu = -T(\partial S/\partial N)_{E,V}$ mide el costo entrópico de agregar una partícula. La condición $\mu_1=\mu_2$ es la condición de "equilibrio químico": dice que el costo (en entropía, a $T$ y $P$ fijos) de mover una partícula de la fase 1 a la fase 2 es exactamente nulo en el equilibrio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Condiciones del punto crítico</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_27_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Dos ecuaciones, dos incógnitas: resolviendo este sistema para la ecuación de van der Waals se obtienen $T_c$, $V_c$, $P_c$ en función de $a$ y $b$.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Diferencial de la entropía total (sistema dividido en dos)</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_27_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Con $E$, $V$, $N$ totales conservados, $dE_2=-dE_1$, $dV_2=-dV_1$, $dN_2=-dN_1$. Maximizar $S$ exige que el coeficiente de cada diferencial independiente se anule.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Las tres condiciones de coexistencia de fases</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_27_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Equilibrio térmico, mecánico y "químico" (de partículas), respectivamente. Las tres deben cumplirse simultáneamente para que dos fases coexistan en equilibrio.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Potencial químico como función de $T$ y $P$</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_27_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Cambio de variables naturales de $\mu(T,V)$ a $\mu(T,P)$ mediante una transformada de Legendre, conveniente porque la coexistencia ocurre naturalmente a $T$ y $P$ fijos (no a $V$ fijo).
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Por qué la coexistencia exige tres igualdades, no una</div>
+      <ul>
+        <li>El "loop" no físico de van der Waals para $T<T_c$ no es un error de la teoría: marca exactamente el rango de volúmenes donde el sistema homogéneo es inestable y, en la práctica, se separa en dos fases con la misma presión (la meseta observada experimentalmente).</li>
+        <li>La condición de Maxwell (áreas iguales) es equivalente a pedir que el potencial químico —o la energía libre de Gibbs por partícula— sea igual en ambas fases: ambas son formulaciones del mismo principio variacional de mínima energía libre (o máxima entropía).</li>
+        <li>Las tres condiciones de coexistencia no son arbitrarias: surgen exactamente de pedir que $\delta S=0$ en cada variable conservada por separado (energía, volumen, número de partículas), igual que el equilibrio térmico simple surge de maximizar $S$ respecto al intercambio de energía solamente.</li>
+        <li>El potencial químico es la variable clave porque resume en una sola función toda la termodinámica de una fase: dos fases coexisten exactamente donde sus curvas $\mu(T,P)$ se cruzan, lo cual define las líneas de coexistencia en el diagrama $P$-$T$ (tema de la próxima clase).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q27_1" data-correct="1">
+        <div class="quiz-question">1. El punto crítico de una isoterma se define exigiendo $(\partial P/\partial V)_T=0$ y $(\partial^2 P/\partial V^2)_T=0$ simultáneamente. ¿Por qué se necesitan ambas condiciones y no solo la primera?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q27_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque la primera condición sola nunca tiene solución para la ecuación de van der Waals</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque $(\partial P/\partial V)_T=0$ sola solo identifica un extremo local (máximo o mínimo) de $P(V)$, que existe en cualquier isoterma con $T<T_c$ en dos puntos distintos; exigir además la segunda derivada nula selecciona el caso límite donde esos dos extremos se funden en un único punto de inflexión horizontal, que ocurre exactamente a $T=T_c$</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque la segunda condición es la que define la temperatura, mientras la primera define solo el volumen</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Ambas condiciones son redundantes; basta con una de las dos para cualquier temperatura</span></label>
+        </div>
+        <script type="text/explanation" id="q27_1-exp">Para $T<T_c$, la isoterma de van der Waals tiene un máximo y un mínimo local: en esos dos puntos $(\partial P/\partial V)_T=0$, pero son puntos distintos del mismo "loop" no físico. A medida que $T$ aumenta hacia $T_c$, esos dos puntos se acercan, hasta fundirse en uno solo exactamente en $T=T_c$: ahí la curva tiene un único punto donde la primera Y la segunda derivada se anulan simultáneamente (un punto de inflexión con tangente horizontal). Para $T>T_c$ la isoterma vuelve a ser monótona y ninguna derivada se anula. Resolver el sistema de dos ecuaciones (con la ecuación de estado como tercera ecuación) para tres incógnitas $(T,V,P)$ da exactamente $T_c$, $V_c$, $P_c$.</script>
+        <div class="quiz-feedback" id="q27_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q27_2" data-correct="2">
+        <div class="quiz-question">2. Al maximizar la entropía total $S=S_1+S_2$ de un sistema aislado dividido en dos subsistemas que intercambian energía, volumen y partículas, se obtienen tres condiciones de equilibrio. ¿Cuáles son y de dónde sale cada una?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q27_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Solo una condición: $T_1=T_2$, ya que el volumen y el número de partículas no afectan la entropía</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_2" value="1"><span class="opt-letter">B</span><span class="opt-text">$E_1=E_2$, $V_1=V_2$, $N_1=N_2$: las cantidades conservadas deben repartirse en partes iguales entre los subsistemas</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_2" value="2"><span class="opt-letter">C</span><span class="opt-text">$T_1=T_2$ (del coeficiente de $dE_1$), $P_1=P_2$ (del coeficiente de $dV_1$), $\mu_1=\mu_2$ (del coeficiente de $dN_1$): cada una surge de exigir que el coeficiente de cada diferencial independiente en $dS=dS_1+dS_2$ se anule, usando $dE_2=-dE_1$, etc.</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_2" value="3"><span class="opt-letter">D</span><span class="opt-text">$\mu_1=-\mu_2$, $P_1=-P_2$, $T_1=-T_2$: las cantidades intensivas deben ser opuestas entre los subsistemas</span></label>
+        </div>
+        <script type="text/explanation" id="q27_2-exp">Usando $dS_1 = dE_1/T_1 + P_1\,dV_1/T_1 - \mu_1\,dN_1/T_1$ (y análogo para el subsistema 2), junto con la conservación $dE_2=-dE_1$, $dV_2=-dV_1$, $dN_2=-dN_1$ (el sistema total está aislado), la diferencial total queda $dS = (1/T_1-1/T_2)dE_1 + (P_1/T_1-P_2/T_2)dV_1 - (\mu_1/T_1-\mu_2/T_2)dN_1$. Como $dE_1$, $dV_1$, $dN_1$ son variaciones independientes, maximizar $S$ (es decir $dS=0$ para cualquier variación) exige que cada coeficiente se anule por separado: esto da $T_1=T_2$ (equilibrio térmico), y de ahí $P_1=P_2$ (equilibrio mecánico) y $\mu_1=\mu_2$ (equilibrio de partículas, mal llamado "equilibrio químico" por su origen histórico en reacciones químicas).</script>
+        <div class="quiz-feedback" id="q27_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q27_3" data-correct="0">
+        <div class="quiz-question">3. ¿Por qué la región del "loop" de van der Waals (para $T<T_c$) no se observa experimentalmente, y qué la reemplaza?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q27_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque en esa región $\kappa_T<0$ (mecánicamente inestable); experimentalmente se observa una meseta de presión constante (presión de vapor) mientras las dos fases coexisten, cuya posición exacta fija la construcción de Maxwell</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque la ecuación de van der Waals es incorrecta en general y debe descartarse para $T<T_c$</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a esas temperaturas el potencial químico deja de estar definido</span></label>
+          <label class="quiz-option"><input type="radio" name="q27_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el volumen molar se vuelve negativo en esa región, lo cual es no físico y se descarta sin más</span></label>
+        </div>
+        <script type="text/explanation" id="q27_3-exp">En la región donde la isoterma de van der Waals predice $(\partial P/\partial V)_T>0$, el coeficiente de compresibilidad $\kappa_T=-\frac{1}{V}(\partial V/\partial P)_T$ es negativo, lo que corresponde a un estado mecánicamente inestable (visto en la clase anterior): cualquier fluctuación se amplifica en vez de amortiguarse. Un sistema real no permanece en ese estado homogéneo; en cambio, se separa en dos fases (líquido y vapor) que coexisten a la misma presión y temperatura, con distinta densidad cada una. Al variar el volumen total del sistema en esta región, lo que cambia es la proporción relativa de cada fase, no la presión: por eso se observa una meseta horizontal. La construcción de Maxwell determina la altura exacta de esa meseta exigiendo que las áreas encerradas entre la meseta y el loop de van der Waals, por encima y por debajo, sean iguales (lo cual es equivalente a exigir $\mu_\text{líq}=\mu_\text{gas}$).</script>
+        <div class="quiz-feedback" id="q27_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_26/"><div class="nav-dir">← Anterior</div><div class="nav-title">Van der Waals</div></a>
+    <a href="../cat_28/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Síntesis y Browniano</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

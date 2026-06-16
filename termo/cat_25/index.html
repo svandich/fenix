@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 25 — Hacia los Gases Reales</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link active" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 8</div>
+    <div class="unit-pill u7 bg-u7">Gases Reales y Transporte · Cát. 24–28</div>
+    <h1>Cátedra 25: Hacia los Gases Reales — Interacción y Potencial de Lennard-Jones</h1>
+    <p class="desc">Se formaliza la estrategia general $Z(T,V,N) \to F = -k_BT\ln Z \to$ presión, potencial químico, entropía, y se demuestra que partículas complejas sin interacción siguen satisfaciendo exactamente $PV=Nk_BT$. Luego se introduce el ingrediente que de verdad distingue a un gas real: la interacción entre partículas, modelada con el potencial de Lennard-Jones.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Estrategia general: de $Z(T,V,N)$ a $F=-k_BT\ln Z$, y de ahí a $P=-\partial F/\partial V$, $\mu=\partial F/\partial N$, $S=-\partial F/\partial T$</li>
+        <li>Función de partición de una partícula compleja sin interacción: separación en parte traslacional y parte interna, $Z_1 = Z_\text{trasl}\cdot Z_\text{interno}$</li>
+        <li>$Z_N = Z_\text{trasl}^N Z_\text{interno}^N/N!$ para $N$ partículas complejas indistinguibles sin interacción</li>
+        <li>Demostración de que $PV=Nk_BT$ exactamente, sin importar cuán compleja sea la estructura interna de las partículas, mientras no interactúen entre sí</li>
+        <li>La energía libre de Helmholtz y la entropía dependen de los grados de libertad internos, aunque la ecuación de estado mecánica no</li>
+        <li>Primer paso hacia la interacción real: el potencial de Lennard-Jones $U(r)=4\varepsilon[(\sigma/r)^{12}-(\sigma/r)^6]$</li>
+        <li>Origen físico de cada término: repulsión cuántica (Pauli) a corto alcance, atracción dipolo-dipolo inducida a largo alcance</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>La función de partición como generadora de toda la termodinámica</h3>
+        <p>Una vez conocida $Z(T,V,N)$, se calcula $F=-k_BT\ln Z$, y todas las cantidades termodinámicas son derivadas de $F$: $S=-(\partial F/\partial T)_{V,N}$, $P=-(\partial F/\partial V)_{T,N}$, $\mu=(\partial F/\partial N)_{T,V}$. Esta es la estrategia que se aplicará sistemáticamente para describir gases reales.</p>
+      </div>
+      <div class="concept-card">
+        <h3>$PV=Nk_BT$ sobrevive a la complejidad interna</h3>
+        <p>Si las partículas tienen grados de libertad internos (vibración, carga, estructura nuclear) pero <em>no interactúan entre sí</em>, la función de partición factoriza como $Z_\text{trasl}^N Z_\text{interno}^N/N!$. Como $Z_\text{interno}$ no depende de $V$, al derivar $F$ respecto al volumen el factor interno desaparece y la ecuación de estado mecánica sigue siendo exactamente la del gas ideal — por complicada que sea la partícula.</p>
+      </div>
+      <div class="concept-card">
+        <h3>La interacción es lo único que cambia la ecuación de estado</h3>
+        <p>La estructura interna afecta a la entropía y al potencial químico (a través de $Z_\text{interno}(T)$), pero no a $PV=Nk_BT$. Solo cuando se introduce la interacción entre partículas (el siguiente paso del curso) aparecen desviaciones reales del comportamiento ideal, como las que describe Van der Waals.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Potencial de Lennard-Jones: repulsión y atracción</h3>
+        <p>$U(r)=4\varepsilon[(\sigma/r)^{12}-(\sigma/r)^6]$ modela la interacción entre dos átomos o moléculas neutras. El término $1/r^{12}$ es una repulsión de origen cuántico (los núcleos, mediados por el principio de Pauli, no pueden penetrarse); el término $-1/r^6$ es una atracción de dipolo inducido-dipolo inducido. $\sigma$ y $\varepsilon$ son característicos de cada gas (p. ej. distintos para argón, neón, oxígeno).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Función de partición de partículas complejas sin interacción</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_25_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $Z_\text{trasl}$ depende del volumen (la partícula puede estar en cualquier parte del recipiente); $Z_\text{interno}$ solo depende de $T$ (vibraciones, rotaciones internas, no del tamaño del recipiente). Esta separación es la clave de todo lo que sigue: $F$ se separa en una parte que da la mecánica del gas y otra que da su "química" interna.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Ecuación de estado del gas ideal (partículas complejas, sin interacción)</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_25_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Al derivar $F=-k_BT\ln Z_N$ respecto a $V$, el término $\ln Z_\text{interno}^N$ no depende de $V$ y se anula; solo sobrevive la derivada de $\ln V^N$. Resultado: $PV=Nk_BT$ exactamente, sin importar cuán complicada sea la estructura interna de cada partícula, mientras no haya interacción entre ellas.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Potencial de Lennard-Jones</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_25_3.svg" alt=""></div>
+      <div class="formula-desc">
+        $\varepsilon$ es una energía característica (la profundidad del pozo de potencial) y $\sigma$ una longitud característica (del orden del tamaño atómico). La fuerza entre partículas es conservativa: $F(r)=-dU/dr$. Para argón, $\sigma\approx 0.34\,\text{nm}$; valores similares existen para neón, oxígeno y otros gases reales, tabulados experimentalmente.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Origen físico de los dos términos</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_25_4.svg" alt=""></div>
+      <div class="formula-desc">
+        El término $+1/r^{12}$ (repulsivo, $F>0$ cuando el potencial decrece) surge porque los electrones y núcleos no pueden superponerse: una consecuencia del principio de exclusión de Pauli a corta distancia. El término $-1/r^6$ (atractivo) surge de que cada átomo, al deformarse levemente al acercarse a otro, induce un dipolo eléctrico; la interacción dipolo-dipolo inducido decae como $1/r^6$ en energía.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ El puente entre gas ideal y gas real</div>
+      <ul>
+        <li>El resultado más sutil de esta cátedra no es una fórmula nueva, sino una observación negativa: agregar complejidad interna a las partículas (vibraciones, estructura, carga) <em>no</em> cambia la ecuación de estado mecánica $PV=Nk_BT$. Solo la interacción entre partículas puede hacerlo. Esto aísla exactamente qué ingrediente falta para describir gases reales.</li>
+        <li>La estrategia $Z\to F\to (P,\mu,S)$ es completamente general: no depende de qué tan complicado sea el sistema. Lo único que cambia de un problema a otro es cómo se calcula $Z$; el "engranaje" termodinámico que conecta $Z$ con cantidades medibles es siempre el mismo.</li>
+        <li>El potencial de Lennard-Jones no es una ley fundamental — es un <em>modelo</em> conveniente. La parte atractiva ($1/r^6$) tiene una derivación física razonablemente sólida desde la electrodinámica (dipolo inducido-dipolo inducido). La parte repulsiva ($1/r^{12}$) es un ajuste matemático conveniente para representar una repulsión cuántica muy abrupta, no una ley derivada de primeros principios.</li>
+        <li>Que $\sigma$ y $\varepsilon$ sean distintos para cada gas (argón, neón, oxígeno, etc.) explica por qué cada sustancia real tiene su propia temperatura crítica, su propio punto de ebullición y su propia ecuación de estado modificada: todo eso es, en el fondo, una consecuencia de los parámetros microscópicos de interacción.</li>
+        <li>La existencia de una distancia de equilibrio (donde atracción y repulsión se balancean, $dU/dr=0$) es la semilla conceptual de por qué la materia tiene fases: sólido, líquido y gas son, en este lenguaje, distintas formas en que un conjunto de partículas puede organizarse alrededor de ese balance, dependiendo de la temperatura y la densidad.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q25_1" data-correct="2">
+        <div class="quiz-question">1. Un gas está formado por moléculas orgánicas complejas, con muchos grados de libertad internos (vibración, rotación, distribución de carga), pero que no interactúan entre sí. ¿Qué le pasa a la ecuación de estado $PV=Nk_BT$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q25_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Deja de cumplirse, porque la complejidad interna introduce correcciones de orden superior en $V$</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Se cumple solo aproximadamente, con un error proporcional al número de grados de libertad internos</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Se sigue cumpliendo exactamente, porque $Z_\text{interno}$ no depende del volumen y por lo tanto no contribuye a $P=-(\partial F/\partial V)_{T,N}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Se cumple solo si todas las moléculas están en su estado interno de mínima energía</span></label>
+        </div>
+        <script type="text/explanation" id="q25_1-exp">La función de partición de $N$ partículas complejas sin interacción factoriza como $Z_N = Z_\text{trasl}^N(T,V)\cdot Z_\text{interno}^N(T)/N!$. La energía libre es $F=-k_BT\ln Z_N = -k_BT[N\ln Z_\text{trasl} + N\ln Z_\text{interno} - \ln N!]$. Al calcular la presión, $P=-(\partial F/\partial V)_{T,N}$, solo el término $N\ln Z_\text{trasl}$ depende de $V$ (porque $Z_\text{interno}$ describe vibraciones, rotaciones internas, distribución de carga — nada de eso depende de cuán grande es el recipiente). El resultado es $PV=Nk_BT$ exactamente, sin aproximación, sin importar cuán complicados sean los grados de libertad internos. La estructura interna sí afecta a la entropía y al potencial químico (que dependen de $Z_\text{interno}$), pero no a la ecuación de estado mecánica.</script>
+        <div class="quiz-feedback" id="q25_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q25_2" data-correct="3">
+        <div class="quiz-question">2. En el potencial de Lennard-Jones $U(r)=4\varepsilon[(\sigma/r)^{12}-(\sigma/r)^6]$, ¿cuál es el origen físico del término atractivo $-(\sigma/r)^6$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q25_2" value="0"><span class="opt-letter">A</span><span class="opt-text">La atracción gravitacional entre las masas de las dos partículas</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Una carga eléctrica neta permanente que tienen todos los átomos y moléculas neutras</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_2" value="2"><span class="opt-letter">C</span><span class="opt-text">El principio de exclusión de Pauli actuando a distancias intermedias</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_2" value="3"><span class="opt-letter">D</span><span class="opt-text">La interacción dipolo-dipolo inducido: cada átomo o molécula, al acercarse a otro, se deforma levemente y genera un dipolo eléctrico transitorio; la energía de interacción entre dos dipolos inducidos decae como $1/r^6$</span></label>
+        </div>
+        <script type="text/explanation" id="q25_2-exp">Los átomos y moléculas neutras no tienen carga ni dipolo eléctrico permanente en promedio, pero su nube de electrones se puede deformar. Cuando dos átomos se acercan, cada uno induce una deformación de la distribución de carga del otro (y viceversa), generando dipolos eléctricos transitorios correlacionados. La energía de interacción entre dos dipolos separados una distancia $r$ escala como $1/r^3$ a nivel de potencial dipolo-carga, pero como ambos dipolos son inducidos (cada uno proporcional al campo del otro, que a su vez ya escala como $1/r^3$), la energía neta de esta interacción dipolo inducido-dipolo inducido escala como $1/r^6$. Esto da el término atractivo de Lennard-Jones. (El término repulsivo $1/r^{12}$, en cambio, es de origen cuántico: modela que los electrones y núcleos no pueden superponerse, una consecuencia del principio de exclusión de Pauli a corta distancia.)</script>
+        <div class="quiz-feedback" id="q25_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q25_3" data-correct="1">
+        <div class="quiz-question">3. Los parámetros $\sigma$ y $\varepsilon$ del potencial de Lennard-Jones son distintos para cada gas (por ejemplo, distintos para argón que para neón). ¿Qué representan físicamente?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q25_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$\sigma$ es la masa del átomo y $\varepsilon$ es su carga eléctrica neta</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$\sigma$ es una longitud característica del orden del tamaño atómico (donde el potencial cruza cero) y $\varepsilon$ es una energía característica (la profundidad del pozo de potencial, la energía de enlace típica de la interacción)</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$\sigma$ es la temperatura crítica del gas y $\varepsilon$ es su presión crítica</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_3" value="3"><span class="opt-letter">D</span><span class="opt-text">$\sigma$ y $\varepsilon$ son constantes universales, iguales para todos los gases reales, análogas a $k_B$</span></label>
+        </div>
+        <script type="text/explanation" id="q25_3-exp">$\sigma$ tiene dimensiones de longitud y es del orden del tamaño atómico o molecular (típicamente fracciones de nanómetro, p. ej. $\sigma\approx 0.34\,\text{nm}$ para el argón): marca la escala de distancia a la que el potencial cruza por cero, es decir, dónde empieza a dominar la repulsión sobre la atracción. $\varepsilon$ tiene dimensiones de energía y representa la profundidad del pozo de potencial — la energía característica de la interacción atractiva entre dos partículas de ese gas en particular. Como cada gas tiene una estructura electrónica distinta (distinta polarizabilidad, distinto tamaño atómico), $\sigma$ y $\varepsilon$ son específicos de cada sustancia y se tabulan experimentalmente: por eso el argón, el neón, el oxígeno, etc., tienen comportamientos termodinámicos cuantitativamente distintos aunque todos sigan la misma forma funcional de Lennard-Jones.</script>
+        <div class="quiz-feedback" id="q25_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_24/"><div class="nav-dir">← Anterior</div><div class="nav-title">Equipartición y Pauli</div></a>
+    <a href="../cat_26/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Van der Waals</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

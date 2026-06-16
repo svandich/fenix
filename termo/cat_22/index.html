@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 22 — Máquinas Térmicas y la Idea de Carnot</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link active" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 7</div>
+    <div class="unit-pill u6 bg-u6">Ciclos y Máquinas · Cát. 21–23</div>
+    <h1>Cátedra 22: Máquinas Térmicas y la Idea de Carnot</h1>
+    <p class="desc">Se presenta a Sadi Carnot y su interés en las máquinas de vapor, se desarrolla la estructura abstracta de toda máquina térmica (entra calor a alta $T$, sale trabajo y calor de desecho a baja $T$), se demuestra que ninguna máquina puede operar con un solo flujo de calor, y se introduce la idea genial de Carnot: una máquina reversible que funciona igual en ambas direcciones (motor o refrigerador).</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Contexto histórico: Sadi Carnot y su interés en entender las máquinas de vapor (caldera, sistema de refrigeración, biela/motor)</li>
+        <li>Estructura abstracta de toda máquina térmica: entra $Q_{in}$ a temperatura alta, se genera trabajo $W$, sale $Q_0$ a temperatura baja</li>
+        <li>Por qué ninguna máquina puede tener un solo flujo de calor (violaría la idea intuitiva de que no se puede crear movimiento perpetuo solo subiendo y bajando algo)</li>
+        <li>La gran idea de Carnot: imaginar una máquina reversible, construida combinando procesos isotérmicos y adiabáticos</li>
+        <li>El ciclo reversible en el plano $P$-$V$: dos isotermas y dos adiabáticas, recorridas en una dirección (motor) o en la inversa (refrigerador)</li>
+        <li>Refrigerador = máquina de Carnot operando en reversa: requiere trabajo externo para sacar calor de un foco frío y entregarlo a uno caliente</li>
+        <li>El enunciado de Clausius: el calor nunca fluye espontáneamente de un cuerpo frío a uno caliente sin trabajo externo</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>La máquina abstracta</h3>
+        <p>Carnot redujo cualquier máquina térmica a su esqueleto lógico: un flujo de calor $Q_{in}$ que ingresa desde un foco a temperatura alta, una porción que se convierte en trabajo útil $W$, y un calor de desecho $Q_0$ que sale hacia un foco a temperatura baja. Esta abstracción —sin importar si es vapor, un motor de combustión, o una célula haciendo fotosíntesis— permite comparar la eficiencia de cualquier proceso real con el límite ideal.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Imposibilidad de un solo flujo de calor</h3>
+        <p>Intuitivamente, no se puede construir una máquina que tome calor de un solo foco y lo convierta enteramente en trabajo en un ciclo (esto sería análogo a una rueda hidráulica que sube y baja agua eternamente sin pérdida). Cualquier máquina cíclica necesita al menos dos focos de temperatura distinta: uno que entrega calor y otro que recibe el desecho. Esta es la semilla del enunciado de Kelvin de la segunda ley.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Reversibilidad: motor ↔ refrigerador</h3>
+        <p>La idea genial de Carnot es que un proceso construido enteramente con pasos reversibles (isotermas + adiabáticas) puede recorrerse en cualquier dirección. Recorrido en un sentido, consume $Q_{in}$ y produce trabajo (motor). Recorrido en sentido contrario, consume trabajo externo y bombea calor de un foco frío a uno caliente (refrigerador). Es la misma máquina física operando al revés — ningún otro tipo de máquina tiene esta simetría exacta.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Enunciado de Clausius</h3>
+        <p>El calor nunca fluye espontáneamente desde un cuerpo más frío hacia uno más caliente sin que se realice trabajo externo sobre el sistema. Es exactamente lo que permite que un refrigerador funcione: requiere trabajo (el motor del refrigerador) para forzar ese flujo "antinatural". Carnot y Clausius llegarán a la conclusión de que esta máquina ideal conserva, además de la energía, una cantidad nueva: $Q/T$, la entropía.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Estructura energética de toda máquina térmica</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_22_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $Q_{in}$ entra desde el foco caliente, $W$ es el trabajo neto producido (el "girar" de la máquina), y $Q_0$ es el calor de desecho que sale hacia el foco frío. La primera ley aplicada al ciclo completo (donde $\Delta U_{ciclo}=0$) exige esta relación exacta.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Eficiencia de una máquina térmica</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_22_2.svg" alt=""></div>
+      <div class="formula-desc">
+        La eficiencia $\eta$ mide qué fracción del calor que entra se convierte en trabajo útil. $\eta=1$ (toda entrada se vuelve trabajo, $Q_0=0$) es imposible para una máquina cíclica — esto es el enunciado de Kelvin de la segunda ley, equivalente al de Clausius.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Trabajo como área en el diagrama $P$-$V$</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_22_3.svg" alt=""></div>
+      <div class="formula-desc">
+        El trabajo neto de un ciclo es el área encerrada en el diagrama presión-volumen. Para el ciclo de Carnot (dos isotermas + dos adiabáticas), esta área es exactamente $Q_{in}-Q_0$, recorrida en sentido horario para el motor y antihorario para el refrigerador.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Por qué la abstracción de Carnot fue tan poderosa</div>
+      <ul>
+        <li>Carnot no diseñó una máquina mejor — descubrió la estructura lógica que toda máquina térmica, sin excepción, debe respetar. Esto le permitió razonar sobre límites de eficiencia sin necesitar saber nada de mecánica estadística (que ni existía en su época).</li>
+        <li>La clave de la reversibilidad no es solo "es elegante" — es lo que permite que la misma máquina sirva de motor o de refrigerador. Una máquina real (irreversible) no tiene esta propiedad: invertirla no simplemente revierte los flujos de calor y trabajo en igual magnitud.</li>
+        <li>El enunciado de Clausius parece "obvio" (el calor no fluye espontáneamente del frío al caliente) pero es exactamente equivalente a la imposibilidad de la máquina de eficiencia 1 (Kelvin). Ambos enunciados son consecuencias del mismo hecho profundo: existe una cantidad, la entropía, que no puede destruirse netamente.</li>
+        <li>Anticipo importante: la máquina de Carnot, al ser reversible, no solo conserva energía (como cualquier máquina) sino que también "conserva" $Q/T$ en cada foco — esto es la pista de que $Q/T$ se comporta como una cantidad con propiedades especiales, que se formalizará como entropía en la próxima clase.</li>
+        <li>No confundir "la máquina de Carnot es la mejor posible" con "es alcanzable en la práctica". Es un límite ideal: cualquier máquina real, con sus pérdidas y procesos no perfectamente lentos, tendrá necesariamente $\eta_{real} < \eta_{Carnot}$ para los mismos focos de temperatura.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q22_1" data-correct="1">
+        <div class="quiz-question">1. ¿Por qué ninguna máquina térmica cíclica puede operar con un único flujo de calor (es decir, absorber $Q_{in}$ de un solo foco y convertirlo enteramente en trabajo, sin desechar calor)?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q22_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque la primera ley lo prohíbe directamente: la energía no se conservaría si toda entrada se transformara en trabajo</span></label>
+          <label class="quiz-option"><input type="radio" name="q22_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque equivaldría a un movimiento perpetuo: sería análogo a una máquina que sube y baja agua usando exactamente la misma energía indefinidamente, sin pérdidas. Esta intuición es la semilla del enunciado de Kelvin, una de las formas de la segunda ley</span></label>
+          <label class="quiz-option"><input type="radio" name="q22_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque experimentalmente nunca se ha intentado construir tal máquina, pero no hay ningún principio físico que lo prohíba estrictamente</span></label>
+          <label class="quiz-option"><input type="radio" name="q22_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el calor siempre se disipa por radiación antes de poder convertirse completamente en trabajo mecánico</span></label>
+        </div>
+        <script type="text/explanation" id="q22_1-exp">La primera ley por sí sola no prohíbe convertir todo el calor en trabajo (de hecho $\Delta U_{ciclo}=0=Q-W$ sería compatible con $Q=W$ y $Q_0=0$). La prohibición viene de la segunda ley. La intuición de Carnot fue notar que esto sería análogo a un dispositivo de movimiento perpetuo: si pudiera tomar calor de un solo foco y convertirlo enteramente en trabajo, en principio podría usarse ese trabajo para revertir el proceso sin costo neto, funcionando indefinidamente sin ningún desequilibrio. El enunciado de Kelvin de la segunda ley formaliza exactamente esta imposibilidad: ninguna máquina cíclica puede tener como único efecto extraer calor de un foco y producir una cantidad equivalente de trabajo.</script>
+        <div class="quiz-feedback" id="q22_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q22_2" data-correct="3">
+        <div class="quiz-question">2. ¿Qué hace especial a la máquina de Carnot frente a cualquier otra máquina térmica real?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q22_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Que usa vapor de agua como fluido de trabajo, mientras que las máquinas reales usan otros gases</span></label>
+          <label class="quiz-option"><input type="radio" name="q22_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Que no necesita ningún foco frío, solo un foco caliente del cual extrae todo el calor como trabajo</span></label>
+          <label class="quiz-option"><input type="radio" name="q22_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Que tiene la mayor capacidad calórica posible entre todas las máquinas conocidas</span></label>
+          <label class="quiz-option"><input type="radio" name="q22_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Que está construida enteramente con procesos reversibles (isotermas y adiabáticas), lo cual le permite operar exactamente al revés: la misma máquina, recorrida en sentido contrario, funciona como refrigerador en vez de motor</span></label>
+        </div>
+        <script type="text/explanation" id="q22_2-exp">La gran idea de Carnot fue construir una máquina usando exclusivamente procesos reversibles: expansión/compresión isotérmica (en contacto con un termostato) y expansión/compresión adiabática (sin flujo de calor). Como cada uno de estos pasos es individualmente reversible, todo el ciclo lo es. Esto significa que recorriendo el ciclo en un sentido en el diagrama $P$-$V$ se obtiene un motor (entra $Q_{in}$ a alta $T$, sale trabajo y $Q_0$ a baja $T$), y recorriéndolo en sentido contrario se obtiene exactamente un refrigerador (se consume trabajo para bombear calor del foco frío al caliente). Ninguna máquina real tiene esta simetría perfecta porque siempre hay procesos irreversibles (fricción, pérdidas de calor, procesos no cuasi-estáticos) que rompen la reversibilidad.</script>
+        <div class="quiz-feedback" id="q22_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q22_3" data-correct="0">
+        <div class="quiz-question">3. El enunciado de Clausius dice que "el calor nunca fluye espontáneamente de un cuerpo frío a uno caliente". ¿Cómo es compatible esto con el funcionamiento de un refrigerador, que sí saca calor de un lugar frío (el interior) y lo entrega a uno caliente (la cocina)?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q22_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque el refrigerador no lo hace espontáneamente: requiere trabajo externo (el motor/compresor) para forzar ese flujo. El enunciado de Clausius prohíbe que ocurra "sin compensación", no que ocurra en absoluto</span></label>
+          <label class="quiz-option"><input type="radio" name="q22_3" value="1"><span class="opt-letter">B</span><span class="opt-text">No es compatible: el enunciado de Clausius es solo una aproximación que falla para refrigeradores reales</span></label>
+          <label class="quiz-option"><input type="radio" name="q22_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque dentro de un refrigerador la temperatura en realidad es mayor que en la cocina, así que el calor sí fluye de caliente a frío</span></label>
+          <label class="quiz-option"><input type="radio" name="q22_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque los refrigeradores usan un fluido especial que invierte localmente la dirección natural del calor sin necesidad de trabajo</span></label>
+        </div>
+        <script type="text/explanation" id="q22_3-exp">El enunciado de Clausius es preciso: el calor no fluye espontáneamente del frío al caliente. La palabra clave es "espontáneamente" — sin intervención externa. Un refrigerador sí logra ese flujo, pero solo porque un compresor realiza trabajo sobre el sistema (consumiendo electricidad). Ese trabajo es exactamente lo que "compensa" la dirección antinatural del flujo de calor. Es la misma idea que aparece en la máquina de Carnot operando en reversa: para funcionar como refrigerador, hay que invertir el ciclo consumiendo trabajo en vez de producirlo. Sin ese trabajo externo, jamás ocurriría el flujo de calor del frío al caliente.</script>
+        <div class="quiz-feedback" id="q22_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_21/"><div class="nav-dir">← Anterior</div><div class="nav-title">Entropía Irreversible</div></a>
+    <a href="../cat_23/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Ciclo de Carnot</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

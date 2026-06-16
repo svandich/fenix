@@ -53,6 +53,7 @@
   --unit-4: #f0883e; /* Dieléctricos          Aux 12–14*/
   --unit-5: #bc8cff; /* Corrientes/circuitos  Aux 15–16*/
   --unit-6: #f472b6; /* Magnetismo            Aux 17–18*/
+  --unit-7: #ef4444; /* Gases reales/transp.  Termo Cát. 24–28 */
 
   --sidebar-w: 260px;
   --content-max: 820px;
@@ -540,6 +541,7 @@ section h3 {
 .u4 { color: var(--unit-4); border-color: var(--unit-4); }
 .u5 { color: var(--unit-5); border-color: var(--unit-5); }
 .u6 { color: var(--unit-6); border-color: var(--unit-6); }
+.u7 { color: var(--unit-7); border-color: var(--unit-7); }
 
 .bg-u1 { background: color-mix(in srgb, var(--unit-1) 12%, transparent); }
 .bg-u2 { background: color-mix(in srgb, var(--unit-2) 12%, transparent); }
@@ -547,6 +549,7 @@ section h3 {
 .bg-u4 { background: color-mix(in srgb, var(--unit-4) 12%, transparent); }
 .bg-u5 { background: color-mix(in srgb, var(--unit-5) 12%, transparent); }
 .bg-u6 { background: color-mix(in srgb, var(--unit-6) 12%, transparent); }
+.bg-u7 { background: color-mix(in srgb, var(--unit-7) 12%, transparent); }
 
 /* ===== NAV COLORS ===== */
 .dot-u1 { background: var(--unit-1); }
@@ -555,6 +558,7 @@ section h3 {
 .dot-u4 { background: var(--unit-4); }
 .dot-u5 { background: var(--unit-5); }
 .dot-u6 { background: var(--unit-6); }
+.dot-u7 { background: var(--unit-7); }
 
 /* ===== PREV/NEXT ===== */
 .page-nav {

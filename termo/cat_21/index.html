@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cát. 21 — Entropía y Procesos Irreversibles</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link active" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 7</div>
+    <div class="unit-pill u6 bg-u6">Ciclos y Máquinas · Cát. 21–23</div>
+    <h1>Cátedra 21: Entropía y Procesos Irreversibles</h1>
+    <p class="desc">Repaso y generalización: se demuestra que al poner cualquier sistema pequeño en contacto con un termostato la entropía total siempre crece, se calcula la entropía de mezcla de dos gases ideales (un efecto puramente entrópico, sin flujo de calor), y se muestra que una compresión isotérmica reversible no cambia la entropía total.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Producción de entropía al contactar un sistema pequeño con un termostato: $\Delta S_{total} = \Delta S_{sist} + \Delta S_{term} \geq 0$ para cualquier dirección del flujo de calor</li>
+        <li>La función auxiliar $f(x) = x\ln x - x + 1$ con $x = T_b/T_a$, y por qué es siempre $\geq 0$</li>
+        <li>El caso trivial $x=1$ (mismas temperaturas): no hay flujo de calor y $\Delta S_{total}=0$ exactamente</li>
+        <li>Entropía de mezcla de dos gases ideales a igual temperatura: $\Delta S_{mezcla} = Nk\ln(V/V_{inicial})$, un efecto entrópico puro sin intercambio de calor</li>
+        <li>Por qué el contacto térmico simple (sin permitir mezcla espacial) no aumenta los microestados, mientras que remover una pared sí lo hace</li>
+        <li>Compresión isotérmica reversible de un gas ideal: $\Delta S_{gas} + \Delta S_{termostato} = 0$, la entropía total no cambia</li>
+        <li>Anticipo de la próxima clase: construir la "mejor máquina" posible (máquina de Carnot)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>La función $f(x) = x\ln x - x + 1$</h3>
+        <p>Al sumar el incremento de entropía del sistema pequeño ($Nc_x\ln(T_b/T_a)$) con el del termostato ($-Nc_x(1-T_a/T_b)$), y factorizar, aparece $f(x) = x\ln x - x + 1$ con $x=T_b/T_a$. Esta función vale $0$ solo en $x=1$ y es estrictamente positiva en cualquier otro punto, porque $\ln x$ crece más lento que $x$. Esto demuestra que $\Delta S_{total}\geq 0$ sin importar si $T_b>T_a$ o $T_b<T_a$: el resultado es simétrico ante intercambiar quién está más caliente.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Entropía local puede decrecer, la total nunca</h3>
+        <p>Si el sistema pequeño está más caliente que el termostato (como tirarse a una piscina fría), su entropía individual disminuye: $\Delta S_{sist} = Nc_x\ln(T_b/T_a) < 0$. Sin embargo, el termostato gana más entropía de la que el sistema pierde, y la suma siempre es positiva. Esto es clave para entender por qué procesos "ordenadores" localmente (como la vida biológica) son compatibles con el crecimiento de la entropía del universo en su conjunto.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Mezcla de gases: entropía sin calor</h3>
+        <p>Dos gases ideales a la misma temperatura $T$, separados por una pared, no intercambian calor al quitar la pared. Sin embargo cada gas ahora ocupa el volumen total $V = V_1+V_2$ en vez de su volumen original, lo que aumenta drásticamente el número de microestados accesibles. El resultado $\Delta S = \sum_i N_i k\ln(V/V_i)$ es positivo y es un "efecto puramente entrópico": no hay $\delta Q$ involucrado, solo redistribución espacial de partículas.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Compresión isotérmica reversible: $\Delta S_{total}=0$</h3>
+        <p>Al comprimir un gas ideal manteniéndolo en contacto con un termostato a temperatura constante, el gas cede calor $\delta Q = -p\,dV$ al termostato. Calculando ambas contribuciones, $\Delta S_{gas} = Nk\ln(V_f/V_i)$ y $\Delta S_{termostato} = -Nk\ln(V_f/V_i)$ se cancelan exactamente. Este es el prototipo de proceso reversible que Carnot usará para construir la máquina ideal: cuando todo el intercambio de calor ocurre a temperatura constante e igual entre sistema y termostato, no se genera entropía neta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Producción de entropía: sistema + termostato</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_21_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $\Delta S_{sist} = Nc_x\ln(T_b/T_a)$ es el cambio de entropía del sistema pequeño al pasar de $T_a$ a $T_b$ vía contacto térmico; $\Delta S_{term} = -Nc_x(1-T_a/T_b)$ es el del termostato (que no cambia su temperatura, pero sí cede o recibe calor). Sumando ambas y factorizando aparece $f(x)$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Función auxiliar $f(x)$ y su no-negatividad</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_21_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Con $x=T_b/T_a$, la entropía total resulta $\Delta S_{total} = Nc_x f(x)$. Como $f(x)\geq 0$ para todo $x>0$ (con igualdad solo en $x=1$), queda demostrado que $\Delta S_{total}\geq 0$ siempre, sea que el termostato esté más caliente o más frío que el sistema.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Entropía de mezcla de gases ideales</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_21_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Al remover la pared entre dos gases ideales a igual $T$, cada especie $i$ con $N_i$ partículas pasa de ocupar $V_i$ a ocupar el volumen total $V=V_1+V_2$. El aumento de entropía es puramente geométrico/combinatorio: no involucra $\delta Q$ en absoluto.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Compresión isotérmica reversible</div>
+      <div class="formula-math"><img class="typst-formula" src="cat_21_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Comprimiendo un gas ideal a $T$ constante (en contacto con un termostato), el gas cede $|\delta Q|=p\,dV$ al termostato. La entropía que pierde el gas es exactamente la que gana el termostato: $\Delta S_{total}=0$. Este es el bloque constructivo básico de la máquina de Carnot.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ La entropía total nunca decrece, pero las partes sí pueden</div>
+      <ul>
+        <li>El resultado central de la clase es general: para cualquier $T_a$, $T_b$, poner dos sistemas en contacto térmico siempre incrementa $S_{total}$. No es un resultado válido solo "cuando fluye calor del caliente al frío" — es simétrico bajo $T_a \leftrightarrow T_b$.</li>
+        <li>No confundir "no hay flujo de calor" con "no hay producción de entropía". La mezcla de gases es el contraejemplo perfecto: $\delta Q=0$ en todo momento, pero $\Delta S > 0$ porque el desorden configuracional aumenta igual.</li>
+        <li>Contacto térmico puro (pared que solo deja pasar energía, no partículas) no aumenta los microestados si los dos subsistemas ya tenían la misma temperatura — fluctúa la energía de un lado a otro pero no hay nuevas configuraciones espaciales que explorar. Para generar más microestados nuevos hace falta que las partículas puedan ocupar más espacio (como al quitar la pared en la mezcla).</li>
+        <li>El caso $x=1$ ($T_a=T_b$) es el único en que $\Delta S_{total}=0$ exactamente — y tiene sentido: sin diferencia de temperatura no hay flujo de calor, así que ni el sistema ni el termostato cambian su entropía individualmente.</li>
+        <li>La compresión isotérmica reversible con $\Delta S_{total}=0$ no es una excepción a la segunda ley — es el caso límite reversible. Cualquier desviación de la idealización (paredes no perfectamente aislantes, procesos no perfectamente lentos) introduce $\Delta S_{total}>0$. Esto es exactamente lo que va a permitir construir y entender la máquina de Carnot en la próxima clase.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q21_1" data-correct="2">
+        <div class="quiz-question">1. Un sistema pequeño a temperatura $T_a$ se pone en contacto con un termostato a temperatura $T_b < T_a$ (el sistema está más caliente, como tirarse a una piscina fría). ¿Qué le pasa a la entropía del sistema, del termostato, y al total?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q21_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Las tres cantidades aumentan, porque la segunda ley exige que toda entropía crezca siempre, en todas partes</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El sistema y el termostato disminuyen su entropía, pero matemáticamente la suma da positiva por un error de signos que se cancela</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La entropía del sistema disminuye (pierde calor, $\Delta S_{sist}=Nc_x\ln(T_b/T_a)<0$ pues $T_b<T_a$), la del termostato aumenta (recibe calor a temperatura fija), y la suma total es $\geq 0$ por la función $f(x)$</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La entropía del sistema aumenta porque se enfría, y la del termostato disminuye porque se calienta; el total es indeterminado</span></label>
+        </div>
+        <script type="text/explanation" id="q21_1-exp">Cuando el sistema pequeño (a $T_a$) está más caliente que el termostato (a $T_b<T_a$), fluye calor del sistema hacia el termostato. El sistema pierde calor y por tanto su entropía decrece: $\Delta S_{sist}=Nc_x\ln(T_b/T_a)$, y como $T_b/T_a<1$ el logaritmo es negativo. El termostato recibe ese calor a su temperatura fija $T_b$, así que su entropía aumenta. Lo notable —y el punto central de la clase— es que al sumar ambas contribuciones y factorizar usando $x=T_b/T_a$, se obtiene $\Delta S_{total}=Nc_x f(x)$ con $f(x)=x\ln x-x+1\geq 0$ para todo $x>0$. Por lo tanto la entropía total nunca es negativa, sin importar cuál de los dos esté más caliente.</script>
+        <div class="quiz-feedback" id="q21_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q21_2" data-correct="1">
+        <div class="quiz-question">2. Se quita la pared entre dos gases ideales distintos, ambos a la misma temperatura $T$ y presión $p$. No hay flujo de calor en ningún momento. ¿Por qué la entropía total aumenta igual?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q21_2" value="0"><span class="opt-letter">A</span><span class="opt-text">En realidad no aumenta: si $\delta Q=0$ en todo el proceso, la segunda ley garantiza $\Delta S=0$ exactamente</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque cada especie de gas pasa a ocupar un volumen mayor (el volumen total en vez de su compartimento original), lo que aumenta el número de microestados accesibles — un efecto puramente entrópico/combinatorio, independiente del calor</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque al mezclarse los gases reaccionan químicamente y liberan calor latente que se redistribuye instantáneamente</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la temperatura del sistema combinado sube ligeramente por conservación de momentum, generando un flujo de calor interno indetectable</span></label>
+        </div>
+        <script type="text/explanation" id="q21_2-exp">La entropía es $S=Nk\ln V + (\text{términos de }T)$ para un gas ideal (cantidad extensiva). Antes de mezclar, el gas 1 ocupa $V_1$ y el gas 2 ocupa $V_2$. Al quitar la pared, ambos gases ahora exploran el volumen total $V=V_1+V_2$ — sus partículas tienen acceso a muchas más posiciones posibles. Como la parte de $S$ que depende de $T$ no cambia (la temperatura es la misma antes y después), el cambio neto es $\Delta S = \sum_i N_i k \ln(V/V_i) > 0$, estrictamente positivo porque $V>V_i$ para ambos gases. Este es el ejemplo canónico de producción de entropía sin ningún intercambio de calor: el efecto es geométrico/configuracional, no térmico.</script>
+        <div class="quiz-feedback" id="q21_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q21_3" data-correct="3">
+        <div class="quiz-question">3. Se comprime isotérmicamente y de forma reversible un gas ideal, manteniéndolo en contacto con un termostato a temperatura $T$ constante. ¿Cómo es la entropía total del sistema (gas + termostato)?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q21_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Aumenta, porque toda compresión de un gas reduce el volumen accesible y por lo tanto desordena más el termostato</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Disminuye, porque el gas pierde entropía al comprimirse y nada compensa esa pérdida</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="2"><span class="opt-letter">C</span><span class="opt-text">No se puede determinar sin conocer la capacidad calórica exacta del gas</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Es exactamente cero: el gas pierde $\Delta S_{gas}=Nk\ln(V_f/V_i)<0$ (con $V_f<V_i$) y el termostato gana exactamente lo mismo, porque recibe el calor cedido $|\delta Q|=p\,dV$ a la misma temperatura $T$ a la que el gas lo cede</span></label>
+        </div>
+        <script type="text/explanation" id="q21_3-exp">Al comprimir isotérmicamente un gas ideal, su energía interna no cambia ($U$ solo depende de $T$ para un gas ideal), así que por la primera ley $\delta Q = -p\,dV$: el gas cede calor al termostato a medida que se comprime. Integrando, $\Delta S_{gas} = Nk\ln(V_f/V_i)$, negativo porque $V_f<V_i$. El termostato recibe ese mismo calor (con signo opuesto) pero a la misma temperatura $T$, así que $\Delta S_{termostato} = -\Delta S_{gas} = Nk\ln(V_i/V_f)$, positivo y de igual magnitud. La suma es exactamente cero. Esto ocurre porque el proceso es reversible y todo el intercambio de calor sucede a temperatura constante e igual entre ambos subsistemas — es precisamente el tipo de proceso que Carnot va a usar como ladrillo constructivo de la máquina ideal en la próxima clase.</script>
+        <div class="quiz-feedback" id="q21_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cat_20/"><div class="nav-dir">← Anterior</div><div class="nav-title">Síntesis del Curso</div></a>
+    <a href="../cat_22/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Máquinas Térmicas</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

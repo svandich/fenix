@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC10 — Teorema del Virial</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link active" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u7 bg-u7">Clase Complementaria · CC 10</div>
+    <h1>CC10: Derivación Detallada del Teorema del Virial</h1>
+    <p class="desc">Una clase explícitamente técnica: se deriva con cuidado matemático la función partición configuracional para un gas con interacciones de pares, usando el método de Mayer (la función $f(r) = e^{-\beta u(r)}-1$), la aproximación de gas diluido y la teoría de campo medio. El resultado es la corrección virial a la presión — la base formal de la ecuación de van der Waals usada en Cátedra 26.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>La función partición total $Z_N$ separada en parte traslacional, parte interna y parte configuracional $Q_N$</li>
+        <li>La función partición configuracional $Q_N = V^{-N}\int \cdots \int d^3q_1 \cdots d^3q_N \exp(-\beta \sum_{i<j} u(r_{ij}))$ para un gas con interacciones de a pares</li>
+        <li>La función de Mayer $f(r) = e^{-\beta u(r)} - 1$, que permite reescribir la exponencial de la suma como un producto $\prod_{i<j}(1 + f_{ij})$</li>
+        <li>Interpretación de los términos de la expansión como "diagramas de interacción" entre 2, 3, 4... partículas (idea luego desarrollada por Feynman)</li>
+        <li>La hipótesis de gas diluido: $N/V \ll 1$, que permite despreciar interacciones simultáneas de tres o más partículas</li>
+        <li>La teoría de campo medio: reemplazar la suma sobre $N(N-1)/2$ pares por $N(N-1)/2$ veces un término representativo, usando coordenadas de centro de masa y coordenada relativa</li>
+        <li>El resultado final: $Q_N \approx 1 + (N^2/2V)\int 4\pi r^2 f(r)\,dr$, que vía $F = -k_BT\ln Z$ y $P = -\partial F/\partial V$ reproduce la corrección virial de van der Waals</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Función partición configuracional</h3>
+        <p>Cuando las partículas interactúan, la función partición ya no se factoriza simplemente como en el gas ideal. Se separa $Z_N = Z_{\text{trasl}}^N \cdot Z_{\text{interna}}^N \cdot Q_N$, donde $Q_N$ — la función partición configuracional — concentra toda la dificultad de las posiciones relativas e interacciones entre partículas.</p>
+      </div>
+      <div class="concept-card">
+        <h3>La función de Mayer</h3>
+        <p>Definida como $f(r) = e^{-\beta u(r)} - 1$, esta función vale aproximadamente $-1$ donde el potencial es fuertemente repulsivo (las partículas casi nunca se acercan tanto), es negativa en la zona atractiva, y se anula rápidamente para $r$ grande donde $u(r) \to 0$. Su utilidad es que permite escribir $e^{-\beta u} = 1 + f$, convirtiendo una exponencial de una suma en un producto de factores $(1+f_{ij})$ fáciles de expandir término a término.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Aproximación de gas diluido</h3>
+        <p>Si $N/V \ll 1$, la probabilidad de que tres o más partículas se encuentren simultáneamente cerca unas de otras es muy baja comparada con la de que sólo dos lo estén. Esto justifica retener únicamente los términos de la expansión que involucran un solo par de partículas interactuando a la vez, y descartar interacciones de tres, cuatro o más cuerpos.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Teoría de campo medio</h3>
+        <p>En vez de calcular cada uno de los $N(N-1)/2$ términos $\lambda_{ij}$ por separado, se reconoce que todos se comportan estadísticamente igual y se reemplaza la suma por ese número de términos multiplicado por un término representativo (p. ej. el del par 1-2), cuya integral se simplifica usando coordenadas de centro de masa y coordenada relativa — la parte de centro de masa se cancela y sólo queda una integral radial sobre la coordenada relativa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Función partición configuracional</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_10_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $Q_N$ integra sobre las $3N$ coordenadas de posición de todas las partículas, pesadas por el factor de Boltzmann de la energía potencial total $\sum_{i<j} u(r_{ij})$ (suma sobre todos los pares, cada uno contado una sola vez con $i<j$).
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Función de Mayer y reescritura de la exponencial</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_10_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Esta identidad permite escribir $\exp(-\beta \sum_{i<j} u_{ij}) = \prod_{i<j}(1+f_{ij})$, que al expandirse genera términos constantes, lineales en $f$ (un par interactuando), cuadráticos (dos pares simultáneos), etc. — la expansión en "diagramas de interacción".
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Resultado bajo gas diluido + campo medio</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_10_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Sólo se retiene el término lineal en $f$ (interacciones de a pares), y se usa que hay $N(N-1)/2 \approx N^2/2$ pares equivalentes. La integral angular es trivial (potencial central, $4\pi$ del ángulo sólido) y queda sólo una integral radial.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Ecuación de estado: el teorema del virial</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_10_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Derivando $F = -k_BT\ln Z_N$ respecto al volumen, $P = -\partial F/\partial V$, se obtiene la corrección a la ley de gas ideal: el primer término reproduce $P=Nk_BT/V$, y el segundo es la corrección virial de primer orden en la densidad — exactamente la base formal de la ecuación de van der Waals.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves del teorema del virial</div>
+      <ul>
+        <li>El profesor advierte explícitamente que esta es una clase "técnica": lo importante no es reproducir cada paso algebraico, sino entender la lógica general — separar traslación, energía interna e interacción; usar la función de Mayer para reescribir la exponencial de una suma como un producto; truncar la expansión usando la dilución del gas.</li>
+        <li>La función de Mayer $f(r) = e^{-\beta u(r)} - 1$ es la pieza clave: convierte un problema de "todas las partículas interactuando simultáneamente" en una expansión sistemática por número de partículas en interacción (2, 3, 4...), análoga en espíritu a los diagramas de Feynman en teoría cuántica de campos.</li>
+        <li>La hipótesis de gas diluido ($N/V \ll 1$) es la que justifica cortar la expansión en el primer término no trivial. Para sistemas densos (como un núcleo atómico) esta aproximación falla y se necesitan métodos mucho más sofisticados.</li>
+        <li>La teoría de campo medio reduce un problema de $N(N-1)/2$ términos potencialmente distintos a un solo cálculo (la integral para un par representativo) multiplicado por el número de pares — el mismo truco que reemplazar una suma de notas individuales por el promedio multiplicado por el número de estudiantes.</li>
+        <li>El resultado final no es un fin en sí mismo: es la derivación formal y cuidadosa de la corrección a la presión del gas ideal que, presentada de forma más intuitiva, da lugar a la ecuación de van der Waals estudiada en la cátedra sobre gases reales.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="qcc10_1" data-correct="2">
+        <div class="quiz-question">1. ¿Cuál es la utilidad principal de introducir la función de Mayer $f(r) = e^{-\beta u(r)} - 1$ en el cálculo de la función partición configuracional?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc10_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Permite calcular exactamente el potencial de interacción $u(r)$ sin necesidad de un modelo como Lennard-Jones</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc10_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Convierte la integral configuracional en una suma de energías cinéticas, eliminando la necesidad de integrar sobre posiciones</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc10_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Permite reescribir la exponencial de una suma de potenciales, $\exp(-\beta\sum_{i<j}u_{ij})$, como un producto $\prod_{i<j}(1+f_{ij})$, que al expandirse separa naturalmente los términos según el número de partículas en interacción simultánea (diagramas de 2, 3, 4 cuerpos)</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc10_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Demuestra que el gas ideal y el gas real tienen exactamente la misma función partición configuracional</span></label>
+        </div>
+        <script type="text/explanation" id="qcc10_1-exp">La identidad $e^{-\beta u_{ij}} = 1 + f_{ij}$ con $f_{ij} = e^{-\beta u_{ij}} - 1$ permite usar la propiedad $e^{a+b} = e^a e^b$ para escribir $\exp(-\beta\sum_{i<j} u_{ij}) = \prod_{i<j} e^{-\beta u_{ij}} = \prod_{i<j}(1+f_{ij})$. Al expandir este producto se obtiene: el término "1" (sin interacción alguna), términos lineales en un solo $f_{ij}$ (un par interactuando, el resto libre), términos cuadráticos como $f_{12}f_{34}$ (dos pares independientes interactuando simultáneamente en regiones distintas del espacio) o $f_{12}f_{23}$ (una "cadena" de tres partículas), etc. Esta organización por número de partículas en interacción es exactamente la idea que después desarrolló Feynman para las interacciones débiles en física de partículas, representándolas como diagramas.</script>
+        <div class="quiz-feedback" id="qcc10_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qcc10_2" data-correct="1">
+        <div class="quiz-question">2. La clase introduce la "hipótesis de gas diluido" ($N/V \ll 1$). ¿Qué simplificación matemática concreta permite esta hipótesis?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc10_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Permite suponer que el potencial de interacción $u(r)$ es exactamente cero para todo $r$</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc10_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Permite despreciar los términos de la expansión que involucran interacciones simultáneas de tres o más partículas, porque la probabilidad de que tres o más partículas se encuentren cerca al mismo tiempo es muy baja cuando la densidad $N/V$ es pequeña, y retener solo el término de interacción de a pares</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc10_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Permite ignorar por completo la energía cinética de traslación de las partículas</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc10_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Permite suponer que todas las partículas están fijas en posiciones de equilibrio, como en un sólido cristalino</span></label>
+        </div>
+        <script type="text/explanation" id="qcc10_2-exp">La condición $N/V \ll 1$ significa que la densidad de partículas es baja, de modo que la distancia promedio entre partículas es mucho mayor que el alcance característico $r_b$ del potencial de interacción. En esas condiciones, la probabilidad de que tres o más partículas estén simultáneamente dentro del rango de interacción mutua (lo que en la clase se describe como "colisiones de tres o cuatro partículas") es muy baja en comparación con la probabilidad de que sólo un par esté interactuando a la vez. Esto justifica matemáticamente truncar la expansión en diagramas de interacción y retener únicamente el término lineal en la función de Mayer, que corresponde a interacciones de a pares — siendo precisamente esta aproximación la que no es válida para sistemas densos como el interior de un núcleo atómico, donde no se puede cortar la expansión.</script>
+        <div class="quiz-feedback" id="qcc10_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qcc10_3" data-correct="3">
+        <div class="quiz-question">3. ¿Qué papel juega la teoría de campo medio en la derivación, específicamente al calcular el término $\sum_{i<j} \lambda_{ij}$ con $N(N-1)/2$ sumandos?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc10_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Permite demostrar que cada $\lambda_{ij}$ es exactamente igual a cero para gases ideales</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc10_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Permite calcular cada uno de los $N(N-1)/2$ términos por separado usando integración numérica de alta precisión</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc10_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Permite reemplazar la suma sobre todos los pares por una integral sobre el momentum de cada partícula individual</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc10_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Permite reemplazar la suma de $N(N-1)/2$ términos, todos estadísticamente equivalentes, por ese número multiplicado por el valor de un único término representativo (p. ej. el par 1-2), cuya integral se simplifica usando coordenadas de centro de masa y coordenada relativa, donde la parte de centro de masa se cancela</span></label>
+        </div>
+        <script type="text/explanation" id="qcc10_3-exp">La teoría de campo medio aprovecha que, en un sistema homogéneo, todos los pares de partículas $(i,j)$ contribuyen de manera estadísticamente idéntica a la suma — no hay ninguna razón física para que el par (1,2) se comporte distinto del par (5,17). Por eso la suma $\sum_{i<j}\lambda_{ij}$, que tiene $N(N-1)/2$ términos, se puede reemplazar por $N(N-1)/2$ veces un término representativo, exactamente como calcular una nota promedio y multiplicarla por el número de estudiantes en vez de sumar cada nota individual. Para calcular ese término representativo (p. ej. $\lambda_{12}$), se introducen coordenadas de centro de masa $\vec{R} = (m_1\vec{q}_1+m_2\vec{q}_2)/(m_1+m_2)$ y coordenada relativa $\vec{r} = \vec{q}_1-\vec{q}_2$; como el potencial sólo depende de la distancia relativa (interacción central), la integral sobre el centro de masa se factoriza y cancela con el volumen, dejando sólo una integral radial sobre $r$.</script>
+        <div class="quiz-feedback" id="qcc10_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cc_9/"><div class="nav-dir">← Anterior</div><div class="nav-title">CC9: Entropía (Clausius)</div></a>
+    <a href="../cc_11/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">CC11: Licuefacción</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC11 — Licuefacción de Gases</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link active" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u7 bg-u7">Clase Complementaria · CC 11</div>
+    <h1>CC11: Bajas Temperaturas y Licuefacción de Gases</h1>
+    <p class="desc">Última clase complementaria del curso. Se repasa la transición de fase con simulaciones moleculares y se recorre la historia de la criogenia: el punto crítico de Cagniard de la Tour, el enfriamiento por evaporación, el proceso en cascada con CO₂, el efecto Joule-Thomson, y la carrera por licuar hidrógeno (Dewar, 1898) y helio (Kamerlingh Onnes, 1908).</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Simulación molecular: al enfriar un gas, la correlación entre pares de partículas crece, pasando por gas → líquido → sólido</li>
+        <li>El punto crítico (Cagniard de la Tour, ilustrado con metano): por encima de él no hay distinción entre líquido y gas, sólo existe un "fluido" continuo</li>
+        <li>Enfriamiento por evaporación: las moléculas más rápidas escapan, dejando atrás a las más lentas y frías</li>
+        <li>El proceso en cascada usando CO₂: el punto triple, el hielo seco a $-78\,°\text{C}$, y el intercambiador de calor a contracorriente</li>
+        <li>El efecto Joule-Thomson: expansión de un gas a través de una válvula sin trabajo externo, que produce enfriamiento por un mecanismo análogo a la evaporación</li>
+        <li>La carrera histórica por licuar hidrógeno (James Dewar, 1898) y helio (Heike Kamerlingh Onnes, 1908, a 4.2 K)</li>
+        <li>Nota: ésta es la última clase complementaria del curso — no existe una CC12</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Punto crítico</h3>
+        <p>Descubierto por Cagniard de la Tour calentando un tubo cerrado con metano: existe una temperatura y presión críticas ($T_c$, $P_c$) por encima de las cuales el menisco entre líquido y vapor desaparece. Sobre el punto crítico ya no se puede hablar de "líquido" o "gas" por separado — sólo de un fluido supercrítico continuo, indistinguible en compresibilidad y ocupación de volumen.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Enfriamiento por evaporación</h3>
+        <p>En un líquido, las moléculas tienen una distribución de velocidades; las más rápidas son las que logran escapar a la fase gaseosa. Al irse, se llevan más energía cinética que el promedio, dejando atrás moléculas más lentas — el líquido remanente se enfría. Es el mismo principio detrás de sudar y de los sistemas de refrigeración por evaporación.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Proceso en cascada (CO₂)</h3>
+        <p>El CO₂ comprimido se enfría y, al expandirse a través de una válvula, parte se evapora y el resto se solidifica en hielo seco (pasando por su punto triple), alcanzando $-78\,°\text{C}$ a presión atmosférica. Ese baño frío sirve para pre-enfriar el siguiente gas en la cascada, usando intercambiadores de calor a contracorriente para transferir frío eficientemente sin mezclar los fluidos.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Efecto Joule-Thomson</h3>
+        <p>Cuando un gas real (con atracciones intermoleculares) se expande a través de una válvula o boquilla sin realizar trabajo externo útil, las moléculas deben "estirar" sus distancias promedio venciendo la atracción mutua, perdiendo energía cinética en el proceso — un mecanismo de enfriamiento análogo a la evaporación, fundamental para licuar los últimos gases conocidos (H$_2$, He).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Punto crítico</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_11_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Cada sustancia tiene su propio par $(T_c, P_c)$. Por encima de ambos valores simultáneamente, no existe transición de fase discreta entre líquido y gas: la densidad varía de forma continua con la presión y la temperatura.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Velocidad molecular y enfriamiento evaporativo</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_11_2.svg" alt=""></div>
+      <div class="formula-desc">
+        La velocidad molecular media escala con $\sqrt{T}$ (teoría cinética). Cuando las moléculas más veloces de la cola de la distribución escapan del líquido, la energía cinética media de las que quedan disminuye — de ahí el enfriamiento evaporativo, sin necesidad de extraer calor externamente.
+      </div>
+    </div>
+
+    <div class="formula-block u7">
+      <div class="formula-label">Efecto Joule-Thomson</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_11_3.svg" alt=""></div>
+      <div class="formula-desc">
+        En la expansión a través de una válvula la entalpía se conserva ($\Delta H = 0$, sin trabajo de eje ni calor intercambiado), pero para un gas real con atracciones intermoleculares esto se traduce en un descenso neto de temperatura — el mecanismo final que permitió licuar hidrógeno y helio.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de la licuefacción de gases</div>
+      <ul>
+        <li>El punto crítico no es una curiosidad matemática: es la razón por la que ciertos gases (como el CO₂ a temperatura ambiente) pueden licuarse con sólo aumentar la presión, mientras que otros (H₂, He) tienen temperaturas críticas tan bajas que deben enfriarse primero antes de poder comprimirlos hasta licuarlos.</li>
+        <li>El enfriamiento por evaporación y el efecto Joule-Thomson comparten la misma idea física de fondo: quitar de un sistema las partículas (o el "trabajo interno" contra la atracción mutua) que llevan más energía que el promedio, reduciendo así la energía media de lo que queda.</li>
+        <li>El proceso en cascada ilustra una estrategia general en física experimental: cuando no se puede alcanzar una temperatura objetivo de un solo paso, se construye una secuencia de baños cada vez más fríos, cada uno usado para pre-enfriar el siguiente.</li>
+        <li>La carrera histórica (Dewar con hidrógeno en 1898, Kamerlingh Onnes con helio en 1908 a 4.2 K) no fue sólo una competencia: cada hito requirió inventar nueva tecnología (como los matraces Dewar de doble pared, hoy "termos") que luego se volvió indispensable para toda la física de bajas temperaturas posterior.</li>
+        <li>Esta es la última clase complementaria del curso: no existe una CC12. El curso continúa únicamente con las cátedras de síntesis y movimiento browniano (Cátedra 28).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="qcc11_1" data-correct="2">
+        <div class="quiz-question">1. Según el descubrimiento de Cagniard de la Tour, ¿qué ocurre con la distinción entre líquido y gas por encima del punto crítico de una sustancia?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc11_1" value="0"><span class="opt-letter">A</span><span class="opt-text">El líquido se vuelve más denso que el gas, invirtiendo su posición habitual en el recipiente</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc11_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El gas se solidifica directamente sin pasar por la fase líquida</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc11_1" value="2"><span class="opt-letter">C</span><span class="opt-text">El menisco entre líquido y vapor desaparece y ya no existen como estados separados de la materia: sólo hay un fluido continuo, indistinguible en su comportamiento de compresión y ocupación de volumen</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc11_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La sustancia deja de obedecer las leyes de la termodinámica clásica y debe describirse cuánticamente</span></label>
+        </div>
+        <script type="text/explanation" id="qcc11_1-exp">Cagniard de la Tour observó, calentando éter (y posteriormente ilustrado con metano en el video documental), que al acercarse a una temperatura y presión específicas (el punto crítico $T_c, P_c$) la superficie que separa el líquido del vapor se vuelve borrosa, aparecen estrías de densidad, el fluido se torna momentáneamente opaco por la formación de gotitas microscópicas, y finalmente por encima del punto crítico el menisco desaparece completamente: ya no hay manera de distinguir "líquido" de "gas", sólo existe un fluido supercrítico continuo. Por debajo del punto crítico, en cambio, líquido y gas tienen densidades claramente distintas y coexisten con una interfase bien definida.</script>
+        <div class="quiz-feedback" id="qcc11_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qcc11_2" data-correct="3">
+        <div class="quiz-question">2. ¿Cuál es el mecanismo físico común entre el enfriamiento por evaporación y el efecto Joule-Thomson, los dos procesos centrales para licuar gases como el hidrógeno y el helio?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc11_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Ambos requieren extraer calor activamente del sistema usando un compresor mecánico externo</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc11_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Ambos dependen exclusivamente de que el sistema esté por encima de su punto crítico</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc11_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Ambos funcionan únicamente porque la presión atmosférica disminuye con la altitud</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc11_2" value="3"><span class="opt-letter">D</span><span class="opt-text">En ambos casos, las partículas (o moléculas) que "se van" del sistema (al evaporarse, o al expandirse contra la atracción intermolecular en la válvula) se llevan consigo más energía que el promedio, reduciendo la energía media de lo que queda — sin que se necesite extraer calor externamente con una máquina</span></label>
+        </div>
+        <script type="text/explanation" id="qcc11_2-exp">En la evaporación, las moléculas con mayor energía cinética son las que logran escapar de la atracción del líquido y pasar a la fase gaseosa; al irse, dejan atrás moléculas con menor energía promedio, de modo que el líquido remanente se enfría — sin que ninguna fuente externa haya "quitado" calor activamente. En el efecto Joule-Thomson, cuando un gas real se expande a través de una válvula, las moléculas deben vencer la atracción intermolecular para alejarse unas de otras; esa energía proviene de su propia energía cinética, así que el gas se enfría en el proceso — un mecanismo conceptualmente análogo, donde el "costo energético" de separar las moléculas juega el mismo papel que la energía que se llevan las moléculas más rápidas al evaporarse. Ambos procesos logran enfriamiento sin un compresor que extraiga calor en el momento mismo del enfriamiento.</script>
+        <div class="quiz-feedback" id="qcc11_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qcc11_3" data-correct="1">
+        <div class="quiz-question">3. ¿Por qué fue necesario un "proceso en cascada" (usando primero CO₂, luego otros gases) para finalmente licuar hidrógeno y helio, en vez de licuarlos directamente desde temperatura ambiente?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc11_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque el hidrógeno y el helio son químicamente inertes y no reaccionan con el CO₂, por lo que deben mezclarse primero</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc11_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque el hidrógeno y el helio tienen temperaturas críticas extremadamente bajas (muy por debajo de la del hielo seco, $-78\,°\text{C}$), así que primero hay que alcanzar temperaturas intermedias usando baños sucesivos de gases con temperaturas críticas decrecientes antes de poder licuarlos con presión</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc11_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque el CO₂ es el único gas capaz de generar el efecto Joule-Thomson, y todos los demás gases dependen de él</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc11_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la presión atmosférica terrestre es demasiado alta para licuar cualquier gas sin pasar primero por un vacío parcial generado por el CO₂</span></label>
+        </div>
+        <script type="text/explanation" id="qcc11_3-exp">Para licuar un gas por compresión se necesita estar por debajo de su temperatura crítica $T_c$. El hidrógeno y el helio tienen temperaturas críticas extremadamente bajas (mucho más bajas que la del hielo seco a $-78\,°\text{C}$ obtenida con CO₂), de modo que ningún baño único alcanza temperaturas suficientemente bajas para licuarlos directamente. El "proceso en cascada" resuelve esto escalonadamente: se usa primero el CO₂ (fácil de licuar a temperatura ambiente con presión) para alcanzar $-78\,°\text{C}$; ese baño frío se usa para pre-enfriar y licuar un segundo gas con temperatura crítica más baja; ese líquido sirve de baño para un tercero, y así sucesivamente, descendiendo en una "cascada" de temperaturas hasta llegar a niveles donde el efecto Joule-Thomson finalmente permite licuar hidrógeno (Dewar, 1898) y helio (Kamerlingh Onnes, 1908, a 4.2 K).</script>
+        <div class="quiz-feedback" id="qcc11_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cc_10/"><div class="nav-dir">← Anterior</div><div class="nav-title">CC10: Teorema del Virial</div></a>
+    <a href="../" class="next"><div class="nav-dir">↑ Volver</div><div class="nav-title">Temario general</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CC8 — Máquinas de Carnot y Eficiencia</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚛️</span>
+      <div><div class="name">Termodinámica</div><div class="subtitle">Cátedras 1–28 · CC 1–11</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Introducción</div>
+    <a class="nav-link" href="../cat_1/"><span class="dot dot-u1"></span><span class="num">01</span> Introducción</a>
+    <a class="nav-link" href="../cat_2/"><span class="dot dot-u1"></span><span class="num">02</span> Historia del Calor</a>
+    <div class="nav-section-title">Gas ideal y cinética</div>
+    <a class="nav-link" href="../cat_3/"><span class="dot dot-u2"></span><span class="num">03</span> Teoría Cinética</a>
+    <a class="nav-link" href="../cat_4/"><span class="dot dot-u2"></span><span class="num">04</span> Temperatura</a>
+    <a class="nav-link" href="../cat_5/"><span class="dot dot-u2"></span><span class="num">05</span> Dist. de Maxwell</a>
+    <div class="nav-section-title">Primera Ley</div>
+    <a class="nav-link" href="../cat_6/"><span class="dot dot-u3"></span><span class="num">06</span> Primera Ley</a>
+    <a class="nav-link" href="../cat_7/"><span class="dot dot-u3"></span><span class="num">07</span> Procesos</a>
+    <a class="nav-link" href="../cat_8/"><span class="dot dot-u3"></span><span class="num">08</span> Cap. Calórica</a>
+    <div class="nav-section-title">Segunda Ley</div>
+    <a class="nav-link" href="../cat_9/"><span class="dot dot-u4"></span><span class="num">09</span> Clausius y Kelvin</a>
+    <a class="nav-link" href="../cat_10/"><span class="dot dot-u4"></span><span class="num">10</span> Entropía y Carnot</a>
+    <div class="nav-section-title">Estadística y fases</div>
+    <a class="nav-link" href="../cat_11/"><span class="dot dot-u5"></span><span class="num">11</span> Mec. Estadística</a>
+    <a class="nav-link" href="../cat_12/"><span class="dot dot-u5"></span><span class="num">12</span> Transic. de Fase</a>
+    <div class="nav-section-title">Estadística avanzada</div>
+    <a class="nav-link" href="../cat_13/"><span class="dot dot-u5"></span><span class="num">13</span> Func. de Partición</a>
+    <a class="nav-link" href="../cat_14/"><span class="dot dot-u5"></span><span class="num">14</span> Ensemble Canónico</a>
+    <a class="nav-link" href="../cat_15/"><span class="dot dot-u5"></span><span class="num">15</span> Potenciales Termod.</a>
+    <a class="nav-link" href="../cat_16/"><span class="dot dot-u5"></span><span class="num">16</span> Multicomponentes</a>
+    <a class="nav-link" href="../cat_17/"><span class="dot dot-u5"></span><span class="num">17</span> Fluctuaciones</a>
+    <a class="nav-link" href="../cat_18/"><span class="dot dot-u5"></span><span class="num">18</span> Transform. Legendre</a>
+    <a class="nav-link" href="../cat_19/"><span class="dot dot-u5"></span><span class="num">19</span> Gran Ensemble</a>
+    <a class="nav-link" href="../cat_20/"><span class="dot dot-u5"></span><span class="num">20</span> Síntesis</a>
+    <div class="nav-section-title">Clases complementarias</div>
+    <a class="nav-link" href="../cc_1/"><span class="dot dot-u3"></span><span class="num">CC1</span> Conceptos Fund.</a>
+    <a class="nav-link" href="../cc_2/"><span class="dot dot-u3"></span><span class="num">CC2</span> Temperatura</a>
+    <a class="nav-link" href="../cc_3/"><span class="dot dot-u3"></span><span class="num">CC3</span> Procesos Básicos</a>
+    <a class="nav-link" href="../cc_4/"><span class="dot dot-u3"></span><span class="num">CC4</span> Proc. Adiabáticos</a>
+    <a class="nav-link" href="../cc_5/"><span class="dot dot-u3"></span><span class="num">CC5</span> Modelo Atómico</a>
+    <a class="nav-link" href="../cc_6/"><span class="dot dot-u3"></span><span class="num">CC6</span> Entropía</a>
+    <a class="nav-link" href="../cc_7/"><span class="dot dot-u3"></span><span class="num">CC7</span> Métodos Matemát.</a>
+    <div class="nav-section-title">Ciclos y Máquinas</div>
+    <a class="nav-link" href="../cat_21/"><span class="dot dot-u6"></span><span class="num">21</span> Entropía Irreversible</a>
+    <a class="nav-link" href="../cat_22/"><span class="dot dot-u6"></span><span class="num">22</span> Máquinas Térmicas</a>
+    <a class="nav-link" href="../cat_23/"><span class="dot dot-u6"></span><span class="num">23</span> Ciclo de Carnot</a>
+    <a class="nav-link active" href="../cc_8/"><span class="dot dot-u6"></span><span class="num">CC8</span> Máq. de Carnot</a>
+    <a class="nav-link" href="../cc_9/"><span class="dot dot-u6"></span><span class="num">CC9</span> Entropía (Clausius)</a>
+    <div class="nav-section-title">Gases Reales y Transporte</div>
+    <a class="nav-link" href="../cat_24/"><span class="dot dot-u7"></span><span class="num">24</span> Equipartición y Pauli</a>
+    <a class="nav-link" href="../cat_25/"><span class="dot dot-u7"></span><span class="num">25</span> Hacia Gases Reales</a>
+    <a class="nav-link" href="../cat_26/"><span class="dot dot-u7"></span><span class="num">26</span> Van der Waals</a>
+    <a class="nav-link" href="../cat_27/"><span class="dot dot-u7"></span><span class="num">27</span> Coexistencia de Fases</a>
+    <a class="nav-link" href="../cat_28/"><span class="dot dot-u7"></span><span class="num">28</span> Síntesis y Browniano</a>
+    <a class="nav-link" href="../cc_10/"><span class="dot dot-u7"></span><span class="num">CC10</span> Teorema del Virial</a>
+    <a class="nav-link" href="../cc_11/"><span class="dot dot-u7"></span><span class="num">CC11</span> Licuefacción</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
+    <div class="unit-pill u6 bg-u6">Clase Complementaria · CC 8</div>
+    <h1>CC8: Máquinas de Carnot y Eficiencia</h1>
+    <p class="desc">Una mirada en profundidad a la máquina de Carnot: la abstracción de un motor que opera entre dos temperaturas, el ciclo de dos isotermas y dos adiabáticas, y la demostración por contradicción de que ninguna máquina puede superar su eficiencia. El resultado $\eta = 1 - T_0/T_y$ es el puente que lleva directamente a la entropía de Clausius.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Estructura abstracta de una máquina térmica: entra calor $Q_y$ a temperatura alta, se realiza trabajo $W$, sale calor $Q_0$ a temperatura baja</li>
+        <li>El refrigerador como máquina de Carnot operando en reversa: entra trabajo, el calor fluye de frío a caliente</li>
+        <li>El ciclo de Carnot en el diagrama $P$-$V$: dos isotermas (a $T_y$ y a $T_0$) conectadas por dos adiabáticas</li>
+        <li>Por qué cada tramo del ciclo es completamente reversible y qué significa eso para el trabajo neto</li>
+        <li>Demostración por reducción al absurdo: una máquina hipotética "mejor" que Carnot, combinada con una de Carnot en reversa, viola la segunda ley</li>
+        <li>La eficiencia máxima $\eta = 1 - T_0/T_y$ y su interpretación física</li>
+        <li>El cierre de la clase: anuncio de que lo que se conserva en el ciclo ideal no es la energía sino $Q/T$ — la entropía de Clausius</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Máquina de Carnot como abstracción</h3>
+        <p>Carnot redujo la máquina térmica a sus elementos esenciales: ni caldera, ni válvulas, ni volante — sólo un cilindro con un émbolo que intercambia calor con dos focos a temperaturas $T_y$ (alta) y $T_0$ (baja). Toma calor $Q_y$, produce trabajo $W$, y expulsa $Q_0 = Q_y - W$. La clave de su genio fue imaginar que cada etapa del ciclo fuera perfectamente reversible.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Reversibilidad como criterio de optimalidad</h3>
+        <p>La propiedad que hace especial a la máquina de Carnot no es ser "perfecta" (no lo es: $\eta < 1$), sino ser reversible: puede operar exactamente en sentido inverso como refrigerador, usando el mismo trabajo que generó como motor. Esa simetría es la que permite el argumento de contradicción.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Demostración por el absurdo</h3>
+        <p>Se supone una máquina hipotética más eficiente que Carnot, operando entre las mismas temperaturas, conectada a una máquina de Carnot funcionando en reversa (como refrigerador). Al superponer ambos procesos el trabajo se cancela exactamente, pero queda un flujo neto de calor desde el foco frío hacia el foco caliente sin trabajo externo — lo cual contradice que el calor fluye espontáneamente de caliente a frío (segundo principio).</p>
+      </div>
+      <div class="concept-card">
+        <h3>Eficiencia y diferencia de temperaturas</h3>
+        <p>$\eta = W/Q_y = 1 - Q_0/Q_y$. Para la máquina de Carnot esta razón de calores resulta igual a la razón de temperaturas absolutas, así que $\eta_{\text{Carnot}} = 1 - T_0/T_y$: mientras mayor la diferencia entre el foco caliente y el frío, mayor la eficiencia máxima posible — por eso toda máquina de vapor busca quemar combustible a la mayor temperatura posible.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Definición de eficiencia de una máquina térmica</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_8_1.svg" alt=""></div>
+      <div class="formula-desc">
+        El trabajo $W = Q_y - Q_0$ es siempre menor que el calor de entrada $Q_y$ porque algo de calor debe expulsarse para que el ciclo se cierre (no se puede simplemente "des-conectar" la salida). Por eso $\eta < 1$ siempre, incluso en el caso ideal.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Eficiencia máxima de Carnot</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_8_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Resultado central de la clase: la eficiencia de la máquina ideal depende sólo de las temperaturas absolutas de los dos focos, no de los detalles del gas de trabajo. Se obtiene notando que en los procesos isotermos del ciclo el cociente de calores es igual al cociente de temperaturas.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Conservación de energía y cota de eficiencia</div>
+      <div class="formula-math"><img class="typst-formula" src="cc_8_3.svg" alt=""></div>
+      <div class="formula-desc">
+        La primera ley fija $W$ en términos de los calores, pero es la segunda ley (vía el argumento de contradicción) la que impone $\eta \le \eta_{\text{Carnot}}$ para cualquier máquina real operando entre las mismas dos temperaturas.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Claves de las máquinas de Carnot</div>
+      <ul>
+        <li>El argumento de Carnot no depende de la conservación de la energía (de hecho lo formuló antes de que Joule estableciera la primera ley) — depende únicamente de la observación de que el calor fluye espontáneamente de lo caliente a lo frío, nunca al revés.</li>
+        <li>La demostración por contradicción es el corazón de la clase: si existiera una máquina más eficiente que una reversible, acoplarla con una máquina de Carnot operando en reversa produciría un flujo neto de calor de frío a caliente sin trabajo externo — una violación directa de la segunda ley.</li>
+        <li>Por ser reversible, la máquina de Carnot funciona igual de bien como motor (produce trabajo) que como refrigerador (consume trabajo para bombear calor de frío a caliente). Esa doble función es lo que permite "invertir" el ciclo en el argumento.</li>
+        <li>El resultado $\eta_{\text{Carnot}} = 1 - T_0/T_y$ es universal: no importa qué sustancia de trabajo se use (gas ideal, vapor, etc.), toda máquina reversible entre las mismas dos temperaturas tiene exactamente esta eficiencia.</li>
+        <li>La clase termina señalando que, en el ciclo ideal, el cociente $Q/T$ entra y sale sin cambiar — es una cantidad conservada en el caso reversible. Esa observación es exactamente lo que permitirá a Clausius definir la entropía en la siguiente clase.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="qcc8_1" data-correct="2">
+        <div class="quiz-question">1. ¿Cuál es la estructura del argumento por el cual Carnot demuestra que ninguna máquina puede ser más eficiente que una máquina reversible operando entre las mismas dos temperaturas?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc8_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Se mide experimentalmente la eficiencia de muchas máquinas reales y se observa que ninguna supera a la de Carnot</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc8_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Se calcula directamente la integral $\oint P\,dV$ para un gas ideal y se compara numéricamente con otros ciclos posibles</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc8_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Se supone que existe una máquina hipotética más eficiente, se la acopla a una máquina de Carnot funcionando en reversa (como refrigerador); al superponer los procesos el trabajo se cancela pero queda un flujo neto de calor de frío a caliente sin trabajo externo, lo cual contradice la segunda ley</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc8_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Se demuestra que la energía interna de cualquier gas ideal es siempre la misma función de la temperatura, así que todas las máquinas que usan gas ideal son automáticamente igual de eficientes</span></label>
+        </div>
+        <script type="text/explanation" id="qcc8_1-exp">El argumento es una demostración por reducción al absurdo. Se asume que existe una máquina hipotética con eficiencia mayor a la de Carnot operando entre las mismas temperaturas $T_y$ y $T_0$, produciendo el mismo trabajo $W$ con un calor de entrada $Q_y' < Q_y^{\text{Carnot}}$. Se conecta esta máquina hipotética a una máquina de Carnot operando en reversa (como refrigerador), usando el trabajo $W$ generado por la primera para alimentar la segunda. Al sumar ambos procesos, el trabajo se cancela exactamente (uno lo produce, el otro lo consume), pero como $Q_y' < Q_y^{\text{Carnot}}$, el balance neto de calor resulta en un flujo desde el foco frío hacia el foco caliente sin ningún trabajo externo neto — esto contradice directamente el segundo principio de la termodinámica (el calor no fluye espontáneamente de frío a caliente). Por lo tanto, la hipótesis inicial es falsa: ninguna máquina puede ser más eficiente que una máquina reversible.</script>
+        <div class="quiz-feedback" id="qcc8_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qcc8_2" data-correct="1">
+        <div class="quiz-question">2. La máquina de Carnot tiene la propiedad de ser tanto motor como refrigerador. ¿Por qué esta doble función es esencial para el argumento de Carnot sobre la eficiencia máxima?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc8_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque permite que la máquina funcione sin necesidad de ningún foco frío, lo que la hace teóricamente perfecta</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc8_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque al ser reversible, se puede "invertir" exactamente el ciclo y usarla como refrigerador alimentado por el trabajo de la otra máquina, lo cual es indispensable para construir el argumento por contradicción</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc8_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque demuestra que la máquina de Carnot conserva exactamente la energía mecánica sin ninguna pérdida por fricción</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc8_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque al funcionar en ambas direcciones, la máquina de Carnot puede generar trabajo neto positivo en un ciclo completo de ida y vuelta</span></label>
+        </div>
+        <script type="text/explanation" id="qcc8_2-exp">La reversibilidad significa que cada etapa del ciclo (las dos isotermas y las dos adiabáticas) puede recorrerse en sentido inverso sin pérdidas, simplemente invirtiendo el signo del trabajo y de los flujos de calor. Esto es exactamente lo que se necesita para el argumento de contradicción: se toma la máquina de Carnot y se la hace funcionar "al revés" (como refrigerador, consumiendo el trabajo $W$ que generó la máquina hipotética más eficiente) para bombear calor de frío a caliente. Si la máquina de Carnot no fuera reversible, no podría garantizarse que operar en sentido inverso consuma exactamente el mismo trabajo $W$ que generó en sentido directo, y el argumento se rompería. Notar que ningún ciclo completo (ida y vuelta) genera trabajo neto — la opción D es incorrecta porque en un ciclo cerrado completo el trabajo neto siempre es cero si se recorre ida y luego vuelta exactamente.</script>
+        <div class="quiz-feedback" id="qcc8_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qcc8_3" data-correct="3">
+        <div class="quiz-question">3. Según la clase, ¿qué cantidad resulta estar conservada en el ciclo ideal de Carnot, y qué importancia tiene esa observación?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qcc8_3" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía interna del gas de trabajo, lo cual confirma simplemente la primera ley de la termodinámica</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc8_3" value="1"><span class="opt-letter">B</span><span class="opt-text">El volumen total recorrido en el diagrama $P$-$V$, que define el área encerrada por el ciclo</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc8_3" value="2"><span class="opt-letter">C</span><span class="opt-text">La presión promedio del gas, que permite calcular directamente el trabajo neto del ciclo</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc8_3" value="3"><span class="opt-letter">D</span><span class="opt-text">El cociente $Q/T$: la cantidad de calor dividida por la temperatura a la que fluye es la misma a la entrada (a $T_y$) que a la salida (a $T_0$) en el ciclo ideal; esta observación es el punto de partida que usará Clausius para definir la entropía</span></label>
+        </div>
+        <script type="text/explanation" id="qcc8_3-exp">De $\eta_{\text{Carnot}} = 1 - Q_0/Q_y = 1 - T_0/T_y$ se sigue directamente que $Q_0/Q_y = T_0/T_y$, es decir $Q_y/T_y = Q_0/T_0$: el cociente entre el calor intercambiado y la temperatura absoluta a la que se intercambia es el mismo a la entrada que a la salida del ciclo. En un ciclo reversible esta cantidad "entra" y "sale" sin cambiar, sugiriendo que se trata de algo conservado — de manera análoga a como la energía se conserva, pero distinto de la energía. Esta es precisamente la observación que Clausius usará en la siguiente clase complementaria para definir la entropía $S$ tal que $dS = \bar\delta Q/T$, mostrando que en máquinas reales (irreversibles) la entropía que sale siempre es mayor que la que entra: las máquinas reales producen entropía.</script>
+        <div class="quiz-feedback" id="qcc8_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../cc_7/"><div class="nav-dir">← Anterior</div><div class="nav-title">CC7: Métodos Matemáticos</div></a>
+    <a href="../cc_9/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">CC9: Entropía (Clausius)</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
