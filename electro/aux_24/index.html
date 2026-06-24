@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 24 — Vector de Magnetización pt. 2</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 25</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+    <a class="nav-link" href="../aux_19/"><span class="dot dot-u6"></span><span class="num">19</span> Ampère — Parte 2</a>
+    <a class="nav-link" href="../aux_20/"><span class="dot dot-u6"></span><span class="num">20</span> Fuerzas sobre carga</a>
+    <div class="nav-section-title">Inducción</div>
+    <a class="nav-link" href="../aux_21/"><span class="dot dot-u6"></span><span class="num">21</span> Faraday-Lenz</a>
+    <a class="nav-link" href="../aux_22/"><span class="dot dot-u6"></span><span class="num">22</span> Faraday-Lenz II</a>
+    <div class="nav-section-title">Materia magnética</div>
+    <a class="nav-link" href="../aux_23/"><span class="dot dot-u6"></span><span class="num">23</span> Vector Magnetización</a>
+    <a class="nav-link active" href="../aux_24/"><span class="dot dot-u6"></span><span class="num">24</span> Magnetización pt. 2</a>
+    <a class="nav-link" href="../aux_25/"><span class="dot dot-u6"></span><span class="num">25</span> Vector H</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
+    <div class="unit-pill u6 bg-u6">Materia magnética · Aux 23–25</div>
+    <h1>Auxiliar 24: Vector de Magnetización — Parte 2</h1>
+    <p class="desc">Continuación del estudio del vector de magnetización: se introduce el potencial escalar magnético $\Phi_m$ como herramienta para calcular $\vec{H}$ en regiones sin corrientes libres, y se formaliza la analogía con la electrostática mediante cargas magnéticas equivalentes $\rho_m$ y $\sigma_m$.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Potencial escalar magnético $\Phi_m$: definición $\vec{H} = -\nabla\Phi_m$ en regiones sin corriente libre</li>
+        <li>Relación entre $\vec{B}$, $\vec{H}$ y $\vec{M}$: $\vec{B} = \mu_0(\vec{H} + \vec{M})$</li>
+        <li>Ecuación de Poisson magnética: $\nabla^2\Phi_m = \nabla\cdot\vec{M}$</li>
+        <li>Cargas magnéticas equivalentes: densidad volumétrica $\rho_m = -\nabla\cdot\vec{M}$ y superficial $\sigma_m = \vec{M}\cdot\hat{n}$</li>
+        <li>Equivalencia entre la formulación de cargas magnéticas y la de corrientes ligadas $\vec{J}_b$, $\vec{K}_b$</li>
+        <li>Campo magnético en el eje de un cilindro uniformemente magnetizado</li>
+        <li>Campo en el centro de la abertura de un toroide magnetizado (superposición toroide + espira)</li>
+        <li>Campo de una esfera magnética rodeada por un medio de permeabilidad $\mu$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Potencial escalar magnético</h3>
+        <p>En regiones donde $\vec{J}_f = 0$, se tiene $\nabla\times\vec{H} = 0$, por lo que $\vec{H}$ es irrotacional y puede escribirse como $\vec{H} = -\nabla\Phi_m$. Esto simplifica enormemente el cálculo de $\vec{H}$ cuando existe simetría.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Analogía electrostática</h3>
+        <p>La ecuación $\nabla^2\Phi_m = -\rho_m$ es idéntica a la de Poisson eléctrica. Las cargas magnéticas equivalentes $\rho_m$ y $\sigma_m$ no son reales (no existen monopolos), sino una herramienta matemática que permite reutilizar toda la maquinaria de la electrostática.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Cargas superficiales magnéticas</h3>
+        <p>En la superficie de un material magnetizado, $\sigma_m = \vec{M}\cdot\hat{n}$ actúa como una distribución de carga magnética. Para un cilindro magnetizado axialmente, aparecen $\pm\sigma_m$ en las tapas, análogos a las cargas en un capacitor.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Superposición de configuraciones</h3>
+        <p>Un toroide con una pequeña abertura se trata como un toroide completo más una espira cuadrada con corriente invertida. Este principio de superposición es clave: la abertura "quita" la contribución del segmento faltante.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Potencial escalar magnético y campo auxiliar</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_24_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Válido en regiones sin corrientes libres ($\vec{J}_f = 0$). El signo negativo es por analogía con el potencial eléctrico. A partir de $\Phi_m$ se recupera $\vec{B} = \mu_0(\vec{H}+\vec{M})$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Cargas magnéticas equivalentes</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_24_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $\rho_m$ (A/m²) es la densidad volumétrica y $\sigma_m$ (A/m) la densidad superficial de carga magnética equivalente. Para magnetización uniforme $\rho_m = 0$ en el interior; solo aparece $\sigma_m$ en las superficies donde $\vec{M}$ tiene componente normal.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Ecuación de Poisson magnética</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_24_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Análoga a $\nabla^2 V = -\rho/\epsilon_0$ en electrostática. Su solución formal es $\Phi_m(\vec{r}) = \frac{1}{4\pi}\int \frac{\rho_m(\vec{r}\,')}{\left|\vec{r}-\vec{r}\,'\right|}\,dV' + \frac{1}{4\pi}\oint \frac{\sigma_m(\vec{r}\,')}{\left|\vec{r}-\vec{r}\,'\right|}\,dS'$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Campo en el eje de un cilindro magnetizado</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_24_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Para un cilindro de longitud $L$ y radio $R$ uniformemente magnetizado a lo largo de su eje, el campo en el centro se obtiene sumando la contribución de las dos tapas como discos de $\pm\sigma_m = M$. En el límite $R \ll L$ se recupera $B \approx \mu_0 M$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Equivalencia corrientes ligadas — cargas magnéticas</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_24_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Ambas formulaciones describen la misma física. Las corrientes ligadas $\vec{J}_b = \nabla\times\vec{M}$ y $\vec{K}_b = \vec{M}\times\hat{n}$ producen exactamente el mismo campo que las cargas $\rho_m$ y $\sigma_m$. Se elige la más conveniente según la geometría del problema.
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para usar el potencial escalar magnético</div>
+      <ul>
+        <li>Verificar que no hay corrientes libres en la región de interés: si $\vec{J}_f \neq 0$, el potencial escalar no es válido y hay que volver a $\vec{A}$ o a Ampère directo.</li>
+        <li>Identificar las distribuciones de carga magnética: $\rho_m = -\nabla\cdot\vec{M}$ en el volumen y $\sigma_m = \vec{M}\cdot\hat{n}$ en cada superficie de discontinuidad.</li>
+        <li>Para magnetización uniforme dentro de un volumen, $\rho_m = 0$; las únicas fuentes son las $\sigma_m$ superficiales.</li>
+        <li>Calcular $\Phi_m$ con la integral tipo Coulomb (igual que el potencial eléctrico con $\rho_m/4\pi$ en lugar de $\rho/4\pi\epsilon_0$), luego $\vec{H} = -\nabla\Phi_m$.</li>
+        <li>Para el toroide con abertura: tratar como toroide completo (campo $B_t = \mu_0 M$ dentro) más espira cuadrada de corriente $I = Ma$ inversa; el campo neto en el centro de la abertura es $B = B_t + B_\text{espira}$.</li>
+        <li>La equivalencia entre corrientes ligadas y cargas magnéticas es exacta: elegir según conveniencia. Las cargas son útiles cuando hay simetría que permite usar resultados electrostáticos directamente.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_23/"><div class="nav-dir">← Anterior</div><div class="nav-title">Vector de Magnetización</div></a>
+    <a href="../aux_25/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Vector Intensidad Magnética</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 21 — Faraday-Lenz</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 25</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+    <a class="nav-link" href="../aux_19/"><span class="dot dot-u6"></span><span class="num">19</span> Ampère — Parte 2</a>
+    <a class="nav-link" href="../aux_20/"><span class="dot dot-u6"></span><span class="num">20</span> Fuerzas sobre carga</a>
+    <div class="nav-section-title">Inducción</div>
+    <a class="nav-link active" href="../aux_21/"><span class="dot dot-u6"></span><span class="num">21</span> Faraday-Lenz</a>
+    <a class="nav-link" href="../aux_22/"><span class="dot dot-u6"></span><span class="num">22</span> Faraday-Lenz II</a>
+    <div class="nav-section-title">Materia magnética</div>
+    <a class="nav-link" href="../aux_23/"><span class="dot dot-u6"></span><span class="num">23</span> Vector Magnetización</a>
+    <a class="nav-link" href="../aux_24/"><span class="dot dot-u6"></span><span class="num">24</span> Magnetización pt. 2</a>
+    <a class="nav-link" href="../aux_25/"><span class="dot dot-u6"></span><span class="num">25</span> Vector H</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
+    <div class="unit-pill u6 bg-u6">Inducción · Aux 21–22</div>
+    <h1>Auxiliar 21: Faraday-Lenz</h1>
+    <p class="desc">La ley de Faraday-Lenz establece que toda variación del flujo magnético a través de un circuito induce una fuerza electromotriz que se opone al cambio: $\varepsilon = -d\Phi/dt$. Es la tercera ecuación de Maxwell y unifica inducción, inductancia mutua y autoinductancia bajo un mismo principio variacional.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Ley de Faraday-Lenz: $\varepsilon = -d\Phi/dt$ y principio de Lenz (la corriente inducida se opone al cambio de flujo)</li>
+        <li>Flujo magnético $\Phi = \iint_S \vec{B}\cdot d\vec{S}$ y su cálculo en geometrías con simetría</li>
+        <li>Forma diferencial de Faraday: $\nabla\times\vec{E} = -\partial\vec{B}/\partial t$ (tercera ecuación de Maxwell)</li>
+        <li>Forma integral: $\oint_\Gamma \vec{E}\cdot d\vec{\ell} = -\dfrac{\partial}{\partial t}\iint_S \vec{B}\cdot d\vec{S}$</li>
+        <li>Espira cayendo en campo magnético no uniforme: corriente inducida, fuerza de frenado y régimen estacionario (velocidad terminal)</li>
+        <li>Inductancia mutua $M$: $\mathcal{E}_2 = -M\,dI_1/dt$, simetría $M_{12} = M_{21}$</li>
+        <li>Autoinductancia $L$: $\mathcal{E} = -L\,dI/dt$, flujo concatenado $\Phi = LI$</li>
+        <li>Bobina giratoria cerca de una placa conductora: corriente inducida en función del tiempo</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Principio de Lenz</h3>
+        <p>El signo negativo en $\varepsilon = -d\Phi/dt$ no es un accidente: la corriente inducida genera un campo magnético que <em>se opone</em> al cambio de flujo. Si el flujo crece, la corriente inducida lo contrarresta; si decrece, lo refuerza. Es una manifestación de la conservación de energía.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Velocidad terminal</h3>
+        <p>Una espira que cae en un campo no uniforme experimenta una fuerza de frenado proporcional a su velocidad, $F_\text{mag} \propto v$. En régimen estacionario esta fuerza equilibra la gravedad y la espira alcanza la velocidad terminal $v_t = MgR/k^2$, donde $k$ agrupa los parámetros geométricos y del campo.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Inductancia mutua</h3>
+        <p>Cuando la corriente $I_1$ en un circuito varía, el flujo que atraviesa un segundo circuito cambia e induce una fem $\mathcal{E}_2 = -M\,dI_1/dt$. El coeficiente $M$ (en henrios) depende solo de la geometría relativa y cumple $M_{12} = M_{21}$, independientemente de la forma de cada circuito.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Autoinductancia</h3>
+        <p>Un circuito con corriente variable se "autoinducía": el campo que él mismo genera cambia y produce una fem $\mathcal{E} = -L\,dI/dt$ que se opone al cambio de corriente. La autoinductancia $L$ (en H) mide la eficiencia con que el circuito almacena energía magnética: $U = \tfrac{1}{2}LI^2$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Ley de Faraday-Lenz — formas integral y diferencial</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_21_1.svg" alt=""></div>
+      <div class="formula-desc">
+        La fem inducida es la tasa de cambio del flujo magnético, con signo negativo (principio de Lenz). La forma diferencial $\nabla\times\vec{E} = -\partial\vec{B}/\partial t$ es la tercera ecuación de Maxwell; la forma integral se obtiene por el teorema de Stokes. La orientación del contorno $\Gamma$ y la superficie $S$ quedan vinculadas por la regla de la mano derecha.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Flujo magnético</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_21_2.svg" alt=""></div>
+      <div class="formula-desc">
+        El flujo $\Phi$ mide cuántas líneas de $\vec{B}$ atraviesan la superficie $S$ delimitada por el circuito. Para una espira plana en campo uniforme: $\Phi = BA\cos\theta$. En campos no uniformes hay que integrar. La variación de $\Phi$ puede deberse a que $\vec{B}$ cambia en el tiempo, a que la superficie se mueve o deforma, o a ambas cosas a la vez.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Corriente inducida y fuerza de frenado (espira en caída libre)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_21_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Para una espira circular de radio $a$ y resistencia $R$ cayendo en el campo $B_z = Cz$: el flujo es $\Phi = C z \pi a^2$, la fem inducida es $\varepsilon = -C\pi a^2 \dot{z}$, la corriente es $I = \varepsilon/R$, y la fuerza magnética vertical (que frena la caída) es $F_z = -C^2\pi^2 a^4 v / R$. El régimen estacionario se alcanza cuando $F_z + Mg = 0$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Inductancia mutua y autoinductancia</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_21_4.svg" alt=""></div>
+      <div class="formula-desc">
+        La inductancia mutua $M$ relaciona la corriente de un circuito con el flujo que atraviesa el otro: $\Phi_2 = M I_1$. La autoinductancia $L$ relaciona la propia corriente con el flujo concatenado: $\Phi = L I$. Ambas se miden en henrios (H = Wb/A). Para una bobina solenoidea de $N$ espiras, radio $r$, longitud $h$: $L = \mu_0 N^2 \pi r^2 / h$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Fem inducida por inductancia mutua y autoinductancia</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_21_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Cuando la corriente $I_1$ varía, induce en el circuito 2 una fem $\mathcal{E}_2 = -M\,dI_1/dt$. La simetría $M_{12} = M_{21}$ garantiza reciprocidad: no importa cuál circuito "excita" al otro. La fem autoinducida $\mathcal{E} = -L\,dI/dt$ se opone a todo cambio de corriente (inercia eléctrica).
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para problemas de inducción</div>
+      <ul>
+        <li>Siempre comenzar calculando el flujo $\Phi = \iint \vec{B}\cdot d\vec{S}$ a través del circuito. Identificar qué variable cambia con el tiempo ($z$, $\theta$, $I$, etc.).</li>
+        <li>Aplicar $\varepsilon = -d\Phi/dt$. Si el flujo crece (por la orientación elegida), la fem es negativa, lo que significa que la corriente inducida fluye en sentido opuesto a la normal elegida por la mano derecha.</li>
+        <li>Para determinar el sentido de la corriente inducida usar directamente el principio de Lenz: la corriente se opone al cambio de flujo. Si $\Phi$ aumenta, la corriente crea un campo que se opone al campo exterior.</li>
+        <li>En la espira cayendo: usar la componente radial del campo $B_r$ para obtener la fuerza vertical $F_z = I \oint (d\vec{\ell}\times\vec{B})_z$. Usar la ley de Gauss magnética ($\nabla\cdot\vec{B}=0$) para relacionar $B_r$ con $B_z = Cz$: resulta $B_r = -Ca/2$.</li>
+        <li>En régimen estacionario $\dot{v} = 0$: igualar la fuerza magnética de frenado con la gravedad para encontrar la velocidad terminal.</li>
+        <li>Para inductancia mutua de una bobina giratoria: el flujo varía como $\Phi(t) = M I_0 \cos(\omega t + \phi_0)$, y la corriente inducida es $I(t) = (M\omega I_0 / R)\sin(\omega t + \phi_0)$.</li>
+        <li>La autoinductancia de la bobina solenoidal: $L = \mu_0 N^2 \pi r^2 / h$, independiente del ángulo de rotación (propiedad geométrica del bobinado).</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_20/"><div class="nav-dir">← Anterior</div><div class="nav-title">Fuerzas sobre carga puntual</div></a>
+    <a href="../aux_22/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Faraday-Lenz II</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

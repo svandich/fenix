@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 25 — Vector Intensidad Magnética</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 25</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+    <a class="nav-link" href="../aux_19/"><span class="dot dot-u6"></span><span class="num">19</span> Ampère — Parte 2</a>
+    <a class="nav-link" href="../aux_20/"><span class="dot dot-u6"></span><span class="num">20</span> Fuerzas sobre carga</a>
+    <div class="nav-section-title">Inducción</div>
+    <a class="nav-link" href="../aux_21/"><span class="dot dot-u6"></span><span class="num">21</span> Faraday-Lenz</a>
+    <a class="nav-link" href="../aux_22/"><span class="dot dot-u6"></span><span class="num">22</span> Faraday-Lenz II</a>
+    <div class="nav-section-title">Materia magnética</div>
+    <a class="nav-link" href="../aux_23/"><span class="dot dot-u6"></span><span class="num">23</span> Vector Magnetización</a>
+    <a class="nav-link" href="../aux_24/"><span class="dot dot-u6"></span><span class="num">24</span> Magnetización pt. 2</a>
+    <a class="nav-link active" href="../aux_25/"><span class="dot dot-u6"></span><span class="num">25</span> Vector H</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
+    <div class="unit-pill u6 bg-u6">Materia magnética · Aux 23–25</div>
+    <h1>Auxiliar 25: Vector Intensidad Magnética</h1>
+    <p class="desc">El vector intensidad magnética $\vec{H}$ generaliza la ley de Ampère a medios materiales: separa las contribuciones de las corrientes libres de las de magnetización. En medios lineales, $\vec{B} = \mu\vec{H}$ conecta ambos campos a través de la permeabilidad magnética del material.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Definición del vector magnetización $\vec{M}$ y su relación con el momento dipolar magnético por unidad de volumen</li>
+        <li>Corrientes de magnetización: densidad volumétrica $\vec{J}_m = \nabla\times\vec{M}$ y densidad superficial $\vec{K}_m = \vec{M}\times\hat{n}$</li>
+        <li>Definición del campo $\vec{H}$: $\vec{H} = \frac{1}{\mu_0}\vec{B} - \vec{M}$</li>
+        <li>Ley de Ampère generalizada: $\oint_\Gamma \vec{H}\cdot d\vec{\ell} = I_\text{enc}^\text{libre}$</li>
+        <li>Medios lineales: $\vec{B} = \mu\vec{H}$, permeabilidad $\mu = \mu_0(1+\chi_m)$ y permeabilidad relativa $\mu_r$</li>
+        <li>Clasificación de materiales: diamagnéticos ($\chi_m &lt; 0$), paramagnéticos ($\chi_m &gt; 0$) y ferromagnéticos ($\chi_m \gg 1$)</li>
+        <li>Toroide con material inhomogéneo: cálculo de $\vec{H}$, $\vec{B}$, $\vec{M}$ e inductancia propia</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Vector intensidad magnética $\vec{H}$</h3>
+        <p>$\vec{H}$ se define para separar las corrientes libres (de conductores) de las corrientes de magnetización (internas al material). Su ley de Ampère, $\oint\vec{H}\cdot d\vec{\ell} = I_\text{libre}$, solo involucra corrientes que controlamos, lo que lo hace útil en la práctica.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Corrientes de magnetización</h3>
+        <p>Un material magnetizado actúa como si tuviera corrientes internas: $\vec{J}_m = \nabla\times\vec{M}$ en el volumen y $\vec{K}_m = \vec{M}\times\hat{n}$ en la superficie. Son análogas a las cargas de polarización en dieléctricos, y juntas reproducen el efecto del material sobre $\vec{B}$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Medios lineales e isótropos</h3>
+        <p>Para la mayoría de los materiales (excepto ferromagnéticos), $\vec{M} = \chi_m\vec{H}$, lo que da $\vec{B} = \mu_0(1+\chi_m)\vec{H} = \mu\vec{H}$. La susceptibilidad $\chi_m$ caracteriza el tipo de material: negativa para diamagnéticos, positiva y pequeña para paramagnéticos, y muy grande para ferromagnéticos.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Toroide con núcleo magnético</h3>
+        <p>En un toroide de $N$ espiras con corriente $I$, el camino amperiano circular encierra $NI$ de corriente libre. Esto da $H = NI/(2\pi r)$ independientemente del material. Si el material es inhomogéneo ($\mu = \mu(\theta)$), entonces $\vec{B}$ y $\vec{M}$ varían con la posición aunque $\vec{H}$ no.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Definición del campo $\vec{H}$ y ley de Ampère generalizada</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_25_1.svg" alt=""></div>
+      <div class="formula-desc">
+        El campo $\vec{H}$ (en A/m) aísla la contribución de las corrientes libres. Su circulación sobre un camino cerrado $\Gamma$ es igual a la corriente libre encerrada $I_\text{enc}^\text{libre}$, sin importar las corrientes de magnetización del material. Esto es directo análogo de la ley de Ampère para $\vec{B}$ en el vacío.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Corrientes de magnetización</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_25_2.svg" alt=""></div>
+      <div class="formula-desc">
+        La magnetización no uniforme genera una densidad de corriente volumétrica $\vec{J}_m = \nabla\times\vec{M}$. En la superficie del material existe además una corriente superficial $\vec{K}_m = \vec{M}\times\hat{n}$, donde $\hat{n}$ apunta hacia afuera del material. Ambas son las fuentes de $\vec{B}$ debidas al material.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Relación constitutiva en medios lineales</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_25_3.svg" alt=""></div>
+      <div class="formula-desc">
+        En medios lineales e isótropos, $\vec{B} = \mu\vec{H}$ con $\mu = \mu_0\mu_r = \mu_0(1+\chi_m)$. La permeabilidad relativa $\mu_r &gt; 1$ para materiales paramagnéticos y ferromagnéticos; $\mu_r &lt; 1$ para diamagnéticos. Para el vacío $\mu_r = 1$ y $\chi_m = 0$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Campo $\vec{H}$ en toroide — resultado general</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_25_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Aplicando la ley de Ampère generalizada a un camino circular de radio $r$ dentro del toroide, el campo $\vec{H}$ resulta idéntico al caso sin material: solo depende de la geometría y la corriente libre. Si el núcleo es inhomogéneo con $\mu = \mu(\theta)$, el campo $\vec{B} = \mu(\theta)\vec{H}$ varía con la posición aunque $\vec{H}$ sea uniforme en cada radio.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Inductancia propia con material magnético</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_25_5.svg" alt=""></div>
+      <div class="formula-desc">
+        La inductancia se obtiene integrando el flujo total de $\vec{B}$ a través de las $N$ espiras. Con material de permeabilidad $\mu(\theta)$, la inductancia queda amplificada respecto al caso vacío $L_0 = \mu_0 N^2 h \ln(b/a)/(2\pi)$ por el promedio angular de $\mu_r(\theta)$. Para $\mu/\mu_0 = 2+\cos\theta$, la integral da $\langle\mu_r\rangle = 2$.
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para problemas con materiales magnéticos</div>
+      <ul>
+        <li>Usar siempre $\vec{H}$ primero: aplicar $\oint\vec{H}\cdot d\vec{\ell} = I_\text{libre}$ con un camino que aproveche la simetría. $\vec{H}$ solo depende de las corrientes libres, no del material.</li>
+        <li>Luego obtener $\vec{B} = \mu\vec{H}$ y $\vec{M} = \chi_m\vec{H} = (\mu_r-1)\vec{H}$. Si $\mu$ varía con la posición, $\vec{B}$ y $\vec{M}$ también varían aunque $\vec{H}$ sea uniforme.</li>
+        <li>Clasificar el material: si $\chi_m = \mu_r - 1 &lt; 0$ → diamagnético; si $\chi_m &gt; 0$ pequeño → paramagnético; si $\chi_m \gg 1$ → ferromagnético. En el ejemplo del toroide con $\mu_r = 2+\cos\theta$: para $\cos\theta &lt; -1$ no existe físicamente; la región es paramagnética cuando $\mu_r &gt; 1$, es decir $\cos\theta &gt; -1$, siempre se cumple aquí.</li>
+        <li>Para la inductancia: $L = N\Phi/I$ donde $\Phi = \int\vec{B}\cdot d\vec{S}$ es el flujo a través de una espira. Con material inhomogéneo se integra $\mu(\theta)$ sobre la sección.</li>
+        <li>El torque sobre el toroide en un campo externo uniforme es nulo si la distribución de $\vec{M}$ es simétrica respecto al campo, o se calcula como $\vec{\tau} = \vec{m}\times\vec{B}_\text{ext}$ con el momento dipolar total del sistema.</li>
+        <li>Diferencia clave respecto a dieléctricos: $\vec{H}$ juega el papel de $\vec{D}$, pero $\vec{H}$ no incluye las corrientes libres en su fuente — al contrario, $\nabla\times\vec{H} = \vec{J}_\text{libre}$, mientras que $\nabla\times\vec{D} = 0$ en ausencia de corrientes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_24/"><div class="nav-dir">← Anterior</div><div class="nav-title">Magnetización — Parte 2</div></a>
+    <a href="../" class="next"><div class="nav-dir">Volver →</div><div class="nav-title">Temario general</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

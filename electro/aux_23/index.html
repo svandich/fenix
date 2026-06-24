@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 23 — Vector de Magnetización</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 25</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+    <a class="nav-link" href="../aux_19/"><span class="dot dot-u6"></span><span class="num">19</span> Ampère — Parte 2</a>
+    <a class="nav-link" href="../aux_20/"><span class="dot dot-u6"></span><span class="num">20</span> Fuerzas sobre carga</a>
+    <div class="nav-section-title">Inducción</div>
+    <a class="nav-link" href="../aux_21/"><span class="dot dot-u6"></span><span class="num">21</span> Faraday-Lenz</a>
+    <a class="nav-link" href="../aux_22/"><span class="dot dot-u6"></span><span class="num">22</span> Faraday-Lenz II</a>
+    <div class="nav-section-title">Materia magnética</div>
+    <a class="nav-link active" href="../aux_23/"><span class="dot dot-u6"></span><span class="num">23</span> Vector Magnetización</a>
+    <a class="nav-link" href="../aux_24/"><span class="dot dot-u6"></span><span class="num">24</span> Magnetización pt. 2</a>
+    <a class="nav-link" href="../aux_25/"><span class="dot dot-u6"></span><span class="num">25</span> Vector H</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
+    <div class="unit-pill u6 bg-u6">Materia magnética · Aux 23–25</div>
+    <h1>Auxiliar 23: Vector de Magnetización</h1>
+    <p class="desc">El vector de magnetización $\vec{M}$ describe la densidad de momento dipolar magnético en un material. Cuando $\vec{M}$ varía en el espacio, aparecen corrientes de magnetización volumétricas $\vec{J}_m = \nabla\times\vec{M}$ y superficiales $\vec{K}_m = \vec{M}\times\hat{n}$ que actúan como fuentes efectivas del campo magnético.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Definición del vector de magnetización $\vec{M}$ como densidad de momento dipolar magnético: $d\vec{m} = \vec{M}\,dV$</li>
+        <li>Corriente volumétrica de magnetización: $\vec{J}_m = \nabla\times\vec{M}$</li>
+        <li>Corriente superficial de magnetización: $\vec{K}_m = \vec{M}\times\hat{n}$</li>
+        <li>Cálculo de corrientes de magnetización en geometría cilíndrica con $\vec{M}$ constante perpendicular al eje</li>
+        <li>Cálculo de corrientes de magnetización en un cubo con $\vec{M}$ no uniforme ($\vec{M} = M_0 x/a\,\hat{z}$)</li>
+        <li>Cálculo de corrientes de magnetización en cilindro con $\vec{M} = ks^2\,\hat{\phi}$ en coordenadas cilíndricas</li>
+        <li>Obtención del campo magnético a partir de las corrientes de magnetización usando la ley de Ampère</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Vector de magnetización</h3>
+        <p>$\vec{M}$ (A/m) es el momento dipolar magnético por unidad de volumen. En un material paramagnético o ferromagnético, cuantifica cuánto están alineados los dipolos atómicos. La relación $d\vec{m} = \vec{M}\,dV$ lo define localmente.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Corriente volumétrica $\vec{J}_m$</h3>
+        <p>Aparece cuando $\vec{M}$ varía en el espacio: $\vec{J}_m = \nabla\times\vec{M}$. Si $\vec{M}$ es uniforme, $\vec{J}_m = 0$ en el interior, pues los lazos de corriente microscópicos se cancelan mutuamente entre celdas vecinas.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Corriente superficial $\vec{K}_m$</h3>
+        <p>En la superficie del material los lazos microscópicos no tienen vecinos que los cancelen, generando una corriente efectiva $\vec{K}_m = \vec{M}\times\hat{n}$, donde $\hat{n}$ apunta hacia afuera del material. Sus unidades son A/m.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Campo producido por las corrientes de magnetización</h3>
+        <p>Las corrientes $\vec{J}_m$ y $\vec{K}_m$ son fuentes del campo $\vec{B}$ exactamente igual que las corrientes libres. Se les aplica Ampère: $\nabla\times\vec{B} = \mu_0\vec{J}_m$ (cuando no hay corrientes libres) y la forma integral para geometrías con simetría.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Vector de magnetización — definición</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_23_1.svg" alt=""></div>
+      <div class="formula-desc">
+        El momento dipolar magnético diferencial $d\vec{m}$ en un volumen $dV$ es proporcional a $\vec{M}$. Integrando sobre todo el material se obtiene el momento total. Las unidades de $\vec{M}$ son A/m (equivalente a J/(T·m³)).
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Corrientes de magnetización</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_23_2.svg" alt=""></div>
+      <div class="formula-desc">
+        La corriente volumétrica $\vec{J}_m$ surge del rotacional de $\vec{M}$: basta que $\vec{M}$ sea inhomogéneo para que aparezca. La corriente superficial $\vec{K}_m$ existe siempre que $\vec{M}$ tenga componente tangencial en la frontera del material.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Rotacional en coordenadas cilíndricas</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_23_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Expresión del rotacional en coordenadas cilíndricas $(s, \phi, z)$. Es indispensable para calcular $\vec{J}_m = \nabla\times\vec{M}$ cuando la magnetización está dada en esta base, como en el caso $\vec{M} = ks^2\,\hat{\phi}$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Campo magnético por Ampère a partir de $\vec{J}_m$</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_23_4.svg" alt=""></div>
+      <div class="formula-desc">
+        En ausencia de corrientes libres, el campo $\vec{B}$ es generado únicamente por las corrientes de magnetización. Con simetría cilíndrica, se elige un camino amperiano circular de radio $s$ y se obtiene $\vec{B}$ directamente de la corriente encerrada $I_\text{enc} = \int \vec{J}_m \cdot d\vec{S}$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Corriente superficial — cilindro con $\vec{M} = M_0\,\hat{x}$</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_23_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Para un cilindro con magnetización constante $\vec{M} = M_0\hat{x}$, la corriente superficial $\vec{K}_m = \vec{M}\times\hat{\rho}$ varía con el ángulo azimutal. Expresando $\hat{x} = \cos\phi\,\hat{\rho} - \sin\phi\,\hat{\phi}$ en cilíndricas, el resultado es $\vec{K}_m = M_0\cos\phi\,\hat{z}$, análogo a un solenoide.
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para problemas de magnetización</div>
+      <ul>
+        <li>Calcular siempre primero $\vec{J}_m = \nabla\times\vec{M}$ y $\vec{K}_m = \vec{M}\times\hat{n}$, independientemente del campo final pedido.</li>
+        <li>Si $\vec{M}$ es uniforme en el interior, $\vec{J}_m = 0$; toda la corriente de magnetización queda en la superficie. Esto ocurre en el P1 (cilindro con $\vec{M} = M_0\hat{x}$).</li>
+        <li>Si $\vec{M}$ depende de la posición, $\vec{J}_m \neq 0$ en el interior. En el P2 (cubo con $\vec{M} = M_0 x/a\,\hat{z}$), el rotacional da $\vec{J}_m = -(M_0/a)\hat{y}$ y las corrientes superficiales aparecen en las caras donde $\vec{M}$ tiene componente tangencial.</li>
+        <li>En coordenadas cilíndricas, el rotacional de $\vec{M} = M_\phi(s)\hat{\phi}$ tiene solo componente $\hat{z}$: $J_{m,z} = \frac{1}{s}\frac{d(sM_\phi)}{ds}$.</li>
+        <li>Una vez conocidas las corrientes de magnetización, aplicar la ley de Ampère tal como se haría con corrientes libres: elegir camino con la simetría del problema y despejar $\vec{B}$.</li>
+        <li>Verificar la consistencia: la corriente total (volumétrica + superficial) debe anularse para un imán aislado en equilibrio — esto es la condición de conservación de carga.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_22/"><div class="nav-dir">← Anterior</div><div class="nav-title">Faraday-Lenz II</div></a>
+    <a href="../aux_24/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Magnetización — Parte 2</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

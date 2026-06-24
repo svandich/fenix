@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 20 — Fuerzas sobre una carga puntual</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 25</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+    <a class="nav-link" href="../aux_19/"><span class="dot dot-u6"></span><span class="num">19</span> Ampère — Parte 2</a>
+    <a class="nav-link active" href="../aux_20/"><span class="dot dot-u6"></span><span class="num">20</span> Fuerzas sobre carga</a>
+    <div class="nav-section-title">Inducción</div>
+    <a class="nav-link" href="../aux_21/"><span class="dot dot-u6"></span><span class="num">21</span> Faraday-Lenz</a>
+    <a class="nav-link" href="../aux_22/"><span class="dot dot-u6"></span><span class="num">22</span> Faraday-Lenz II</a>
+    <div class="nav-section-title">Materia magnética</div>
+    <a class="nav-link" href="../aux_23/"><span class="dot dot-u6"></span><span class="num">23</span> Vector Magnetización</a>
+    <a class="nav-link" href="../aux_24/"><span class="dot dot-u6"></span><span class="num">24</span> Magnetización pt. 2</a>
+    <a class="nav-link" href="../aux_25/"><span class="dot dot-u6"></span><span class="num">25</span> Vector H</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
+    <div class="unit-pill u6 bg-u6">Magnetismo · Aux 17–25</div>
+    <h1>Auxiliar 20: Fuerzas sobre una carga puntual</h1>
+    <p class="desc">La fuerza de Lorentz $\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})$ describe cómo los campos eléctrico y magnético actúan simultáneamente sobre una carga. Cuando los campos se equilibran se obtiene un selector de velocidades; cuando solo actúa el campo magnético, la carga describe movimiento circular o helicoidal con radio de ciclotrón $r = mv_\perp/(|q|B)$.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Fuerza magnética sobre una carga puntual: $\vec{F}_\text{mag} = q(\vec{v}\times\vec{B})$</li>
+        <li>Fuerza de Lorentz completa: $\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})$</li>
+        <li>Selector de velocidades: condición de equilibrio entre fuerza eléctrica y magnética</li>
+        <li>Movimiento circular en campo magnético uniforme y radio de ciclotrón</li>
+        <li>Movimiento helicoidal: descomposición de la velocidad en componente paralela y perpendicular a $\vec{B}$</li>
+        <li>Fuerza sobre cables y distribuciones de corriente en campo magnético: $\vec{F} = \int Id\vec{\ell}\times\vec{B}$</li>
+        <li>Generalización a densidades superficiales $\vec{K}$ y volumétricas $\vec{J}$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Selector de velocidades</h3>
+        <p>Con $\vec{E}$ y $\vec{B}$ perpendiculares entre sí y perpendiculares a $\vec{v}$, la fuerza neta se anula solo cuando $v = E_0/B_0$. Partículas más lentas o más rápidas se desvían. El resultado es independiente de la masa y la carga de la partícula.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Radio de ciclotrón</h3>
+        <p>En campo $\vec{B}$ uniforme, la componente de velocidad perpendicular al campo produce movimiento circular con radio $r = mv_\perp/(|q|B)$ y frecuencia de ciclotrón $\omega_c = |q|B/m$. La componente paralela a $\vec{B}$ no cambia.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Movimiento helicoidal</h3>
+        <p>Si la velocidad inicial tiene componente paralela a $\vec{B}$, esta no es afectada por la fuerza magnética. La partícula describe una hélice: giro circular en el plano perpendicular a $\vec{B}$ combinado con traslación uniforme a lo largo de $\vec{B}$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Fuerza sobre corrientes</h3>
+        <p>La fuerza de Lorentz sobre portadores de carga en un cable se integra para obtener $\vec{F} = \int Id\vec{\ell}\times\vec{B}$. Para distribuciones continuas: $\vec{F} = \iint\vec{K}\times\vec{B}\,dS$ (superficial) y $\vec{F} = \iiint\vec{J}\times\vec{B}\,dV$ (volumétrica).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Fuerza de Lorentz</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_20_1.svg" alt=""></div>
+      <div class="formula-desc">
+        La fuerza total sobre una carga $q$ en presencia de campo eléctrico y magnético. La fuerza magnética $q\vec{v}\times\vec{B}$ es siempre perpendicular a $\vec{v}$, por lo que no realiza trabajo sobre la carga y no modifica su rapidez.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Condición del selector de velocidades</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_20_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Para que la fuerza neta sea cero, la fuerza eléctrica y la magnética deben cancelarse. Con $\vec{E} = -E_0\hat{z}$ y $\vec{B} = B_0\hat{y}$, una carga con velocidad $v\hat{x}$ experimenta $\vec{F}_\text{mag} = qvB_0\hat{z}$, que cancela $\vec{F}_\text{elec} = -qE_0\hat{z}$ cuando $v = E_0/B_0$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Radio de ciclotrón y frecuencia angular</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_20_3.svg" alt=""></div>
+      <div class="formula-desc">
+        La fuerza magnética actúa como fuerza centrípeta: $|q|v_\perp B = mv_\perp^2/r$. El radio de ciclotrón $r$ depende del momento $mv_\perp$ y del producto $|q|B$. La frecuencia $\omega_c = |q|B/m$ es independiente de la velocidad (isocrona).
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Fuerza sobre distribuciones de corriente</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_20_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Se obtiene integrando la fuerza de Lorentz sobre todos los portadores. Para un cable la integral es sobre la longitud; para distribuciones superficiales y volumétricas se integra $\vec{K}\times\vec{B}$ y $\vec{J}\times\vec{B}$ respectivamente.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Distancia recorrida en $\hat{z}$ al penetrar una región magnética</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_20_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Una carga que entra con velocidad $v$ a un ángulo $\theta$ respecto a $\vec{B}$ (apuntando en $\hat{z}$) describe un arco circular en el plano perpendicular a $\vec{B}$. La penetración máxima en $\hat{z}$ antes de salir de la región es el diámetro del arco proyectado: $2r\sin\theta = 2(mv\sin\theta)/(|q|B)$.
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para problemas de fuerza de Lorentz</div>
+      <ul>
+        <li>Identificar los campos $\vec{E}$ y $\vec{B}$ presentes y la carga de la partícula (signo incluido).</li>
+        <li>Calcular $\vec{v}\times\vec{B}$ usando el producto vectorial con regla de la mano derecha; recordar que si $q &lt; 0$ el sentido de la fuerza se invierte.</li>
+        <li>En el selector de velocidades, la condición $v_\text{sel} = E_0/B_0$ es universal: no depende de $m$ ni de $q$. Para $v &lt; v_\text{sel}$ predomina la fuerza eléctrica (la partícula se desvía en el sentido de $\vec{E}$).</li>
+        <li>Para movimiento en campo $\vec{B}$ puro, descomponer $\vec{v}$ en componente paralela $v_\parallel = v\cos\theta$ (no afectada) y perpendicular $v_\perp = v\sin\theta$ (produce el giro).</li>
+        <li>El radio de ciclotrón $r = mv_\perp/(|q|B)$: aumenta con la masa y la velocidad, disminuye con la carga y el campo.</li>
+        <li>Para fuerzas sobre cables, verificar la orientación de $d\vec{\ell}$ (sentido de la corriente) y aplicar la regla de la mano derecha para $d\vec{\ell}\times\vec{B}$.</li>
+        <li>La fuerza magnética no hace trabajo: la energía cinética de la partícula no cambia en campo $\vec{B}$ puro.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_19/"><div class="nav-dir">← Anterior</div><div class="nav-title">Ampère — Parte 2</div></a>
+    <a href="../aux_21/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Faraday-Lenz</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

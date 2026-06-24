@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 22 — Faraday-Lenz II</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 25</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+    <a class="nav-link" href="../aux_19/"><span class="dot dot-u6"></span><span class="num">19</span> Ampère — Parte 2</a>
+    <a class="nav-link" href="../aux_20/"><span class="dot dot-u6"></span><span class="num">20</span> Fuerzas sobre carga</a>
+    <div class="nav-section-title">Inducción</div>
+    <a class="nav-link" href="../aux_21/"><span class="dot dot-u6"></span><span class="num">21</span> Faraday-Lenz</a>
+    <a class="nav-link active" href="../aux_22/"><span class="dot dot-u6"></span><span class="num">22</span> Faraday-Lenz II</a>
+    <div class="nav-section-title">Materia magnética</div>
+    <a class="nav-link" href="../aux_23/"><span class="dot dot-u6"></span><span class="num">23</span> Vector Magnetización</a>
+    <a class="nav-link" href="../aux_24/"><span class="dot dot-u6"></span><span class="num">24</span> Magnetización pt. 2</a>
+    <a class="nav-link" href="../aux_25/"><span class="dot dot-u6"></span><span class="num">25</span> Vector H</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
+    <div class="unit-pill u6 bg-u6">Inducción · Aux 21–22</div>
+    <h1>Auxiliar 22: Faraday-Lenz II</h1>
+    <p class="desc">Aplicaciones avanzadas de la ley de Faraday-Lenz: fem inducida en circuitos móviles, campo eléctrico inducido dentro y fuera de solenoides, inductancia mutua entre circuitos y autoinductancia. Se conectan las formas diferencial e integral de la tercera ecuación de Maxwell con situaciones concretas.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Fem inducida por movimiento: carrito conductor que penetra una región con campo magnético uniforme $\vec{B} = B_0\hat{z}$</li>
+        <li>Corriente inducida $I = \mathcal{E}/R$ y sentido determinado por la ley de Lenz</li>
+        <li>Fuerza de frenado magnético $\vec{F} = I\vec{l}\times\vec{B}$ y ecuación de movimiento del carrito</li>
+        <li>Velocidad exponencialmente decreciente: $v(t) = v_0 e^{-t/\tau}$ con $\tau = mR/(B_0^2 l^2)$</li>
+        <li>Inductancia mutua $M$: relación entre flujo inducido y corriente fuente ($\Phi_2 = M I_1$)</li>
+        <li>Autoinductancia $L$ y EDO de circuito RL con fem motriz y autoinducida</li>
+        <li>Campo eléctrico inducido dentro y fuera de un solenoide largo con corriente variable $I(t) = I_0\sin(\omega t)$</li>
+        <li>Formas diferencial e integral de Faraday: $\nabla\times\vec{E} = -\partial\vec{B}/\partial t$ y $\oint_\Gamma \vec{E}\cdot d\vec{l} = -\partial\Phi/\partial t$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Fem motriz por movimiento</h3>
+        <p>Cuando un conductor de largo $l$ se mueve con velocidad $v$ dentro de un campo $\vec{B}$ perpendicular, la fem inducida es $\mathcal{E} = Blv$. El flujo aumenta como $\Phi = B_0 l x$, de modo que $\mathcal{E} = -d\Phi/dt = -B_0 l \dot{x}$. El signo negativo (Lenz) indica que la corriente se opone al aumento del flujo.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Frenado magnético</h3>
+        <p>La corriente inducida $I = B_0 lv/R$ en presencia del campo produce una fuerza de freno $F = -B_0^2 l^2 v / R$ que se opone al movimiento. Esto lleva a una EDO de primer orden cuya solución es una caída exponencial de la velocidad.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Inductancia mutua</h3>
+        <p>Cuando el campo $\vec{B}$ del carrito es producido por un circuito externo con corriente $I_0$, el flujo a través del carrito es proporcional a la corriente: $\Phi = M I_0$. La constante de proporcionalidad $M$ depende solo de la geometría y en este caso crece con la distancia penetrada $x$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Circuito RL con autoinductancia</h3>
+        <p>Al incluir una bobina de autoinductancia $L$ en serie con la resistencia $R$, la fem total es $\mathcal{E}_\text{total} = \mathcal{E}_\text{motriz} - L\,dI/dt$. Esto da una EDO de primer orden para $I(t)$ que combina el término motriz $B_0 l v(t)$ con el término inductivo.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Campo eléctrico inducido en solenoide</h3>
+        <p>Un solenoide con corriente variable genera un campo $\vec{B}(t)$ variable que induce un campo eléctrico $\vec{E}$ circulante, incluso en regiones sin corriente. Por simetría cilíndrica, $\vec{E}$ es azimutal ($\hat{\phi}$). Dentro del solenoide $E \propto r$; fuera, $E \propto 1/r$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ley de Lenz y conservación de energía</h3>
+        <p>El signo negativo en $\mathcal{E} = -d\Phi/dt$ no es arbitrario: garantiza que la corriente inducida genere un campo que se opone al cambio que la originó. Esto es consistente con la conservación de energía: la energía cinética del carrito se disipa en la resistencia $R$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Ley de Faraday-Lenz — formas integral y diferencial</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_22_1.svg" alt=""></div>
+      <div class="formula-desc">
+        La fem inducida en un circuito cerrado es la tasa de cambio negativa del flujo magnético. La forma diferencial es la tercera ecuación de Maxwell: un campo $\vec{B}$ variable en el tiempo genera un campo $\vec{E}$ rotacional. Las dos formas son equivalentes por el teorema de Stokes.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Corriente inducida y fuerza de frenado</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_22_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Para el carrito de altura $l$ moviéndose con velocidad $v$ dentro del campo $\vec{B} = B_0\hat{z}$: la fem es $\mathcal{E} = B_0 l v$, la corriente inducida es $I = B_0 l v/R$ y la fuerza de freno sobre el conductor es proporcional a $v$. La ecuación de movimiento $m\dot{v} = -B_0^2 l^2 v/R$ da la solución exponencial.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Inductancia mutua y autoinductancia</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_22_3.svg" alt=""></div>
+      <div class="formula-desc">
+        La inductancia mutua $M$ relaciona el flujo en el circuito 2 con la corriente del circuito 1: $\Phi_2 = M I_1$. Para el carrito penetrando una distancia $x$, el flujo es $\Phi = B_0 l x = M I_0$, por lo que $M = B_0 l x / I_0$. La autoinductancia $L$ relaciona el flujo propio con la corriente propia: $\Phi = L I$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Campo eléctrico inducido por solenoide</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_22_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Para un solenoide largo de radio $b$ con $n$ vueltas por unidad de longitud y corriente $I(t) = I_0\sin(\omega t)$, el campo magnético interior es $\vec{B} = \mu_0 n I(t)\hat{z}$. Aplicando Faraday en forma integral con un camino circular de radio $r$ se obtiene el campo $\vec{E}$ azimutal en ambas regiones: crece linealmente con $r$ dentro y cae como $1/r$ fuera.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">EDO de circuito RL con fem motriz</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_22_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Al incluir autoinductancia $L$ en serie con $R$, la corriente satisface una EDO de primer orden. La fem motriz $B_0 l v(t)$ actúa como fuente y el término $L\,dI/dt$ representa la oposición inductiva. Para $v(t) = at$ (aceleración constante), la fem motriz es lineal en $t$ y la solución de la EDO es la superposición de la respuesta homogénea (exponencial decreciente) y la particular (lineal en $t$).
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para problemas de inducción</div>
+      <ul>
+        <li>Identificar qué cambia: ¿varía el área del circuito (conductor móvil) o varía $\vec{B}$ (solenoide con corriente alterna)?</li>
+        <li>Calcular el flujo $\Phi = \iint \vec{B}\cdot d\vec{S}$ antes de derivar. Para el carrito: $\Phi = B_0 l x$, así $\mathcal{E} = -B_0 l \dot{x} = -B_0 l v$.</li>
+        <li>Aplicar la ley de Lenz para el sentido: si el flujo (en $\hat{z}$) aumenta al avanzar el carrito, la corriente inducida genera un campo opuesto, es decir, circula en sentido antihorario visto desde $+\hat{z}$.</li>
+        <li>Para el campo inducido en el solenoide: usar el camino de Faraday circular coaxial al eje. Dentro ($r &lt; b$): $\oint \vec{E}\cdot d\vec{l} = E \cdot 2\pi r = -\dot{B}\pi r^2$. Fuera ($r &gt; b$): el área que aporta flujo está limitada por $b$, así que $E \cdot 2\pi r = -\dot{B}\pi b^2$.</li>
+        <li>Para circuitos con $L$: escribir el balance de voltaje (Kirchhoff): $\mathcal{E}_\text{motriz} = RI + L\,dI/dt$. Con $v(t) = at$ la fuente es $B_0 l a t$ y la EDO es lineal de primer orden con coeficientes constantes.</li>
+        <li>La inductancia mutua $M = \Phi_\text{inducido}/I_\text{fuente}$ puede obtenerse directamente del flujo geométrico: $M = B_0 l x / I_0$. Nota que $M$ crece con $x$, lo que implica $\mathcal{E}_2 = -M \dot{I}_1 - \dot{M} I_1$ si ambos varían.</li>
+        <li>La solución $v(t) = v_0 e^{-t/\tau}$ con $\tau = mR/(B_0^2 l^2)$ se obtiene de $m\dot{v} = -(B_0^2 l^2/R)v$, que es separable. Verificar unidades: $[B^2 l^2 / R] = \text{kg/s}$.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_21/"><div class="nav-dir">← Anterior</div><div class="nav-title">Faraday-Lenz</div></a>
+    <a href="../aux_23/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Vector de Magnetización</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

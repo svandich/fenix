@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 19 — Ley de Ampère pt. 2</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">⚡</span>
+      <div><div class="name">Electromagnetismo</div><div class="subtitle">Auxiliares 1 – 25</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span>Temario general</a>
+    <div class="nav-section-title">Campo eléctrico</div>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">01</span> Campo Eléctrico</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u1"></span><span class="num">02</span> Ley de Gauss</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u1"></span><span class="num">03</span> Gauss — Parte 2</a>
+    <div class="nav-section-title">Potencial y conductores</div>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u2"></span><span class="num">04</span> Potencial Eléctrico</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u2"></span><span class="num">05</span> Potencial y Conductores</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u2"></span><span class="num">06</span> Conductores</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u2"></span><span class="num">07</span> Conductores y Laplace</a>
+    <a class="nav-link" href="../aux_8/"><span class="dot dot-u2"></span><span class="num">08</span> Conductores II</a>
+    <a class="nav-link" href="../aux_9/"><span class="dot dot-u2"></span><span class="num">09</span> Carga Imagen</a>
+    <div class="nav-section-title">Dipolos</div>
+    <a class="nav-link" href="../aux_10/"><span class="dot dot-u3"></span><span class="num">10</span> Pre-control</a>
+    <a class="nav-link" href="../aux_11/"><span class="dot dot-u3"></span><span class="num">11</span> Dipolos</a>
+    <div class="nav-section-title">Dieléctricos</div>
+    <a class="nav-link" href="../aux_12/"><span class="dot dot-u4"></span><span class="num">12</span> Condensadores</a>
+    <a class="nav-link" href="../aux_13/"><span class="dot dot-u4"></span><span class="num">13</span> Dieléctricos</a>
+    <a class="nav-link" href="../aux_14/"><span class="dot dot-u4"></span><span class="num">14</span> Dieléctricos II</a>
+    <div class="nav-section-title">Corrientes</div>
+    <a class="nav-link" href="../aux_15/"><span class="dot dot-u5"></span><span class="num">15</span> Corrientes y Resistencias</a>
+    <a class="nav-link" href="../aux_16/"><span class="dot dot-u5"></span><span class="num">16</span> Circuitos</a>
+    <div class="nav-section-title">Magnetismo</div>
+    <a class="nav-link" href="../aux_17/"><span class="dot dot-u6"></span><span class="num">17</span> Fuerza de Lorentz</a>
+    <a class="nav-link" href="../aux_18/"><span class="dot dot-u6"></span><span class="num">18</span> Ley de Ampère</a>
+    <a class="nav-link active" href="../aux_19/"><span class="dot dot-u6"></span><span class="num">19</span> Ampère — Parte 2</a>
+    <a class="nav-link" href="../aux_20/"><span class="dot dot-u6"></span><span class="num">20</span> Fuerzas sobre carga</a>
+    <div class="nav-section-title">Inducción</div>
+    <a class="nav-link" href="../aux_21/"><span class="dot dot-u6"></span><span class="num">21</span> Faraday-Lenz</a>
+    <a class="nav-link" href="../aux_22/"><span class="dot dot-u6"></span><span class="num">22</span> Faraday-Lenz II</a>
+    <div class="nav-section-title">Materia magnética</div>
+    <a class="nav-link" href="../aux_23/"><span class="dot dot-u6"></span><span class="num">23</span> Vector Magnetización</a>
+    <a class="nav-link" href="../aux_24/"><span class="dot dot-u6"></span><span class="num">24</span> Magnetización pt. 2</a>
+    <a class="nav-link" href="../aux_25/"><span class="dot dot-u6"></span><span class="num">25</span> Vector H</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
+    <div class="unit-pill u6 bg-u6">Magnetismo · Aux 17–25</div>
+    <h1>Auxiliar 19: Ley de Ampère — Parte 2</h1>
+    <p class="desc">Esta sesión profundiza en la aplicación de la ley de Ampère a configuraciones de mayor complejidad: densidades de corriente no uniformes $J(r)$, corrientes superficiales $K$, solenoides concéntricos y cilindros con perforaciones. El hilo conductor es siempre el mismo: elegir un camino amperiano con la simetría del problema, calcular $I_\text{enc}$ con cuidado, y despejar $\vec{B}$.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Corriente encerrada con densidad volumétrica no uniforme: $J(r) = J_0\!\left(1 - \tfrac{r}{R}\right)$</li>
+        <li>Superposición de campos de una corriente plana (densidad lineal $K$) y un cilindro sólido</li>
+        <li>Campo de un solenoide ideal: $B = \mu_0 n I$ dentro, nulo fuera</li>
+        <li>Dos solenoides concéntricos: cancelación de campo para $r &lt; R_2$ y fuerza por unidad de área sobre el solenoide interior</li>
+        <li>Principio de superposición: cilindro con perforación cilíndrica tratado como cilindro completo menos cilindro de radio $b$</li>
+        <li>Fuerza por unidad de largo sobre un alambre externo debida al campo del sistema cilindro-perforación</li>
+        <li>Diferenciales en coordenadas cartesianas, cilíndricas y esféricas (repaso de formulario)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Densidad de corriente no uniforme</h3>
+        <p>Cuando $J$ depende de $r$, la corriente encerrada se calcula integrando: $I_\text{enc} = \int_0^r J(r')\,2\pi r'\,dr'$. El resultado ya no es simplemente $J \cdot \pi r^2$; hay que resolver la integral explícitamente antes de aplicar Ampère.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Campo de un plano infinito de corriente</h3>
+        <p>Una lámina plana e infinita con densidad lineal $K$ produce $B = \tfrac{\mu_0 K}{2}$ paralelo al plano y perpendicular a $\vec{K}$, con dirección opuesta a ambos lados. Se obtiene con un lazo rectangular amperiano.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Solenoide ideal</h3>
+        <p>Para un solenoide muy largo de $n$ vueltas por unidad de largo y corriente $I$: $\vec{B} = \mu_0 n I\,\hat{z}$ en el interior y $\vec{B} = 0$ en el exterior. La demostración usa un camino amperiano rectangular que atraviesa la pared del solenoide.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Superposición para geometrías con huecos</h3>
+        <p>Un cilindro con perforación descentrada se trata como la superposición de un cilindro completo de radio $R$ (con densidad $+J_0$) y un cilindro de radio $b$ (con densidad $-J_0$) que ocupa el hueco. Los campos individuales son uniformes; el campo neto en el hueco es constante y se puede sumar vectorialmente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Corriente encerrada con $J(r)$ no uniforme</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_19_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Para un cilindro con densidad volumétrica $J(r) = J_0(1 - r/R)$, la corriente encerrada dentro de un radio $r \leq R$ se obtiene integrando en coordenadas cilíndricas. El resultado combina un término cuadrático y uno cúbico en $r$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Campo magnético de un plano infinito de corriente</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_19_2.svg" alt=""></div>
+      <div class="formula-desc">
+        El campo de una lámina infinita con densidad lineal $K$ es uniforme, paralelo al plano y perpendicular a la dirección de la corriente. El camino amperiano rectangular con lados paralelos a $\vec{B}$ da directamente este resultado. El signo indica sentidos opuestos a cada lado de la lámina.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Campo de un solenoide ideal</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_19_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Dentro del solenoide ($r &lt; R$) el campo es uniforme y axial. Fuera ($r &gt; R$) el campo se anula. Con $n = N/L$ vueltas por unidad de largo, el camino amperiano rectangular de largo $\ell$ encierra $n\ell$ espiras, cada una con corriente $I$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Fuerza por unidad de área sobre una corriente superficial</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_19_4.svg" alt=""></div>
+      <div class="formula-desc">
+        La fuerza magnética por unidad de área (presión magnética) sobre una corriente superficial $\vec{K}$ es $\vec{f} = \vec{K} \times \vec{B}_\text{ext}$, donde $\vec{B}_\text{ext}$ es el campo externo que actúa sobre la corriente. Para el solenoide interior con $K = n_2 I_2$, el campo externo es el del solenoide exterior evaluado en $R_2 &lt; r &lt; R_1$.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Campo neto del cilindro con perforación (superposición)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_19_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Fuera del cilindro completo (radio $R$), el campo es el de un hilo con corriente total $I_0 = J_0(\pi R^2 - \pi b^2)$. El cilindro ficticio de radio $b$ también actúa como un hilo (corriente $-J_0\pi b^2$) centrado en $S$. La fuerza por unidad de largo sobre el alambre externo a distancia $D$ es $F/L = \mu_0 I I_\text{net}/(2\pi D)$.
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Estrategia para problemas de Ampère avanzados</div>
+      <ul>
+        <li>Cuando $J$ depende de $r$: no usar $I_\text{enc} = J \cdot A$. Integrar siempre $I_\text{enc}(r) = \int_0^r J(r')\,2\pi r'\,dr'$ antes de sustituir en la ley de Ampère.</li>
+        <li>Superposición de fuentes: el campo total es la suma vectorial de los campos de cada fuente. Para el plano + cilindro, calcular $\vec{B}_\text{plano}$ y $\vec{B}_\text{cilindro}$ por separado y sumar en el punto $P$.</li>
+        <li>Solenoides concéntricos: el campo de cada solenoide solo existe en su interior. Para $r &lt; R_2$, ambos solenoides contribuyen; para $R_2 &lt; r &lt; R_1$, solo el exterior. Usar esta distinción para encontrar $I_2$ que anula $\vec{B}$ en $r &lt; R_2$.</li>
+        <li>Fuerza por unidad de área: usar el campo promedio entre interior y exterior ($\vec{B}_\text{avg}$) o directamente el campo externo que actúa sobre la corriente superficial $\vec{K}$ de la pared del solenoide.</li>
+        <li>Perforación descentrada: los ejes de los dos cilindros ficticios no coinciden. Los campos se calculan con sus propios ejes; luego se suman vectorialmente en el punto de interés usando desplazamientos relativos.</li>
+        <li>Fuerza por unidad de largo entre alambres paralelos: $dF/dL = \mu_0 I_1 I_2 / (2\pi d)$, atractiva si las corrientes son paralelas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_18/"><div class="nav-dir">← Anterior</div><div class="nav-title">Ley de Ampère</div></a>
+    <a href="../aux_20/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Fuerzas sobre carga puntual</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
