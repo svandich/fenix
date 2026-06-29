@@ -53,7 +53,7 @@
   </style>
   <script>
     MathJax = {
-      tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+      tex: { inlineMath: [['$','$']] },
       options: { skipHtmlTags: ['script','noscript','style','textarea'] }
     };
   </script>
@@ -81,7 +81,7 @@
 
     <div class="formula-block u2">
       <div class="formula-label">Definición en coordenadas cartesianas</div>
-      <div class="formula-math">$$\nabla f = \frac{\partial f}{\partial x}\,\hat{x} + \frac{\partial f}{\partial y}\,\hat{y} + \frac{\partial f}{\partial z}\,\hat{z}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="basicos_1.svg" alt=""></div>
       <div class="formula-desc">
         Toma un campo escalar $f(\mathbf{r})$ y devuelve un campo vectorial. Cada componente es la derivada parcial de $f$ en esa dirección.
       </div>
@@ -117,7 +117,7 @@
 
     <div class="formula-block u1">
       <div class="formula-label">Definición en coordenadas cartesianas</div>
-      <div class="formula-math">$$\nabla \cdot \mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="basicos_2.svg" alt=""></div>
       <div class="formula-desc">
         Toma un campo vectorial $\mathbf{F}$ y devuelve un campo escalar. Suma las derivadas de cada componente respecto a su propia coordenada.
       </div>
@@ -125,7 +125,7 @@
 
     <div class="formula-block u1">
       <div class="formula-label">Teorema de Gauss — conecta la forma integral con la diferencial</div>
-      <div class="formula-math">$$\oiint_S \mathbf{F} \cdot d\mathbf{A} = \iiint_V \nabla \cdot \mathbf{F} \; dV$$</div>
+      <div class="formula-math"><img class="typst-formula" src="basicos_3.svg" alt=""></div>
       <div class="formula-desc">
         El flujo neto que sale de una superficie cerrada $S$ es igual a la integral de la divergencia en el volumen $V$ encerrado.
       </div>
@@ -161,7 +161,7 @@
 
     <div class="formula-block u6">
       <div class="formula-label">Definición — determinante simbólico</div>
-      <div class="formula-math">$$\nabla \times \mathbf{F} = \begin{vmatrix}\hat{x} & \hat{y} & \hat{z} \\ \partial_x & \partial_y & \partial_z \\ F_x & F_y & F_z\end{vmatrix}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="basicos_4.svg" alt=""></div>
       <div class="formula-desc">
         Toma un campo vectorial $\mathbf{F}$ y devuelve otro campo vectorial. Se calcula expandiendo el determinante: cada componente resulta de derivadas cruzadas de las otras dos.
       </div>
@@ -169,7 +169,7 @@
 
     <div class="formula-block u6">
       <div class="formula-label">Teorema de Stokes — conecta la forma integral con la diferencial</div>
-      <div class="formula-math">$$\oint_C \mathbf{F} \cdot d\boldsymbol{\ell} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{A}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="basicos_5.svg" alt=""></div>
       <div class="formula-desc">
         La circulación de $\mathbf{F}$ a lo largo de una curva cerrada $C$ es igual al flujo del rotor a través de cualquier superficie $S$ con borde $C$.
       </div>
@@ -205,7 +205,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Definición — divergencia del gradiente</div>
-      <div class="formula-math">$$\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} = \nabla \cdot (\nabla f)$$</div>
+      <div class="formula-math"><img class="typst-formula" src="basicos_6.svg" alt=""></div>
       <div class="formula-desc">
         Toma un campo escalar y devuelve un campo escalar. Es la divergencia del gradiente: primero calcula el gradiente y luego le aplica la divergencia.
       </div>
@@ -213,7 +213,7 @@
 
     <div class="formula-block u3">
       <div class="formula-label">Ecuaciones de Poisson y Laplace</div>
-      <div class="formula-math">$$\nabla^2 V = -\frac{\rho}{\epsilon_0} \quad \text{(Poisson)} \qquad\qquad \nabla^2 V = 0 \quad \text{(Laplace)}$$</div>
+      <div class="formula-math"><img class="typst-formula" src="basicos_7.svg" alt=""></div>
       <div class="formula-desc">
         Poisson es la forma general. Laplace es el caso $\rho = 0$ (sin carga libre). Resolver estas ecuaciones con condiciones de borde da el potencial en la región.
       </div>
