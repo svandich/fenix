@@ -102,6 +102,68 @@
       font-size: 13px;
       color: var(--text-muted);
     }
+
+    .prereq-wrap {
+      margin-top: 40px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dimmed);
+      margin-bottom: 10px;
+    }
+
+    .prereq-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--unit-5);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.15s, border-color 0.15s;
+      margin-bottom: 14px;
+    }
+
+    .prereq-card:hover { background: var(--bg-card-2); }
+
+    .prereq-icon { font-size: 22px; line-height: 1; flex-shrink: 0; }
+
+    .prereq-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--unit-5);
+      margin-bottom: 3px;
+    }
+
+    .prereq-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .prereq-arrow {
+      margin-left: auto;
+      color: var(--text-dimmed);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .courses-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dimmed);
+      margin-bottom: 10px;
+      margin-top: 28px;
+    }
   </style>
 </head>
 <body>
@@ -114,15 +176,29 @@
     <p>Hecho con IA, para salvar el semestre.</p>
   </div>
 
+  <div class="prereq-wrap">
+    <div class="section-label">Antes de empezar</div>
+    <a class="prereq-card" href="basicos/">
+      <span class="prereq-icon">🧮</span>
+      <div>
+        <div class="prereq-title">Prerrequisitos de Cálculo</div>
+        <div class="prereq-desc">Gradiente · Divergencia · Rotor · Laplaciano — las 4 operaciones del cálculo vectorial que aparecen en toda la materia</div>
+      </div>
+      <span class="prereq-arrow">→</span>
+    </a>
+  </div>
+
+  <div class="courses-label">Cursos</div>
+
   <div class="course-grid">
-    <a class="course-card course-card--electro" href="electro/index.html">
+    <a class="course-card course-card--electro" href="electro/">
       <span class="card-icon">⚡</span>
       <div class="card-title u1">Electromagnetismo</div>
       <div class="card-desc">25 auxiliares · Campo eléctrico, potencial, conductores, dipolos, dieléctricos, circuitos, magnetismo, inducción y materia magnética</div>
       <span class="card-status status--wip">Incompleto</span>
     </a>
 
-    <a class="course-card course-card--termo" href="termo/index.html">
+    <a class="course-card course-card--termo" href="termo/">
       <span class="card-icon">⚛️</span>
       <div class="card-title u3">Termodinámica</div>
       <div class="card-desc">28 cátedras · 11 clases complementarias · Gas ideal, teoría cinética, primera y segunda ley, entropía</div>

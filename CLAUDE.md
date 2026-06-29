@@ -6,8 +6,9 @@ Repositorio de apuntes interactivos para cursos de ingeniería. Cada curso es un
 
 | Carpeta | Curso | Estado |
 |---------|-------|--------|
-| `electro/` | Electromagnetismo (Aux 1–18) | Completo |
-| `termo/` | Termodinámica (Cat 1–20 + CC 1–7) | En construcción |
+| `basicos/` | Prerrequisitos de Cálculo (1 página) | Completo |
+| `electro/` | Electromagnetismo (Aux 1–25) | Incompleto |
+| `termo/` | Termodinámica (Cat 1–28 + CC 1–11) | Completo |
 
 ## Estructura
 
@@ -15,12 +16,13 @@ Repositorio de apuntes interactivos para cursos de ingeniería. Cada curso es un
 repo-root/
 ├── styles/main.css           ← CSS compartido por todos los cursos
 ├── styles/fonts/             ← Inter + JetBrains Mono (locales)
-├── electro/                  ← index.html + aux_N/index.html × 18
-├── termo/                    ← index.html + cat_N/index.html × 20 + cc_N/index.html × 7
+├── basicos/                  ← index.html (página única, sin sidebar, usa MathJax display)
+├── electro/                  ← index.html + aux_N/index.html × 25
+├── termo/                    ← index.html + cat_N/index.html × 28 + cc_N/index.html × 11
 ├── typst/
-│   ├── electro/aux_N.typ     ← Fuentes Typst de fórmulas (electro, N=1–16)
-│   ├── termo/cat_N.typ       ← Fuentes Typst de cátedras (N=1–20)
-│   └── termo/cc_N.typ        ← Fuentes Typst de clases complementarias (N=1–7)
+│   ├── electro/aux_N.typ     ← Fuentes Typst de fórmulas (electro, N=1–25)
+│   ├── termo/cat_N.typ       ← Fuentes Typst de cátedras (N=1–28)
+│   └── termo/cc_N.typ        ← Fuentes Typst de clases complementarias (N=1–11)
 │   (los SVGs compilados viven en <curso>/<página>/ junto con el index.html)
 ├── scripts/
 │   ├── compile-typst.sh      ← Compila todos los .typ → SVG

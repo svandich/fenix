@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prerrequisitos — Cálculo Vectorial</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <style>
+    body { display: block; }
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 32px;
+    }
+    .back-link:hover { color: var(--text); }
+    .op-block { margin-bottom: 52px; }
+    .op-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .op-header h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .op-header .op-symbol {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--text-dimmed);
+    }
+    .op-header .op-type {
+      margin-left: auto;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-dimmed);
+    }
+  </style>
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+      options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back-link" href="../">← Notas de Clase</a>
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Inicio</a> › Prerrequisitos</div>
+    <div class="unit-pill u5 bg-u5">Cálculo Vectorial</div>
+    <h1>Las 4 operaciones fundamentales</h1>
+    <p class="desc">Gradiente, divergencia, rotor y laplaciano son las herramientas del cálculo vectorial que aparecen constantemente en electromagnetismo. Esto explica qué hace cada una antes de que las veas en acción.</p>
+  </div>
+
+  <!-- GRADIENTE -->
+  <div class="op-block">
+    <div class="op-header">
+      <h2 class="u2">Gradiente</h2>
+      <span class="op-symbol">∇f</span>
+      <span class="op-type">escalar → vector</span>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Definición en coordenadas cartesianas</div>
+      <div class="formula-math">$$\nabla f = \frac{\partial f}{\partial x}\,\hat{x} + \frac{\partial f}{\partial y}\,\hat{y} + \frac{\partial f}{\partial z}\,\hat{z}$$</div>
+      <div class="formula-desc">
+        Toma un campo escalar $f(\mathbf{r})$ y devuelve un campo vectorial. Cada componente es la derivada parcial de $f$ en esa dirección.
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-bottom:12px">
+      <div class="concept-card">
+        <h3>¿Qué hace?</h3>
+        <p>Apunta hacia la dirección de mayor crecimiento de $f$. Su módulo $|\nabla f|$ es la tasa de cambio máxima en ese punto.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Intuición</h3>
+        <p>Imagina el terreno como $f(x,y)$: el gradiente apunta cuesta arriba. Si quieres subir lo más rápido posible, camina en la dirección de $\nabla f$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>En electro: $\mathbf{E} = -\nabla V$</h3>
+        <p>El campo eléctrico apunta hacia donde el potencial <em>baja</em> más rápido. El signo negativo hace que las cargas positivas vayan de alto a bajo potencial.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Dato útil</h3>
+        <p>El gradiente es perpendicular a las superficies de nivel $f = \text{cte}$. Por eso $\mathbf{E}$ siempre es perpendicular a las equipotenciales.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIVERGENCIA -->
+  <div class="op-block">
+    <div class="op-header">
+      <h2 class="u1">Divergencia</h2>
+      <span class="op-symbol">∇·F</span>
+      <span class="op-type">vector → escalar</span>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Definición en coordenadas cartesianas</div>
+      <div class="formula-math">$$\nabla \cdot \mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}$$</div>
+      <div class="formula-desc">
+        Toma un campo vectorial $\mathbf{F}$ y devuelve un campo escalar. Suma las derivadas de cada componente respecto a su propia coordenada.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Teorema de Gauss — conecta la forma integral con la diferencial</div>
+      <div class="formula-math">$$\oiint_S \mathbf{F} \cdot d\mathbf{A} = \iiint_V \nabla \cdot \mathbf{F} \; dV$$</div>
+      <div class="formula-desc">
+        El flujo neto que sale de una superficie cerrada $S$ es igual a la integral de la divergencia en el volumen $V$ encerrado.
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-bottom:12px">
+      <div class="concept-card">
+        <h3>¿Qué hace?</h3>
+        <p>Mide cuánto "emana" o "converge" el campo en un punto. Positivo donde hay fuentes, negativo donde hay sumideros, cero donde fluye sin brotar ni drenarse.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Intuición</h3>
+        <p>Piensa en una fuente de agua: el agua que brota tiene divergencia positiva. El desagüe tiene divergencia negativa. Un río que fluye parejo tiene divergencia cero.</p>
+      </div>
+      <div class="concept-card">
+        <h3>En electro: $\nabla \cdot \mathbf{E} = \rho/\epsilon_0$</h3>
+        <p>La carga eléctrica es la fuente del campo. Donde hay carga positiva, $\mathbf{E}$ brota; donde hay carga negativa, $\mathbf{E}$ converge.</p>
+      </div>
+      <div class="concept-card">
+        <h3>En electro: $\nabla \cdot \mathbf{B} = 0$</h3>
+        <p>El campo magnético no tiene fuentes: no existen monopolos magnéticos. Las líneas de $\mathbf{B}$ siempre forman lazos cerrados, nunca emergen de un punto.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROTOR -->
+  <div class="op-block">
+    <div class="op-header">
+      <h2 class="u6">Rotor</h2>
+      <span class="op-symbol">∇×F</span>
+      <span class="op-type">vector → vector</span>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Definición — determinante simbólico</div>
+      <div class="formula-math">$$\nabla \times \mathbf{F} = \begin{vmatrix}\hat{x} & \hat{y} & \hat{z} \\ \partial_x & \partial_y & \partial_z \\ F_x & F_y & F_z\end{vmatrix}$$</div>
+      <div class="formula-desc">
+        Toma un campo vectorial $\mathbf{F}$ y devuelve otro campo vectorial. Se calcula expandiendo el determinante: cada componente resulta de derivadas cruzadas de las otras dos.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Teorema de Stokes — conecta la forma integral con la diferencial</div>
+      <div class="formula-math">$$\oint_C \mathbf{F} \cdot d\boldsymbol{\ell} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{A}$$</div>
+      <div class="formula-desc">
+        La circulación de $\mathbf{F}$ a lo largo de una curva cerrada $C$ es igual al flujo del rotor a través de cualquier superficie $S$ con borde $C$.
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-bottom:12px">
+      <div class="concept-card">
+        <h3>¿Qué hace?</h3>
+        <p>Mide la rotación local del campo. El vector resultante apunta en la dirección del eje de rotación (regla de la mano derecha); su módulo indica qué tan rápido rota.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Intuición</h3>
+        <p>Imagina una ruedita con paletas colocada en el campo. Si el campo la hace girar, hay rotor. Si la arrastra sin hacerla girar, el rotor es cero.</p>
+      </div>
+      <div class="concept-card">
+        <h3>En electro: $\nabla \times \mathbf{E} = 0$</h3>
+        <p>El campo electrostático es irrotacional: $\oint \mathbf{E} \cdot d\boldsymbol{\ell} = 0$ para cualquier curva cerrada. Esto garantiza que el potencial $V$ está bien definido.</p>
+      </div>
+      <div class="concept-card">
+        <h3>En electro: $\nabla \times \mathbf{B} = \mu_0 \mathbf{J}$</h3>
+        <p>La corriente es la "fuente de rotación" de $\mathbf{B}$ — es la ley de Ampère diferencial. Donde fluye corriente, el campo magnético circula en torno a ella.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAPLACIANO -->
+  <div class="op-block">
+    <div class="op-header">
+      <h2 class="u3">Laplaciano</h2>
+      <span class="op-symbol">∇²f</span>
+      <span class="op-type">escalar → escalar</span>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Definición — divergencia del gradiente</div>
+      <div class="formula-math">$$\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} = \nabla \cdot (\nabla f)$$</div>
+      <div class="formula-desc">
+        Toma un campo escalar y devuelve un campo escalar. Es la divergencia del gradiente: primero calcula el gradiente y luego le aplica la divergencia.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Ecuaciones de Poisson y Laplace</div>
+      <div class="formula-math">$$\nabla^2 V = -\frac{\rho}{\epsilon_0} \quad \text{(Poisson)} \qquad\qquad \nabla^2 V = 0 \quad \text{(Laplace)}$$</div>
+      <div class="formula-desc">
+        Poisson es la forma general. Laplace es el caso $\rho = 0$ (sin carga libre). Resolver estas ecuaciones con condiciones de borde da el potencial en la región.
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-bottom:12px">
+      <div class="concept-card">
+        <h3>¿Qué hace?</h3>
+        <p>Mide cuánto difiere $f$ de su promedio local. Si $\nabla^2 f > 0$, el valor en el punto está por debajo del promedio vecinal (fondo de un valle). Si $\nabla^2 f < 0$, está por encima (cima de una montaña).</p>
+      </div>
+      <div class="concept-card">
+        <h3>Propiedad del promedio</h3>
+        <p>Si $\nabla^2 f = 0$, el valor de $f$ en cualquier punto es exactamente el promedio sobre una esfera arbitraria alrededor. Los potenciales en regiones sin carga obedecen esto.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Unicidad de la solución</h3>
+        <p>La solución a $\nabla^2 V = 0$ con condiciones de borde fijas es única. Si encuentras una función que satisface Laplace y los bordes, es la única solución posible.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Laplaciano vectorial</h3>
+        <p>También existe $\nabla^2 \mathbf{F}$ aplicado componente a componente. En cartesianas: $\nabla^2 \mathbf{F} = (\nabla^2 F_x)\hat{x} + (\nabla^2 F_y)\hat{y} + (\nabla^2 F_z)\hat{z}$.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIP FINAL -->
+  <div class="tip-box">
+    <div class="tip-title">✦ Dónde aparecen en el curso</div>
+    <ul>
+      <li>El <strong>gradiente</strong> aparece desde Aux 4: $\mathbf{E} = -\nabla V$ relaciona campo y potencial.</li>
+      <li>La <strong>divergencia</strong> aparece en Aux 2–3: la Ley de Gauss diferencial $\nabla \cdot \mathbf{E} = \rho/\epsilon_0$ es la forma local del flujo.</li>
+      <li>El <strong>rotor</strong> aparece en Aux 18–19: $\nabla \times \mathbf{B} = \mu_0 \mathbf{J}$ es la Ley de Ampère diferencial.</li>
+      <li>El <strong>laplaciano</strong> aparece en Aux 5–7: resolver $\nabla^2 V = 0$ con condiciones de borde da el potencial en conductores.</li>
+    </ul>
+  </div>
+
+  <div class="page-nav" style="margin-top:40px">
+    <a href="../"><div class="nav-dir">← Volver</div><div class="nav-title">Notas de Clase</div></a>
+  </div>
+
+</div>
+</body>
+</html>
