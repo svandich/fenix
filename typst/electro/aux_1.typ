@@ -5,7 +5,7 @@ $ bold(E)(bold(r)) = 1/(4 pi epsilon.alt_0) q / norm(bold(r) - bold(r)')^2 hat(r
 
 #pagebreak()
 
-$ bold(E)(bold(r)) = 1/(4 pi epsilon.alt_0) integral rho(bold(r)') / (|bold(r) - bold(r)'|)^2 hat(r)_(r r') d V' $
+$ bold(E)(bold(r)) = 1/(4 pi epsilon.alt_0) integral rho(bold(r)') / (|bold(r) - bold(r)'|^2) hat(r)_(r r') d V' $
 
 #pagebreak()
 
