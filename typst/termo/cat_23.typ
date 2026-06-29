@@ -9,8 +9,8 @@ $ eta_"Carnot" = 1 - T_0/T_1 $
 
 #pagebreak()
 
-$ angle.l epsilon.alt(p_j) angle.r = k_B T / 2 quad quad "con" quad epsilon.alt(p_j) = alpha p_j^2 $
+$ chevron.l epsilon.alt(p_j) chevron.r = k_B T / 2 quad quad "con" quad epsilon.alt(p_j) = alpha p_j^2 $
 
 #pagebreak()
 
-$ angle.l E angle.r_"3D" = 3/2 N k_B T quad quad angle.l E angle.r_"2D" = N k_B T $
+$ chevron.l E chevron.r_"3D" = 3/2 N k_B T quad quad chevron.l E chevron.r_"2D" = N k_B T $

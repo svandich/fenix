@@ -9,7 +9,7 @@ $ P_r = e^(-beta E_r) / Z $
 
 #pagebreak()
 
-$ angle.l E angle.r = -(diff ln Z)/(diff beta) bar_(V,N) quad quad sigma_E^2 = (diff^2 ln Z)/(diff beta^2) $
+$ chevron.l E chevron.r = -(partial ln Z)/(partial beta) bar_(V,N) quad quad sigma_E^2 = (partial^2 ln Z)/(partial beta^2) $
 
 #pagebreak()
 

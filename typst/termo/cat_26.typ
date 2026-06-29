@@ -13,4 +13,4 @@ $ (P + a N^2/V^2)(V - N b) = N k_B T $
 
 #pagebreak()
 
-$ kappa_T = -1/V (diff V)/(diff P)_T quad quad kappa_T > 0 thin "(estable)" quad quad kappa_T < 0 thin "(inestable)" $
+$ kappa_T = -1/V (partial V)/(partial P)_T quad quad kappa_T > 0 thin "(estable)" quad quad kappa_T < 0 thin "(inestable)" $

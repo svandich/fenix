@@ -1,11 +1,11 @@
 #set page(width: auto, height: auto, margin: (x: 0.5em, y: 0.3em), fill: none)
 #set text(fill: rgb("#e6edf3"), size: 13pt)
 
-$ lr((diff x)/(diff y))_z lr((diff y)/(diff z))_x lr((diff z)/(diff x))_y = -1 quad quad lr((diff x)/(diff y))_z = (lr((diff x \/ diff w))_z) / (lr((diff y \/ diff w))_z) $
+$ lr((partial x)/(partial y))_z lr((partial y)/(partial z))_x lr((partial z)/(partial x))_y = -1 quad quad lr((partial x)/(partial y))_z = (lr((partial x \/ partial w))_z) / (lr((partial y \/ partial w))_z) $
 
 #pagebreak()
 
-$ d f = M thin d x + N thin d y quad "exacto" arrow.l.r.double lr((diff M)/(diff y))_x = lr((diff N)/(diff x))_y $
+$ d f = M thin d x + N thin d y quad "exacto" arrow.l.r.double lr((partial M)/(partial y))_x = lr((partial N)/(partial x))_y $
 
 #pagebreak()
 

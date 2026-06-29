@@ -5,7 +5,7 @@ $ Xi(T, V, mu) = sum_(N=0)^infinity sum_r e^(beta(mu N - E_(N,r))) = sum_(N=0)^i
 
 #pagebreak()
 
-$ p V = k_B T ln Xi quad quad angle.l N angle.r = z (diff ln Xi)/(diff z) quad quad angle.l E angle.r = -(diff ln Xi)/(diff beta) bar_(z,V) $
+$ p V = k_B T ln Xi quad quad chevron.l N chevron.r = z (partial ln Xi)/(partial z) quad quad chevron.l E chevron.r = -(partial ln Xi)/(partial beta) bar_(z,V) $
 
 #pagebreak()
 
@@ -13,4 +13,4 @@ $ overline(n)_"FD" (epsilon) = 1/(e^(beta(epsilon - mu)) + 1) quad quad overline
 
 #pagebreak()
 
-$ T_F = epsilon_F / k_B quad quad T_"BE" = (2 pi planck.reduce^2)/(m k_B) lr((N \/ (V zeta(3\/2))))^(2\/3) $
+$ T_F = epsilon_F / k_B quad quad T_"BE" = (2 pi ℏ^2)/(m k_B) lr((N \/ (V zeta(3\/2))))^(2\/3) $

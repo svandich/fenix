@@ -9,7 +9,7 @@ $ U = T S - p V + mu N arrow.r.double G = N mu quad quad S thin d T - V thin d p
 
 #pagebreak()
 
-$ u(omega, T) = (planck.reduce omega^3)/(pi^2 c^3) dot.op 1/(e^(planck.reduce omega \/ k_B T) - 1) quad quad u_"total" = (pi^2 k_B^4)/(15 planck.reduce^3 c^3) T^4 $
+$ u(omega, T) = (ℏ omega^3)/(pi^2 c^3) dot.op 1/(e^(ℏ omega \/ k_B T) - 1) quad quad u_"total" = (pi^2 k_B^4)/(15 ℏ^3 c^3) T^4 $
 
 #pagebreak()
 

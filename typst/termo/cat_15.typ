@@ -14,8 +14,8 @@ $ F = U - T S quad quad H = U + p V quad quad G = U - T S + p V $
 
 #pagebreak()
 
-$ U = F - T lr((diff F)/(diff T))_V = -T^2 lr([(diff (F slash T))/(diff T)]_V) $
+$ U = F - T lr((partial F)/(partial T))_V = -T^2 lr([(partial (F slash T))/(partial T)]_V) $
 
 #pagebreak()
 
-$ lr((diff S)/(diff p))_T = -lr((diff V)/(diff T))_p $
+$ lr((partial S)/(partial p))_T = -lr((partial V)/(partial T))_p $

@@ -1,7 +1,7 @@
 #set page(width: auto, height: auto, margin: (x: 0.5em, y: 0.3em), fill: none)
 #set text(fill: rgb("#e6edf3"), size: 13pt)
 
-$ ((diff P)/(diff V))_T = 0 quad quad ((diff^2 P)/(diff V^2))_T = 0 quad arrow.r.double quad T_c, thin V_c, thin P_c $
+$ ((partial P)/(partial V))_T = 0 quad quad ((partial^2 P)/(partial V^2))_T = 0 quad arrow.r.double quad T_c, thin V_c, thin P_c $
 
 #pagebreak()
 

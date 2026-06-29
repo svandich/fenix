@@ -5,7 +5,7 @@ $ d F = -S thin d T - p thin d V + mu thin d N $
 
 #pagebreak()
 
-$ S = k_B lr((ln Z - beta (diff ln Z)/(diff beta))) quad quad p = k_B T (diff ln Z)/(diff V) $
+$ S = k_B lr((ln Z - beta (partial ln Z)/(partial beta))) quad quad p = k_B T (partial ln Z)/(partial V) $
 
 #pagebreak()
 
@@ -13,4 +13,4 @@ $ Z_N = 1/(N!) lr((V / lambda_"th"^3))^N quad quad lambda_"th" = h / sqrt(2 pi m
 
 #pagebreak()
 
-$ lr((diff S)/(diff V))_T = lr((diff p)/(diff T))_V $
+$ lr((partial S)/(partial V))_T = lr((partial p)/(partial T))_V $

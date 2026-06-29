@@ -5,11 +5,11 @@ $ d Omega = -S thin d T - p thin d V - N thin d mu quad quad Omega = -p V $
 
 #pagebreak()
 
-$ C_p - C_V = (T V alpha_p^2) / kappa_T quad quad alpha_p = 1/V lr((diff V)/(diff T))_p quad quad kappa_T = -1/V lr((diff V)/(diff p))_T $
+$ C_p - C_V = (T V alpha_p^2) / kappa_T quad quad alpha_p = 1/V lr((partial V)/(partial T))_p quad quad kappa_T = -1/V lr((partial V)/(partial p))_T $
 
 #pagebreak()
 
-$ lr((diff U)/(diff V))_T = T lr((diff p)/(diff T))_V - p $
+$ lr((partial U)/(partial V))_T = T lr((partial p)/(partial T))_V - p $
 
 #pagebreak()
 

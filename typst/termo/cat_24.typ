@@ -1,7 +1,7 @@
 #set page(width: auto, height: auto, margin: (x: 0.5em, y: 0.3em), fill: none)
 #set text(fill: rgb("#e6edf3"), size: 13pt)
 
-$ angle.l epsilon angle.r = m angle.l v_"cm"^2 angle.r / 2 + sum_(j=1)^3 I_j omega_j^2 / 2 quad arrow.r.double quad angle.l epsilon angle.r = 3 k_B T $
+$ chevron.l epsilon chevron.r = m chevron.l v_"cm"^2 chevron.r / 2 + sum_(j=1)^3 I_j omega_j^2 / 2 quad arrow.r.double quad chevron.l epsilon chevron.r = 3 k_B T $
 
 #pagebreak()
 

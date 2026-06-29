@@ -5,7 +5,7 @@ $ F_"Stokes" = 6 pi eta r v $
 
 #pagebreak()
 
-$ n thin 6 pi eta r v = -D (diff n)/(diff x) quad quad "con" quad P_"osm" = n k_B T $
+$ n thin 6 pi eta r v = -D (partial n)/(partial x) quad quad "con" quad P_"osm" = n k_B T $
 
 #pagebreak()
 
