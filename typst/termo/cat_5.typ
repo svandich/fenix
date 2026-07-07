@@ -14,3 +14,11 @@ $ v_p = sqrt((2 k_B T)/m) quad chevron.l v chevron.r = sqrt((8 k_B T)/(pi m)) qu
 #pagebreak()
 
 $ r_1 / r_2 = sqrt(m_2 / m_1) $
+
+#pagebreak()
+
+$ f_"2D" (v) = m/(k_B T) v exp(-(m v^2)/(2 k_B T)) $
+
+#pagebreak()
+
+$ v_p = sqrt((k_B T)/m) quad chevron.l v chevron.r = sqrt((pi k_B T)/(2m)) quad v_"rms" = sqrt((2 k_B T)/m) $
