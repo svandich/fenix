@@ -5,7 +5,7 @@ $ f(v_x) = sqrt(m / (2 pi k_B T)) exp(-(m v_x^2) / (2 k_B T)) $
 
 #pagebreak()
 
-$ f(v) = 4 pi n (m / (2 pi k_B T))^(3/2) v^2 exp(-(m v^2) / (2 k_B T)) $
+$ f(v) = 4 pi (m / (2 pi k_B T))^(3/2) v^2 exp(-(m v^2) / (2 k_B T)) $
 
 #pagebreak()
 
