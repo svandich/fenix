@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termodinámica Química — Temario</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="./">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link active" href="./"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+    <div class="hero">
+      <div class="hero-tag">Notas de clase</div>
+      <h1>Termodinámica<br>Química</h1>
+      <p>IQ2212 — Departamento de Ingeniería Química, Biotecnología y Materiales, Universidad de Chile. Resumen de las cátedras y auxiliares del curso: temario, conceptos clave, fórmulas y estrategia de resolución. Haz clic en cualquier entrada para ver su explicación detallada.</p>
+    </div>
+
+    <!-- BLOQUE 1: Gases ideales -->
+    <div class="unit-group">
+      <div class="unit-group-header">
+        <div class="unit-line" style="background:var(--unit-1)"></div>
+        <h2 class="u1">Gases Ideales</h2>
+        <span class="unit-range">Clase 1 · Aux 1</span>
+      </div>
+      <table class="temario-table">
+        <thead>
+          <tr><th>#</th><th>Sesión</th><th>Temas principales</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="aux-num">01</td>
+            <td class="aux-name"><a href="clase_1/">Gas Ideal, Leyes Empíricas y Ley de Dalton</a></td>
+            <td class="aux-topics">Extensivas e intensivas · Boyle y Charles-Gay-Lussac · Escala termodinámica · $PV=nRT$ · Presiones parciales · Ley barométrica</td>
+          </tr>
+          <tr>
+            <td class="aux-num">A1</td>
+            <td class="aux-name"><a href="aux_1/">Auxiliar 1: Gases Ideales</a></td>
+            <td class="aux-topics">Estequiometría con gas ideal · Dalton en mezclas · Tabla de reacción y grado de avance · Deducción de la barométrica</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BLOQUE 2: Gases reales -->
+    <div class="unit-group">
+      <div class="unit-group-header">
+        <div class="unit-line" style="background:var(--unit-2)"></div>
+        <h2 class="u2">Gases Reales y Ecuaciones de Estado</h2>
+        <span class="unit-range">Clases 2 – 3 · Aux 2</span>
+      </div>
+      <table class="temario-table">
+        <thead>
+          <tr><th>#</th><th>Sesión</th><th>Temas principales</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="aux-num">02</td>
+            <td class="aux-name"><a href="clase_2/">Desviaciones del Gas Ideal y Van der Waals</a></td>
+            <td class="aux-topics">Factor de compresibilidad $Z$ · Volumen excluido $b$ · Fuerzas atractivas $a$ · $(P + a/\bar V^2)(\bar V - b) = RT$</td>
+          </tr>
+          <tr>
+            <td class="aux-num">03</td>
+            <td class="aux-name"><a href="clase_3/">Punto Crítico y Estados Correspondientes</a></td>
+            <td class="aux-topics">Desarrollo virial · Temperatura de Boyle · Constantes críticas · $Z_c = 3/8$ · Variables reducidas · Diagrama generalizado</td>
+          </tr>
+          <tr>
+            <td class="aux-num">A2</td>
+            <td class="aux-name"><a href="aux_2/">Auxiliar 2: Gases Reales</a></td>
+            <td class="aux-topics">Diagrama de compresibilidad · $a$ y $b$ desde datos críticos · Regímenes de $Z$ · $Z_c$ de otras ecuaciones de estado</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BLOQUE 3: Primera ley -->
+    <div class="unit-group">
+      <div class="unit-group-header">
+        <div class="unit-line" style="background:var(--unit-3)"></div>
+        <h2 class="u3">Primera Ley de la Termodinámica</h2>
+        <span class="unit-range">Clases 4 – 6 · Aux 3 – 4</span>
+      </div>
+      <table class="temario-table">
+        <thead>
+          <tr><th>#</th><th>Sesión</th><th>Temas principales</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="aux-num">04</td>
+            <td class="aux-name"><a href="clase_4/">Ley Cero, Trabajo y Calor</a></td>
+            <td class="aux-topics">Sistema, frontera y entorno · Ley cero · Trabajo de expansión en $n$ etapas · Trabajo máximo · Reversible vs. irreversible</td>
+          </tr>
+          <tr>
+            <td class="aux-num">05</td>
+            <td class="aux-name"><a href="clase_5/">Energía Interna, Capacidades Caloríficas y Entalpía</a></td>
+            <td class="aux-topics">$\Delta U = Q - W$ · $C_V = (\partial U/\partial T)_V$ · Experimento de Joule · Ley de Joule · $H \equiv U + PV$ · $\Delta H = Q_P$</td>
+          </tr>
+          <tr>
+            <td class="aux-num">06</td>
+            <td class="aux-name"><a href="clase_6/">Relación $C_P$–$C_V$ y Efecto Joule-Thomson</a></td>
+            <td class="aux-topics">$C_P - C_V = R$ · Estrangulamiento adiabático · Proceso isoentálpico · $\mu_{\text{JT}} = (\partial T/\partial P)_H$ · Regla cíclica</td>
+          </tr>
+          <tr>
+            <td class="aux-num">A3</td>
+            <td class="aux-name"><a href="aux_3/">Auxiliar 3: Primera Ley</a></td>
+            <td class="aux-topics">Trayectorias $P$–$V$ · Trabajo reversible de Van der Waals · Expansión contra el vacío · Ciclos isocórico-isotérmico-isobárico</td>
+          </tr>
+          <tr>
+            <td class="aux-num">A4</td>
+            <td class="aux-name"><a href="aux_4/">Auxiliar 4: Primera Ley II</a></td>
+            <td class="aux-topics">Isobárico + adiabático · Demostraciones con diferenciales totales · $\mu_{\text{JT}}$ de Van der Waals · $TV^{\gamma-1}=$ cte. · Ley de Hess</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BLOQUE 4: Termoquímica -->
+    <div class="unit-group">
+      <div class="unit-group-header">
+        <div class="unit-line" style="background:var(--unit-4)"></div>
+        <h2 class="u4">Termoquímica</h2>
+        <span class="unit-range">Clases 7 – 8</span>
+      </div>
+      <table class="temario-table">
+        <thead>
+          <tr><th>#</th><th>Sesión</th><th>Temas principales</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="aux-num">07</td>
+            <td class="aux-name"><a href="clase_7/">Calor de Reacción y Entalpías de Formación</a></td>
+            <td class="aux-topics">Exo y endotérmico · $\Delta H$ de reacción · Reacciones de formación · Estado estándar · $\Delta H_f^\circ$ de elementos $= 0$</td>
+          </tr>
+          <tr>
+            <td class="aux-num">08</td>
+            <td class="aux-name"><a href="clase_8/">Ley de Hess y Ecuación de Kirchhoff</a></td>
+            <td class="aux-topics">Ley de Hess · Álgebra de reacciones · Ciclo termodinámico en $T$ · $\Delta C_P^\circ$ · $\Delta H_2 = \Delta H_1 + \int\Delta C_P\,dT$</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PROGRAMA DEL CURSO -->
+    <section style="margin-top:52px">
+      <h2><span class="section-icon">🗺️</span> Programa del curso</h2>
+      <div class="card">
+        <p style="font-size:13.5px;color:var(--text-muted);line-height:1.65;margin-bottom:14px">
+          Las cuatro unidades temáticas del programa oficial. Los apuntes cubren hasta donde ha avanzado el curso; el resto se irá agregando.
+        </p>
+        <ul class="topic-list">
+          <li><strong>Unidad 1 — Leyes de la Termodinámica</strong> (9 semanas). Ecuaciones de estado empíricas, gas ideal y no ideal · Ley cero · Primera ley: reversibilidad, trabajo, calor, entalpía, termoquímica, capacidades térmicas, ciclos · Segunda ley: entropía, Clausius, Carnot, ciclos Rankine/Brayton/Otto/Diesel, refrigeración · Tercera ley · Energías libres de Helmholtz y Gibbs, Gibbs-Helmholtz, relaciones de Maxwell, potencial químico.</li>
+          <li><strong>Unidad 2 — Equilibrio</strong> (2 semanas). Equilibrio en reacciones químicas · Equilibrio de fases · Regla de las fases de Gibbs · Ecuación de Clapeyron y aproximación de Clausius-Clapeyron · Diagramas de fases de un componente.</li>
+          <li><strong>Unidad 3 — Soluciones ideales y no ideales</strong> (1,5 semanas). Termodinámica de soluciones · Ecuación de Gibbs-Duhem · Propiedades molares parciales · Propiedades coligativas · Coeficientes de actividad y fugacidad.</li>
+          <li><strong>Unidad 4 — Cinética química</strong> (2,5 semanas). Reacciones de primer y segundo orden · Reacciones complejas: paralelas, opuestas y consecutivas · Mecanismos de reacción · Enfoque de Arrhenius.</li>
+        </ul>
+      </div>
+      <div class="tip-box" style="margin-top:12px">
+        <div class="tip-title">✦ Lo que falta por cubrir</div>
+        <ul>
+          <li>Los apuntes llegan hasta la ecuación de Kirchhoff (clase 8, unidad 1). Lo que sigue en el programa: segunda ley y entropía, ciclos termodinámicos, tercera ley y energías libres.</li>
+          <li>El convenio de signos de este curso es $\Delta U = Q - W$, con $W > 0$ para el trabajo <em>producido</em> por el sistema. Es el opuesto al que usan varios textos de física — incluido el curso de <a href="../termo/">Termodinámica</a> del DFI que también está en este repositorio.</li>
+          <li>Bibliografía recomendada: Castellan, <em>Fisicoquímica</em> · Atkins, <em>Química Física</em> · Levine, <em>Fisicoquímica</em> · Mortimer, <em>Physical Chemistry</em>.</li>
+        </ul>
+      </div>
+    </section>
+
+</div>
+</main>
+</body>
+</html>

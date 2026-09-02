@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 2 — Gases Reales</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link active" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Gases reales</div>
+    <div class="unit-pill u2 bg-u2">Gases reales · Clases 2–3</div>
+    <h1>Auxiliar 2: Gases Reales</h1>
+    <p class="desc">Seis problemas de gases reales: uso del diagrama generalizado de compresibilidad, derivación del punto crítico para Van der Waals y para otras ecuaciones de estado, y análisis de $Z$ en los distintos regímenes de presión.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que ejercita</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Comparación cuantitativa entre gas ideal y gas real mediante $Z$</li>
+        <li>Lectura del diagrama generalizado de compresibilidad con variables reducidas</li>
+        <li>Derivación de $a$ y $b$ a partir de las coordenadas críticas</li>
+        <li>Cálculo de $Z_c$ para Van der Waals y para otras ecuaciones de estado</li>
+        <li>Deducción de la temperatura de Boyle desde el desarrollo virial</li>
+        <li>Análisis del comportamiento de $Z$ en los límites de baja y alta presión</li>
+        <li>Ley de estados correspondientes aplicada a dos gases distintos</li>
+        <li>Presión crítica de componentes en una mezcla</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Herramientas que hay que tener a mano</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Usar el diagrama de $Z$</h3>
+        <p>Calcular $\pi = P/P_c$ y $\tau = T/T_c$, entrar al gráfico con esas dos coordenadas, leer $Z$, y despejar $\bar V = ZRT/P$. El diagrama es único para todos los gases — esa es la utilidad de la ley de estados correspondientes.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Condiciones del punto crítico</h3>
+        <p>$(\partial P/\partial\bar V)_T = 0$ y $(\partial^2 P/\partial\bar V^2)_T = 0$. Dos ecuaciones más la ecuación de estado dan un sistema de tres. Funciona para <em>cualquier</em> ecuación de estado, no sólo Van der Waals: es lo que pide el P6.</p>
+      </div>
+      <div class="concept-card">
+        <h3>De $a$, $b$ a datos críticos y viceversa</h3>
+        <p>$a = 27R^2T_c^2/64P_c$ y $b = RT_c/8P_c$. Los datos críticos están tabulados, así que esta es la vía práctica para obtener las constantes de un gas cualquiera.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Temperatura de Boyle</h3>
+        <p>Se obtiene anulando el segundo coeficiente virial: $b - a/RT_B = 0 \Rightarrow T_B = a/Rb$. Sustituyendo las expresiones en función de datos críticos queda $T_B = 27T_c/8$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Límites de $Z$</h3>
+        <p>A $P$ baja domina el término $-a/RT$ y $Z < 1$. A $P$ alta domina $b$ y $Z > 1$. A $T$ alta y $P$ baja ambos efectos se vuelven despreciables y $Z \to 1$. Argumentar cuál término se desprecia es parte de la respuesta.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Estados correspondientes entre gases</h3>
+        <p>Si el gas 1 está a $(P_1, T_1)$, el gas 2 está en estado correspondiente cuando $P_2/P_{c2} = P_1/P_{c1}$ y $T_2/T_{c2} = T_1/T_{c1}$. De ahí se despejan $P_2$ y $T_2$ directamente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas que se usan</h2>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Volumen real a partir de $Z$</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_2_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Con $Z = 1$ se recupera el resultado del gas ideal: comparar ambos es exactamente lo que pide el P1.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Variables reducidas y diagrama generalizado</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_2_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Las coordenadas de entrada al gráfico. Ambas son adimensionales.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Condiciones del punto crítico</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_2_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Punto de inflexión con tangente horizontal. Método general, aplicable a cualquier ecuación de estado.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Constantes de Van der Waals desde datos críticos</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_2_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $Z_c = 3/8$ es una predicción universal del modelo; los valores experimentales rondan 0,27–0,30, lo que marca el límite de precisión de Van der Waals.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Temperatura de Boyle</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_2_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Anular el coeficiente de $P$ en el desarrollo de $Z$: es exactamente lo que significa "comportamiento aproximadamente ideal" en la indicación del P2.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Regímenes de $Z$</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_2_6.svg" alt=""></div>
+      <div class="formula-desc">
+        Los tres casos que hay que discutir en el P3, cada uno justificando qué término se desprecia y por qué.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">✏️</span> Problemas</h2>
+
+    <div class="problem-block u2">
+      <div class="problem-head">
+        <span class="problem-num">P1</span>
+        <span class="problem-title">Variables reducidas — expansión isotérmica</span>
+        <span class="problem-badge">Resuelto en aula</span>
+      </div>
+      <div class="problem-statement">
+        25 moles de un gas están inicialmente en un recipiente cerrado a 134 atm y $20\,^\circ$C. El gas se expande hasta 50 atm a temperatura constante. Determinar el cambio de volumen alcanzado tras la expansión mediante (i) la ecuación del gas ideal y (ii) el diagrama generalizado del factor de compresibilidad. Comparar críticamente los valores.
+        <br>Datos: $P_c = 33{,}5$ atm; $T_c = 195$ K; $R = 0{,}0821$ L·atm·mol$^{-1}$K$^{-1}$.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(i) Con gas ideal: $V = nRT/P$ en cada estado y restar. Como $T$ es constante, basta $\Delta V = nRT(1/P_2 - 1/P_1)$.</li>
+          <li>(ii) Calcular $\tau = T/T_c$ (la misma para ambos estados, por ser isotérmico) y los dos $\pi_i = P_i/P_c$.</li>
+          <li>Entrar al diagrama con cada par $(\tau, \pi_i)$ y leer $Z_1$ y $Z_2$. Notar que $\tau \approx 1{,}5$, así que se trabaja cerca de la región donde las desviaciones son grandes.</li>
+          <li>Calcular $V_i = nZ_iRT/P_i$ para cada estado y restar.</li>
+          <li>Comparar: la desviación debe ser mayor a 134 atm que a 50 atm, porque $Z$ se aleja más de 1 al aumentar la presión. Comentar el signo y la magnitud del error del modelo ideal.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u2">
+      <div class="problem-head">
+        <span class="problem-num">P2</span>
+        <span class="problem-title">Punto crítico de Van der Waals</span>
+        <span class="problem-badge">Resuelto en aula</span>
+      </div>
+      <div class="problem-statement">
+        Para la ecuación $P = \frac{RT}{\bar V - b} - \frac{a}{\bar V^2}$:
+        <ol>
+          <li>Demostrar que $a = \dfrac{27R^2T_c^2}{64P_c}$ y $b = \dfrac{RT_c}{8P_c}$.</li>
+          <li>Encontrar el valor de $Z_c$.</li>
+          <li>Encontrar una expresión para la temperatura de Boyle. Indicación: es la temperatura a la cual el gas presenta comportamiento aproximadamente ideal.</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Derivar $P$ respecto de $\bar V$ una y dos veces, e igualar ambas a cero en el punto crítico.</li>
+          <li>Dividir una ecuación por la otra: se elimina $RT_c$ y queda una relación simple entre $\bar V_c$ y $b$. De ahí sale $\bar V_c = 3b$.</li>
+          <li>Volver a cualquiera de las dos derivadas para despejar $T_c$, y a la ecuación de estado original para $P_c$.</li>
+          <li>Invertir el sistema: expresar $a$ y $b$ en función de $T_c$ y $P_c$ (eliminando $\bar V_c$, que suele medirse con menos precisión).</li>
+          <li>(b) Sustituir las tres coordenadas críticas en $Z_c = P_c\bar V_c/RT_c$. Todo se cancela y queda un número puro.</li>
+          <li>(c) Desarrollar $Z$ en serie de potencias de $P$, tomar el coeficiente del término lineal e igualarlo a cero. Opcionalmente, expresar $T_B$ en función de $T_c$.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u2">
+      <div class="problem-head">
+        <span class="problem-num">P3</span>
+        <span class="problem-title">Factor de compresibilidad por regímenes</span>
+        <span class="problem-badge">C1 Otoño 2026</span>
+      </div>
+      <div class="problem-statement">
+        Para un gas que obedece Van der Waals, determinar el factor de compresibilidad en los casos siguientes, señalando en cada uno el rango de valores que adopta y argumentando brevemente todo supuesto empleado:
+        <ol>
+          <li>A bajas presiones. ¿Qué ocurre con $Z$ si se aumenta la presión?</li>
+          <li>A elevadas presiones. ¿Qué ocurre con $Z$ si se aumenta la presión?</li>
+          <li>A elevadas temperaturas y bajas presiones.</li>
+          <li>Representar los tres casos en un diagrama apropiado.</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Partir del desarrollo $Z = 1 + \frac{1}{RT}\left(b - \frac{a}{RT}\right)P + \dots$ y decidir en cada caso qué término se conserva.</li>
+          <li>(i) A $P$ baja, $\bar V$ es grande: el término $b/\bar V$ es despreciable frente a $a/RT\bar V$. Domina la atracción, $Z < 1$, y $Z$ decrece al subir $P$.</li>
+          <li>(ii) A $P$ alta, $\bar V$ se acerca a $b$: el denominador $\bar V - b$ se vuelve pequeño y ese término explota. Domina el volumen excluido, $Z > 1$, y $Z$ crece al subir $P$.</li>
+          <li>(iii) A $T$ alta, $a/RT \to 0$, y a $P$ baja el término en $b$ tampoco pesa: $Z \to 1$, comportamiento ideal.</li>
+          <li>(iv) Graficar $Z$ vs. $P$ con $Z = 1$ como línea de referencia horizontal, dibujando las tres curvas: una que baja bajo 1 y vuelve a subir, una que crece monótonamente, y una prácticamente plana en 1.</li>
+          <li>Cada afirmación debe ir acompañada del supuesto que la justifica — el enunciado lo pide explícitamente y es donde se reparte el puntaje.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u2">
+      <div class="problem-head">
+        <span class="problem-num">P4</span>
+        <span class="problem-title">Estados correspondientes entre $\mathrm{H_2}$ y $\mathrm{N_2}$</span>
+        <span class="problem-badge">Propuesto · C1 Primavera 2024</span>
+      </div>
+      <div class="problem-statement">
+        En un contenedor hay hidrógeno a 51,04 atm y 37,92 K. En un segundo contenedor se almacena nitrógeno. Con los datos del punto crítico de cada gas y el diagrama de compresibilidad, determinar:
+        <ol>
+          <li>La temperatura y presión a la que debe someterse el nitrógeno para estar en estados correspondientes con el hidrógeno.</li>
+          <li>El correspondiente factor de compresibilidad usando el diagrama.</li>
+          <li>Los volúmenes molares y reducidos de cada gas. Comentar el resultado.</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Calcular $\pi$ y $\tau$ del hidrógeno con sus propias constantes críticas.</li>
+          <li>Imponer que el nitrógeno tenga los <em>mismos</em> $\pi$ y $\tau$: $P_{\mathrm{N_2}} = \pi P_{c,\mathrm{N_2}}$ y $T_{\mathrm{N_2}} = \tau T_{c,\mathrm{N_2}}$.</li>
+          <li>(b) Como ambos comparten $(\tau, \pi)$, entran al mismo punto del diagrama: leen el <em>mismo</em> $Z$. Ese es el contenido de la ley de estados correspondientes.</li>
+          <li>(c) Calcular $\bar V_i = Z RT_i/P_i$ para cada gas — darán números distintos, porque las condiciones absolutas difieren.</li>
+          <li>Calcular $\phi_i = \bar V_i/\bar V_{c,i}$: deben coincidir. Ese es el comentario que pide el enunciado.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u2">
+      <div class="problem-head">
+        <span class="problem-num">P5</span>
+        <span class="problem-title">Presión crítica de los componentes de una mezcla</span>
+        <span class="problem-badge">Propuesto</span>
+      </div>
+      <div class="problem-statement">
+        Un cilindro a $96\,^\circ$C contiene una mezcla de butano ($x = 0{,}31$, $Z = 0{,}70$, $T_c = 408$ K), iso-butano ($x = 0{,}24$, $Z = 0{,}80$, $T_c = 425$ K) y propano ($x = 0{,}45$, $Z = 0{,}75$, $T_c = 396{,}7$ K). Calcular la presión crítica de cada gas considerando que la presión total es 58,39 atm.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Obtener la presión parcial de cada componente con Dalton: $p_i = x_iP$.</li>
+          <li>Calcular la temperatura reducida de cada gas: $\tau_i = T/T_{c,i}$, con $T = 369{,}15$ K.</li>
+          <li>Entrar al diagrama generalizado con $\tau_i$ y el $Z_i$ dado, y leer <em>hacia atrás</em> la presión reducida $\pi_i$ correspondiente. Este es el paso invertido respecto del uso habitual del diagrama.</li>
+          <li>Despejar $P_{c,i} = p_i/\pi_i$.</li>
+          <li>Chequeo: los valores obtenidos deben ser del orden de decenas de atm, comparables a los datos tabulados de estos hidrocarburos.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u2">
+      <div class="problem-head">
+        <span class="problem-num">P6</span>
+        <span class="problem-title">$Z_c$ para otra ecuación de estado</span>
+        <span class="problem-badge">Propuesto</span>
+      </div>
+      <div class="problem-statement">
+        Para la ecuación de estado propuesta $P = \dfrac{RT}{\bar V} - \dfrac{B}{\bar V^2} + \dfrac{C}{\bar V^3}$, encontrar el valor numérico del factor de compresibilidad en el punto crítico.
+        <br>Indicación: en el punto crítico se cumple $(\partial P/\partial\bar V)_T = 0$ y $(\partial^2P/\partial\bar V^2)_T = 0$.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Mismo método que en el P2, pero con esta ecuación: derivar una y dos veces respecto de $\bar V$.</li>
+          <li>Igualar ambas derivadas a cero en el punto crítico. Quedan dos ecuaciones en $\bar V_c$, $T_c$, $B$ y $C$.</li>
+          <li>Combinarlas para eliminar $RT_c$ y despejar $\bar V_c$ en función de $B$ y $C$.</li>
+          <li>Retroceder para obtener $T_c$ y luego $P_c$ evaluando la ecuación de estado original.</li>
+          <li>Sustituir en $Z_c = P_c\bar V_c/RT_c$: los parámetros $B$ y $C$ deben cancelarse y dejar un número puro, igual que el $3/8$ de Van der Waals.</li>
+          <li>Comparar con $3/8$: cada ecuación de estado predice su propio $Z_c$ universal, y ninguna acierta el valor experimental.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Estrategia general</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Cómo abordar este auxiliar</div>
+      <ul>
+        <li>El método del punto crítico (dos derivadas nulas + ecuación de estado) aparece en el P2 y en el P6 con ecuaciones distintas. Aprender el <em>método</em>, no el resultado $\bar V_c = 3b$.</li>
+        <li>Al usar el diagrama generalizado, verificar siempre que $\pi$ y $\tau$ estén dentro del rango graficado antes de leer $Z$.</li>
+        <li>El diagrama se puede leer en ambas direcciones: dados $(\tau,\pi)$ se obtiene $Z$, y dados $(\tau, Z)$ se obtiene $\pi$. El P5 usa la segunda.</li>
+        <li>Antes de desarrollar en serie, decidir la variable: $Z$ en potencias de $1/\bar V$ o en potencias de $P$. Para la temperatura de Boyle conviene la segunda.</li>
+        <li>Cuando el enunciado pide "argumentar los supuestos" (P3), el desarrollo algebraico sin la justificación física vale poco. Decir explícitamente qué término se desprecia y por qué.</li>
+        <li>Chequeo permanente: $Z < 1$ significa atracción dominante; $Z > 1$, volumen excluido dominante. Si un resultado numérico contradice el régimen esperado, revisar.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="qa2_1" data-correct="3">
+        <div class="quiz-question">1. ¿Qué hace legítimo usar un único diagrama de $Z$ para todos los gases?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa2_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Que todas las sustancias tienen constantes $a$ y $b$ parecidas</span></label>
+          <label class="quiz-option"><input type="radio" name="qa2_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Que $Z$ es siempre menor que 1</span></label>
+          <label class="quiz-option"><input type="radio" name="qa2_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Que la ley de Dalton se aplica a mezclas de cualquier gas</span></label>
+          <label class="quiz-option"><input type="radio" name="qa2_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Que en variables reducidas la ecuación de estado pierde toda referencia al gas particular</span></label>
+        </div>
+        <script type="text/explanation" id="qa2_1-exp">Al escribir Van der Waals en términos de $\pi$, $\tau$ y $\phi$ se obtiene $\pi = 8\tau/(3\phi-1) - 3/\phi^2$: no queda ni $a$ ni $b$ ni $R$. Fijados $\tau$ y $\pi$, el $\phi$ resultante — y con él $Z$ — es el mismo para cualquier sustancia. Esa es la ley de los estados correspondientes, y es lo que convierte el diagrama en una herramienta universal. En la práctica es aproximada, pero suficientemente buena para ingeniería.</script>
+        <div class="quiz-feedback" id="qa2_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qa2_2" data-correct="1">
+        <div class="quiz-question">2. Al aplicar las condiciones del punto crítico a una ecuación de estado, ¿cuántas ecuaciones se tienen y para cuántas incógnitas?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa2_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Dos ecuaciones (las derivadas) para tres incógnitas: el sistema queda indeterminado</span></label>
+          <label class="quiz-option"><input type="radio" name="qa2_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Tres: las dos derivadas más la propia ecuación de estado, para $\bar V_c$, $P_c$ y $T_c$</span></label>
+          <label class="quiz-option"><input type="radio" name="qa2_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Una sola, porque las dos derivadas son equivalentes</span></label>
+          <label class="quiz-option"><input type="radio" name="qa2_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Cuatro, contando también la condición $Z = 1$</span></label>
+        </div>
+        <script type="text/explanation" id="qa2_2-exp">Las dos derivadas nulas dan dos ecuaciones y la ecuación de estado evaluada en el punto crítico da la tercera; las incógnitas son las tres coordenadas críticas. El procedimiento práctico es dividir una derivada por la otra — así se elimina $RT_c$ y sale $\bar V_c$ en función de los parámetros —, luego retroceder para $T_c$ y finalmente para $P_c$. En el punto crítico $Z_c \neq 1$: para Van der Waals vale $3/8$.</script>
+        <div class="quiz-feedback" id="qa2_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qa2_3" data-correct="0">
+        <div class="quiz-question">3. Un gas a presión moderada presenta $Z$ que decrece al aumentar $P$. ¿Qué se concluye?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa2_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Que $a/RT > b$: dominan las fuerzas atractivas y $T < T_B$</span></label>
+          <label class="quiz-option"><input type="radio" name="qa2_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Que $b > a/RT$: domina el volumen molecular</span></label>
+          <label class="quiz-option"><input type="radio" name="qa2_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Que el gas está exactamente en su temperatura de Boyle</span></label>
+          <label class="quiz-option"><input type="radio" name="qa2_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Que el gas está sobre su temperatura crítica</span></label>
+        </div>
+        <script type="text/explanation" id="qa2_3-exp">La pendiente inicial es $\frac{1}{RT}\left(b - \frac{a}{RT}\right)$. Que $Z$ decrezca con $P$ significa pendiente negativa, es decir $a/RT > b$: la atracción pesa más que el volumen excluido. Como $T_B = a/Rb$, esa desigualdad equivale a $T < T_B$. En $T = T_B$ la pendiente sería exactamente nula, y sobre $T_B$ sería positiva. La temperatura crítica es otra cosa: $T_B = 3{,}375\,T_c$, así que un gas puede estar sobre $T_c$ y aun así mostrar pendiente negativa.</script>
+        <div class="quiz-feedback" id="qa2_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../clase_3/"><div class="nav-dir">← Anterior</div><div class="nav-title">Punto Crítico y Ley de los Estados Correspondientes</div></a>
+    <a href="../clase_4/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Ley Cero, Trabajo y Calor</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 5 — Energía Interna y Entalpía</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link active" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Primera ley</div>
+    <div class="unit-pill u3 bg-u3">Primera ley · Clases 4–6</div>
+    <h1>Clase 5: Energía Interna, Capacidades Caloríficas y Entalpía</h1>
+    <p class="desc">De la primera ley cíclica nace $U$ como función de estado; midiendo a volumen constante aparece $C_V$, el experimento de Joule mata la dependencia con $V$, y trabajar a presión constante obliga a inventar la entalpía.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Enunciado cíclico de la primera ley: $\oint \bar\delta W = \oint \bar\delta Q$</li>
+        <li>Definición de la energía interna $U$ a partir de que $\oint(\bar\delta Q - \bar\delta W) = 0$</li>
+        <li>$U$ como función de estado extensiva, sin valor absoluto</li>
+        <li>$U = U(T,V)$ y su diferencial total en un sistema de masa fija</li>
+        <li>Procesos a volumen constante: $Q_V = \Delta U$ y definición de $C_V$</li>
+        <li>Capacidad calórica molar como propiedad intensiva tabulada</li>
+        <li>Experimento de Joule: expansión libre contra el vacío y medición de $(\partial U/\partial V)_T$</li>
+        <li>Ley de Joule $U = U(T)$: exacta para gas ideal, aproximada para gases reales</li>
+        <li>Procesos a presión constante: aparición natural de $H \equiv U + PV$</li>
+        <li>$\Delta H = Q_P$, entalpías de vaporización y fusión, definición de $C_P$</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Cómo nace $U$</h3>
+        <p>La primera ley se enuncia para <em>ciclos</em>: el trabajo producido en el entorno iguala al calor que fluye desde él. Eso significa $\oint(\bar\delta Q - \bar\delta W) = 0$, y una cantidad cuya integral cíclica se anula define una función de estado. A esa función se le llama $U$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>$U$ no tiene valor absoluto</h3>
+        <p>La primera ley sólo fija <em>diferencias</em> de energía. $U$ es además extensiva: escala con la cantidad de materia. Todo lo que se mide y tabula son $\Delta U$ respecto de un estado de referencia.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Por qué $C_V$</h3>
+        <p>A volumen constante $\bar\delta W = 0$, así que $Q_V = \Delta U$ directamente. Definir $C_V \equiv (\partial U/\partial T)_V$ convierte la variación de energía interna — abstracta — en algo <em>medible</em> con un calorímetro.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Experimento de Joule</h3>
+        <p>Expansión libre contra el vacío en un recipiente aislado: $\bar\delta W = 0$ (no hay contra qué empujar) y $\bar\delta Q = 0$ (no se observó cambio de $T$), luego $dU = 0$ con $dV \neq 0$. Conclusión: $(\partial U/\partial V)_T = 0$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ley de Joule</h3>
+        <p>$U = U(T)$: la energía interna del gas depende sólo de la temperatura. Es exacta para el gas ideal. En gases reales $(\partial U/\partial V)_T$ es pequeña y positiva; en líquidos y sólidos no es nula, pero como $dV$ es minúsculo, su contribución igual se desprecia.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Por qué se inventa $H$</h3>
+        <p>A $P$ constante el sistema gasta parte del calor en trabajo de expansión, así que $Q_P \neq \Delta U$. Al reordenar la primera ley aparece sola la combinación $U + PV$, que es función de estado por serlo sus tres factores. Definirla como $H$ hace que $Q_P = \Delta H$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Primera ley en forma cíclica</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_5_1.svg" alt=""></div>
+      <div class="formula-desc">
+        El sistema no sufre cambio neto en el ciclo, pero el entorno sí. La anulación de la integral cíclica es lo que autoriza a definir una función de estado.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Primera ley — forma diferencial e integral</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_5_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $dU$ es diferencial exacta; $\bar\delta Q$ y $\bar\delta W$ no lo son. El signo menos corresponde al convenio de este curso: $W > 0$ es trabajo <em>producido por</em> el sistema.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Diferencial total de $U(T,V)$</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_5_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Un cambio de estado también cambia las demás propiedades. Las derivadas parciales expresan tasas de cambio y deben expresarse en cantidades medibles — ese es todo el programa de la clase.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Capacidad calórica a volumen constante</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_5_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $C_V$ es extensiva; la capacidad calórica <em>molar</em> $\bar C_V$ es la versión intensiva que se tabula.
+        La última igualdad requiere $C_V$ aproximadamente constante, válido si $\Delta T$ no es muy grande.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Experimento de Joule</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_5_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Con $dU = 0$ y $dV \neq 0$, el único modo de satisfacer la diferencial total es que la derivada se anule.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Ley de Joule</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_5_6.svg" alt=""></div>
+      <div class="formula-desc">
+        La forma general de la derecha es la que hay que arrastrar en gases reales; el término en $dV$ se anula sólo para el gas ideal.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Definición de entalpía</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_5_7.svg" alt=""></div>
+      <div class="formula-desc">
+        Función de estado extensiva. En un proceso a $P$ constante, el aumento de entalpía del sistema es igual al calor transferido desde el entorno: por eso $\Delta H_{\text{vap}}$ y $\Delta H_{\text{fus}}$ se miden simplemente calentando a presión atmosférica.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Diferencial total de $H(T,P)$</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_5_8.svg" alt=""></div>
+      <div class="formula-desc">
+        Estructura idéntica a la de $U(T,V)$, pero con las variables naturales de un proceso a presión constante. La derivada $(\partial H/\partial P)_T$ es la que se medirá en la clase 6 con Joule-Thomson.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Capacidad calórica a presión constante</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_5_9.svg" alt=""></div>
+      <div class="formula-desc">
+        Válido para cualquier transformación a $P$ constante de un sistema de masa fija, <em>siempre que no haya cambios de fase ni reacciones químicas</em> — esos casos se tratan aparte.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 5</div>
+      <ul>
+        <li>$\Delta U = Q - W$ con el convenio de este curso. Si un enunciado de otro libro dice $\Delta U = Q + W$, está usando $W$ como trabajo <em>sobre</em> el sistema: no son ecuaciones distintas, es el mismo contenido con signo cambiado.</li>
+        <li>$U$ y $H$ son funciones de estado; $Q$ y $W$ no. Pero bajo restricciones concretas se igualan: $Q_V = \Delta U$ y $Q_P = \Delta H$. Esas dos igualdades son las que hacen medible toda la termodinámica.</li>
+        <li>$H$ no es "otra energía": es una combinación conveniente. Se define porque casi todos los experimentos de laboratorio ocurren a presión atmosférica constante, no a volumen constante.</li>
+        <li>La ley de Joule ($U$ depende sólo de $T$) es exacta sólo para gases ideales. Es el supuesto que hace colapsar la mitad de los términos en los ejercicios.</li>
+        <li>$\Delta U = C_V\Delta T$ vale para gas ideal <em>en cualquier proceso</em>, no sólo a volumen constante — porque $U$ depende sólo de $T$. Lo mismo con $\Delta H = C_P\Delta T$. Es un atajo que se usa constantemente.</li>
+        <li>Mayor $C_V$ significa mayor capacidad de absorber calor sin subir de temperatura.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q5_1" data-correct="1">
+        <div class="quiz-question">1. ¿Qué justifica definir la energía interna como función de estado?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q5_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Que $Q$ y $W$ son ambas funciones de estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Que $\oint(\bar\delta Q - \bar\delta W) = 0$ en cualquier transformación cíclica</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Que la energía interna tiene un valor absoluto medible</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Que $U$ es una propiedad intensiva del sistema</span></label>
+        </div>
+        <script type="text/explanation" id="q5_1-exp">Una cantidad cuya integral sobre cualquier ciclo cerrado se anula tiene una primitiva bien definida: su valor depende sólo del estado, no del camino. La primera ley enunciada para ciclos ($\oint\bar\delta W = \oint\bar\delta Q$) es exactamente esa condición. Ni $Q$ ni $W$ son funciones de estado por separado — sólo su combinación lo es. Y $U$ es extensiva, no intensiva, ni tiene valor absoluto: sólo se conocen sus diferencias.</script>
+        <div class="quiz-feedback" id="q5_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q5_2" data-correct="0">
+        <div class="quiz-question">2. Un gas ideal se expande isotérmicamente. ¿Cuál de estas afirmaciones es correcta?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q5_2" value="0"><span class="opt-letter">A</span><span class="opt-text">$\Delta U = 0$ y $\Delta H = 0$, por lo que $Q = W$</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_2" value="1"><span class="opt-letter">B</span><span class="opt-text">$\Delta U = 0$ pero $\Delta H \neq 0$, porque el volumen cambió</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_2" value="2"><span class="opt-letter">C</span><span class="opt-text">$Q = 0$, porque la temperatura no varía</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_2" value="3"><span class="opt-letter">D</span><span class="opt-text">$W = 0$, porque la presión externa cambia continuamente</span></label>
+        </div>
+        <script type="text/explanation" id="q5_2-exp">Por la ley de Joule, $U = U(T)$ para un gas ideal, así que $\Delta T = 0 \Rightarrow \Delta U = 0$. Y como $H = U + PV = U + nRT$ también depende sólo de $T$, igualmente $\Delta H = 0$. De $\Delta U = Q - W$ sale $Q = W$: todo el calor absorbido se convierte en trabajo. Que $\Delta T = 0$ no implica $Q = 0$ — esa confusión entre "sin cambio de temperatura" y "sin flujo de calor" es el error más frecuente del capítulo.</script>
+        <div class="quiz-feedback" id="q5_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q5_3" data-correct="2">
+        <div class="quiz-question">3. ¿Por qué el calor absorbido a presión constante no es igual a $\Delta U$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q5_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque a $P$ constante la energía interna no está definida</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque el calor deja de ser una función de estado cuando $P$ es constante</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque parte del calor se gasta en el trabajo de expansión $P\Delta V$; el resto sube $U$</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque a $P$ constante el sistema no puede intercambiar calor</span></label>
+        </div>
+        <script type="text/explanation" id="q5_3-exp">A volumen constante el sistema no puede hacer trabajo, así que todo el calor va a $U$: $Q_V = \Delta U$. A presión constante el sistema se expande y devuelve parte de esa energía al entorno como trabajo: $Q_P = \Delta U + P\Delta V$. Justamente por eso conviene definir $H = U + PV$, que absorbe el término de trabajo y deja $Q_P = \Delta H$. De ahí también que siempre $C_P > C_V$.</script>
+        <div class="quiz-feedback" id="q5_3-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q5_4" data-correct="3">
+        <div class="quiz-question">4. En el experimento de Joule de expansión libre, ¿por qué $\bar\delta W = 0$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q5_4" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque el recipiente es rígido y el volumen del gas no cambia</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_4" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque el proceso es cuasiestático</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_4" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque la temperatura permanece constante</span></label>
+          <label class="quiz-option"><input type="radio" name="q5_4" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el gas se expande contra el vacío: $P_{\text{op}} = 0$</span></label>
+        </div>
+        <script type="text/explanation" id="q5_4-exp">El trabajo se calcula con la presión de <em>oposición</em>: $\bar\delta W = P_{\text{op}}\,dV$. Al abrir la válvula el gas se expande hacia un compartimento vacío, donde $P_{\text{op}} = 0$, así que no hay trabajo aunque $dV \neq 0$. El proceso es violentamente irreversible, no cuasiestático. Sumado a que las paredes son adiabáticas y Joule no observó cambio de $T$ ($\bar\delta Q = 0$), queda $dU = 0$ con $dV \neq 0$, lo que fuerza $(\partial U/\partial V)_T = 0$.</script>
+        <div class="quiz-feedback" id="q5_4-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../clase_4/"><div class="nav-dir">← Anterior</div><div class="nav-title">Ley Cero, Trabajo y Calor</div></a>
+    <a href="../clase_6/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Relación entre Cp y Cv, y Efecto Joule-Thomson</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 7 — Calor de Reacción y Formación</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link active" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Termoquímica</div>
+    <div class="unit-pill u4 bg-u4">Termoquímica · Clases 7–8</div>
+    <h1>Clase 7: Calor de Reacción y Entalpías de Formación</h1>
+    <p class="desc">La primera ley aplicada a reacciones químicas: el calor de reacción como diferencia de entalpías, el problema de tener más incógnitas que ecuaciones, y cómo las entalpías de formación en estado estándar lo resuelven.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Procesos exotérmicos y endotérmicos: convenio de signos del calor</li>
+        <li>Aplicación de la primera ley al calor de reacción</li>
+        <li>$\Delta H$ de reacción como diferencia entre entalpías de productos y de reactivos</li>
+        <li>El problema: cuatro entalpías absolutas desconocidas y una sola ecuación</li>
+        <li>Reacciones de formación: definición y ejemplos</li>
+        <li>Por qué $\Delta H$ de reacción no depende de las entalpías de los elementos</li>
+        <li>Escala arbitraria: asignar cero a los elementos en su forma más estable</li>
+        <li>Estado estándar: 1 atm y 298,15 K</li>
+        <li>Entalpía estándar de formación $\Delta H_f^\circ$ y su tabulación</li>
+        <li>Casos de alotropía: $\mathrm{O_2}$ vs. $\mathrm{O_3}$, grafito vs. diamante</li>
+        <li>Dependencia de $H^\circ$ con la temperatura</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Exotérmico y endotérmico</h3>
+        <p>Una reacción cambia la temperatura del sistema; recuperar la $T$ inicial implica un flujo de calor. <strong>Exotérmico</strong> ($Q < 0$): el sistema entrega calor al entorno. <strong>Endotérmico</strong> ($Q > 0$): el entorno debe suministrar calor al sistema.</p>
+      </div>
+      <div class="concept-card">
+        <h3>El calor de reacción es $\Delta H$</h3>
+        <p>Como la mayoría de las reacciones se hacen a presión atmosférica constante, el calor medido es directamente $\Delta H = H_{\text{final}} - H_{\text{inicial}}$. Y como $H$ es extensiva, se suma sobre todas las especies con sus coeficientes estequiométricos.</p>
+      </div>
+      <div class="concept-card">
+        <h3>El problema de las incógnitas</h3>
+        <p>Escribir $\Delta H$ como diferencia de entalpías molares absolutas deja cuatro incógnitas y una ecuación. Ninguna entalpía absoluta es medible — sólo diferencias. Hay que romper el problema de otro modo.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Reacción de formación</h3>
+        <p>La que produce <em>un mol</em> de un compuesto a partir de sus elementos puros en sus estados estables de agregación. Escribir cada compuesto vía su reacción de formación permite que las entalpías de los elementos se cancelen a ambos lados.</p>
+      </div>
+      <div class="concept-card">
+        <h3>La escala arbitraria</h3>
+        <p>Como $\Delta H$ de cualquier reacción es independiente de los valores numéricos asignados a los elementos, se les puede asignar cualquier valor conveniente. Se elige cero, a 1 atm y 298,15 K. Todas las entalpías tabuladas cuelgan de esa convención.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Forma más estable</h3>
+        <p>El cero se asigna a la forma <em>más estable</em> del elemento: $\Delta H_f^\circ(\mathrm{O_2}) = 0$ pero $\Delta H_f^\circ(\mathrm{O_3}) = 142$ kJ/mol; $\Delta H_f^\circ(\mathrm{C_{grafito}}) = 0$ pero $\Delta H_f^\circ(\mathrm{C_{diamante}}) = 1{,}90$ kJ/mol. El estado de agregación importa: $\mathrm{H_2O}(l)$ y $\mathrm{H_2O}(g)$ tienen valores distintos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Convenio de signos del calor de reacción</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_7_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Ejemplo exotérmico: $2\mathrm{H_2}(g) + \mathrm{O_2}(g) \to 2\mathrm{H_2O}(l) + \text{Energía}$.
+        Ejemplo endotérmico: $\text{Energía} + 2\mathrm{HgO}(s) \to 2\mathrm{Hg}(l) + \mathrm{O_2}(g)$.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Reacción de referencia</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_7_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Estado inicial ($T$, $P$): 1 mol de $\mathrm{Fe_2O_3}$ y 3 mol de $\mathrm{H_2}$ · Estado final (misma $T$ y $P$): 2 mol de Fe y 3 mol de $\mathrm{H_2O}$.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">$\Delta H$ como diferencia de entalpías</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_7_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Correcto pero inservible: cuatro entalpías molares absolutas desconocidas y una sola ecuación.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Entalpía de formación</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_7_4.svg" alt=""></div>
+      <div class="formula-desc">
+        La entalpía del compuesto menos la de sus elementos en sus estados estables de agregación.
+        Ejemplos: $\mathrm{H_2}(g) + \tfrac12\mathrm{O_2} \to \mathrm{H_2O}(l)$; $2\mathrm{Fe}(s) + \tfrac32\mathrm{O_2} \to \mathrm{Fe_2O_3}(s)$.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">El resultado tras la cancelación</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_7_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Las entalpías de Fe$(s)$, $\mathrm{H_2}(g)$ y $\mathrm{O_2}(g)$ — los elementos — desaparecen por sí solas. Sólo sobreviven los calores de formación de los compuestos.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Calor de reacción estándar</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_7_6.svg" alt=""></div>
+      <div class="formula-desc">
+        $\nu_i$ coeficientes estequiométricos. Válido a cualquier $T$ y $P$ mientras se usen entalpías de formación consistentes con esas condiciones.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Convención del estado estándar</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_7_7.svg" alt=""></div>
+      <div class="formula-desc">
+        El punto de referencia de toda la termoquímica. Se elige por conveniencia, no por una razón física: las diferencias — que es lo único medible — no cambian.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Dependencia de $H^\circ$ con la temperatura</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_7_8.svg" alt=""></div>
+      <div class="formula-desc">
+        Permite trasladar una entalpía tabulada a 298 K hasta la temperatura de trabajo. Es el germen de la ecuación de Kirchhoff de la clase 8.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 7</div>
+      <ul>
+        <li>El truco central: las entalpías absolutas no son medibles, pero <em>se cancelan</em> al escribir la reacción vía reacciones de formación. Por eso la tabla de $\Delta H_f^\circ$ resuelve todo.</li>
+        <li>$\Delta H_f^\circ = 0$ sólo para elementos en su forma <strong>más estable</strong> a 298,15 K y 1 atm. El ozono, el diamante y el azufre monoclínico no valen cero.</li>
+        <li>Anotar siempre el estado de agregación: $\Delta H_f^\circ(\mathrm{H_2O}, l) = -285{,}8$ kJ/mol y $\Delta H_f^\circ(\mathrm{H_2O}, g) = -241{,}8$ kJ/mol difieren justo en el calor de vaporización.</li>
+        <li>La fórmula $\Delta H^\circ = \sum\nu\Delta H_f^\circ(\text{prod}) - \sum\nu\Delta H_f^\circ(\text{reac})$ es "productos menos reactivos". Invertir el orden invierte el signo — y el signo es la respuesta a si la reacción libera o consume calor.</li>
+        <li>Invertir una reacción cambia el signo de $\Delta H$; multiplicarla por un factor multiplica $\Delta H$ por ese factor. $H$ es extensiva.</li>
+        <li>Exotérmico $\Leftrightarrow \Delta H < 0$: el sistema pierde entalpía y el entorno se calienta.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q7_1" data-correct="2">
+        <div class="quiz-question">1. ¿Por qué se puede asignar arbitrariamente el valor cero a la entalpía de los elementos en su forma más estable?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q7_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque los elementos puros efectivamente no contienen energía</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque a 298,15 K la entalpía de cualquier sustancia se anula</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque el $\Delta H$ de cualquier reacción es independiente de esos valores: los elementos se cancelan a ambos lados</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque las entalpías de los elementos son demasiado pequeñas para importar</span></label>
+        </div>
+        <script type="text/explanation" id="q7_1-exp">Al expresar cada compuesto mediante su reacción de formación, los términos de entalpía de los elementos aparecen tanto en los productos como en los reactivos y se cancelan idénticamente. El $\Delta H$ resultante depende sólo de los calores de formación de los compuestos. Como el resultado físico no cambia con la elección, se elige la más cómoda: cero. Los elementos sí contienen energía — simplemente no importa cuánta, porque nunca se mide de forma absoluta.</script>
+        <div class="quiz-feedback" id="q7_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q7_2" data-correct="1">
+        <div class="quiz-question">2. ¿Cuál de las siguientes tiene $\Delta H_f^\circ \neq 0$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q7_2" value="0"><span class="opt-letter">A</span><span class="opt-text">$\mathrm{O_2}(g)$</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_2" value="1"><span class="opt-letter">B</span><span class="opt-text">$\mathrm{C}$ (diamante)</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_2" value="2"><span class="opt-letter">C</span><span class="opt-text">$\mathrm{N_2}(g)$</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_2" value="3"><span class="opt-letter">D</span><span class="opt-text">$\mathrm{Fe}(s)$</span></label>
+        </div>
+        <script type="text/explanation" id="q7_2-exp">La convención asigna cero al elemento en su forma <em>más estable</em> a 298,15 K y 1 atm. Para el carbono esa forma es el grafito, no el diamante: $\Delta H_f^\circ(\mathrm{C_{diamante}}) = 1{,}90$ kJ/mol. El mismo caso ocurre con el oxígeno: $\mathrm{O_2}$ vale cero, pero $\Delta H_f^\circ(\mathrm{O_3}) = 142$ kJ/mol. Antes de usar la tabla conviene verificar cuál alótropo es el de referencia.</script>
+        <div class="quiz-feedback" id="q7_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q7_3" data-correct="3">
+        <div class="quiz-question">3. Para la reacción $\mathrm{Fe_2O_3}(s) + 3\mathrm{H_2}(g) \to 2\mathrm{Fe}(s) + 3\mathrm{H_2O}(l)$, ¿cuál es la expresión correcta de $\Delta H^\circ$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q7_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$2\Delta H_f^\circ(\mathrm{Fe}) + 3\Delta H_f^\circ(\mathrm{H_2O},l) - \Delta H_f^\circ(\mathrm{Fe_2O_3}) - 3\Delta H_f^\circ(\mathrm{H_2})$, con los cuatro términos no nulos</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$\Delta H_f^\circ(\mathrm{Fe_2O_3}) - 3\Delta H_f^\circ(\mathrm{H_2O},l)$</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$3\Delta H_f^\circ(\mathrm{H_2O},l) + \Delta H_f^\circ(\mathrm{Fe_2O_3})$</span></label>
+          <label class="quiz-option"><input type="radio" name="q7_3" value="3"><span class="opt-letter">D</span><span class="opt-text">$3\Delta H_f^\circ(\mathrm{H_2O},l) - \Delta H_f^\circ(\mathrm{Fe_2O_3})$</span></label>
+        </div>
+        <script type="text/explanation" id="q7_3-exp">Aplicando "productos menos reactivos": $\Delta H^\circ = [2\Delta H_f^\circ(\mathrm{Fe}) + 3\Delta H_f^\circ(\mathrm{H_2O},l)] - [\Delta H_f^\circ(\mathrm{Fe_2O_3}) + 3\Delta H_f^\circ(\mathrm{H_2})]$. Pero Fe$(s)$ y $\mathrm{H_2}(g)$ son elementos en su forma más estable, así que sus $\Delta H_f^\circ$ valen cero y esos dos términos desaparecen. Queda $3\Delta H_f^\circ(\mathrm{H_2O},l) - \Delta H_f^\circ(\mathrm{Fe_2O_3})$. La opción A es la expresión general antes de aplicar la convención — correcta en forma, pero afirma erróneamente que los cuatro términos son no nulos.</script>
+        <div class="quiz-feedback" id="q7_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_4/"><div class="nav-dir">← Anterior</div><div class="nav-title">Primera Ley II</div></a>
+    <a href="../clase_8/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Ley de Hess y Ecuación de Kirchhoff</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

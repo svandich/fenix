@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 2 — Desviaciones y Van der Waals</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link active" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Gases reales</div>
+    <div class="unit-pill u2 bg-u2">Gases reales · Clases 2–3</div>
+    <h1>Clase 2: Desviaciones del Gas Ideal y Ecuación de Van der Waals</h1>
+    <p class="desc">Dónde falla el gas ideal y cómo repararlo: el factor de compresibilidad $Z$ como medida de la no idealidad, y la ecuación de Van der Waals construida a partir de dos correcciones físicas — tamaño molecular y atracción.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Cierre de la ley barométrica: integración de $dP = -(Mg/RT)P\,dz$</li>
+        <li>Factor de compresibilidad $Z$: definición empírica de la desviación respecto del gas ideal</li>
+        <li>Lectura de las curvas $Z$ vs. $P$ a $0\,^\circ$C: qué gases caen bajo $Z=1$ y por qué</li>
+        <li>Primera corrección: volumen finito de las moléculas, $\bar V = b + RT/P$</li>
+        <li>Por qué esa corrección explica al $\mathrm{H_2}$ pero no al $\mathrm{N_2}$ ni al $\mathrm{CH_4}$</li>
+        <li>Segunda corrección: fuerzas atractivas intermoleculares, término $-a/\bar V^2$</li>
+        <li>Ecuación de Van der Waals y sus formas equivalentes (molar y con $n$ moles)</li>
+        <li>Significado físico y unidades de las constantes $a$ y $b$; tablas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Factor de compresibilidad $Z$</h3>
+        <p>$Z = \bar V_{\text{real}}/\bar V_{\text{ideal}} = P\bar V/RT$. Es un factor empírico, no un modelo: mide cuánto se aparta el gas del comportamiento ideal. Para el gas ideal $Z = 1$ siempre; para gases reales $Z = Z(T,P)$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>La constante $b$ — volumen excluido</h3>
+        <p>Las moléculas ocupan espacio: cuando $P \to \infty$ el volumen no tiende a cero sino a $b$, que es aproximadamente el volumen molar del líquido. Este efecto <em>aumenta</em> $\bar V$ respecto del ideal y empuja $Z$ por encima de 1.</p>
+      </div>
+      <div class="concept-card">
+        <h3>La constante $a$ — atracción</h3>
+        <p>Las moléculas cerca de la pared son jaladas hacia adentro por sus vecinas, así que golpean con menos fuerza: la presión medida es <em>menor</em> que la ideal. La corrección va como $1/\bar V^2$ porque depende del producto de dos densidades (la que atrae y la atraída).</p>
+      </div>
+      <div class="concept-card">
+        <h3>Alcance de las fuerzas</h3>
+        <p>Las fuerzas de Van der Waals son de muy corto alcance (~nm). En el interior del fluido se cancelan por simetría; sólo importan en la capa cercana a las paredes, que es donde se mide la presión.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Dos efectos en competencia</h3>
+        <p>$b$ tiende a subir $Z$, $a$ tiende a bajarlo. Cuál gana depende de $T$ y $P$ — de ahí que $\mathrm{H_2}$ tenga pendiente inicial positiva y el $\mathrm{N_2}$ negativa. La clase 3 formaliza esta competencia.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ecuación de estado empírica</h3>
+        <p>Van der Waals no se deriva desde primeros principios: es el gas ideal con dos parches físicamente motivados. $a$ y $b$ se ajustan a datos experimentales y están tabulados para cada sustancia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Factor de compresibilidad</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_2_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $\bar V_{\text{ideal}} = RT/P$ es el volumen que <em>tendría</em> el gas si fuera ideal a esa $P$ y $T$.
+        $Z > 1$: el gas ocupa más volumen del esperado · $Z < 1$: ocupa menos.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Corrección por volumen molecular</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_2_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Primer intento de Van der Waals: añadir un volumen finito positivo $b$ al volumen ideal.
+        Predice $Z > 1$ siempre y con pendiente $b/RT$ — funciona para $\mathrm{H_2}$ a bajas $P$, falla para el resto.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Corrección por fuerzas atractivas</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_2_3.svg" alt=""></div>
+      <div class="formula-desc">
+        La atracción entre elementos de volumen reduce la presión sobre las paredes en una cantidad proporcional a $1/\bar V^2$.
+        $a$ es la constante de interacción, con unidades de $\text{L}^2\text{atm·mol}^{-2}$.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Ecuación de Van der Waals — formas equivalentes</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_2_4.svg" alt=""></div>
+      <div class="formula-desc">
+        A la izquierda, la forma molar; a la derecha, la forma para $n$ moles (que es la que suele aparecer en los enunciados).
+        Con $a = b = 0$ se recupera el gas ideal.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Unidades de las constantes</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_2_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Chequear unidades es la forma más rápida de detectar que se mezcló la forma molar con la de $n$ moles.
+        $b$ tiene unidades de volumen molar porque <em>es</em> un volumen molar.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 2</div>
+      <ul>
+        <li>$Z$ no explica nada: sólo <em>cuantifica</em> la desviación. Van der Waals sí explica, atribuyéndola a dos causas físicas concretas.</li>
+        <li>Los dos parches tiran en direcciones opuestas. Si en un problema $Z < 1$, domina la atracción ($a$); si $Z > 1$, domina el tamaño ($b$).</li>
+        <li>$b \approx$ volumen molar del líquido. Ese es el argumento que motivó la corrección: al licuar, el volumen deja de cambiar mucho.</li>
+        <li>El término $a/\bar V^2$ se <em>resta</em> a la presión porque las atracciones frenan a las moléculas justo antes del impacto contra la pared.</li>
+        <li>Cuidado con la forma que se usa: $(P + a/\bar V^2)(\bar V - b) = RT$ usa volumen <em>molar</em>; $(P + n^2a/V^2)(V - nb) = nRT$ usa volumen total.</li>
+        <li>Van der Waals es sólo una de muchas ecuaciones de estado (virial, Berthelot, Redlich-Kwong). Se estudia porque es la más simple que captura la física correcta.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q2_1" data-correct="2">
+        <div class="quiz-question">1. Un gas real presenta $Z = 0{,}85$ a cierta $T$ y $P$. ¿Qué se puede afirmar?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2_1" value="0"><span class="opt-letter">A</span><span class="opt-text">El gas ocupa más volumen del que predice la ley del gas ideal</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El gas no puede licuarse a esa temperatura</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_1" value="2"><span class="opt-letter">C</span><span class="opt-text">El gas es más compresible que el ideal: dominan las fuerzas atractivas</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Las constantes $a$ y $b$ de Van der Waals son ambas nulas</span></label>
+        </div>
+        <script type="text/explanation" id="q2_1-exp">$Z = \bar V_{\text{real}}/\bar V_{\text{ideal}} = 0{,}85 < 1$ significa que el volumen real es menor que el ideal: el gas se "encoge" más de lo esperado. Eso ocurre cuando las moléculas se atraen entre sí, es decir, cuando el término $-a/\bar V^2$ pesa más que el término $b$ del volumen excluido. Los gases que licuan fácilmente ($\mathrm{CO_2}$, $\mathrm{N_2}$) muestran justamente este comportamiento a bajas presiones.</script>
+        <div class="quiz-feedback" id="q2_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q2_2" data-correct="1">
+        <div class="quiz-question">2. ¿Por qué la corrección $\bar V = b + RT/P$ por sí sola no basta para describir gases reales?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque $b$ no está tabulado para la mayoría de los gases</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque predice $Z > 1$ siempre, y hay gases con pendiente inicial negativa</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque viola la ley de Dalton para mezclas</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque sólo es válida a temperaturas bajo el punto crítico</span></label>
+        </div>
+        <script type="text/explanation" id="q2_2-exp">De $\bar V = b + RT/P$ sale $Z = 1 + bP/RT$, que es una recta de pendiente positiva $b/RT$ que arranca en $Z=1$. Eso reproduce razonablemente al hidrógeno, pero el nitrógeno y el metano <em>bajan</em> por debajo de 1 al aumentar $P$ desde cero. Hacía falta un segundo efecto que empujara $Z$ hacia abajo: las fuerzas de atracción, que Van der Waals incorporó como $-a/\bar V^2$.</script>
+        <div class="quiz-feedback" id="q2_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q2_3" data-correct="3">
+        <div class="quiz-question">3. En $P = RT/(\bar V - b) - a/\bar V^2$, ¿por qué el término de atracción va con $1/\bar V^2$ y no con $1/\bar V$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Para que las unidades de $a$ coincidan con las de $b$</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque la fuerza entre dos moléculas decae como el cuadrado de la distancia</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Es una elección arbitraria de ajuste, sin justificación física</span></label>
+          <label class="quiz-option"><input type="radio" name="q2_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el efecto depende del producto de dos densidades: la de moléculas que atraen y la de moléculas atraídas</span></label>
+        </div>
+        <script type="text/explanation" id="q2_3-exp">La reducción de presión en la pared es proporcional al número de moléculas que llegan a ella (densidad $\propto 1/\bar V$) <em>multiplicado</em> por el número de moléculas que las jalan hacia el interior (también $\propto 1/\bar V$). El producto da $1/\bar V^2$. No es la ley de fuerza entre un par de moléculas — esa decae mucho más rápido, y su alcance es de apenas nanómetros.</script>
+        <div class="quiz-feedback" id="q2_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_1/"><div class="nav-dir">← Anterior</div><div class="nav-title">Gases Ideales</div></a>
+    <a href="../clase_3/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Punto Crítico y Ley de los Estados Correspondientes</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

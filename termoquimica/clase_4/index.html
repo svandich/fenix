@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 4 — Ley Cero, Trabajo y Calor</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link active" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Primera ley</div>
+    <div class="unit-pill u3 bg-u3">Primera ley · Clases 4–6</div>
+    <h1>Clase 4: Ley Cero, Trabajo y Calor</h1>
+    <p class="desc">Las definiciones que sostienen todo el resto del curso: sistema y entorno, la ley cero que hace medible la temperatura, y el trabajo de expansión — que resulta depender del camino y separa lo reversible de lo irreversible.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Formas de energía: cinética, potencial, térmica, química, nuclear, eléctrica</li>
+        <li>Definiciones: sistema, frontera, medio ambiente; sistemas abierto, cerrado y aislado</li>
+        <li>Ley cero de la termodinámica y la definición operacional de temperatura</li>
+        <li>Enunciado de la primera ley para sistemas aislados y cerrados</li>
+        <li>Definición termodinámica de <em>trabajo</em> y su convenio de signos</li>
+        <li>Definición termodinámica de <em>calor</em> y su convenio de signos</li>
+        <li>Trabajo de expansión contra presión de oposición: una, dos y varias etapas</li>
+        <li>Trabajo de compresión y por qué cuesta más en una etapa que en varias</li>
+        <li>Trabajo máximo (expansión) y mínimo (compresión): el límite cuasiestático</li>
+        <li>Ciclo expansión–compresión: irreversible en un paso, reversible en infinitos pasos</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Sistema, frontera, entorno</h3>
+        <p><strong>Abierto</strong>: intercambia materia y energía. <strong>Cerrado</strong>: sólo energía. <strong>Aislado</strong> (adiabático): ninguna de las dos. Casi todo el curso trabaja con sistemas cerrados de masa fija.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ley cero</h3>
+        <p>Dos sistemas que no están en contacto pero sí en equilibrio térmico con un tercero, están en equilibrio térmico entre sí y tienen idéntica temperatura. Sin esto la temperatura no sería una propiedad bien definida — ni existirían los termómetros.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Trabajo</h3>
+        <p>Cantidad que fluye por la frontera durante un cambio de estado y que puede usarse íntegramente para elevar un cuerpo en el entorno. Se manifiesta <em>en el entorno</em>: la medida es $mgh$. Sólo existe durante el cambio de estado — no es una propiedad del sistema.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Calor</h3>
+        <p>Lo que fluye entre dos sistemas al alcanzar el equilibrio térmico, desde el de mayor $T$ al de menor $T$. También se mide por su efecto en el entorno: gramos de agua que suben un grado. Igual que el trabajo, sólo existe en la frontera y durante el proceso.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Presión de oposición $P_{\text{op}}$</h3>
+        <p>El trabajo se calcula con la presión <em>externa</em>, no con la del sistema. $P_{\text{op}}$ es arbitraria: la fija quien opera el pistón. Sólo en el límite cuasiestático se cumple $P_{\text{op}} = P_{\text{sist}}$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Reversible vs. irreversible</h3>
+        <p>Si el ciclo expansión–compresión deja el <em>entorno</em> modificado ($W_{\text{ciclo}} \neq 0$), el proceso fue irreversible. Si el entorno vuelve exactamente a su estado original ($W_{\text{ciclo}} = 0$), fue reversible. El sistema vuelve a su estado en ambos casos: lo que distingue es el entorno.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Ley cero de la termodinámica</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_4_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Es lo que permite usar un tercer cuerpo (el termómetro) para comparar dos sistemas sin ponerlos en contacto.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Trabajo de expansión en una etapa</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_4_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $P_{\text{op}}$ presión de oposición · $A$ área del pistón · $h$ desplazamiento.
+        El signo lo fija $\Delta V$: expansión $\Rightarrow \Delta V > 0 \Rightarrow W > 0$ (el sistema produce trabajo); compresión $\Rightarrow W < 0$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Expansión en dos etapas</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_4_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Para el <em>mismo</em> cambio de estado, dos etapas producen más trabajo que una: el área bajo la curva escalonada crece. Prueba directa de que $W$ depende de la trayectoria.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Trabajo en varias etapas — forma diferencial</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_4_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Se escribe $\bar\delta W$ (no $dW$) porque no es diferencial exacta: al integrar se obtiene $W$, no un "$\Delta W$". Conociendo $P_{\text{op}} = f(V)$ la integral se evalúa.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Trabajo máximo (expansión cuasiestática)</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_4_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Si la expansión es suficientemente lenta, el sistema está en equilibrio con el entorno en todo momento ($P_{\text{ext}} = P_{\text{int}}$) y se extrae el trabajo máximo posible. En compresión, la misma expresión da el trabajo <em>mínimo</em> que hay que gastar.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Ciclo en un solo paso — irreversible</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_4_6.svg" alt=""></div>
+      <div class="formula-desc">
+        El sistema vuelve a su estado inicial, pero el entorno no: quedó trabajo neto negativo. El proceso abrupto perturba el equilibrio interno del sistema.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Ciclo cuasiestático — reversible</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_4_7.svg" alt=""></div>
+      <div class="formula-desc">
+        Las dos integrales son iguales y opuestas: el entorno no queda modificado. Es un límite idealizado, alcanzable sólo con procesos infinitamente lentos.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 4</div>
+      <ul>
+        <li><strong>Convenio de signos de este curso:</strong> $W > 0$ cuando el sistema <em>produce</em> trabajo (se expande), y la primera ley se escribirá $\Delta U = Q - W$. Muchos textos de física usan el convenio opuesto — al comparar con otras fuentes, revisar primero cuál usan.</li>
+        <li>El trabajo se calcula con $P_{\text{op}}$, la presión <em>externa</em>. Usar la presión del sistema es válido sólo si el proceso es cuasiestático.</li>
+        <li>$W$ depende del camino: mismo estado inicial y final, distinto número de etapas, distinto trabajo. Esa es la razón de escribir $\bar\delta W$ y no $dW$.</li>
+        <li>Más etapas $\Rightarrow$ más trabajo producido en expansión y menos trabajo gastado en compresión. El límite de infinitas etapas es el proceso reversible.</li>
+        <li>La irreversibilidad se detecta mirando el <em>entorno</em> tras un ciclo completo, no el sistema: el sistema siempre vuelve a su estado.</li>
+        <li>Ni $Q$ ni $W$ son propiedades del sistema: no tiene sentido decir "este gas contiene tanto calor". Sólo existen mientras hay un cambio de estado en curso.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q4_1" data-correct="2">
+        <div class="quiz-question">1. Un gas se expande de $V_1$ a $V_2$ contra una presión de oposición constante, primero en una etapa y luego en dos. ¿Qué se observa?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q4_1" value="0"><span class="opt-letter">A</span><span class="opt-text">El trabajo es el mismo, porque los estados inicial y final coinciden</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La expansión en una etapa produce más trabajo</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La expansión en dos etapas produce más trabajo</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende de si el gas es ideal o real</span></label>
+        </div>
+        <script type="text/explanation" id="q4_1-exp">El trabajo es el área bajo la curva $P_{\text{op}}$ vs. $V$. Con dos etapas se empieza oponiendo una presión mayor y se baja después, de modo que la región sombreada crece respecto del único escalón. Si esto no ocurriera, $W$ sería función de estado — y no lo es. Llevado al límite de infinitas etapas se llega a $W_{\text{máx}} = nRT\ln(V_f/V_i)$.</script>
+        <div class="quiz-feedback" id="q4_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q4_2" data-correct="3">
+        <div class="quiz-question">2. Tras un ciclo completo de expansión y compresión en un solo paso, ¿qué distingue a este proceso de uno reversible?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q4_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Que el sistema no vuelve a su estado inicial</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Que la energía no se conserva durante el ciclo</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Que el trabajo del ciclo es positivo</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Que $W_{\text{ciclo}} = (P_2-P_1)(V_2-V_1) < 0$: el entorno quedó modificado</span></label>
+        </div>
+        <script type="text/explanation" id="q4_2-exp">El sistema sí vuelve a su estado inicial — es un ciclo — y la energía se conserva siempre. Lo que delata la irreversibilidad es que el entorno tuvo que aportar trabajo neto: $W_{\text{ciclo}} < 0$. En el ciclo cuasiestático las dos integrales $\int P\,dV$ se cancelan exactamente y el entorno queda intacto. La irreversibilidad viene de que el proceso abrupto perturba el equilibrio interno del sistema.</script>
+        <div class="quiz-feedback" id="q4_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q4_3" data-correct="1">
+        <div class="quiz-question">3. ¿Por qué la ley cero se enuncia por separado y no se deduce de las otras leyes?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q4_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Por razones históricas: se descubrió antes que las demás</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque es la que permite definir operacionalmente la temperatura, magnitud que las otras leyes ya dan por existente</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque sólo se aplica a sistemas aislados</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque es equivalente a la conservación de la energía</span></label>
+        </div>
+        <script type="text/explanation" id="q4_3-exp">La primera ley habla de energía interna y de calor, y el calor se define como lo que fluye del cuerpo de mayor $T$ al de menor $T$: ya supone que "temperatura" significa algo. La ley cero es la que garantiza que el equilibrio térmico es una relación transitiva, y por eso permite etiquetar estados con un número — la temperatura — y construir termómetros. Se enunció después de las demás (de ahí el "cero"), pero es lógicamente previa a todas.</script>
+        <div class="quiz-feedback" id="q4_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_2/"><div class="nav-dir">← Anterior</div><div class="nav-title">Gases Reales</div></a>
+    <a href="../clase_5/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Energía Interna, Capacidades Caloríficas y Entalpía</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 8 — Ley de Hess y Kirchhoff</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link active" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Termoquímica</div>
+    <div class="unit-pill u4 bg-u4">Termoquímica · Clases 7–8</div>
+    <h1>Clase 8: Ley de Hess y Ecuación de Kirchhoff</h1>
+    <p class="desc">Dos consecuencias de que $H$ sea función de estado: la ley de Hess, que permite armar reacciones imposibles de medir sumando otras que sí lo son, y la ecuación de Kirchhoff, que traslada un calor de reacción a otra temperatura.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Ley de Hess: el cambio de entalpía es el mismo en un paso o en varios</li>
+        <li>Ejemplo canónico: $\mathrm{C(grafito)} \to \mathrm{CO} \to \mathrm{CO_2}$ frente a la combustión directa</li>
+        <li>Reglas de manipulación: invertir una reacción, multiplicarla por un factor, sumarlas</li>
+        <li>Aplicación: obtener $\Delta H$ de reacciones que no se pueden medir directamente</li>
+        <li>El problema de la dependencia del calor de reacción con la temperatura</li>
+        <li>Construcción del ciclo termodinámico $T_1 \to T_2$ para reactivos y productos</li>
+        <li>Definición de $\Delta C_P^\circ$ como productos menos reactivos</li>
+        <li>Ecuación de Kirchhoff en forma integral y en forma simplificada</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Ley de Hess</h3>
+        <p>Cuando los reactivos se convierten en productos, el cambio de entalpía es el mismo si la reacción ocurre en un paso o en una serie de pasos. No es una ley nueva: es exactamente lo que significa que $H$ sea función de estado.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Para qué sirve</h3>
+        <p>$\mathrm{C} + \tfrac12\mathrm{O_2} \to \mathrm{CO}$ es imposible de medir limpiamente — siempre se forma algo de $\mathrm{CO_2}$. Pero las combustiones completas de C y de CO sí se miden, y restándolas se obtiene el dato buscado.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Álgebra de reacciones</h3>
+        <p>Invertir una reacción cambia el signo de $\Delta H$. Multiplicarla por $n$ multiplica $\Delta H$ por $n$. Sumar dos reacciones suma sus $\Delta H$. Con estas tres reglas se arma cualquier reacción objetivo a partir de datos tabulados.</p>
+      </div>
+      <div class="concept-card">
+        <h3>El ciclo de Kirchhoff</h3>
+        <p>Para pasar de $\Delta H_1$ (a $T_1$) a $\Delta H_2$ (a $T_2$) se construye un camino alternativo: enfriar los reactivos de $T_2$ a $T_1$, reaccionar a $T_1$, y calentar los productos de $T_1$ a $T_2$. Como $H$ es función de estado, ambos caminos dan lo mismo.</p>
+      </div>
+      <div class="concept-card">
+        <h3>$\Delta C_P^\circ$</h3>
+        <p>La diferencia entre la capacidad calorífica total de los productos y la de los reactivos, cada una ponderada por su coeficiente estequiométrico. Puede ser positiva o negativa, y su signo dice si el calor de reacción crece o decrece con $T$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Qué se necesita para aplicarla</h3>
+        <p>Basta conocer $\Delta H^\circ$ a una temperatura (normalmente 298 K, de tabla) y las $C_P$ de todas las sustancias involucradas. Si el rango de $T$ es estrecho, se toma $\Delta C_P$ constante y la integral se vuelve un producto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Ley de Hess</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_8_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Consecuencia directa de que $H$ sea función de estado: la suma de los $\Delta H$ de los pasos intermedios iguala el $\Delta H$ del camino directo.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Ejemplo: combustión del carbono</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_8_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $\Delta H_1$ no se mide directamente, pero $\Delta H_2$ y $\Delta H_3$ sí. Despejando: $\Delta H_1 = \Delta H_3 - \Delta H_2$.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Ciclo termodinámico para el cambio de temperatura</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_8_3.svg" alt=""></div>
+      <div class="formula-desc">
+        $\Delta H'$ enfría los reactivos de $T_2$ a $T_1$ · $\Delta H_1$ es la reacción a $T_1$ · $\Delta H''$ calienta los productos de $T_1$ a $T_2$.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Los dos tramos de calentamiento</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_8_4.svg" alt=""></div>
+      <div class="formula-desc">
+        El signo menos en $\Delta H'$ viene de invertir los límites de integración: se va de $T_2$ a $T_1$, en sentido contrario.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Definición de $\Delta C_P^\circ$</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_8_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Misma estructura que $\Delta H^\circ$: productos menos reactivos, cada uno con su coeficiente estequiométrico.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Ecuación de Kirchhoff</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_8_6.svg" alt=""></div>
+      <div class="formula-desc">
+        Conociendo $\Delta H^\circ$ a una temperatura y las capacidades caloríficas de todas las sustancias, se obtiene el calor de reacción a cualquier otra.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Forma simplificada</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_8_7.svg" alt=""></div>
+      <div class="formula-desc">
+        Válida cuando $\Delta C_P$ puede tomarse constante en el rango $[T_1, T_2]$ — el caso habitual en ejercicios.
+        Si las $C_P$ vienen como polinomios en $T$, hay que integrar de verdad.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 8</div>
+      <ul>
+        <li>Hess y Kirchhoff son la <em>misma</em> idea aplicada dos veces: $H$ es función de estado, así que se puede reemplazar un camino imposible de medir por otro que sí lo es. Hess cambia el camino químico; Kirchhoff, el camino térmico.</li>
+        <li>Para resolver un problema de Hess: escribir la reacción objetivo, y luego ver qué combinación lineal de las reacciones dadas la reproduce. Invertir cambia el signo, multiplicar escala.</li>
+        <li>La entalpía de formación es en el fondo una aplicación de Hess: se tabula un conjunto de reacciones de referencia y todo lo demás se arma sumándolas.</li>
+        <li>Si $\Delta C_P > 0$ el calor de reacción se vuelve más positivo (menos exotérmico) al subir $T$; si $\Delta C_P < 0$, más exotérmico.</li>
+        <li>Cuidado con las unidades en Kirchhoff: $\Delta H$ suele venir en kJ/mol y $C_P$ en J/(mol·K). Hay un factor 1000 esperando.</li>
+        <li>$\Delta C_P$ se calcula con las $C_P$ de todas las especies, cada una multiplicada por su coeficiente estequiométrico — no basta con restar dos números de tabla.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q8_1" data-correct="1">
+        <div class="quiz-question">1. ¿Cuál es el fundamento termodinámico de la ley de Hess?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q8_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La conservación de la masa en las reacciones químicas</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Que $H$ es función de estado: $\Delta H$ depende sólo de los estados inicial y final</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Que el calor es una función de estado a presión constante</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La ley cero de la termodinámica</span></label>
+        </div>
+        <script type="text/explanation" id="q8_1-exp">$H = U + PV$ es combinación de funciones de estado, luego también lo es. Por lo tanto $\Delta H$ entre dos estados no depende del camino: da igual llegar en un paso o en cinco. La opción C confunde causa con efecto: el calor $Q$ nunca es función de estado; lo que ocurre es que <em>bajo la restricción</em> de presión constante coincide numéricamente con $\Delta H$, que sí lo es.</script>
+        <div class="quiz-feedback" id="q8_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q8_2" data-correct="0">
+        <div class="quiz-question">2. Se conocen $\Delta H$ de $\mathrm{CO}(g) + \tfrac12\mathrm{O_2}(g) \to \mathrm{CO_2}(g)$ y de $\mathrm{C}(gr) + \mathrm{O_2}(g) \to \mathrm{CO_2}(g)$. ¿Cómo se obtiene $\Delta H$ de $\mathrm{C}(gr) + \tfrac12\mathrm{O_2}(g) \to \mathrm{CO}(g)$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q8_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Restando: $\Delta H_{\mathrm{C \to CO_2}} - \Delta H_{\mathrm{CO \to CO_2}}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Sumando ambas: $\Delta H_{\mathrm{C \to CO_2}} + \Delta H_{\mathrm{CO \to CO_2}}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Promediando ambas</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_2" value="3"><span class="opt-letter">D</span><span class="opt-text">No se puede: hay que medirla experimentalmente</span></label>
+        </div>
+        <script type="text/explanation" id="q8_2-exp">Se invierte la primera reacción — $\mathrm{CO_2} \to \mathrm{CO} + \tfrac12\mathrm{O_2}$, con $\Delta H$ de signo opuesto — y se le suma la segunda. El $\mathrm{CO_2}$ se cancela y queda exactamente la reacción objetivo, con $\Delta H = \Delta H_{\mathrm{C \to CO_2}} - \Delta H_{\mathrm{CO \to CO_2}}$. Esta reacción es justamente la que <em>no</em> se puede medir bien en el laboratorio, porque siempre se forma algo de $\mathrm{CO_2}$: es el ejemplo con el que se suele introducir la ley de Hess.</script>
+        <div class="quiz-feedback" id="q8_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q8_3" data-correct="2">
+        <div class="quiz-question">3. Una reacción exotérmica tiene $\Delta C_P^\circ < 0$. Al aumentar la temperatura, ¿qué le ocurre al calor de reacción?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q8_3" value="0"><span class="opt-letter">A</span><span class="opt-text">No cambia: $\Delta H$ es independiente de la temperatura</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Se vuelve menos exotérmica</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Se vuelve más exotérmica: $\Delta H_2 < \Delta H_1$</span></label>
+          <label class="quiz-option"><input type="radio" name="q8_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Pasa a ser endotérmica</span></label>
+        </div>
+        <script type="text/explanation" id="q8_3-exp">Por Kirchhoff, $\Delta H_2 = \Delta H_1 + \Delta C_P(T_2 - T_1)$. Con $T_2 > T_1$ y $\Delta C_P < 0$, el término añadido es negativo, así que $\Delta H_2 < \Delta H_1 < 0$: más negativo, es decir más exotérmica. Nada garantiza que llegue a cambiar de signo — para eso haría falta un $\Delta T$ enorme. Y $\Delta H$ definitivamente sí depende de $T$: esa dependencia es todo el contenido de la ecuación de Kirchhoff.</script>
+        <div class="quiz-feedback" id="q8_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../clase_7/"><div class="nav-dir">← Anterior</div><div class="nav-title">Calor de Reacción y Entalpías de Formación</div></a>
+    <a href="../" class="next"><div class="nav-dir">Volver →</div><div class="nav-title">Temario general</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

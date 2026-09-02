@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 1 — Gas Ideal y Ley de Dalton</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link active" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Gases ideales</div>
+    <div class="unit-pill u1 bg-u1">Gases ideales · Clase 1</div>
+    <h1>Clase 1: Gas Ideal, Leyes Empíricas y Ley de Dalton</h1>
+    <p class="desc">El estado gaseoso descrito por cuatro propiedades, las leyes empíricas de Boyle y Charles que se condensan en $PV = nRT$, y la extensión a mezclas mediante las presiones parciales de Dalton.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Estados de la materia y por qué el gaseoso es el más simple de describir: masa, $P$, $V$ y $T$ bastan</li>
+        <li>Ecuación de estado: propiedades extensivas ($n$, $V$) vs. intensivas ($P$, $T$, $\bar{V}$)</li>
+        <li>Ley de Boyle (1662): $PV = C$ a $T$ y masa constantes</li>
+        <li>Ley de Charles y Gay-Lussac: $V$ lineal en $t$, coeficiente de expansión térmica $\alpha_0$</li>
+        <li>Cómo $\alpha_0$ (igual para todos los gases) define la escala termodinámica de temperatura</li>
+        <li>La constante $R$ y sus condiciones estándar ($22{,}414$ L/mol, $273{,}15$ K, 1 atm)</li>
+        <li>Diagramas del gas ideal: isotermas, isóbaras e isócoras</li>
+        <li>Variables de composición: fracción molar $x_i$ como razón de dos extensivas</li>
+        <li>Ley de Dalton de las presiones parciales y su comprobación experimental (membrana de Pd)</li>
+        <li>Ley de distribución barométrica: el efecto de la gravedad sobre un fluido</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Ecuación de estado</h3>
+        <p>Una relación que amarra $P$, $V$, $T$ y $n$: fijando dos variables intensivas, la tercera queda determinada. Por eso todos los estados posibles de un gas ideal caben en un solo diagrama.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Extensiva vs. intensiva</h3>
+        <p>Extensiva ($n$, $V$, $U$): su valor total se obtiene sumando sobre todo el sistema y es proporcional a la masa. Intensiva ($P$, $T$, $\bar{V}$): tiene el mismo valor en cualquier parte del sistema. La razón entre dos extensivas es intensiva.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Coeficiente $\alpha_0$</h3>
+        <p>El aumento relativo de volumen por grado a $0\,^\circ$C, medido a $P$ constante. Su gran descubrimiento: <em>es el mismo para todos los gases</em> y casi independiente de $P$. Eso permite construir una escala de temperatura que no depende de la sustancia usada.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Temperatura termodinámica</h3>
+        <p>Definir $T = 1/\alpha_0 + t$ convierte $V = V_0(1+\alpha_0 t)$ en $V = V_0\alpha_0 T$: el volumen pasa a ser <em>directamente proporcional</em> a $T$. Con $\lim_{P\to 0}\alpha_0 = 1/273{,}15$, se obtiene la escala Kelvin.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Presión parcial</h3>
+        <p>La presión que ejercería un gas de la mezcla si estuviera <em>solo</em> en el mismo volumen $V$ a la misma $T$. En un gas ideal las moléculas no se ven entre sí, así que cada gas actúa como si los demás no existieran.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Volumen molar $\bar{V}$</h3>
+        <p>$\bar{V} = V/n$ es intensiva: permite analizar principios sin arrastrar la masa del sistema. Para dimensionar equipos reales en ingeniería hay que volver a las extensivas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Ley del gas ideal</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_1_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $P$ presión · $V$ volumen · $n$ moles · $R$ constante de los gases · $T$ temperatura absoluta.
+        La forma con $\bar V$ usa sólo variables intensivas.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Extensivas e intensivas</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_1_2.svg" alt=""></div>
+      <div class="formula-desc">
+        $w$ masa · $M$ masa molar. $n$ y $V$ son proporcionales a la masa (extensivas); $\bar{V} = V/n$ ya no lo es.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Leyes empíricas de Boyle y de Charles</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_1_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Boyle midió $P$ y $V$ a $T$ fija; experimentos posteriores mostraron que la constante $C$ dependía de $T$, lo que abrió la puerta a la ley de Charles.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Coeficiente de expansión y escala termodinámica</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_1_4.svg" alt=""></div>
+      <div class="formula-desc">
+        $\alpha_0$ coeficiente de expansión térmica a $0\,^\circ$C · $t$ temperatura en $^\circ$C · $T$ en K.
+        Como $\alpha_0$ es universal, la escala $T$ no depende del gas termométrico.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Constante de los gases ideales</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_1_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Definida en las condiciones estándar. En unidades de laboratorio: $R = 0{,}0821\ \text{atm·L·mol}^{-1}\text{K}^{-1}$ — la que conviene cuando $P$ va en atm y $V$ en litros.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Curvas del diagrama de estado</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_1_6.svg" alt=""></div>
+      <div class="formula-desc">
+        Isotermas: hipérbolas rectangulares en $P$–$\bar V$ · Isóbaras: rectas en $\bar V$–$T$ · Isócoras: rectas en $P$–$T$.
+        Las tres son la misma ecuación mirada desde distintos ejes.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Ley de las presiones parciales de Dalton</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_1_7.svg" alt=""></div>
+      <div class="formula-desc">
+        $p_i$ presión parcial del componente $i$ · $n_t$ moles totales. A cualquier $T$, la presión total es la suma de las presiones parciales de los constituyentes.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Fracción molar</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_1_8.svg" alt=""></div>
+      <div class="formula-desc">
+        Dividiendo $p_i$ por $P$ se cancela todo lo demás: la razón de presiones <em>es</em> la razón de moles. Esto es lo que hace tan cómodo trabajar con mezclas de gases ideales.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Ley de distribución barométrica</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_1_9.svg" alt=""></div>
+      <div class="formula-desc">
+        Sale de equilibrar fuerzas en una rebanada de fluido ($P_{z+dz}A + mg = P_z A$) y sustituir $\rho = PM/RT$.
+        $M$ masa molar promedio · $g$ gravedad. Supone $T$ independiente de la altura.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 1</div>
+      <ul>
+        <li>$PV = nRT$ no es un postulado: es el resumen de dos observaciones experimentales independientes (Boyle y Charles) más la constatación de que $\alpha_0$ es universal.</li>
+        <li>La escala Kelvin no se "inventó": aparece sola al pedir que $V \propto T$. El $273{,}15$ es $1/\alpha_0$ medido.</li>
+        <li>Distinguir extensiva de intensiva es lo que después permite definir propiedades molares y, más adelante, potenciales químicos.</li>
+        <li>La ley de Dalton es una <em>consecuencia</em> de la idealidad: las moléculas no interactúan, así que cada gas "no ve" a los demás. En gases reales deja de cumplirse.</li>
+        <li>Ojo con $R$: elegir la versión equivocada ($8{,}314$ vs. $0{,}082$) es el error más común en los ejercicios. Que las unidades de $P$, $V$ y $T$ calcen con las de $R$.</li>
+        <li>La barométrica se deduce, no se memoriza: balance de fuerzas + gas ideal + $T$ constante.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q1_1" data-correct="1">
+        <div class="quiz-question">1. ¿Cuál de las siguientes es una propiedad intensiva?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1_1" value="0"><span class="opt-letter">A</span><span class="opt-text">El número de moles $n$ del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El volumen molar $\bar{V} = V/n$</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_1" value="2"><span class="opt-letter">C</span><span class="opt-text">El volumen total $V$</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La masa $w$ del gas</span></label>
+        </div>
+        <script type="text/explanation" id="q1_1-exp">Una propiedad intensiva tiene el mismo valor en cualquier parte del sistema y no depende de cuánta materia haya. $n$, $V$ y $w$ escalan con el tamaño del sistema (extensivas); $\bar{V}$ es la razón entre dos extensivas, y por eso resulta intensiva. Este truco — dividir una extensiva por otra — es el que se usa una y otra vez en el curso: fracción molar, propiedades molares parciales, densidad.</script>
+        <div class="quiz-feedback" id="q1_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q1_2" data-correct="2">
+        <div class="quiz-question">2. ¿Por qué el descubrimiento de que $\alpha_0$ es el mismo para todos los gases es importante?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque demuestra que todos los gases tienen la misma masa molar</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque permite calcular $R$ sin medir presiones</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque permite definir una escala de temperatura que no depende de la sustancia termométrica</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque prueba que los gases reales se comportan idealmente a toda presión</span></label>
+        </div>
+        <script type="text/explanation" id="q1_2-exp">Si $\alpha_0$ dependiera del gas, un termómetro de hidrógeno y uno de nitrógeno darían lecturas distintas para el mismo estado térmico. Como $\lim_{P\to 0}\alpha_0$ es una constante universal, la definición $T = 1/\alpha_0 + t$ produce una escala <em>termodinámica</em>: es la misma sin importar con qué gas se mida. Ese es el sentido de llamarla "escala de temperatura para gases ideales".</script>
+        <div class="quiz-feedback" id="q1_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q1_3" data-correct="0">
+        <div class="quiz-question">3. Un recipiente rígido a $T$ constante contiene 2 mol de $\mathrm{N_2}$ y 3 mol de $\mathrm{O_2}$. Si la presión total es 5 atm, ¿cuánto vale $p_{\mathrm{O_2}}$?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1_3" value="0"><span class="opt-letter">A</span><span class="opt-text">3 atm</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_3" value="1"><span class="opt-letter">B</span><span class="opt-text">5 atm</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_3" value="2"><span class="opt-letter">C</span><span class="opt-text">2 atm</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_3" value="3"><span class="opt-letter">D</span><span class="opt-text">No se puede saber sin conocer $V$ y $T$</span></label>
+        </div>
+        <script type="text/explanation" id="q1_3-exp">$x_{\mathrm{O_2}} = 3/(2+3) = 0{,}6$, y por Dalton $p_i = x_i P = 0{,}6 \times 5 = 3$ atm. Nótese que <em>no</em> hacen falta $V$ ni $T$: al dividir $p_i/P$ ambos se cancelan. Esa es exactamente la utilidad de la fracción molar.</script>
+        <div class="quiz-feedback" id="q1_3-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q1_4" data-correct="1">
+        <div class="quiz-question">4. En el experimento con la lámina de paladio, un compartimento con $\mathrm{H_2}$ a 1 atm se conecta con otro de igual volumen que contiene $\mathrm{N_2}$ a 1 atm. Tras mezclar, ¿qué mide el manómetro con el brazo cubierto de Pd?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1_4" value="0"><span class="opt-letter">A</span><span class="opt-text">1 atm, la presión total de la mezcla</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_4" value="1"><span class="opt-letter">B</span><span class="opt-text">0,5 atm, la presión parcial del $\mathrm{H_2}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_4" value="2"><span class="opt-letter">C</span><span class="opt-text">2 atm, la suma de ambas presiones iniciales</span></label>
+          <label class="quiz-option"><input type="radio" name="q1_4" value="3"><span class="opt-letter">D</span><span class="opt-text">0 atm, porque las presiones se compensan</span></label>
+        </div>
+        <script type="text/explanation" id="q1_4-exp">El paladio es permeable sólo al hidrógeno, así que el manómetro "ve" únicamente al $\mathrm{H_2}$: mide su presión parcial. Al duplicarse el volumen disponible, $p_{\mathrm{H_2}} = n_{\mathrm{H_2}}RT/2V = 0{,}5$ atm. La presión total sigue siendo $0{,}5 + 0{,}5 = 1$ atm. Este montaje es la verificación experimental directa de que la presión parcial es una cantidad física real y no sólo una definición conveniente.</script>
+        <div class="quiz-feedback" id="q1_4-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../"><div class="nav-dir">← Volver</div><div class="nav-title">Temario general</div></a>
+    <a href="../aux_1/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Gases Ideales</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

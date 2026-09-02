@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 3 — Punto Crítico y Estados Correspondientes</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link active" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Gases reales</div>
+    <div class="unit-pill u2 bg-u2">Gases reales · Clases 2–3</div>
+    <h1>Clase 3: Punto Crítico y Ley de los Estados Correspondientes</h1>
+    <p class="desc">Qué predice la ecuación de Van der Waals cuando se la exprime: temperatura de Boyle, punto crítico, y el hallazgo de que en variables reducidas todos los gases obedecen la misma ecuación.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Desarrollo de $Z$ en serie de potencias de $1/\bar V$ y de $P$</li>
+        <li>Pendiente inicial $(\partial Z/\partial P)_T$ en $P \to 0$ y qué efecto domina según su signo</li>
+        <li>Efecto de la temperatura sobre la pendiente inicial (caso del metano)</li>
+        <li>Temperatura de Boyle $T_B$: dónde el gas real imita al ideal en un amplio rango de $P$</li>
+        <li>Isotermas de un gas real vs. isotermas de Van der Waals</li>
+        <li>El punto crítico como punto de inflexión con tangente horizontal</li>
+        <li>Constantes críticas $\bar V_c$, $P_c$, $T_c$ en función de $a$ y $b$ (y su inversa)</li>
+        <li>Vapor sobreenfriado y líquido sobrecalentado: los tramos no físicos de la isoterma</li>
+        <li>Variables reducidas y ley de los estados correspondientes</li>
+        <li>Otras ecuaciones de estado (virial, Berthelot, Redlich-Kwong, Dieterici)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Pendiente inicial de $Z$</h3>
+        <p>Evaluar $(\partial Z/\partial P)_T$ en $P=0$ deja $\frac{1}{RT}\left(b - \frac{a}{RT}\right)$. El signo de $b - a/RT$ decide todo: positivo si domina el tamaño molecular, negativo si dominan las atracciones. Una sola expresión explica los dos comportamientos experimentales.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Temperatura de Boyle</h3>
+        <p>La $T$ donde la pendiente inicial se anula: $T_B = a/Rb$. Ahí la curva $Z$ vs. $P$ es tangente a la del gas ideal en $P=0$, y el gas real se comporta idealmente en un intervalo amplio de presiones. $\mathrm{H_2}$: 116,4 K · $\mathrm{N_2}$: 332 K · $\mathrm{CH_4}$: 506 K · $\mathrm{CO_2}$: 600 K.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Punto crítico</h3>
+        <p>La isoterma $T = T_c$ tiene un punto de inflexión con tangente horizontal: primera y segunda derivada de $P$ respecto de $\bar V$ se anulan simultáneamente. Sobre $T_c$ ya no hay distinción líquido–gas y no se puede licuar por compresión.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Tramos no físicos</h3>
+        <p>Bajo $T_c$, Van der Waals predice una zona donde $(\partial P/\partial\bar V)_T > 0$ — comprimir aumentaría el volumen, algo mecánicamente inestable. En la realidad ahí ocurre la coexistencia líquido–vapor a presión constante. Los tramos cercanos sí se observan como estados metaestables: vapor sobreenfriado y líquido sobrecalentado.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Variables reducidas</h3>
+        <p>$\pi = P/P_c$, $\tau = T/T_c$, $\phi = \bar V/\bar V_c$: cada gas medido en unidades de sus propias constantes críticas. Al reescribir Van der Waals en estas variables, $a$ y $b$ desaparecen.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Estados correspondientes</h3>
+        <p>Dos gases a la misma $\tau$ y el mismo $\pi$ están en <em>estados correspondientes</em> y deben ocupar el mismo $\phi$. Esto convierte a Van der Waals en una ecuación tan universal como la del gas ideal, y justifica los diagramas generalizados de $Z$ vs. $P_r$.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u2">
+      <div class="formula-label">$Z$ a partir de Van der Waals</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Se despeja $P$ de la ecuación de Van der Waals y se sustituye en $Z = P\bar V/RT$. El resultado depende de $\bar V$ y $T$.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Desarrollo en serie a bajas presiones</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Con $b/\bar V \ll 1$ se expande $1/(1 - b/\bar V)$ como serie geométrica. El coeficiente de $1/\bar V$ — el <em>segundo coeficiente virial</em> — es $b - a/RT$: ahí están los dos efectos compitiendo.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">$Z$ en función de $P$ y $T$</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Reordenando la serie para que $P \to 0 \Rightarrow Z = 1$. Esta es la forma que se deriva para obtener la pendiente inicial.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Pendiente inicial y qué efecto domina</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_4.svg" alt=""></div>
+      <div class="formula-desc">
+        A $T$ baja, $a/RT$ es grande y gana la atracción (pendiente negativa) · A $T$ alta gana $b$ (pendiente positiva) · A $T$ extremadamente alta la pendiente tiende a cero.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Temperatura de Boyle</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Es la temperatura intermedia en que la pendiente cambia de signo. Allí los dos efectos se cancelan exactamente al orden más bajo en $P$.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Condiciones del punto crítico</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_6.svg" alt=""></div>
+      <div class="formula-desc">
+        Punto de inflexión con tangente horizontal. Son dos ecuaciones que, junto con la propia ecuación de estado, determinan las tres coordenadas críticas.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Constantes críticas de Van der Waals</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_7.svg" alt=""></div>
+      <div class="formula-desc">
+        $Z_c = 3/8 = 0{,}375$ es una predicción <em>universal</em> del modelo, independiente del gas. Los valores experimentales rondan $0{,}27$–$0{,}30$: Van der Waals acierta el orden de magnitud pero no el número.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">$a$ y $b$ desde datos críticos</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_8.svg" alt=""></div>
+      <div class="formula-desc">
+        Es la forma útil en ejercicios: las constantes críticas están tabuladas, así que de ahí se obtienen $a$ y $b$ sin ajustar nada.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Variables reducidas</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_9.svg" alt=""></div>
+      <div class="formula-desc">
+        Cada gas medido en unidades de su propio punto crítico. Adimensionales por construcción.
+      </div>
+    </div>
+
+    <div class="formula-block u2">
+      <div class="formula-label">Ley de los estados correspondientes</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_3_10.svg" alt=""></div>
+      <div class="formula-desc">
+        No queda ningún término que dependa del gas particular. Por eso existe un único diagrama generalizado $Z$ vs. $\pi$ (con $\tau$ como parámetro) que sirve para todas las sustancias.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 3</div>
+      <ul>
+        <li>Todo el contenido físico de la clase cabe en el signo de $b - a/RT$: es la competencia tamaño vs. atracción, y de ahí salen $T_B$ y la forma de las curvas $Z$ vs. $P$.</li>
+        <li>$T_B = a/Rb$ y $T_c = 8a/27Rb$ implican $T_B/T_c = 27/8 = 3{,}375$: la temperatura de Boyle está siempre muy por encima de la crítica.</li>
+        <li>Para hallar el punto crítico no hay que memorizar $\bar V_c = 3b$: se obtiene imponiendo que la primera y la segunda derivada se anulen. Ese cálculo es un ejercicio de control recurrente.</li>
+        <li>$Z_c = 3/8$ es la prueba más limpia de que Van der Waals es aproximada: es un número fijo, y los gases reales no lo cumplen.</li>
+        <li>La ley de estados correspondientes es lo que hace utilizables los diagramas generalizados de $Z$: basta $P_c$ y $T_c$ del gas para leer $Z$ del mismo gráfico que todos.</li>
+        <li>Los tramos con $(\partial P/\partial \bar V)_T > 0$ no son un error del modelo: señalan que ahí el sistema se separa en dos fases. La construcción de Maxwell reemplaza ese tramo por una recta horizontal.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q3_1" data-correct="1">
+        <div class="quiz-question">1. ¿Qué caracteriza a la temperatura de Boyle de un gas?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Es la temperatura sobre la cual el gas ya no puede licuarse</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_1" value="1"><span class="opt-letter">B</span><span class="opt-text">A esa $T$ la curva $Z$ vs. $P$ es tangente a la del gas ideal en $P=0$, y el gas se comporta idealmente en un amplio rango de $P$</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Es la temperatura a la cual $Z = 3/8$</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Es la temperatura donde se cumple exactamente la ley de Boyle a toda presión</span></label>
+        </div>
+        <script type="text/explanation" id="q3_1-exp">$T_B$ se define por $b - a/RT_B = 0$, es decir, por la anulación de la pendiente inicial de $Z$ vs. $P$. La opción A describe la temperatura <em>crítica</em>, no la de Boyle; nótese que $T_B = 3{,}375\,T_c$, muy por encima. La opción C describe $Z_c$ en el punto crítico. En $T_B$ el gas imita al ideal en un intervalo amplio pero no infinito de presiones: a $P$ muy altas los términos de orden superior vuelven a desviarlo.</script>
+        <div class="quiz-feedback" id="q3_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q3_2" data-correct="0">
+        <div class="quiz-question">2. ¿Cómo se obtienen las coordenadas críticas $\bar V_c$, $P_c$ y $T_c$ a partir de la ecuación de Van der Waals?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Imponiendo $(\partial P/\partial\bar V)_T = 0$ y $(\partial^2 P/\partial\bar V^2)_T = 0$, y resolviendo junto con la ecuación de estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Igualando $Z = 1$ y despejando</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Tomando el límite $P \to \infty$ de la ecuación</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Ajustando los datos experimentales de licuefacción</span></label>
+        </div>
+        <script type="text/explanation" id="q3_2-exp">El punto crítico es el punto de inflexión con tangente horizontal de la isoterma $T=T_c$: ambas derivadas se anulan ahí. Eso da dos ecuaciones; la tercera es la propia ecuación de Van der Waals evaluada en el punto. Resolviendo el sistema salen $\bar V_c = 3b$, $P_c = a/27b^2$, $T_c = 8a/27Rb$. El mismo procedimiento sirve para cualquier otra ecuación de estado — es exactamente lo que se pide en el P6 propuesto del Auxiliar 2.</script>
+        <div class="quiz-feedback" id="q3_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q3_3" data-correct="2">
+        <div class="quiz-question">3. Dos gases distintos están a la misma temperatura reducida y a la misma presión reducida. Según la ley de los estados correspondientes:</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Tienen la misma presión absoluta y la misma temperatura absoluta</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Tienen el mismo volumen molar en litros por mol</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Tienen el mismo volumen reducido y por lo tanto el mismo factor de compresibilidad</span></label>
+          <label class="quiz-option"><input type="radio" name="q3_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Tienen las mismas constantes $a$ y $b$ de Van der Waals</span></label>
+        </div>
+        <script type="text/explanation" id="q3_3-exp">En variables reducidas la ecuación queda $\pi = 8\tau/(3\phi - 1) - 3/\phi^2$, sin ninguna constante propia del gas. Fijados $\tau$ y $\pi$, queda determinado $\phi$ — el mismo para ambos gases. Las magnitudes <em>absolutas</em> ($P$, $T$, $\bar V$ en unidades físicas) sí difieren, porque cada gas tiene sus propias constantes críticas. Como $Z = \pi\phi\, \bar V_c P_c / (\tau T_c R)$ y $Z_c$ es universal en el modelo, el factor de compresibilidad también coincide: eso es lo que hace legítimo el diagrama generalizado.</script>
+        <div class="quiz-feedback" id="q3_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../clase_2/"><div class="nav-dir">← Anterior</div><div class="nav-title">Desviaciones del Gas Ideal y Ecuación de Van der Waals</div></a>
+    <a href="../aux_2/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Gases Reales</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

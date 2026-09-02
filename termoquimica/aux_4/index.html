@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 4 — Primera Ley II</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link active" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Primera ley</div>
+    <div class="unit-pill u3 bg-u3">Primera ley · Clases 4–6</div>
+    <h1>Auxiliar 4: Primera Ley II</h1>
+    <p class="desc">Siete problemas que cierran la primera ley: procesos isobáricos y adiabáticos encadenados, demostraciones con diferenciales totales, coeficiente de Joule-Thomson de un gas de Van der Waals, y una primera aplicación de la ley de Hess.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que ejercita</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Encadenamiento de procesos isobárico y adiabático con transferencia entre recipientes</li>
+        <li>Demostraciones formales usando los diferenciales totales de $U$ y $H$</li>
+        <li>Consecuencias de la ley de Joule: qué derivadas se anulan en un gas ideal</li>
+        <li>Análisis cualitativo de transformaciones isotérmicas e isoentálpicas</li>
+        <li>Coeficiente de Joule-Thomson de un gas de Van der Waals</li>
+        <li>Cálculo de $\Delta H$ en compresión isotérmica de un gas real</li>
+        <li>Enfriamiento por expansión Joule-Thomson en una sola etapa</li>
+        <li>Relación $C_P - C_V = R$ y su demostración</li>
+        <li>Proceso adiabático reversible: demostración de $TV^{\gamma-1} = $ cte.</li>
+        <li>Entalpías estándar de formación y ley de Hess (adelanto de las clases 7 y 8)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Herramientas que hay que tener a mano</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Diferenciales totales</h3>
+        <p>$dU = (\partial U/\partial V)_T\,dV + C_V\,dT$ y $dH = (\partial H/\partial P)_T\,dP + C_P\,dT$. Casi todas las demostraciones de este auxiliar consisten en escribir uno de estos dos y aplicar la restricción del proceso.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Consecuencias de la ley de Joule</h3>
+        <p>Si $(\partial U/\partial V)_T = 0$ entonces también $(\partial H/\partial P)_T = 0$, $(\partial U/\partial P)_T = 0$ y $(\partial H/\partial V)_T = 0$. Todas se demuestran a partir de $H = U + PV = U + nRT$ para gas ideal.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Adiabático reversible</h3>
+        <p>Partir de $dU = -\bar\delta W$ con $\bar\delta W = P\,dV$ y $dU = nC_V\,dT$, sustituir $P = nRT/V$ y separar variables. Integrando aparece $TV^{\gamma-1} =$ cte., y con la ley de estado sus formas equivalentes.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Joule-Thomson</h3>
+        <p>$\mu_{\text{JT}} = (\partial T/\partial P)_H$, y por la regla cíclica $(\partial H/\partial P)_T = -\mu_{\text{JT}}C_P$. Con eso, $\Delta H$ de un proceso isotérmico de un gas real se calcula integrando en $P$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Sistema de dos recipientes</h3>
+        <p>Cuando dos gases se transfieren a un tanque común: los moles se suman, y el estado final se obtiene aplicando la ley del gas ideal al volumen total y a la temperatura indicada. Es la misma estructura del P3 del Auxiliar 1.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ley de Hess</h3>
+        <p>Combinar linealmente reacciones tabuladas hasta reproducir la reacción objetivo. Invertir cambia el signo de $\Delta H$; multiplicar por $n$ lo escala. Un cambio de fase ($\Delta H_{\text{vap}}$) es un paso más del ciclo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas que se usan</h2>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Proceso isobárico</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_1.svg" alt=""></div>
+      <div class="formula-desc">
+        La segunda igualdad de $W$ usa $PV = nRT$ con $P$ constante: es un atajo cómodo cuando se conocen las temperaturas pero no los volúmenes.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Proceso adiabático</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Sin intercambio de calor, todo el trabajo sale de la energía interna: el gas se enfría al expandirse.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Relaciones del adiabático reversible</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Las tres formas son equivalentes vía $PV = nRT$. Elegir la que involucre las variables que da el enunciado — en el P6(b) se conocen las presiones, así que conviene la tercera.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Diferenciales totales de $U$ y $H$</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_4.svg" alt=""></div>
+      <div class="formula-desc">
+        El punto de partida que indica el enunciado del P2. Escribir ambos y aplicar las restricciones del proceso es todo el método.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Ley de Joule y su consecuencia sobre $H$</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_5.svg" alt=""></div>
+      <div class="formula-desc">
+        La implicación se obtiene de $H = U + PV = U(T) + nRT$: si $U$ depende sólo de $T$, $H$ también, y su derivada respecto de $P$ a $T$ fija se anula.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Coeficiente de Joule-Thomson (Van der Waals)</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_6.svg" alt=""></div>
+      <div class="formula-desc">
+        La expresión de $\mu_{\text{JT}}$ la entrega el enunciado del P4. La segunda igualdad, de la regla cíclica, es la que conecta con $\Delta H$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">$\Delta H$ isotérmico de un gas real</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_7.svg" alt=""></div>
+      <div class="formula-desc">
+        Válido si $C_P$ y $\mu_{\text{JT}}C_P$ se toman constantes en el rango de presiones. Nótese que el producto $\mu_{\text{JT}}C_P$ no depende de $C_P$: sólo de $a$, $b$ y $T$.
+      </div>
+    </div>
+
+    <div class="formula-block u3">
+      <div class="formula-label">Relaciones auxiliares</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_4_8.svg" alt=""></div>
+      <div class="formula-desc">
+        La primera se usa en el P4(b) para estimar el salto de temperatura; la segunda en el P5; la tercera en el P7.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">✏️</span> Problemas</h2>
+
+    <div class="problem-block u3">
+      <div class="problem-head">
+        <span class="problem-num">P1</span>
+        <span class="problem-title">$Q$ y $W$ — isobárico + adiabático con dos recipientes</span>
+        <span class="problem-badge">Resuelto en aula</span>
+      </div>
+      <div class="problem-statement">
+        En el recipiente 1 el gas A experimenta una expansión isobárica ($1\to2$) a 15 atm hasta 300 K, y luego un proceso adiabático ($2\to3$) que resulta en un trabajo de 764 kJ hasta alcanzar 5 atm. El calor total intercambiado en el proceso es 150 kJ.
+        <p>El recipiente 2 contiene un gas B a 15 atm, $V_3$ y $T_3$ (el estado final de A). Ambos gases ideales se transfieren a un tanque de volumen $V_1 + V_2$, mantenido a la temperatura del estado inicial de A.</p>
+        <p>A partir de la definición de trabajo, encontrar una expresión conveniente y determinar la presión total del tercer tanque. Dato: $C_{P,A} = 0{,}12$ L·atm/(mol·K).</p>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>El calor total (150 kJ) corresponde sólo al tramo isobárico, porque el adiabático tiene $Q = 0$. De ahí: $Q_P = nC_{P,A}(T_2 - T_1)$.</li>
+          <li>El trabajo total es la suma de ambos tramos: $W_{\text{total}} = W_{1\to2} + 764$ kJ. Aplicar $\Delta U_{\text{total}} = Q - W$ al conjunto.</li>
+          <li>En el adiabático, $W_{2\to3} = -\Delta U_{2\to3} = -nC_V(T_3 - T_2)$: eso permite despejar $T_3$ si se conoce $n$, o viceversa.</li>
+          <li>Usar $C_V = C_P - R$ para el gas A, cuidando que $R$ vaya en L·atm/(mol·K) para calzar con el $C_P$ dado.</li>
+          <li>Con las dos ecuaciones (calor isobárico y trabajo adiabático) despejar $n_A$ y $T_1$. Aquí es donde entra la "expresión conveniente" que pide el enunciado.</li>
+          <li>Calcular $V_1$, $V_2$ y $V_3$ con la ley del gas ideal en cada estado.</li>
+          <li>Para el gas B: está a 15 atm en $V_3$ y $T_3$, así que $n_B = P_BV_3/RT_3$.</li>
+          <li>Tanque final: sumar $n_A + n_B$, volumen $V_1 + V_2$, temperatura $T_1$. Aplicar $P = n_tRT_1/(V_1+V_2)$.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u3">
+      <div class="problem-head">
+        <span class="problem-num">P2</span>
+        <span class="problem-title">Demostrar que $(\partial H/\partial P)_T = 0$</span>
+        <span class="problem-badge">Resuelto en aula</span>
+      </div>
+      <div class="problem-statement">
+        Demostrar que para la expansión contra el vacío de un gas ideal en un contenedor perfectamente aislado térmicamente se cumple $\left(\dfrac{\partial H}{\partial P}\right)_T = 0$.
+        <br>Indicación: partir de las expresiones para el diferencial total de la energía interna y de la entalpía.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Establecer primero $(\partial U/\partial V)_T = 0$ desde el experimento de Joule: expansión contra el vacío ($W=0$) en recipiente aislado ($Q=0$) da $dU = 0$, y como $dT = 0$ pero $dV \neq 0$, la derivada debe anularse.</li>
+          <li>Escribir el diferencial total de $H(T,P)$ y el de $U(T,V)$.</li>
+          <li>Usar $H = U + PV = U + nRT$ para el gas ideal: el lado derecho depende sólo de $T$.</li>
+          <li>Derivar esa identidad respecto de $P$ a $T$ constante: el término $U$ contribuye vía $(\partial U/\partial V)_T(\partial V/\partial P)_T$, que se anula por el primer paso; y $nRT$ no depende de $P$.</li>
+          <li>Concluir. Vale la pena dejar explícito dónde se usa la idealidad — es lo que distingue una demostración de una manipulación.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u3">
+      <div class="problem-head">
+        <span class="problem-num">P3</span>
+        <span class="problem-title">Experimento de Joule — análisis cualitativo</span>
+        <span class="problem-badge">Control 1 Primavera 2025</span>
+      </div>
+      <div class="problem-statement">
+        Un gas ideal está en un dispositivo cilindro-pistón. En una transformación isotérmica la variación de energía interna es nula respecto del volumen. Justificar brevemente los supuestos empleados en cada caso:
+        <ol>
+          <li>En una transformación isotérmica: determinar la variación de $U$ debida a un cambio de presión; la de $H$ debida a un cambio de volumen; y la de $H$ debida a un cambio de presión.</li>
+          <li>En una transformación isoentálpica: determinar la variación de temperatura debida a un cambio de presión.</li>
+          <li>Si aumentan a la vez presión y volumen, ¿qué ocurre con la temperatura? Y si sólo aumenta la presión a volumen constante?</li>
+          <li>Si aumenta la presión y disminuye el volumen, ¿qué cambio experimenta la temperatura?</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Todas las derivadas pedidas se anulan, y la razón es la misma: para un gas ideal $U$ y $H$ dependen <em>sólo</em> de $T$. Expresar cada una mediante la regla de la cadena a partir de $(\partial U/\partial V)_T = 0$.</li>
+          <li>(b) La derivada pedida es $\mu_{\text{JT}} = (\partial T/\partial P)_H$. Para gas ideal $H = H(T)$, luego $H$ constante implica $T$ constante y la derivada es cero.</li>
+          <li>(c) y (d) Usar $PV = nRT$: la temperatura es proporcional al producto $PV$. Si ambos aumentan, $T$ aumenta. Si $P$ aumenta con $V$ fijo, $T$ aumenta.</li>
+          <li>Para (d), con $P$ subiendo y $V$ bajando el producto puede ir en cualquier dirección: la respuesta es que depende de las magnitudes relativas de ambos cambios. Indicar el criterio: comparar $P_2V_2$ con $P_1V_1$.</li>
+          <li>El enunciado insiste en justificar los supuestos. La idealidad es el supuesto central de (a) y (b), y hay que decirlo explícitamente.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u3">
+      <div class="problem-head">
+        <span class="problem-num">P4</span>
+        <span class="problem-title">Joule-Thomson en monóxido de carbono</span>
+        <span class="problem-badge">Resuelto en aula</span>
+      </div>
+      <div class="problem-statement">
+        Un tanque contiene CO, gas diatómico en condiciones extremas cuyo comportamiento real se describe por Van der Waals, con $\mu_{\text{JT}} = \dfrac{1}{C_P}\left(\dfrac{2a}{RT} - b\right)$.
+        <ol>
+          <li>Un mol de CO se somete a una compresión isotérmica a $T = 300$ K desde 1 atm hasta 500 atm. Determinar el cambio de entalpía $\Delta H$ en calorías. Datos: $a = 1{,}485\ \mathrm{L^2atm/mol^2}$, $b = 0{,}04$ L/mol.</li>
+          <li>El gas sufre una expansión de Joule-Thomson: parte a $17\,^\circ$C y tras la expansión alcanza su temperatura de ebullición ($-191{,}5\,^\circ$C). ¿Cuál era la presión inicial que permitió semejante enfriamiento en una sola etapa?</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Usar $(\partial H/\partial P)_T = -\mu_{\text{JT}}C_P$. Al sustituir la expresión dada de $\mu_{\text{JT}}$, el $C_P$ se cancela: queda $(\partial H/\partial P)_T = b - 2a/RT$, independiente de $C_P$.</li>
+          <li>Integrar en $P$ desde 1 hasta 500 atm a $T$ fija. Como el integrando es constante a $T$ constante, $\Delta H = (b - 2a/RT)(P_2 - P_1)$.</li>
+          <li>Convertir el resultado de L·atm a calorías ($1$ L·atm $= 24{,}22$ cal). Verificar el signo: con $2a/RT > b$ a 300 K, $\Delta H$ debe salir negativo.</li>
+          <li>(b) Aquí el proceso es a $H$ constante, no a $T$ constante. Usar $\Delta T = \mu_{\text{JT}}\Delta P$ con $\Delta T = T_f - T_i$ conocido.</li>
+          <li>Evaluar $\mu_{\text{JT}}$: necesita $C_P$ del CO. Como es diatómico, $C_P = \tfrac72R$.</li>
+          <li>Despejar $\Delta P$ y de ahí $P_i$, sabiendo que la expansión termina presumiblemente a presión atmosférica. Como $\mu_{\text{JT}}$ varía con $T$ en un salto tan grande, comentar que el resultado es una estimación con $\mu_{\text{JT}}$ evaluado a la temperatura inicial.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u3">
+      <div class="problem-head">
+        <span class="problem-num">P5</span>
+        <span class="problem-title">Relación entre $C_P$ y $C_V$</span>
+        <span class="problem-badge">Propuesto</span>
+      </div>
+      <div class="problem-statement">
+        Dos moles de oxígeno, considerado ideal con $C_P = 29{,}4\ \mathrm{J\,K^{-1}mol^{-1}}$ (independiente de la temperatura), se mantienen a 273 K en un volumen de 11,35 dm$^3$.
+        <ol>
+          <li>Determinar la presión del gas en bar.</li>
+          <li>Demostrar la relación entre $C_P$ y $C_V$ para gases ideales.</li>
+          <li>Determinar la capacidad calorífica a volumen constante.</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Aplicar $P = nRT/V$ y convertir a bar. Cuidar que $R$ y las unidades de $V$ sean consistentes.</li>
+          <li>(b) Partir de $C_P - C_V = \left[P + (\partial U/\partial V)_T\right](\partial V/\partial T)_P$.</li>
+          <li>Anular el segundo término dentro del corchete por la ley de Joule, y calcular $(\partial V/\partial T)_P = R/P$ derivando la ley del gas ideal.</li>
+          <li>Concluir $C_P - C_V = R$ por mol. Señalar explícitamente en qué paso se usó la idealidad.</li>
+          <li>(c) Restar: $\bar C_V = \bar C_P - R$. Comparar con el valor teórico de un diatómico ($\tfrac52R \approx 20{,}8$ J/(mol·K)) y comentar la coincidencia.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u3">
+      <div class="problem-head">
+        <span class="problem-num">P6</span>
+        <span class="problem-title">Proceso adiabático reversible</span>
+        <span class="problem-badge">Propuesto</span>
+      </div>
+      <div class="problem-statement">
+        <ol>
+          <li>Demostrar que para un gas ideal en una transformación adiabática reversible se cumple $TV^{\gamma-1} = $ cte., con $\gamma = C_P/C_V$.</li>
+          <li>Inicialmente 5 mol de nitrógeno están a $25\,^\circ$C y 10 bar, con $\bar C_V = 20{,}8\ \mathrm{J/(mol\,K)}$ independiente de $T$. El sistema experimenta una expansión adiabática reversible hasta que la presión baja a 1 bar. Usando la relación demostrada, determinar la temperatura final, $\Delta U$ y $\Delta H$.</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Adiabático: $\bar\delta Q = 0$, luego $dU = -\bar\delta W$. Reversible: $\bar\delta W = P\,dV$.</li>
+          <li>Sustituir $dU = nC_V\,dT$ y $P = nRT/V$ para obtener $nC_V\,dT = -nRT\,dV/V$.</li>
+          <li>Separar variables: $\frac{dT}{T} = -\frac{R}{C_V}\frac{dV}{V}$, e integrar.</li>
+          <li>Usar $R = C_P - C_V$ para escribir $R/C_V = \gamma - 1$, y llegar a $TV^{\gamma-1} = $ cte.</li>
+          <li>(b) Como el enunciado da presiones, conviene la forma equivalente $T^\gamma P^{1-\gamma} =$ cte. Obtenerla combinando el resultado con $PV = nRT$.</li>
+          <li>Calcular $\gamma$ desde $\bar C_V$ y $\bar C_P = \bar C_V + R$, despejar $T_2$, y luego $\Delta U = n\bar C_V\Delta T$ y $\Delta H = n\bar C_P\Delta T$.</li>
+          <li>Chequeo: al expandirse adiabáticamente el gas debe enfriarse, así que $T_2 < T_1$ y ambos $\Delta$ negativos.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u3">
+      <div class="problem-head">
+        <span class="problem-num">P7</span>
+        <span class="problem-title">$\Delta H_f^\circ$ y ley de Hess — combustión del benceno</span>
+        <span class="problem-badge">Propuesto · adelanta clases 7–8</span>
+      </div>
+      <div class="problem-statement">
+        Para $2\mathrm{C_6H_6}(l) + 15\mathrm{O_2}(g) \to 12\mathrm{CO_2}(g) + 6\mathrm{H_2O}(l)$, determinar:
+        <ol>
+          <li>El calor de formación molar estándar del benceno.</li>
+          <li>La entalpía estándar de la reacción inversa: $12\mathrm{CO_2}(g) + 6\mathrm{H_2O}(l) \to 2\mathrm{C_6H_6}(l) + 15\mathrm{O_2}(g)$.</li>
+          <li>La entalpía estándar de $\mathrm{C_6H_6}(g) + \tfrac{15}{2}\mathrm{O_2}(g) \to 6\mathrm{CO_2}(g) + 3\mathrm{H_2O}(g)$.</li>
+        </ol>
+        Datos: $\Delta H_{\text{vap}}$ del benceno a $25\,^\circ$C $= 33{,}6$ kJ/mol; entalpía de combustión molar del benceno $= -3267{,}4$ kJ/mol; $\Delta H_f^\circ(\mathrm{CO_2},g) = -393{,}5$; $\Delta H_f^\circ(\mathrm{H_2O},l) = -285{,}8$; $\Delta H_f^\circ(\mathrm{H_2O},g) = -241{,}8$ kJ/mol.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Escribir la combustión <em>por mol</em> de benceno y aplicar $\Delta H_{\text{comb}}^\circ = \sum\nu\Delta H_f^\circ(\text{prod}) - \sum\nu\Delta H_f^\circ(\text{reac})$, recordando que $\Delta H_f^\circ(\mathrm{O_2}) = 0$.</li>
+          <li>Despejar la única incógnita: $\Delta H_f^\circ(\mathrm{C_6H_6}, l)$.</li>
+          <li>(b) Es la reacción del enunciado invertida y con los mismos coeficientes: basta cambiar el signo del $\Delta H^\circ$ de la reacción directa (que es el doble de la combustión molar, porque la ecuación va con 2 mol de benceno).</li>
+          <li>(c) Dos cambios respecto de (a): el benceno está en fase gaseosa y el agua también. Cada cambio de fase es un paso extra del ciclo de Hess.</li>
+          <li>Usar $\Delta H_f^\circ(\mathrm{C_6H_6}, g) = \Delta H_f^\circ(\mathrm{C_6H_6}, l) + \Delta H_{\text{vap}}$, y para el agua tomar directamente el valor de $\mathrm{H_2O}(g)$ de la tabla.</li>
+          <li>Aplicar de nuevo productos menos reactivos con los coeficientes de <em>esta</em> ecuación (1 mol de benceno, no 2).</li>
+          <li>Chequeo: (c) debe ser menos exotérmica que (a) por mol, porque parte de reactivos más energéticos (gas en vez de líquido) y produce agua gaseosa en vez de líquida.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Estrategia general</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Cómo abordar este auxiliar</div>
+      <ul>
+        <li>Las demostraciones (P2, P5b, P6a) siguen todas el mismo patrón: escribir el diferencial total, aplicar la restricción del proceso, y usar la ley de Joule para anular lo que sobra. Reconocer el patrón vale más que memorizar cada una.</li>
+        <li>En el P4, el $C_P$ se cancela al combinar $\mu_{\text{JT}}$ con $(\partial H/\partial P)_T$. Notarlo antes de calcular ahorra buscar un dato que no hace falta.</li>
+        <li>Distinguir con cuidado los procesos isotérmicos ($T$ fija, $\Delta H \neq 0$ en gas real) de los isoentálpicos ($H$ fija, $\Delta T \neq 0$). El P4 pide uno de cada uno.</li>
+        <li>Los procesos adiabáticos tienen $Q = 0$ pero $\Delta T \neq 0$; los isotérmicos tienen $\Delta T = 0$ pero $Q \neq 0$. Confundirlos es el error clásico.</li>
+        <li>En problemas con varios recipientes, trabajar siempre con moles y no con presiones hasta el paso final.</li>
+        <li>El P7 usa material de las clases 7 y 8: si aún no se han visto, conviene leer primero la convención de estado estándar antes de intentarlo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="qa4_1" data-correct="2">
+        <div class="quiz-question">1. ¿Cuál es la diferencia entre un proceso isotérmico y uno isoentálpico en un gas real?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa4_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Ninguna: en ambos $\Delta T = 0$ y $\Delta H = 0$</span></label>
+          <label class="quiz-option"><input type="radio" name="qa4_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El isotérmico requiere aislamiento térmico; el isoentálpico no</span></label>
+          <label class="quiz-option"><input type="radio" name="qa4_1" value="2"><span class="opt-letter">C</span><span class="opt-text">En el isotérmico $T$ es fija y $\Delta H \neq 0$; en el isoentálpico $H$ es fija y $\Delta T \neq 0$</span></label>
+          <label class="quiz-option"><input type="radio" name="qa4_1" value="3"><span class="opt-letter">D</span><span class="opt-text">El isoentálpico sólo existe en gases ideales</span></label>
+        </div>
+        <script type="text/explanation" id="qa4_1-exp">En un gas real $H$ depende de $T$ <em>y</em> de $P$, así que las dos restricciones son independientes. En una compresión isotérmica se mantiene $T$ y la entalpía cambia según $\Delta H = \int(\partial H/\partial P)_T\,dP$ — es el P4(a). En un estrangulamiento Joule-Thomson se mantiene $H$ y la temperatura cambia según $\mu_{\text{JT}}$ — es el P4(b). Sólo en un gas ideal ambas condiciones colapsan en la misma, porque ahí $H = H(T)$. El aislamiento es una circunstancia del montaje, no lo que define la diferencia.</script>
+        <div class="quiz-feedback" id="qa4_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qa4_2" data-correct="3">
+        <div class="quiz-question">2. Al combinar $\mu_{\text{JT}} = \frac{1}{C_P}\left(\frac{2a}{RT} - b\right)$ con $(\partial H/\partial P)_T = -\mu_{\text{JT}}C_P$, ¿qué ocurre?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa4_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Aparece un $C_P^2$ que hay que evaluar con el valor tabulado</span></label>
+          <label class="quiz-option"><input type="radio" name="qa4_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El resultado depende de si el gas es mono o diatómico</span></label>
+          <label class="quiz-option"><input type="radio" name="qa4_2" value="2"><span class="opt-letter">C</span><span class="opt-text">La expresión sólo vale a la temperatura de inversión</span></label>
+          <label class="quiz-option"><input type="radio" name="qa4_2" value="3"><span class="opt-letter">D</span><span class="opt-text">$C_P$ se cancela y queda $(\partial H/\partial P)_T = b - 2a/RT$, que sólo depende de $a$, $b$ y $T$</span></label>
+        </div>
+        <script type="text/explanation" id="qa4_2-exp">$-\mu_{\text{JT}}C_P = -\frac{1}{C_P}\left(\frac{2a}{RT} - b\right)C_P = b - \frac{2a}{RT}$. El $C_P$ desaparece, de modo que para calcular $\Delta H$ de la compresión isotérmica del P4(a) no hace falta conocerlo. Sí se necesita en cambio en el P4(b), donde se usa $\Delta T = \mu_{\text{JT}}\Delta P$ y $\mu_{\text{JT}}$ sí lleva $C_P$ en el denominador — ahí es donde entra que el CO sea diatómico.</script>
+        <div class="quiz-feedback" id="qa4_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qa4_3" data-correct="1">
+        <div class="quiz-question">3. En la demostración de $TV^{\gamma-1} = $ cte., ¿dónde se usa que el proceso es reversible?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa4_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Al poner $Q = 0$</span></label>
+          <label class="quiz-option"><input type="radio" name="qa4_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Al escribir $\bar\delta W = P\,dV$ con la presión <em>del sistema</em> en lugar de la externa</span></label>
+          <label class="quiz-option"><input type="radio" name="qa4_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Al usar $dU = nC_V\,dT$</span></label>
+          <label class="quiz-option"><input type="radio" name="qa4_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Al integrar entre los estados inicial y final</span></label>
+        </div>
+        <script type="text/explanation" id="qa4_3-exp">$Q = 0$ es la condición de adiabaticidad, no de reversibilidad — una expansión adiabática irreversible también tiene $Q=0$. Y $dU = nC_V\,dT$ vale para un gas ideal en cualquier proceso, por la ley de Joule. La reversibilidad entra exactamente al sustituir $P_{\text{op}}$ por $P = nRT/V$, la presión del propio sistema: eso sólo es lícito si el gas está en equilibrio mecánico con el entorno en todo instante. Una expansión adiabática irreversible <em>no</em> cumple $TV^{\gamma-1} = $ cte.</script>
+        <div class="quiz-feedback" id="qa4_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_3/"><div class="nav-dir">← Anterior</div><div class="nav-title">Primera Ley</div></a>
+    <a href="../clase_7/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Calor de Reacción y Entalpías de Formación</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
