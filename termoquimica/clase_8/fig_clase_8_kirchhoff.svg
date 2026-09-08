@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 366" width="720" height="366" font-family="'Inter', system-ui, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6e7681"/></marker><marker id="ahl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8b949e"/></marker></defs>
+<rect x="92.0" y="58.0" width="176.0" height="52.0" fill="#1c2128" rx="6" stroke="#f0883e" stroke-width="1.6"/>
+<text x="180.0" y="80.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="600">Reactivos</text>
+<text x="180.0" y="97.0" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400">a T<tspan font-size="7.6" dy="3.15">1</tspan><tspan font-size="10.5" dy="-3.15">&#8203;</tspan></text>
+<rect x="452.0" y="58.0" width="176.0" height="52.0" fill="#1c2128" rx="6" stroke="#f0883e" stroke-width="1.6"/>
+<text x="540.0" y="80.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="600">Productos</text>
+<text x="540.0" y="97.0" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400">a T<tspan font-size="7.6" dy="3.15">1</tspan><tspan font-size="10.5" dy="-3.15">&#8203;</tspan></text>
+<rect x="92.0" y="226.0" width="176.0" height="52.0" fill="#1c2128" rx="6" stroke="#f0883e" stroke-width="1.6"/>
+<text x="180.0" y="248.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="600">Reactivos</text>
+<text x="180.0" y="265.0" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400">a T<tspan font-size="7.6" dy="3.15">2</tspan><tspan font-size="10.5" dy="-3.15">&#8203;</tspan></text>
+<rect x="452.0" y="226.0" width="176.0" height="52.0" fill="#1c2128" rx="6" stroke="#f0883e" stroke-width="1.6"/>
+<text x="540.0" y="248.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="600">Productos</text>
+<text x="540.0" y="265.0" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400">a T<tspan font-size="7.6" dy="3.15">2</tspan><tspan font-size="10.5" dy="-3.15">&#8203;</tspan></text>
+<path d="M 278 84.0 L 442 84.0" stroke="#8b949e" stroke-width="1.7" fill="none" marker-end="url(#ahl)"/>
+<text x="360.0" y="73.0" font-family="'Inter', system-ui, sans-serif" font-size="12.5" fill="#00d4ff" text-anchor="middle" font-weight="600">ΔH<tspan font-size="9.0" dy="3.75">1</tspan><tspan font-size="12.5" dy="-3.75">&#8203;</tspan></text>
+<text x="360.0" y="105.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">conocida (tablas a 298 K)</text>
+<path d="M 278 252.0 L 442 252.0" stroke="#8b949e" stroke-width="1.7" fill="none" marker-end="url(#ahl)"/>
+<text x="360.0" y="241.0" font-family="'Inter', system-ui, sans-serif" font-size="12.5" fill="#3fb950" text-anchor="middle" font-weight="600">ΔH<tspan font-size="9.0" dy="3.75">2</tspan><tspan font-size="12.5" dy="-3.75">&#8203;</tspan></text>
+<text x="360.0" y="273.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">la que se busca</text>
+<path d="M 180.0 216 L 180.0 120" stroke="#8b949e" stroke-width="1.7" fill="none" marker-end="url(#ahl)"/>
+<text x="168.0" y="166.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="end" font-weight="400">calentar reactivos</text>
+<text x="168.0" y="180.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="end" font-weight="400">∫C<tspan font-size="7.2" dy="3.00">P</tspan><tspan font-size="10" dy="-3.00">&#8203;</tspan>(reac) dT</text>
+<path d="M 540.0 120 L 540.0 216" stroke="#8b949e" stroke-width="1.7" fill="none" marker-end="url(#ahl)"/>
+<text x="552.0" y="166.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="start" font-weight="400">calentar productos</text>
+<text x="552.0" y="180.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="start" font-weight="400">∫C<tspan font-size="7.2" dy="3.00">P</tspan><tspan font-size="10" dy="-3.00">&#8203;</tspan>(prod) dT</text>
+<rect x="76.0" y="292.0" width="568.0" height="52.0" fill="#22272e" rx="6" stroke="#30363d" stroke-width="1"/>
+<text x="360.0" y="313.0" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#8b949e" text-anchor="middle" font-weight="400">H es función de estado: ir por arriba o por abajo debe dar lo mismo. Igualando ambos caminos,</text>
+<text x="360.0" y="333.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="600">ΔH<tspan font-size="8.6" dy="3.60">2</tspan><tspan font-size="12" dy="-3.60">&#8203;</tspan> = ΔH<tspan font-size="8.6" dy="3.60">1</tspan><tspan font-size="12" dy="-3.60">&#8203;</tspan> + ∫ ΔC<tspan font-size="8.6" dy="3.60">P</tspan><tspan font-size="12" dy="-3.60">&#8203;</tspan>° dT ,   con   ΔC<tspan font-size="8.6" dy="3.60">P</tspan><tspan font-size="12" dy="-3.60">&#8203;</tspan>° = ΣC<tspan font-size="8.6" dy="3.60">P</tspan><tspan font-size="12" dy="-3.60">&#8203;</tspan>(productos) − ΣC<tspan font-size="8.6" dy="3.60">P</tspan><tspan font-size="12" dy="-3.60">&#8203;</tspan>(reactivos)</text>
+</svg>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux 1 — Gases Ideales</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script>
+    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–8 · Aux 1–4</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link active" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Gases ideales</div>
+    <div class="unit-pill u1 bg-u1">Gases ideales · Clase 1</div>
+    <h1>Auxiliar 1: Gases Ideales</h1>
+    <p class="desc">Ocho problemas sobre gas ideal: estequiometría con $PV=nRT$, presiones parciales de Dalton, tablas de reacción y grado de avance, y la deducción de la ley barométrica. Cada uno con su enunciado y el camino de resolución, sin el desarrollo numérico.</p>
+  </div>
+
+<section>
+    <h2><span class="section-icon">📋</span> Temas que ejercita</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Ley del gas ideal combinada con estequiometría: de gramos a moles a volumen</li>
+        <li>Ley de Dalton: presiones parciales y totales en mezclas</li>
+        <li>Mezcla de recipientes a distintas $P$, $V$ y $T$ en un volumen común</li>
+        <li>Tabla de reacción y grado de avance $\xi$; identificación del reactivo limitante</li>
+        <li>Balance de ecuaciones químicas (redox incluidas)</li>
+        <li>Deducción de la ley barométrica desde la segunda ley de Newton</li>
+        <li>Descomposición parcial de un gas: incógnitas acopladas por Dalton</li>
+        <li>Conversión de unidades no-SI (Torr, psi, $^\circ$F, ft$^3$)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Herramientas que hay que tener a mano</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Elegir el $R$ correcto</h3>
+        <p>$R = 0{,}082\ \text{atm·L·mol}^{-1}\text{K}^{-1}$ cuando $P$ va en atm y $V$ en litros; $R = 8{,}314\ \text{J·mol}^{-1}\text{K}^{-1}$ cuando todo va en SI. Casi todos los errores de estos problemas son de unidades, no de física.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Tabla de reacción</h3>
+        <p>Filas: inicial, cambio, final. El cambio de cada especie es $\nu_i\xi$, con $\nu_i$ positivo para productos y negativo para reactivos. El reactivo limitante es el que se agota con el $\xi$ más pequeño.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Mezclar recipientes</h3>
+        <p>Cada recipiente aporta sus moles: se calcula $n_i$ por separado con sus propias $P_i$, $V_i$, $T_i$, se suman, y luego se aplica $PV = n_tRT$ al volumen y temperatura finales. Las presiones <em>no</em> se suman directamente si los volúmenes o temperaturas difieren.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Después de una combustión</h3>
+        <p>Recalcular los moles gaseosos con la tabla de reacción. Ojo con el agua: si el enunciado dice que condensa, sale de la fase gaseosa y deja de contribuir a la presión.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Barométrica desde Newton</h3>
+        <p>Equilibrio de una rebanada de fluido de espesor $dz$: $P_{z+dz}A + mg = P_zA$. Se sustituye $m = \rho A\,dz$ y $\rho = PM/RT$, se separan variables y se integra. La clave es no saltarse la sustitución de $\rho$.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Aire seco</h3>
+        <p>Su masa molar promedio es $\approx 29$ g/mol (≈79 % $\mathrm{N_2}$, ≈21 % $\mathrm{O_2}$). Aparece en cualquier problema atmosférico que no dé el dato explícitamente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas que se usan</h2>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Gas ideal y estequiometría</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_1_1.svg" alt=""></div>
+      <div class="formula-desc">
+        $w$ masa en gramos · $M$ masa molar. El puente entre la química (gramos) y la termodinámica (moles).
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Ley de Dalton</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_1_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Todo problema de mezcla de gases ideales se reduce a contar moles y repartir la presión total según las fracciones molares.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Balance de fuerzas en una columna de fluido</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_1_3.svg" alt=""></div>
+      <div class="formula-desc">
+        El punto de partida indicado por el enunciado del P4. Sustituir $\rho = PM/RT$ es lo que convierte el balance mecánico en una ecuación diferencial separable.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Ley barométrica</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_1_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Resultado de integrar la anterior con $T$ y $g$ constantes. El exponente es negativo: la presión <em>cae</em> con la altura.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Grado de avance de reacción</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_1_5.svg" alt=""></div>
+      <div class="formula-desc">
+        $\xi$ tiene unidades de moles y es común a todas las especies: por eso una sola variable describe el avance completo de la reacción.
+      </div>
+    </div>
+
+    <div class="formula-block u1">
+      <div class="formula-label">Conversiones útiles</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_1_6.svg" alt=""></div>
+      <div class="formula-desc">
+        Necesarias para el P8, que mezcla Torr, $^\circ$F, ft$^3$ y psi en un mismo enunciado.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">✏️</span> Problemas</h2>
+
+    <div class="problem-block u1">
+      <div class="problem-head">
+        <span class="problem-num">P1</span>
+        <span class="problem-title">Gas ideal — inflado de un airbag</span>
+        <span class="problem-badge">Resuelto en aula</span>
+      </div>
+      <div class="problem-statement">
+        Las bolsas de aire de automóviles se inflan con nitrógeno formado por la descomposición de azida de sodio ($\mathrm{NaN_3}$). Calcular el volumen de $\mathrm{N_2}$ a $30\,^\circ$C y 760 Torr generado por la descomposición completa de 130 g de azida de sodio.
+        <br>Datos: $M_{\mathrm{NaN_3}} = 65$ g/mol, $R = 0{,}082$ atm·L·mol$^{-1}$K$^{-1}$.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Escribir y balancear la descomposición: $\mathrm{NaN_3}(s) \to \mathrm{Na}(s) + \mathrm{N_2}(g)$. Ajustar los coeficientes hasta cerrar Na y N.</li>
+          <li>Convertir los 130 g a moles de azida con $n = w/M$.</li>
+          <li>Usar la razón estequiométrica para pasar de moles de $\mathrm{NaN_3}$ a moles de $\mathrm{N_2}$. "Descomposición completa" significa que no queda azida.</li>
+          <li>Convertir la temperatura a kelvin y la presión a atm (760 Torr = 1 atm) para que calcen con el $R$ dado.</li>
+          <li>Aplicar $V = nRT/P$ con los moles de $\mathrm{N_2}$ — no con los de azida.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u1">
+      <div class="problem-head">
+        <span class="problem-num">P2</span>
+        <span class="problem-title">Ley de Dalton — mezcla $\mathrm{N_2}$/$\mathrm{O_2}$ en un tanque</span>
+        <span class="problem-badge">Resuelto en aula</span>
+      </div>
+      <div class="problem-statement">
+        En un proceso industrial se suministra una mezcla de nitrógeno y oxígeno en lugar de oxígeno puro. Calcular la presión parcial y total ejercida por los gases en un tanque de 120 L a $27\,^\circ$C con 10 moles de mezcla, sabiendo que la fracción molar de nitrógeno es 40 %.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Con $n_t = 10$ mol, $V = 120$ L y $T = 300$ K, obtener la presión total con $P = n_tRT/V$.</li>
+          <li>De $x_{\mathrm{N_2}} = 0{,}40$ deducir $x_{\mathrm{O_2}} = 0{,}60$ (las fracciones molares suman 1).</li>
+          <li>Repartir la presión total: $p_i = x_iP$. Verificar que $p_{\mathrm{N_2}} + p_{\mathrm{O_2}} = P$.</li>
+          <li>Alternativa equivalente: calcular $n_i = x_in_t$ y aplicar $p_i = n_iRT/V$ a cada gas por separado. Debe dar lo mismo — buen chequeo.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u1">
+      <div class="problem-head">
+        <span class="problem-num">P3</span>
+        <span class="problem-title">Dalton + tabla de reacción — cámara de combustión</span>
+        <span class="problem-badge">C1 Primavera 2023</span>
+      </div>
+      <div class="problem-statement">
+        En una cámara cerrada de 50 L se descargan dos recipientes de acero: uno de 5 L con 2,08 mol de $\mathrm{N_2}$ a 293 K, y otro de 20 L con $\mathrm{O_2}$ a 303 K y 15 atm. Mezclados los gases, la cámara se mantiene a $25\,^\circ$C. Se añaden 57,1 g de isooctano $\mathrm{C_8H_{18}}$ ($M = 114{,}2$ g/mol), se enciende la mezcla, se quema totalmente el hidrocarburo y se enfría el sistema hasta $25\,^\circ$C. Toda el agua condensa y los gases se comportan idealmente.
+        <ol>
+          <li>La presión total y las presiones parciales en la mezcla inicial de gases.</li>
+          <li>La presión total y las presiones parciales del sistema después de la combustión.</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Balancear la combustión: $\mathrm{C_8H_{18}}(g) + \tfrac{25}{2}\mathrm{O_2}(g) \to 8\mathrm{CO_2}(g) + 9\mathrm{H_2O}(g)$. El enunciado la da sin ajustar — hacerlo es parte del problema.</li>
+          <li>(a) Contar moles: $n_{\mathrm{N_2}}$ viene dado; $n_{\mathrm{O_2}}$ sale de $PV/RT$ con los datos del segundo recipiente (20 L, 303 K, 15 atm).</li>
+          <li>Aplicar Dalton en el volumen final de 50 L a 298 K: $p_i = n_iRT/V$, y sumar para la presión total. Las condiciones originales de cada recipiente ya no importan una vez conocidos los moles.</li>
+          <li>(b) Convertir los 57,1 g de isooctano a moles y armar la tabla de reacción con el grado de avance.</li>
+          <li>Verificar cuál es el limitante: comparar los moles disponibles de $\mathrm{O_2}$ con los que exige la estequiometría. "Se quema totalmente el hidrocarburo" indica que el limitante es el isooctano, pero conviene confirmarlo.</li>
+          <li>Obtener los moles finales de cada especie. <strong>Descartar el agua de la fase gaseosa</strong>: condensó y no contribuye a la presión.</li>
+          <li>Recalcular presiones parciales y total con los moles gaseosos finales, en 50 L a 298 K.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u1">
+      <div class="problem-head">
+        <span class="problem-num">P4</span>
+        <span class="problem-title">Ley barométrica</span>
+        <span class="problem-badge">Resuelto en aula</span>
+      </div>
+      <div class="problem-statement">
+        <ol>
+          <li>Demostrar que la distribución barométrica de un gas ideal sigue $P = P_0\,e^{-\frac{Mg}{RT}(h-h_0)}$. Indicación: segunda ley de Newton.</li>
+          <li>Calcular la presión a 5000 m de altura, con $T_0 = 288$ K a nivel del mar y suponiendo $T$ y $g$ constantes con la altura. El gas es aire seco.</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Aislar una rebanada de fluido de área $A$ y espesor $dz$. Plantear el equilibrio de fuerzas: la presión desde abajo sostiene el peso más la presión desde arriba.</li>
+          <li>Escribir la masa de la rebanada como $\rho A\,dz$ y llegar a $dP = -\rho g\,dz$.</li>
+          <li>Sustituir $\rho = PM/RT$ del gas ideal — este es el paso que introduce la física del gas.</li>
+          <li>Separar variables ($dP/P = -\frac{Mg}{RT}dz$) e integrar entre $(h_0, P_0)$ y $(h, P)$, usando que $T$ es constante.</li>
+          <li>(b) Reemplazar $M \approx 29$ g/mol (aire seco), $g = 9{,}81$ m/s$^2$, $T = 288$ K, $h - h_0 = 5000$ m. Cuidar que $M$ vaya en kg/mol si se usa $R$ en J/(mol·K).</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u1">
+      <div class="problem-head">
+        <span class="problem-num">P5</span>
+        <span class="problem-title">Balance redox y grado de avance</span>
+        <span class="problem-badge">Resuelto en aula</span>
+      </div>
+      <div class="problem-statement">
+        <ol>
+          <li>Balancear $\mathrm{KMnO_4} + \mathrm{HCl} \to \mathrm{KCl} + \mathrm{MnCl_2} + \mathrm{Cl_2} + \mathrm{H_2O}$ y proponer el cuadro de reacción para cada reactivo en función del avance $\xi$.</li>
+          <li>Calcular el grado de avance cuando se agota el reactivo limitante, partiendo de 2 mol de $\mathrm{KMnO_4}$, 2 mol de HCl y 1 mol de KCl, y obtener los moles finales de KCl.</li>
+        </ol>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Es una redox: identificar los cambios de estado de oxidación (Mn pasa de +7 a +2; Cl$^-$ se oxida a $\mathrm{Cl_2}$) y balancear por el método del ion-electrón o por tanteo sistemático.</li>
+          <li>Armar la tabla con tres filas: moles iniciales, cambio ($\nu_i\xi$) y moles finales. Los reactivos llevan $\nu_i$ negativo.</li>
+          <li>(b) Para cada reactivo, calcular el $\xi$ que lo agota: $\xi_i = -n_i^0/\nu_i$. El limitante es el que da el <em>menor</em> valor.</li>
+          <li>Evaluar la fila de KCl en ese $\xi_{\text{máx}}$. Ojo: el KCl aparece a la vez como producto y con 1 mol inicial, así que hay que sumar ambas contribuciones.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u1">
+      <div class="problem-head">
+        <span class="problem-num">P6</span>
+        <span class="problem-title">Descomposición parcial del amoníaco</span>
+        <span class="problem-badge">Propuesto</span>
+      </div>
+      <div class="problem-statement">
+        Tras colocar 1,6 mol de amoníaco en un recipiente de 1600 cm$^3$ a $25\,^\circ$C, se calienta hasta 500 K. A esa temperatura el $\mathrm{NH_3}$ se descompone parcialmente en $\mathrm{N_2}$ y $\mathrm{H_2}$, alcanzando una presión medida de 4,85 MPa. Calcular el número de moles de cada componente a 500 K.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Balancear $2\mathrm{NH_3} \to \mathrm{N_2} + 3\mathrm{H_2}$ y armar la tabla de reacción con $\xi$ desconocido.</li>
+          <li>Expresar los moles totales finales $n_t(\xi)$ sumando las tres filas. Notar que la reacción <em>aumenta</em> el número de moles gaseosos.</li>
+          <li>La presión medida da una segunda ecuación: $n_t = PV/RT$ a 500 K. Convertir 4,85 MPa y 1600 cm$^3$ a unidades consistentes.</li>
+          <li>Igualar ambas expresiones de $n_t$, despejar $\xi$, y evaluar cada fila de la tabla.</li>
+          <li>Chequeo: los moles de cada especie deben ser positivos y $\xi \le 0{,}8$ (el máximo si se descompusiera todo el $\mathrm{NH_3}$).</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u1">
+      <div class="problem-head">
+        <span class="problem-num">P7</span>
+        <span class="problem-title">Mezcla butano–argón por composición molar</span>
+        <span class="problem-badge">Propuesto</span>
+      </div>
+      <div class="problem-statement">
+        Una mezcla de 5 % molar de butano y 95 % de argón se prepara dejando entrar butano gaseoso hasta llenar un cilindro previamente evacuado a 1 atm de presión. El cilindro de 40 dm$^3$ se pesa. Calcular la masa de argón que da la composición deseada si la temperatura se mantiene a $25\,^\circ$C, y la presión total final de la mezcla. Considerar $M_{\mathrm{Ar}} = 39{,}9$ g/mol.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Del llenado inicial con butano solo (40 dm$^3$, 1 atm, 298 K) obtener $n_{\mathrm{butano}}$ con $PV = nRT$.</li>
+          <li>Imponer $x_{\mathrm{butano}} = 0{,}05$: eso fija $n_t = n_{\mathrm{butano}}/0{,}05$ y por diferencia $n_{\mathrm{Ar}}$.</li>
+          <li>Convertir a masa: $w_{\mathrm{Ar}} = n_{\mathrm{Ar}}M_{\mathrm{Ar}}$.</li>
+          <li>Para la presión final, aplicar $PV = n_tRT$ al mismo volumen y temperatura. Atajo: como $V$ y $T$ no cambian, $P_{\text{final}}/P_{\text{butano}} = n_t/n_{\mathrm{butano}} = 1/0{,}05 = 20$.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u1">
+      <div class="problem-head">
+        <span class="problem-num">P8</span>
+        <span class="problem-title">Proceso isotérmico con unidades mezcladas</span>
+        <span class="problem-badge">Propuesto</span>
+      </div>
+      <div class="problem-statement">
+        En condiciones isotérmicas, calcular la diferencia de volumen en litros de un gas que se encuentra inicialmente a 1230 Torr y $248\,^\circ$F ocupando 70,63 ft$^3$, y que alcanza una presión de 29,31 psi. Indicación: puede asumirse gas ideal.
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Convertir todo a un sistema único antes de tocar la física: presiones a atm, volumen a litros, temperatura a kelvin.</li>
+          <li>Notar que al ser isotérmico basta la ley de Boyle: $P_1V_1 = P_2V_2$. La temperatura no entra en el cálculo — el dato en $^\circ$F es en buena parte una distracción.</li>
+          <li>Despejar $V_2 = P_1V_1/P_2$ y calcular $\Delta V = V_2 - V_1$.</li>
+          <li>Chequeo de signo: comparar ambas presiones en la misma unidad antes de concluir. Si la presión final resulta mayor que la inicial, el gas se comprime y $\Delta V < 0$; si es menor, $\Delta V > 0$.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Estrategia general</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Cómo abordar este auxiliar</div>
+      <ul>
+        <li>Primer paso siempre: convertir unidades y elegir el $R$ que calce. Hacerlo al principio evita rastrear el error después.</li>
+        <li>Segundo paso: contar moles. Casi todos estos problemas se reducen a "cuántos moles de cada cosa hay" y luego aplicar $PV = nRT$ una sola vez.</li>
+        <li>En mezclas: las presiones parciales sólo se suman si comparten $V$ y $T$. Si vienen de recipientes distintos, sumar <em>moles</em>, no presiones.</li>
+        <li>Toda reacción química que aparezca hay que balancearla, aunque el enunciado la dé escrita: varios enunciados la entregan sin ajustar (P3, P5).</li>
+        <li>El grado de avance $\xi$ convierte un problema de varias incógnitas en uno de una sola. Vale la pena armar la tabla aunque parezca innecesario.</li>
+        <li>Si algo condensa, sale de la fase gaseosa. Es el detalle que más puntos cuesta en el P3.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="qa1_1" data-correct="2">
+        <div class="quiz-question">1. Dos recipientes con gases distintos, a presiones y temperaturas distintas, se conectan en un volumen común. ¿Cuál es el primer paso correcto?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa1_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Sumar las presiones iniciales de ambos recipientes</span></label>
+          <label class="quiz-option"><input type="radio" name="qa1_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Promediar las temperaturas y aplicar $PV = nRT$ al volumen total</span></label>
+          <label class="quiz-option"><input type="radio" name="qa1_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Calcular los moles de cada gas por separado con sus propias condiciones, y sumarlos</span></label>
+          <label class="quiz-option"><input type="radio" name="qa1_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Aplicar la ley de Boyle a cada gas hasta el volumen final</span></label>
+        </div>
+        <script type="text/explanation" id="qa1_1-exp">Las presiones parciales sólo se suman cuando los gases comparten el mismo $V$ y la misma $T$ — que es justamente lo que <em>no</em> ocurre antes de conectar los recipientes. Los moles, en cambio, son una cantidad de materia: se conservan y se suman siempre. Una vez conocido $n_t$, se aplica $PV = n_tRT$ con el volumen y la temperatura finales. Esta es la estructura del P3.</script>
+        <div class="quiz-feedback" id="qa1_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qa1_2" data-correct="1">
+        <div class="quiz-question">2. En la deducción de la ley barométrica, ¿en qué paso entra la hipótesis de gas ideal?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa1_2" value="0"><span class="opt-letter">A</span><span class="opt-text">En el balance de fuerzas sobre la rebanada de fluido</span></label>
+          <label class="quiz-option"><input type="radio" name="qa1_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Al sustituir la densidad por $\rho = PM/RT$</span></label>
+          <label class="quiz-option"><input type="radio" name="qa1_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Al suponer que $g$ es constante con la altura</span></label>
+          <label class="quiz-option"><input type="radio" name="qa1_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Al integrar entre $h_0$ y $h$</span></label>
+        </div>
+        <script type="text/explanation" id="qa1_2-exp">El balance de fuerzas $dP = -\rho g\,dz$ es puramente mecánico y vale para cualquier fluido, ideal o no — de hecho es la ecuación hidrostática de siempre. La física del gas entra al escribir $\rho = PM/RT$, que es la ley del gas ideal reescrita en términos de densidad. Es ese reemplazo el que hace aparecer $P$ en el lado derecho y convierte la ecuación en separable, dando la exponencial.</script>
+        <div class="quiz-feedback" id="qa1_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qa1_3" data-correct="0">
+        <div class="quiz-question">3. Tras una combustión donde toda el agua condensa, ¿cómo se calcula la presión total final?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa1_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Con los moles de las especies gaseosas solamente, excluyendo el agua líquida</span></label>
+          <label class="quiz-option"><input type="radio" name="qa1_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Con todos los moles finales, incluida el agua</span></label>
+          <label class="quiz-option"><input type="radio" name="qa1_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Con los moles iniciales, porque la masa se conserva</span></label>
+          <label class="quiz-option"><input type="radio" name="qa1_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Restando la presión de vapor del agua a la presión inicial</span></label>
+        </div>
+        <script type="text/explanation" id="qa1_3-exp">La ley de Dalton cuenta sólo las moléculas que están en fase gaseosa y golpean las paredes. El agua condensada ocupa un volumen despreciable frente al del recipiente y ya no contribuye a la presión. Que la masa se conserve no significa que los moles <em>gaseosos</em> se conserven: una combustión típica cambia el número de moles gaseosos incluso antes de que algo condense.</script>
+        <div class="quiz-feedback" id="qa1_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../clase_1/"><div class="nav-dir">← Anterior</div><div class="nav-title">Gas Ideal, Leyes Empíricas y Ley de Dalton</div></a>
+    <a href="../clase_2/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Desviaciones del Gas Ideal y Ecuación de Van der Waals</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 372" width="720" height="372" font-family="'Inter', system-ui, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6e7681"/></marker><marker id="ahl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8b949e"/></marker></defs>
+<path d="M 76 298 L 633 298" stroke="#6e7681" stroke-width="1.3" marker-end="url(#ah)" fill="none"/>
+<path d="M 76 298 L 76 28" stroke="#6e7681" stroke-width="1.3" marker-end="url(#ah)" fill="none"/>
+<text x="641.0" y="303.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#e6edf3" text-anchor="start" font-weight="400" font-style="italic">t / °C</text>
+<text x="68.0" y="24.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#e6edf3" text-anchor="middle" font-weight="400" font-style="italic">P</text>
+<path d="M 110.0 298.0 L 110.0 303.0" fill="none" stroke="#6e7681" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="110.0" y="317.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">−273,15</text>
+<path d="M 202.7 298.0 L 202.7 303.0" fill="none" stroke="#6e7681" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="202.7" y="317.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">-200</text>
+<path d="M 329.5 298.0 L 329.5 303.0" fill="none" stroke="#6e7681" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="329.5" y="317.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">-100</text>
+<path d="M 456.2 298.0 L 456.2 303.0" fill="none" stroke="#6e7681" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="456.2" y="317.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">0</text>
+<path d="M 583.0 298.0 L 583.0 303.0" fill="none" stroke="#6e7681" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="583.0" y="317.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">100</text>
+<path d="M 110.03 298.00 L 405.53 137.07" fill="none" stroke="#00d4ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<path d="M 405.53 137.07 L 621.00 19.73" fill="none" stroke="#00d4ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="628.0" y="23.7" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#00d4ff" text-anchor="start" font-weight="600">gas A</text>
+<path d="M 110.03 298.00 L 405.53 182.81" fill="none" stroke="#58a6ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<path d="M 405.53 182.81 L 621.00 98.82" fill="none" stroke="#58a6ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="628.0" y="102.8" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#58a6ff" text-anchor="start" font-weight="600">gas B</text>
+<path d="M 110.03 298.00 L 405.53 226.85" fill="none" stroke="#bc8cff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<path d="M 405.53 226.85 L 621.00 174.98" fill="none" stroke="#bc8cff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="628.0" y="179.0" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#bc8cff" text-anchor="start" font-weight="600">gas C</text>
+<path d="M 110.0 298.0 L 110.0 55.9" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+<circle cx="110.0" cy="298.0" r="4.5" fill="#ef4444"/>
+<text x="122.0" y="55.9" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#ef4444" text-anchor="start" font-weight="600">cero absoluto</text>
+<text x="122.0" y="70.9" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="start" font-weight="400">las tres rectas concurren aquí,</text>
+<text x="122.0" y="83.9" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="start" font-weight="400">sea cual sea el gas y cuánto se cargue</text>
+<text x="525.9" y="270.2" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle" font-weight="400">zona realmente medida</text>
+<text x="234.4" y="286.1" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle" font-weight="400">extrapolación</text>
+<text x="360.0" y="344.0" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#6e7681" text-anchor="middle" font-weight="400">Termómetro de gas a volumen constante: la propiedad termométrica es P. Que el intercepto sea universal es lo que permite</text>
+<text x="360.0" y="360.0" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#6e7681" text-anchor="middle" font-weight="400">definir una escala absoluta de temperatura sin referirse a ninguna sustancia en particular.</text>
+</svg>
