@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 5 — Potencial y Conductores</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -70,11 +68,11 @@
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Ecuación de Poisson: $\nabla^2 V = -\rho/\varepsilon_0$</li>
-        <li>Ecuación de Laplace: $\nabla^2 V = 0$ (en regiones sin carga)</li>
-        <li>Conductores: $V$ constante en todo el volumen</li>
+        <li>Ecuación de Poisson: <math data-tex="\nabla^2 V = -\rho/\varepsilon_0"><msup><mo>∇</mo><mn>2</mn></msup><mi>V</mi><mo>=</mo><mo form="prefix">−</mo><mi>ρ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math></li>
+        <li>Ecuación de Laplace: <math data-tex="\nabla^2 V = 0"><msup><mo>∇</mo><mn>2</mn></msup><mi>V</mi><mo>=</mo><mn>0</mn></math> (en regiones sin carga)</li>
+        <li>Conductores: <math data-tex="V"><mi>V</mi></math> constante en todo el volumen</li>
         <li>Carga inducida en superficies conductoras</li>
-        <li>Energía potencial $U = qV$ de una carga en un campo externo</li>
+        <li>Energía potencial <math data-tex="U = qV"><mi>U</mi><mo>=</mo><mi>q</mi><mi>V</mi></math> de una carga en un campo externo</li>
       </ul>
     </div>
   </section>
@@ -84,19 +82,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Ecuación de Poisson</h3>
-        <p>Es la versión diferencial de toda la electrostática: combina $\mathbf{E} = -\nabla V$ con $\nabla\cdot\mathbf{E} = \rho/\varepsilon_0$. Resolver Poisson nos da $V$ en todo el espacio.</p>
+        <p>Es la versión diferencial de toda la electrostática: combina <math data-tex="\mathbf{E} = -\nabla V"><mi class="mv-bi">E</mi><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mi>V</mi></math> con <math data-tex="\nabla\cdot\mathbf{E} = \rho/\varepsilon_0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">E</mi><mo>=</mo><mi>ρ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math>. Resolver Poisson nos da <math data-tex="V"><mi>V</mi></math> en todo el espacio.</p>
       </div>
       <div class="concept-card">
         <h3>Ecuación de Laplace</h3>
-        <p>Caso especial de Poisson cuando $\rho = 0$. Sus soluciones son llamadas funciones armónicas y satisfacen el principio del valor medio: $V$ no tiene máximos ni mínimos locales.</p>
+        <p>Caso especial de Poisson cuando <math data-tex="\rho = 0"><mi>ρ</mi><mo>=</mo><mn>0</mn></math>. Sus soluciones son llamadas funciones armónicas y satisfacen el principio del valor medio: <math data-tex="V"><mi>V</mi></math> no tiene máximos ni mínimos locales.</p>
       </div>
       <div class="concept-card">
         <h3>Conductor = equipotencial</h3>
-        <p>En equilibrio, $\mathbf{E} = 0$ dentro del conductor, por lo que $\nabla V = 0$ y $V$ es constante. Toda la carga libre se redistribuye en la superficie.</p>
+        <p>En equilibrio, <math data-tex="\mathbf{E} = 0"><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math> dentro del conductor, por lo que <math data-tex="\nabla V = 0"><mo>∇</mo><mi>V</mi><mo>=</mo><mn>0</mn></math> y <math data-tex="V"><mi>V</mi></math> es constante. Toda la carga libre se redistribuye en la superficie.</p>
       </div>
       <div class="concept-card">
         <h3>Inducción de carga</h3>
-        <p>Una carga externa polariza el conductor: la cara más cercana acumula carga opuesta y la lejana carga del mismo signo, manteniendo $V$ constante en el conductor.</p>
+        <p>Una carga externa polariza el conductor: la cara más cercana acumula carga opuesta y la lejana carga del mismo signo, manteniendo <math data-tex="V"><mi>V</mi></math> constante en el conductor.</p>
       </div>
     </div>
   </section>
@@ -108,7 +106,7 @@
       <div class="formula-label">Ecuación de Poisson</div>
       <div class="formula-math"><img class="typst-formula" src="aux_5_1.svg" alt=""></div>
       <div class="formula-desc">
-        Relación fundamental entre el potencial y la distribución de carga. Con condiciones de borde adecuadas, determina $V$ únicamente (teorema de unicidad).
+        Relación fundamental entre el potencial y la distribución de carga. Con condiciones de borde adecuadas, determina <math data-tex="V"><mi>V</mi></math> únicamente (teorema de unicidad).
       </div>
     </div>
 
@@ -116,7 +114,7 @@
       <div class="formula-label">Ecuación de Laplace</div>
       <div class="formula-math"><img class="typst-formula" src="aux_5_2.svg" alt=""></div>
       <div class="formula-desc">
-        En coordenadas esféricas con simetría azimutal: $V(r,\theta) = \sum_\ell (A_\ell r^\ell + B_\ell/r^{\ell+1})\,P_\ell(\cos\theta)$.
+        En coordenadas esféricas con simetría azimutal: <math data-tex="V(r,\theta) = \sum_\ell (A_\ell r^\ell + B_\ell/r^{\ell+1})\,P_\ell(\cos\theta)"><mi>V</mi><mrow><mo>(</mo><mrow><mi>r</mi><mo>,</mo><mi>θ</mi></mrow><mo>)</mo></mrow><mo>=</mo><msub><mo form="prefix" lspace="0em" rspace="0em">∑</mo><mi>ℓ</mi></msub><mrow><mo>(</mo><mrow><msub><mi>A</mi><mi>ℓ</mi></msub><msup><mi>r</mi><mi>ℓ</mi></msup><mo>+</mo><msub><mi>B</mi><mi>ℓ</mi></msub><mi>/</mi><msup><mi>r</mi><mrow><mi>ℓ</mi><mo lspace="0em" rspace="0em">+</mo><mn>1</mn></mrow></msup></mrow><mo>)</mo></mrow><mspace width="0.1667em"/><msub><mi>P</mi><mi>ℓ</mi></msub><mrow><mo>(</mo><mrow><mo lspace="0em" rspace="0.16666666666666666em">cos</mo><mi>θ</mi></mrow><mo>)</mo></mrow></math>.
       </div>
     </div>
 
@@ -124,7 +122,7 @@
       <div class="formula-label">Energía potencial de una carga</div>
       <div class="formula-math"><img class="typst-formula" src="aux_5_3.svg" alt=""></div>
       <div class="formula-desc">
-        Trabajo necesario para traer la carga $q$ desde infinito hasta $\mathbf{r}$. La fuerza es $\mathbf{F} = -\nabla U = q\mathbf{E}$.
+        Trabajo necesario para traer la carga <math data-tex="q"><mi>q</mi></math> desde infinito hasta <math data-tex="\mathbf{r}"><mi class="mv-bi">r</mi></math>. La fuerza es <math data-tex="\mathbf{F} = -\nabla U = q\mathbf{E}"><mi class="mv-bi">F</mi><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mi>U</mi><mo>=</mo><mi>q</mi><mi class="mv-bi">E</mi></math>.
       </div>
     </div>
   </section>
@@ -134,10 +132,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Poisson vs Laplace</div>
       <ul>
-        <li>Poisson se usa donde hay carga: $\rho \neq 0$ (interior de un volumen cargado).</li>
+        <li>Poisson se usa donde hay carga: <math data-tex="\rho \neq 0"><mi>ρ</mi><mo>≠</mo><mn>0</mn></math> (interior de un volumen cargado).</li>
         <li>Laplace se usa donde no hay carga libre: el espacio vacío entre conductores.</li>
-        <li>En un conductor en equilibrio: $\mathbf{E} = 0$ dentro, $V$ = constante, $\rho = 0$ en el interior.</li>
-        <li>Las condiciones de borde ($V$ dado en las superficies) son lo que determina la solución única de Laplace.</li>
+        <li>En un conductor en equilibrio: <math data-tex="\mathbf{E} = 0"><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math> dentro, <math data-tex="V"><mi>V</mi></math> = constante, <math data-tex="\rho = 0"><mi>ρ</mi><mo>=</mo><mn>0</mn></math> en el interior.</li>
+        <li>Las condiciones de borde (<math data-tex="V"><mi>V</mi></math> dado en las superficies) son lo que determina la solución única de Laplace.</li>
       </ul>
     </div>
   </section>

@@ -33,6 +33,9 @@ function checkQuiz(id, correct) {
   if (btn) btn.disabled = true;
 
   var expEl = document.getElementById(id + '-exp');
+  // El texto de la explicacion ya trae su MathML horneado (ver
+  // scripts/inline-mathml.py); innerHTML lo parsea y el navegador lo
+  // renderiza sin ayuda de ningun script.
   var explanation = expEl ? expEl.textContent : '';
   var prefix = sel === correct
     ? '<span class="fb-correct">✓ Correcto.</span> '
@@ -41,9 +44,4 @@ function checkQuiz(id, correct) {
   var fb = document.getElementById(id + '-fb');
   fb.innerHTML = prefix + explanation;
   fb.style.display = 'block';
-
-  if (window.MathJax) {
-    var p = MathJax.startup ? MathJax.startup.promise : Promise.resolve();
-    p.then(function () { return MathJax.typesetPromise([fb]); });
-  }
 }

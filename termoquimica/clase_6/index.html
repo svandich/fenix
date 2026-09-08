@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clase 6 — Cp−Cv y Joule-Thomson</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -49,7 +45,7 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Primera ley</div>
     <div class="unit-pill u3 bg-u3">Primera ley · Clases 4–6</div>
     <h1>Clase 6: Relación entre Cp y Cv, y Efecto Joule-Thomson</h1>
-    <p class="desc">Por qué siempre $C_P > C_V$ y cuánto exactamente; y el experimento de estrangulamiento de Joule-Thomson, que mide $(\partial H/\partial P)_T$ y explica cómo se licúan los gases industrialmente.</p>
+    <p class="desc">Por qué siempre <math data-tex="C_P &gt; C_V"><msub><mi>C</mi><mi>P</mi></msub><mo>></mo><msub><mi>C</mi><mi>V</mi></msub></math> y cuánto exactamente; y el experimento de estrangulamiento de Joule-Thomson, que mide <math data-tex="(\partial H/\partial P)_T"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>H</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math> y explica cómo se licúan los gases industrialmente.</p>
   </div>
 
 <section>
@@ -57,17 +53,17 @@
     <div class="card">
       <ul class="topic-list">
         <li>Por qué la capacidad calorífica puede tomar cualquier valor según cómo se absorba el calor</li>
-        <li>Derivación general de $C_P - C_V$ a partir de la primera ley y la diferencial total de $U$</li>
+        <li>Derivación general de <math data-tex="C_P - C_V"><msub><mi>C</mi><mi>P</mi></msub><mo>−</mo><msub><mi>C</mi><mi>V</mi></msub></math> a partir de la primera ley y la diferencial total de <math data-tex="U"><mi>U</mi></math></li>
         <li>Interpretación física de los dos términos que componen la diferencia</li>
-        <li>Caso del gas ideal: la ley de Joule reduce todo a $C_P - C_V = R$</li>
-        <li>Caso de líquidos y sólidos: $C_P \approx C_V$</li>
+        <li>Caso del gas ideal: la ley de Joule reduce todo a <math data-tex="C_P - C_V = R"><msub><mi>C</mi><mi>P</mi></msub><mo>−</mo><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mi>R</mi></math></li>
+        <li>Caso de líquidos y sólidos: <math data-tex="C_P \approx C_V"><msub><mi>C</mi><mi>P</mi></msub><mo>≈</mo><msub><mi>C</mi><mi>V</mi></msub></math></li>
         <li>Experimento de Joule-Thomson: gas estrangulado a través de un tabique poroso adiabático</li>
-        <li>Demostración de que el proceso es isoentálpico: $H_2 = H_1$</li>
-        <li>Definición del coeficiente $\mu_{\text{JT}} = (\partial T/\partial P)_H$</li>
-        <li>Regla cíclica para conectar $(\partial H/\partial P)_T$ con $\mu_{\text{JT}}$ y $C_P$</li>
+        <li>Demostración de que el proceso es isoentálpico: <math data-tex="H_2 = H_1"><msub><mi>H</mi><mn>2</mn></msub><mo>=</mo><msub><mi>H</mi><mn>1</mn></msub></math></li>
+        <li>Definición del coeficiente <math data-tex="\mu_{\text{JT}} = (\partial T/\partial P)_H"><msub><mi>μ</mi><mtext>JT</mtext></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>T</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>H</mi></msub></math></li>
+        <li>Regla cíclica para conectar <math data-tex="(\partial H/\partial P)_T"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>H</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math> con <math data-tex="\mu_{\text{JT}}"><msub><mi>μ</mi><mtext>JT</mtext></msub></math> y <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math></li>
         <li>Efecto Joule-Thomson y su rol en la licuefacción de gases</li>
-        <li>Cambios adiabáticos de estado: de $\bar\delta Q = 0$ a $T\bar V^{\gamma-1} = $ cte.</li>
-        <li>Las relaciones de Poisson $P\bar V^\gamma$, $T\bar V^{\gamma-1}$, $TP^{(1-\gamma)/\gamma}$ y el trabajo adiabático</li>
+        <li>Cambios adiabáticos de estado: de <math data-tex="\bar\delta Q = 0"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mo>=</mo><mn>0</mn></math> a <math data-tex="T\bar V^{\gamma-1} = "><mi>T</mi><msup><mover accent="true"><mi>V</mi><mo>̄</mo></mover><mrow><mi>γ</mi><mo lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo form="infix" rspace="0em">=</mo></math> cte.</li>
+        <li>Las relaciones de Poisson <math data-tex="P\bar V^\gamma"><mi>P</mi><msup><mover accent="true"><mi>V</mi><mo>̄</mo></mover><mi>γ</mi></msup></math>, <math data-tex="T\bar V^{\gamma-1}"><mi>T</mi><msup><mover accent="true"><mi>V</mi><mo>̄</mo></mover><mrow><mi>γ</mi><mo lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup></math>, <math data-tex="TP^{(1-\gamma)/\gamma}"><mi>T</mi><msup><mi>P</mi><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo lspace="0em" rspace="0em">−</mo><mi>γ</mi></mrow><mo>)</mo></mrow><mi>/</mi><mi>γ</mi></mrow></msup></math> y el trabajo adiabático</li>
       </ul>
     </div>
   </section>
@@ -76,36 +72,36 @@
     <h2><span class="section-icon">💡</span> Conceptos clave</h2>
     <div class="card-grid">
       <div class="concept-card">
-        <h3>Sólo $C_P$ y $C_V$ importan</h3>
+        <h3>Sólo <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> y <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> importan</h3>
         <p>La capacidad calorífica de un sistema puede valer cualquier cosa: depende de <em>cómo</em> se le entregue el calor. Sólo dos caminos están bien definidos y son reproducibles — a volumen constante y a presión constante — y son los únicos que se tabulan.</p>
       </div>
       <div class="concept-card">
-        <h3>Los dos términos de $C_P - C_V$</h3>
-        <p>El primero, $P(\partial V/\partial T)_P$, es el trabajo de expansión por grado. El segundo, $(\partial U/\partial V)_T(\partial V/\partial T)_P$, es la energía necesaria para separar las moléculas al aumentar $V$. A $V$ constante no hay ni uno ni otro: todo el calor sube $T$.</p>
+        <h3>Los dos términos de <math data-tex="C_P - C_V"><msub><mi>C</mi><mi>P</mi></msub><mo>−</mo><msub><mi>C</mi><mi>V</mi></msub></math></h3>
+        <p>El primero, <math data-tex="P(\partial V/\partial T)_P"><mi>P</mi><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub></math>, es el trabajo de expansión por grado. El segundo, <math data-tex="(\partial U/\partial V)_T(\partial V/\partial T)_P"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub></math>, es la energía necesaria para separar las moléculas al aumentar <math data-tex="V"><mi>V</mi></math>. A <math data-tex="V"><mi>V</mi></math> constante no hay ni uno ni otro: todo el calor sube <math data-tex="T"><mi>T</mi></math>.</p>
       </div>
       <div class="concept-card">
-        <h3>Gas ideal: $C_P - C_V = R$</h3>
-        <p>La ley de Joule anula el segundo término, y de $PV = RT$ sale $(\partial V/\partial T)_P = R/P$. Queda una relación exacta, universal e independiente de la sustancia. En gases reales es una buena aproximación.</p>
+        <h3>Gas ideal: <math data-tex="C_P - C_V = R"><msub><mi>C</mi><mi>P</mi></msub><mo>−</mo><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mi>R</mi></math></h3>
+        <p>La ley de Joule anula el segundo término, y de <math data-tex="PV = RT"><mi>P</mi><mi>V</mi><mo>=</mo><mi>R</mi><mi>T</mi></math> sale <math data-tex="(\partial V/\partial T)_P = R/P"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub><mo>=</mo><mi>R</mi><mi>/</mi><mi>P</mi></math>. Queda una relación exacta, universal e independiente de la sustancia. En gases reales es una buena aproximación.</p>
       </div>
       <div class="concept-card">
         <h3>Líquidos y sólidos</h3>
-        <p>Se dilatan muy poco: $(\partial V/\partial T)_P \approx 0$ anula ambos términos y $C_P \approx C_V$. Por eso en fases condensadas se habla de "el" calor específico, sin especificar la restricción.</p>
+        <p>Se dilatan muy poco: <math data-tex="(\partial V/\partial T)_P \approx 0"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub><mo>≈</mo><mn>0</mn></math> anula ambos términos y <math data-tex="C_P \approx C_V"><msub><mi>C</mi><mi>P</mi></msub><mo>≈</mo><msub><mi>C</mi><mi>V</mi></msub></math>. Por eso en fases condensadas se habla de "el" calor específico, sin especificar la restricción.</p>
       </div>
       <div class="concept-card">
         <h3>Proceso isoentálpico</h3>
-        <p>En el estrangulamiento: el entorno hace trabajo $P_1V_1$ empujando el gas por un lado y el gas hace $P_2V_2$ por el otro, con $Q=0$. Sustituyendo en la primera ley se obtiene $U_1 + P_1V_1 = U_2 + P_2V_2$, es decir $H$ constante. No es reversible, pero sí isoentálpico.</p>
+        <p>En el estrangulamiento: el entorno hace trabajo <math data-tex="P_1V_1"><msub><mi>P</mi><mn>1</mn></msub><msub><mi>V</mi><mn>1</mn></msub></math> empujando el gas por un lado y el gas hace <math data-tex="P_2V_2"><msub><mi>P</mi><mn>2</mn></msub><msub><mi>V</mi><mn>2</mn></msub></math> por el otro, con <math data-tex="Q=0"><mi>Q</mi><mo>=</mo><mn>0</mn></math>. Sustituyendo en la primera ley se obtiene <math data-tex="U_1 + P_1V_1 = U_2 + P_2V_2"><msub><mi>U</mi><mn>1</mn></msub><mo>+</mo><msub><mi>P</mi><mn>1</mn></msub><msub><mi>V</mi><mn>1</mn></msub><mo>=</mo><msub><mi>U</mi><mn>2</mn></msub><mo>+</mo><msub><mi>P</mi><mn>2</mn></msub><msub><mi>V</mi><mn>2</mn></msub></math>, es decir <math data-tex="H"><mi>H</mi></math> constante. No es reversible, pero sí isoentálpico.</p>
       </div>
       <div class="concept-card">
-        <h3>Coeficiente $\mu_{\text{JT}}$</h3>
-        <p>Cuánto cambia $T$ por unidad de caída de $P$ a entalpía constante. Si $\mu_{\text{JT}} > 0$, el gas se <em>enfría</em> al expandirse — ese es el principio de los ciclos de licuefacción industriales. Un gas ideal tiene $\mu_{\text{JT}} = 0$: el efecto es puramente de gas real.</p>
+        <h3>Coeficiente <math data-tex="\mu_{\text{JT}}"><msub><mi>μ</mi><mtext>JT</mtext></msub></math></h3>
+        <p>Cuánto cambia <math data-tex="T"><mi>T</mi></math> por unidad de caída de <math data-tex="P"><mi>P</mi></math> a entalpía constante. Si <math data-tex="\mu_{\text{JT}} &gt; 0"><msub><mi>μ</mi><mtext>JT</mtext></msub><mo>></mo><mn>0</mn></math>, el gas se <em>enfría</em> al expandirse — ese es el principio de los ciclos de licuefacción industriales. Un gas ideal tiene <math data-tex="\mu_{\text{JT}} = 0"><msub><mi>μ</mi><mtext>JT</mtext></msub><mo>=</mo><mn>0</mn></math>: el efecto es puramente de gas real.</p>
       </div>
       <div class="concept-card">
-        <h3>Por qué aparece $\gamma$</h3>
-        <p>En un adiabático el gas no puede pedir calor prestado: el trabajo sale de su propia $U$. Al imponer eso sobre $PV = nRT$ aparece el cociente $\gamma = \bar C_P/\bar C_V$, que vale $5/3$ para un gas monoatómico y $7/5$ para uno diatómico.</p>
+        <h3>Por qué aparece <math data-tex="\gamma"><mi>γ</mi></math></h3>
+        <p>En un adiabático el gas no puede pedir calor prestado: el trabajo sale de su propia <math data-tex="U"><mi>U</mi></math>. Al imponer eso sobre <math data-tex="PV = nRT"><mi>P</mi><mi>V</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi></math> aparece el cociente <math data-tex="\gamma = \bar C_P/\bar C_V"><mi>γ</mi><mo>=</mo><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>P</mi></msub><mi>/</mi><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>V</mi></msub></math>, que vale <math data-tex="5/3"><mn>5</mn><mi>/</mi><mn>3</mn></math> para un gas monoatómico y <math data-tex="7/5"><mn>7</mn><mi>/</mi><mn>5</mn></math> para uno diatómico.</p>
       </div>
       <div class="concept-card">
         <h3>Adiabática vs. isoterma</h3>
-        <p>Como $\gamma > 1$, la adiabática es siempre más empinada. Dos consecuencias: una expansión adiabática enfría el gas, y produce <em>menos</em> trabajo que la isoterma entre los mismos volúmenes.</p>
+        <p>Como <math data-tex="\gamma &gt; 1"><mi>γ</mi><mo>></mo><mn>1</mn></math>, la adiabática es siempre más empinada. Dos consecuencias: una expansión adiabática enfría el gas, y produce <em>menos</em> trabajo que la isoterma entre los mismos volúmenes.</p>
       </div>
     </div>
   </section>
@@ -114,11 +110,11 @@
     <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
 
     <div class="formula-block u3">
-      <div class="formula-label">Diferencia general entre $C_P$ y $C_V$</div>
+      <div class="formula-label">Diferencia general entre <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> y <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math></div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_1.svg" alt=""></div>
       <div class="formula-desc">
-        Sale de sustituir $\bar\delta Q = C_V\,dT + [P + (\partial U/\partial V)_T]\,dV$ y evaluar a $P$ constante.
-        La desigualdad $>0$ vale siempre: calentar a presión constante cuesta más.
+        Sale de sustituir <math data-tex="\bar\delta Q = C_V\,dT + [P + (\partial U/\partial V)_T]\,dV"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mo>=</mo><msub><mi>C</mi><mi>V</mi></msub><mspace width="0.1667em"/><mi>d</mi><mi>T</mi><mo>+</mo><mrow><mo>[</mo><mrow><mi>P</mi><mo>+</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></mrow><mo>]</mo></mrow><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> y evaluar a <math data-tex="P"><mi>P</mi></math> constante.
+        La desigualdad <math data-tex="&gt;0"><mo form="infix" lspace="0em">></mo><mn>0</mn></math> vale siempre: calentar a presión constante cuesta más.
       </div>
     </div>
 
@@ -126,7 +122,7 @@
       <div class="formula-label">Los dos términos y su significado</div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_2.svg" alt=""></div>
       <div class="formula-desc">
-        (1) trabajo producido por el aumento unitario de $T$ a $P$ constante · (2) energía requerida para separar las moléculas al aumentar $V$.
+        (1) trabajo producido por el aumento unitario de <math data-tex="T"><mi>T</mi></math> a <math data-tex="P"><mi>P</mi></math> constante · (2) energía requerida para separar las moléculas al aumentar <math data-tex="V"><mi>V</mi></math>.
       </div>
     </div>
 
@@ -134,7 +130,7 @@
       <div class="formula-label">Gas ideal</div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_3.svg" alt=""></div>
       <div class="formula-desc">
-        Con $\bar C_V = \tfrac{3}{2}R$ (monoatómico) queda $\bar C_P = \tfrac{5}{2}R$ y $\gamma = 5/3$; con $\bar C_V = \tfrac{5}{2}R$ (diatómico), $\bar C_P = \tfrac{7}{2}R$ y $\gamma = 7/5$.
+        Con <math data-tex="\bar C_V = \tfrac{3}{2}R"><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>V</mi></msub><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>R</mi></math> (monoatómico) queda <math data-tex="\bar C_P = \tfrac{5}{2}R"><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>P</mi></msub><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>R</mi></math> y <math data-tex="\gamma = 5/3"><mi>γ</mi><mo>=</mo><mn>5</mn><mi>/</mi><mn>3</mn></math>; con <math data-tex="\bar C_V = \tfrac{5}{2}R"><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>V</mi></msub><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>R</mi></math> (diatómico), <math data-tex="\bar C_P = \tfrac{7}{2}R"><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>P</mi></msub><mo>=</mo><mfrac><mn>7</mn><mn>2</mn></mfrac><mi>R</mi></math> y <math data-tex="\gamma = 7/5"><mi>γ</mi><mo>=</mo><mn>7</mn><mi>/</mi><mn>5</mn></math>.
       </div>
     </div>
 
@@ -150,7 +146,7 @@
       <div class="formula-label">Trabajo total en el estrangulamiento</div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_5.svg" alt=""></div>
       <div class="formula-desc">
-        A la izquierda del tabique el volumen pasa de $V_1$ a $0$ a presión $P_1$; a la derecha, de $0$ a $V_2$ a presión $P_2$.
+        A la izquierda del tabique el volumen pasa de <math data-tex="V_1"><msub><mi>V</mi><mn>1</mn></msub></math> a <math data-tex="0"><mn>0</mn></math> a presión <math data-tex="P_1"><msub><mi>P</mi><mn>1</mn></msub></math>; a la derecha, de <math data-tex="0"><mn>0</mn></math> a <math data-tex="V_2"><msub><mi>V</mi><mn>2</mn></msub></math> a presión <math data-tex="P_2"><msub><mi>P</mi><mn>2</mn></msub></math>.
       </div>
     </div>
 
@@ -158,7 +154,7 @@
       <div class="formula-label">El proceso es isoentálpico</div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_6.svg" alt=""></div>
       <div class="formula-desc">
-        Paredes adiabáticas $\Rightarrow Q = 0$. La entalpía del gas se mantiene constante durante todo el experimento.
+        Paredes adiabáticas <math data-tex="\Rightarrow Q = 0"><mo form="infix" lspace="0em" stretchy="false">⇒</mo><mi>Q</mi><mo>=</mo><mn>0</mn></math>. La entalpía del gas se mantiene constante durante todo el experimento.
       </div>
     </div>
 
@@ -166,23 +162,23 @@
       <div class="formula-label">Coeficiente de Joule-Thomson</div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_7.svg" alt=""></div>
       <div class="formula-desc">
-        Se mide directamente: basta un termómetro a cada lado del tabique. El efecto se aprecia mejor si $\Delta P$ es grande.
+        Se mide directamente: basta un termómetro a cada lado del tabique. El efecto se aprecia mejor si <math data-tex="\Delta P"><mi mathvariant="normal">Δ</mi><mi>P</mi></math> es grande.
       </div>
     </div>
 
     <div class="formula-block u3">
-      <div class="formula-label">Regla cíclica: de $\mu_{\text{JT}}$ a $(\partial H/\partial P)_T$</div>
+      <div class="formula-label">Regla cíclica: de <math data-tex="\mu_{\text{JT}}"><msub><mi>μ</mi><mtext>JT</mtext></msub></math> a <math data-tex="(\partial H/\partial P)_T"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>H</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math></div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_8.svg" alt=""></div>
       <div class="formula-desc">
-        La relación cíclica entre tres derivadas parciales de $H$, $P$ y $T$ convierte una cantidad no medible directamente en el producto de dos que sí lo son.
+        La relación cíclica entre tres derivadas parciales de <math data-tex="H"><mi>H</mi></math>, <math data-tex="P"><mi>P</mi></math> y <math data-tex="T"><mi>T</mi></math> convierte una cantidad no medible directamente en el producto de dos que sí lo son.
       </div>
     </div>
 
     <div class="formula-block u3">
-      <div class="formula-label">Diferencial de $H$ en variables medibles</div>
+      <div class="formula-label">Diferencial de <math data-tex="H"><mi>H</mi></math> en variables medibles</div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_9.svg" alt=""></div>
       <div class="formula-desc">
-        Con esto, $\Delta H$ de cualquier proceso queda calculable a partir de $C_P$ y $\mu_{\text{JT}}$, ambos tabulados.
+        Con esto, <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math> de cualquier proceso queda calculable a partir de <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> y <math data-tex="\mu_{\text{JT}}"><msub><mi>μ</mi><mtext>JT</mtext></msub></math>, ambos tabulados.
       </div>
     </div>
 
@@ -190,18 +186,18 @@
       <div class="formula-label">Punto de partida del proceso adiabático</div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_10.svg" alt=""></div>
       <div class="formula-desc">
-        Con $\bar\delta Q = 0$ la primera ley deja $dU = -\bar\delta W$: todo el trabajo producido se descuenta de la
-        energía interna. Si además el proceso es reversible, $\bar\delta W = P\,dV$, y usando $dU = C_V\,dT$ (ley de
-        Joule) queda una ecuación diferencial entre $T$ y $V$ solamente.
+        Con <math data-tex="\bar\delta Q = 0"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mo>=</mo><mn>0</mn></math> la primera ley deja <math data-tex="dU = -\bar\delta W"><mi>d</mi><mi>U</mi><mo>=</mo><mo form="prefix">−</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi></math>: todo el trabajo producido se descuenta de la
+        energía interna. Si además el proceso es reversible, <math data-tex="\bar\delta W = P\,dV"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi><mo>=</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>, y usando <math data-tex="dU = C_V\,dT"><mi>d</mi><mi>U</mi><mo>=</mo><msub><mi>C</mi><mi>V</mi></msub><mspace width="0.1667em"/><mi>d</mi><mi>T</mi></math> (ley de
+        Joule) queda una ecuación diferencial entre <math data-tex="T"><mi>T</mi></math> y <math data-tex="V"><mi>V</mi></math> solamente.
       </div>
     </div>
 
     <div class="formula-block u3">
-      <div class="formula-label">Integración: relación entre $T$ y $\bar V$</div>
+      <div class="formula-label">Integración: relación entre <math data-tex="T"><mi>T</mi></math> y <math data-tex="\bar V"><mover accent="true"><mi>V</mi><mo>̄</mo></mover></math></div>
       <div class="formula-math"><img class="typst-formula" src="clase_6_11.svg" alt=""></div>
       <div class="formula-desc">
-        Se sustituye $P = R T/\bar V$, se separan variables y se integra usando $\bar C_P - \bar C_V = R$ —
-        el resultado de la primera mitad de esta clase. De ahí sale $\gamma$ y la primera relación de Poisson.
+        Se sustituye <math data-tex="P = R T/\bar V"><mi>P</mi><mo>=</mo><mi>R</mi><mi>T</mi><mi>/</mi><mover accent="true"><mi>V</mi><mo>̄</mo></mover></math>, se separan variables y se integra usando <math data-tex="\bar C_P - \bar C_V = R"><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>P</mi></msub><mo>−</mo><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>V</mi></msub><mo>=</mo><mi>R</mi></math> —
+        el resultado de la primera mitad de esta clase. De ahí sale <math data-tex="\gamma"><mi>γ</mi></math> y la primera relación de Poisson.
       </div>
     </div>
 
@@ -210,8 +206,8 @@
       <div class="formula-math"><img class="typst-formula" src="clase_6_12.svg" alt=""></div>
       <div class="formula-desc">
         Las tres formas son la misma relación escrita en distintos pares de variables: se pasa de una a otra con
-        $PV = nRT$. El trabajo no necesita integrarse: como $Q = 0$, basta $W = -\Delta U$, y sale directo de las
-        temperaturas inicial y final. Ojo con el convenio del curso — aquí $W > 0$ es trabajo <em>producido</em>.
+        <math data-tex="PV = nRT"><mi>P</mi><mi>V</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi></math>. El trabajo no necesita integrarse: como <math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math>, basta <math data-tex="W = -\Delta U"><mi>W</mi><mo>=</mo><mo form="prefix">−</mo><mi mathvariant="normal">Δ</mi><mi>U</mi></math>, y sale directo de las
+        temperaturas inicial y final. Ojo con el convenio del curso — aquí <math data-tex="W &gt; 0"><mi>W</mi><mo>></mo><mn>0</mn></math> es trabajo <em>producido</em>.
       </div>
     </div>
 
@@ -221,8 +217,8 @@
       </div>
       <div class="figure-cap">
         <strong>Las dos curvas desde el mismo estado inicial.</strong> Partiendo del punto 1 y llegando al mismo
-        $\bar V_2$, la adiabática termina a menor presión que la isoterma: el gas se enfrió. La diferencia de áreas es
-        exactamente el calor que la isoterma tuvo que absorber del entorno para mantener $T$ constante, y que la
+        <math data-tex="\bar V_2"><msub><mover accent="true"><mi>V</mi><mo>̄</mo></mover><mn>2</mn></msub></math>, la adiabática termina a menor presión que la isoterma: el gas se enfrió. La diferencia de áreas es
+        exactamente el calor que la isoterma tuvo que absorber del entorno para mantener <math data-tex="T"><mi>T</mi></math> constante, y que la
         adiabática no recibió.
       </div>
     </div>
@@ -233,13 +229,13 @@
     <div class="tip-box">
       <div class="tip-title">✦ Lo esencial de la clase 6</div>
       <ul>
-        <li>El adiabático reversible no es "otra fórmula": es la primera ley con $Q = 0$ más la ley de Joule. Si se olvidan las relaciones de Poisson se pueden rederivar en tres líneas.</li>
-        <li>$C_P > C_V$ siempre, y por una razón física clara: a presión constante hay que pagar además el trabajo de expansión y la separación de las moléculas.</li>
-        <li>$C_P - C_V = R$ es <em>por mol</em>. Para $n$ moles, $C_P - C_V = nR$. Se demuestra en dos líneas usando la ley de Joule — es un clásico de control.</li>
-        <li>El estrangulamiento es irreversible pero isoentálpico. "Isoentálpico" no significa reversible: significa que $H$ inicial y final coinciden.</li>
-        <li>El efecto Joule-Thomson no existe en un gas ideal: $H$ depende sólo de $T$, así que $H$ constante implica $T$ constante y $\mu_{\text{JT}} = 0$. Todo el efecto viene de las constantes $a$ y $b$.</li>
-        <li>La regla cíclica $\left(\frac{\partial H}{\partial P}\right)_T\left(\frac{\partial P}{\partial T}\right)_H\left(\frac{\partial T}{\partial H}\right)_P = -1$ es la herramienta general: sirve para reexpresar cualquier derivada incómoda en términos de tres medibles. Vale la pena tenerla a mano.</li>
-        <li>El signo de $\mu_{\text{JT}}$ decide si el gas se enfría o se calienta al estrangularse; con Van der Waals resulta $\mu_{\text{JT}} = \frac{1}{C_P}\left(\frac{2a}{RT} - b\right)$, y su cambio de signo define la <em>temperatura de inversión</em>.</li>
+        <li>El adiabático reversible no es "otra fórmula": es la primera ley con <math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math> más la ley de Joule. Si se olvidan las relaciones de Poisson se pueden rederivar en tres líneas.</li>
+        <li><math data-tex="C_P &gt; C_V"><msub><mi>C</mi><mi>P</mi></msub><mo>></mo><msub><mi>C</mi><mi>V</mi></msub></math> siempre, y por una razón física clara: a presión constante hay que pagar además el trabajo de expansión y la separación de las moléculas.</li>
+        <li><math data-tex="C_P - C_V = R"><msub><mi>C</mi><mi>P</mi></msub><mo>−</mo><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mi>R</mi></math> es <em>por mol</em>. Para <math data-tex="n"><mi>n</mi></math> moles, <math data-tex="C_P - C_V = nR"><msub><mi>C</mi><mi>P</mi></msub><mo>−</mo><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mi>n</mi><mi>R</mi></math>. Se demuestra en dos líneas usando la ley de Joule — es un clásico de control.</li>
+        <li>El estrangulamiento es irreversible pero isoentálpico. "Isoentálpico" no significa reversible: significa que <math data-tex="H"><mi>H</mi></math> inicial y final coinciden.</li>
+        <li>El efecto Joule-Thomson no existe en un gas ideal: <math data-tex="H"><mi>H</mi></math> depende sólo de <math data-tex="T"><mi>T</mi></math>, así que <math data-tex="H"><mi>H</mi></math> constante implica <math data-tex="T"><mi>T</mi></math> constante y <math data-tex="\mu_{\text{JT}} = 0"><msub><mi>μ</mi><mtext>JT</mtext></msub><mo>=</mo><mn>0</mn></math>. Todo el efecto viene de las constantes <math data-tex="a"><mi>a</mi></math> y <math data-tex="b"><mi>b</mi></math>.</li>
+        <li>La regla cíclica <math data-tex="\left(\frac{\partial H}{\partial P}\right)_T\left(\frac{\partial P}{\partial T}\right)_H\left(\frac{\partial T}{\partial H}\right)_P = -1"><msub><mrow><mo>(</mo><mfrac><mrow><mi>∂</mi><mi>H</mi></mrow><mrow><mi>∂</mi><mi>P</mi></mrow></mfrac><mo>)</mo></mrow><mi>T</mi></msub><msub><mrow><mo>(</mo><mfrac><mrow><mi>∂</mi><mi>P</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo>)</mo></mrow><mi>H</mi></msub><msub><mrow><mo>(</mo><mfrac><mrow><mi>∂</mi><mi>T</mi></mrow><mrow><mi>∂</mi><mi>H</mi></mrow></mfrac><mo>)</mo></mrow><mi>P</mi></msub><mo>=</mo><mo form="prefix">−</mo><mn>1</mn></math> es la herramienta general: sirve para reexpresar cualquier derivada incómoda en términos de tres medibles. Vale la pena tenerla a mano.</li>
+        <li>El signo de <math data-tex="\mu_{\text{JT}}"><msub><mi>μ</mi><mtext>JT</mtext></msub></math> decide si el gas se enfría o se calienta al estrangularse; con Van der Waals resulta <math data-tex="\mu_{\text{JT}} = \frac{1}{C_P}\left(\frac{2a}{RT} - b\right)"><msub><mi>μ</mi><mtext>JT</mtext></msub><mo>=</mo><mfrac><mn>1</mn><msub><mi>C</mi><mi>P</mi></msub></mfrac><mrow><mo>(</mo><mrow><mfrac><mrow><mn>2</mn><mi>a</mi></mrow><mrow><mi>R</mi><mi>T</mi></mrow></mfrac><mo>−</mo><mi>b</mi></mrow><mo>)</mo></mrow></math>, y su cambio de signo define la <em>temperatura de inversión</em>.</li>
       </ul>
     </div>
   </section>
@@ -249,38 +245,38 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q6_1" data-correct="2">
-        <div class="quiz-question">1. ¿Por qué $C_P$ es siempre mayor que $C_V$?</div>
+        <div class="quiz-question">1. ¿Por qué <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> es siempre mayor que <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math>?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q6_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque a presión constante el sistema absorbe más calor por unidad de tiempo</span></label>
-          <label class="quiz-option"><input type="radio" name="q6_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque $C_V$ se define con la energía interna y $C_P$ con la entalpía, que siempre es mayor</span></label>
-          <label class="quiz-option"><input type="radio" name="q6_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a $P$ constante parte del calor se gasta en trabajo de expansión y en separar las moléculas, no sólo en subir $T$</span></label>
-          <label class="quiz-option"><input type="radio" name="q6_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque los gases reales tienen $a > 0$</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> se define con la energía interna y <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> con la entalpía, que siempre es mayor</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a <math data-tex="P"><mi>P</mi></math> constante parte del calor se gasta en trabajo de expansión y en separar las moléculas, no sólo en subir <math data-tex="T"><mi>T</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q6_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque los gases reales tienen <math data-tex="a &gt; 0"><mi>a</mi><mo>></mo><mn>0</mn></math></span></label>
         </div>
-        <script type="text/explanation" id="q6_1-exp">A volumen constante todo el calor entregado se traduce en aumento de temperatura, porque el sistema no puede expandirse ni hacer trabajo. A presión constante el sistema se dilata: parte del calor sale como trabajo $P(\partial V/\partial T)_P$ y parte se invierte en vencer las atracciones intermoleculares. Hace falta más calor para el mismo $\Delta T$, es decir $C_P > C_V$. La opción D es falsa: el resultado vale también para el gas ideal, donde $a = 0$ y aun así $C_P - C_V = R > 0$.</script>
+        <script type="text/explanation" id="q6_1-exp">A volumen constante todo el calor entregado se traduce en aumento de temperatura, porque el sistema no puede expandirse ni hacer trabajo. A presión constante el sistema se dilata: parte del calor sale como trabajo <math data-tex="P(\partial V/\partial T)_P"><mi>P</mi><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub></math> y parte se invierte en vencer las atracciones intermoleculares. Hace falta más calor para el mismo <math data-tex="\Delta T"><mi mathvariant="normal">Δ</mi><mi>T</mi></math>, es decir <math data-tex="C_P &gt; C_V"><msub><mi>C</mi><mi>P</mi></msub><mo>></mo><msub><mi>C</mi><mi>V</mi></msub></math>. La opción D es falsa: el resultado vale también para el gas ideal, donde <math data-tex="a = 0"><mi>a</mi><mo>=</mo><mn>0</mn></math> y aun así <math data-tex="C_P - C_V = R &gt; 0"><msub><mi>C</mi><mi>P</mi></msub><mo>−</mo><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mi>R</mi><mo>></mo><mn>0</mn></math>.</script>
         <div class="quiz-feedback" id="q6_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q6_2" data-correct="1">
         <div class="quiz-question">2. ¿Qué se conserva en el experimento de Joule-Thomson?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q6_2" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía interna: $U_2 = U_1$</span></label>
-          <label class="quiz-option"><input type="radio" name="q6_2" value="1"><span class="opt-letter">B</span><span class="opt-text">La entalpía: $H_2 = H_1$</span></label>
-          <label class="quiz-option"><input type="radio" name="q6_2" value="2"><span class="opt-letter">C</span><span class="opt-text">La temperatura: $T_2 = T_1$</span></label>
-          <label class="quiz-option"><input type="radio" name="q6_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El producto $PV$</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_2" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía interna: <math data-tex="U_2 = U_1"><msub><mi>U</mi><mn>2</mn></msub><mo>=</mo><msub><mi>U</mi><mn>1</mn></msub></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q6_2" value="1"><span class="opt-letter">B</span><span class="opt-text">La entalpía: <math data-tex="H_2 = H_1"><msub><mi>H</mi><mn>2</mn></msub><mo>=</mo><msub><mi>H</mi><mn>1</mn></msub></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q6_2" value="2"><span class="opt-letter">C</span><span class="opt-text">La temperatura: <math data-tex="T_2 = T_1"><msub><mi>T</mi><mn>2</mn></msub><mo>=</mo><msub><mi>T</mi><mn>1</mn></msub></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q6_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El producto <math data-tex="PV"><mi>P</mi><mi>V</mi></math></span></label>
         </div>
-        <script type="text/explanation" id="q6_2-exp">Las paredes son adiabáticas, así que $Q = 0$ y $\Delta U = -W$. El trabajo neto resulta $W = P_2V_2 - P_1V_1$, de donde $U_2 - U_1 = -(P_2V_2 - P_1V_1)$, es decir $U_2 + P_2V_2 = U_1 + P_1V_1$: la entalpía se conserva. La temperatura precisamente <em>no</em> se conserva — se observó que $T$ era menor del lado de menor presión, y ese es todo el interés del experimento.</script>
+        <script type="text/explanation" id="q6_2-exp">Las paredes son adiabáticas, así que <math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math> y <math data-tex="\Delta U = -W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mo form="prefix">−</mo><mi>W</mi></math>. El trabajo neto resulta <math data-tex="W = P_2V_2 - P_1V_1"><mi>W</mi><mo>=</mo><msub><mi>P</mi><mn>2</mn></msub><msub><mi>V</mi><mn>2</mn></msub><mo>−</mo><msub><mi>P</mi><mn>1</mn></msub><msub><mi>V</mi><mn>1</mn></msub></math>, de donde <math data-tex="U_2 - U_1 = -(P_2V_2 - P_1V_1)"><msub><mi>U</mi><mn>2</mn></msub><mo>−</mo><msub><mi>U</mi><mn>1</mn></msub><mo>=</mo><mo form="prefix">−</mo><mrow><mo>(</mo><mrow><msub><mi>P</mi><mn>2</mn></msub><msub><mi>V</mi><mn>2</mn></msub><mo>−</mo><msub><mi>P</mi><mn>1</mn></msub><msub><mi>V</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></math>, es decir <math data-tex="U_2 + P_2V_2 = U_1 + P_1V_1"><msub><mi>U</mi><mn>2</mn></msub><mo>+</mo><msub><mi>P</mi><mn>2</mn></msub><msub><mi>V</mi><mn>2</mn></msub><mo>=</mo><msub><mi>U</mi><mn>1</mn></msub><mo>+</mo><msub><mi>P</mi><mn>1</mn></msub><msub><mi>V</mi><mn>1</mn></msub></math>: la entalpía se conserva. La temperatura precisamente <em>no</em> se conserva — se observó que <math data-tex="T"><mi>T</mi></math> era menor del lado de menor presión, y ese es todo el interés del experimento.</script>
         <div class="quiz-feedback" id="q6_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q6_3" data-correct="0">
-        <div class="quiz-question">3. ¿Cuánto vale $\mu_{\text{JT}}$ para un gas ideal?</div>
+        <div class="quiz-question">3. ¿Cuánto vale <math data-tex="\mu_{\text{JT}}"><msub><mi>μ</mi><mtext>JT</mtext></msub></math> para un gas ideal?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q6_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Cero: como $H = H(T)$, entalpía constante implica temperatura constante</span></label>
-          <label class="quiz-option"><input type="radio" name="q6_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$R/C_P$, independientemente de la temperatura</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Cero: como <math data-tex="H = H(T)"><mi>H</mi><mo>=</mo><mi>H</mi><mrow><mo>(</mo><mi>T</mi><mo>)</mo></mrow></math>, entalpía constante implica temperatura constante</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_3" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="R/C_P"><mi>R</mi><mi>/</mi><msub><mi>C</mi><mi>P</mi></msub></math>, independientemente de la temperatura</span></label>
           <label class="quiz-option"><input type="radio" name="q6_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Siempre positivo, porque todo gas se enfría al expandirse</span></label>
-          <label class="quiz-option"><input type="radio" name="q6_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Infinito, porque $(\partial H/\partial P)_T = 0$</span></label>
+          <label class="quiz-option"><input type="radio" name="q6_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Infinito, porque <math data-tex="(\partial H/\partial P)_T = 0"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>H</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mn>0</mn></math></span></label>
         </div>
-        <script type="text/explanation" id="q6_3-exp">Para un gas ideal $H = U + PV = U(T) + nRT$ depende sólo de $T$. Si $H$ se mantiene constante en el estrangulamiento, entonces $T$ tampoco cambia y $\mu_{\text{JT}} = (\partial T/\partial P)_H = 0$. El efecto Joule-Thomson es enteramente un fenómeno de gas real: viene de las constantes $a$ (atracción, que enfría) y $b$ (volumen excluido, que calienta). Que un gas se enfríe o se caliente al estrangularse depende de cuál domine, y eso cambia con la temperatura.</script>
+        <script type="text/explanation" id="q6_3-exp">Para un gas ideal <math data-tex="H = U + PV = U(T) + nRT"><mi>H</mi><mo>=</mo><mi>U</mi><mo>+</mo><mi>P</mi><mi>V</mi><mo>=</mo><mi>U</mi><mrow><mo>(</mo><mi>T</mi><mo>)</mo></mrow><mo>+</mo><mi>n</mi><mi>R</mi><mi>T</mi></math> depende sólo de <math data-tex="T"><mi>T</mi></math>. Si <math data-tex="H"><mi>H</mi></math> se mantiene constante en el estrangulamiento, entonces <math data-tex="T"><mi>T</mi></math> tampoco cambia y <math data-tex="\mu_{\text{JT}} = (\partial T/\partial P)_H = 0"><msub><mi>μ</mi><mtext>JT</mtext></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>T</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>H</mi></msub><mo>=</mo><mn>0</mn></math>. El efecto Joule-Thomson es enteramente un fenómeno de gas real: viene de las constantes <math data-tex="a"><mi>a</mi></math> (atracción, que enfría) y <math data-tex="b"><mi>b</mi></math> (volumen excluido, que calienta). Que un gas se enfríe o se caliente al estrangularse depende de cuál domine, y eso cambia con la temperatura.</script>
         <div class="quiz-feedback" id="q6_3-fb"></div>
       </div>
 

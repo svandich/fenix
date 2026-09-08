@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 12 — Condensadores</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -70,8 +68,8 @@
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Capacitancia con dieléctrico: $C = \varepsilon_r C_0$</li>
-        <li>Energía almacenada: $U = Q^2/(2C) = \frac{1}{2}CV^2$</li>
+        <li>Capacitancia con dieléctrico: <math data-tex="C = \varepsilon_r C_0"><mi>C</mi><mo>=</mo><msub><mi>ε</mi><mi>r</mi></msub><msub><mi>C</mi><mn>0</mn></msub></math></li>
+        <li>Energía almacenada: <math data-tex="U = Q^2/(2C) = \frac{1}{2}CV^2"><mi>U</mi><mo>=</mo><msup><mi>Q</mi><mn>2</mn></msup><mi>/</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>C</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>C</mi><msup><mi>V</mi><mn>2</mn></msup></math></li>
         <li>Condensador con dieléctrico parcialmente insertado</li>
         <li>Fuerza sobre el dieléctrico como derivada de la energía</li>
         <li>Condensadores en serie y paralelo con dieléctricos distintos</li>
@@ -84,19 +82,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Efecto del dieléctrico</h3>
-        <p>El dieléctrico se polariza y sus cargas superficiales reducen el campo interno efectivo. Esto permite almacenar más carga al mismo voltaje, aumentando $C$ por un factor $\varepsilon_r > 1$.</p>
+        <p>El dieléctrico se polariza y sus cargas superficiales reducen el campo interno efectivo. Esto permite almacenar más carga al mismo voltaje, aumentando <math data-tex="C"><mi>C</mi></math> por un factor <math data-tex="\varepsilon_r &gt; 1"><msub><mi>ε</mi><mi>r</mi></msub><mo>></mo><mn>1</mn></math>.</p>
       </div>
       <div class="concept-card">
         <h3>A carga fija vs voltaje fijo</h3>
-        <p>Si se inserta el dieléctrico a $Q$ fija: $V$ disminuye, $C$ aumenta, $U$ disminuye. Si se inserta a $V$ fijo: $Q$ aumenta, $C$ aumenta, $U$ aumenta. La batería aporta o recibe energía.</p>
+        <p>Si se inserta el dieléctrico a <math data-tex="Q"><mi>Q</mi></math> fija: <math data-tex="V"><mi>V</mi></math> disminuye, <math data-tex="C"><mi>C</mi></math> aumenta, <math data-tex="U"><mi>U</mi></math> disminuye. Si se inserta a <math data-tex="V"><mi>V</mi></math> fijo: <math data-tex="Q"><mi>Q</mi></math> aumenta, <math data-tex="C"><mi>C</mi></math> aumenta, <math data-tex="U"><mi>U</mi></math> aumenta. La batería aporta o recibe energía.</p>
       </div>
       <div class="concept-card">
         <h3>Dieléctrico parcialmente insertado</h3>
-        <p>El condensador se modela como dos condensadores en paralelo: uno con dieléctrico ($\varepsilon_r$) y uno sin él. La fuerza sobre el dieléctrico surge del gradiente de energía.</p>
+        <p>El condensador se modela como dos condensadores en paralelo: uno con dieléctrico (<math data-tex="\varepsilon_r"><msub><mi>ε</mi><mi>r</mi></msub></math>) y uno sin él. La fuerza sobre el dieléctrico surge del gradiente de energía.</p>
       </div>
       <div class="concept-card">
         <h3>Fuerza = −dU/dx</h3>
-        <p>La fuerza sobre el dieléctrico es $F = -dU/dx$ a carga constante, o $F = +dU/dx$ a voltaje constante (incluyendo energía de la fuente). En ambos casos el dieléctrico es atraído hacia dentro.</p>
+        <p>La fuerza sobre el dieléctrico es <math data-tex="F = -dU/dx"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><mi>d</mi><mi>U</mi><mi>/</mi><mi>d</mi><mi>x</mi></math> a carga constante, o <math data-tex="F = +dU/dx"><mi>F</mi><mo>=</mo><mo form="prefix">+</mo><mi>d</mi><mi>U</mi><mi>/</mi><mi>d</mi><mi>x</mi></math> a voltaje constante (incluyendo energía de la fuente). En ambos casos el dieléctrico es atraído hacia dentro.</p>
       </div>
     </div>
   </section>
@@ -108,7 +106,7 @@
       <div class="formula-label">Capacitancia con dieléctrico</div>
       <div class="formula-math"><img class="typst-formula" src="aux_12_1.svg" alt=""></div>
       <div class="formula-desc">
-        $\varepsilon_r = \varepsilon/\varepsilon_0$ es la permitividad relativa del material. Para geometrías cilíndricas o esféricas, se reemplaza $\varepsilon_0$ por $\varepsilon = \varepsilon_r\varepsilon_0$ en la fórmula correspondiente.
+        <math data-tex="\varepsilon_r = \varepsilon/\varepsilon_0"><msub><mi>ε</mi><mi>r</mi></msub><mo>=</mo><mi>ε</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math> es la permitividad relativa del material. Para geometrías cilíndricas o esféricas, se reemplaza <math data-tex="\varepsilon_0"><msub><mi>ε</mi><mn>0</mn></msub></math> por <math data-tex="\varepsilon = \varepsilon_r\varepsilon_0"><mi>ε</mi><mo>=</mo><msub><mi>ε</mi><mi>r</mi></msub><msub><mi>ε</mi><mn>0</mn></msub></math> en la fórmula correspondiente.
       </div>
     </div>
 
@@ -116,7 +114,7 @@
       <div class="formula-label">Energía almacenada</div>
       <div class="formula-math"><img class="typst-formula" src="aux_12_2.svg" alt=""></div>
       <div class="formula-desc">
-        Equivalentemente: $U = \frac{\varepsilon}{2}\int E^2\,dV$ (densidad de energía $u = \frac{1}{2}\varepsilon E^2$).
+        Equivalentemente: <math data-tex="U = \frac{\varepsilon}{2}\int E^2\,dV"><mi>U</mi><mo>=</mo><mfrac><mi>ε</mi><mn>2</mn></mfrac><mo form="prefix">∫</mo><msup><mi>E</mi><mn>2</mn></msup><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> (densidad de energía <math data-tex="u = \frac{1}{2}\varepsilon E^2"><mi>u</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>ε</mi><msup><mi>E</mi><mn>2</mn></msup></math>).
       </div>
     </div>
 
@@ -134,10 +132,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Cuándo usar qué expresión de energía</div>
       <ul>
-        <li>A carga constante ($Q$ fija): $U = Q^2/(2C)$ → la energía disminuye al insertar el dieléctrico → fuerza hacia adentro.</li>
-        <li>A voltaje constante ($V$ fijo): $U = \frac{1}{2}CV^2$ → la energía aumenta, pero la batería hace trabajo extra que más que compensa.</li>
+        <li>A carga constante (<math data-tex="Q"><mi>Q</mi></math> fija): <math data-tex="U = Q^2/(2C)"><mi>U</mi><mo>=</mo><msup><mi>Q</mi><mn>2</mn></msup><mi>/</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>C</mi></mrow><mo>)</mo></mrow></math> → la energía disminuye al insertar el dieléctrico → fuerza hacia adentro.</li>
+        <li>A voltaje constante (<math data-tex="V"><mi>V</mi></math> fijo): <math data-tex="U = \frac{1}{2}CV^2"><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>C</mi><msup><mi>V</mi><mn>2</mn></msup></math> → la energía aumenta, pero la batería hace trabajo extra que más que compensa.</li>
         <li>En ambos casos la fuerza resultante atrae el dieléctrico hacia el interior del condensador.</li>
-        <li>Para calcular la fuerza: derivar $U$ respecto a la posición del dieléctrico (con cuidado del signo y qué se mantiene constante).</li>
+        <li>Para calcular la fuerza: derivar <math data-tex="U"><mi>U</mi></math> respecto a la posición del dieléctrico (con cuidado del signo y qué se mantiene constante).</li>
       </ul>
     </div>
   </section>

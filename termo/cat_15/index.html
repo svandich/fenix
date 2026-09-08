@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 15 — Potenciales Termodinámicos</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -81,18 +77,18 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Estadística avanzada</div>
     <div class="unit-pill u5 bg-u5">Estadística avanzada · Cát. 13–17</div>
     <h1>Cátedra 15: Potenciales Termodinámicos</h1>
-    <p class="desc">Los cuatro potenciales termodinámicos — $U$, $F$, $H$, $G$ — se obtienen por transformadas de Legendre de la energía interna. Cada uno es el potencial "natural" para condiciones experimentales distintas.</p>
+    <p class="desc">Los cuatro potenciales termodinámicos — <math data-tex="U"><mi>U</mi></math>, <math data-tex="F"><mi>F</mi></math>, <math data-tex="H"><mi>H</mi></math>, <math data-tex="G"><mi>G</mi></math> — se obtienen por transformadas de Legendre de la energía interna. Cada uno es el potencial "natural" para condiciones experimentales distintas.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Energía interna $U(S,V,N)$: potencial fundamental con variables naturales $S$, $V$, $N$</li>
+        <li>Energía interna <math data-tex="U(S,V,N)"><mi>U</mi><mrow><mo>(</mo><mrow><mi>S</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math>: potencial fundamental con variables naturales <math data-tex="S"><mi>S</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math></li>
         <li>Transformada de Legendre: cómo cambiar de variables naturales sin perder información</li>
-        <li>Energía libre de Helmholtz $F(T,V,N) = U - TS$</li>
-        <li>Entalpía $H(S,p,N) = U + pV$: natural para procesos a presión constante</li>
-        <li>Energía libre de Gibbs $G(T,p,N) = H - TS = F + pV$</li>
+        <li>Energía libre de Helmholtz <math data-tex="F(T,V,N) = U - TS"><mi>F</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>U</mi><mo>−</mo><mi>T</mi><mi>S</mi></math></li>
+        <li>Entalpía <math data-tex="H(S,p,N) = U + pV"><mi>H</mi><mrow><mo>(</mo><mrow><mi>S</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>U</mi><mo>+</mo><mi>p</mi><mi>V</mi></math>: natural para procesos a presión constante</li>
+        <li>Energía libre de Gibbs <math data-tex="G(T,p,N) = H - TS = F + pV"><mi>G</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>H</mi><mo>−</mo><mi>T</mi><mi>S</mi><mo>=</mo><mi>F</mi><mo>+</mo><mi>p</mi><mi>V</mi></math></li>
         <li>Las cuatro relaciones de Maxwell a partir de los cuatro potenciales</li>
       </ul>
     </div>
@@ -103,19 +99,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Transformada de Legendre</h3>
-        <p>Intercambia una variable extensiva por su conjugada intensiva sin perder información termodinámica. Ejemplo: $F = U - TS$ intercambia $S$ (extensiva) por $T$ (intensiva), pasando de variables naturales $(S,V,N)$ a $(T,V,N)$.</p>
+        <p>Intercambia una variable extensiva por su conjugada intensiva sin perder información termodinámica. Ejemplo: <math data-tex="F = U - TS"><mi>F</mi><mo>=</mo><mi>U</mi><mo>−</mo><mi>T</mi><mi>S</mi></math> intercambia <math data-tex="S"><mi>S</mi></math> (extensiva) por <math data-tex="T"><mi>T</mi></math> (intensiva), pasando de variables naturales <math data-tex="(S,V,N)"><mrow><mo>(</mo><mrow><mi>S</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math> a <math data-tex="(T,V,N)"><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math>.</p>
       </div>
       <div class="concept-card">
-        <h3>Entalpía $H$</h3>
-        <p>$H = U + pV$ tiene variables naturales $(S,p,N)$. A presión constante, $\Delta H = Q_p$: el calor absorbido a $p$ fija es directamente la variación de entalpía. Útil en reacciones químicas a presión atmosférica.</p>
+        <h3>Entalpía <math data-tex="H"><mi>H</mi></math></h3>
+        <p><math data-tex="H = U + pV"><mi>H</mi><mo>=</mo><mi>U</mi><mo>+</mo><mi>p</mi><mi>V</mi></math> tiene variables naturales <math data-tex="(S,p,N)"><mrow><mo>(</mo><mrow><mi>S</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math>. A presión constante, <math data-tex="\Delta H = Q_p"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><msub><mi>Q</mi><mi>p</mi></msub></math>: el calor absorbido a <math data-tex="p"><mi>p</mi></math> fija es directamente la variación de entalpía. Útil en reacciones químicas a presión atmosférica.</p>
       </div>
       <div class="concept-card">
-        <h3>Energía de Gibbs $G$</h3>
-        <p>$G = H - TS$ tiene variables naturales $(T,p,N)$. Es la condición de equilibrio a $T$ y $p$ constantes: $G$ es mínimo en el equilibrio. Determina la dirección de reacciones y transiciones de fase a condiciones de laboratorio.</p>
+        <h3>Energía de Gibbs <math data-tex="G"><mi>G</mi></math></h3>
+        <p><math data-tex="G = H - TS"><mi>G</mi><mo>=</mo><mi>H</mi><mo>−</mo><mi>T</mi><mi>S</mi></math> tiene variables naturales <math data-tex="(T,p,N)"><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math>. Es la condición de equilibrio a <math data-tex="T"><mi>T</mi></math> y <math data-tex="p"><mi>p</mi></math> constantes: <math data-tex="G"><mi>G</mi></math> es mínimo en el equilibrio. Determina la dirección de reacciones y transiciones de fase a condiciones de laboratorio.</p>
       </div>
       <div class="concept-card">
         <h3>Relaciones de Maxwell</h3>
-        <p>Cada potencial genera una relación de Maxwell por igualdad de derivadas cruzadas. Las cuatro son: $(\partial T/\partial V)_S = -(\partial p/\partial S)_V$; $(\partial T/\partial p)_S = (\partial V/\partial S)_p$; $(\partial S/\partial V)_T = (\partial p/\partial T)_V$; $(\partial S/\partial p)_T = -(\partial V/\partial T)_p$.</p>
+        <p>Cada potencial genera una relación de Maxwell por igualdad de derivadas cruzadas. Las cuatro son: <math data-tex="(\partial T/\partial V)_S = -(\partial p/\partial S)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>T</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>S</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>p</mi><mi>/</mi><mi>∂</mi><mi>S</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>; <math data-tex="(\partial T/\partial p)_S = (\partial V/\partial S)_p"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>T</mi><mi>/</mi><mi>∂</mi><mi>p</mi></mrow><mo>)</mo></mrow><mi>S</mi></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>S</mi></mrow><mo>)</mo></mrow><mi>p</mi></msub></math>; <math data-tex="(\partial S/\partial V)_T = (\partial p/\partial T)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>p</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>; <math data-tex="(\partial S/\partial p)_T = -(\partial V/\partial T)_p"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>p</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>p</mi></msub></math>.</p>
       </div>
     </div>
   </section>
@@ -135,7 +131,7 @@
       <div class="formula-label">Relaciones entre potenciales</div>
       <div class="formula-math"><img class="typst-formula" src="cat_15_2.svg" alt=""></div>
       <div class="formula-desc">
-        Cada potencial se obtiene del anterior por transformada de Legendre. $G = F + pV = H - TS$. En el límite termodinámico: $G = N\mu$ (extensividad de $G$).
+        Cada potencial se obtiene del anterior por transformada de Legendre. <math data-tex="G = F + pV = H - TS"><mi>G</mi><mo>=</mo><mi>F</mi><mo>+</mo><mi>p</mi><mi>V</mi><mo>=</mo><mi>H</mi><mo>−</mo><mi>T</mi><mi>S</mi></math>. En el límite termodinámico: <math data-tex="G = N\mu"><mi>G</mi><mo>=</mo><mi>N</mi><mi>μ</mi></math> (extensividad de <math data-tex="G"><mi>G</mi></math>).
       </div>
     </div>
 
@@ -143,15 +139,15 @@
       <div class="formula-label">Relación de Gibbs-Helmholtz</div>
       <div class="formula-math"><img class="typst-formula" src="cat_15_3.svg" alt=""></div>
       <div class="formula-desc">
-        Permite obtener $U$ a partir de $F(T)$ sin necesidad de calcular $S$ por separado. Análogamente, $H = -T^2[\partial(G/T)/\partial T]_p$.
+        Permite obtener <math data-tex="U"><mi>U</mi></math> a partir de <math data-tex="F(T)"><mi>F</mi><mrow><mo>(</mo><mi>T</mi><mo>)</mo></mrow></math> sin necesidad de calcular <math data-tex="S"><mi>S</mi></math> por separado. Análogamente, <math data-tex="H = -T^2[\partial(G/T)/\partial T]_p"><mi>H</mi><mo>=</mo><mo form="prefix">−</mo><msup><mi>T</mi><mn>2</mn></msup><msub><mrow><mo>[</mo><mrow><mi>∂</mi><mrow><mo>(</mo><mrow><mi>G</mi><mi>/</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>]</mo></mrow><mi>p</mi></msub></math>.
       </div>
     </div>
 
     <div class="formula-block u5">
-      <div class="formula-label">Relación de Maxwell de $G$</div>
+      <div class="formula-label">Relación de Maxwell de <math data-tex="G"><mi>G</mi></math></div>
       <div class="formula-math"><img class="typst-formula" src="cat_15_4.svg" alt=""></div>
       <div class="formula-desc">
-        Relaciona la variación de entropía con la presión con el coeficiente de expansión térmica $\alpha = (1/V)(\partial V/\partial T)_p$. Implica que $(\partial S/\partial p)_T = -V\alpha$.
+        Relaciona la variación de entropía con la presión con el coeficiente de expansión térmica <math data-tex="\alpha = (1/V)(\partial V/\partial T)_p"><mi>α</mi><mo>=</mo><mrow><mo>(</mo><mrow><mn>1</mn><mi>/</mi><mi>V</mi></mrow><mo>)</mo></mrow><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>p</mi></msub></math>. Implica que <math data-tex="(\partial S/\partial p)_T = -V\alpha"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>p</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mo form="prefix">−</mo><mi>V</mi><mi>α</mi></math>.
       </div>
     </div>
   </section>
@@ -161,9 +157,9 @@
     <div class="tip-box">
       <div class="tip-title">✦ Claves de los potenciales termodinámicos</div>
       <ul>
-        <li>La elección del potencial correcto depende de qué variables están fijas: usa $F$ si $T$, $V$, $N$ fijos; $G$ si $T$, $p$, $N$ fijos; $H$ si $S$, $p$ fijos (poco común); $U$ si $S$, $V$, $N$ fijos (sistema aislado).</li>
-        <li>$G = N\mu$ es una consecuencia de la extensividad: $G$ es la única combinación de potencial con variables naturales $(T,p)$ que es extensiva, lo que obliga $G \propto N$.</li>
-        <li>Las relaciones de Gibbs-Helmholtz son muy útiles en experimentos: miden $G$ o $F$ en función de $T$ y obtienen $H$ o $U$ sin necesidad de medir directamente $S$.</li>
+        <li>La elección del potencial correcto depende de qué variables están fijas: usa <math data-tex="F"><mi>F</mi></math> si <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math> fijos; <math data-tex="G"><mi>G</mi></math> si <math data-tex="T"><mi>T</mi></math>, <math data-tex="p"><mi>p</mi></math>, <math data-tex="N"><mi>N</mi></math> fijos; <math data-tex="H"><mi>H</mi></math> si <math data-tex="S"><mi>S</mi></math>, <math data-tex="p"><mi>p</mi></math> fijos (poco común); <math data-tex="U"><mi>U</mi></math> si <math data-tex="S"><mi>S</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math> fijos (sistema aislado).</li>
+        <li><math data-tex="G = N\mu"><mi>G</mi><mo>=</mo><mi>N</mi><mi>μ</mi></math> es una consecuencia de la extensividad: <math data-tex="G"><mi>G</mi></math> es la única combinación de potencial con variables naturales <math data-tex="(T,p)"><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>p</mi></mrow><mo>)</mo></mrow></math> que es extensiva, lo que obliga <math data-tex="G \propto N"><mi>G</mi><mo>∝</mo><mi>N</mi></math>.</li>
+        <li>Las relaciones de Gibbs-Helmholtz son muy útiles en experimentos: miden <math data-tex="G"><mi>G</mi></math> o <math data-tex="F"><mi>F</mi></math> en función de <math data-tex="T"><mi>T</mi></math> y obtienen <math data-tex="H"><mi>H</mi></math> o <math data-tex="U"><mi>U</mi></math> sin necesidad de medir directamente <math data-tex="S"><mi>S</mi></math>.</li>
         <li>Las relaciones de Maxwell son identidades exactas — no asumen modelo microscópico alguno. Se aplican a cualquier sistema en equilibrio.</li>
       </ul>
     </div>
@@ -174,38 +170,38 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q15_1" data-correct="2">
-        <div class="quiz-question">1. ¿Cuál es el potencial termodinámico natural para un proceso a temperatura $T$ y presión $P$ constantes (condiciones típicas de laboratorio)?</div>
+        <div class="quiz-question">1. ¿Cuál es el potencial termodinámico natural para un proceso a temperatura <math data-tex="T"><mi>T</mi></math> y presión <math data-tex="P"><mi>P</mi></math> constantes (condiciones típicas de laboratorio)?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q15_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía interna $U(S,V,N)$, porque contiene toda la información termodinámica del sistema</span></label>
-          <label class="quiz-option"><input type="radio" name="q15_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La entalpía $H(S,p,N)$, porque la presión es la variable fija en el proceso</span></label>
-          <label class="quiz-option"><input type="radio" name="q15_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía libre de Gibbs $G(T,p,N)$: tiene exactamente $T$ y $P$ como variables naturales, y $G$ es mínima en el equilibrio a $T$, $p$, $N$ fijos</span></label>
-          <label class="quiz-option"><input type="radio" name="q15_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La energía libre de Helmholtz $F(T,V,N)$, porque incluye la temperatura como variable natural</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía interna <math data-tex="U(S,V,N)"><mi>U</mi><mrow><mo>(</mo><mrow><mi>S</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math>, porque contiene toda la información termodinámica del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La entalpía <math data-tex="H(S,p,N)"><mi>H</mi><mrow><mo>(</mo><mrow><mi>S</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math>, porque la presión es la variable fija en el proceso</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía libre de Gibbs <math data-tex="G(T,p,N)"><mi>G</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math>: tiene exactamente <math data-tex="T"><mi>T</mi></math> y <math data-tex="P"><mi>P</mi></math> como variables naturales, y <math data-tex="G"><mi>G</mi></math> es mínima en el equilibrio a <math data-tex="T"><mi>T</mi></math>, <math data-tex="p"><mi>p</mi></math>, <math data-tex="N"><mi>N</mi></math> fijos</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La energía libre de Helmholtz <math data-tex="F(T,V,N)"><mi>F</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math>, porque incluye la temperatura como variable natural</span></label>
         </div>
-        <script type="text/explanation" id="q15_1-exp">Cada potencial es "natural" para ciertas condiciones: $U$ para sistemas aislados ($S,V,N$ fijos), $F$ para baño térmico a volumen fijo ($T,V,N$), $H$ para procesos isoentrópicos a presión fija ($S,p,N$, raro en la práctica), y $G$ para baño térmico a presión constante ($T,p,N$). Las condiciones de laboratorio más habituales son $T$ y $P$ fijos (recipiente abierto en contacto con la atmósfera y un termostato), lo que hace de $G$ la función más usada en química y biología. El equilibrio ocurre cuando $G$ es mínima y $dG = 0$.</script>
+        <script type="text/explanation" id="q15_1-exp">Cada potencial es "natural" para ciertas condiciones: <math data-tex="U"><mi>U</mi></math> para sistemas aislados (<math data-tex="S,V,N"><mi>S</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></math> fijos), <math data-tex="F"><mi>F</mi></math> para baño térmico a volumen fijo (<math data-tex="T,V,N"><mi>T</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></math>), <math data-tex="H"><mi>H</mi></math> para procesos isoentrópicos a presión fija (<math data-tex="S,p,N"><mi>S</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>N</mi></math>, raro en la práctica), y <math data-tex="G"><mi>G</mi></math> para baño térmico a presión constante (<math data-tex="T,p,N"><mi>T</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>N</mi></math>). Las condiciones de laboratorio más habituales son <math data-tex="T"><mi>T</mi></math> y <math data-tex="P"><mi>P</mi></math> fijos (recipiente abierto en contacto con la atmósfera y un termostato), lo que hace de <math data-tex="G"><mi>G</mi></math> la función más usada en química y biología. El equilibrio ocurre cuando <math data-tex="G"><mi>G</mi></math> es mínima y <math data-tex="dG = 0"><mi>d</mi><mi>G</mi><mo>=</mo><mn>0</mn></math>.</script>
         <div class="quiz-feedback" id="q15_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q15_2" data-correct="1">
-        <div class="quiz-question">2. A presión constante, $Q_p = \Delta H$. ¿Por qué el calor absorbido a presión fija es la variación de entalpía y no de energía interna?</div>
+        <div class="quiz-question">2. A presión constante, <math data-tex="Q_p = \Delta H"><msub><mi>Q</mi><mi>p</mi></msub><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi></math>. ¿Por qué el calor absorbido a presión fija es la variación de entalpía y no de energía interna?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q15_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque $H = U + TS$ y a presión constante el término $TS$ absorbe el calor adicional</span></label>
-          <label class="quiz-option"><input type="radio" name="q15_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque $dH = dU + p\,dV + V\,dp$: a $p$ constante ($dp=0$) queda $dH = dU + p\,dV = \bar{\delta}Q + \bar{\delta}W + p\,dV = \bar{\delta}Q$ (con $\bar{\delta}W = -p\,dV$). El calor va a cambiar $U$ y a realizar trabajo de expansión</span></label>
-          <label class="quiz-option"><input type="radio" name="q15_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a presión constante $\Delta U = 0$ para cualquier sustancia, así que todo el calor es $\Delta H$</span></label>
-          <label class="quiz-option"><input type="radio" name="q15_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque $H$ es la única función de estado que depende directamente del calor transferido</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque <math data-tex="H = U + TS"><mi>H</mi><mo>=</mo><mi>U</mi><mo>+</mo><mi>T</mi><mi>S</mi></math> y a presión constante el término <math data-tex="TS"><mi>T</mi><mi>S</mi></math> absorbe el calor adicional</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque <math data-tex="dH = dU + p\,dV + V\,dp"><mi>d</mi><mi>H</mi><mo>=</mo><mi>d</mi><mi>U</mi><mo>+</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi><mo>+</mo><mi>V</mi><mspace width="0.1667em"/><mi>d</mi><mi>p</mi></math>: a <math data-tex="p"><mi>p</mi></math> constante (<math data-tex="dp=0"><mi>d</mi><mi>p</mi><mo>=</mo><mn>0</mn></math>) queda <math data-tex="dH = dU + p\,dV = \bar{\delta}Q + \bar{\delta}W + p\,dV = \bar{\delta}Q"><mi>d</mi><mi>H</mi><mo>=</mo><mi>d</mi><mi>U</mi><mo>+</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mo>+</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi><mo>+</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> (con <math data-tex="\bar{\delta}W = -p\,dV"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi><mo>=</mo><mo form="prefix">−</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>). El calor va a cambiar <math data-tex="U"><mi>U</mi></math> y a realizar trabajo de expansión</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a presión constante <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math> para cualquier sustancia, así que todo el calor es <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q15_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque <math data-tex="H"><mi>H</mi></math> es la única función de estado que depende directamente del calor transferido</span></label>
         </div>
-        <script type="text/explanation" id="q15_2-exp">El primer principio da $\bar{\delta}Q = dU - \bar{\delta}W = dU + p\,dV$ (para trabajo $pV$ con convención $\bar{\delta}W = -p\,dV$). A presión constante: $\bar{\delta}Q_p = dU + p\,dV = d(U+pV) = dH$. Así que $Q_p = \Delta H$. El calor se divide entre cambiar la energía interna ($\Delta U$) y realizar trabajo de expansión ($p\Delta V$); la entalpía recoge ambas contribuciones automáticamente. Por esto las tablas de energía de reacción en química se dan como $\Delta H$ (la reacción ocurre a presión atmosférica constante).</script>
+        <script type="text/explanation" id="q15_2-exp">El primer principio da <math data-tex="\bar{\delta}Q = dU - \bar{\delta}W = dU + p\,dV"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mo>=</mo><mi>d</mi><mi>U</mi><mo>−</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi><mo>=</mo><mi>d</mi><mi>U</mi><mo>+</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> (para trabajo <math data-tex="pV"><mi>p</mi><mi>V</mi></math> con convención <math data-tex="\bar{\delta}W = -p\,dV"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi><mo>=</mo><mo form="prefix">−</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>). A presión constante: <math data-tex="\bar{\delta}Q_p = dU + p\,dV = d(U+pV) = dH"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><msub><mi>Q</mi><mi>p</mi></msub><mo>=</mo><mi>d</mi><mi>U</mi><mo>+</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi><mo>=</mo><mi>d</mi><mrow><mo>(</mo><mrow><mi>U</mi><mo>+</mo><mi>p</mi><mi>V</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>d</mi><mi>H</mi></math>. Así que <math data-tex="Q_p = \Delta H"><msub><mi>Q</mi><mi>p</mi></msub><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi></math>. El calor se divide entre cambiar la energía interna (<math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math>) y realizar trabajo de expansión (<math data-tex="p\Delta V"><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math>); la entalpía recoge ambas contribuciones automáticamente. Por esto las tablas de energía de reacción en química se dan como <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math> (la reacción ocurre a presión atmosférica constante).</script>
         <div class="quiz-feedback" id="q15_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q15_3" data-correct="1">
-        <div class="quiz-question">3. ¿Cuántas relaciones de Maxwell independientes se obtienen de los cuatro potenciales $U$, $F$, $H$, $G$?</div>
+        <div class="quiz-question">3. ¿Cuántas relaciones de Maxwell independientes se obtienen de los cuatro potenciales <math data-tex="U"><mi>U</mi></math>, <math data-tex="F"><mi>F</mi></math>, <math data-tex="H"><mi>H</mi></math>, <math data-tex="G"><mi>G</mi></math>?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q15_3" value="0"><span class="opt-letter">A</span><span class="opt-text">2: una por cada par conjugado de variables $(S,T)$ y $(V,P)$</span></label>
+          <label class="quiz-option"><input type="radio" name="q15_3" value="0"><span class="opt-letter">A</span><span class="opt-text">2: una por cada par conjugado de variables <math data-tex="(S,T)"><mrow><mo>(</mo><mrow><mi>S</mi><mo>,</mo><mi>T</mi></mrow><mo>)</mo></mrow></math> y <math data-tex="(V,P)"><mrow><mo>(</mo><mrow><mi>V</mi><mo>,</mo><mi>P</mi></mrow><mo>)</mo></mrow></math></span></label>
           <label class="quiz-option"><input type="radio" name="q15_3" value="1"><span class="opt-letter">B</span><span class="opt-text">4: cada potencial genera una relación de Maxwell por la igualdad de sus derivadas cruzadas; las cuatro son independientes entre sí</span></label>
           <label class="quiz-option"><input type="radio" name="q15_3" value="2"><span class="opt-letter">C</span><span class="opt-text">8: dos por cada potencial, una por cada par de variables naturales</span></label>
           <label class="quiz-option"><input type="radio" name="q15_3" value="3"><span class="opt-letter">D</span><span class="opt-text">1: todas son equivalentes y se pueden derivar una de la otra</span></label>
         </div>
-        <script type="text/explanation" id="q15_3-exp">Cada diferencial exacto $dU$, $dF$, $dH$, $dG$ tiene dos términos (sin contar $\mu dN$), y la igualdad de sus derivadas cruzadas genera una relación de Maxwell. Las cuatro son: de $U$: $(\partial T/\partial V)_S = -(\partial P/\partial S)_V$; de $F$: $(\partial S/\partial V)_T = (\partial P/\partial T)_V$; de $H$: $(\partial T/\partial P)_S = (\partial V/\partial S)_P$; de $G$: $(\partial S/\partial P)_T = -(\partial V/\partial T)_P$. Estas cuatro relaciones son distintas e independientes — conectan derivadas de magnitudes que aparentemente no están relacionadas.</script>
+        <script type="text/explanation" id="q15_3-exp">Cada diferencial exacto <math data-tex="dU"><mi>d</mi><mi>U</mi></math>, <math data-tex="dF"><mi>d</mi><mi>F</mi></math>, <math data-tex="dH"><mi>d</mi><mi>H</mi></math>, <math data-tex="dG"><mi>d</mi><mi>G</mi></math> tiene dos términos (sin contar <math data-tex="\mu dN"><mi>μ</mi><mi>d</mi><mi>N</mi></math>), y la igualdad de sus derivadas cruzadas genera una relación de Maxwell. Las cuatro son: de <math data-tex="U"><mi>U</mi></math>: <math data-tex="(\partial T/\partial V)_S = -(\partial P/\partial S)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>T</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>S</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>S</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>; de <math data-tex="F"><mi>F</mi></math>: <math data-tex="(\partial S/\partial V)_T = (\partial P/\partial T)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>; de <math data-tex="H"><mi>H</mi></math>: <math data-tex="(\partial T/\partial P)_S = (\partial V/\partial S)_P"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>T</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>S</mi></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>S</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub></math>; de <math data-tex="G"><mi>G</mi></math>: <math data-tex="(\partial S/\partial P)_T = -(\partial V/\partial T)_P"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub></math>. Estas cuatro relaciones son distintas e independientes — conectan derivadas de magnitudes que aparentemente no están relacionadas.</script>
         <div class="quiz-feedback" id="q15_3-fb"></div>
       </div>
 

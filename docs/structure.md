@@ -46,17 +46,19 @@ repo-root/
 │   ├── compile-typst.sh     ← Compila todos los .typ → SVG
 │   ├── make-diagrams.py     ← Genera los diagramas (no fórmulas) de termoquimica → SVG
 │   ├── check-lr-parens.py   ← Detecta lr((A)/(B)), que renderiza sin paréntesis
+│   ├── latex2typst.py       ← Traduce el LaTeX del math inline a sintaxis Typst
+│   ├── inline-mathml.py     ← Hornea el math inline ($...$) como MathML
 │   ├── courses.py           ← Manifiesto: fuente de verdad de sidebar y prev/next
 │   └── sync-nav.py          ← Regenera sidebar y prev/next en las 79 páginas
 │
-├── build.sh                 ← ./build.sh [curso]
+├── build.sh                 ← ./build.sh [curso] — Typst → SVG + math inline → MathML
 │
 ├── docs/                    ← Documentación del proyecto
 │   ├── structure.md         ← Este archivo
 │   ├── style-guide.md       ← Tokens de diseño y componentes CSS
 │   ├── design-logic.md      ← Decisiones de diseño y razonamiento
 │   ├── sidebar-maintenance.md   ← Spec del script sync-nav.py
-│   └── typst-inline-migration.md ← Por qué el math inline sigue en MathJax
+│   └── typst-inline-migration.md ← Cómo se migró el math inline a MathML
 │
 └── CLAUDE.md                ← Punto de entrada para Claude
 ```

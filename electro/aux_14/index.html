@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 14 — Dieléctricos II</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -70,10 +68,10 @@
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Condiciones de borde para $\mathbf{E}$ y $\mathbf{D}$ en interfaces dieléctricas</li>
-        <li>Continuidad de $E_\parallel$ y discontinuidad de $D_\perp$ (sin cargas libres)</li>
-        <li>Cilindros conductores rodeados de dieléctricos con distintas $\varepsilon_r$</li>
-        <li>Permitividad variable $\varepsilon = \varepsilon(r)$: cálculo de $\mathbf{D}$ y $\mathbf{E}$</li>
+        <li>Condiciones de borde para <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> y <math data-tex="\mathbf{D}"><mi class="mv-bi">D</mi></math> en interfaces dieléctricas</li>
+        <li>Continuidad de <math data-tex="E_\parallel"><msub><mi>E</mi><mo>∥</mo></msub></math> y discontinuidad de <math data-tex="D_\perp"><msub><mi>D</mi><mi>⊥</mi></msub></math> (sin cargas libres)</li>
+        <li>Cilindros conductores rodeados de dieléctricos con distintas <math data-tex="\varepsilon_r"><msub><mi>ε</mi><mi>r</mi></msub></math></li>
+        <li>Permitividad variable <math data-tex="\varepsilon = \varepsilon(r)"><mi>ε</mi><mo>=</mo><mi>ε</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math>: cálculo de <math data-tex="\mathbf{D}"><mi class="mv-bi">D</mi></math> y <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math></li>
         <li>Densidades de carga de polarización en interfaces</li>
       </ul>
     </div>
@@ -84,19 +82,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Continuidad de E tangencial</h3>
-        <p>La componente de $\mathbf{E}$ paralela a la interfaz siempre es continua: $E_{1\parallel} = E_{2\parallel}$. Proviene de $\nabla\times\mathbf{E} = 0$ (irrotacionalidad del campo estático).</p>
+        <p>La componente de <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> paralela a la interfaz siempre es continua: <math data-tex="E_{1\parallel} = E_{2\parallel}"><msub><mi>E</mi><mrow><mn>1</mn><mo form="infix" lspace="0em" rspace="0em">∥</mo></mrow></msub><mo>=</mo><msub><mi>E</mi><mrow><mn>2</mn><mo form="infix" lspace="0em" rspace="0em">∥</mo></mrow></msub></math>. Proviene de <math data-tex="\nabla\times\mathbf{E} = 0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math> (irrotacionalidad del campo estático).</p>
       </div>
       <div class="concept-card">
         <h3>D normal con carga libre</h3>
-        <p>Si no hay carga libre en la interfaz: $D_{1\perp} = D_{2\perp}$. Si hay $\sigma_{\text{libre}}$: $(D_{2\perp} - D_{1\perp}) = \sigma_{\text{libre}}$. Viene de Gauss para $\mathbf{D}$.</p>
+        <p>Si no hay carga libre en la interfaz: <math data-tex="D_{1\perp} = D_{2\perp}"><msub><mi>D</mi><mrow><mn>1</mn><mi>⊥</mi></mrow></msub><mo>=</mo><msub><mi>D</mi><mrow><mn>2</mn><mi>⊥</mi></mrow></msub></math>. Si hay <math data-tex="\sigma_{\text{libre}}"><msub><mi>σ</mi><mtext>libre</mtext></msub></math>: <math data-tex="(D_{2\perp} - D_{1\perp}) = \sigma_{\text{libre}}"><mrow><mo>(</mo><mrow><msub><mi>D</mi><mrow><mn>2</mn><mi>⊥</mi></mrow></msub><mo>−</mo><msub><mi>D</mi><mrow><mn>1</mn><mi>⊥</mi></mrow></msub></mrow><mo>)</mo></mrow><mo>=</mo><msub><mi>σ</mi><mtext>libre</mtext></msub></math>. Viene de Gauss para <math data-tex="\mathbf{D}"><mi class="mv-bi">D</mi></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Refracción del campo</h3>
-        <p>Al cruzar una interfaz, el campo cambia de dirección. La relación $\tan\theta_1/\tan\theta_2 = \varepsilon_2/\varepsilon_1$ (ley de refracción dieléctrica) rige el ángulo de las líneas de campo.</p>
+        <p>Al cruzar una interfaz, el campo cambia de dirección. La relación <math data-tex="\tan\theta_1/\tan\theta_2 = \varepsilon_2/\varepsilon_1"><mo lspace="0em" rspace="0.16666666666666666em">tan</mo><msub><mi>θ</mi><mn>1</mn></msub><mi>/</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">tan</mo><msub><mi>θ</mi><mn>2</mn></msub><mo>=</mo><msub><mi>ε</mi><mn>2</mn></msub><mi>/</mi><msub><mi>ε</mi><mn>1</mn></msub></math> (ley de refracción dieléctrica) rige el ángulo de las líneas de campo.</p>
       </div>
       <div class="concept-card">
         <h3>Carga superficial de polarización</h3>
-        <p>En la interfaz entre dos dieléctricos: $\sigma_p = P_{1n} - P_{2n} = \varepsilon_0(\varepsilon_{r1}-1)E_{1n} - \varepsilon_0(\varepsilon_{r2}-1)E_{2n}$, usando que $D_{n}$ es continua.</p>
+        <p>En la interfaz entre dos dieléctricos: <math data-tex="\sigma_p = P_{1n} - P_{2n} = \varepsilon_0(\varepsilon_{r1}-1)E_{1n} - \varepsilon_0(\varepsilon_{r2}-1)E_{2n}"><msub><mi>σ</mi><mi>p</mi></msub><mo>=</mo><msub><mi>P</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub><mo>−</mo><msub><mi>P</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub><mo>=</mo><msub><mi>ε</mi><mn>0</mn></msub><mrow><mo>(</mo><mrow><msub><mi>ε</mi><mrow><mi>r</mi><mn>1</mn></mrow></msub><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><msub><mi>E</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub><mo>−</mo><msub><mi>ε</mi><mn>0</mn></msub><mrow><mo>(</mo><mrow><msub><mi>ε</mi><mrow><mi>r</mi><mn>2</mn></mrow></msub><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><msub><mi>E</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></math>, usando que <math data-tex="D_{n}"><msub><mi>D</mi><mi>n</mi></msub></math> es continua.</p>
       </div>
     </div>
   </section>
@@ -108,7 +106,7 @@
       <div class="formula-label">Condiciones de borde en interfaz (sin carga libre superficial)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_14_1.svg" alt=""></div>
       <div class="formula-desc">
-        En términos del campo $\mathbf{E}$: $\varepsilon_1 E_{1\perp} = \varepsilon_2 E_{2\perp}$ y $E_{1\parallel} = E_{2\parallel}$.
+        En términos del campo <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math>: <math data-tex="\varepsilon_1 E_{1\perp} = \varepsilon_2 E_{2\perp}"><msub><mi>ε</mi><mn>1</mn></msub><msub><mi>E</mi><mrow><mn>1</mn><mi>⊥</mi></mrow></msub><mo>=</mo><msub><mi>ε</mi><mn>2</mn></msub><msub><mi>E</mi><mrow><mn>2</mn><mi>⊥</mi></mrow></msub></math> y <math data-tex="E_{1\parallel} = E_{2\parallel}"><msub><mi>E</mi><mrow><mn>1</mn><mo form="infix" lspace="0em" rspace="0em">∥</mo></mrow></msub><mo>=</mo><msub><mi>E</mi><mrow><mn>2</mn><mo form="infix" lspace="0em" rspace="0em">∥</mo></mrow></msub></math>.
       </div>
     </div>
 
@@ -116,7 +114,7 @@
       <div class="formula-label">Con carga libre superficial σ_libre</div>
       <div class="formula-math"><img class="typst-formula" src="aux_14_2.svg" alt=""></div>
       <div class="formula-desc">
-        El convenio es que $\hat{n}_{12}$ apunta del medio 1 al medio 2.
+        El convenio es que <math data-tex="\hat{n}_{12}"><msub><mover accent="true"><mi>n</mi><mo>̂</mo></mover><mn>12</mn></msub></math> apunta del medio 1 al medio 2.
       </div>
     </div>
 
@@ -124,7 +122,7 @@
       <div class="formula-label">Ley de refracción dieléctrica</div>
       <div class="formula-math"><img class="typst-formula" src="aux_14_3.svg" alt=""></div>
       <div class="formula-desc">
-        $\theta_i$ es el ángulo de $\mathbf{E}$ con la normal en el medio $i$. El campo se "dobla" más en el medio con mayor $\varepsilon$.
+        <math data-tex="\theta_i"><msub><mi>θ</mi><mi>i</mi></msub></math> es el ángulo de <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> con la normal en el medio <math data-tex="i"><mi>i</mi></math>. El campo se "dobla" más en el medio con mayor <math data-tex="\varepsilon"><mi>ε</mi></math>.
       </div>
     </div>
   </section>
@@ -134,10 +132,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Sistemática para problemas multi-dieléctrico</div>
       <ul>
-        <li>Aplica Gauss para $\mathbf{D}$ con la carga libre encerrada → obtén $D$ en cada región.</li>
-        <li>Divide por $\varepsilon_i$ de cada región para obtener $\mathbf{E}_i = \mathbf{D}/\varepsilon_i$.</li>
-        <li>Calcula $\mathbf{P}_i = \varepsilon_0\chi_{e,i}\mathbf{E}_i$ y luego las cargas de polarización en las interfaces.</li>
-        <li>Verifica condiciones de borde: $D_\perp$ continua (sin $\sigma_{\text{libre}}$), $E_\parallel$ continua siempre.</li>
+        <li>Aplica Gauss para <math data-tex="\mathbf{D}"><mi class="mv-bi">D</mi></math> con la carga libre encerrada → obtén <math data-tex="D"><mi>D</mi></math> en cada región.</li>
+        <li>Divide por <math data-tex="\varepsilon_i"><msub><mi>ε</mi><mi>i</mi></msub></math> de cada región para obtener <math data-tex="\mathbf{E}_i = \mathbf{D}/\varepsilon_i"><msub><mi class="mv-bi">E</mi><mi>i</mi></msub><mo>=</mo><mi class="mv-bi">D</mi><mi>/</mi><msub><mi>ε</mi><mi>i</mi></msub></math>.</li>
+        <li>Calcula <math data-tex="\mathbf{P}_i = \varepsilon_0\chi_{e,i}\mathbf{E}_i"><msub><mi class="mv-bi">P</mi><mi>i</mi></msub><mo>=</mo><msub><mi>ε</mi><mn>0</mn></msub><msub><mi>χ</mi><mrow><mi>e</mi><mo rspace="0em">,</mo><mi>i</mi></mrow></msub><msub><mi class="mv-bi">E</mi><mi>i</mi></msub></math> y luego las cargas de polarización en las interfaces.</li>
+        <li>Verifica condiciones de borde: <math data-tex="D_\perp"><msub><mi>D</mi><mi>⊥</mi></msub></math> continua (sin <math data-tex="\sigma_{\text{libre}}"><msub><mi>σ</mi><mtext>libre</mtext></msub></math>), <math data-tex="E_\parallel"><msub><mi>E</mi><mo>∥</mo></msub></math> continua siempre.</li>
       </ul>
     </div>
   </section>

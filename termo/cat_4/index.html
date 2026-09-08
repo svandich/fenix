@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 4 — Temperatura y Equilibrio Térmico</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -88,13 +84,13 @@
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Energía interna del gas ideal: $U = \frac{3}{2}Nk_BT$</li>
+        <li>Energía interna del gas ideal: <math data-tex="U = \frac{3}{2}Nk_BT"><mi>U</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math></li>
         <li>Temperatura como energía cinética promedio por partícula</li>
         <li>Ley Cero de la Termodinámica: definición transitiva de temperatura</li>
-        <li>Termalización: dos sistemas en contacto alcanzan la misma $T$</li>
+        <li>Termalización: dos sistemas en contacto alcanzan la misma <math data-tex="T"><mi>T</mi></math></li>
         <li>Termómetros: principio de medición por expansión térmica</li>
         <li>Escalas de temperatura: Celsius, Fahrenheit, Kelvin</li>
-        <li>$T$ como variable intensiva: no depende del tamaño del sistema</li>
+        <li><math data-tex="T"><mi>T</mi></math> como variable intensiva: no depende del tamaño del sistema</li>
       </ul>
     </div>
   </section>
@@ -104,11 +100,11 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Temperatura (definición cinética)</h3>
-        <p>La temperatura es la variable macroscópica que mide la energía cinética promedio de traslación de las partículas: $\langle\frac{1}{2}mv^2\rangle = \frac{3}{2}k_BT$. Es una propiedad <em>intensiva</em>: no cambia si junto dos gases iguales.</p>
+        <p>La temperatura es la variable macroscópica que mide la energía cinética promedio de traslación de las partículas: <math data-tex="\langle\frac{1}{2}mv^2\rangle = \frac{3}{2}k_BT"><mrow><mo>⟨</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mo>⟩</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>. Es una propiedad <em>intensiva</em>: no cambia si junto dos gases iguales.</p>
       </div>
       <div class="concept-card">
         <h3>Ley Cero</h3>
-        <p>Si el cuerpo A está en equilibrio térmico con B, y B con C, entonces A está en equilibrio térmico con C. Esto define la temperatura como una relación de equivalencia: todos los cuerpos que no intercambian calor entre sí comparten la misma $T$.</p>
+        <p>Si el cuerpo A está en equilibrio térmico con B, y B con C, entonces A está en equilibrio térmico con C. Esto define la temperatura como una relación de equivalencia: todos los cuerpos que no intercambian calor entre sí comparten la misma <math data-tex="T"><mi>T</mi></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Termalización</h3>
@@ -116,7 +112,7 @@
       </div>
       <div class="concept-card">
         <h3>Termómetro</h3>
-        <p>Un termómetro mide la temperatura de otro cuerpo aprovechando que alguna de sus propiedades (longitud, presión, resistencia eléctrica) varía de forma reproducible con $T$. Requiere que el termómetro se termalice con el cuerpo que mide.</p>
+        <p>Un termómetro mide la temperatura de otro cuerpo aprovechando que alguna de sus propiedades (longitud, presión, resistencia eléctrica) varía de forma reproducible con <math data-tex="T"><mi>T</mi></math>. Requiere que el termómetro se termalice con el cuerpo que mide.</p>
       </div>
     </div>
   </section>
@@ -128,7 +124,7 @@
       <div class="formula-label">Energía cinética promedio por partícula</div>
       <div class="formula-math"><img class="typst-formula" src="cat_4_1.svg" alt=""></div>
       <div class="formula-desc">
-        $k_B = 1.38\times10^{-23}$ J/K · $T$ temperatura absoluta [K].
+        <math data-tex="k_B = 1.38\times10^{-23}"><msub><mi>k</mi><mi>B</mi></msub><mo>=</mo><mn>1.38</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>23</mn></mrow></msup></math> J/K · <math data-tex="T"><mi>T</mi></math> temperatura absoluta [K].
         Esta igualdad es la <em>definición microscópica</em> de temperatura.
       </div>
     </div>
@@ -137,8 +133,8 @@
       <div class="formula-label">Energía interna del gas ideal monoatómico</div>
       <div class="formula-math"><img class="typst-formula" src="cat_4_2.svg" alt=""></div>
       <div class="formula-desc">
-        $N$ número de partículas. Para gas ideal, $U$ depende <em>solo</em> de $T$: ni del volumen ni de la presión.
-        Gas diatómico: $U = \frac{5}{2}Nk_BT$ (incluye rotación).
+        <math data-tex="N"><mi>N</mi></math> número de partículas. Para gas ideal, <math data-tex="U"><mi>U</mi></math> depende <em>solo</em> de <math data-tex="T"><mi>T</mi></math>: ni del volumen ni de la presión.
+        Gas diatómico: <math data-tex="U = \frac{5}{2}Nk_BT"><mi>U</mi><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> (incluye rotación).
       </div>
     </div>
 
@@ -147,7 +143,7 @@
       <div class="formula-math"><img class="typst-formula" src="cat_4_3.svg" alt=""></div>
       <div class="formula-desc">
         "rms" = root mean square (raíz de la media de los cuadrados).
-        Escala como $\sqrt{T/m}$: más temperatura o menor masa → partículas más rápidas.
+        Escala como <math data-tex="\sqrt{T/m}"><msqrt><mi>T</mi><mi>/</mi><mi>m</mi></msqrt></math>: más temperatura o menor masa → partículas más rápidas.
       </div>
     </div>
 
@@ -155,7 +151,7 @@
       <div class="formula-label">Conversión de escalas de temperatura</div>
       <div class="formula-math"><img class="typst-formula" src="cat_4_4.svg" alt=""></div>
       <div class="formula-desc">
-        En termodinámica siempre se trabaja en Kelvin (temperatura absoluta). $T = 0$ K = cero absoluto: mínima energía térmica posible.
+        En termodinámica siempre se trabaja en Kelvin (temperatura absoluta). <math data-tex="T = 0"><mi>T</mi><mo>=</mo><mn>0</mn></math> K = cero absoluto: mínima energía térmica posible.
       </div>
     </div>
   </section>
@@ -168,8 +164,8 @@
         <li>La temperatura <em>no</em> es calor: es el estado del sistema. El calor es energía en tránsito entre dos sistemas a distinta temperatura.</li>
         <li>La Ley Cero es lo que hace que los termómetros funcionen: el termómetro "copia" la temperatura del sistema con que contacta.</li>
         <li>Siempre usar Kelvin en las fórmulas de termodinámica. 0 °C = 273.15 K, no cero absoluto.</li>
-        <li>El gas ideal tiene $U$ solo función de $T$. Para gases reales, la interacción entre partículas hace que $U$ también dependa del volumen.</li>
-        <li>La $v_{\text{rms}}$ del nitrógeno a temperatura ambiente ($T \approx 300$ K, $m \approx 4.6\times10^{-26}$ kg) es $\approx 515$ m/s: las moléculas se mueven muy rápido.</li>
+        <li>El gas ideal tiene <math data-tex="U"><mi>U</mi></math> solo función de <math data-tex="T"><mi>T</mi></math>. Para gases reales, la interacción entre partículas hace que <math data-tex="U"><mi>U</mi></math> también dependa del volumen.</li>
+        <li>La <math data-tex="v_{\text{rms}}"><msub><mi>v</mi><mtext>rms</mtext></msub></math> del nitrógeno a temperatura ambiente (<math data-tex="T \approx 300"><mi>T</mi><mo>≈</mo><mn>300</mn></math> K, <math data-tex="m \approx 4.6\times10^{-26}"><mi>m</mi><mo>≈</mo><mn>4.6</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>26</mn></mrow></msup></math> kg) es <math data-tex="\approx 515"><mo form="infix" lspace="0em">≈</mo><mn>515</mn></math> m/s: las moléculas se mueven muy rápido.</li>
       </ul>
     </div>
   </section>
@@ -182,11 +178,11 @@
         <div class="quiz-question">1. ¿Qué mide microscópicamente la temperatura en un gas ideal?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q4_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía potencial media de interacción entre partículas</span></label>
-          <label class="quiz-option"><input type="radio" name="q4_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La energía cinética de traslación promedio por partícula: $\frac{1}{2}m\langle v^2 \rangle = \frac{3}{2}k_BT$</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La energía cinética de traslación promedio por partícula: <math data-tex="\frac{1}{2}m\langle v^2 \rangle = \frac{3}{2}k_BT"><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><mrow><mo>⟨</mo><msup><mi>v</mi><mn>2</mn></msup><mo>⟩</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math></span></label>
           <label class="quiz-option"><input type="radio" name="q4_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La densidad de partículas por unidad de volumen</span></label>
           <label class="quiz-option"><input type="radio" name="q4_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La velocidad máxima posible en el sistema</span></label>
         </div>
-        <script type="text/explanation" id="q4_1-exp">Por definición cinética, $\frac{1}{2}m\langle v^2\rangle = \frac{3}{2}k_BT$. La temperatura es la variable macroscópica que cuantifica la energía cinética media de traslación. Para el gas ideal no existe energía potencial entre partículas, por eso $U = \frac{3}{2}Nk_BT$ es pura energía cinética.</script>
+        <script type="text/explanation" id="q4_1-exp">Por definición cinética, <math data-tex="\frac{1}{2}m\langle v^2\rangle = \frac{3}{2}k_BT"><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><mrow><mo>⟨</mo><msup><mi>v</mi><mn>2</mn></msup><mo>⟩</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>. La temperatura es la variable macroscópica que cuantifica la energía cinética media de traslación. Para el gas ideal no existe energía potencial entre partículas, por eso <math data-tex="U = \frac{3}{2}Nk_BT"><mi>U</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> es pura energía cinética.</script>
         <div class="quiz-feedback" id="q4_1-fb"></div>
       </div>
 
@@ -194,23 +190,23 @@
         <div class="quiz-question">2. La Ley Cero establece: "si A está en equilibrio térmico con B, y B con C, entonces A está en equilibrio térmico con C". ¿Para qué sirve esta ley?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q4_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Para calcular cuánta energía fluye entre dos sistemas en contacto</span></label>
-          <label class="quiz-option"><input type="radio" name="q4_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Define la temperatura como una propiedad transitiva: todos los sistemas en equilibrio entre sí comparten la misma $T$, lo que hace posible los termómetros</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Define la temperatura como una propiedad transitiva: todos los sistemas en equilibrio entre sí comparten la misma <math data-tex="T"><mi>T</mi></math>, lo que hace posible los termómetros</span></label>
           <label class="quiz-option"><input type="radio" name="q4_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Determina en qué dirección fluye el calor entre dos cuerpos</span></label>
           <label class="quiz-option"><input type="radio" name="q4_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Demuestra que la energía interna se conserva en sistemas aislados</span></label>
         </div>
-        <script type="text/explanation" id="q4_2-exp">La Ley Cero fundamenta el concepto de temperatura y el funcionamiento de los termómetros. Si el termómetro (B) se termaliza con el sistema a medir (A) y previamente se calibró con una referencia (C), entonces A y C tienen la misma temperatura. Sin la transitividad de la Ley Cero, medir $T$ no tendría sentido.</script>
+        <script type="text/explanation" id="q4_2-exp">La Ley Cero fundamenta el concepto de temperatura y el funcionamiento de los termómetros. Si el termómetro (B) se termaliza con el sistema a medir (A) y previamente se calibró con una referencia (C), entonces A y C tienen la misma temperatura. Sin la transitividad de la Ley Cero, medir <math data-tex="T"><mi>T</mi></math> no tendría sentido.</script>
         <div class="quiz-feedback" id="q4_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q4_3" data-correct="1">
-        <div class="quiz-question">3. Para gas ideal monoatómico, $U = \frac{3}{2}Nk_BT$. Si se duplica $N$ manteniendo $T$ constante, ¿qué ocurre con $U$?</div>
+        <div class="quiz-question">3. Para gas ideal monoatómico, <math data-tex="U = \frac{3}{2}Nk_BT"><mi>U</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>. Si se duplica <math data-tex="N"><mi>N</mi></math> manteniendo <math data-tex="T"><mi>T</mi></math> constante, ¿qué ocurre con <math data-tex="U"><mi>U</mi></math>?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q4_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Permanece igual, porque $T$ no cambia y $U$ depende solo de $T$</span></label>
-          <label class="quiz-option"><input type="radio" name="q4_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$U$ se duplica</span></label>
-          <label class="quiz-option"><input type="radio" name="q4_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$U$ aumenta por un factor $\sqrt{2}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Permanece igual, porque <math data-tex="T"><mi>T</mi></math> no cambia y <math data-tex="U"><mi>U</mi></math> depende solo de <math data-tex="T"><mi>T</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q4_3" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="U"><mi>U</mi></math> se duplica</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_3" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="U"><mi>U</mi></math> aumenta por un factor <math data-tex="\sqrt{2}"><msqrt><mn>2</mn></msqrt></math></span></label>
           <label class="quiz-option"><input type="radio" name="q4_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende también del volumen que ocupa el gas</span></label>
         </div>
-        <script type="text/explanation" id="q4_3-exp">De $U = \frac{3}{2}Nk_BT$: si $T$ es constante y $N$ se duplica, $U$ se duplica. Aunque $U$ del gas ideal depende solo de $T$ para una muestra dada, $U$ también es proporcional a $N$ (variable extensiva). Hay el doble de partículas, cada una con la misma energía cinética promedio $\frac{3}{2}k_BT$.</script>
+        <script type="text/explanation" id="q4_3-exp">De <math data-tex="U = \frac{3}{2}Nk_BT"><mi>U</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>: si <math data-tex="T"><mi>T</mi></math> es constante y <math data-tex="N"><mi>N</mi></math> se duplica, <math data-tex="U"><mi>U</mi></math> se duplica. Aunque <math data-tex="U"><mi>U</mi></math> del gas ideal depende solo de <math data-tex="T"><mi>T</mi></math> para una muestra dada, <math data-tex="U"><mi>U</mi></math> también es proporcional a <math data-tex="N"><mi>N</mi></math> (variable extensiva). Hay el doble de partículas, cada una con la misma energía cinética promedio <math data-tex="\frac{3}{2}k_BT"><mfrac><mn>3</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>.</script>
         <div class="quiz-feedback" id="q4_3-fb"></div>
       </div>
 

@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 13 — Función de Partición Canónica</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -81,19 +77,19 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Estadística avanzada</div>
     <div class="unit-pill u5 bg-u5">Estadística avanzada · Cát. 13–17</div>
     <h1>Cátedra 13: Función de Partición Canónica</h1>
-    <p class="desc">Herramienta central de la mecánica estadística: la función de partición $Z$ resume toda la información termodinámica de un sistema en equilibrio térmico con un reservorio a temperatura $T$.</p>
+    <p class="desc">Herramienta central de la mecánica estadística: la función de partición <math data-tex="Z"><mi>Z</mi></math> resume toda la información termodinámica de un sistema en equilibrio térmico con un reservorio a temperatura <math data-tex="T"><mi>T</mi></math>.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Ensemble canónico: sistema con $T$, $V$ y $N$ fijos en contacto con termostato</li>
-        <li>Distribución de Boltzmann: probabilidad $P_r = e^{-\beta E_r}/Z$ de estar en el microestado $r$</li>
-        <li>Función de partición $Z = \sum_r e^{-\beta E_r}$: suma sobre todos los microestados</li>
-        <li>Energía media $\langle E \rangle = -\partial \ln Z / \partial \beta$</li>
-        <li>Fluctuaciones de energía: $\sigma_E^2 = \partial^2 \ln Z / \partial \beta^2$</li>
-        <li>Conexión con la energía libre de Helmholtz: $F = -k_BT \ln Z$</li>
+        <li>Ensemble canónico: sistema con <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math> y <math data-tex="N"><mi>N</mi></math> fijos en contacto con termostato</li>
+        <li>Distribución de Boltzmann: probabilidad <math data-tex="P_r = e^{-\beta E_r}/Z"><msub><mi>P</mi><mi>r</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>E</mi><mi>r</mi></msub></mrow></msup><mi>/</mi><mi>Z</mi></math> de estar en el microestado <math data-tex="r"><mi>r</mi></math></li>
+        <li>Función de partición <math data-tex="Z = \sum_r e^{-\beta E_r}"><mi>Z</mi><mo>=</mo><msub><mo form="prefix" lspace="0em">∑</mo><mi>r</mi></msub><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>E</mi><mi>r</mi></msub></mrow></msup></math>: suma sobre todos los microestados</li>
+        <li>Energía media <math data-tex="\langle E \rangle = -\partial \ln Z / \partial \beta"><mrow><mo>⟨</mo><mi>E</mi><mo>⟩</mo></mrow><mo>=</mo><mo form="prefix">−</mo><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>∂</mi><mi>β</mi></math></li>
+        <li>Fluctuaciones de energía: <math data-tex="\sigma_E^2 = \partial^2 \ln Z / \partial \beta^2"><msubsup><mi>σ</mi><mi>E</mi><mn>2</mn></msubsup><mo>=</mo><msup><mi>∂</mi><mn>2</mn></msup><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>∂</mi><msup><mi>β</mi><mn>2</mn></msup></math></li>
+        <li>Conexión con la energía libre de Helmholtz: <math data-tex="F = -k_BT \ln Z"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math></li>
       </ul>
     </div>
   </section>
@@ -103,19 +99,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Ensemble canónico</h3>
-        <p>Colección imaginaria de copias del sistema, todas con los mismos $T$, $V$, $N$ pero distintas energías. El promedio sobre el ensemble da el valor termodinámico observable. En el límite $N \to \infty$, las fluctuaciones relativas $\to 0$.</p>
+        <p>Colección imaginaria de copias del sistema, todas con los mismos <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math> pero distintas energías. El promedio sobre el ensemble da el valor termodinámico observable. En el límite <math data-tex="N \to \infty"><mi>N</mi><mo stretchy="false">→</mo><mi>∞</mi></math>, las fluctuaciones relativas <math data-tex="\to 0"><mo form="infix" lspace="0em" stretchy="false">→</mo><mn>0</mn></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Distribución de Boltzmann</h3>
-        <p>La probabilidad de encontrar el sistema en el microestado $r$ (con energía $E_r$) es $P_r = e^{-\beta E_r}/Z$. Los estados de baja energía son exponencialmente más probables; $\beta = 1/(k_BT)$ es la temperatura inversa.</p>
+        <p>La probabilidad de encontrar el sistema en el microestado <math data-tex="r"><mi>r</mi></math> (con energía <math data-tex="E_r"><msub><mi>E</mi><mi>r</mi></msub></math>) es <math data-tex="P_r = e^{-\beta E_r}/Z"><msub><mi>P</mi><mi>r</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>E</mi><mi>r</mi></msub></mrow></msup><mi>/</mi><mi>Z</mi></math>. Los estados de baja energía son exponencialmente más probables; <math data-tex="\beta = 1/(k_BT)"><mi>β</mi><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></math> es la temperatura inversa.</p>
       </div>
       <div class="concept-card">
-        <h3>Función de partición $Z$</h3>
-        <p>Normaliza la distribución de Boltzmann: $Z = \sum_r e^{-\beta E_r}$. Es la "suma de estados" y encierra toda la termodinámica: $F$, $S$, $p$ y $\mu$ se obtienen derivando $\ln Z$ respecto de $\beta$, $V$ y $N$.</p>
+        <h3>Función de partición <math data-tex="Z"><mi>Z</mi></math></h3>
+        <p>Normaliza la distribución de Boltzmann: <math data-tex="Z = \sum_r e^{-\beta E_r}"><mi>Z</mi><mo>=</mo><msub><mo form="prefix" lspace="0em">∑</mo><mi>r</mi></msub><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>E</mi><mi>r</mi></msub></mrow></msup></math>. Es la "suma de estados" y encierra toda la termodinámica: <math data-tex="F"><mi>F</mi></math>, <math data-tex="S"><mi>S</mi></math>, <math data-tex="p"><mi>p</mi></math> y <math data-tex="\mu"><mi>μ</mi></math> se obtienen derivando <math data-tex="\ln Z"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math> respecto de <math data-tex="\beta"><mi>β</mi></math>, <math data-tex="V"><mi>V</mi></math> y <math data-tex="N"><mi>N</mi></math>.</p>
       </div>
       <div class="concept-card">
-        <h3>Temperatura inversa $\beta$</h3>
-        <p>$\beta = 1/(k_BT)$ aparece naturalmente como el parámetro que caracteriza el termostato. Derivar respecto de $\beta$ a $V, N$ fijos extrae la energía interna; derivar dos veces da la varianza de energía.</p>
+        <h3>Temperatura inversa <math data-tex="\beta"><mi>β</mi></math></h3>
+        <p><math data-tex="\beta = 1/(k_BT)"><mi>β</mi><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></math> aparece naturalmente como el parámetro que caracteriza el termostato. Derivar respecto de <math data-tex="\beta"><mi>β</mi></math> a <math data-tex="V, N"><mi>V</mi><mo>,</mo><mi>N</mi></math> fijos extrae la energía interna; derivar dos veces da la varianza de energía.</p>
       </div>
     </div>
   </section>
@@ -127,7 +123,7 @@
       <div class="formula-label">Función de partición canónica</div>
       <div class="formula-math"><img class="typst-formula" src="cat_13_1.svg" alt=""></div>
       <div class="formula-desc">
-        Suma sobre todos los microestados $r$ del sistema. $\beta = 1/(k_BT)$.
+        Suma sobre todos los microestados <math data-tex="r"><mi>r</mi></math> del sistema. <math data-tex="\beta = 1/(k_BT)"><mi>β</mi><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></math>.
         Para sistemas continuos, la suma se reemplaza por una integral sobre el espacio de fases.
       </div>
     </div>
@@ -136,7 +132,7 @@
       <div class="formula-label">Distribución de Boltzmann</div>
       <div class="formula-math"><img class="typst-formula" src="cat_13_2.svg" alt=""></div>
       <div class="formula-desc">
-        Probabilidad de que el sistema ocupe el microestado $r$. La exponencial penaliza fuertemente los estados de alta energía; $Z$ normaliza para que $\sum_r P_r = 1$.
+        Probabilidad de que el sistema ocupe el microestado <math data-tex="r"><mi>r</mi></math>. La exponencial penaliza fuertemente los estados de alta energía; <math data-tex="Z"><mi>Z</mi></math> normaliza para que <math data-tex="\sum_r P_r = 1"><msub><mo lspace="0em">∑</mo><mi>r</mi></msub><msub><mi>P</mi><mi>r</mi></msub><mo>=</mo><mn>1</mn></math>.
       </div>
     </div>
 
@@ -144,7 +140,7 @@
       <div class="formula-label">Energía media y fluctuaciones</div>
       <div class="formula-math"><img class="typst-formula" src="cat_13_3.svg" alt=""></div>
       <div class="formula-desc">
-        La energía media se extrae de $\ln Z$ derivando respecto de $\beta$. La varianza de energía (segunda derivada) es positiva y proporcional a $k_BT^2 C_V$.
+        La energía media se extrae de <math data-tex="\ln Z"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math> derivando respecto de <math data-tex="\beta"><mi>β</mi></math>. La varianza de energía (segunda derivada) es positiva y proporcional a <math data-tex="k_BT^2 C_V"><msub><mi>k</mi><mi>B</mi></msub><msup><mi>T</mi><mn>2</mn></msup><msub><mi>C</mi><mi>V</mi></msub></math>.
       </div>
     </div>
 
@@ -152,7 +148,7 @@
       <div class="formula-label">Energía libre de Helmholtz</div>
       <div class="formula-math"><img class="typst-formula" src="cat_13_4.svg" alt=""></div>
       <div class="formula-desc">
-        Puente entre estadística y termodinámica: conocida $Z$, toda la termodinámica se obtiene derivando $F$. $Z$ es mínimo cuando $F$ es mínima (equilibrio a $T$, $V$, $N$ fijos).
+        Puente entre estadística y termodinámica: conocida <math data-tex="Z"><mi>Z</mi></math>, toda la termodinámica se obtiene derivando <math data-tex="F"><mi>F</mi></math>. <math data-tex="Z"><mi>Z</mi></math> es mínimo cuando <math data-tex="F"><mi>F</mi></math> es mínima (equilibrio a <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math> fijos).
       </div>
     </div>
   </section>
@@ -162,9 +158,9 @@
     <div class="tip-box">
       <div class="tip-title">✦ Claves de la función de partición</div>
       <ul>
-        <li>La función de partición no es un observable — es un objeto matemático del que se extraen todos los observables termodinámicos derivando $\ln Z$ respecto de $\beta$, $V$ o $N$.</li>
-        <li>Calcular $Z$ es el problema fundamental del ensemble canónico. Una vez obtenida, la termodinámica es automática: $F = -k_BT\ln Z$, luego $S = -(\partial F/\partial T)_V$, $p = -(\partial F/\partial V)_T$, etc.</li>
-        <li>Para $N$ partículas idénticas e independientes (no interactuantes): $Z_N = Z_1^N/N!$ (el $N!$ evita el doble conteo de estados indistinguibles — paradoja de Gibbs).</li>
+        <li>La función de partición no es un observable — es un objeto matemático del que se extraen todos los observables termodinámicos derivando <math data-tex="\ln Z"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math> respecto de <math data-tex="\beta"><mi>β</mi></math>, <math data-tex="V"><mi>V</mi></math> o <math data-tex="N"><mi>N</mi></math>.</li>
+        <li>Calcular <math data-tex="Z"><mi>Z</mi></math> es el problema fundamental del ensemble canónico. Una vez obtenida, la termodinámica es automática: <math data-tex="F = -k_BT\ln Z"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math>, luego <math data-tex="S = -(\partial F/\partial T)_V"><mi>S</mi><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>, <math data-tex="p = -(\partial F/\partial V)_T"><mi>p</mi><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>, etc.</li>
+        <li>Para <math data-tex="N"><mi>N</mi></math> partículas idénticas e independientes (no interactuantes): <math data-tex="Z_N = Z_1^N/N!"><msub><mi>Z</mi><mi>N</mi></msub><mo>=</mo><msubsup><mi>Z</mi><mn>1</mn><mi>N</mi></msubsup><mi>/</mi><mi>N</mi><mo>!</mo></math> (el <math data-tex="N!"><mi>N</mi><mo>!</mo></math> evita el doble conteo de estados indistinguibles — paradoja de Gibbs).</li>
         <li>La distribución de Boltzmann es exponencial en la energía: a temperatura baja, el sistema colapsa al estado fundamental; a temperatura alta, todos los estados son igualmente probables.</li>
       </ul>
     </div>
@@ -175,38 +171,38 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q13_1" data-correct="2">
-        <div class="quiz-question">1. ¿Qué cantidad termodinámica se extrae derivando $\ln Z$ respecto de $\beta = 1/(k_BT)$?</div>
+        <div class="quiz-question">1. ¿Qué cantidad termodinámica se extrae derivando <math data-tex="\ln Z"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math> respecto de <math data-tex="\beta = 1/(k_BT)"><mi>β</mi><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></math>?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q13_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La presión $P = -(\partial F/\partial V)_T$</span></label>
-          <label class="quiz-option"><input type="radio" name="q13_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La entropía $S = -(\partial F/\partial T)_V$</span></label>
-          <label class="quiz-option"><input type="radio" name="q13_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía media: $\langle E\rangle = -\partial\ln Z/\partial\beta$, que pesa cada energía $E_r$ por su probabilidad de Boltzmann</span></label>
-          <label class="quiz-option"><input type="radio" name="q13_1" value="3"><span class="opt-letter">D</span><span class="opt-text">El potencial químico $\mu = (\partial F/\partial N)_{T,V}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q13_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La presión <math data-tex="P = -(\partial F/\partial V)_T"><mi>P</mi><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q13_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La entropía <math data-tex="S = -(\partial F/\partial T)_V"><mi>S</mi><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q13_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía media: <math data-tex="\langle E\rangle = -\partial\ln Z/\partial\beta"><mrow><mo>⟨</mo><mi>E</mi><mo>⟩</mo></mrow><mo>=</mo><mo form="prefix">−</mo><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>∂</mi><mi>β</mi></math>, que pesa cada energía <math data-tex="E_r"><msub><mi>E</mi><mi>r</mi></msub></math> por su probabilidad de Boltzmann</span></label>
+          <label class="quiz-option"><input type="radio" name="q13_1" value="3"><span class="opt-letter">D</span><span class="opt-text">El potencial químico <math data-tex="\mu = (\partial F/\partial N)_{T,V}"><mi>μ</mi><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>N</mi></mrow><mo>)</mo></mrow><mrow><mi>T</mi><mo rspace="0em">,</mo><mi>V</mi></mrow></msub></math></span></label>
         </div>
-        <script type="text/explanation" id="q13_1-exp">$\ln Z = \ln\sum_r e^{-\beta E_r}$. Al derivar respecto de $\beta$: $\partial\ln Z/\partial\beta = (1/Z)\sum_r(-E_r)e^{-\beta E_r} = -\langle E\rangle$. Por tanto $\langle E\rangle = -\partial\ln Z/\partial\beta$. Equivalentemente $U = k_BT^2(\partial\ln Z/\partial T)$. Es la "palanca" que extrae la energía media: derivar el logaritmo de la suma ponderada respecto al parámetro de la ponderación extrae el valor esperado.</script>
+        <script type="text/explanation" id="q13_1-exp"><math data-tex="\ln Z = \ln\sum_r e^{-\beta E_r}"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mo>=</mo><mo form="prefix" lspace="0em" rspace="0.16666666666666666em">ln</mo><msub><mo form="prefix" lspace="0em">∑</mo><mi>r</mi></msub><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>E</mi><mi>r</mi></msub></mrow></msup></math>. Al derivar respecto de <math data-tex="\beta"><mi>β</mi></math>: <math data-tex="\partial\ln Z/\partial\beta = (1/Z)\sum_r(-E_r)e^{-\beta E_r} = -\langle E\rangle"><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>∂</mi><mi>β</mi><mo>=</mo><mrow><mo>(</mo><mrow><mn>1</mn><mi>/</mi><mi>Z</mi></mrow><mo>)</mo></mrow><msub><mo form="prefix" rspace="0em">∑</mo><mi>r</mi></msub><mrow><mo>(</mo><mrow><mo>−</mo><msub><mi>E</mi><mi>r</mi></msub></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>E</mi><mi>r</mi></msub></mrow></msup><mo>=</mo><mo form="prefix">−</mo><mrow><mo>⟨</mo><mi>E</mi><mo>⟩</mo></mrow></math>. Por tanto <math data-tex="\langle E\rangle = -\partial\ln Z/\partial\beta"><mrow><mo>⟨</mo><mi>E</mi><mo>⟩</mo></mrow><mo>=</mo><mo form="prefix">−</mo><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>∂</mi><mi>β</mi></math>. Equivalentemente <math data-tex="U = k_BT^2(\partial\ln Z/\partial T)"><mi>U</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><msup><mi>T</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow></math>. Es la "palanca" que extrae la energía media: derivar el logaritmo de la suma ponderada respecto al parámetro de la ponderación extrae el valor esperado.</script>
         <div class="quiz-feedback" id="q13_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q13_2" data-correct="1">
-        <div class="quiz-question">2. Un sistema tiene solo dos niveles de energía: $0$ y $\epsilon > 0$. Su función de partición canónica es...</div>
+        <div class="quiz-question">2. Un sistema tiene solo dos niveles de energía: <math data-tex="0"><mn>0</mn></math> y <math data-tex="\epsilon &gt; 0"><mi>ϵ</mi><mo>></mo><mn>0</mn></math>. Su función de partición canónica es...</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q13_2" value="0"><span class="opt-letter">A</span><span class="opt-text">$Z = 1 + \epsilon$, sumando las energías de los dos estados</span></label>
-          <label class="quiz-option"><input type="radio" name="q13_2" value="1"><span class="opt-letter">B</span><span class="opt-text">$Z = 1 + e^{-\beta\epsilon}$: la suma $\sum_r e^{-\beta E_r}$ sobre los estados $E_1=0$ y $E_2=\epsilon$ da $e^0 + e^{-\beta\epsilon}$</span></label>
-          <label class="quiz-option"><input type="radio" name="q13_2" value="2"><span class="opt-letter">C</span><span class="opt-text">$Z = e^{-\beta\epsilon/2}$, que es la media geométrica de los factores de Boltzmann de los dos estados</span></label>
-          <label class="quiz-option"><input type="radio" name="q13_2" value="3"><span class="opt-letter">D</span><span class="opt-text">$Z = 2e^{-\beta\epsilon}$, porque hay dos estados y cada uno contribuye $e^{-\beta\epsilon}$</span></label>
+          <label class="quiz-option"><input type="radio" name="q13_2" value="0"><span class="opt-letter">A</span><span class="opt-text"><math data-tex="Z = 1 + \epsilon"><mi>Z</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>ϵ</mi></math>, sumando las energías de los dos estados</span></label>
+          <label class="quiz-option"><input type="radio" name="q13_2" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="Z = 1 + e^{-\beta\epsilon}"><mi>Z</mi><mo>=</mo><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi></mrow></msup></math>: la suma <math data-tex="\sum_r e^{-\beta E_r}"><msub><mo lspace="0em">∑</mo><mi>r</mi></msub><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>E</mi><mi>r</mi></msub></mrow></msup></math> sobre los estados <math data-tex="E_1=0"><msub><mi>E</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></math> y <math data-tex="E_2=\epsilon"><msub><mi>E</mi><mn>2</mn></msub><mo>=</mo><mi>ϵ</mi></math> da <math data-tex="e^0 + e^{-\beta\epsilon}"><msup><mi>e</mi><mn>0</mn></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi></mrow></msup></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q13_2" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="Z = e^{-\beta\epsilon/2}"><mi>Z</mi><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi><mi>/</mi><mn>2</mn></mrow></msup></math>, que es la media geométrica de los factores de Boltzmann de los dos estados</span></label>
+          <label class="quiz-option"><input type="radio" name="q13_2" value="3"><span class="opt-letter">D</span><span class="opt-text"><math data-tex="Z = 2e^{-\beta\epsilon}"><mi>Z</mi><mo>=</mo><mn>2</mn><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi></mrow></msup></math>, porque hay dos estados y cada uno contribuye <math data-tex="e^{-\beta\epsilon}"><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi></mrow></msup></math></span></label>
         </div>
-        <script type="text/explanation" id="q13_2-exp">La función de partición suma los factores de Boltzmann sobre todos los microestados: $Z = \sum_r e^{-\beta E_r} = e^{-\beta\cdot 0} + e^{-\beta\epsilon} = 1 + e^{-\beta\epsilon}$. A $T\to 0$ ($\beta\to\infty$): $Z\to 1$ (solo el estado fundamental está poblado). A $T\to\infty$ ($\beta\to 0$): $Z\to 2$ (ambos estados igualmente probables). De $Z$ se obtienen todas las propiedades: $\langle E\rangle = \epsilon e^{-\beta\epsilon}/(1+e^{-\beta\epsilon})$, $F = -k_BT\ln(1+e^{-\beta\epsilon})$, etc.</script>
+        <script type="text/explanation" id="q13_2-exp">La función de partición suma los factores de Boltzmann sobre todos los microestados: <math data-tex="Z = \sum_r e^{-\beta E_r} = e^{-\beta\cdot 0} + e^{-\beta\epsilon} = 1 + e^{-\beta\epsilon}"><mi>Z</mi><mo>=</mo><msub><mo form="prefix" lspace="0em">∑</mo><mi>r</mi></msub><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>E</mi><mi>r</mi></msub></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mo lspace="0em" rspace="0em">⋅</mo><mn>0</mn></mrow></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi></mrow></msup><mo>=</mo><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi></mrow></msup></math>. A <math data-tex="T\to 0"><mi>T</mi><mo stretchy="false">→</mo><mn>0</mn></math> (<math data-tex="\beta\to\infty"><mi>β</mi><mo stretchy="false">→</mo><mi>∞</mi></math>): <math data-tex="Z\to 1"><mi>Z</mi><mo stretchy="false">→</mo><mn>1</mn></math> (solo el estado fundamental está poblado). A <math data-tex="T\to\infty"><mi>T</mi><mo stretchy="false">→</mo><mi>∞</mi></math> (<math data-tex="\beta\to 0"><mi>β</mi><mo stretchy="false">→</mo><mn>0</mn></math>): <math data-tex="Z\to 2"><mi>Z</mi><mo stretchy="false">→</mo><mn>2</mn></math> (ambos estados igualmente probables). De <math data-tex="Z"><mi>Z</mi></math> se obtienen todas las propiedades: <math data-tex="\langle E\rangle = \epsilon e^{-\beta\epsilon}/(1+e^{-\beta\epsilon})"><mrow><mo>⟨</mo><mi>E</mi><mo>⟩</mo></mrow><mo>=</mo><mi>ϵ</mi><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi></mrow></msup><mi>/</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi></mrow></msup></mrow><mo>)</mo></mrow></math>, <math data-tex="F = -k_BT\ln(1+e^{-\beta\epsilon})"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>ϵ</mi></mrow></msup></mrow><mo>)</mo></mrow></math>, etc.</script>
         <div class="quiz-feedback" id="q13_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q13_3" data-correct="1">
-        <div class="quiz-question">3. La varianza de la energía $\sigma_E^2 = k_BT^2 C_V$ nunca puede ser negativa. ¿Qué implica esto sobre $C_V$?</div>
+        <div class="quiz-question">3. La varianza de la energía <math data-tex="\sigma_E^2 = k_BT^2 C_V"><msubsup><mi>σ</mi><mi>E</mi><mn>2</mn></msubsup><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><msup><mi>T</mi><mn>2</mn></msup><msub><mi>C</mi><mi>V</mi></msub></math> nunca puede ser negativa. ¿Qué implica esto sobre <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math>?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q13_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Que $C_V$ puede ser cero pero nunca negativo, porque la energía interna siempre aumenta con $T$</span></label>
-          <label class="quiz-option"><input type="radio" name="q13_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Que $C_V \geq 0$ necesariamente: es una condición de estabilidad termodinámica. Si $C_V < 0$, el sistema enfriaría al añadir energía, haciendo el equilibrio imposible</span></label>
-          <label class="quiz-option"><input type="radio" name="q13_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Que $C_V$ es siempre exactamente cero para sistemas con solo dos niveles de energía</span></label>
-          <label class="quiz-option"><input type="radio" name="q13_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Que $C_V > 0$ estrictamente: en ningún sistema físico puede ser cero</span></label>
+          <label class="quiz-option"><input type="radio" name="q13_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Que <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> puede ser cero pero nunca negativo, porque la energía interna siempre aumenta con <math data-tex="T"><mi>T</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q13_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Que <math data-tex="C_V \geq 0"><msub><mi>C</mi><mi>V</mi></msub><mo>≥</mo><mn>0</mn></math> necesariamente: es una condición de estabilidad termodinámica. Si <math data-tex="C_V &lt; 0"><msub><mi>C</mi><mi>V</mi></msub><mo>&lt;</mo><mn>0</mn></math>, el sistema enfriaría al añadir energía, haciendo el equilibrio imposible</span></label>
+          <label class="quiz-option"><input type="radio" name="q13_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Que <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> es siempre exactamente cero para sistemas con solo dos niveles de energía</span></label>
+          <label class="quiz-option"><input type="radio" name="q13_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Que <math data-tex="C_V &gt; 0"><msub><mi>C</mi><mi>V</mi></msub><mo>></mo><mn>0</mn></math> estrictamente: en ningún sistema físico puede ser cero</span></label>
         </div>
-        <script type="text/explanation" id="q13_3-exp">$\sigma_E^2 = \langle E^2\rangle - \langle E\rangle^2 \geq 0$ por definición (la varianza de cualquier variable aleatoria es no negativa). Como $\sigma_E^2 = k_BT^2 C_V$ y $k_BT^2 > 0$, se deduce $C_V \geq 0$. Físicamente, $C_V < 0$ significaría que al añadir calor el sistema se enfría — un equilibrio inestable. En el ensemble canónico, $C_V \geq 0$ es una condición de estabilidad termodinámica del sistema en contacto con el termostato.</script>
+        <script type="text/explanation" id="q13_3-exp"><math data-tex="\sigma_E^2 = \langle E^2\rangle - \langle E\rangle^2 \geq 0"><msubsup><mi>σ</mi><mi>E</mi><mn>2</mn></msubsup><mo>=</mo><mrow><mo>⟨</mo><msup><mi>E</mi><mn>2</mn></msup><mo>⟩</mo></mrow><mo>−</mo><msup><mrow><mo>⟨</mo><mi>E</mi><mo>⟩</mo></mrow><mn>2</mn></msup><mo>≥</mo><mn>0</mn></math> por definición (la varianza de cualquier variable aleatoria es no negativa). Como <math data-tex="\sigma_E^2 = k_BT^2 C_V"><msubsup><mi>σ</mi><mi>E</mi><mn>2</mn></msubsup><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><msup><mi>T</mi><mn>2</mn></msup><msub><mi>C</mi><mi>V</mi></msub></math> y <math data-tex="k_BT^2 &gt; 0"><msub><mi>k</mi><mi>B</mi></msub><msup><mi>T</mi><mn>2</mn></msup><mo>></mo><mn>0</mn></math>, se deduce <math data-tex="C_V \geq 0"><msub><mi>C</mi><mi>V</mi></msub><mo>≥</mo><mn>0</mn></math>. Físicamente, <math data-tex="C_V &lt; 0"><msub><mi>C</mi><mi>V</mi></msub><mo>&lt;</mo><mn>0</mn></math> significaría que al añadir calor el sistema se enfría — un equilibrio inestable. En el ensemble canónico, <math data-tex="C_V \geq 0"><msub><mi>C</mi><mi>V</mi></msub><mo>≥</mo><mn>0</mn></math> es una condición de estabilidad termodinámica del sistema en contacto con el termostato.</script>
         <div class="quiz-feedback" id="q13_3-fb"></div>
       </div>
 

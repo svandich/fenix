@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CC9 — La Entropía de Clausius</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -81,18 +77,18 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
     <div class="unit-pill u6 bg-u6">Clase Complementaria · CC 9</div>
     <h1>CC9: La Entropía de Clausius</h1>
-    <p class="desc">A partir del cociente $Q/T$ que se conserva en la máquina ideal de Carnot, Clausius define la entropía. Esta clase recorre los cuatro principios de la termodinámica, el experimento clásico del hielo que no se calienta mientras se funde, la relación entre entropía y desorden molecular, la energía libre, y la pregunta abierta sobre si la entropía define la flecha del tiempo.</p>
+    <p class="desc">A partir del cociente <math data-tex="Q/T"><mi>Q</mi><mi>/</mi><mi>T</mi></math> que se conserva en la máquina ideal de Carnot, Clausius define la entropía. Esta clase recorre los cuatro principios de la termodinámica, el experimento clásico del hielo que no se calienta mientras se funde, la relación entre entropía y desorden molecular, la energía libre, y la pregunta abierta sobre si la entropía define la flecha del tiempo.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Los cuatro principios de la termodinámica: ley cero (la temperatura tiene sentido), primera ley (energía), segunda ley (entropía), tercera ley ($T=0$ es inalcanzable)</li>
-        <li>Definición de Clausius: $\Delta S = Q/T$ a temperatura constante, ilustrada con el experimento del hielo fundiéndose a 273 K</li>
+        <li>Los cuatro principios de la termodinámica: ley cero (la temperatura tiene sentido), primera ley (energía), segunda ley (entropía), tercera ley (<math data-tex="T=0"><mi>T</mi><mo>=</mo><mn>0</mn></math> es inalcanzable)</li>
+        <li>Definición de Clausius: <math data-tex="\Delta S = Q/T"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>=</mo><mi>Q</mi><mi>/</mi><mi>T</mi></math> a temperatura constante, ilustrada con el experimento del hielo fundiéndose a 273 K</li>
         <li>Por qué el hielo no se calienta mientras se está fundiendo, aunque esté en contacto con un fluido más caliente</li>
-        <li>Relación entre entropía y desorden molecular: sólido (orden, baja $S$) → líquido → gas (mayor desorden, mayor $S$)</li>
-        <li>La energía libre $F = E - TS$ como cantidad que el sistema minimiza en equilibrio</li>
+        <li>Relación entre entropía y desorden molecular: sólido (orden, baja <math data-tex="S"><mi>S</mi></math>) → líquido → gas (mayor desorden, mayor <math data-tex="S"><mi>S</mi></math>)</li>
+        <li>La energía libre <math data-tex="F = E - TS"><mi>F</mi><mo>=</mo><mi>E</mi><mo>−</mo><mi>T</mi><mi>S</mi></math> como cantidad que el sistema minimiza en equilibrio</li>
         <li>La "muerte entrópica" del universo y el destino de los sistemas que alcanzan equilibrio total</li>
         <li>El debate abierto sobre si el crecimiento de la entropía define la dirección de la flecha del tiempo</li>
       </ul>
@@ -104,11 +100,11 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Los cuatro principios</h3>
-        <p>Curiosamente numerados fuera de orden histórico: el primero en descubrirse fue la segunda ley (entropía), seguido por la conservación de la energía (primera ley); más tarde se formalizaron la ley cero (que da sentido a la temperatura) y la tercera ley (la inalcanzabilidad de $T=0$, que requiere infinitos procesos sucesivos de enfriamiento).</p>
+        <p>Curiosamente numerados fuera de orden histórico: el primero en descubrirse fue la segunda ley (entropía), seguido por la conservación de la energía (primera ley); más tarde se formalizaron la ley cero (que da sentido a la temperatura) y la tercera ley (la inalcanzabilidad de <math data-tex="T=0"><mi>T</mi><mo>=</mo><mn>0</mn></math>, que requiere infinitos procesos sucesivos de enfriamiento).</p>
       </div>
       <div class="concept-card">
         <h3>El hielo que no se calienta</h3>
-        <p>Mientras hay hielo y agua coexistiendo a 273 K, todo el calor que entra se usa para fundir el hielo (cambiar de fase), no para subir la temperatura. La entropía del agua que se forma aumenta en $Q/T$ aunque la temperatura permanezca fija — el ejemplo canónico de $\Delta S = Q/T$ a $T$ constante.</p>
+        <p>Mientras hay hielo y agua coexistiendo a 273 K, todo el calor que entra se usa para fundir el hielo (cambiar de fase), no para subir la temperatura. La entropía del agua que se forma aumenta en <math data-tex="Q/T"><mi>Q</mi><mi>/</mi><mi>T</mi></math> aunque la temperatura permanezca fija — el ejemplo canónico de <math data-tex="\Delta S = Q/T"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>=</mo><mi>Q</mi><mi>/</mi><mi>T</mi></math> a <math data-tex="T"><mi>T</mi></math> constante.</p>
       </div>
       <div class="concept-card">
         <h3>Entropía y desorden</h3>
@@ -116,7 +112,7 @@
       </div>
       <div class="concept-card">
         <h3>Energía libre y equilibrio</h3>
-        <p>No es sólo la entropía la que se maximiza: cada partícula de materia "busca" minimizar su energía libre $F = E - TS$. Minimizar $F$ a $T$ fija equivale exactamente a maximizar la entropía total del universo (sistema + entorno), porque ceder energía al entorno aumenta la entropía de éste más de lo que disminuye la del sistema, si la cesión ocurre a temperatura suficientemente alta.</p>
+        <p>No es sólo la entropía la que se maximiza: cada partícula de materia "busca" minimizar su energía libre <math data-tex="F = E - TS"><mi>F</mi><mo>=</mo><mi>E</mi><mo>−</mo><mi>T</mi><mi>S</mi></math>. Minimizar <math data-tex="F"><mi>F</mi></math> a <math data-tex="T"><mi>T</mi></math> fija equivale exactamente a maximizar la entropía total del universo (sistema + entorno), porque ceder energía al entorno aumenta la entropía de éste más de lo que disminuye la del sistema, si la cesión ocurre a temperatura suficientemente alta.</p>
       </div>
     </div>
   </section>
@@ -128,7 +124,7 @@
       <div class="formula-label">Definición de Clausius de la entropía</div>
       <div class="formula-math"><img class="typst-formula" src="cc_9_1.svg" alt=""></div>
       <div class="formula-desc">
-        Si el calor $Q$ sale de un cuerpo a temperatura $T$, su entropía disminuye en $Q/T$; si entra, aumenta en esa misma cantidad. Cuando fluye calor a través del cosmos, fluye entropía con él. En una máquina de Carnot ideal, la entropía que entra a $T_y$ es exactamente igual a la que sale a $T_0$.
+        Si el calor <math data-tex="Q"><mi>Q</mi></math> sale de un cuerpo a temperatura <math data-tex="T"><mi>T</mi></math>, su entropía disminuye en <math data-tex="Q/T"><mi>Q</mi><mi>/</mi><mi>T</mi></math>; si entra, aumenta en esa misma cantidad. Cuando fluye calor a través del cosmos, fluye entropía con él. En una máquina de Carnot ideal, la entropía que entra a <math data-tex="T_y"><msub><mi>T</mi><mi>y</mi></msub></math> es exactamente igual a la que sale a <math data-tex="T_0"><msub><mi>T</mi><mn>0</mn></msub></math>.
       </div>
     </div>
 
@@ -144,7 +140,7 @@
       <div class="formula-label">Energía libre</div>
       <div class="formula-math"><img class="typst-formula" src="cc_9_3.svg" alt=""></div>
       <div class="formula-desc">
-        A temperatura y volumen constantes, el sistema evoluciona minimizando $F = E - TS$, no maximizando directamente la entropía del sistema aislado: la diferencia es que $F$ ya contabiliza el intercambio de entropía con el entorno a través del término $-TS$.
+        A temperatura y volumen constantes, el sistema evoluciona minimizando <math data-tex="F = E - TS"><mi>F</mi><mo>=</mo><mi>E</mi><mo>−</mo><mi>T</mi><mi>S</mi></math>, no maximizando directamente la entropía del sistema aislado: la diferencia es que <math data-tex="F"><mi>F</mi></math> ya contabiliza el intercambio de entropía con el entorno a través del término <math data-tex="-TS"><mo>−</mo><mi>T</mi><mi>S</mi></math>.
       </div>
     </div>
   </section>
@@ -154,8 +150,8 @@
     <div class="tip-box">
       <div class="tip-title">✦ Claves de la entropía de Clausius</div>
       <ul>
-        <li>La entropía de Clausius nace directamente del resultado de Carnot: en el ciclo ideal $Q_y/T_y = Q_0/T_0$, es decir, el cociente calor/temperatura es una cantidad conservada. Clausius generaliza esto a una función de estado $S$ con $dS = \bar\delta Q/T$.</li>
-        <li>El experimento del hielo es importante porque muestra que la temperatura no siempre aumenta cuando entra calor: durante un cambio de fase, el calor latente se invierte en reorganizar la estructura molecular (aumentando $S$), no en agitación térmica adicional.</li>
+        <li>La entropía de Clausius nace directamente del resultado de Carnot: en el ciclo ideal <math data-tex="Q_y/T_y = Q_0/T_0"><msub><mi>Q</mi><mi>y</mi></msub><mi>/</mi><msub><mi>T</mi><mi>y</mi></msub><mo>=</mo><msub><mi>Q</mi><mn>0</mn></msub><mi>/</mi><msub><mi>T</mi><mn>0</mn></msub></math>, es decir, el cociente calor/temperatura es una cantidad conservada. Clausius generaliza esto a una función de estado <math data-tex="S"><mi>S</mi></math> con <math data-tex="dS = \bar\delta Q/T"><mi>d</mi><mi>S</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mi>/</mi><mi>T</mi></math>.</li>
+        <li>El experimento del hielo es importante porque muestra que la temperatura no siempre aumenta cuando entra calor: durante un cambio de fase, el calor latente se invierte en reorganizar la estructura molecular (aumentando <math data-tex="S"><mi>S</mi></math>), no en agitación térmica adicional.</li>
         <li>"Equilibrio termodinámico" no significa ausencia de movimiento — significa que toda la energía disponible se ha distribuido entre los grados de libertad microscópicos de manera estadísticamente estable. Por eso el equilibrio es el estado de máxima entropía, no de mínima energía cinética.</li>
         <li>La "muerte entrópica" del universo es la extrapolación de que, si la entropía del universo crece sin límite, eventualmente todo alcanzará una misma temperatura y ninguna máquina (incluida la vida misma, que depende de flujos de calor) podrá funcionar.</li>
         <li>La pregunta de si la entropía "define" la flecha del tiempo sigue abierta: a nivel microscópico las leyes de la física son reversibles en el tiempo (no se distingue una colisión de partículas filmada hacia adelante o hacia atrás), pero a escala macroscópica el crecimiento de la entropía da una dirección clara y observable al paso del tiempo.</li>
@@ -175,19 +171,19 @@
           <label class="quiz-option"><input type="radio" name="qcc9_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque mientras coexisten hielo y agua a 273 K, todo el calor que entra se invierte en el cambio de fase (fundir hielo, reorganizando la estructura molecular y aumentando la entropía), no en subir la temperatura; la temperatura sólo empieza a subir cuando todo el hielo se ha fundido</span></label>
           <label class="quiz-option"><input type="radio" name="qcc9_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el hielo tiene capacidad calórica infinita a 273 K exactamente, así que cualquier cantidad de calor produce un cambio de temperatura nulo</span></label>
         </div>
-        <script type="text/explanation" id="qcc9_1-exp">Mientras hielo y agua líquida coexisten a la misma temperatura (273 K a presión atmosférica), el sistema está en un cambio de fase: el calor que fluye desde el fluido más caliente se usa íntegramente para romper la estructura cristalina ordenada del hielo y transformarlo en agua líquida desordenada, no para aumentar la energía cinética media de las moléculas (que es lo que mide la temperatura). Esto es exactamente lo que describe $\Delta S = Q/T$ a $T$ constante: la entropía del agua aumenta proporcionalmente al calor latente absorbido, mientras la temperatura permanece fija en 273 K. Sólo una vez que todo el hielo se ha derretido, el calor adicional vuelve a manifestarse como aumento de temperatura del agua líquida.</script>
+        <script type="text/explanation" id="qcc9_1-exp">Mientras hielo y agua líquida coexisten a la misma temperatura (273 K a presión atmosférica), el sistema está en un cambio de fase: el calor que fluye desde el fluido más caliente se usa íntegramente para romper la estructura cristalina ordenada del hielo y transformarlo en agua líquida desordenada, no para aumentar la energía cinética media de las moléculas (que es lo que mide la temperatura). Esto es exactamente lo que describe <math data-tex="\Delta S = Q/T"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>=</mo><mi>Q</mi><mi>/</mi><mi>T</mi></math> a <math data-tex="T"><mi>T</mi></math> constante: la entropía del agua aumenta proporcionalmente al calor latente absorbido, mientras la temperatura permanece fija en 273 K. Sólo una vez que todo el hielo se ha derretido, el calor adicional vuelve a manifestarse como aumento de temperatura del agua líquida.</script>
         <div class="quiz-feedback" id="qcc9_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="qcc9_2" data-correct="3">
-        <div class="quiz-question">2. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre la energía libre $F = E - TS$ y el equilibrio termodinámico a temperatura y volumen constantes?</div>
+        <div class="quiz-question">2. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre la energía libre <math data-tex="F = E - TS"><mi>F</mi><mo>=</mo><mi>E</mi><mo>−</mo><mi>T</mi><mi>S</mi></math> y el equilibrio termodinámico a temperatura y volumen constantes?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="qcc9_2" value="0"><span class="opt-letter">A</span><span class="opt-text">El sistema siempre maximiza su propia entropía $S$ sin importar qué ocurra con la energía $E$</span></label>
-          <label class="quiz-option"><input type="radio" name="qcc9_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El sistema siempre minimiza su energía $E$ sin importar qué ocurra con la entropía $S$</span></label>
-          <label class="quiz-option"><input type="radio" name="qcc9_2" value="2"><span class="opt-letter">C</span><span class="opt-text">El sistema maximiza simultáneamente tanto $E$ como $S$ por separado, sin que exista ninguna relación entre ambas</span></label>
-          <label class="quiz-option"><input type="radio" name="qcc9_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El sistema minimiza $F = E - TS$, lo cual equivale a maximizar la entropía total del universo (sistema más entorno): ceder energía al entorno a temperatura $T$ aumenta la entropía de éste en $E/T$, compensando o superando la pérdida de entropía del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_2" value="0"><span class="opt-letter">A</span><span class="opt-text">El sistema siempre maximiza su propia entropía <math data-tex="S"><mi>S</mi></math> sin importar qué ocurra con la energía <math data-tex="E"><mi>E</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El sistema siempre minimiza su energía <math data-tex="E"><mi>E</mi></math> sin importar qué ocurra con la entropía <math data-tex="S"><mi>S</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_2" value="2"><span class="opt-letter">C</span><span class="opt-text">El sistema maximiza simultáneamente tanto <math data-tex="E"><mi>E</mi></math> como <math data-tex="S"><mi>S</mi></math> por separado, sin que exista ninguna relación entre ambas</span></label>
+          <label class="quiz-option"><input type="radio" name="qcc9_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El sistema minimiza <math data-tex="F = E - TS"><mi>F</mi><mo>=</mo><mi>E</mi><mo>−</mo><mi>T</mi><mi>S</mi></math>, lo cual equivale a maximizar la entropía total del universo (sistema más entorno): ceder energía al entorno a temperatura <math data-tex="T"><mi>T</mi></math> aumenta la entropía de éste en <math data-tex="E/T"><mi>E</mi><mi>/</mi><mi>T</mi></math>, compensando o superando la pérdida de entropía del sistema</span></label>
         </div>
-        <script type="text/explanation" id="qcc9_2-exp">La energía libre $F = E - TS$ es la cantidad correcta a minimizar cuando el sistema está en contacto con un entorno a temperatura constante $T$ (en vez de estar aislado). La razón es que minimizar $F$ no es lo mismo que minimizar $E$ ni que maximizar $S$ por separado: es un compromiso. Si el sistema cede energía $\delta E$ al entorno a temperatura $T$, la entropía del entorno aumenta en $\delta E/T$. La entropía total (sistema + entorno) aumenta siempre que el sistema evolucione en la dirección de menor $F$, porque $\delta F = \delta E - T\delta S \le 0$ es equivalente a que la entropía total crezca. Por eso "minimizar $F$" es la forma práctica de aplicar la segunda ley a un sistema que no está aislado sino en contacto térmico con un entorno grande.</script>
+        <script type="text/explanation" id="qcc9_2-exp">La energía libre <math data-tex="F = E - TS"><mi>F</mi><mo>=</mo><mi>E</mi><mo>−</mo><mi>T</mi><mi>S</mi></math> es la cantidad correcta a minimizar cuando el sistema está en contacto con un entorno a temperatura constante <math data-tex="T"><mi>T</mi></math> (en vez de estar aislado). La razón es que minimizar <math data-tex="F"><mi>F</mi></math> no es lo mismo que minimizar <math data-tex="E"><mi>E</mi></math> ni que maximizar <math data-tex="S"><mi>S</mi></math> por separado: es un compromiso. Si el sistema cede energía <math data-tex="\delta E"><mi>δ</mi><mi>E</mi></math> al entorno a temperatura <math data-tex="T"><mi>T</mi></math>, la entropía del entorno aumenta en <math data-tex="\delta E/T"><mi>δ</mi><mi>E</mi><mi>/</mi><mi>T</mi></math>. La entropía total (sistema + entorno) aumenta siempre que el sistema evolucione en la dirección de menor <math data-tex="F"><mi>F</mi></math>, porque <math data-tex="\delta F = \delta E - T\delta S \le 0"><mi>δ</mi><mi>F</mi><mo>=</mo><mi>δ</mi><mi>E</mi><mo>−</mo><mi>T</mi><mi>δ</mi><mi>S</mi><mo>≤</mo><mn>0</mn></math> es equivalente a que la entropía total crezca. Por eso "minimizar <math data-tex="F"><mi>F</mi></math>" es la forma práctica de aplicar la segunda ley a un sistema que no está aislado sino en contacto térmico con un entorno grande.</script>
         <div class="quiz-feedback" id="qcc9_2-fb"></div>
       </div>
 

@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 10 — Entropía y Ciclo de Carnot</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -89,12 +85,12 @@
     <div class="card">
       <ul class="topic-list">
         <li>Ciclo de Carnot: 4 etapas (isotérmica caliente, adiabática, isotérmica fría, adiabática)</li>
-        <li>Eficiencia de Carnot: $\eta_C = 1 - T_f/T_c$ (máxima posible)</li>
-        <li>Teorema de Carnot: ninguna máquina entre los mismos focos puede superar $\eta_C$</li>
-        <li>Definición de entropía: $dS = \bar{\delta}Q_{\text{rev}}/T$</li>
+        <li>Eficiencia de Carnot: <math data-tex="\eta_C = 1 - T_f/T_c"><msub><mi>η</mi><mi>C</mi></msub><mo>=</mo><mn>1</mn><mo>−</mo><msub><mi>T</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub></math> (máxima posible)</li>
+        <li>Teorema de Carnot: ninguna máquina entre los mismos focos puede superar <math data-tex="\eta_C"><msub><mi>η</mi><mi>C</mi></msub></math></li>
+        <li>Definición de entropía: <math data-tex="dS = \bar{\delta}Q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><msub><mi>Q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math></li>
         <li>Entropía como función de estado</li>
-        <li>Desigualdad de Clausius: $\oint \bar{\delta}Q/T \leq 0$ (= para reversible, &lt; para irreversible)</li>
-        <li>Principio de aumento de entropía: $\Delta S_{\text{universo}} \geq 0$</li>
+        <li>Desigualdad de Clausius: <math data-tex="\oint \bar{\delta}Q/T \leq 0"><mo lspace="0em">∮</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mi>/</mi><mi>T</mi><mo>≤</mo><mn>0</mn></math> (= para reversible, &lt; para irreversible)</li>
+        <li>Principio de aumento de entropía: <math data-tex="\Delta S_{\text{universo}} \geq 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>universo</mtext></msub><mo>≥</mo><mn>0</mn></math></li>
       </ul>
     </div>
   </section>
@@ -104,19 +100,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Ciclo de Carnot</h3>
-        <p>El ciclo ideal más eficiente entre dos focos a $T_c$ y $T_f$. Sus 4 etapas son: (1) expansión isotérmica a $T_c$, (2) expansión adiabática hasta $T_f$, (3) compresión isotérmica a $T_f$, (4) compresión adiabática de vuelta a $T_c$. Todo el ciclo es reversible.</p>
+        <p>El ciclo ideal más eficiente entre dos focos a <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math> y <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math>. Sus 4 etapas son: (1) expansión isotérmica a <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math>, (2) expansión adiabática hasta <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math>, (3) compresión isotérmica a <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math>, (4) compresión adiabática de vuelta a <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math>. Todo el ciclo es reversible.</p>
       </div>
       <div class="concept-card">
-        <h3>Entropía $S$</h3>
-        <p>Función de estado definida por $dS = \bar{\delta}Q_{\text{rev}}/T$. La integral depende solo del estado inicial y final (no del proceso), lo que la hace función de estado. En procesos irreversibles, la entropía del universo <em>aumenta</em>; en reversibles, se conserva.</p>
+        <h3>Entropía <math data-tex="S"><mi>S</mi></math></h3>
+        <p>Función de estado definida por <math data-tex="dS = \bar{\delta}Q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><msub><mi>Q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math>. La integral depende solo del estado inicial y final (no del proceso), lo que la hace función de estado. En procesos irreversibles, la entropía del universo <em>aumenta</em>; en reversibles, se conserva.</p>
       </div>
       <div class="concept-card">
         <h3>Teorema de Carnot</h3>
-        <p>Ninguna máquina que opere entre los focos a $T_c$ y $T_f$ puede tener eficiencia mayor que la máquina de Carnot. La máquina de Carnot es la <em>única</em> que alcanza el máximo, y solo si opera de forma completamente reversible.</p>
+        <p>Ninguna máquina que opere entre los focos a <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math> y <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math> puede tener eficiencia mayor que la máquina de Carnot. La máquina de Carnot es la <em>única</em> que alcanza el máximo, y solo si opera de forma completamente reversible.</p>
       </div>
       <div class="concept-card">
         <h3>Desigualdad de Clausius</h3>
-        <p>Para cualquier ciclo: $\oint \bar{\delta}Q/T \leq 0$. La igualdad vale para ciclos reversibles; la desigualdad estricta para ciclos irreversibles. Esto es el punto de partida para demostrar que la entropía es función de estado.</p>
+        <p>Para cualquier ciclo: <math data-tex="\oint \bar{\delta}Q/T \leq 0"><mo lspace="0em">∮</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mi>/</mi><mi>T</mi><mo>≤</mo><mn>0</mn></math>. La igualdad vale para ciclos reversibles; la desigualdad estricta para ciclos irreversibles. Esto es el punto de partida para demostrar que la entropía es función de estado.</p>
       </div>
     </div>
   </section>
@@ -128,7 +124,7 @@
       <div class="formula-label">Eficiencia del ciclo de Carnot</div>
       <div class="formula-math"><img class="typst-formula" src="cat_10_1.svg" alt=""></div>
       <div class="formula-desc">
-        $T_c$ temperatura del foco caliente · $T_f$ temperatura del foco frío (ambas en Kelvin).
+        <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math> temperatura del foco caliente · <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math> temperatura del foco frío (ambas en Kelvin).
         Es el límite superior de eficiencia para cualquier máquina entre esos dos focos.
       </div>
     </div>
@@ -137,7 +133,7 @@
       <div class="formula-label">Definición de entropía (proceso reversible)</div>
       <div class="formula-math"><img class="typst-formula" src="cat_10_2.svg" alt=""></div>
       <div class="formula-desc">
-        $S$ es función de estado: $\Delta S$ no depende del camino, solo del estado inicial y final.
+        <math data-tex="S"><mi>S</mi></math> es función de estado: <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> no depende del camino, solo del estado inicial y final.
         Unidades: J/K.
       </div>
     </div>
@@ -154,7 +150,7 @@
       <div class="formula-label">Principio de aumento de entropía</div>
       <div class="formula-math"><img class="typst-formula" src="cat_10_4.svg" alt=""></div>
       <div class="formula-desc">
-        La entropía total del universo nunca disminuye. En procesos reversibles, $\Delta S_{\text{universo}} = 0$; en irreversibles, $> 0$.
+        La entropía total del universo nunca disminuye. En procesos reversibles, <math data-tex="\Delta S_{\text{universo}} = 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>universo</mtext></msub><mo>=</mo><mn>0</mn></math>; en irreversibles, <math data-tex="&gt; 0"><mo form="infix" lspace="0em">></mo><mn>0</mn></math>.
       </div>
     </div>
   </section>
@@ -165,9 +161,9 @@
       <div class="tip-title">✦ Claves sobre entropía y Carnot</div>
       <ul>
         <li>La eficiencia de Carnot depende solo de las temperaturas de los focos, no del fluido de trabajo ni del diseño de la máquina.</li>
-        <li>Para calcular $\Delta S$ de un proceso irreversible: diseña cualquier proceso reversible entre los mismos estados y calcula $\int \bar{\delta}Q_{\text{rev}}/T$. El resultado es el mismo $\Delta S$.</li>
-        <li>La entropía de un gas ideal al cambiar de $(T_i, V_i)$ a $(T_f, V_f)$: $\Delta S = Nk_B\ln(T_f/T_i)^{3/2} + Nk_B\ln(V_f/V_i)$.</li>
-        <li>El ciclo de Carnot en el diagrama $P$-$V$ es un cuadrilátero curvo de dos isotermas + dos adiabáticas. El trabajo neto es el área encerrada.</li>
+        <li>Para calcular <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> de un proceso irreversible: diseña cualquier proceso reversible entre los mismos estados y calcula <math data-tex="\int \bar{\delta}Q_{\text{rev}}/T"><mo lspace="0em">∫</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><msub><mi>Q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math>. El resultado es el mismo <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math>.</li>
+        <li>La entropía de un gas ideal al cambiar de <math data-tex="(T_i, V_i)"><mrow><mo>(</mo><mrow><msub><mi>T</mi><mi>i</mi></msub><mo>,</mo><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></math> a <math data-tex="(T_f, V_f)"><mrow><mo>(</mo><mrow><msub><mi>T</mi><mi>f</mi></msub><mo>,</mo><msub><mi>V</mi><mi>f</mi></msub></mrow><mo>)</mo></mrow></math>: <math data-tex="\Delta S = Nk_B\ln(T_f/T_i)^{3/2} + Nk_B\ln(V_f/V_i)"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><msup><mrow><mo>(</mo><mrow><msub><mi>T</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow><mrow><mn>3</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>+</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></math>.</li>
+        <li>El ciclo de Carnot en el diagrama <math data-tex="P"><mi>P</mi></math>-<math data-tex="V"><mi>V</mi></math> es un cuadrilátero curvo de dos isotermas + dos adiabáticas. El trabajo neto es el área encerrada.</li>
         <li>"La entropía del universo aumenta en cada proceso irreversible" es la esencia de la Segunda Ley.</li>
       </ul>
     </div>
@@ -178,38 +174,38 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q10_1" data-correct="2">
-        <div class="quiz-question">1. ¿Por qué la eficiencia del ciclo de Carnot $\eta_C = 1 - T_f/T_c$ es el máximo posible entre esos dos focos?</div>
+        <div class="quiz-question">1. ¿Por qué la eficiencia del ciclo de Carnot <math data-tex="\eta_C = 1 - T_f/T_c"><msub><mi>η</mi><mi>C</mi></msub><mo>=</mo><mn>1</mn><mo>−</mo><msub><mi>T</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub></math> es el máximo posible entre esos dos focos?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q10_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque usa gas ideal como fluido de trabajo, que es el más eficiente disponible</span></label>
           <label class="quiz-option"><input type="radio" name="q10_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque opera con exactamente cuatro etapas; más etapas aumentarían las pérdidas</span></label>
           <label class="quiz-option"><input type="radio" name="q10_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque es el único ciclo completamente reversible; toda irreversibilidad produce entropía y reduce la eficiencia</span></label>
           <label class="quiz-option"><input type="radio" name="q10_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque Carnot demostró algebraicamente que no existe otro ciclo posible entre esos focos</span></label>
         </div>
-        <script type="text/explanation" id="q10_1-exp">El teorema de Carnot establece que la eficiencia máxima entre dos focos la alcanza la máquina reversible. Toda irreversibilidad (fricción, gradientes de temperatura finitos, relajaciones lentas) produce entropía y "desperdicia" capacidad de hacer trabajo: la eficiencia cae por debajo de $\eta_C$. La máquina de Carnot es la única que alcanza el máximo porque opera de forma completamente reversible, independientemente del fluido de trabajo usado.</script>
+        <script type="text/explanation" id="q10_1-exp">El teorema de Carnot establece que la eficiencia máxima entre dos focos la alcanza la máquina reversible. Toda irreversibilidad (fricción, gradientes de temperatura finitos, relajaciones lentas) produce entropía y "desperdicia" capacidad de hacer trabajo: la eficiencia cae por debajo de <math data-tex="\eta_C"><msub><mi>η</mi><mi>C</mi></msub></math>. La máquina de Carnot es la única que alcanza el máximo porque opera de forma completamente reversible, independientemente del fluido de trabajo usado.</script>
         <div class="quiz-feedback" id="q10_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q10_2" data-correct="1">
-        <div class="quiz-question">2. ¿Por qué la entropía $S$ definida por $dS = \bar{\delta}Q_{\text{rev}}/T$ es función de estado, aunque $\bar{\delta}Q$ no lo sea?</div>
+        <div class="quiz-question">2. ¿Por qué la entropía <math data-tex="S"><mi>S</mi></math> definida por <math data-tex="dS = \bar{\delta}Q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><msub><mi>Q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math> es función de estado, aunque <math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> no lo sea?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q10_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque $S = Q \cdot T$ y la temperatura siempre es función de estado</span></label>
-          <label class="quiz-option"><input type="radio" name="q10_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque dividir $\bar{\delta}Q_{\text{rev}}$ por $T$ actúa como "factor integrante" que convierte el diferencial inexacto en uno exacto</span></label>
-          <label class="quiz-option"><input type="radio" name="q10_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque $S$ solo se define para procesos reversibles, donde $Q$ sí es función de estado</span></label>
-          <label class="quiz-option"><input type="radio" name="q10_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la desigualdad de Clausius garantiza que $S$ siempre aumenta, lo que la hace unívoca</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque <math data-tex="S = Q \cdot T"><mi>S</mi><mo>=</mo><mi>Q</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>T</mi></math> y la temperatura siempre es función de estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque dividir <math data-tex="\bar{\delta}Q_{\text{rev}}"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><msub><mi>Q</mi><mtext>rev</mtext></msub></math> por <math data-tex="T"><mi>T</mi></math> actúa como "factor integrante" que convierte el diferencial inexacto en uno exacto</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque <math data-tex="S"><mi>S</mi></math> solo se define para procesos reversibles, donde <math data-tex="Q"><mi>Q</mi></math> sí es función de estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la desigualdad de Clausius garantiza que <math data-tex="S"><mi>S</mi></math> siempre aumenta, lo que la hace unívoca</span></label>
         </div>
-        <script type="text/explanation" id="q10_2-exp">$\bar{\delta}Q$ es inexacto: su integral entre dos estados depende del camino. Sin embargo, $\oint \bar{\delta}Q_{\text{rev}}/T = 0$ para cualquier ciclo reversible (demostrable usando el ciclo de Carnot). Eso implica que existe una función $S$ tal que $dS = \bar{\delta}Q_{\text{rev}}/T$. Dividir por $T$ es el "factor integrante" matemático que convierte el diferencial inexacto en exacto.</script>
+        <script type="text/explanation" id="q10_2-exp"><math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> es inexacto: su integral entre dos estados depende del camino. Sin embargo, <math data-tex="\oint \bar{\delta}Q_{\text{rev}}/T = 0"><mo lspace="0em">∮</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><msub><mi>Q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi><mo>=</mo><mn>0</mn></math> para cualquier ciclo reversible (demostrable usando el ciclo de Carnot). Eso implica que existe una función <math data-tex="S"><mi>S</mi></math> tal que <math data-tex="dS = \bar{\delta}Q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><msub><mi>Q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math>. Dividir por <math data-tex="T"><mi>T</mi></math> es el "factor integrante" matemático que convierte el diferencial inexacto en exacto.</script>
         <div class="quiz-feedback" id="q10_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q10_3" data-correct="2">
-        <div class="quiz-question">3. Un gas ideal se expande libremente en un recipiente aislado (expansión de Joule): $\Delta T = 0$, $Q = 0$, $W = 0$. ¿Qué ocurre con la entropía del gas?</div>
+        <div class="quiz-question">3. Un gas ideal se expande libremente en un recipiente aislado (expansión de Joule): <math data-tex="\Delta T = 0"><mi mathvariant="normal">Δ</mi><mi>T</mi><mo>=</mo><mn>0</mn></math>, <math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math>, <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math>. ¿Qué ocurre con la entropía del gas?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q10_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$\Delta S = 0$, porque $Q = 0$ y por definición $dS = \bar{\delta}Q/T$</span></label>
-          <label class="quiz-option"><input type="radio" name="q10_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$\Delta S < 0$, porque el proceso es irreversible y la entropía debe disminuir</span></label>
-          <label class="quiz-option"><input type="radio" name="q10_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$\Delta S > 0$: aunque $Q = 0$, el proceso es irreversible; $\Delta S$ se calcula con un proceso reversible equivalente entre los mismos estados</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_3" value="0"><span class="opt-letter">A</span><span class="opt-text"><math data-tex="\Delta S = 0"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>=</mo><mn>0</mn></math>, porque <math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math> y por definición <math data-tex="dS = \bar{\delta}Q/T"><mi>d</mi><mi>S</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mi>/</mi><mi>T</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q10_3" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="\Delta S &lt; 0"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>&lt;</mo><mn>0</mn></math>, porque el proceso es irreversible y la entropía debe disminuir</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_3" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="\Delta S &gt; 0"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>></mo><mn>0</mn></math>: aunque <math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math>, el proceso es irreversible; <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> se calcula con un proceso reversible equivalente entre los mismos estados</span></label>
           <label class="quiz-option"><input type="radio" name="q10_3" value="3"><span class="opt-letter">D</span><span class="opt-text">La entropía no está definida porque el proceso no es cuasi-estático</span></label>
         </div>
-        <script type="text/explanation" id="q10_3-exp">$dS = \bar{\delta}Q_{\text{rev}}/T$ solo vale para procesos reversibles. Para calcular $\Delta S$ del proceso irreversible, se diseña un proceso reversible entre los mismos estados inicial y final: por ejemplo, una expansión isotérmica reversible de $V_i$ a $V_f$. En ese proceso $Q_{\text{rev}} = Nk_BT\ln(V_f/V_i) > 0$, así que $\Delta S = Nk_B\ln(V_f/V_i) > 0$. La entropía del gas aumenta aunque no intercambie calor con el entorno.</script>
+        <script type="text/explanation" id="q10_3-exp"><math data-tex="dS = \bar{\delta}Q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><msub><mi>Q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math> solo vale para procesos reversibles. Para calcular <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> del proceso irreversible, se diseña un proceso reversible entre los mismos estados inicial y final: por ejemplo, una expansión isotérmica reversible de <math data-tex="V_i"><msub><mi>V</mi><mi>i</mi></msub></math> a <math data-tex="V_f"><msub><mi>V</mi><mi>f</mi></msub></math>. En ese proceso <math data-tex="Q_{\text{rev}} = Nk_BT\ln(V_f/V_i) &gt; 0"><msub><mi>Q</mi><mtext>rev</mtext></msub><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow><mo>></mo><mn>0</mn></math>, así que <math data-tex="\Delta S = Nk_B\ln(V_f/V_i) &gt; 0"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow><mo>></mo><mn>0</mn></math>. La entropía del gas aumenta aunque no intercambie calor con el entorno.</script>
         <div class="quiz-feedback" id="q10_3-fb"></div>
       </div>
 

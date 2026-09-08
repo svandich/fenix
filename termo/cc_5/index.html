@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CC5 — Modelo Atómico y Equipartición</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -90,9 +86,9 @@
       <ul class="topic-list">
         <li>Hipótesis atómica: materia compuesta de átomos y moléculas con masa y estructura interna</li>
         <li>Grados de libertad: traslación (3), rotación (lineal: 2, no lineal: 3) y vibración (2 por modo)</li>
-        <li>Teorema de equipartición: $\langle E_k\rangle = \tfrac{1}{2}k_BT$ por grado de libertad cuadrático</li>
-        <li>Predicciones para $C_V$: monoatómico $\tfrac{3}{2}Nk_B$, diatómico $\tfrac{5}{2}Nk_B$ (sin vibración)</li>
-        <li>Falla clásica: equipartición predice $C_V$ constante, pero experimentalmente varía con $T$</li>
+        <li>Teorema de equipartición: <math data-tex="\langle E_k\rangle = \tfrac{1}{2}k_BT"><mrow><mo>⟨</mo><msub><mi>E</mi><mi>k</mi></msub><mo>⟩</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> por grado de libertad cuadrático</li>
+        <li>Predicciones para <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math>: monoatómico <math data-tex="\tfrac{3}{2}Nk_B"><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math>, diatómico <math data-tex="\tfrac{5}{2}Nk_B"><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math> (sin vibración)</li>
+        <li>Falla clásica: equipartición predice <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> constante, pero experimentalmente varía con <math data-tex="T"><mi>T</mi></math></li>
         <li>Corrección cuántica: congelación de grados de libertad a baja temperatura (Einstein, Debye)</li>
       </ul>
     </div>
@@ -103,7 +99,7 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Teorema de equipartición</h3>
-        <p>A temperatura $T$, cada grado de libertad que aparece cuadráticamente en el Hamiltoniano contribuye $\tfrac{1}{2}k_BT$ a la energía media. Grados traslacionales: $\tfrac{1}{2}mv_x^2$, etc. Grados vibracionales: energía cinética + potencial $\to$ $k_BT$ por modo vibracional.</p>
+        <p>A temperatura <math data-tex="T"><mi>T</mi></math>, cada grado de libertad que aparece cuadráticamente en el Hamiltoniano contribuye <math data-tex="\tfrac{1}{2}k_BT"><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> a la energía media. Grados traslacionales: <math data-tex="\tfrac{1}{2}mv_x^2"><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msubsup><mi>v</mi><mi>x</mi><mn>2</mn></msubsup></math>, etc. Grados vibracionales: energía cinética + potencial <math data-tex="\to"><mo lspace="0em" rspace="0em" stretchy="false">→</mo></math> <math data-tex="k_BT"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> por modo vibracional.</p>
       </div>
       <div class="concept-card">
         <h3>Grados de libertad de moléculas</h3>
@@ -111,11 +107,11 @@
       </div>
       <div class="concept-card">
         <h3>Falla de la equipartición clásica</h3>
-        <p>Clásicamente $C_V$ debería ser constante (independiente de $T$). Pero experimentalmente $C_V$ de los sólidos cae a cero cuando $T\to 0$ (ley de Dulong-Petit falla en el frío). Einstein (1907) y Debye (1912) explicaron esto con cuantización de los modos vibracionales.</p>
+        <p>Clásicamente <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> debería ser constante (independiente de <math data-tex="T"><mi>T</mi></math>). Pero experimentalmente <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> de los sólidos cae a cero cuando <math data-tex="T\to 0"><mi>T</mi><mo stretchy="false">→</mo><mn>0</mn></math> (ley de Dulong-Petit falla en el frío). Einstein (1907) y Debye (1912) explicaron esto con cuantización de los modos vibracionales.</p>
       </div>
       <div class="concept-card">
-        <h3>Temperatura de Einstein $\Theta_E$</h3>
-        <p>$\Theta_E = \hbar\omega_E/k_B$: temperatura por encima de la cual un modo vibracional está clásicamente activo. Para $T \gg \Theta_E$: el modo contribuye $k_BT$ (clásico). Para $T \ll \Theta_E$: el modo está congelado, contribución $\propto e^{-\Theta_E/T} \to 0$.</p>
+        <h3>Temperatura de Einstein <math data-tex="\Theta_E"><msub><mi mathvariant="normal">Θ</mi><mi>E</mi></msub></math></h3>
+        <p><math data-tex="\Theta_E = \hbar\omega_E/k_B"><msub><mi mathvariant="normal">Θ</mi><mi>E</mi></msub><mo>=</mo><mi>ℏ</mi><msub><mi>ω</mi><mi>E</mi></msub><mi>/</mi><msub><mi>k</mi><mi>B</mi></msub></math>: temperatura por encima de la cual un modo vibracional está clásicamente activo. Para <math data-tex="T \gg \Theta_E"><mi>T</mi><mo>≫</mo><msub><mi mathvariant="normal">Θ</mi><mi>E</mi></msub></math>: el modo contribuye <math data-tex="k_BT"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> (clásico). Para <math data-tex="T \ll \Theta_E"><mi>T</mi><mo>≪</mo><msub><mi mathvariant="normal">Θ</mi><mi>E</mi></msub></math>: el modo está congelado, contribución <math data-tex="\propto e^{-\Theta_E/T} \to 0"><mo form="infix" lspace="0em">∝</mo><msup><mi>e</mi><mrow><mo>−</mo><msub><mi mathvariant="normal">Θ</mi><mi>E</mi></msub><mi>/</mi><mi>T</mi></mrow></msup><mo stretchy="false">→</mo><mn>0</mn></math>.</p>
       </div>
     </div>
   </section>
@@ -127,7 +123,7 @@
       <div class="formula-label">Teorema de equipartición de la energía</div>
       <div class="formula-math"><img class="typst-formula" src="cc_5_1.svg" alt=""></div>
       <div class="formula-desc">
-        Válido para cualquier grado de libertad $\xi_i$ que aparezca cuadráticamente en $H$. La energía total media es $U = (f/2)Nk_BT$, donde $f$ es el número total de grados de libertad activos.
+        Válido para cualquier grado de libertad <math data-tex="\xi_i"><msub><mi>ξ</mi><mi>i</mi></msub></math> que aparezca cuadráticamente en <math data-tex="H"><mi>H</mi></math>. La energía total media es <math data-tex="U = (f/2)Nk_BT"><mi>U</mi><mo>=</mo><mrow><mo>(</mo><mrow><mi>f</mi><mi>/</mi><mn>2</mn></mrow><mo>)</mo></mrow><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>, donde <math data-tex="f"><mi>f</mi></math> es el número total de grados de libertad activos.
       </div>
     </div>
 
@@ -135,7 +131,7 @@
       <div class="formula-label">Capacidades caloríficas según estructura molecular</div>
       <div class="formula-math"><img class="typst-formula" src="cc_5_2.svg" alt=""></div>
       <div class="formula-desc">
-        $f=3$ (monoatómico): $C_V = \tfrac{3}{2}Nk_B$, $\gamma=5/3$. $f=5$ (diatómico sin vibración): $C_V = \tfrac{5}{2}Nk_B$, $\gamma=7/5$. $f=7$ (diatómico con vibración): $C_V = \tfrac{7}{2}Nk_B$, $\gamma=9/7$.
+        <math data-tex="f=3"><mi>f</mi><mo>=</mo><mn>3</mn></math> (monoatómico): <math data-tex="C_V = \tfrac{3}{2}Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math>, <math data-tex="\gamma=5/3"><mi>γ</mi><mo>=</mo><mn>5</mn><mi>/</mi><mn>3</mn></math>. <math data-tex="f=5"><mi>f</mi><mo>=</mo><mn>5</mn></math> (diatómico sin vibración): <math data-tex="C_V = \tfrac{5}{2}Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math>, <math data-tex="\gamma=7/5"><mi>γ</mi><mo>=</mo><mn>7</mn><mi>/</mi><mn>5</mn></math>. <math data-tex="f=7"><mi>f</mi><mo>=</mo><mn>7</mn></math> (diatómico con vibración): <math data-tex="C_V = \tfrac{7}{2}Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mfrac><mn>7</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math>, <math data-tex="\gamma=9/7"><mi>γ</mi><mo>=</mo><mn>9</mn><mi>/</mi><mn>7</mn></math>.
       </div>
     </div>
 
@@ -143,7 +139,7 @@
       <div class="formula-label">Capacidad calórica de Einstein (sólido)</div>
       <div class="formula-math"><img class="typst-formula" src="cc_5_3.svg" alt=""></div>
       <div class="formula-desc">
-        Límites: $T \gg \Theta_E$: $C_V \to 3Nk_B$ (Dulong-Petit). $T \ll \Theta_E$: $C_V \to 0$ (tercera ley). El modelo de Debye mejora el comportamiento a baja $T$: $C_V \propto T^3$.
+        Límites: <math data-tex="T \gg \Theta_E"><mi>T</mi><mo>≫</mo><msub><mi mathvariant="normal">Θ</mi><mi>E</mi></msub></math>: <math data-tex="C_V \to 3Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo stretchy="false">→</mo><mn>3</mn><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math> (Dulong-Petit). <math data-tex="T \ll \Theta_E"><mi>T</mi><mo>≪</mo><msub><mi mathvariant="normal">Θ</mi><mi>E</mi></msub></math>: <math data-tex="C_V \to 0"><msub><mi>C</mi><mi>V</mi></msub><mo stretchy="false">→</mo><mn>0</mn></math> (tercera ley). El modelo de Debye mejora el comportamiento a baja <math data-tex="T"><mi>T</mi></math>: <math data-tex="C_V \propto T^3"><msub><mi>C</mi><mi>V</mi></msub><mo>∝</mo><msup><mi>T</mi><mn>3</mn></msup></math>.
       </div>
     </div>
   </section>
@@ -153,10 +149,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Claves del modelo atómico y equipartición</div>
       <ul>
-        <li>El teorema de equipartición es clásico — requiere que la energía del modo sea continua. Cuando $k_BT \ll \hbar\omega$ (energía del cuanto del modo), el modo está "congelado" y no contribuye a $C_V$.</li>
-        <li>El hidrógeno molecular ($H_2$) muestra experimentalmente la congelación de grados de libertad: a temperatura ambiente solo están activos los 3 traslacionales y 2 rotacionales ($C_V = \frac{5}{2}Nk_B$); la vibración se activa solo por encima de ~3000 K.</li>
-        <li>La ley de Dulong-Petit ($C_V = 3Nk_B$ para sólidos monoatómicos) predice bien a temperatura ordinaria pero falla a baja temperatura — esto motivó la revolución cuántica de Einstein en termodinámica.</li>
-        <li>El número de grados de libertad no es siempre obvio: en sólidos, cada átomo tiene 3 modos vibracionales, cada uno con energía cinética + potencial = $2 \times \frac{1}{2}k_BT = k_BT$ → $C_V = 3Nk_B$ total (Dulong-Petit).</li>
+        <li>El teorema de equipartición es clásico — requiere que la energía del modo sea continua. Cuando <math data-tex="k_BT \ll \hbar\omega"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo>≪</mo><mi>ℏ</mi><mi>ω</mi></math> (energía del cuanto del modo), el modo está "congelado" y no contribuye a <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math>.</li>
+        <li>El hidrógeno molecular (<math data-tex="H_2"><msub><mi>H</mi><mn>2</mn></msub></math>) muestra experimentalmente la congelación de grados de libertad: a temperatura ambiente solo están activos los 3 traslacionales y 2 rotacionales (<math data-tex="C_V = \frac{5}{2}Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math>); la vibración se activa solo por encima de ~3000 K.</li>
+        <li>La ley de Dulong-Petit (<math data-tex="C_V = 3Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mn>3</mn><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math> para sólidos monoatómicos) predice bien a temperatura ordinaria pero falla a baja temperatura — esto motivó la revolución cuántica de Einstein en termodinámica.</li>
+        <li>El número de grados de libertad no es siempre obvio: en sólidos, cada átomo tiene 3 modos vibracionales, cada uno con energía cinética + potencial = <math data-tex="2 \times \frac{1}{2}k_BT = k_BT"><mn>2</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> → <math data-tex="C_V = 3Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mn>3</mn><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math> total (Dulong-Petit).</li>
       </ul>
     </div>
   </section>
@@ -166,38 +162,38 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q25_1" data-correct="1">
-        <div class="quiz-question">1. Para un gas diatómico a temperatura ambiente, ¿por qué los modos vibracionales (2 grados de libertad) no contribuyen a $C_V$?</div>
+        <div class="quiz-question">1. Para un gas diatómico a temperatura ambiente, ¿por qué los modos vibracionales (2 grados de libertad) no contribuyen a <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math>?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q25_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque las moléculas diatómicas no vibran — solo trasladan y rotan</span></label>
-          <label class="quiz-option"><input type="radio" name="q25_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque la energía del cuanto vibracional $\hbar\omega_{vib} \gg k_BT$ a temperatura ambiente: el modo está cuánticamente congelado (solo el estado fundamental está poblado) y no puede absorber energía térmica</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque la energía del cuanto vibracional <math data-tex="\hbar\omega_{vib} \gg k_BT"><mi>ℏ</mi><msub><mi>ω</mi><mrow><mi>v</mi><mi>i</mi><mi>b</mi></mrow></msub><mo>≫</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> a temperatura ambiente: el modo está cuánticamente congelado (solo el estado fundamental está poblado) y no puede absorber energía térmica</span></label>
           <label class="quiz-option"><input type="radio" name="q25_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque los modos vibracionales solo se activan en gases poliatómicos, no en diatómicos</span></label>
           <label class="quiz-option"><input type="radio" name="q25_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque los modos vibracionales y rotacionales se cancelan mutuamente en la suma de la energía media</span></label>
         </div>
-        <script type="text/explanation" id="q25_1-exp">El teorema de equipartición es clásico: asume que la energía del modo es continua. Para que un modo cuántico contribuya $k_BT$ (equipartición clásica), se necesita $k_BT \gg \hbar\omega$ (muchos niveles excitados poblados). Los modos vibracionales del H$_2$ tienen $\hbar\omega_{vib}/k_B \approx 6300$ K: a temperatura ambiente ($T \approx 300$ K), $k_BT \ll \hbar\omega_{vib}$ — el modo está en el nivel fundamental y no absorbe calor. En cambio, los modos rotacionales del H$_2$ tienen $\hbar\omega_{rot}/k_B \approx 85$ K: a temperatura ambiente $k_BT \gg \hbar\omega_{rot}$, por lo que sí contribuyen.</script>
+        <script type="text/explanation" id="q25_1-exp">El teorema de equipartición es clásico: asume que la energía del modo es continua. Para que un modo cuántico contribuya <math data-tex="k_BT"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> (equipartición clásica), se necesita <math data-tex="k_BT \gg \hbar\omega"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo>≫</mo><mi>ℏ</mi><mi>ω</mi></math> (muchos niveles excitados poblados). Los modos vibracionales del H<math data-tex="_2"><msub><mrow></mrow><mn>2</mn></msub></math> tienen <math data-tex="\hbar\omega_{vib}/k_B \approx 6300"><mi>ℏ</mi><msub><mi>ω</mi><mrow><mi>v</mi><mi>i</mi><mi>b</mi></mrow></msub><mi>/</mi><msub><mi>k</mi><mi>B</mi></msub><mo>≈</mo><mn>6300</mn></math> K: a temperatura ambiente (<math data-tex="T \approx 300"><mi>T</mi><mo>≈</mo><mn>300</mn></math> K), <math data-tex="k_BT \ll \hbar\omega_{vib}"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo>≪</mo><mi>ℏ</mi><msub><mi>ω</mi><mrow><mi>v</mi><mi>i</mi><mi>b</mi></mrow></msub></math> — el modo está en el nivel fundamental y no absorbe calor. En cambio, los modos rotacionales del H<math data-tex="_2"><msub><mrow></mrow><mn>2</mn></msub></math> tienen <math data-tex="\hbar\omega_{rot}/k_B \approx 85"><mi>ℏ</mi><msub><mi>ω</mi><mrow><mi>r</mi><mi>o</mi><mi>t</mi></mrow></msub><mi>/</mi><msub><mi>k</mi><mi>B</mi></msub><mo>≈</mo><mn>85</mn></math> K: a temperatura ambiente <math data-tex="k_BT \gg \hbar\omega_{rot}"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo>≫</mo><mi>ℏ</mi><msub><mi>ω</mi><mrow><mi>r</mi><mi>o</mi><mi>t</mi></mrow></msub></math>, por lo que sí contribuyen.</script>
         <div class="quiz-feedback" id="q25_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q25_2" data-correct="1">
-        <div class="quiz-question">2. La ley de Dulong-Petit predice $C_V = 3Nk_B$ para sólidos monoatómicos. ¿Por qué cada átomo contribuye $3k_B$ en lugar de $\frac{3}{2}k_B$ de la traslación?</div>
+        <div class="quiz-question">2. La ley de Dulong-Petit predice <math data-tex="C_V = 3Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mn>3</mn><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math> para sólidos monoatómicos. ¿Por qué cada átomo contribuye <math data-tex="3k_B"><mn>3</mn><msub><mi>k</mi><mi>B</mi></msub></math> en lugar de <math data-tex="\frac{3}{2}k_B"><mfrac><mn>3</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub></math> de la traslación?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q25_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque en sólidos los átomos tienen energía potencial adicional de enlace que se suma a la cinética</span></label>
-          <label class="quiz-option"><input type="radio" name="q25_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Cada átomo en un sólido oscila en 3 direcciones: cada modo vibracional tiene energía cinética $\frac{1}{2}k_BT$ y energía potencial $\frac{1}{2}k_BT$ (equipartición), dando $k_BT$ por modo y $3k_BT$ por átomo en total</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Cada átomo en un sólido oscila en 3 direcciones: cada modo vibracional tiene energía cinética <math data-tex="\frac{1}{2}k_BT"><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> y energía potencial <math data-tex="\frac{1}{2}k_BT"><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> (equipartición), dando <math data-tex="k_BT"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> por modo y <math data-tex="3k_BT"><mn>3</mn><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> por átomo en total</span></label>
           <label class="quiz-option"><input type="radio" name="q25_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque los sólidos tienen tres veces más partículas que los gases equivalentes</span></label>
-          <label class="quiz-option"><input type="radio" name="q25_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la densidad mayor de los sólidos hace que cada átomo interactúe con más vecinos, multiplicando su contribución a $C_V$ por 2</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la densidad mayor de los sólidos hace que cada átomo interactúe con más vecinos, multiplicando su contribución a <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> por 2</span></label>
         </div>
-        <script type="text/explanation" id="q25_2-exp">En un sólido, cada átomo está ligado a su posición de equilibrio y oscila en torno a ella. Tiene 3 modos de vibración (uno por dirección espacial). Para cada modo, el Hamiltoniano clásico es $H = \frac{p^2}{2m} + \frac{1}{2}kx^2$: hay un término cuadrático en el momento (cinético, contribuye $\frac{1}{2}k_BT$) y otro en el desplazamiento (potencial, contribuye $\frac{1}{2}k_BT$). Total por modo: $k_BT$. Con 3 modos por átomo: $3k_BT$ por átomo, y $C_V = \partial U/\partial T = 3Nk_B$. Esta es la ley de Dulong-Petit, que funciona bien a temperatura ordinaria pero falla cuando $T \to 0$ (los modos vibracionales se "congelan" cuánticamente).</script>
+        <script type="text/explanation" id="q25_2-exp">En un sólido, cada átomo está ligado a su posición de equilibrio y oscila en torno a ella. Tiene 3 modos de vibración (uno por dirección espacial). Para cada modo, el Hamiltoniano clásico es <math data-tex="H = \frac{p^2}{2m} + \frac{1}{2}kx^2"><mi>H</mi><mo>=</mo><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>k</mi><msup><mi>x</mi><mn>2</mn></msup></math>: hay un término cuadrático en el momento (cinético, contribuye <math data-tex="\frac{1}{2}k_BT"><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>) y otro en el desplazamiento (potencial, contribuye <math data-tex="\frac{1}{2}k_BT"><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>). Total por modo: <math data-tex="k_BT"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>. Con 3 modos por átomo: <math data-tex="3k_BT"><mn>3</mn><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> por átomo, y <math data-tex="C_V = \partial U/\partial T = 3Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>T</mi><mo>=</mo><mn>3</mn><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math>. Esta es la ley de Dulong-Petit, que funciona bien a temperatura ordinaria pero falla cuando <math data-tex="T \to 0"><mi>T</mi><mo stretchy="false">→</mo><mn>0</mn></math> (los modos vibracionales se "congelan" cuánticamente).</script>
         <div class="quiz-feedback" id="q25_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q25_3" data-correct="1">
-        <div class="quiz-question">3. Einstein (1907) mostró que $C_V \to 0$ cuando $T \to 0$ para sólidos, contrariamente a la predicción clásica $C_V = 3Nk_B = \text{cte}$. ¿Por qué este resultado fue revolucionario?</div>
+        <div class="quiz-question">3. Einstein (1907) mostró que <math data-tex="C_V \to 0"><msub><mi>C</mi><mi>V</mi></msub><mo stretchy="false">→</mo><mn>0</mn></math> cuando <math data-tex="T \to 0"><mi>T</mi><mo stretchy="false">→</mo><mn>0</mn></math> para sólidos, contrariamente a la predicción clásica <math data-tex="C_V = 3Nk_B = \text{cte}"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mn>3</mn><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mo>=</mo><mtext>cte</mtext></math>. ¿Por qué este resultado fue revolucionario?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q25_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque era la primera vez que alguien calculaba el calor específico de un sólido, antes nadie lo había intentado</span></label>
-          <label class="quiz-option"><input type="radio" name="q25_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque contradijo directamente la equipartición clásica (que predice $C_V$ constante) y demostró que la mecánica cuántica (cuantización de la energía vibracional $\hbar\omega$) es necesaria para describir correctamente la materia incluso a temperaturas "ordinarias"</span></label>
-          <label class="quiz-option"><input type="radio" name="q25_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque Einstein calculó $C_V$ sin usar ninguna constante de la naturaleza, solo principios termodinámicos</span></label>
-          <label class="quiz-option"><input type="radio" name="q25_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque Einstein demostró que todos los sólidos tienen exactamente el mismo $C_V$ independientemente de su composición</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque contradijo directamente la equipartición clásica (que predice <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> constante) y demostró que la mecánica cuántica (cuantización de la energía vibracional <math data-tex="\hbar\omega"><mi>ℏ</mi><mi>ω</mi></math>) es necesaria para describir correctamente la materia incluso a temperaturas "ordinarias"</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque Einstein calculó <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> sin usar ninguna constante de la naturaleza, solo principios termodinámicos</span></label>
+          <label class="quiz-option"><input type="radio" name="q25_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque Einstein demostró que todos los sólidos tienen exactamente el mismo <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> independientemente de su composición</span></label>
         </div>
-        <script type="text/explanation" id="q25_3-exp">La predicción de $C_V = 3Nk_B$ constante (Dulong-Petit, 1819) era un éxito de la física clásica, pero los experimentos de Dewar y otros a finales del XIX mostraron que $C_V$ caía drásticamente a bajas temperaturas. Einstein (1907) resolvió el puzzle: modeló el sólido como $3N$ osciladores armónicos cuánticos de frecuencia $\omega$. A $T \ll \Theta_E = \hbar\omega/k_B$, los osciladores no pueden ser excitados (no hay energía térmica suficiente para saltar al primer nivel excitado) y $C_V \to 0$. Esto fue la primera aplicación exitosa de la cuantización (de Planck, 1900) fuera de la radiación, y estableció la mecánica cuántica como necesaria para toda la física de la materia.</script>
+        <script type="text/explanation" id="q25_3-exp">La predicción de <math data-tex="C_V = 3Nk_B"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mn>3</mn><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math> constante (Dulong-Petit, 1819) era un éxito de la física clásica, pero los experimentos de Dewar y otros a finales del XIX mostraron que <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> caía drásticamente a bajas temperaturas. Einstein (1907) resolvió el puzzle: modeló el sólido como <math data-tex="3N"><mn>3</mn><mi>N</mi></math> osciladores armónicos cuánticos de frecuencia <math data-tex="\omega"><mi>ω</mi></math>. A <math data-tex="T \ll \Theta_E = \hbar\omega/k_B"><mi>T</mi><mo>≪</mo><msub><mi mathvariant="normal">Θ</mi><mi>E</mi></msub><mo>=</mo><mi>ℏ</mi><mi>ω</mi><mi>/</mi><msub><mi>k</mi><mi>B</mi></msub></math>, los osciladores no pueden ser excitados (no hay energía térmica suficiente para saltar al primer nivel excitado) y <math data-tex="C_V \to 0"><msub><mi>C</mi><mi>V</mi></msub><mo stretchy="false">→</mo><mn>0</mn></math>. Esto fue la primera aplicación exitosa de la cuantización (de Planck, 1900) fuera de la radiación, y estableció la mecánica cuántica como necesaria para toda la física de la materia.</script>
         <div class="quiz-feedback" id="q25_3-fb"></div>
       </div>
 

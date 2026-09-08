@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 19 — Ley de Ampère pt. 2</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -63,18 +61,18 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
     <div class="unit-pill u6 bg-u6">Magnetismo · Aux 17–25</div>
     <h1>Auxiliar 19: Ley de Ampère — Parte 2</h1>
-    <p class="desc">Esta sesión profundiza en la aplicación de la ley de Ampère a configuraciones de mayor complejidad: densidades de corriente no uniformes $J(r)$, corrientes superficiales $K$, solenoides concéntricos y cilindros con perforaciones. El hilo conductor es siempre el mismo: elegir un camino amperiano con la simetría del problema, calcular $I_\text{enc}$ con cuidado, y despejar $\vec{B}$.</p>
+    <p class="desc">Esta sesión profundiza en la aplicación de la ley de Ampère a configuraciones de mayor complejidad: densidades de corriente no uniformes <math data-tex="J(r)"><mi>J</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math>, corrientes superficiales <math data-tex="K"><mi>K</mi></math>, solenoides concéntricos y cilindros con perforaciones. El hilo conductor es siempre el mismo: elegir un camino amperiano con la simetría del problema, calcular <math data-tex="I_\text{enc}"><msub><mi>I</mi><mtext>enc</mtext></msub></math> con cuidado, y despejar <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math>.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Corriente encerrada con densidad volumétrica no uniforme: $J(r) = J_0\!\left(1 - \tfrac{r}{R}\right)$</li>
-        <li>Superposición de campos de una corriente plana (densidad lineal $K$) y un cilindro sólido</li>
-        <li>Campo de un solenoide ideal: $B = \mu_0 n I$ dentro, nulo fuera</li>
-        <li>Dos solenoides concéntricos: cancelación de campo para $r &lt; R_2$ y fuerza por unidad de área sobre el solenoide interior</li>
-        <li>Principio de superposición: cilindro con perforación cilíndrica tratado como cilindro completo menos cilindro de radio $b$</li>
+        <li>Corriente encerrada con densidad volumétrica no uniforme: <math data-tex="J(r) = J_0\!\left(1 - \tfrac{r}{R}\right)"><mi>J</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow><mo>=</mo><msub><mi>J</mi><mn>0</mn></msub><mspace width="-0.1667em"/><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mfrac><mi>r</mi><mi>R</mi></mfrac></mrow><mo>)</mo></mrow></math></li>
+        <li>Superposición de campos de una corriente plana (densidad lineal <math data-tex="K"><mi>K</mi></math>) y un cilindro sólido</li>
+        <li>Campo de un solenoide ideal: <math data-tex="B = \mu_0 n I"><mi>B</mi><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mi>n</mi><mi>I</mi></math> dentro, nulo fuera</li>
+        <li>Dos solenoides concéntricos: cancelación de campo para <math data-tex="r &lt; R_2"><mi>r</mi><mo>&lt;</mo><msub><mi>R</mi><mn>2</mn></msub></math> y fuerza por unidad de área sobre el solenoide interior</li>
+        <li>Principio de superposición: cilindro con perforación cilíndrica tratado como cilindro completo menos cilindro de radio <math data-tex="b"><mi>b</mi></math></li>
         <li>Fuerza por unidad de largo sobre un alambre externo debida al campo del sistema cilindro-perforación</li>
         <li>Diferenciales en coordenadas cartesianas, cilíndricas y esféricas (repaso de formulario)</li>
       </ul>
@@ -86,19 +84,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Densidad de corriente no uniforme</h3>
-        <p>Cuando $J$ depende de $r$, la corriente encerrada se calcula integrando: $I_\text{enc} = \int_0^r J(r')\,2\pi r'\,dr'$. El resultado ya no es simplemente $J \cdot \pi r^2$; hay que resolver la integral explícitamente antes de aplicar Ampère.</p>
+        <p>Cuando <math data-tex="J"><mi>J</mi></math> depende de <math data-tex="r"><mi>r</mi></math>, la corriente encerrada se calcula integrando: <math data-tex="I_\text{enc} = \int_0^r J(r&#x27;)\,2\pi r&#x27;\,dr&#x27;"><msub><mi>I</mi><mtext>enc</mtext></msub><mo>=</mo><msubsup><mo form="prefix" lspace="0em">∫</mo><mn>0</mn><mi>r</mi></msubsup><mi>J</mi><mrow><mo>(</mo><msup><mi>r</mi><mo>′</mo></msup><mo>)</mo></mrow><mspace width="0.1667em"/><mn>2</mn><mi>π</mi><msup><mi>r</mi><mo>′</mo></msup><mspace width="0.1667em"/><mi>d</mi><msup><mi>r</mi><mo>′</mo></msup></math>. El resultado ya no es simplemente <math data-tex="J \cdot \pi r^2"><mi>J</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup></math>; hay que resolver la integral explícitamente antes de aplicar Ampère.</p>
       </div>
       <div class="concept-card">
         <h3>Campo de un plano infinito de corriente</h3>
-        <p>Una lámina plana e infinita con densidad lineal $K$ produce $B = \tfrac{\mu_0 K}{2}$ paralelo al plano y perpendicular a $\vec{K}$, con dirección opuesta a ambos lados. Se obtiene con un lazo rectangular amperiano.</p>
+        <p>Una lámina plana e infinita con densidad lineal <math data-tex="K"><mi>K</mi></math> produce <math data-tex="B = \tfrac{\mu_0 K}{2}"><mi>B</mi><mo>=</mo><mfrac><mrow><msub><mi>μ</mi><mn>0</mn></msub><mi>K</mi></mrow><mn>2</mn></mfrac></math> paralelo al plano y perpendicular a <math data-tex="\vec{K}"><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover></math>, con dirección opuesta a ambos lados. Se obtiene con un lazo rectangular amperiano.</p>
       </div>
       <div class="concept-card">
         <h3>Solenoide ideal</h3>
-        <p>Para un solenoide muy largo de $n$ vueltas por unidad de largo y corriente $I$: $\vec{B} = \mu_0 n I\,\hat{z}$ en el interior y $\vec{B} = 0$ en el exterior. La demostración usa un camino amperiano rectangular que atraviesa la pared del solenoide.</p>
+        <p>Para un solenoide muy largo de <math data-tex="n"><mi>n</mi></math> vueltas por unidad de largo y corriente <math data-tex="I"><mi>I</mi></math>: <math data-tex="\vec{B} = \mu_0 n I\,\hat{z}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mi>n</mi><mi>I</mi><mspace width="0.1667em"/><mover accent="true"><mi>z</mi><mo>̂</mo></mover></math> en el interior y <math data-tex="\vec{B} = 0"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mn>0</mn></math> en el exterior. La demostración usa un camino amperiano rectangular que atraviesa la pared del solenoide.</p>
       </div>
       <div class="concept-card">
         <h3>Superposición para geometrías con huecos</h3>
-        <p>Un cilindro con perforación descentrada se trata como la superposición de un cilindro completo de radio $R$ (con densidad $+J_0$) y un cilindro de radio $b$ (con densidad $-J_0$) que ocupa el hueco. Los campos individuales son uniformes; el campo neto en el hueco es constante y se puede sumar vectorialmente.</p>
+        <p>Un cilindro con perforación descentrada se trata como la superposición de un cilindro completo de radio <math data-tex="R"><mi>R</mi></math> (con densidad <math data-tex="+J_0"><mo>+</mo><msub><mi>J</mi><mn>0</mn></msub></math>) y un cilindro de radio <math data-tex="b"><mi>b</mi></math> (con densidad <math data-tex="-J_0"><mo>−</mo><msub><mi>J</mi><mn>0</mn></msub></math>) que ocupa el hueco. Los campos individuales son uniformes; el campo neto en el hueco es constante y se puede sumar vectorialmente.</p>
       </div>
     </div>
   </section>
@@ -107,10 +105,10 @@
     <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
 
     <div class="formula-block u6">
-      <div class="formula-label">Corriente encerrada con $J(r)$ no uniforme</div>
+      <div class="formula-label">Corriente encerrada con <math data-tex="J(r)"><mi>J</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math> no uniforme</div>
       <div class="formula-math"><img class="typst-formula" src="aux_19_1.svg" alt=""></div>
       <div class="formula-desc">
-        Para un cilindro con densidad volumétrica $J(r) = J_0(1 - r/R)$, la corriente encerrada dentro de un radio $r \leq R$ se obtiene integrando en coordenadas cilíndricas. El resultado combina un término cuadrático y uno cúbico en $r$.
+        Para un cilindro con densidad volumétrica <math data-tex="J(r) = J_0(1 - r/R)"><mi>J</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow><mo>=</mo><msub><mi>J</mi><mn>0</mn></msub><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>r</mi><mi>/</mi><mi>R</mi></mrow><mo>)</mo></mrow></math>, la corriente encerrada dentro de un radio <math data-tex="r \leq R"><mi>r</mi><mo>≤</mo><mi>R</mi></math> se obtiene integrando en coordenadas cilíndricas. El resultado combina un término cuadrático y uno cúbico en <math data-tex="r"><mi>r</mi></math>.
       </div>
     </div>
 
@@ -118,7 +116,7 @@
       <div class="formula-label">Campo magnético de un plano infinito de corriente</div>
       <div class="formula-math"><img class="typst-formula" src="aux_19_2.svg" alt=""></div>
       <div class="formula-desc">
-        El campo de una lámina infinita con densidad lineal $K$ es uniforme, paralelo al plano y perpendicular a la dirección de la corriente. El camino amperiano rectangular con lados paralelos a $\vec{B}$ da directamente este resultado. El signo indica sentidos opuestos a cada lado de la lámina.
+        El campo de una lámina infinita con densidad lineal <math data-tex="K"><mi>K</mi></math> es uniforme, paralelo al plano y perpendicular a la dirección de la corriente. El camino amperiano rectangular con lados paralelos a <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> da directamente este resultado. El signo indica sentidos opuestos a cada lado de la lámina.
       </div>
     </div>
 
@@ -126,7 +124,7 @@
       <div class="formula-label">Campo de un solenoide ideal</div>
       <div class="formula-math"><img class="typst-formula" src="aux_19_3.svg" alt=""></div>
       <div class="formula-desc">
-        Dentro del solenoide ($r &lt; R$) el campo es uniforme y axial. Fuera ($r &gt; R$) el campo se anula. Con $n = N/L$ vueltas por unidad de largo, el camino amperiano rectangular de largo $\ell$ encierra $n\ell$ espiras, cada una con corriente $I$.
+        Dentro del solenoide (<math data-tex="r &lt; R"><mi>r</mi><mo>&lt;</mo><mi>R</mi></math>) el campo es uniforme y axial. Fuera (<math data-tex="r &gt; R"><mi>r</mi><mo>></mo><mi>R</mi></math>) el campo se anula. Con <math data-tex="n = N/L"><mi>n</mi><mo>=</mo><mi>N</mi><mi>/</mi><mi>L</mi></math> vueltas por unidad de largo, el camino amperiano rectangular de largo <math data-tex="\ell"><mi>ℓ</mi></math> encierra <math data-tex="n\ell"><mi>n</mi><mi>ℓ</mi></math> espiras, cada una con corriente <math data-tex="I"><mi>I</mi></math>.
       </div>
     </div>
 
@@ -134,7 +132,7 @@
       <div class="formula-label">Fuerza por unidad de área sobre una corriente superficial</div>
       <div class="formula-math"><img class="typst-formula" src="aux_19_4.svg" alt=""></div>
       <div class="formula-desc">
-        La fuerza magnética por unidad de área (presión magnética) sobre una corriente superficial $\vec{K}$ es $\vec{f} = \vec{K} \times \vec{B}_\text{ext}$, donde $\vec{B}_\text{ext}$ es el campo externo que actúa sobre la corriente. Para el solenoide interior con $K = n_2 I_2$, el campo externo es el del solenoide exterior evaluado en $R_2 &lt; r &lt; R_1$.
+        La fuerza magnética por unidad de área (presión magnética) sobre una corriente superficial <math data-tex="\vec{K}"><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover></math> es <math data-tex="\vec{f} = \vec{K} \times \vec{B}_\text{ext}"><mover accent="true"><mi>f</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><msub><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mtext>ext</mtext></msub></math>, donde <math data-tex="\vec{B}_\text{ext}"><msub><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mtext>ext</mtext></msub></math> es el campo externo que actúa sobre la corriente. Para el solenoide interior con <math data-tex="K = n_2 I_2"><mi>K</mi><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><msub><mi>I</mi><mn>2</mn></msub></math>, el campo externo es el del solenoide exterior evaluado en <math data-tex="R_2 &lt; r &lt; R_1"><msub><mi>R</mi><mn>2</mn></msub><mo>&lt;</mo><mi>r</mi><mo>&lt;</mo><msub><mi>R</mi><mn>1</mn></msub></math>.
       </div>
     </div>
 
@@ -142,7 +140,7 @@
       <div class="formula-label">Campo neto del cilindro con perforación (superposición)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_19_5.svg" alt=""></div>
       <div class="formula-desc">
-        Fuera del cilindro completo (radio $R$), el campo es el de un hilo con corriente total $I_0 = J_0(\pi R^2 - \pi b^2)$. El cilindro ficticio de radio $b$ también actúa como un hilo (corriente $-J_0\pi b^2$) centrado en $S$. La fuerza por unidad de largo sobre el alambre externo a distancia $D$ es $F/L = \mu_0 I I_\text{net}/(2\pi D)$.
+        Fuera del cilindro completo (radio <math data-tex="R"><mi>R</mi></math>), el campo es el de un hilo con corriente total <math data-tex="I_0 = J_0(\pi R^2 - \pi b^2)"><msub><mi>I</mi><mn>0</mn></msub><mo>=</mo><msub><mi>J</mi><mn>0</mn></msub><mrow><mo>(</mo><mrow><mi>π</mi><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><mi>π</mi><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>. El cilindro ficticio de radio <math data-tex="b"><mi>b</mi></math> también actúa como un hilo (corriente <math data-tex="-J_0\pi b^2"><mo>−</mo><msub><mi>J</mi><mn>0</mn></msub><mi>π</mi><msup><mi>b</mi><mn>2</mn></msup></math>) centrado en <math data-tex="S"><mi>S</mi></math>. La fuerza por unidad de largo sobre el alambre externo a distancia <math data-tex="D"><mi>D</mi></math> es <math data-tex="F/L = \mu_0 I I_\text{net}/(2\pi D)"><mi>F</mi><mi>/</mi><mi>L</mi><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mi>I</mi><msub><mi>I</mi><mtext>net</mtext></msub><mi>/</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>π</mi><mi>D</mi></mrow><mo>)</mo></mrow></math>.
       </div>
     </div>
 
@@ -153,12 +151,12 @@
     <div class="tip-box">
       <div class="tip-title">✦ Estrategia para problemas de Ampère avanzados</div>
       <ul>
-        <li>Cuando $J$ depende de $r$: no usar $I_\text{enc} = J \cdot A$. Integrar siempre $I_\text{enc}(r) = \int_0^r J(r')\,2\pi r'\,dr'$ antes de sustituir en la ley de Ampère.</li>
-        <li>Superposición de fuentes: el campo total es la suma vectorial de los campos de cada fuente. Para el plano + cilindro, calcular $\vec{B}_\text{plano}$ y $\vec{B}_\text{cilindro}$ por separado y sumar en el punto $P$.</li>
-        <li>Solenoides concéntricos: el campo de cada solenoide solo existe en su interior. Para $r &lt; R_2$, ambos solenoides contribuyen; para $R_2 &lt; r &lt; R_1$, solo el exterior. Usar esta distinción para encontrar $I_2$ que anula $\vec{B}$ en $r &lt; R_2$.</li>
-        <li>Fuerza por unidad de área: usar el campo promedio entre interior y exterior ($\vec{B}_\text{avg}$) o directamente el campo externo que actúa sobre la corriente superficial $\vec{K}$ de la pared del solenoide.</li>
+        <li>Cuando <math data-tex="J"><mi>J</mi></math> depende de <math data-tex="r"><mi>r</mi></math>: no usar <math data-tex="I_\text{enc} = J \cdot A"><msub><mi>I</mi><mtext>enc</mtext></msub><mo>=</mo><mi>J</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>A</mi></math>. Integrar siempre <math data-tex="I_\text{enc}(r) = \int_0^r J(r&#x27;)\,2\pi r&#x27;\,dr&#x27;"><msub><mi>I</mi><mtext>enc</mtext></msub><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow><mo>=</mo><msubsup><mo form="prefix" lspace="0em">∫</mo><mn>0</mn><mi>r</mi></msubsup><mi>J</mi><mrow><mo>(</mo><msup><mi>r</mi><mo>′</mo></msup><mo>)</mo></mrow><mspace width="0.1667em"/><mn>2</mn><mi>π</mi><msup><mi>r</mi><mo>′</mo></msup><mspace width="0.1667em"/><mi>d</mi><msup><mi>r</mi><mo>′</mo></msup></math> antes de sustituir en la ley de Ampère.</li>
+        <li>Superposición de fuentes: el campo total es la suma vectorial de los campos de cada fuente. Para el plano + cilindro, calcular <math data-tex="\vec{B}_\text{plano}"><msub><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mtext>plano</mtext></msub></math> y <math data-tex="\vec{B}_\text{cilindro}"><msub><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mtext>cilindro</mtext></msub></math> por separado y sumar en el punto <math data-tex="P"><mi>P</mi></math>.</li>
+        <li>Solenoides concéntricos: el campo de cada solenoide solo existe en su interior. Para <math data-tex="r &lt; R_2"><mi>r</mi><mo>&lt;</mo><msub><mi>R</mi><mn>2</mn></msub></math>, ambos solenoides contribuyen; para <math data-tex="R_2 &lt; r &lt; R_1"><msub><mi>R</mi><mn>2</mn></msub><mo>&lt;</mo><mi>r</mi><mo>&lt;</mo><msub><mi>R</mi><mn>1</mn></msub></math>, solo el exterior. Usar esta distinción para encontrar <math data-tex="I_2"><msub><mi>I</mi><mn>2</mn></msub></math> que anula <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> en <math data-tex="r &lt; R_2"><mi>r</mi><mo>&lt;</mo><msub><mi>R</mi><mn>2</mn></msub></math>.</li>
+        <li>Fuerza por unidad de área: usar el campo promedio entre interior y exterior (<math data-tex="\vec{B}_\text{avg}"><msub><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mtext>avg</mtext></msub></math>) o directamente el campo externo que actúa sobre la corriente superficial <math data-tex="\vec{K}"><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover></math> de la pared del solenoide.</li>
         <li>Perforación descentrada: los ejes de los dos cilindros ficticios no coinciden. Los campos se calculan con sus propios ejes; luego se suman vectorialmente en el punto de interés usando desplazamientos relativos.</li>
-        <li>Fuerza por unidad de largo entre alambres paralelos: $dF/dL = \mu_0 I_1 I_2 / (2\pi d)$, atractiva si las corrientes son paralelas.</li>
+        <li>Fuerza por unidad de largo entre alambres paralelos: <math data-tex="dF/dL = \mu_0 I_1 I_2 / (2\pi d)"><mi>d</mi><mi>F</mi><mi>/</mi><mi>d</mi><mi>L</mi><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><msub><mi>I</mi><mn>1</mn></msub><msub><mi>I</mi><mn>2</mn></msub><mi>/</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>π</mi><mi>d</mi></mrow><mo>)</mo></mrow></math>, atractiva si las corrientes son paralelas.</li>
       </ul>
     </div>
   </section>

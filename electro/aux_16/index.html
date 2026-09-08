@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 16 — Circuitos</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -72,8 +70,8 @@
       <ul class="topic-list">
         <li>Primera ley de Kirchhoff (nodos): conservación de carga</li>
         <li>Segunda ley de Kirchhoff (mallas): conservación de energía</li>
-        <li>Resistencias en serie: $R_{\text{eq}} = \sum R_i$</li>
-        <li>Resistencias en paralelo: $R_{\text{eq}}^{-1} = \sum R_i^{-1}$</li>
+        <li>Resistencias en serie: <math data-tex="R_{\text{eq}} = \sum R_i"><msub><mi>R</mi><mtext>eq</mtext></msub><mo>=</mo><mo form="prefix" lspace="0em">∑</mo><msub><mi>R</mi><mi>i</mi></msub></math></li>
+        <li>Resistencias en paralelo: <math data-tex="R_{\text{eq}}^{-1} = \sum R_i^{-1}"><msubsup><mi>R</mi><mtext>eq</mtext><mrow><mo>−</mo><mn>1</mn></mrow></msubsup><mo>=</mo><mo form="prefix" lspace="0em">∑</mo><msubsup><mi>R</mi><mi>i</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup></math></li>
         <li>Divisor de voltaje y divisor de corriente</li>
         <li>Potencia disipada en cada resistencia</li>
       </ul>
@@ -85,11 +83,11 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>1ª Ley de Kirchhoff (nodos)</h3>
-        <p>La suma de corrientes que entran a un nodo es igual a la suma de las que salen: $\sum I_{\text{entra}} = \sum I_{\text{sale}}$. Es conservación de carga en estado estacionario.</p>
+        <p>La suma de corrientes que entran a un nodo es igual a la suma de las que salen: <math data-tex="\sum I_{\text{entra}} = \sum I_{\text{sale}}"><mo lspace="0em">∑</mo><msub><mi>I</mi><mtext>entra</mtext></msub><mo>=</mo><mo form="prefix" lspace="0em">∑</mo><msub><mi>I</mi><mtext>sale</mtext></msub></math>. Es conservación de carga en estado estacionario.</p>
       </div>
       <div class="concept-card">
         <h3>2ª Ley de Kirchhoff (mallas)</h3>
-        <p>La suma de caídas de voltaje en un lazo cerrado es cero: $\sum \Delta V = 0$. Equivale a que el campo eléctrico es conservativo → el trabajo en un lazo cerrado es nulo.</p>
+        <p>La suma de caídas de voltaje en un lazo cerrado es cero: <math data-tex="\sum \Delta V = 0"><mo lspace="0em">∑</mo><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>=</mo><mn>0</mn></math>. Equivale a que el campo eléctrico es conservativo → el trabajo en un lazo cerrado es nulo.</p>
       </div>
       <div class="concept-card">
         <h3>Serie vs Paralelo</h3>
@@ -97,7 +95,7 @@
       </div>
       <div class="concept-card">
         <h3>Divisores</h3>
-        <p>Divisor de voltaje (serie): $V_k = V_{\text{total}} \cdot R_k/R_{\text{eq}}$. Divisor de corriente (paralelo): $I_k = I_{\text{total}} \cdot R_{\text{eq}}/R_k$ o equivalentemente $I_k = I_{\text{total}} \cdot \frac{R_j}{R_j + R_k}$ para dos ramas.</p>
+        <p>Divisor de voltaje (serie): <math data-tex="V_k = V_{\text{total}} \cdot R_k/R_{\text{eq}}"><msub><mi>V</mi><mi>k</mi></msub><mo>=</mo><msub><mi>V</mi><mtext>total</mtext></msub><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><msub><mi>R</mi><mi>k</mi></msub><mi>/</mi><msub><mi>R</mi><mtext>eq</mtext></msub></math>. Divisor de corriente (paralelo): <math data-tex="I_k = I_{\text{total}} \cdot R_{\text{eq}}/R_k"><msub><mi>I</mi><mi>k</mi></msub><mo>=</mo><msub><mi>I</mi><mtext>total</mtext></msub><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><msub><mi>R</mi><mtext>eq</mtext></msub><mi>/</mi><msub><mi>R</mi><mi>k</mi></msub></math> o equivalentemente <math data-tex="I_k = I_{\text{total}} \cdot \frac{R_j}{R_j + R_k}"><msub><mi>I</mi><mi>k</mi></msub><mo>=</mo><msub><mi>I</mi><mtext>total</mtext></msub><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mfrac><msub><mi>R</mi><mi>j</mi></msub><mrow><msub><mi>R</mi><mi>j</mi></msub><mo lspace="0em" rspace="0em">+</mo><msub><mi>R</mi><mi>k</mi></msub></mrow></mfrac></math> para dos ramas.</p>
       </div>
     </div>
   </section>
@@ -109,7 +107,7 @@
       <div class="formula-label">Leyes de Kirchhoff</div>
       <div class="formula-math"><img class="typst-formula" src="aux_16_1.svg" alt=""></div>
       <div class="formula-desc">
-        Convenio de signos: corriente que entra al nodo es positiva. Recorriendo la malla, la caída en una resistencia es $+IR$ si se recorre en el sentido de la corriente, $-IR$ si en contra.
+        Convenio de signos: corriente que entra al nodo es positiva. Recorriendo la malla, la caída en una resistencia es <math data-tex="+IR"><mo>+</mo><mi>I</mi><mi>R</mi></math> si se recorre en el sentido de la corriente, <math data-tex="-IR"><mo>−</mo><mi>I</mi><mi>R</mi></math> si en contra.
       </div>
     </div>
 
@@ -117,7 +115,7 @@
       <div class="formula-label">Resistencias equivalentes</div>
       <div class="formula-math"><img class="typst-formula" src="aux_16_2.svg" alt=""></div>
       <div class="formula-desc">
-        Para dos en paralelo: $R_{\text{eq}} = R_1 R_2/(R_1+R_2)$. Si son iguales: $R_{\text{eq}} = R/n$.
+        Para dos en paralelo: <math data-tex="R_{\text{eq}} = R_1 R_2/(R_1+R_2)"><msub><mi>R</mi><mtext>eq</mtext></msub><mo>=</mo><msub><mi>R</mi><mn>1</mn></msub><msub><mi>R</mi><mn>2</mn></msub><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></math>. Si son iguales: <math data-tex="R_{\text{eq}} = R/n"><msub><mi>R</mi><mtext>eq</mtext></msub><mo>=</mo><mi>R</mi><mi>/</mi><mi>n</mi></math>.
       </div>
     </div>
 
@@ -125,7 +123,7 @@
       <div class="formula-label">Divisor de voltaje (serie)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_16_3.svg" alt=""></div>
       <div class="formula-desc">
-        La resistencia mayor se lleva mayor fracción del voltaje. Si $R_k \gg$ los demás, casi todo $V$ cae en $R_k$.
+        La resistencia mayor se lleva mayor fracción del voltaje. Si <math data-tex="R_k \gg"><msub><mi>R</mi><mi>k</mi></msub><mo form="infix" rspace="0em">≫</mo></math> los demás, casi todo <math data-tex="V"><mi>V</mi></math> cae en <math data-tex="R_k"><msub><mi>R</mi><mi>k</mi></msub></math>.
       </div>
     </div>
 
@@ -133,7 +131,7 @@
       <div class="formula-label">Potencia disipada</div>
       <div class="formula-math"><img class="typst-formula" src="aux_16_4.svg" alt=""></div>
       <div class="formula-desc">
-        La resistencia que disipa más potencia en serie es la mayor ($P \propto R$). En paralelo, disipa más la menor ($P \propto 1/R$ a igual $V$).
+        La resistencia que disipa más potencia en serie es la mayor (<math data-tex="P \propto R"><mi>P</mi><mo>∝</mo><mi>R</mi></math>). En paralelo, disipa más la menor (<math data-tex="P \propto 1/R"><mi>P</mi><mo>∝</mo><mn>1</mn><mi>/</mi><mi>R</mi></math> a igual <math data-tex="V"><mi>V</mi></math>).
       </div>
     </div>
   </section>
@@ -146,7 +144,7 @@
         <li>Identifica nodos y mallas. Asigna corrientes con dirección (si resulta negativa, va al revés).</li>
         <li>Escribe la ecuación de nodos para cada nodo independiente (descarta uno: es redundante).</li>
         <li>Escribe la ecuación de mallas para cada malla independiente.</li>
-        <li>Resuelve el sistema lineal resultante. Verifica sumando potencias: $\sum P_{\text{fuentes}} = \sum P_{\text{resistencias}}$.</li>
+        <li>Resuelve el sistema lineal resultante. Verifica sumando potencias: <math data-tex="\sum P_{\text{fuentes}} = \sum P_{\text{resistencias}}"><mo lspace="0em">∑</mo><msub><mi>P</mi><mtext>fuentes</mtext></msub><mo>=</mo><mo form="prefix" lspace="0em">∑</mo><msub><mi>P</mi><mtext>resistencias</mtext></msub></math>.</li>
         <li>Simplifica primero con equivalentes serie/paralelo cuando sea posible.</li>
       </ul>
     </div>

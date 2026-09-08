@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 18 — Ley de Ampère</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -63,19 +61,19 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
     <div class="unit-pill u6 bg-u6">Magnetismo · Aux 17–18</div>
     <h1>Auxiliar 18: Ley de Ampère</h1>
-    <p class="desc">La ley de Ampère es el análogo magnético de la ley de Gauss: aprovecha la simetría para calcular $\vec{B}$ a partir de la corriente encerrada en un camino amperiano. Su forma diferencial $\nabla\times\vec{B} = \mu_0\vec{J}$ conecta el campo con su fuente local.</p>
+    <p class="desc">La ley de Ampère es el análogo magnético de la ley de Gauss: aprovecha la simetría para calcular <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> a partir de la corriente encerrada en un camino amperiano. Su forma diferencial <math data-tex="\nabla\times\vec{B} = \mu_0\vec{J}"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math> conecta el campo con su fuente local.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Definición de corriente $I = dQ/dt$ y densidades de corriente $\vec{J}$ (volumétrica) y $\vec{K}$ (superficial)</li>
-        <li>Forma diferencial de Ampère: $\nabla\times\vec{B} = \mu_0\vec{J}$</li>
-        <li>Forma integral: $\oint\vec{B}\cdot d\vec{\ell} = \mu_0 I_\text{enc}$</li>
-        <li>Corriente encerrada $I_\text{enc} = \int\vec{J}\cdot d\vec{S}$</li>
+        <li>Definición de corriente <math data-tex="I = dQ/dt"><mi>I</mi><mo>=</mo><mi>d</mi><mi>Q</mi><mi>/</mi><mi>d</mi><mi>t</mi></math> y densidades de corriente <math data-tex="\vec{J}"><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math> (volumétrica) y <math data-tex="\vec{K}"><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover></math> (superficial)</li>
+        <li>Forma diferencial de Ampère: <math data-tex="\nabla\times\vec{B} = \mu_0\vec{J}"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math></li>
+        <li>Forma integral: <math data-tex="\oint\vec{B}\cdot d\vec{\ell} = \mu_0 I_\text{enc}"><mo lspace="0em">∮</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><msub><mi>I</mi><mtext>enc</mtext></msub></math></li>
+        <li>Corriente encerrada <math data-tex="I_\text{enc} = \int\vec{J}\cdot d\vec{S}"><msub><mi>I</mi><mtext>enc</mtext></msub><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>S</mi><mo stretchy="true">⃗</mo></mover></math></li>
         <li>Cable coaxial: campo por regiones (interior, entre conductores, exterior)</li>
-        <li>Obtención de $\vec{J}$ desde $\vec{B}$ dado por Ampère inverso (teorema de Stokes)</li>
+        <li>Obtención de <math data-tex="\vec{J}"><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math> desde <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> dado por Ampère inverso (teorema de Stokes)</li>
         <li>Condición para anular el campo exterior: balance de corrientes encerradas</li>
       </ul>
     </div>
@@ -86,19 +84,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Densidad de corriente</h3>
-        <p>$\vec{J}$ (A/m²) describe la corriente por unidad de sección transversal. $\vec{K}$ (A/m) describe la corriente por unidad de largo en superficies. La corriente total es $I = \int_S\vec{J}\cdot d\vec{S}$.</p>
+        <p><math data-tex="\vec{J}"><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math> (A/m²) describe la corriente por unidad de sección transversal. <math data-tex="\vec{K}"><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover></math> (A/m) describe la corriente por unidad de largo en superficies. La corriente total es <math data-tex="I = \int_S\vec{J}\cdot d\vec{S}"><mi>I</mi><mo>=</mo><msub><mo form="prefix" lspace="0em">∫</mo><mi>S</mi></msub><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>S</mi><mo stretchy="true">⃗</mo></mover></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Ley de Ampère integral</h3>
-        <p>Análoga a la ley de Gauss: eligiendo un camino amperiano cerrado con la simetría del problema, $\vec{B}$ sale constante de la integral y se puede despejar. Funciona para geometrías cilíndricas, planas e infinitas.</p>
+        <p>Análoga a la ley de Gauss: eligiendo un camino amperiano cerrado con la simetría del problema, <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> sale constante de la integral y se puede despejar. Funciona para geometrías cilíndricas, planas e infinitas.</p>
       </div>
       <div class="concept-card">
         <h3>Regla de la mano derecha</h3>
-        <p>Si los dedos de la mano derecha rodean el cable en el sentido del camino amperiano, el pulgar apunta en el sentido positivo de la corriente. Esto determina el signo de $I_\text{enc}$.</p>
+        <p>Si los dedos de la mano derecha rodean el cable en el sentido del camino amperiano, el pulgar apunta en el sentido positivo de la corriente. Esto determina el signo de <math data-tex="I_\text{enc}"><msub><mi>I</mi><mtext>enc</mtext></msub></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Cable coaxial</h3>
-        <p>Ejemplo paradigmático: el campo entre los conductores ($a &lt; r &lt; b$) depende solo de la corriente interior. Para $r &gt; c$ el campo se anula si las corrientes totales son iguales y opuestas.</p>
+        <p>Ejemplo paradigmático: el campo entre los conductores (<math data-tex="a &lt; r &lt; b"><mi>a</mi><mo>&lt;</mo><mi>r</mi><mo>&lt;</mo><mi>b</mi></math>) depende solo de la corriente interior. Para <math data-tex="r &gt; c"><mi>r</mi><mo>></mo><mi>c</mi></math> el campo se anula si las corrientes totales son iguales y opuestas.</p>
       </div>
     </div>
   </section>
@@ -110,7 +108,7 @@
       <div class="formula-label">Corriente y densidades</div>
       <div class="formula-math"><img class="typst-formula" src="aux_18_1.svg" alt=""></div>
       <div class="formula-desc">
-        La corriente es el flujo de carga. La densidad volumétrica $\vec{J}$ integrada sobre una sección da $I$. Para corrientes superficiales: $I = \int_\ell(\vec{K}\times\hat{n})\cdot d\vec{\ell}$, donde $\hat{n}$ es la normal a la superficie.
+        La corriente es el flujo de carga. La densidad volumétrica <math data-tex="\vec{J}"><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math> integrada sobre una sección da <math data-tex="I"><mi>I</mi></math>. Para corrientes superficiales: <math data-tex="I = \int_\ell(\vec{K}\times\hat{n})\cdot d\vec{\ell}"><mi>I</mi><mo>=</mo><msub><mo form="prefix" lspace="0em" rspace="0em">∫</mo><mi>ℓ</mi></msub><mrow><mo>(</mo><mrow><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>n</mi><mo>̂</mo></mover></mrow><mo>)</mo></mrow><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover></math>, donde <math data-tex="\hat{n}"><mover accent="true"><mi>n</mi><mo>̂</mo></mover></math> es la normal a la superficie.
       </div>
     </div>
 
@@ -118,7 +116,7 @@
       <div class="formula-label">Ley de Ampère — forma diferencial</div>
       <div class="formula-math"><img class="typst-formula" src="aux_18_2.svg" alt=""></div>
       <div class="formula-desc">
-        Se deriva de la ley de Biot-Savart aplicando identidades vectoriales. Junto con $\nabla\cdot\vec{B} = 0$ (no hay monopolos magnéticos), determina completamente $\vec{B}$ dado $\vec{J}$.
+        Se deriva de la ley de Biot-Savart aplicando identidades vectoriales. Junto con <math data-tex="\nabla\cdot\vec{B} = 0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mn>0</mn></math> (no hay monopolos magnéticos), determina completamente <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> dado <math data-tex="\vec{J}"><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math>.
       </div>
     </div>
 
@@ -126,7 +124,7 @@
       <div class="formula-label">Ley de Ampère — forma integral</div>
       <div class="formula-math"><img class="typst-formula" src="aux_18_3.svg" alt=""></div>
       <div class="formula-desc">
-        Se obtiene por el teorema de Stokes: $\iint(\nabla\times\vec{B})\cdot d\vec{S} = \oint\vec{B}\cdot d\vec{\ell}$. La clave está en elegir un camino amperiano donde $\vec{B}$ sea paralelo a $d\vec{\ell}$ y constante en módulo.
+        Se obtiene por el teorema de Stokes: <math data-tex="\iint(\nabla\times\vec{B})\cdot d\vec{S} = \oint\vec{B}\cdot d\vec{\ell}"><mo lspace="0em" rspace="0em">∬</mo><mrow><mo>(</mo><mrow><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></mrow><mo>)</mo></mrow><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>S</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix" lspace="0em">∮</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover></math>. La clave está en elegir un camino amperiano donde <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> sea paralelo a <math data-tex="d\vec{\ell}"><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover></math> y constante en módulo.
       </div>
     </div>
   </section>
@@ -137,11 +135,11 @@
       <div class="tip-title">✦ Método para aplicar la ley de Ampère</div>
       <ul>
         <li>Identificar la simetría: cilíndrica (camino circular), planar (camino rectangular), toroidal.</li>
-        <li>Determinar la dirección de $\vec{B}$ por la regla de la mano derecha y por simetría (el campo no puede tener componente radial en simetría cilíndrica).</li>
-        <li>Elegir el camino amperiano donde $|\vec{B}|$ sea constante y $\vec{B}\parallel d\vec{\ell}$: la integral queda $B\cdot 2\pi r$.</li>
-        <li>Calcular $I_\text{enc}$ integrando $\vec{J}$ sobre la sección encerrada por el camino.</li>
-        <li>Para obtener $\vec{J}$ a partir de $\vec{B}$ dado: aplicar $\nabla\times\vec{B} = \mu_0\vec{J}$ en coordenadas cilíndricas: $J = \frac{1}{\mu_0 r}\frac{d(rB)}{dr}$.</li>
-        <li>El campo exterior se anula cuando $I_\text{enc,total} = 0$: las corrientes opuestas se cancelan.</li>
+        <li>Determinar la dirección de <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> por la regla de la mano derecha y por simetría (el campo no puede tener componente radial en simetría cilíndrica).</li>
+        <li>Elegir el camino amperiano donde <math data-tex="|\vec{B}|"><mrow><mo>|</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>|</mo></mrow></math> sea constante y <math data-tex="\vec{B}\parallel d\vec{\ell}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>∥</mo><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover></math>: la integral queda <math data-tex="B\cdot 2\pi r"><mi>B</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mn>2</mn><mi>π</mi><mi>r</mi></math>.</li>
+        <li>Calcular <math data-tex="I_\text{enc}"><msub><mi>I</mi><mtext>enc</mtext></msub></math> integrando <math data-tex="\vec{J}"><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math> sobre la sección encerrada por el camino.</li>
+        <li>Para obtener <math data-tex="\vec{J}"><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math> a partir de <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> dado: aplicar <math data-tex="\nabla\times\vec{B} = \mu_0\vec{J}"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math> en coordenadas cilíndricas: <math data-tex="J = \frac{1}{\mu_0 r}\frac{d(rB)}{dr}"><mi>J</mi><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>μ</mi><mn>0</mn></msub><mi>r</mi></mrow></mfrac><mfrac><mrow><mi>d</mi><mrow><mo>(</mo><mrow><mi>r</mi><mi>B</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mi>r</mi></mrow></mfrac></math>.</li>
+        <li>El campo exterior se anula cuando <math data-tex="I_\text{enc,total} = 0"><msub><mi>I</mi><mtext>enc,total</mtext></msub><mo>=</mo><mn>0</mn></math>: las corrientes opuestas se cancelan.</li>
       </ul>
     </div>
   </section>

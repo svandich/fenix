@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 12 — Transiciones de Fase</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -91,9 +87,9 @@
         <li>Gas de van der Waals: correcciones al gas ideal por volumen finito e interacciones</li>
         <li>Isotermas de van der Waals y la región inestable (bucle de Maxwell)</li>
         <li>Transiciones de primer orden: calor latente, coexistencia de fases</li>
-        <li>Transiciones de segundo orden: sin calor latente, divergencia de $C_P$</li>
+        <li>Transiciones de segundo orden: sin calor latente, divergencia de <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math></li>
         <li>Diagrama de fases: curvas de coexistencia, punto triple, punto crítico</li>
-        <li>Regla de las fases de Gibbs: $F = C - P + 2$</li>
+        <li>Regla de las fases de Gibbs: <math data-tex="F = C - P + 2"><mi>F</mi><mo>=</mo><mi>C</mi><mo>−</mo><mi>P</mi><mo>+</mo><mn>2</mn></math></li>
         <li>Ecuación de Clausius-Clapeyron: pendiente de las curvas de coexistencia</li>
       </ul>
     </div>
@@ -104,19 +100,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Gas de van der Waals</h3>
-        <p>Corrige el gas ideal con dos parámetros: $a$ (atracción entre moléculas, reduce la presión efectiva) y $b$ (volumen excluido por molécula). La ecuación $(P + aN^2/V^2)(V - Nb) = Nk_BT$ reproduce el comportamiento de gases reales y predice la licuefacción.</p>
+        <p>Corrige el gas ideal con dos parámetros: <math data-tex="a"><mi>a</mi></math> (atracción entre moléculas, reduce la presión efectiva) y <math data-tex="b"><mi>b</mi></math> (volumen excluido por molécula). La ecuación <math data-tex="(P + aN^2/V^2)(V - Nb) = Nk_BT"><mrow><mo>(</mo><mrow><mi>P</mi><mo>+</mo><mi>a</mi><msup><mi>N</mi><mn>2</mn></msup><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>V</mi><mo>−</mo><mi>N</mi><mi>b</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> reproduce el comportamiento de gases reales y predice la licuefacción.</p>
       </div>
       <div class="concept-card">
         <h3>Transición de primer orden</h3>
-        <p>El sistema salta discontinuamente entre dos fases (p.ej. líquido → vapor). Hay calor latente $L$: se absorbe energía sin que cambie $T$. La presión y temperatura de coexistencia satisfacen la ecuación de Clausius-Clapeyron.</p>
+        <p>El sistema salta discontinuamente entre dos fases (p.ej. líquido → vapor). Hay calor latente <math data-tex="L"><mi>L</mi></math>: se absorbe energía sin que cambie <math data-tex="T"><mi>T</mi></math>. La presión y temperatura de coexistencia satisfacen la ecuación de Clausius-Clapeyron.</p>
       </div>
       <div class="concept-card">
         <h3>Punto crítico</h3>
-        <p>Temperatura y presión críticas $(T_c, P_c)$ donde la distinción entre líquido y vapor desaparece. Por encima del punto crítico existe el fluido supercrítico. En el punto crítico, $C_P \to \infty$ y la compresibilidad diverge.</p>
+        <p>Temperatura y presión críticas <math data-tex="(T_c, P_c)"><mrow><mo>(</mo><mrow><msub><mi>T</mi><mi>c</mi></msub><mo>,</mo><msub><mi>P</mi><mi>c</mi></msub></mrow><mo>)</mo></mrow></math> donde la distinción entre líquido y vapor desaparece. Por encima del punto crítico existe el fluido supercrítico. En el punto crítico, <math data-tex="C_P \to \infty"><msub><mi>C</mi><mi>P</mi></msub><mo stretchy="false">→</mo><mi>∞</mi></math> y la compresibilidad diverge.</p>
       </div>
       <div class="concept-card">
         <h3>Equilibrio de fases</h3>
-        <p>Dos fases coexisten cuando tienen el mismo potencial químico $\mu$, la misma temperatura y la misma presión. La curva de coexistencia en el diagrama $P$-$T$ separa las regiones de estabilidad de cada fase; el punto triple es donde coexisten tres fases.</p>
+        <p>Dos fases coexisten cuando tienen el mismo potencial químico <math data-tex="\mu"><mi>μ</mi></math>, la misma temperatura y la misma presión. La curva de coexistencia en el diagrama <math data-tex="P"><mi>P</mi></math>-<math data-tex="T"><mi>T</mi></math> separa las regiones de estabilidad de cada fase; el punto triple es donde coexisten tres fases.</p>
       </div>
     </div>
   </section>
@@ -128,8 +124,8 @@
       <div class="formula-label">Ecuación de van der Waals</div>
       <div class="formula-math"><img class="typst-formula" src="cat_12_1.svg" alt=""></div>
       <div class="formula-desc">
-        $a$ parámetro de atracción intermolecular · $b$ volumen excluido por partícula.
-        Para $a = b = 0$ se recupera el gas ideal.
+        <math data-tex="a"><mi>a</mi></math> parámetro de atracción intermolecular · <math data-tex="b"><mi>b</mi></math> volumen excluido por partícula.
+        Para <math data-tex="a = b = 0"><mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mn>0</mn></math> se recupera el gas ideal.
       </div>
     </div>
 
@@ -137,8 +133,8 @@
       <div class="formula-label">Punto crítico de van der Waals</div>
       <div class="formula-math"><img class="typst-formula" src="cat_12_2.svg" alt=""></div>
       <div class="formula-desc">
-        Se obtiene de $(\partial P/\partial V)_T = 0$ y $(\partial^2 P/\partial V^2)_T = 0$ simultáneamente.
-        Por encima de $T_c$ no hay transición líquido-vapor.
+        Se obtiene de <math data-tex="(\partial P/\partial V)_T = 0"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mn>0</mn></math> y <math data-tex="(\partial^2 P/\partial V^2)_T = 0"><msub><mrow><mo>(</mo><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>P</mi><mi>/</mi><mi>∂</mi><msup><mi>V</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mn>0</mn></math> simultáneamente.
+        Por encima de <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math> no hay transición líquido-vapor.
       </div>
     </div>
 
@@ -146,8 +142,8 @@
       <div class="formula-label">Ecuación de Clausius-Clapeyron</div>
       <div class="formula-math"><img class="typst-formula" src="cat_12_3.svg" alt=""></div>
       <div class="formula-desc">
-        $L = T\,\Delta S$ calor latente · $\Delta V$ cambio de volumen en la transición.
-        Para vapor ideal ($\Delta V \approx Nk_BT/P$): $\dfrac{dP}{dT} \approx \dfrac{LP}{Nk_BT^2}$ → $P \propto e^{-L/Nk_BT}$.
+        <math data-tex="L = T\,\Delta S"><mi>L</mi><mo>=</mo><mi>T</mi><mspace width="0.1667em"/><mi mathvariant="normal">Δ</mi><mi>S</mi></math> calor latente · <math data-tex="\Delta V"><mi mathvariant="normal">Δ</mi><mi>V</mi></math> cambio de volumen en la transición.
+        Para vapor ideal (<math data-tex="\Delta V \approx Nk_BT/P"><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>≈</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mi>/</mi><mi>P</mi></math>): <math data-tex="\dfrac{dP}{dT} \approx \dfrac{LP}{Nk_BT^2}"><mfrac displaystyle="true"><mrow><mi>d</mi><mi>P</mi></mrow><mrow><mi>d</mi><mi>T</mi></mrow></mfrac><mo>≈</mo><mfrac displaystyle="true"><mrow><mi>L</mi><mi>P</mi></mrow><mrow><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><msup><mi>T</mi><mn>2</mn></msup></mrow></mfrac></math> → <math data-tex="P \propto e^{-L/(Nk_BT)}"><mi>P</mi><mo>∝</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>L</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup></math>.
       </div>
     </div>
 
@@ -155,8 +151,8 @@
       <div class="formula-label">Regla de las fases de Gibbs</div>
       <div class="formula-math"><img class="typst-formula" src="cat_12_4.svg" alt=""></div>
       <div class="formula-desc">
-        $F$ grados de libertad · $C$ número de componentes · $\mathcal{P}$ número de fases.
-        Para agua pura ($C = 1$) en el punto triple ($\mathcal{P} = 3$): $F = 0$ (estado único).
+        <math data-tex="F"><mi>F</mi></math> grados de libertad · <math data-tex="C"><mi>C</mi></math> número de componentes · <math data-tex="\mathcal{P}"><mi>𝒫︀</mi></math> número de fases.
+        Para agua pura (<math data-tex="C = 1"><mi>C</mi><mo>=</mo><mn>1</mn></math>) en el punto triple (<math data-tex="\mathcal{P} = 3"><mi>𝒫︀</mi><mo>=</mo><mn>3</mn></math>): <math data-tex="F = 0"><mi>F</mi><mo>=</mo><mn>0</mn></math> (estado único).
       </div>
     </div>
   </section>
@@ -166,11 +162,11 @@
     <div class="tip-box">
       <div class="tip-title">✦ Claves de las transiciones de fase</div>
       <ul>
-        <li>El gas de van der Waals es el modelo más simple que captura la transición líquido-vapor. Sus isotermas por debajo de $T_c$ tienen una región no física (presión que sube al aumentar el volumen), que se corrige con la construcción de Maxwell.</li>
-        <li>En una transición de primer orden, al calentar a presión constante la temperatura se queda "fija" en el punto de coexistencia hasta que toda la fase cambia: el calor latente va a reorganizar la estructura, no a subir $T$.</li>
-        <li>La ecuación de Clausius-Clapeyron explica por qué el agua hierve a menos de 100°C en la montaña (menor $P$) y por qué el hielo se funde bajo presión ($dP/dT < 0$ para agua, anomalía del agua).</li>
-        <li>Las transiciones de segundo orden (p.ej. ferro–paramagnetismo, superconductividad) no tienen calor latente: el calor específico diverge en $T_c$.</li>
-        <li>El potencial químico $\mu = (\partial F/\partial N)_{T,V}$ es la variable que se iguala en el equilibrio entre fases: $\mu_{\text{líq}} = \mu_{\text{vap}}$.</li>
+        <li>El gas de van der Waals es el modelo más simple que captura la transición líquido-vapor. Sus isotermas por debajo de <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math> tienen una región no física (presión que sube al aumentar el volumen), que se corrige con la construcción de Maxwell.</li>
+        <li>En una transición de primer orden, al calentar a presión constante la temperatura se queda "fija" en el punto de coexistencia hasta que toda la fase cambia: el calor latente va a reorganizar la estructura, no a subir <math data-tex="T"><mi>T</mi></math>.</li>
+        <li>La ecuación de Clausius-Clapeyron explica por qué el agua hierve a menos de 100°C en la montaña (menor <math data-tex="P"><mi>P</mi></math>) y por qué el hielo se funde bajo presión (<math data-tex="dP/dT &lt; 0"><mi>d</mi><mi>P</mi><mi>/</mi><mi>d</mi><mi>T</mi><mo>&lt;</mo><mn>0</mn></math> para agua, anomalía del agua).</li>
+        <li>Las transiciones de segundo orden (p.ej. ferro–paramagnetismo, superconductividad) no tienen calor latente: el calor específico diverge en <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math>.</li>
+        <li>El potencial químico <math data-tex="\mu = (\partial F/\partial N)_{T,V}"><mi>μ</mi><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>N</mi></mrow><mo>)</mo></mrow><mrow><mi>T</mi><mo rspace="0em">,</mo><mi>V</mi></mrow></msub></math> es la variable que se iguala en el equilibrio entre fases: <math data-tex="\mu_{\text{líq}} = \mu_{\text{vap}}"><msub><mi>μ</mi><mtext>líq</mtext></msub><mo>=</mo><msub><mi>μ</mi><mtext>vap</mtext></msub></math>.</li>
       </ul>
     </div>
   </section>
@@ -187,31 +183,31 @@
           <label class="quiz-option"><input type="radio" name="q12_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Baja, porque la fase líquida cede calor a la fase gaseosa para sustentarla</span></label>
           <label class="quiz-option"><input type="radio" name="q12_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Oscila entre la temperatura del líquido y la del vapor hasta que una fase desaparece</span></label>
         </div>
-        <script type="text/explanation" id="q12_1-exp">En una transición de primer orden, las dos fases coexisten a una temperatura (y presión) fija. Todo el calor que se aporta al sistema va a romper los enlaces intermoleculares de la fase condensada y a reorganizar la estructura: esto es el calor latente $L$. Mientras existan las dos fases, $T$ no cambia. Solo cuando toda la fase líquida se ha evaporado la temperatura vuelve a subir.</script>
+        <script type="text/explanation" id="q12_1-exp">En una transición de primer orden, las dos fases coexisten a una temperatura (y presión) fija. Todo el calor que se aporta al sistema va a romper los enlaces intermoleculares de la fase condensada y a reorganizar la estructura: esto es el calor latente <math data-tex="L"><mi>L</mi></math>. Mientras existan las dos fases, <math data-tex="T"><mi>T</mi></math> no cambia. Solo cuando toda la fase líquida se ha evaporado la temperatura vuelve a subir.</script>
         <div class="quiz-feedback" id="q12_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q12_2" data-correct="2">
-        <div class="quiz-question">2. Por encima del punto crítico $(T > T_c,\ P > P_c)$ de un fluido, ¿qué ocurre con la distinción entre líquido y vapor?</div>
+        <div class="quiz-question">2. Por encima del punto crítico <math data-tex="(T &gt; T_c,\ P &gt; P_c)"><mrow><mo>(</mo><mrow><mi>T</mi><mo>></mo><msub><mi>T</mi><mi>c</mi></msub><mo rspace="0em">,</mo><mspace width="0.2778em"/><mi>P</mi><mo>></mo><msub><mi>P</mi><mi>c</mi></msub></mrow><mo>)</mo></mrow></math> de un fluido, ¿qué ocurre con la distinción entre líquido y vapor?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q12_2" value="0"><span class="opt-letter">A</span><span class="opt-text">El fluido solo puede existir en fase gaseosa por encima del punto crítico</span></label>
           <label class="quiz-option"><input type="radio" name="q12_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El fluido solo puede existir en fase líquida, porque la presión alta lo comprime</span></label>
           <label class="quiz-option"><input type="radio" name="q12_2" value="2"><span class="opt-letter">C</span><span class="opt-text">La distinción entre líquido y vapor desaparece: existe un fluido supercrítico que no presenta transición discontinua entre fases y puede pasar continuamente de densidades altas a bajas</span></label>
           <label class="quiz-option"><input type="radio" name="q12_2" value="3"><span class="opt-letter">D</span><span class="opt-text">El fluido se convierte en sólido porque la presión supercrítica lo solidifica</span></label>
         </div>
-        <script type="text/explanation" id="q12_2-exp">El punto crítico es el extremo de la curva de coexistencia líquido-vapor. Por encima de $T_c$, la diferencia entre las dos fases (densidad, entropía) se reduce a cero. El fluido supercrítico tiene propiedades intermedias entre líquido y gas y puede comprimirse continuamente desde baja densidad (gas) hasta alta densidad (líquido) sin ninguna transición discontinua. Esta propiedad se aprovecha en extracción con $\text{CO}_2$ supercrítico.</script>
+        <script type="text/explanation" id="q12_2-exp">El punto crítico es el extremo de la curva de coexistencia líquido-vapor. Por encima de <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math>, la diferencia entre las dos fases (densidad, entropía) se reduce a cero. El fluido supercrítico tiene propiedades intermedias entre líquido y gas y puede comprimirse continuamente desde baja densidad (gas) hasta alta densidad (líquido) sin ninguna transición discontinua. Esta propiedad se aprovecha en extracción con <math data-tex="\text{CO}_2"><msub><mtext>CO</mtext><mn>2</mn></msub></math> supercrítico.</script>
         <div class="quiz-feedback" id="q12_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q12_3" data-correct="1">
-        <div class="quiz-question">3. La curva de coexistencia sólido-líquido del agua tiene pendiente $dP/dT < 0$ (el punto de fusión baja al aumentar la presión). Según Clausius-Clapeyron, $dP/dT = L/(T\Delta V)$, ¿cuál es la causa?</div>
+        <div class="quiz-question">3. La curva de coexistencia sólido-líquido del agua tiene pendiente <math data-tex="dP/dT &lt; 0"><mi>d</mi><mi>P</mi><mi>/</mi><mi>d</mi><mi>T</mi><mo>&lt;</mo><mn>0</mn></math> (el punto de fusión baja al aumentar la presión). Según Clausius-Clapeyron, <math data-tex="dP/dT = L/(T\Delta V)"><mi>d</mi><mi>P</mi><mi>/</mi><mi>d</mi><mi>T</mi><mo>=</mo><mi>L</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>T</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow><mo>)</mo></mrow></math>, ¿cuál es la causa?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q12_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque el calor latente de fusión del agua es negativo (la fusión libera calor)</span></label>
-          <label class="quiz-option"><input type="radio" name="q12_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque el hielo es menos denso que el agua líquida: al fundir, el volumen disminuye ($\Delta V = V_{liq} - V_{sol} < 0$), lo que invierte el signo de $dP/dT$</span></label>
-          <label class="quiz-option"><input type="radio" name="q12_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque la temperatura de fusión del agua no depende de la presión (la curva es vertical en el diagrama $P$-$T$)</span></label>
+          <label class="quiz-option"><input type="radio" name="q12_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque el hielo es menos denso que el agua líquida: al fundir, el volumen disminuye (<math data-tex="\Delta V = V_{liq} - V_{sol} &lt; 0"><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>=</mo><msub><mi>V</mi><mrow><mi>l</mi><mi>i</mi><mi>q</mi></mrow></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>s</mi><mi>o</mi><mi>l</mi></mrow></msub><mo>&lt;</mo><mn>0</mn></math>), lo que invierte el signo de <math data-tex="dP/dT"><mi>d</mi><mi>P</mi><mi>/</mi><mi>d</mi><mi>T</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q12_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque la temperatura de fusión del agua no depende de la presión (la curva es vertical en el diagrama <math data-tex="P"><mi>P</mi></math>-<math data-tex="T"><mi>T</mi></math>)</span></label>
           <label class="quiz-option"><input type="radio" name="q12_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el punto triple del agua está a una temperatura superior a 0°C, invirtiendo la curva</span></label>
         </div>
-        <script type="text/explanation" id="q12_3-exp">La ecuación de Clausius-Clapeyron es $dP/dT = L/(T\Delta V)$. Para la curva sólido-líquido, $L > 0$ (la fusión absorbe calor) y $T > 0$, así que el signo de $dP/dT$ depende solo de $\Delta V = V_{liq} - V_{sol}$. Para el agua, el hielo flota: $\rho_{hielo} < \rho_{agua}$, es decir $V_{sol} > V_{liq}$, por tanto $\Delta V < 0$. Esto hace $dP/dT < 0$: aumentar la presión funde el hielo. Esta anomalía del agua (y del bismuto, silicio, y pocos otros materiales) tiene consecuencias en glaciología y en la formación de patines de hielo.</script>
+        <script type="text/explanation" id="q12_3-exp">La ecuación de Clausius-Clapeyron es <math data-tex="dP/dT = L/(T\Delta V)"><mi>d</mi><mi>P</mi><mi>/</mi><mi>d</mi><mi>T</mi><mo>=</mo><mi>L</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>T</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow><mo>)</mo></mrow></math>. Para la curva sólido-líquido, <math data-tex="L &gt; 0"><mi>L</mi><mo>></mo><mn>0</mn></math> (la fusión absorbe calor) y <math data-tex="T &gt; 0"><mi>T</mi><mo>></mo><mn>0</mn></math>, así que el signo de <math data-tex="dP/dT"><mi>d</mi><mi>P</mi><mi>/</mi><mi>d</mi><mi>T</mi></math> depende solo de <math data-tex="\Delta V = V_{liq} - V_{sol}"><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>=</mo><msub><mi>V</mi><mrow><mi>l</mi><mi>i</mi><mi>q</mi></mrow></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>s</mi><mi>o</mi><mi>l</mi></mrow></msub></math>. Para el agua, el hielo flota: <math data-tex="\rho_{hielo} &lt; \rho_{agua}"><msub><mi>ρ</mi><mrow><mi>h</mi><mi>i</mi><mi>e</mi><mi>l</mi><mi>o</mi></mrow></msub><mo>&lt;</mo><msub><mi>ρ</mi><mrow><mi>a</mi><mi>g</mi><mi>u</mi><mi>a</mi></mrow></msub></math>, es decir <math data-tex="V_{sol} &gt; V_{liq}"><msub><mi>V</mi><mrow><mi>s</mi><mi>o</mi><mi>l</mi></mrow></msub><mo>></mo><msub><mi>V</mi><mrow><mi>l</mi><mi>i</mi><mi>q</mi></mrow></msub></math>, por tanto <math data-tex="\Delta V &lt; 0"><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>&lt;</mo><mn>0</mn></math>. Esto hace <math data-tex="dP/dT &lt; 0"><mi>d</mi><mi>P</mi><mi>/</mi><mi>d</mi><mi>T</mi><mo>&lt;</mo><mn>0</mn></math>: aumentar la presión funde el hielo. Esta anomalía del agua (y del bismuto, silicio, y pocos otros materiales) tiene consecuencias en glaciología y en la formación de patines de hielo.</script>
         <div class="quiz-feedback" id="q12_3-fb"></div>
       </div>
 

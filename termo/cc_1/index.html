@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CC1 — Conceptos Fundamentales</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -89,11 +85,11 @@
     <div class="card">
       <ul class="topic-list">
         <li>Sistema y entorno: fronteras diatérmicas, adiabáticas, rígidas y permeables</li>
-        <li>Estado termodinámico: variables de estado extensivas ($U$, $V$, $N$) e intensivas ($T$, $p$, $\mu$)</li>
+        <li>Estado termodinámico: variables de estado extensivas (<math data-tex="U"><mi>U</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math>) e intensivas (<math data-tex="T"><mi>T</mi></math>, <math data-tex="p"><mi>p</mi></math>, <math data-tex="\mu"><mi>μ</mi></math>)</li>
         <li>Equilibrio termodinámico: condiciones de equilibrio térmico, mecánico y químico</li>
         <li>Procesos cuasi-estáticos: sucesión de estados de equilibrio</li>
         <li>Calor y trabajo: formas de intercambiar energía — diferencia fundamental</li>
-        <li>Primer principio: $\Delta U = Q + W$ (convención de signos y su significado)</li>
+        <li>Primer principio: <math data-tex="\Delta U = Q + W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>+</mo><mi>W</mi></math> (convención de signos y su significado)</li>
       </ul>
     </div>
   </section>
@@ -103,11 +99,11 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Variables de estado</h3>
-        <p>Describen completamente el estado de equilibrio: $T$, $p$, $V$, $N$, $U$, $S$. No dependen de cómo llegó el sistema al estado — dependen solo del estado actual. Calor $Q$ y trabajo $W$ no son variables de estado: dependen del proceso.</p>
+        <p>Describen completamente el estado de equilibrio: <math data-tex="T"><mi>T</mi></math>, <math data-tex="p"><mi>p</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math>, <math data-tex="U"><mi>U</mi></math>, <math data-tex="S"><mi>S</mi></math>. No dependen de cómo llegó el sistema al estado — dependen solo del estado actual. Calor <math data-tex="Q"><mi>Q</mi></math> y trabajo <math data-tex="W"><mi>W</mi></math> no son variables de estado: dependen del proceso.</p>
       </div>
       <div class="concept-card">
         <h3>Equilibrio termodinámico</h3>
-        <p>El sistema está en equilibrio cuando sus variables macroscópicas no cambian con el tiempo. Requiere: equilibrio térmico ($T$ uniforme), mecánico ($p$ uniforme) y químico ($\mu$ uniforme). La termodinámica describe solo estados de equilibrio.</p>
+        <p>El sistema está en equilibrio cuando sus variables macroscópicas no cambian con el tiempo. Requiere: equilibrio térmico (<math data-tex="T"><mi>T</mi></math> uniforme), mecánico (<math data-tex="p"><mi>p</mi></math> uniforme) y químico (<math data-tex="\mu"><mi>μ</mi></math> uniforme). La termodinámica describe solo estados de equilibrio.</p>
       </div>
       <div class="concept-card">
         <h3>Proceso cuasi-estático</h3>
@@ -127,7 +123,7 @@
       <div class="formula-label">Primer principio de la termodinámica</div>
       <div class="formula-math"><img class="typst-formula" src="cc_1_1.svg" alt=""></div>
       <div class="formula-desc">
-        $Q > 0$: el sistema absorbe calor. $W > 0$: el entorno realiza trabajo sobre el sistema (convención de la física — en química se usa $W = -p\Delta V$ con signo contrario). $U$ es función de estado; $Q$ y $W$ no lo son.
+        <math data-tex="Q &gt; 0"><mi>Q</mi><mo>></mo><mn>0</mn></math>: el sistema absorbe calor. <math data-tex="W &gt; 0"><mi>W</mi><mo>></mo><mn>0</mn></math>: el entorno realiza trabajo sobre el sistema (convención de la física — en química se usa <math data-tex="W = -p\Delta V"><mi>W</mi><mo>=</mo><mo form="prefix">−</mo><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math> con signo contrario). <math data-tex="U"><mi>U</mi></math> es función de estado; <math data-tex="Q"><mi>Q</mi></math> y <math data-tex="W"><mi>W</mi></math> no lo son.
       </div>
     </div>
 
@@ -135,7 +131,7 @@
       <div class="formula-label">Trabajo de presión-volumen</div>
       <div class="formula-math"><img class="typst-formula" src="cc_1_2.svg" alt=""></div>
       <div class="formula-desc">
-        Para proceso cuasi-estático. El trabajo es el área bajo la curva en el diagrama $p$-$V$. Su valor depende del camino (no es diferencial exacto): $\bar{\delta}W = -p\,dV$.
+        Para proceso cuasi-estático. El trabajo es el área bajo la curva en el diagrama <math data-tex="p"><mi>p</mi></math>-<math data-tex="V"><mi>V</mi></math>. Su valor depende del camino (no es diferencial exacto): <math data-tex="\bar{\delta}W = -p\,dV"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi><mo>=</mo><mo form="prefix">−</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>.
       </div>
     </div>
 
@@ -156,7 +152,7 @@
         <li>La termodinámica es una teoría de estados de equilibrio — no describe cómo llega el sistema al equilibrio, sino las relaciones entre los estados de equilibrio. La dinámica hacia el equilibrio es la no-equilibrio, fuera del alcance estricto del curso.</li>
         <li>La distinción calor/trabajo es fundamental: el calor transfiere entropía, el trabajo no. Esta asimetría es la raíz de todas las limitaciones termodinámicas (segunda ley).</li>
         <li>Los procesos cuasi-estáticos son idealizaciones útiles — todo proceso real es irreversible en algún grado. La irreversibilidad siempre genera entropía adicional.</li>
-        <li>La notación $\bar{\delta}Q$ y $\bar{\delta}W$ (con barra) marca diferenciales inexactos: su integral depende del camino, no solo del estado inicial y final. $dU$ sí es diferencial exacto.</li>
+        <li>La notación <math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> y <math data-tex="\bar{\delta}W"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi></math> (con barra) marca diferenciales inexactos: su integral depende del camino, no solo del estado inicial y final. <math data-tex="dU"><mi>d</mi><mi>U</mi></math> sí es diferencial exacto.</li>
       </ul>
     </div>
   </section>
@@ -168,12 +164,12 @@
       <div class="quiz-q" id="q21_1" data-correct="2">
         <div class="quiz-question">1. ¿Cuál de las siguientes es una variable de estado?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q21_1" value="0"><span class="opt-letter">A</span><span class="opt-text">El calor $Q$ absorbido en un proceso isobárico</span></label>
-          <label class="quiz-option"><input type="radio" name="q21_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El trabajo $W$ realizado por el sistema en una expansión</span></label>
-          <label class="quiz-option"><input type="radio" name="q21_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía interna $U$: solo depende del estado actual del sistema (su temperatura, volumen, composición), no del proceso que lo llevó a ese estado</span></label>
-          <label class="quiz-option"><input type="radio" name="q21_1" value="3"><span class="opt-letter">D</span><span class="opt-text">El calor latente de vaporización $L$, que es constante para una sustancia</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="0"><span class="opt-letter">A</span><span class="opt-text">El calor <math data-tex="Q"><mi>Q</mi></math> absorbido en un proceso isobárico</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="1"><span class="opt-letter">B</span><span class="opt-text">El trabajo <math data-tex="W"><mi>W</mi></math> realizado por el sistema en una expansión</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía interna <math data-tex="U"><mi>U</mi></math>: solo depende del estado actual del sistema (su temperatura, volumen, composición), no del proceso que lo llevó a ese estado</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_1" value="3"><span class="opt-letter">D</span><span class="opt-text">El calor latente de vaporización <math data-tex="L"><mi>L</mi></math>, que es constante para una sustancia</span></label>
         </div>
-        <script type="text/explanation" id="q21_1-exp">Las variables de estado son aquellas cuyo valor en un estado de equilibrio no depende de cómo llegó el sistema a ese estado: $U$, $T$, $P$, $V$, $S$, $N$, $H$, $F$, $G$, $\mu$. Sus diferenciales son exactos ($dU$, $dT$, etc.). El calor $Q$ y el trabajo $W$ no son variables de estado: dependen del proceso (del camino). La misma diferencia de estado puede alcanzarse con distintos valores de $Q$ y $W$. Por eso se escribe $\bar{\delta}Q$ y $\bar{\delta}W$ con diferencial inexacto, no $dQ$.</script>
+        <script type="text/explanation" id="q21_1-exp">Las variables de estado son aquellas cuyo valor en un estado de equilibrio no depende de cómo llegó el sistema a ese estado: <math data-tex="U"><mi>U</mi></math>, <math data-tex="T"><mi>T</mi></math>, <math data-tex="P"><mi>P</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="S"><mi>S</mi></math>, <math data-tex="N"><mi>N</mi></math>, <math data-tex="H"><mi>H</mi></math>, <math data-tex="F"><mi>F</mi></math>, <math data-tex="G"><mi>G</mi></math>, <math data-tex="\mu"><mi>μ</mi></math>. Sus diferenciales son exactos (<math data-tex="dU"><mi>d</mi><mi>U</mi></math>, <math data-tex="dT"><mi>d</mi><mi>T</mi></math>, etc.). El calor <math data-tex="Q"><mi>Q</mi></math> y el trabajo <math data-tex="W"><mi>W</mi></math> no son variables de estado: dependen del proceso (del camino). La misma diferencia de estado puede alcanzarse con distintos valores de <math data-tex="Q"><mi>Q</mi></math> y <math data-tex="W"><mi>W</mi></math>. Por eso se escribe <math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> y <math data-tex="\bar{\delta}W"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi></math> con diferencial inexacto, no <math data-tex="dQ"><mi>d</mi><mi>Q</mi></math>.</script>
         <div class="quiz-feedback" id="q21_1-fb"></div>
       </div>
 
@@ -190,14 +186,14 @@
       </div>
 
       <div class="quiz-q" id="q21_3" data-correct="1">
-        <div class="quiz-question">3. La notación $\bar{\delta}Q$ (diferencial con barra) en lugar de $dQ$ indica que...</div>
+        <div class="quiz-question">3. La notación <math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> (diferencial con barra) en lugar de <math data-tex="dQ"><mi>d</mi><mi>Q</mi></math> indica que...</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q21_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$\bar{\delta}Q$ es siempre menor que $dU$ en magnitud</span></label>
-          <label class="quiz-option"><input type="radio" name="q21_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$\bar{\delta}Q$ es un diferencial inexacto: $\int_A^B\bar{\delta}Q$ depende del camino tomado entre los estados $A$ y $B$, no solo de los estados. No existe ninguna función $Q(T,V,N)$ cuya diferencial sea $\bar{\delta}Q$</span></label>
-          <label class="quiz-option"><input type="radio" name="q21_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$\bar{\delta}Q$ se mide en unidades diferentes a las de $dU$ (calorías en lugar de julios)</span></label>
-          <label class="quiz-option"><input type="radio" name="q21_3" value="3"><span class="opt-letter">D</span><span class="opt-text">$\bar{\delta}Q$ representa el calor del entorno en lugar del calor del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="0"><span class="opt-letter">A</span><span class="opt-text"><math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> es siempre menor que <math data-tex="dU"><mi>d</mi><mi>U</mi></math> en magnitud</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> es un diferencial inexacto: <math data-tex="\int_A^B\bar{\delta}Q"><msubsup><mo lspace="0em">∫</mo><mi>A</mi><mi>B</mi></msubsup><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> depende del camino tomado entre los estados <math data-tex="A"><mi>A</mi></math> y <math data-tex="B"><mi>B</mi></math>, no solo de los estados. No existe ninguna función <math data-tex="Q(T,V,N)"><mi>Q</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow></math> cuya diferencial sea <math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> se mide en unidades diferentes a las de <math data-tex="dU"><mi>d</mi><mi>U</mi></math> (calorías en lugar de julios)</span></label>
+          <label class="quiz-option"><input type="radio" name="q21_3" value="3"><span class="opt-letter">D</span><span class="opt-text"><math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> representa el calor del entorno en lugar del calor del sistema</span></label>
         </div>
-        <script type="text/explanation" id="q21_3-exp">Un diferencial exacto $df$ tiene la propiedad de que $\int_A^B df = f(B) - f(A)$, independientemente del camino. $dU$ es exacto porque $U$ es función de estado. En cambio, $\bar{\delta}Q$ es inexacto: si se va del estado $A$ al $B$ por distintos caminos (isotérmico, adiabático, isobárico, etc.), se obtienen valores diferentes de $\int\bar{\delta}Q$. Esto refleja que no existe una función "calor almacenado" — el calor es una forma de transferencia energética, no una propiedad del estado del sistema. Lo mismo vale para $\bar{\delta}W$.</script>
+        <script type="text/explanation" id="q21_3-exp">Un diferencial exacto <math data-tex="df"><mi>d</mi><mi>f</mi></math> tiene la propiedad de que <math data-tex="\int_A^B df = f(B) - f(A)"><msubsup><mo lspace="0em">∫</mo><mi>A</mi><mi>B</mi></msubsup><mi>d</mi><mi>f</mi><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mi>B</mi><mo>)</mo></mrow><mo>−</mo><mi>f</mi><mrow><mo>(</mo><mi>A</mi><mo>)</mo></mrow></math>, independientemente del camino. <math data-tex="dU"><mi>d</mi><mi>U</mi></math> es exacto porque <math data-tex="U"><mi>U</mi></math> es función de estado. En cambio, <math data-tex="\bar{\delta}Q"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math> es inexacto: si se va del estado <math data-tex="A"><mi>A</mi></math> al <math data-tex="B"><mi>B</mi></math> por distintos caminos (isotérmico, adiabático, isobárico, etc.), se obtienen valores diferentes de <math data-tex="\int\bar{\delta}Q"><mo lspace="0em">∫</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi></math>. Esto refleja que no existe una función "calor almacenado" — el calor es una forma de transferencia energética, no una propiedad del estado del sistema. Lo mismo vale para <math data-tex="\bar{\delta}W"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi></math>.</script>
         <div class="quiz-feedback" id="q21_3-fb"></div>
       </div>
 

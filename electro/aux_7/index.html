@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 7 — Conductores y Laplace</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -71,8 +69,8 @@
     <div class="card">
       <ul class="topic-list">
         <li>Solución general de Laplace en coordenadas esféricas con polinomios de Legendre</li>
-        <li>Esfera conductora puesta en un campo eléctrico uniforme externo $\mathbf{E}_0$</li>
-        <li>Capacitancia: $C = Q/\Delta V$ y su cálculo para geometrías simples</li>
+        <li>Esfera conductora puesta en un campo eléctrico uniforme externo <math data-tex="\mathbf{E}_0"><msub><mi class="mv-bi">E</mi><mn>0</mn></msub></math></li>
+        <li>Capacitancia: <math data-tex="C = Q/\Delta V"><mi>C</mi><mo>=</mo><mi>Q</mi><mi>/</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math> y su cálculo para geometrías simples</li>
         <li>Energía almacenada en un condensador</li>
         <li>Condensadores en serie y paralelo</li>
       </ul>
@@ -84,19 +82,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Laplace en esfera</h3>
-        <p>Con simetría azimutal, la solución general es $V = \sum_\ell (A_\ell r^\ell + B_\ell r^{-(\ell+1)}) P_\ell(\cos\theta)$. Los coeficientes se fijan con las condiciones de borde.</p>
+        <p>Con simetría azimutal, la solución general es <math data-tex="V = \sum_\ell (A_\ell r^\ell + B_\ell r^{-(\ell+1)}) P_\ell(\cos\theta)"><mi>V</mi><mo>=</mo><msub><mo form="prefix" lspace="0em" rspace="0em">∑</mo><mi>ℓ</mi></msub><mrow><mo>(</mo><mrow><msub><mi>A</mi><mi>ℓ</mi></msub><msup><mi>r</mi><mi>ℓ</mi></msup><mo>+</mo><msub><mi>B</mi><mi>ℓ</mi></msub><msup><mi>r</mi><mrow><mo>−</mo><mrow><mo>(</mo><mrow><mi>ℓ</mi><mo lspace="0em" rspace="0em">+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></msup></mrow><mo>)</mo></mrow><msub><mi>P</mi><mi>ℓ</mi></msub><mrow><mo>(</mo><mrow><mo lspace="0em" rspace="0.16666666666666666em">cos</mo><mi>θ</mi></mrow><mo>)</mo></mrow></math>. Los coeficientes se fijan con las condiciones de borde.</p>
       </div>
       <div class="concept-card">
         <h3>Esfera en campo uniforme</h3>
-        <p>El campo uniforme impone $V \to -E_0 r\cos\theta$ lejos. La esfera (a $V=0$) distorsiona el campo: la solución combina el campo uniforme con un dipolo inducido.</p>
+        <p>El campo uniforme impone <math data-tex="V \to -E_0 r\cos\theta"><mi>V</mi><mo stretchy="false">→</mo><mo form="prefix">−</mo><msub><mi>E</mi><mn>0</mn></msub><mi>r</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">cos</mo><mi>θ</mi></math> lejos. La esfera (a <math data-tex="V=0"><mi>V</mi><mo>=</mo><mn>0</mn></math>) distorsiona el campo: la solución combina el campo uniforme con un dipolo inducido.</p>
       </div>
       <div class="concept-card">
         <h3>Capacitancia</h3>
-        <p>Mide cuánta carga puede acumular un sistema por unidad de voltaje. Depende solo de la geometría, no de $Q$ ni $V$ individualmente. Unidad: Farad [F] = C/V.</p>
+        <p>Mide cuánta carga puede acumular un sistema por unidad de voltaje. Depende solo de la geometría, no de <math data-tex="Q"><mi>Q</mi></math> ni <math data-tex="V"><mi>V</mi></math> individualmente. Unidad: Farad [F] = C/V.</p>
       </div>
       <div class="concept-card">
         <h3>Energía del condensador</h3>
-        <p>La energía almacenada en el campo eléctrico es $U = \frac{1}{2}CV^2 = Q^2/(2C)$. Esta energía es la que se libera al descargar el condensador.</p>
+        <p>La energía almacenada en el campo eléctrico es <math data-tex="U = \frac{1}{2}CV^2 = Q^2/(2C)"><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>C</mi><msup><mi>V</mi><mn>2</mn></msup><mo>=</mo><msup><mi>Q</mi><mn>2</mn></msup><mi>/</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>C</mi></mrow><mo>)</mo></mrow></math>. Esta energía es la que se libera al descargar el condensador.</p>
       </div>
     </div>
   </section>
@@ -108,7 +106,7 @@
       <div class="formula-label">Esfera conductora (radio R, V=0) en campo uniforme E₀</div>
       <div class="formula-math"><img class="typst-formula" src="aux_7_1.svg" alt=""></div>
       <div class="formula-desc">
-        El primer término es el campo uniforme; el segundo es el dipolo inducido. La densidad superficial: $\sigma = 3\varepsilon_0 E_0\cos\theta$.
+        El primer término es el campo uniforme; el segundo es el dipolo inducido. La densidad superficial: <math data-tex="\sigma = 3\varepsilon_0 E_0\cos\theta"><mi>σ</mi><mo>=</mo><mn>3</mn><msub><mi>ε</mi><mn>0</mn></msub><msub><mi>E</mi><mn>0</mn></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">cos</mo><mi>θ</mi></math>.
       </div>
     </div>
 
@@ -116,7 +114,7 @@
       <div class="formula-label">Capacitancia</div>
       <div class="formula-math"><img class="typst-formula" src="aux_7_2.svg" alt=""></div>
       <div class="formula-desc">
-        Placas paralelas: $C = \varepsilon_0 A/d$ · Cilíndrico: $C = 2\pi\varepsilon_0 L/\ln(b/a)$ · Esférico: $C = 4\pi\varepsilon_0 ab/(b-a)$.
+        Placas paralelas: <math data-tex="C = \varepsilon_0 A/d"><mi>C</mi><mo>=</mo><msub><mi>ε</mi><mn>0</mn></msub><mi>A</mi><mi>/</mi><mi>d</mi></math> · Cilíndrico: <math data-tex="C = 2\pi\varepsilon_0 L/\ln(b/a)"><mi>C</mi><mo>=</mo><mn>2</mn><mi>π</mi><msub><mi>ε</mi><mn>0</mn></msub><mi>L</mi><mi>/</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>b</mi><mi>/</mi><mi>a</mi></mrow><mo>)</mo></mrow></math> · Esférico: <math data-tex="C = 4\pi\varepsilon_0 ab/(b-a)"><mi>C</mi><mo>=</mo><mn>4</mn><mi>π</mi><msub><mi>ε</mi><mn>0</mn></msub><mi>a</mi><mi>b</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow><mo>)</mo></mrow></math>.
       </div>
     </div>
 
@@ -124,7 +122,7 @@
       <div class="formula-label">Energía almacenada</div>
       <div class="formula-math"><img class="typst-formula" src="aux_7_3.svg" alt=""></div>
       <div class="formula-desc">
-        Equivalentemente: $U = \frac{\varepsilon_0}{2}\int E^2\,dV$ (energía almacenada en el campo eléctrico).
+        Equivalentemente: <math data-tex="U = \frac{\varepsilon_0}{2}\int E^2\,dV"><mi>U</mi><mo>=</mo><mfrac><msub><mi>ε</mi><mn>0</mn></msub><mn>2</mn></mfrac><mo form="prefix">∫</mo><msup><mi>E</mi><mn>2</mn></msup><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> (energía almacenada en el campo eléctrico).
       </div>
     </div>
 
@@ -132,7 +130,7 @@
       <div class="formula-label">Combinación de condensadores</div>
       <div class="formula-math"><img class="typst-formula" src="aux_7_4.svg" alt=""></div>
       <div class="formula-desc">
-        En serie: mismo $Q$, voltajes se suman. En paralelo: mismo $V$, cargas se suman.
+        En serie: mismo <math data-tex="Q"><mi>Q</mi></math>, voltajes se suman. En paralelo: mismo <math data-tex="V"><mi>V</mi></math>, cargas se suman.
       </div>
     </div>
   </section>
@@ -144,8 +142,8 @@
       <ul>
         <li>Identifica la simetría (esférica, cilíndrica, planar) para elegir coordenadas.</li>
         <li>Escribe la solución general con coeficientes indeterminados.</li>
-        <li>Aplica condición lejana: el potencial debe coincidir con el campo externo para $r\to\infty$.</li>
-        <li>Aplica condición de borde en el conductor ($V = V_0$) para determinar los coeficientes restantes.</li>
+        <li>Aplica condición lejana: el potencial debe coincidir con el campo externo para <math data-tex="r\to\infty"><mi>r</mi><mo stretchy="false">→</mo><mi>∞</mi></math>.</li>
+        <li>Aplica condición de borde en el conductor (<math data-tex="V = V_0"><mi>V</mi><mo>=</mo><msub><mi>V</mi><mn>0</mn></msub></math>) para determinar los coeficientes restantes.</li>
       </ul>
     </div>
   </section>

@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 2 — Ley de Gauss</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -70,9 +68,9 @@
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Flujo eléctrico $\Phi_E$ a través de superficies</li>
-        <li>Ley de Gauss en forma integral: $\oint \mathbf{E}\cdot d\mathbf{S} = Q_{\text{enc}}/\varepsilon_0$</li>
-        <li>Forma diferencial: $\nabla\cdot\mathbf{E} = \rho/\varepsilon_0$</li>
+        <li>Flujo eléctrico <math data-tex="\Phi_E"><msub><mi mathvariant="normal">Φ</mi><mi>E</mi></msub></math> a través de superficies</li>
+        <li>Ley de Gauss en forma integral: <math data-tex="\oint \mathbf{E}\cdot d\mathbf{S} = Q_{\text{enc}}/\varepsilon_0"><mo lspace="0em">∮</mo><mi class="mv-bi">E</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mi class="mv-bi">S</mi><mo>=</mo><msub><mi>Q</mi><mtext>enc</mtext></msub><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math></li>
+        <li>Forma diferencial: <math data-tex="\nabla\cdot\mathbf{E} = \rho/\varepsilon_0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">E</mi><mo>=</mo><mi>ρ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math></li>
         <li>Elección de la superficie gaussiana y condiciones de simetría</li>
         <li>Aplicación a esferas, cilindros y planos infinitos</li>
       </ul>
@@ -88,7 +86,7 @@
       </div>
       <div class="concept-card">
         <h3>Superficie gaussiana</h3>
-        <p>Superficie imaginaria cerrada que elegimos para aplicar la ley. Debe coincidir con la simetría del problema para que $\mathbf{E}$ sea constante (o cero) en ella.</p>
+        <p>Superficie imaginaria cerrada que elegimos para aplicar la ley. Debe coincidir con la simetría del problema para que <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> sea constante (o cero) en ella.</p>
       </div>
       <div class="concept-card">
         <h3>Carga encerrada</h3>
@@ -108,7 +106,7 @@
       <div class="formula-label">Ley de Gauss — forma integral</div>
       <div class="formula-math"><img class="typst-formula" src="aux_2_1.svg" alt=""></div>
       <div class="formula-desc">
-        El flujo neto de $\mathbf{E}$ a través de cualquier superficie cerrada es $Q_{\text{enc}}/\varepsilon_0$.
+        El flujo neto de <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> a través de cualquier superficie cerrada es <math data-tex="Q_{\text{enc}}/\varepsilon_0"><msub><mi>Q</mi><mtext>enc</mtext></msub><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math>.
         <code>Q_enc</code> = carga total dentro de la superficie.
       </div>
     </div>
@@ -117,7 +115,7 @@
       <div class="formula-label">Ley de Gauss — forma diferencial</div>
       <div class="formula-math"><img class="typst-formula" src="aux_2_2.svg" alt=""></div>
       <div class="formula-desc">
-        Relaciona la divergencia de $\mathbf{E}$ con la densidad volumétrica de carga local $\rho$.
+        Relaciona la divergencia de <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> con la densidad volumétrica de carga local <math data-tex="\rho"><mi>ρ</mi></math>.
         Equivalente a la forma integral por el teorema de la divergencia.
       </div>
     </div>
@@ -138,8 +136,8 @@
       <ul>
         <li><strong>Gauss:</strong> cuando hay simetría esférica, cilíndrica o planar. El campo debe ser uniforme en la superficie gaussiana.</li>
         <li><strong>Coulomb:</strong> para geometrías sin simetría o para verificar resultados de Gauss.</li>
-        <li>La simetría permite sacar $E$ fuera de la integral: $\oint \mathbf{E}\cdot d\mathbf{S} = E\cdot A_{\text{gaussiana}}$.</li>
-        <li>Siempre calcula $Q_{\text{enc}}$ correctamente: integra $\rho$ solo dentro de tu superficie.</li>
+        <li>La simetría permite sacar <math data-tex="E"><mi>E</mi></math> fuera de la integral: <math data-tex="\oint \mathbf{E}\cdot d\mathbf{S} = E\cdot A_{\text{gaussiana}}"><mo lspace="0em">∮</mo><mi class="mv-bi">E</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mi class="mv-bi">S</mi><mo>=</mo><mi>E</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><msub><mi>A</mi><mtext>gaussiana</mtext></msub></math>.</li>
+        <li>Siempre calcula <math data-tex="Q_{\text{enc}}"><msub><mi>Q</mi><mtext>enc</mtext></msub></math> correctamente: integra <math data-tex="\rho"><mi>ρ</mi></math> solo dentro de tu superficie.</li>
       </ul>
     </div>
   </section>

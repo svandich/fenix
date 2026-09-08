@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CC3 — Procesos Termodinámicos</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -81,18 +77,18 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Clases complementarias</div>
     <div class="unit-pill u3 bg-u3">Clase Complementaria · CC 3</div>
     <h1>CC3: Procesos Termodinámicos</h1>
-    <p class="desc">Análisis detallado de los cuatro procesos básicos — isotérmico, adiabático, isobárico, isocórico — para un gas ideal: trabajo, calor y cambio de energía interna en cada caso, con representación en el diagrama $p$-$V$.</p>
+    <p class="desc">Análisis detallado de los cuatro procesos básicos — isotérmico, adiabático, isobárico, isocórico — para un gas ideal: trabajo, calor y cambio de energía interna en cada caso, con representación en el diagrama <math data-tex="p"><mi>p</mi></math>-<math data-tex="V"><mi>V</mi></math>.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Proceso isotérmico ($T =$ cte): $\Delta U = 0$ para gas ideal, $W = -Q = Nk_BT\ln(V_f/V_i)$</li>
-        <li>Proceso isocórico ($V =$ cte): $W = 0$, $Q = \Delta U = NC_V\Delta T$</li>
-        <li>Proceso isobárico ($p =$ cte): $Q = \Delta H = NC_p\Delta T$, $W = -p\Delta V$</li>
-        <li>Proceso adiabático ($Q = 0$): $pV^\gamma =$ cte, $\Delta U = W = NC_V\Delta T$</li>
-        <li>Representación en el diagrama $p$-$V$: el trabajo es el área bajo la curva</li>
+        <li>Proceso isotérmico (<math data-tex="T ="><mi>T</mi><mo form="infix" rspace="0em">=</mo></math> cte): <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math> para gas ideal, <math data-tex="W = -Q = Nk_BT\ln(V_f/V_i)"><mi>W</mi><mo>=</mo><mo form="prefix">−</mo><mi>Q</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></math></li>
+        <li>Proceso isocórico (<math data-tex="V ="><mi>V</mi><mo form="infix" rspace="0em">=</mo></math> cte): <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math>, <math data-tex="Q = \Delta U = NC_V\Delta T"><mi>Q</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>N</mi><msub><mi>C</mi><mi>V</mi></msub><mi mathvariant="normal">Δ</mi><mi>T</mi></math></li>
+        <li>Proceso isobárico (<math data-tex="p ="><mi>p</mi><mo form="infix" rspace="0em">=</mo></math> cte): <math data-tex="Q = \Delta H = NC_p\Delta T"><mi>Q</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mi>N</mi><msub><mi>C</mi><mi>p</mi></msub><mi mathvariant="normal">Δ</mi><mi>T</mi></math>, <math data-tex="W = -p\Delta V"><mi>W</mi><mo>=</mo><mo form="prefix">−</mo><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math></li>
+        <li>Proceso adiabático (<math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math>): <math data-tex="pV^\gamma ="><mi>p</mi><msup><mi>V</mi><mi>γ</mi></msup><mo form="infix" rspace="0em">=</mo></math> cte, <math data-tex="\Delta U = W = NC_V\Delta T"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>W</mi><mo>=</mo><mi>N</mi><msub><mi>C</mi><mi>V</mi></msub><mi mathvariant="normal">Δ</mi><mi>T</mi></math></li>
+        <li>Representación en el diagrama <math data-tex="p"><mi>p</mi></math>-<math data-tex="V"><mi>V</mi></math>: el trabajo es el área bajo la curva</li>
         <li>Comparación de los cuatro procesos para el mismo cambio de volumen</li>
       </ul>
     </div>
@@ -102,20 +98,20 @@
     <h2><span class="section-icon">💡</span> Conceptos clave</h2>
     <div class="card-grid">
       <div class="concept-card">
-        <h3>Diagrama $p$-$V$</h3>
-        <p>Representación gráfica de los procesos cuasi-estáticos. El trabajo neto $W = -\oint p\,dV$ es el área encerrada por el ciclo (positivo si se recorre en sentido horario). Las isotermas son hipérbolas ($p \propto 1/V$); las adiabáticas son más empinadas ($p \propto V^{-\gamma}$).</p>
+        <h3>Diagrama <math data-tex="p"><mi>p</mi></math>-<math data-tex="V"><mi>V</mi></math></h3>
+        <p>Representación gráfica de los procesos cuasi-estáticos. El trabajo neto <math data-tex="W = -\oint p\,dV"><mi>W</mi><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∮</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> es el área encerrada por el ciclo (positivo si se recorre en sentido horario). Las isotermas son hipérbolas (<math data-tex="p \propto 1/V"><mi>p</mi><mo>∝</mo><mn>1</mn><mi>/</mi><mi>V</mi></math>); las adiabáticas son más empinadas (<math data-tex="p \propto V^{-\gamma}"><mi>p</mi><mo>∝</mo><msup><mi>V</mi><mrow><mo>−</mo><mi>γ</mi></mrow></msup></math>).</p>
       </div>
       <div class="concept-card">
-        <h3>Gas ideal: $\Delta U$ solo depende de $\Delta T$</h3>
-        <p>Para gas ideal, $U = NC_VT$ (solo función de $T$). En cualquier proceso que devuelva el sistema a la misma temperatura, $\Delta U = 0$. Por eso en el isotérmico $Q = -W$: todo el calor absorbido se convierte en trabajo.</p>
+        <h3>Gas ideal: <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> solo depende de <math data-tex="\Delta T"><mi mathvariant="normal">Δ</mi><mi>T</mi></math></h3>
+        <p>Para gas ideal, <math data-tex="U = NC_VT"><mi>U</mi><mo>=</mo><mi>N</mi><msub><mi>C</mi><mi>V</mi></msub><mi>T</mi></math> (solo función de <math data-tex="T"><mi>T</mi></math>). En cualquier proceso que devuelva el sistema a la misma temperatura, <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math>. Por eso en el isotérmico <math data-tex="Q = -W"><mi>Q</mi><mo>=</mo><mo form="prefix">−</mo><mi>W</mi></math>: todo el calor absorbido se convierte en trabajo.</p>
       </div>
       <div class="concept-card">
         <h3>Adiabática vs. isotérmica</h3>
-        <p>La adiabática es más empinada que la isotérmica en el diagrama $p$-$V$ porque al comprimir adiabáticamente la temperatura sube, aumentando $p$ más que a $T$ constante. El factor es $\gamma = C_p/C_V > 1$: la adiabática cae como $V^{-\gamma}$, la isotérmica como $V^{-1}$.</p>
+        <p>La adiabática es más empinada que la isotérmica en el diagrama <math data-tex="p"><mi>p</mi></math>-<math data-tex="V"><mi>V</mi></math> porque al comprimir adiabáticamente la temperatura sube, aumentando <math data-tex="p"><mi>p</mi></math> más que a <math data-tex="T"><mi>T</mi></math> constante. El factor es <math data-tex="\gamma = C_p/C_V &gt; 1"><mi>γ</mi><mo>=</mo><msub><mi>C</mi><mi>p</mi></msub><mi>/</mi><msub><mi>C</mi><mi>V</mi></msub><mo>></mo><mn>1</mn></math>: la adiabática cae como <math data-tex="V^{-\gamma}"><msup><mi>V</mi><mrow><mo>−</mo><mi>γ</mi></mrow></msup></math>, la isotérmica como <math data-tex="V^{-1}"><msup><mi>V</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Entalpía en el proceso isobárico</h3>
-        <p>A $p$ constante, $Q_p = \Delta H = \Delta U + p\Delta V$: el calor va a cambiar la energía interna Y a realizar trabajo de expansión. Por eso $C_p > C_V$: se necesita más calor para subir $T$ a $p$ constante que a $V$ constante.</p>
+        <p>A <math data-tex="p"><mi>p</mi></math> constante, <math data-tex="Q_p = \Delta H = \Delta U + p\Delta V"><msub><mi>Q</mi><mi>p</mi></msub><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>+</mo><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math>: el calor va a cambiar la energía interna Y a realizar trabajo de expansión. Por eso <math data-tex="C_p &gt; C_V"><msub><mi>C</mi><mi>p</mi></msub><mo>></mo><msub><mi>C</mi><mi>V</mi></msub></math>: se necesita más calor para subir <math data-tex="T"><mi>T</mi></math> a <math data-tex="p"><mi>p</mi></math> constante que a <math data-tex="V"><mi>V</mi></math> constante.</p>
       </div>
     </div>
   </section>
@@ -127,7 +123,7 @@
       <div class="formula-label">Resumen de los cuatro procesos (gas ideal)</div>
       <div class="formula-math"><img class="typst-formula" src="cc_3_1.svg" alt=""></div>
       <div class="formula-desc">
-        Tabla de referencia rápida. Convención: $W > 0$ si el entorno realiza trabajo sobre el sistema; $Q > 0$ si el sistema absorbe calor. $\Delta U = Q + W$ en todos los casos.
+        Tabla de referencia rápida. Convención: <math data-tex="W &gt; 0"><mi>W</mi><mo>></mo><mn>0</mn></math> si el entorno realiza trabajo sobre el sistema; <math data-tex="Q &gt; 0"><mi>Q</mi><mo>></mo><mn>0</mn></math> si el sistema absorbe calor. <math data-tex="\Delta U = Q + W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>+</mo><mi>W</mi></math> en todos los casos.
       </div>
     </div>
 
@@ -135,7 +131,7 @@
       <div class="formula-label">Proceso adiabático reversible</div>
       <div class="formula-math"><img class="typst-formula" src="cc_3_2.svg" alt=""></div>
       <div class="formula-desc">
-        $\gamma = C_p/C_V$. Las tres formas son equivalentes — útil la que involucra las variables dadas. Para gas monoatómico ideal $\gamma = 5/3$; para diatómico $\gamma = 7/5$.
+        <math data-tex="\gamma = C_p/C_V"><mi>γ</mi><mo>=</mo><msub><mi>C</mi><mi>p</mi></msub><mi>/</mi><msub><mi>C</mi><mi>V</mi></msub></math>. Las tres formas son equivalentes — útil la que involucra las variables dadas. Para gas monoatómico ideal <math data-tex="\gamma = 5/3"><mi>γ</mi><mo>=</mo><mn>5</mn><mi>/</mi><mn>3</mn></math>; para diatómico <math data-tex="\gamma = 7/5"><mi>γ</mi><mo>=</mo><mn>7</mn><mi>/</mi><mn>5</mn></math>.
       </div>
     </div>
   </section>
@@ -145,10 +141,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Claves de los procesos básicos</div>
       <ul>
-        <li>El trabajo es el área bajo la curva en el diagrama $p$-$V$: para el mismo cambio de volumen, el proceso isotérmico realiza más trabajo que el adiabático (isotérmica más alta que adiabática en la expansión).</li>
-        <li>Para gas ideal: $\Delta U = 0$ ↔ $\Delta T = 0$ ↔ proceso isotérmico. Esto no vale en general — un gas real puede tener $\Delta U \neq 0$ a $T$ constante (efecto Joule-Thomson).</li>
-        <li>El proceso isobárico es el más común en la práctica de laboratorio (presión atmosférica constante). La entalpía $H$ es la función natural para este proceso: $Q_p = \Delta H$.</li>
-        <li>Una expansión libre (en el vacío, $p_{ext} = 0$) tiene $W = 0$ y si es adiabática también $Q = 0$, por lo que $\Delta U = 0$ — pero el proceso es irreversible y genera entropía. No es un proceso cuasi-estático.</li>
+        <li>El trabajo es el área bajo la curva en el diagrama <math data-tex="p"><mi>p</mi></math>-<math data-tex="V"><mi>V</mi></math>: para el mismo cambio de volumen, el proceso isotérmico realiza más trabajo que el adiabático (isotérmica más alta que adiabática en la expansión).</li>
+        <li>Para gas ideal: <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math> ↔ <math data-tex="\Delta T = 0"><mi mathvariant="normal">Δ</mi><mi>T</mi><mo>=</mo><mn>0</mn></math> ↔ proceso isotérmico. Esto no vale en general — un gas real puede tener <math data-tex="\Delta U \neq 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>≠</mo><mn>0</mn></math> a <math data-tex="T"><mi>T</mi></math> constante (efecto Joule-Thomson).</li>
+        <li>El proceso isobárico es el más común en la práctica de laboratorio (presión atmosférica constante). La entalpía <math data-tex="H"><mi>H</mi></math> es la función natural para este proceso: <math data-tex="Q_p = \Delta H"><msub><mi>Q</mi><mi>p</mi></msub><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi></math>.</li>
+        <li>Una expansión libre (en el vacío, <math data-tex="p_{ext} = 0"><msub><mi>p</mi><mrow><mi>e</mi><mi>x</mi><mi>t</mi></mrow></msub><mo>=</mo><mn>0</mn></math>) tiene <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math> y si es adiabática también <math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math>, por lo que <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math> — pero el proceso es irreversible y genera entropía. No es un proceso cuasi-estático.</li>
       </ul>
     </div>
   </section>
@@ -158,38 +154,38 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q23_1" data-correct="1">
-        <div class="quiz-question">1. En una expansión isotérmica reversible de un gas ideal, $\Delta U = 0$. Por el primer principio $\Delta U = Q + W$, ¿qué relación hay entre $Q$ y $W$?</div>
+        <div class="quiz-question">1. En una expansión isotérmica reversible de un gas ideal, <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math>. Por el primer principio <math data-tex="\Delta U = Q + W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>+</mo><mi>W</mi></math>, ¿qué relación hay entre <math data-tex="Q"><mi>Q</mi></math> y <math data-tex="W"><mi>W</mi></math>?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q23_1" value="0"><span class="opt-letter">A</span><span class="opt-text">$Q = 0$ y $W = 0$, porque el proceso es reversible y no hay intercambio neto de energía</span></label>
-          <label class="quiz-option"><input type="radio" name="q23_1" value="1"><span class="opt-letter">B</span><span class="opt-text">$Q = -W$: el calor absorbido del foco se convierte íntegramente en trabajo realizado sobre el entorno — todo el calor se transforma en trabajo, lo que solo es posible en una expansión isotérmica, no en un ciclo</span></label>
-          <label class="quiz-option"><input type="radio" name="q23_1" value="2"><span class="opt-letter">C</span><span class="opt-text">$Q = W/2$, porque solo la mitad del calor se convierte en trabajo útil</span></label>
-          <label class="quiz-option"><input type="radio" name="q23_1" value="3"><span class="opt-letter">D</span><span class="opt-text">$Q > W$ siempre, porque parte del calor se disipa en el proceso de expansión</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_1" value="0"><span class="opt-letter">A</span><span class="opt-text"><math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math> y <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math>, porque el proceso es reversible y no hay intercambio neto de energía</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_1" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="Q = -W"><mi>Q</mi><mo>=</mo><mo form="prefix">−</mo><mi>W</mi></math>: el calor absorbido del foco se convierte íntegramente en trabajo realizado sobre el entorno — todo el calor se transforma en trabajo, lo que solo es posible en una expansión isotérmica, no en un ciclo</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_1" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="Q = W/2"><mi>Q</mi><mo>=</mo><mi>W</mi><mi>/</mi><mn>2</mn></math>, porque solo la mitad del calor se convierte en trabajo útil</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_1" value="3"><span class="opt-letter">D</span><span class="opt-text"><math data-tex="Q &gt; W"><mi>Q</mi><mo>></mo><mi>W</mi></math> siempre, porque parte del calor se disipa en el proceso de expansión</span></label>
         </div>
-        <script type="text/explanation" id="q23_1-exp">Para gas ideal, $U = NC_VT$: si $T$ es constante, $\Delta U = 0$. El primer principio da $\Delta U = Q + W = 0$, por tanto $Q = -W$ (con convención $W > 0$ cuando el entorno realiza trabajo sobre el sistema, equivalentemente $W_{por\,sistema} = -W = Q > 0$). El calor absorbido del foco caliente se convierte íntegramente en trabajo. Esto no viola la segunda ley porque se trata de una expansión, no de un ciclo: al final el gas ha cambiado de estado. La segunda ley prohíbe convertir calor íntegramente en trabajo en un proceso cíclico que restaure el estado inicial.</script>
+        <script type="text/explanation" id="q23_1-exp">Para gas ideal, <math data-tex="U = NC_VT"><mi>U</mi><mo>=</mo><mi>N</mi><msub><mi>C</mi><mi>V</mi></msub><mi>T</mi></math>: si <math data-tex="T"><mi>T</mi></math> es constante, <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math>. El primer principio da <math data-tex="\Delta U = Q + W = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>+</mo><mi>W</mi><mo>=</mo><mn>0</mn></math>, por tanto <math data-tex="Q = -W"><mi>Q</mi><mo>=</mo><mo form="prefix">−</mo><mi>W</mi></math> (con convención <math data-tex="W &gt; 0"><mi>W</mi><mo>></mo><mn>0</mn></math> cuando el entorno realiza trabajo sobre el sistema, equivalentemente <math data-tex="W_{por\,sistema} = -W = Q &gt; 0"><msub><mi>W</mi><mrow><mi>p</mi><mi>o</mi><mi>r</mi><mspace width="0.1667em"/><mi>s</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>e</mi><mi>m</mi><mi>a</mi></mrow></msub><mo>=</mo><mo form="prefix">−</mo><mi>W</mi><mo>=</mo><mi>Q</mi><mo>></mo><mn>0</mn></math>). El calor absorbido del foco caliente se convierte íntegramente en trabajo. Esto no viola la segunda ley porque se trata de una expansión, no de un ciclo: al final el gas ha cambiado de estado. La segunda ley prohíbe convertir calor íntegramente en trabajo en un proceso cíclico que restaure el estado inicial.</script>
         <div class="quiz-feedback" id="q23_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q23_2" data-correct="1">
-        <div class="quiz-question">2. En un proceso isobárico (a presión constante), $Q_p = \Delta H$. ¿Por qué el calor va a la entalpía y no a la energía interna?</div>
+        <div class="quiz-question">2. En un proceso isobárico (a presión constante), <math data-tex="Q_p = \Delta H"><msub><mi>Q</mi><mi>p</mi></msub><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi></math>. ¿Por qué el calor va a la entalpía y no a la energía interna?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q23_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque a presión constante $\Delta U = 0$ para cualquier sustancia, así que todo el calor constituye $\Delta H$</span></label>
-          <label class="quiz-option"><input type="radio" name="q23_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque a $p$ fija, $Q_p = \Delta U + p\Delta V = \Delta(U+pV) = \Delta H$: el calor va en parte a cambiar la energía interna y en parte a realizar trabajo de expansión $p\Delta V$; la entalpía recoge ambas contribuciones</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque a presión constante <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math> para cualquier sustancia, así que todo el calor constituye <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q23_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque a <math data-tex="p"><mi>p</mi></math> fija, <math data-tex="Q_p = \Delta U + p\Delta V = \Delta(U+pV) = \Delta H"><msub><mi>Q</mi><mi>p</mi></msub><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>+</mo><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mrow><mo>(</mo><mrow><mi>U</mi><mo>+</mo><mi>p</mi><mi>V</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi></math>: el calor va en parte a cambiar la energía interna y en parte a realizar trabajo de expansión <math data-tex="p\Delta V"><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math>; la entalpía recoge ambas contribuciones</span></label>
           <label class="quiz-option"><input type="radio" name="q23_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque la entalpía incluye el calor latente de vaporización, que es el único calor relevante a presión constante</span></label>
-          <label class="quiz-option"><input type="radio" name="q23_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque $\Delta H$ siempre es negativo (exotérmico) y $\Delta U$ siempre es positivo, así que solo $\Delta H$ puede representar calor absorbido</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math> siempre es negativo (exotérmico) y <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> siempre es positivo, así que solo <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math> puede representar calor absorbido</span></label>
         </div>
-        <script type="text/explanation" id="q23_2-exp">El primer principio da $Q_p = \Delta U - W = \Delta U + p\Delta V$ (con $W = -p\Delta V$ en expansión a $p$ constante). Esto es exactamente $\Delta H = \Delta(U + pV) = \Delta U + p\Delta V$ a $p$ fija. El gas absorbe calor $Q_p$: parte ($\Delta U$) va a subir la temperatura interna y parte ($p\Delta V$) va a empujar la atmósfera para expandirse. Por esto los calores de reacción se reportan como $\Delta H_r$ (a presión atmosférica constante): el calómetro a presión constante mide directamente $\Delta H$, no $\Delta U$.</script>
+        <script type="text/explanation" id="q23_2-exp">El primer principio da <math data-tex="Q_p = \Delta U - W = \Delta U + p\Delta V"><msub><mi>Q</mi><mi>p</mi></msub><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>−</mo><mi>W</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>+</mo><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math> (con <math data-tex="W = -p\Delta V"><mi>W</mi><mo>=</mo><mo form="prefix">−</mo><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math> en expansión a <math data-tex="p"><mi>p</mi></math> constante). Esto es exactamente <math data-tex="\Delta H = \Delta(U + pV) = \Delta U + p\Delta V"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mrow><mo>(</mo><mrow><mi>U</mi><mo>+</mo><mi>p</mi><mi>V</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>+</mo><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math> a <math data-tex="p"><mi>p</mi></math> fija. El gas absorbe calor <math data-tex="Q_p"><msub><mi>Q</mi><mi>p</mi></msub></math>: parte (<math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math>) va a subir la temperatura interna y parte (<math data-tex="p\Delta V"><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math>) va a empujar la atmósfera para expandirse. Por esto los calores de reacción se reportan como <math data-tex="\Delta H_r"><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mi>r</mi></msub></math> (a presión atmosférica constante): el calómetro a presión constante mide directamente <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math>, no <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math>.</script>
         <div class="quiz-feedback" id="q23_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q23_3" data-correct="1">
-        <div class="quiz-question">3. En el diagrama $p$-$V$, la adiabática ($p\propto V^{-\gamma}$) es más empinada que la isotérmica ($p\propto V^{-1}$) porque $\gamma > 1$. ¿Cuál es la razón física?</div>
+        <div class="quiz-question">3. En el diagrama <math data-tex="p"><mi>p</mi></math>-<math data-tex="V"><mi>V</mi></math>, la adiabática (<math data-tex="p\propto V^{-\gamma}"><mi>p</mi><mo>∝</mo><msup><mi>V</mi><mrow><mo>−</mo><mi>γ</mi></mrow></msup></math>) es más empinada que la isotérmica (<math data-tex="p\propto V^{-1}"><mi>p</mi><mo>∝</mo><msup><mi>V</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math>) porque <math data-tex="\gamma &gt; 1"><mi>γ</mi><mo>></mo><mn>1</mn></math>. ¿Cuál es la razón física?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q23_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque el proceso adiabático siempre ocurre más rápidamente y la presión no tiene tiempo de equilibrarse</span></label>
-          <label class="quiz-option"><input type="radio" name="q23_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Al expandir adiabáticamente ($Q = 0$), el gas hace trabajo a expensas de su energía interna: $T$ baja. La reducción de $T$ disminuye $P$ adicionalmente respecto a una expansión isotérmica (donde $T$ se mantiene): la presión cae más rápido, dando una curva más empinada</span></label>
+          <label class="quiz-option"><input type="radio" name="q23_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Al expandir adiabáticamente (<math data-tex="Q = 0"><mi>Q</mi><mo>=</mo><mn>0</mn></math>), el gas hace trabajo a expensas de su energía interna: <math data-tex="T"><mi>T</mi></math> baja. La reducción de <math data-tex="T"><mi>T</mi></math> disminuye <math data-tex="P"><mi>P</mi></math> adicionalmente respecto a una expansión isotérmica (donde <math data-tex="T"><mi>T</mi></math> se mantiene): la presión cae más rápido, dando una curva más empinada</span></label>
           <label class="quiz-option"><input type="radio" name="q23_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque en el proceso adiabático la presión inicial es siempre mayor que en el isotérmico, haciendo la curva más alta</span></label>
           <label class="quiz-option"><input type="radio" name="q23_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque en el proceso adiabático el gas realiza más trabajo, agotando más rápido la presión disponible</span></label>
         </div>
-        <script type="text/explanation" id="q23_3-exp">En la expansión isotérmica: $T$ fija → $P = Nk_BT/V \propto 1/V$. En la expansión adiabática: no hay entrada de calor → la temperatura baja al expandirse (el gas realiza trabajo a expensas de $U$). La presión tiene dos razones para bajar: el aumento de $V$ y la caída de $T$. El resultado es $P \propto V^{-\gamma}$ con $\gamma = C_p/C_V > 1$ (caída más rápida). En el ciclo de Carnot, esto es crucial: las adiabáticas conectan las dos isotermas y forman el "cierre" del ciclo.</script>
+        <script type="text/explanation" id="q23_3-exp">En la expansión isotérmica: <math data-tex="T"><mi>T</mi></math> fija → <math data-tex="P = Nk_BT/V \propto 1/V"><mi>P</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mi>/</mi><mi>V</mi><mo>∝</mo><mn>1</mn><mi>/</mi><mi>V</mi></math>. En la expansión adiabática: no hay entrada de calor → la temperatura baja al expandirse (el gas realiza trabajo a expensas de <math data-tex="U"><mi>U</mi></math>). La presión tiene dos razones para bajar: el aumento de <math data-tex="V"><mi>V</mi></math> y la caída de <math data-tex="T"><mi>T</mi></math>. El resultado es <math data-tex="P \propto V^{-\gamma}"><mi>P</mi><mo>∝</mo><msup><mi>V</mi><mrow><mo>−</mo><mi>γ</mi></mrow></msup></math> con <math data-tex="\gamma = C_p/C_V &gt; 1"><mi>γ</mi><mo>=</mo><msub><mi>C</mi><mi>p</mi></msub><mi>/</mi><msub><mi>C</mi><mi>V</mi></msub><mo>></mo><mn>1</mn></math> (caída más rápida). En el ciclo de Carnot, esto es crucial: las adiabáticas conectan las dos isotermas y forman el "cierre" del ciclo.</script>
         <div class="quiz-feedback" id="q23_3-fb"></div>
       </div>
 

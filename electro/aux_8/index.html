@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 8 — Conductores II</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -73,7 +71,7 @@
         <li>Esferas conductoras con múltiples cavidades y cargas puntuales en cada una</li>
         <li>Distribución de cargas inducidas en todas las superficies (interior y exterior)</li>
         <li>Blindaje electrostático: independencia del campo en la cavidad de influencias externas</li>
-        <li>Efecto de conectar conductores a tierra (poner a $V = 0$)</li>
+        <li>Efecto de conectar conductores a tierra (poner a <math data-tex="V = 0"><mi>V</mi><mo>=</mo><mn>0</mn></math>)</li>
         <li>Conductores concéntricos con cargas libres</li>
       </ul>
     </div>
@@ -84,7 +82,7 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Múltiples cavidades</h3>
-        <p>Cada cavidad actúa de forma independiente. Si la cavidad $i$ tiene carga $q_i$, la superficie interior de esa cavidad tiene $-q_i$. La superficie exterior acumula la suma total.</p>
+        <p>Cada cavidad actúa de forma independiente. Si la cavidad <math data-tex="i"><mi>i</mi></math> tiene carga <math data-tex="q_i"><msub><mi>q</mi><mi>i</mi></msub></math>, la superficie interior de esa cavidad tiene <math data-tex="-q_i"><mo>−</mo><msub><mi>q</mi><mi>i</mi></msub></math>. La superficie exterior acumula la suma total.</p>
       </div>
       <div class="concept-card">
         <h3>Blindaje electrostático</h3>
@@ -92,11 +90,11 @@
       </div>
       <div class="concept-card">
         <h3>Conductor a tierra</h3>
-        <p>Conectar a tierra fuerza $V = 0$. La carga del conductor puede cambiar (fluye hacia/desde tierra) para mantener ese potencial. Permite calcular la nueva distribución.</p>
+        <p>Conectar a tierra fuerza <math data-tex="V = 0"><mi>V</mi><mo>=</mo><mn>0</mn></math>. La carga del conductor puede cambiar (fluye hacia/desde tierra) para mantener ese potencial. Permite calcular la nueva distribución.</p>
       </div>
       <div class="concept-card">
         <h3>Conservación de carga</h3>
-        <p>Si el conductor está aislado, la carga total se conserva: $q_{\text{total}} = q_{\text{int. cav. 1}} + q_{\text{int. cav. 2}} + \ldots + q_{\text{superficie exterior}}$.</p>
+        <p>Si el conductor está aislado, la carga total se conserva: <math data-tex="q_{\text{total}} = q_{\text{int. cav. 1}} + q_{\text{int. cav. 2}} + \ldots + q_{\text{superficie exterior}}"><msub><mi>q</mi><mtext>total</mtext></msub><mo>=</mo><msub><mi>q</mi><mtext>int. cav. 1</mtext></msub><mo>+</mo><msub><mi>q</mi><mtext>int. cav. 2</mtext></msub><mo>+</mo><mi>…</mi><mo>+</mo><msub><mi>q</mi><mtext>superficie exterior</mtext></msub></math>.</p>
       </div>
     </div>
   </section>
@@ -108,7 +106,7 @@
       <div class="formula-label">Carga inducida por cavidad</div>
       <div class="formula-math"><img class="typst-formula" src="aux_8_1.svg" alt=""></div>
       <div class="formula-desc">
-        $Q_{\text{total}}$ es la carga con que fue fabricado el conductor. La superficie exterior acumula el resto.
+        <math data-tex="Q_{\text{total}}"><msub><mi>Q</mi><mtext>total</mtext></msub></math> es la carga con que fue fabricado el conductor. La superficie exterior acumula el resto.
       </div>
     </div>
 
@@ -116,7 +114,7 @@
       <div class="formula-label">Teorema de unicidad (clave para blindaje)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_8_2.svg" alt=""></div>
       <div class="formula-desc">
-        Si $V$ es constante en todas las superficies de una cavidad, la solución de Laplace en su interior depende solo de esas condiciones, no de lo exterior.
+        Si <math data-tex="V"><mi>V</mi></math> es constante en todas las superficies de una cavidad, la solución de Laplace en su interior depende solo de esas condiciones, no de lo exterior.
       </div>
     </div>
   </section>
@@ -126,7 +124,7 @@
     <div class="tip-box">
       <div class="tip-title">✦ Cómo abordar problemas de múltiples cavidades</div>
       <ul>
-        <li>Para cada cavidad: aplica Gauss con superficie dentro del conductor para hallar $q$ en la cara interior.</li>
+        <li>Para cada cavidad: aplica Gauss con superficie dentro del conductor para hallar <math data-tex="q"><mi>q</mi></math> en la cara interior.</li>
         <li>Suma algebraicamente todas las cargas inducidas interiores y la carga "libre" del conductor para obtener la carga en la superficie exterior.</li>
         <li>El campo fuera del conductor equivale al de una carga puntual igual a la carga en la superficie exterior, ubicada en el centro.</li>
         <li>Las cargas externas NO cambian el campo dentro de ninguna cavidad.</li>

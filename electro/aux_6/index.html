@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 6 — Conductores</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -73,7 +71,7 @@
         <li>Las 4 propiedades de un conductor en equilibrio</li>
         <li>Conductores con cavidades internas</li>
         <li>Inducción de carga en las superficies interior y exterior</li>
-        <li>Campo eléctrico en la superficie: $\mathbf{E} = \sigma/\varepsilon_0\,\hat{n}$</li>
+        <li>Campo eléctrico en la superficie: <math data-tex="\mathbf{E} = \sigma/\varepsilon_0\,\hat{n}"><mi class="mv-bi">E</mi><mo>=</mo><mi>σ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub><mspace width="0.1667em"/><mover accent="true"><mi>n</mi><mo>̂</mo></mover></math></li>
         <li>Densidades superficiales de carga y su cálculo</li>
       </ul>
     </div>
@@ -88,15 +86,15 @@
       </div>
       <div class="concept-card">
         <h3>Carga en la superficie</h3>
-        <p>Por Gauss: si $\mathbf{E}=0$ en el interior, una superficie gaussiana justo dentro del conductor encierra carga cero. Toda carga libre queda en la superficie.</p>
+        <p>Por Gauss: si <math data-tex="\mathbf{E}=0"><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math> en el interior, una superficie gaussiana justo dentro del conductor encierra carga cero. Toda carga libre queda en la superficie.</p>
       </div>
       <div class="concept-card">
         <h3>Conductor con cavidad</h3>
-        <p>Si hay una carga $q$ en la cavidad, la superficie interior acumula $-q$ (inducida) y la exterior $+q$ (si el conductor era neutro). El campo exterior es idéntico al de carga $+q$ puntual.</p>
+        <p>Si hay una carga <math data-tex="q"><mi>q</mi></math> en la cavidad, la superficie interior acumula <math data-tex="-q"><mo>−</mo><mi>q</mi></math> (inducida) y la exterior <math data-tex="+q"><mo>+</mo><mi>q</mi></math> (si el conductor era neutro). El campo exterior es idéntico al de carga <math data-tex="+q"><mo>+</mo><mi>q</mi></math> puntual.</p>
       </div>
       <div class="concept-card">
         <h3>Campo en la superficie</h3>
-        <p>Justo fuera del conductor, $\mathbf{E}$ es perpendicular a la superficie y vale $\sigma/\varepsilon_0$. Las zonas puntiagudas tienen $\sigma$ grande → campo intenso (efecto corona).</p>
+        <p>Justo fuera del conductor, <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> es perpendicular a la superficie y vale <math data-tex="\sigma/\varepsilon_0"><mi>σ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math>. Las zonas puntiagudas tienen <math data-tex="\sigma"><mi>σ</mi></math> grande → campo intenso (efecto corona).</p>
       </div>
     </div>
   </section>
@@ -108,7 +106,7 @@
       <div class="formula-label">Propiedades de conductor en equilibrio</div>
       <div class="formula-math"><img class="typst-formula" src="aux_6_1.svg" alt=""></div>
       <div class="formula-desc">
-        Estas cuatro condiciones son equivalentes entre sí y se deducen unas de otras usando Gauss y la relación $\mathbf{E} = -\nabla V$.
+        Estas cuatro condiciones son equivalentes entre sí y se deducen unas de otras usando Gauss y la relación <math data-tex="\mathbf{E} = -\nabla V"><mi class="mv-bi">E</mi><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mi>V</mi></math>.
       </div>
     </div>
 
@@ -116,7 +114,7 @@
       <div class="formula-label">Carga inducida en cavidad</div>
       <div class="formula-math"><img class="typst-formula" src="aux_6_2.svg" alt=""></div>
       <div class="formula-desc">
-        Por Gauss aplicado a una superficie dentro del conductor (donde $\mathbf{E}=0$): el flujo es cero, luego $Q_{\text{enc}} = 0$, es decir, $q_{\text{cavidad}} + q_{\text{sup. int}} = 0$.
+        Por Gauss aplicado a una superficie dentro del conductor (donde <math data-tex="\mathbf{E}=0"><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math>): el flujo es cero, luego <math data-tex="Q_{\text{enc}} = 0"><msub><mi>Q</mi><mtext>enc</mtext></msub><mo>=</mo><mn>0</mn></math>, es decir, <math data-tex="q_{\text{cavidad}} + q_{\text{sup. int}} = 0"><msub><mi>q</mi><mtext>cavidad</mtext></msub><mo>+</mo><msub><mi>q</mi><mtext>sup. int</mtext></msub><mo>=</mo><mn>0</mn></math>.
       </div>
     </div>
   </section>
@@ -126,8 +124,8 @@
     <div class="tip-box">
       <div class="tip-title">✦ Secuencia lógica para resolver problemas con conductores</div>
       <ul>
-        <li>Aplica Gauss con superficie dentro del conductor ($\mathbf{E}=0$) para determinar carga inducida en la cavidad interior.</li>
-        <li>La carga total del conductor se conserva: $q_{\text{ext}} = q_{\text{total}} - q_{\text{int}}$.</li>
+        <li>Aplica Gauss con superficie dentro del conductor (<math data-tex="\mathbf{E}=0"><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math>) para determinar carga inducida en la cavidad interior.</li>
+        <li>La carga total del conductor se conserva: <math data-tex="q_{\text{ext}} = q_{\text{total}} - q_{\text{int}}"><msub><mi>q</mi><mtext>ext</mtext></msub><mo>=</mo><msub><mi>q</mi><mtext>total</mtext></msub><mo>−</mo><msub><mi>q</mi><mtext>int</mtext></msub></math>.</li>
         <li>El potencial del conductor es constante (desconocido, a determinar por condiciones de borde).</li>
         <li>El campo fuera solo depende de la distribución exterior; el campo en la cavidad solo de la carga dentro de ella.</li>
       </ul>

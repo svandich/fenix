@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 21 — Faraday-Lenz</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -63,20 +61,20 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
     <div class="unit-pill u6 bg-u6">Inducción · Aux 21–22</div>
     <h1>Auxiliar 21: Faraday-Lenz</h1>
-    <p class="desc">La ley de Faraday-Lenz establece que toda variación del flujo magnético a través de un circuito induce una fuerza electromotriz que se opone al cambio: $\varepsilon = -d\Phi/dt$. Es la tercera ecuación de Maxwell y unifica inducción, inductancia mutua y autoinductancia bajo un mismo principio variacional.</p>
+    <p class="desc">La ley de Faraday-Lenz establece que toda variación del flujo magnético a través de un circuito induce una fuerza electromotriz que se opone al cambio: <math data-tex="\varepsilon = -d\Phi/dt"><mi>ε</mi><mo>=</mo><mo form="prefix">−</mo><mi>d</mi><mi mathvariant="normal">Φ</mi><mi>/</mi><mi>d</mi><mi>t</mi></math>. Es la tercera ecuación de Maxwell y unifica inducción, inductancia mutua y autoinductancia bajo un mismo principio variacional.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Ley de Faraday-Lenz: $\varepsilon = -d\Phi/dt$ y principio de Lenz (la corriente inducida se opone al cambio de flujo)</li>
-        <li>Flujo magnético $\Phi = \iint_S \vec{B}\cdot d\vec{S}$ y su cálculo en geometrías con simetría</li>
-        <li>Forma diferencial de Faraday: $\nabla\times\vec{E} = -\partial\vec{B}/\partial t$ (tercera ecuación de Maxwell)</li>
-        <li>Forma integral: $\oint_\Gamma \vec{E}\cdot d\vec{\ell} = -\dfrac{\partial}{\partial t}\iint_S \vec{B}\cdot d\vec{S}$</li>
+        <li>Ley de Faraday-Lenz: <math data-tex="\varepsilon = -d\Phi/dt"><mi>ε</mi><mo>=</mo><mo form="prefix">−</mo><mi>d</mi><mi mathvariant="normal">Φ</mi><mi>/</mi><mi>d</mi><mi>t</mi></math> y principio de Lenz (la corriente inducida se opone al cambio de flujo)</li>
+        <li>Flujo magnético <math data-tex="\Phi = \iint_S \vec{B}\cdot d\vec{S}"><mi mathvariant="normal">Φ</mi><mo>=</mo><msub><mo form="prefix" lspace="0em">∬</mo><mi>S</mi></msub><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>S</mi><mo stretchy="true">⃗</mo></mover></math> y su cálculo en geometrías con simetría</li>
+        <li>Forma diferencial de Faraday: <math data-tex="\nabla\times\vec{E} = -\partial\vec{B}/\partial t"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>E</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix">−</mo><mi>∂</mi><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mi>/</mi><mi>∂</mi><mi>t</mi></math> (tercera ecuación de Maxwell)</li>
+        <li>Forma integral: <math data-tex="\oint_\Gamma \vec{E}\cdot d\vec{\ell} = -\dfrac{\partial}{\partial t}\iint_S \vec{B}\cdot d\vec{S}"><msub><mo lspace="0em">∮</mo><mi mathvariant="normal">Γ</mi></msub><mover accent="true"><mi>E</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix">−</mo><mfrac displaystyle="true"><mi>∂</mi><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><msub><mo form="prefix">∬</mo><mi>S</mi></msub><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>S</mi><mo stretchy="true">⃗</mo></mover></math></li>
         <li>Espira cayendo en campo magnético no uniforme: corriente inducida, fuerza de frenado y régimen estacionario (velocidad terminal)</li>
-        <li>Inductancia mutua $M$: $\mathcal{E}_2 = -M\,dI_1/dt$, simetría $M_{12} = M_{21}$</li>
-        <li>Autoinductancia $L$: $\mathcal{E} = -L\,dI/dt$, flujo concatenado $\Phi = LI$</li>
+        <li>Inductancia mutua <math data-tex="M"><mi>M</mi></math>: <math data-tex="\mathcal{E}_2 = -M\,dI_1/dt"><msub><mi>ℰ︀</mi><mn>2</mn></msub><mo>=</mo><mo form="prefix">−</mo><mi>M</mi><mspace width="0.1667em"/><mi>d</mi><msub><mi>I</mi><mn>1</mn></msub><mi>/</mi><mi>d</mi><mi>t</mi></math>, simetría <math data-tex="M_{12} = M_{21}"><msub><mi>M</mi><mn>12</mn></msub><mo>=</mo><msub><mi>M</mi><mn>21</mn></msub></math></li>
+        <li>Autoinductancia <math data-tex="L"><mi>L</mi></math>: <math data-tex="\mathcal{E} = -L\,dI/dt"><mi>ℰ︀</mi><mo>=</mo><mo form="prefix">−</mo><mi>L</mi><mspace width="0.1667em"/><mi>d</mi><mi>I</mi><mi>/</mi><mi>d</mi><mi>t</mi></math>, flujo concatenado <math data-tex="\Phi = LI"><mi mathvariant="normal">Φ</mi><mo>=</mo><mi>L</mi><mi>I</mi></math></li>
         <li>Bobina giratoria cerca de una placa conductora: corriente inducida en función del tiempo</li>
       </ul>
     </div>
@@ -87,19 +85,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Principio de Lenz</h3>
-        <p>El signo negativo en $\varepsilon = -d\Phi/dt$ no es un accidente: la corriente inducida genera un campo magnético que <em>se opone</em> al cambio de flujo. Si el flujo crece, la corriente inducida lo contrarresta; si decrece, lo refuerza. Es una manifestación de la conservación de energía.</p>
+        <p>El signo negativo en <math data-tex="\varepsilon = -d\Phi/dt"><mi>ε</mi><mo>=</mo><mo form="prefix">−</mo><mi>d</mi><mi mathvariant="normal">Φ</mi><mi>/</mi><mi>d</mi><mi>t</mi></math> no es un accidente: la corriente inducida genera un campo magnético que <em>se opone</em> al cambio de flujo. Si el flujo crece, la corriente inducida lo contrarresta; si decrece, lo refuerza. Es una manifestación de la conservación de energía.</p>
       </div>
       <div class="concept-card">
         <h3>Velocidad terminal</h3>
-        <p>Una espira que cae en un campo no uniforme experimenta una fuerza de frenado proporcional a su velocidad, $F_\text{mag} \propto v$. En régimen estacionario esta fuerza equilibra la gravedad y la espira alcanza la velocidad terminal $v_t = MgR/k^2$, donde $k$ agrupa los parámetros geométricos y del campo.</p>
+        <p>Una espira que cae en un campo no uniforme experimenta una fuerza de frenado proporcional a su velocidad, <math data-tex="F_\text{mag} \propto v"><msub><mi>F</mi><mtext>mag</mtext></msub><mo>∝</mo><mi>v</mi></math>. En régimen estacionario esta fuerza equilibra la gravedad y la espira alcanza la velocidad terminal <math data-tex="v_t = MgR/k^2"><msub><mi>v</mi><mi>t</mi></msub><mo>=</mo><mi>M</mi><mi>g</mi><mi>R</mi><mi>/</mi><msup><mi>k</mi><mn>2</mn></msup></math>, donde <math data-tex="k"><mi>k</mi></math> agrupa los parámetros geométricos y del campo.</p>
       </div>
       <div class="concept-card">
         <h3>Inductancia mutua</h3>
-        <p>Cuando la corriente $I_1$ en un circuito varía, el flujo que atraviesa un segundo circuito cambia e induce una fem $\mathcal{E}_2 = -M\,dI_1/dt$. El coeficiente $M$ (en henrios) depende solo de la geometría relativa y cumple $M_{12} = M_{21}$, independientemente de la forma de cada circuito.</p>
+        <p>Cuando la corriente <math data-tex="I_1"><msub><mi>I</mi><mn>1</mn></msub></math> en un circuito varía, el flujo que atraviesa un segundo circuito cambia e induce una fem <math data-tex="\mathcal{E}_2 = -M\,dI_1/dt"><msub><mi>ℰ︀</mi><mn>2</mn></msub><mo>=</mo><mo form="prefix">−</mo><mi>M</mi><mspace width="0.1667em"/><mi>d</mi><msub><mi>I</mi><mn>1</mn></msub><mi>/</mi><mi>d</mi><mi>t</mi></math>. El coeficiente <math data-tex="M"><mi>M</mi></math> (en henrios) depende solo de la geometría relativa y cumple <math data-tex="M_{12} = M_{21}"><msub><mi>M</mi><mn>12</mn></msub><mo>=</mo><msub><mi>M</mi><mn>21</mn></msub></math>, independientemente de la forma de cada circuito.</p>
       </div>
       <div class="concept-card">
         <h3>Autoinductancia</h3>
-        <p>Un circuito con corriente variable se "autoinducía": el campo que él mismo genera cambia y produce una fem $\mathcal{E} = -L\,dI/dt$ que se opone al cambio de corriente. La autoinductancia $L$ (en H) mide la eficiencia con que el circuito almacena energía magnética: $U = \tfrac{1}{2}LI^2$.</p>
+        <p>Un circuito con corriente variable se "autoinducía": el campo que él mismo genera cambia y produce una fem <math data-tex="\mathcal{E} = -L\,dI/dt"><mi>ℰ︀</mi><mo>=</mo><mo form="prefix">−</mo><mi>L</mi><mspace width="0.1667em"/><mi>d</mi><mi>I</mi><mi>/</mi><mi>d</mi><mi>t</mi></math> que se opone al cambio de corriente. La autoinductancia <math data-tex="L"><mi>L</mi></math> (en H) mide la eficiencia con que el circuito almacena energía magnética: <math data-tex="U = \tfrac{1}{2}LI^2"><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>L</mi><msup><mi>I</mi><mn>2</mn></msup></math>.</p>
       </div>
     </div>
   </section>
@@ -111,7 +109,7 @@
       <div class="formula-label">Ley de Faraday-Lenz — formas integral y diferencial</div>
       <div class="formula-math"><img class="typst-formula" src="aux_21_1.svg" alt=""></div>
       <div class="formula-desc">
-        La fem inducida es la tasa de cambio del flujo magnético, con signo negativo (principio de Lenz). La forma diferencial $\nabla\times\vec{E} = -\partial\vec{B}/\partial t$ es la tercera ecuación de Maxwell; la forma integral se obtiene por el teorema de Stokes. La orientación del contorno $\Gamma$ y la superficie $S$ quedan vinculadas por la regla de la mano derecha.
+        La fem inducida es la tasa de cambio del flujo magnético, con signo negativo (principio de Lenz). La forma diferencial <math data-tex="\nabla\times\vec{E} = -\partial\vec{B}/\partial t"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>E</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix">−</mo><mi>∂</mi><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mi>/</mi><mi>∂</mi><mi>t</mi></math> es la tercera ecuación de Maxwell; la forma integral se obtiene por el teorema de Stokes. La orientación del contorno <math data-tex="\Gamma"><mi mathvariant="normal">Γ</mi></math> y la superficie <math data-tex="S"><mi>S</mi></math> quedan vinculadas por la regla de la mano derecha.
       </div>
     </div>
 
@@ -119,7 +117,7 @@
       <div class="formula-label">Flujo magnético</div>
       <div class="formula-math"><img class="typst-formula" src="aux_21_2.svg" alt=""></div>
       <div class="formula-desc">
-        El flujo $\Phi$ mide cuántas líneas de $\vec{B}$ atraviesan la superficie $S$ delimitada por el circuito. Para una espira plana en campo uniforme: $\Phi = BA\cos\theta$. En campos no uniformes hay que integrar. La variación de $\Phi$ puede deberse a que $\vec{B}$ cambia en el tiempo, a que la superficie se mueve o deforma, o a ambas cosas a la vez.
+        El flujo <math data-tex="\Phi"><mi mathvariant="normal">Φ</mi></math> mide cuántas líneas de <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> atraviesan la superficie <math data-tex="S"><mi>S</mi></math> delimitada por el circuito. Para una espira plana en campo uniforme: <math data-tex="\Phi = BA\cos\theta"><mi mathvariant="normal">Φ</mi><mo>=</mo><mi>B</mi><mi>A</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">cos</mo><mi>θ</mi></math>. En campos no uniformes hay que integrar. La variación de <math data-tex="\Phi"><mi mathvariant="normal">Φ</mi></math> puede deberse a que <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> cambia en el tiempo, a que la superficie se mueve o deforma, o a ambas cosas a la vez.
       </div>
     </div>
 
@@ -127,7 +125,7 @@
       <div class="formula-label">Corriente inducida y fuerza de frenado (espira en caída libre)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_21_3.svg" alt=""></div>
       <div class="formula-desc">
-        Para una espira circular de radio $a$ y resistencia $R$ cayendo en el campo $B_z = Cz$: el flujo es $\Phi = C z \pi a^2$, la fem inducida es $\varepsilon = -C\pi a^2 \dot{z}$, la corriente es $I = \varepsilon/R$, y la fuerza magnética vertical (que frena la caída) es $F_z = -C^2\pi^2 a^4 v / R$. El régimen estacionario se alcanza cuando $F_z + Mg = 0$.
+        Para una espira circular de radio <math data-tex="a"><mi>a</mi></math> y resistencia <math data-tex="R"><mi>R</mi></math> cayendo en el campo <math data-tex="B_z = Cz"><msub><mi>B</mi><mi>z</mi></msub><mo>=</mo><mi>C</mi><mi>z</mi></math>: el flujo es <math data-tex="\Phi = C z \pi a^2"><mi mathvariant="normal">Φ</mi><mo>=</mo><mi>C</mi><mi>z</mi><mi>π</mi><msup><mi>a</mi><mn>2</mn></msup></math>, la fem inducida es <math data-tex="\varepsilon = -C\pi a^2 \dot{z}"><mi>ε</mi><mo>=</mo><mo form="prefix">−</mo><mi>C</mi><mi>π</mi><msup><mi>a</mi><mn>2</mn></msup><mover accent="true"><mi>z</mi><mo>̇</mo></mover></math>, la corriente es <math data-tex="I = \varepsilon/R"><mi>I</mi><mo>=</mo><mi>ε</mi><mi>/</mi><mi>R</mi></math>, y la fuerza magnética vertical (que frena la caída) es <math data-tex="F_z = -C^2\pi^2 a^4 v / R"><msub><mi>F</mi><mi>z</mi></msub><mo>=</mo><mo form="prefix">−</mo><msup><mi>C</mi><mn>2</mn></msup><msup><mi>π</mi><mn>2</mn></msup><msup><mi>a</mi><mn>4</mn></msup><mi>v</mi><mi>/</mi><mi>R</mi></math>. El régimen estacionario se alcanza cuando <math data-tex="F_z + Mg = 0"><msub><mi>F</mi><mi>z</mi></msub><mo>+</mo><mi>M</mi><mi>g</mi><mo>=</mo><mn>0</mn></math>.
       </div>
     </div>
 
@@ -135,7 +133,7 @@
       <div class="formula-label">Inductancia mutua y autoinductancia</div>
       <div class="formula-math"><img class="typst-formula" src="aux_21_4.svg" alt=""></div>
       <div class="formula-desc">
-        La inductancia mutua $M$ relaciona la corriente de un circuito con el flujo que atraviesa el otro: $\Phi_2 = M I_1$. La autoinductancia $L$ relaciona la propia corriente con el flujo concatenado: $\Phi = L I$. Ambas se miden en henrios (H = Wb/A). Para una bobina solenoidea de $N$ espiras, radio $r$, longitud $h$: $L = \mu_0 N^2 \pi r^2 / h$.
+        La inductancia mutua <math data-tex="M"><mi>M</mi></math> relaciona la corriente de un circuito con el flujo que atraviesa el otro: <math data-tex="\Phi_2 = M I_1"><msub><mi mathvariant="normal">Φ</mi><mn>2</mn></msub><mo>=</mo><mi>M</mi><msub><mi>I</mi><mn>1</mn></msub></math>. La autoinductancia <math data-tex="L"><mi>L</mi></math> relaciona la propia corriente con el flujo concatenado: <math data-tex="\Phi = L I"><mi mathvariant="normal">Φ</mi><mo>=</mo><mi>L</mi><mi>I</mi></math>. Ambas se miden en henrios (H = Wb/A). Para una bobina solenoidea de <math data-tex="N"><mi>N</mi></math> espiras, radio <math data-tex="r"><mi>r</mi></math>, longitud <math data-tex="h"><mi>h</mi></math>: <math data-tex="L = \mu_0 N^2 \pi r^2 / h"><mi>L</mi><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><msup><mi>N</mi><mn>2</mn></msup><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup><mi>/</mi><mi>h</mi></math>.
       </div>
     </div>
 
@@ -143,7 +141,7 @@
       <div class="formula-label">Fem inducida por inductancia mutua y autoinductancia</div>
       <div class="formula-math"><img class="typst-formula" src="aux_21_5.svg" alt=""></div>
       <div class="formula-desc">
-        Cuando la corriente $I_1$ varía, induce en el circuito 2 una fem $\mathcal{E}_2 = -M\,dI_1/dt$. La simetría $M_{12} = M_{21}$ garantiza reciprocidad: no importa cuál circuito "excita" al otro. La fem autoinducida $\mathcal{E} = -L\,dI/dt$ se opone a todo cambio de corriente (inercia eléctrica).
+        Cuando la corriente <math data-tex="I_1"><msub><mi>I</mi><mn>1</mn></msub></math> varía, induce en el circuito 2 una fem <math data-tex="\mathcal{E}_2 = -M\,dI_1/dt"><msub><mi>ℰ︀</mi><mn>2</mn></msub><mo>=</mo><mo form="prefix">−</mo><mi>M</mi><mspace width="0.1667em"/><mi>d</mi><msub><mi>I</mi><mn>1</mn></msub><mi>/</mi><mi>d</mi><mi>t</mi></math>. La simetría <math data-tex="M_{12} = M_{21}"><msub><mi>M</mi><mn>12</mn></msub><mo>=</mo><msub><mi>M</mi><mn>21</mn></msub></math> garantiza reciprocidad: no importa cuál circuito "excita" al otro. La fem autoinducida <math data-tex="\mathcal{E} = -L\,dI/dt"><mi>ℰ︀</mi><mo>=</mo><mo form="prefix">−</mo><mi>L</mi><mspace width="0.1667em"/><mi>d</mi><mi>I</mi><mi>/</mi><mi>d</mi><mi>t</mi></math> se opone a todo cambio de corriente (inercia eléctrica).
       </div>
     </div>
 
@@ -154,13 +152,13 @@
     <div class="tip-box">
       <div class="tip-title">✦ Estrategia para problemas de inducción</div>
       <ul>
-        <li>Siempre comenzar calculando el flujo $\Phi = \iint \vec{B}\cdot d\vec{S}$ a través del circuito. Identificar qué variable cambia con el tiempo ($z$, $\theta$, $I$, etc.).</li>
-        <li>Aplicar $\varepsilon = -d\Phi/dt$. Si el flujo crece (por la orientación elegida), la fem es negativa, lo que significa que la corriente inducida fluye en sentido opuesto a la normal elegida por la mano derecha.</li>
-        <li>Para determinar el sentido de la corriente inducida usar directamente el principio de Lenz: la corriente se opone al cambio de flujo. Si $\Phi$ aumenta, la corriente crea un campo que se opone al campo exterior.</li>
-        <li>En la espira cayendo: usar la componente radial del campo $B_r$ para obtener la fuerza vertical $F_z = I \oint (d\vec{\ell}\times\vec{B})_z$. Usar la ley de Gauss magnética ($\nabla\cdot\vec{B}=0$) para relacionar $B_r$ con $B_z = Cz$: resulta $B_r = -Ca/2$.</li>
-        <li>En régimen estacionario $\dot{v} = 0$: igualar la fuerza magnética de frenado con la gravedad para encontrar la velocidad terminal.</li>
-        <li>Para inductancia mutua de una bobina giratoria: el flujo varía como $\Phi(t) = M I_0 \cos(\omega t + \phi_0)$, y la corriente inducida es $I(t) = (M\omega I_0 / R)\sin(\omega t + \phi_0)$.</li>
-        <li>La autoinductancia de la bobina solenoidal: $L = \mu_0 N^2 \pi r^2 / h$, independiente del ángulo de rotación (propiedad geométrica del bobinado).</li>
+        <li>Siempre comenzar calculando el flujo <math data-tex="\Phi = \iint \vec{B}\cdot d\vec{S}"><mi mathvariant="normal">Φ</mi><mo>=</mo><mo form="prefix" lspace="0em">∬</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mover accent="true"><mi>S</mi><mo stretchy="true">⃗</mo></mover></math> a través del circuito. Identificar qué variable cambia con el tiempo (<math data-tex="z"><mi>z</mi></math>, <math data-tex="\theta"><mi>θ</mi></math>, <math data-tex="I"><mi>I</mi></math>, etc.).</li>
+        <li>Aplicar <math data-tex="\varepsilon = -d\Phi/dt"><mi>ε</mi><mo>=</mo><mo form="prefix">−</mo><mi>d</mi><mi mathvariant="normal">Φ</mi><mi>/</mi><mi>d</mi><mi>t</mi></math>. Si el flujo crece (por la orientación elegida), la fem es negativa, lo que significa que la corriente inducida fluye en sentido opuesto a la normal elegida por la mano derecha.</li>
+        <li>Para determinar el sentido de la corriente inducida usar directamente el principio de Lenz: la corriente se opone al cambio de flujo. Si <math data-tex="\Phi"><mi mathvariant="normal">Φ</mi></math> aumenta, la corriente crea un campo que se opone al campo exterior.</li>
+        <li>En la espira cayendo: usar la componente radial del campo <math data-tex="B_r"><msub><mi>B</mi><mi>r</mi></msub></math> para obtener la fuerza vertical <math data-tex="F_z = I \oint (d\vec{\ell}\times\vec{B})_z"><msub><mi>F</mi><mi>z</mi></msub><mo>=</mo><mi>I</mi><mo form="prefix">∮</mo><msub><mrow><mo>(</mo><mrow><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></mrow><mo>)</mo></mrow><mi>z</mi></msub></math>. Usar la ley de Gauss magnética (<math data-tex="\nabla\cdot\vec{B}=0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mn>0</mn></math>) para relacionar <math data-tex="B_r"><msub><mi>B</mi><mi>r</mi></msub></math> con <math data-tex="B_z = Cz"><msub><mi>B</mi><mi>z</mi></msub><mo>=</mo><mi>C</mi><mi>z</mi></math>: resulta <math data-tex="B_r = -Ca/2"><msub><mi>B</mi><mi>r</mi></msub><mo>=</mo><mo form="prefix">−</mo><mi>C</mi><mi>a</mi><mi>/</mi><mn>2</mn></math>.</li>
+        <li>En régimen estacionario <math data-tex="\dot{v} = 0"><mover accent="true"><mi>v</mi><mo>̇</mo></mover><mo>=</mo><mn>0</mn></math>: igualar la fuerza magnética de frenado con la gravedad para encontrar la velocidad terminal.</li>
+        <li>Para inductancia mutua de una bobina giratoria: el flujo varía como <math data-tex="\Phi(t) = M I_0 \cos(\omega t + \phi_0)"><mi mathvariant="normal">Φ</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mi>M</mi><msub><mi>I</mi><mn>0</mn></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">cos</mo><mrow><mo>(</mo><mrow><mi>ω</mi><mi>t</mi><mo>+</mo><msub><mi>ϕ</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></math>, y la corriente inducida es <math data-tex="I(t) = (M\omega I_0 / R)\sin(\omega t + \phi_0)"><mi>I</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>M</mi><mi>ω</mi><msub><mi>I</mi><mn>0</mn></msub><mi>/</mi><mi>R</mi></mrow><mo>)</mo></mrow><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">sin</mo><mrow><mo>(</mo><mrow><mi>ω</mi><mi>t</mi><mo>+</mo><msub><mi>ϕ</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></math>.</li>
+        <li>La autoinductancia de la bobina solenoidal: <math data-tex="L = \mu_0 N^2 \pi r^2 / h"><mi>L</mi><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><msup><mi>N</mi><mn>2</mn></msup><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup><mi>/</mi><mi>h</mi></math>, independiente del ángulo de rotación (propiedad geométrica del bobinado).</li>
       </ul>
     </div>
   </section>

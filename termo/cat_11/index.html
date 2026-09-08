@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 11 — Mecánica Estadística y Función de Partición</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -88,13 +84,13 @@
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Microestados ($\omega$) y macroestados: cuántas formas hay de realizar un macroestado</li>
-        <li>Entropía de Boltzmann: $S = k_B\ln\Omega$</li>
+        <li>Microestados (<math data-tex="\omega"><mi>ω</mi></math>) y macroestados: cuántas formas hay de realizar un macroestado</li>
+        <li>Entropía de Boltzmann: <math data-tex="S = k_B\ln\Omega"><mi>S</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi mathvariant="normal">Ω</mi></math></li>
         <li>Maximización de la entropía: el equilibrio como estado de máxima probabilidad</li>
-        <li>Distribución de Boltzmann: probabilidad de un estado con energía $\epsilon_i$</li>
-        <li>Función de partición canónica: $Z = \sum_i e^{-\epsilon_i/k_BT}$</li>
-        <li>Energía libre de Helmholtz: $F = -k_BT\ln Z$</li>
-        <li>Derivación de magnitudes termodinámicas desde $Z$: $U$, $S$, $P$</li>
+        <li>Distribución de Boltzmann: probabilidad de un estado con energía <math data-tex="\epsilon_i"><msub><mi>ϵ</mi><mi>i</mi></msub></math></li>
+        <li>Función de partición canónica: <math data-tex="Z = \sum_i e^{-\epsilon_i/(k_BT)}"><mi>Z</mi><mo>=</mo><msub><mo form="prefix" lspace="0em">∑</mo><mi>i</mi></msub><msup><mi>e</mi><mrow><mo>−</mo><msub><mi>ϵ</mi><mi>i</mi></msub><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup></math></li>
+        <li>Energía libre de Helmholtz: <math data-tex="F = -k_BT\ln Z"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math></li>
+        <li>Derivación de magnitudes termodinámicas desde <math data-tex="Z"><mi>Z</mi></math>: <math data-tex="U"><mi>U</mi></math>, <math data-tex="S"><mi>S</mi></math>, <math data-tex="P"><mi>P</mi></math></li>
       </ul>
     </div>
   </section>
@@ -104,19 +100,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Microestados y macroestados</h3>
-        <p>Un <em>macroestado</em> se describe por las variables macroscópicas ($T$, $P$, $V$, $U$). Un <em>microestado</em> especifica el estado completo de todas las partículas. $\Omega$ es el número de microestados compatibles con el macroestado dado. El equilibrio corresponde al macroestado con mayor $\Omega$.</p>
+        <p>Un <em>macroestado</em> se describe por las variables macroscópicas (<math data-tex="T"><mi>T</mi></math>, <math data-tex="P"><mi>P</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="U"><mi>U</mi></math>). Un <em>microestado</em> especifica el estado completo de todas las partículas. <math data-tex="\Omega"><mi mathvariant="normal">Ω</mi></math> es el número de microestados compatibles con el macroestado dado. El equilibrio corresponde al macroestado con mayor <math data-tex="\Omega"><mi mathvariant="normal">Ω</mi></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Entropía de Boltzmann</h3>
-        <p>$S = k_B\ln\Omega$ conecta la descripción estadística (microestados) con la termodinámica (entropía). El logaritmo aparece porque queremos que la entropía sea extensiva: $\Omega$ de dos sistemas independientes se multiplica, pero sus entropías deben sumarse.</p>
+        <p><math data-tex="S = k_B\ln\Omega"><mi>S</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi mathvariant="normal">Ω</mi></math> conecta la descripción estadística (microestados) con la termodinámica (entropía). El logaritmo aparece porque queremos que la entropía sea extensiva: <math data-tex="\Omega"><mi mathvariant="normal">Ω</mi></math> de dos sistemas independientes se multiplica, pero sus entropías deben sumarse.</p>
       </div>
       <div class="concept-card">
         <h3>Distribución de Boltzmann</h3>
-        <p>La probabilidad de encontrar el sistema en un microestado de energía $\epsilon_i$ es $p_i = e^{-\epsilon_i/k_BT}/Z$. El factor $e^{-\epsilon/k_BT}$ se llama factor de Boltzmann. A mayor temperatura, los estados de alta energía son más accesibles.</p>
+        <p>La probabilidad de encontrar el sistema en un microestado de energía <math data-tex="\epsilon_i"><msub><mi>ϵ</mi><mi>i</mi></msub></math> es <math data-tex="p_i = e^{-\epsilon_i/(k_BT)}/Z"><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><msub><mi>ϵ</mi><mi>i</mi></msub><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup><mi>/</mi><mi>Z</mi></math>. El factor <math data-tex="e^{-\epsilon/(k_BT)}"><msup><mi>e</mi><mrow><mo>−</mo><mi>ϵ</mi><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup></math> se llama factor de Boltzmann. A mayor temperatura, los estados de alta energía son más accesibles.</p>
       </div>
       <div class="concept-card">
-        <h3>Función de partición $Z$</h3>
-        <p>$Z = \sum_i e^{-\epsilon_i/k_BT}$ suma sobre todos los microestados. Es el "generador" de toda la termodinámica: diferenciando $\ln Z$ con respecto a $T$ y $V$ se obtienen $U$, $P$, $S$ y $F$. El nombre viene del alemán <em>Zustandssumme</em> (suma de estados).</p>
+        <h3>Función de partición <math data-tex="Z"><mi>Z</mi></math></h3>
+        <p><math data-tex="Z = \sum_i e^{-\epsilon_i/(k_BT)}"><mi>Z</mi><mo>=</mo><msub><mo form="prefix" lspace="0em">∑</mo><mi>i</mi></msub><msup><mi>e</mi><mrow><mo>−</mo><msub><mi>ϵ</mi><mi>i</mi></msub><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup></math> suma sobre todos los microestados. Es el "generador" de toda la termodinámica: diferenciando <math data-tex="\ln Z"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math> con respecto a <math data-tex="T"><mi>T</mi></math> y <math data-tex="V"><mi>V</mi></math> se obtienen <math data-tex="U"><mi>U</mi></math>, <math data-tex="P"><mi>P</mi></math>, <math data-tex="S"><mi>S</mi></math> y <math data-tex="F"><mi>F</mi></math>. El nombre viene del alemán <em>Zustandssumme</em> (suma de estados).</p>
       </div>
     </div>
   </section>
@@ -128,7 +124,7 @@
       <div class="formula-label">Entropía de Boltzmann</div>
       <div class="formula-math"><img class="typst-formula" src="cat_11_1.svg" alt=""></div>
       <div class="formula-desc">
-        $\Omega$ número de microestados compatibles con el macroestado · $k_B = 1.38\times10^{-23}$ J/K.
+        <math data-tex="\Omega"><mi mathvariant="normal">Ω</mi></math> número de microestados compatibles con el macroestado · <math data-tex="k_B = 1.38\times10^{-23}"><msub><mi>k</mi><mi>B</mi></msub><mo>=</mo><mn>1.38</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>23</mn></mrow></msup></math> J/K.
         Esta fórmula está grabada en la lápida de Boltzmann en Viena.
       </div>
     </div>
@@ -137,7 +133,7 @@
       <div class="formula-label">Distribución de Boltzmann (ensamble canónico)</div>
       <div class="formula-math"><img class="typst-formula" src="cat_11_2.svg" alt=""></div>
       <div class="formula-desc">
-        $p_i$ probabilidad del microestado $i$ con energía $\epsilon_i$ · $Z$ función de partición (factor de normalización).
+        <math data-tex="p_i"><msub><mi>p</mi><mi>i</mi></msub></math> probabilidad del microestado <math data-tex="i"><mi>i</mi></math> con energía <math data-tex="\epsilon_i"><msub><mi>ϵ</mi><mi>i</mi></msub></math> · <math data-tex="Z"><mi>Z</mi></math> función de partición (factor de normalización).
       </div>
     </div>
 
@@ -145,8 +141,8 @@
       <div class="formula-label">Energía interna desde la función de partición</div>
       <div class="formula-math"><img class="typst-formula" src="cat_11_3.svg" alt=""></div>
       <div class="formula-desc">
-        Equivalentemente: $U = k_BT^2\,\dfrac{\partial \ln Z}{\partial T}$.
-        Permite calcular $U$ sin resolver la mecánica microscópica explícitamente.
+        Equivalentemente: <math data-tex="U = k_BT^2\,\dfrac{\partial \ln Z}{\partial T}"><mi>U</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><msup><mi>T</mi><mn>2</mn></msup><mspace width="0.1667em"/><mfrac displaystyle="true"><mrow><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac></math>.
+        Permite calcular <math data-tex="U"><mi>U</mi></math> sin resolver la mecánica microscópica explícitamente.
       </div>
     </div>
 
@@ -154,8 +150,8 @@
       <div class="formula-label">Energía libre de Helmholtz</div>
       <div class="formula-math"><img class="typst-formula" src="cat_11_4.svg" alt=""></div>
       <div class="formula-desc">
-        $F$ es la energía disponible para hacer trabajo a temperatura constante.
-        De $F$ se derivan todas las demás magnitudes: $S = -(\partial F/\partial T)_V$, $P = -(\partial F/\partial V)_T$.
+        <math data-tex="F"><mi>F</mi></math> es la energía disponible para hacer trabajo a temperatura constante.
+        De <math data-tex="F"><mi>F</mi></math> se derivan todas las demás magnitudes: <math data-tex="S = -(\partial F/\partial T)_V"><mi>S</mi><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>, <math data-tex="P = -(\partial F/\partial V)_T"><mi>P</mi><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>.
       </div>
     </div>
   </section>
@@ -166,9 +162,9 @@
       <div class="tip-title">✦ La lógica de la mecánica estadística</div>
       <ul>
         <li>La termodinámica clásica postuló la entropía; la mecánica estadística la <em>derivó</em> de principios más fundamentales (probabilidades de microestados).</li>
-        <li>La función de partición $Z$ codifica toda la física del sistema. Una vez que conoces $Z$ en función de $T$ y $V$, puedes calcular cualquier propiedad termodinámica.</li>
-        <li>El factor de Boltzmann $e^{-\epsilon/k_BT}$ tiene una interpretación física directa: la probabilidad relativa de un estado con energía $\epsilon$ comparado con el estado de energía cero.</li>
-        <li>A $T \to 0$: solo el estado de menor energía está poblado. A $T \to \infty$: todos los estados son igualmente probables.</li>
+        <li>La función de partición <math data-tex="Z"><mi>Z</mi></math> codifica toda la física del sistema. Una vez que conoces <math data-tex="Z"><mi>Z</mi></math> en función de <math data-tex="T"><mi>T</mi></math> y <math data-tex="V"><mi>V</mi></math>, puedes calcular cualquier propiedad termodinámica.</li>
+        <li>El factor de Boltzmann <math data-tex="e^{-\epsilon/(k_BT)}"><msup><mi>e</mi><mrow><mo>−</mo><mi>ϵ</mi><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup></math> tiene una interpretación física directa: la probabilidad relativa de un estado con energía <math data-tex="\epsilon"><mi>ϵ</mi></math> comparado con el estado de energía cero.</li>
+        <li>A <math data-tex="T \to 0"><mi>T</mi><mo stretchy="false">→</mo><mn>0</mn></math>: solo el estado de menor energía está poblado. A <math data-tex="T \to \infty"><mi>T</mi><mo stretchy="false">→</mo><mi>∞</mi></math>: todos los estados son igualmente probables.</li>
         <li>La distribución de Maxwell (aux. 5) es un caso particular de la distribución de Boltzmann aplicada a los estados de traslación de las moléculas.</li>
       </ul>
     </div>
@@ -179,38 +175,38 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q11_1" data-correct="1">
-        <div class="quiz-question">1. ¿Por qué la entropía de Boltzmann $S = k_B\ln\Omega$ usa el logaritmo de $\Omega$ y no $\Omega$ directamente?</div>
+        <div class="quiz-question">1. ¿Por qué la entropía de Boltzmann <math data-tex="S = k_B\ln\Omega"><mi>S</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi mathvariant="normal">Ω</mi></math> usa el logaritmo de <math data-tex="\Omega"><mi mathvariant="normal">Ω</mi></math> y no <math data-tex="\Omega"><mi mathvariant="normal">Ω</mi></math> directamente?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q11_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque sin el logaritmo la entropía podría ser negativa para $\Omega < 1$</span></label>
-          <label class="quiz-option"><input type="radio" name="q11_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Para que la entropía sea extensiva: $\Omega$ de dos sistemas independientes se multiplica, pero las entropías deben sumarse; el logaritmo convierte la multiplicación en suma</span></label>
-          <label class="quiz-option"><input type="radio" name="q11_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque Boltzmann definió el logaritmo por analogía con la entropía de Clausius $dS = \bar{\delta}Q/T$</span></label>
-          <label class="quiz-option"><input type="radio" name="q11_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Por convención matemática para que $S$ tenga unidades de energía dividida por temperatura</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque sin el logaritmo la entropía podría ser negativa para <math data-tex="\Omega &lt; 1"><mi mathvariant="normal">Ω</mi><mo>&lt;</mo><mn>1</mn></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Para que la entropía sea extensiva: <math data-tex="\Omega"><mi mathvariant="normal">Ω</mi></math> de dos sistemas independientes se multiplica, pero las entropías deben sumarse; el logaritmo convierte la multiplicación en suma</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque Boltzmann definió el logaritmo por analogía con la entropía de Clausius <math data-tex="dS = \bar{\delta}Q/T"><mi>d</mi><mi>S</mi><mo>=</mo><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>Q</mi><mi>/</mi><mi>T</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Por convención matemática para que <math data-tex="S"><mi>S</mi></math> tenga unidades de energía dividida por temperatura</span></label>
         </div>
-        <script type="text/explanation" id="q11_1-exp">Si dos sistemas independientes tienen $\Omega_1$ y $\Omega_2$ microestados, el sistema combinado tiene $\Omega = \Omega_1 \cdot \Omega_2$ microestados. La entropía debe ser extensiva (sumarse): $S = S_1 + S_2$. Esto exige $S \propto \ln\Omega$, porque $\ln(\Omega_1\cdot\Omega_2) = \ln\Omega_1 + \ln\Omega_2$. El logaritmo es la única función que convierte la multiplicación de $\Omega$ en la suma de entropías.</script>
+        <script type="text/explanation" id="q11_1-exp">Si dos sistemas independientes tienen <math data-tex="\Omega_1"><msub><mi mathvariant="normal">Ω</mi><mn>1</mn></msub></math> y <math data-tex="\Omega_2"><msub><mi mathvariant="normal">Ω</mi><mn>2</mn></msub></math> microestados, el sistema combinado tiene <math data-tex="\Omega = \Omega_1 \cdot \Omega_2"><mi mathvariant="normal">Ω</mi><mo>=</mo><msub><mi mathvariant="normal">Ω</mi><mn>1</mn></msub><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><msub><mi mathvariant="normal">Ω</mi><mn>2</mn></msub></math> microestados. La entropía debe ser extensiva (sumarse): <math data-tex="S = S_1 + S_2"><mi>S</mi><mo>=</mo><msub><mi>S</mi><mn>1</mn></msub><mo>+</mo><msub><mi>S</mi><mn>2</mn></msub></math>. Esto exige <math data-tex="S \propto \ln\Omega"><mi>S</mi><mo>∝</mo><mo form="prefix" lspace="0em" rspace="0.16666666666666666em">ln</mo><mi mathvariant="normal">Ω</mi></math>, porque <math data-tex="\ln(\Omega_1\cdot\Omega_2) = \ln\Omega_1 + \ln\Omega_2"><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi mathvariant="normal">Ω</mi><mn>1</mn></msub><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><msub><mi mathvariant="normal">Ω</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow><mo>=</mo><mo form="prefix" lspace="0em" rspace="0.16666666666666666em">ln</mo><msub><mi mathvariant="normal">Ω</mi><mn>1</mn></msub><mo>+</mo><mo form="prefix" lspace="0em" rspace="0.16666666666666666em">ln</mo><msub><mi mathvariant="normal">Ω</mi><mn>2</mn></msub></math>. El logaritmo es la única función que convierte la multiplicación de <math data-tex="\Omega"><mi mathvariant="normal">Ω</mi></math> en la suma de entropías.</script>
         <div class="quiz-feedback" id="q11_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q11_2" data-correct="2">
-        <div class="quiz-question">2. Un sistema tiene dos estados con energías $\epsilon_1 < \epsilon_2$. Al aumentar la temperatura $T$, la probabilidad del estado de mayor energía $\epsilon_2$...</div>
+        <div class="quiz-question">2. Un sistema tiene dos estados con energías <math data-tex="\epsilon_1 &lt; \epsilon_2"><msub><mi>ϵ</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>ϵ</mi><mn>2</mn></msub></math>. Al aumentar la temperatura <math data-tex="T"><mi>T</mi></math>, la probabilidad del estado de mayor energía <math data-tex="\epsilon_2"><msub><mi>ϵ</mi><mn>2</mn></msub></math>...</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q11_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Disminuye: los estados de alta energía siempre son menos probables, independientemente de $T$</span></label>
-          <label class="quiz-option"><input type="radio" name="q11_2" value="1"><span class="opt-letter">B</span><span class="opt-text">No cambia: la distribución de Boltzmann no depende de $T$ en el cociente de probabilidades</span></label>
-          <label class="quiz-option"><input type="radio" name="q11_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Aumenta: el factor de Boltzmann $e^{-\epsilon/k_BT}$ se vuelve más uniforme a $T$ alta; en el límite $T\to\infty$ ambos estados son igualmente probables</span></label>
-          <label class="quiz-option"><input type="radio" name="q11_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Puede aumentar o disminuir dependiendo del valor concreto de $\epsilon_2 - \epsilon_1$</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Disminuye: los estados de alta energía siempre son menos probables, independientemente de <math data-tex="T"><mi>T</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="1"><span class="opt-letter">B</span><span class="opt-text">No cambia: la distribución de Boltzmann no depende de <math data-tex="T"><mi>T</mi></math> en el cociente de probabilidades</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Aumenta: el factor de Boltzmann <math data-tex="e^{-\epsilon/(k_BT)}"><msup><mi>e</mi><mrow><mo>−</mo><mi>ϵ</mi><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup></math> se vuelve más uniforme a <math data-tex="T"><mi>T</mi></math> alta; en el límite <math data-tex="T\to\infty"><mi>T</mi><mo stretchy="false">→</mo><mi>∞</mi></math> ambos estados son igualmente probables</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Puede aumentar o disminuir dependiendo del valor concreto de <math data-tex="\epsilon_2 - \epsilon_1"><msub><mi>ϵ</mi><mn>2</mn></msub><mo>−</mo><msub><mi>ϵ</mi><mn>1</mn></msub></math></span></label>
         </div>
-        <script type="text/explanation" id="q11_2-exp">La probabilidad de un estado con energía $\epsilon$ es $p \propto e^{-\epsilon/k_BT}$. A temperatura baja ($k_BT \ll \epsilon_2-\epsilon_1$), el factor $e^{-\epsilon_2/k_BT} \approx 0$: el estado de alta energía está prácticamente despoblado. A temperatura alta ($k_BT \gg \epsilon_2-\epsilon_1$), $e^{-\epsilon/k_BT} \approx 1$ para todos los estados: todos son igualmente probables. Así, la probabilidad del estado de mayor energía siempre aumenta con $T$.</script>
+        <script type="text/explanation" id="q11_2-exp">La probabilidad de un estado con energía <math data-tex="\epsilon"><mi>ϵ</mi></math> es <math data-tex="p \propto e^{-\epsilon/(k_BT)}"><mi>p</mi><mo>∝</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>ϵ</mi><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup></math>. A temperatura baja (<math data-tex="k_BT \ll \epsilon_2-\epsilon_1"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo>≪</mo><msub><mi>ϵ</mi><mn>2</mn></msub><mo>−</mo><msub><mi>ϵ</mi><mn>1</mn></msub></math>), el factor <math data-tex="e^{-\epsilon_2/(k_BT)} \approx 0"><msup><mi>e</mi><mrow><mo>−</mo><msub><mi>ϵ</mi><mn>2</mn></msub><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>≈</mo><mn>0</mn></math>: el estado de alta energía está prácticamente despoblado. A temperatura alta (<math data-tex="k_BT \gg \epsilon_2-\epsilon_1"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo>≫</mo><msub><mi>ϵ</mi><mn>2</mn></msub><mo>−</mo><msub><mi>ϵ</mi><mn>1</mn></msub></math>), <math data-tex="e^{-\epsilon/(k_BT)} \approx 1"><msup><mi>e</mi><mrow><mo>−</mo><mi>ϵ</mi><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>≈</mo><mn>1</mn></math> para todos los estados: todos son igualmente probables. Así, la probabilidad del estado de mayor energía siempre aumenta con <math data-tex="T"><mi>T</mi></math>.</script>
         <div class="quiz-feedback" id="q11_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q11_3" data-correct="1">
-        <div class="quiz-question">3. ¿Cómo se obtiene la energía interna media $U$ a partir de la función de partición $Z$?</div>
+        <div class="quiz-question">3. ¿Cómo se obtiene la energía interna media <math data-tex="U"><mi>U</mi></math> a partir de la función de partición <math data-tex="Z"><mi>Z</mi></math>?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q11_3" value="0"><span class="opt-letter">A</span><span class="opt-text">$U = Z \cdot k_BT$, porque $Z$ ya encierra toda la energía del sistema</span></label>
-          <label class="quiz-option"><input type="radio" name="q11_3" value="1"><span class="opt-letter">B</span><span class="opt-text">$U = -\dfrac{\partial \ln Z}{\partial \beta}$ con $\beta = 1/(k_BT)$: derivar el logaritmo de $Z$ respecto de $\beta$ extrae la energía media ponderada por la distribución de Boltzmann</span></label>
-          <label class="quiz-option"><input type="radio" name="q11_3" value="2"><span class="opt-letter">C</span><span class="opt-text">$U = \ln Z / T$, por analogía con la energía libre $F = -k_BT\ln Z$</span></label>
-          <label class="quiz-option"><input type="radio" name="q11_3" value="3"><span class="opt-letter">D</span><span class="opt-text">$U = Z^2 k_B$, porque la energía es cuadrática en la función de partición</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="0"><span class="opt-letter">A</span><span class="opt-text"><math data-tex="U = Z \cdot k_BT"><mi>U</mi><mo>=</mo><mi>Z</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>, porque <math data-tex="Z"><mi>Z</mi></math> ya encierra toda la energía del sistema</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="U = -\dfrac{\partial \ln Z}{\partial \beta}"><mi>U</mi><mo>=</mo><mo form="prefix">−</mo><mfrac displaystyle="true"><mrow><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></mrow><mrow><mi>∂</mi><mi>β</mi></mrow></mfrac></math> con <math data-tex="\beta = 1/(k_BT)"><mi>β</mi><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mo>)</mo></mrow></math>: derivar el logaritmo de <math data-tex="Z"><mi>Z</mi></math> respecto de <math data-tex="\beta"><mi>β</mi></math> extrae la energía media ponderada por la distribución de Boltzmann</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="U = \ln Z / T"><mi>U</mi><mo>=</mo><mo form="prefix" lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>T</mi></math>, por analogía con la energía libre <math data-tex="F = -k_BT\ln Z"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="3"><span class="opt-letter">D</span><span class="opt-text"><math data-tex="U = Z^2 k_B"><mi>U</mi><mo>=</mo><msup><mi>Z</mi><mn>2</mn></msup><msub><mi>k</mi><mi>B</mi></msub></math>, porque la energía es cuadrática en la función de partición</span></label>
         </div>
-        <script type="text/explanation" id="q11_3-exp">Por definición, $U = \langle E\rangle = \sum_i \epsilon_i p_i = \sum_i \epsilon_i e^{-\beta\epsilon_i}/Z$. Esta suma es exactamente $-\partial\ln Z/\partial\beta$, porque $\partial\ln Z/\partial\beta = (1/Z)\partial Z/\partial\beta = (1/Z)\sum_i(-\epsilon_i)e^{-\beta\epsilon_i} = -\langle E\rangle$. Equivalentemente, $U = k_BT^2(\partial\ln Z/\partial T)$.</script>
+        <script type="text/explanation" id="q11_3-exp">Por definición, <math data-tex="U = \langle E\rangle = \sum_i \epsilon_i p_i = \sum_i \epsilon_i e^{-\beta\epsilon_i}/Z"><mi>U</mi><mo>=</mo><mrow><mo>⟨</mo><mi>E</mi><mo>⟩</mo></mrow><mo>=</mo><msub><mo form="prefix" lspace="0em">∑</mo><mi>i</mi></msub><msub><mi>ϵ</mi><mi>i</mi></msub><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><msub><mo form="prefix" lspace="0em">∑</mo><mi>i</mi></msub><msub><mi>ϵ</mi><mi>i</mi></msub><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>ϵ</mi><mi>i</mi></msub></mrow></msup><mi>/</mi><mi>Z</mi></math>. Esta suma es exactamente <math data-tex="-\partial\ln Z/\partial\beta"><mo>−</mo><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>∂</mi><mi>β</mi></math>, porque <math data-tex="\partial\ln Z/\partial\beta = (1/Z)\partial Z/\partial\beta = (1/Z)\sum_i(-\epsilon_i)e^{-\beta\epsilon_i} = -\langle E\rangle"><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>∂</mi><mi>β</mi><mo>=</mo><mrow><mo>(</mo><mrow><mn>1</mn><mi>/</mi><mi>Z</mi></mrow><mo>)</mo></mrow><mi>∂</mi><mi>Z</mi><mi>/</mi><mi>∂</mi><mi>β</mi><mo>=</mo><mrow><mo>(</mo><mrow><mn>1</mn><mi>/</mi><mi>Z</mi></mrow><mo>)</mo></mrow><msub><mo form="prefix" rspace="0em">∑</mo><mi>i</mi></msub><mrow><mo>(</mo><mrow><mo>−</mo><msub><mi>ϵ</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><msub><mi>ϵ</mi><mi>i</mi></msub></mrow></msup><mo>=</mo><mo form="prefix">−</mo><mrow><mo>⟨</mo><mi>E</mi><mo>⟩</mo></mrow></math>. Equivalentemente, <math data-tex="U = k_BT^2(\partial\ln Z/\partial T)"><mi>U</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><msup><mi>T</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow></math>.</script>
         <div class="quiz-feedback" id="q11_3-fb"></div>
       </div>
 

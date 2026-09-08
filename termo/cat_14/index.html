@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 14 — Ensemble Canónico y Termodinámica</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -81,18 +77,18 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Estadística avanzada</div>
     <div class="unit-pill u5 bg-u5">Estadística avanzada · Cát. 13–17</div>
     <h1>Cátedra 14: Ensemble Canónico y Termodinámica</h1>
-    <p class="desc">Cómo derivar las variables termodinámicas — $S$, $p$, $\mu$ — directamente de la energía libre de Helmholtz $F = -k_BT\ln Z$, cerrando el puente entre mecánica estadística y termodinámica clásica.</p>
+    <p class="desc">Cómo derivar las variables termodinámicas — <math data-tex="S"><mi>S</mi></math>, <math data-tex="p"><mi>p</mi></math>, <math data-tex="\mu"><mi>μ</mi></math> — directamente de la energía libre de Helmholtz <math data-tex="F = -k_BT\ln Z"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math>, cerrando el puente entre mecánica estadística y termodinámica clásica.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Energía libre de Helmholtz $F(T,V,N) = -k_BT\ln Z$: potencial natural del ensemble canónico</li>
-        <li>Derivación de $S$, $p$ y $\mu$ como derivadas de $F$</li>
-        <li>Relaciones de Maxwell: igualdad de derivadas cruzadas de $F$</li>
-        <li>Gas ideal canónico: $Z_N = Z_1^N/N!$, función de partición de una partícula $Z_1 = V/\lambda_{th}^3$</li>
-        <li>Aplicación: calor específico del gas ideal desde $\langle E \rangle$</li>
+        <li>Energía libre de Helmholtz <math data-tex="F(T,V,N) = -k_BT\ln Z"><mi>F</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>N</mi></mrow><mo>)</mo></mrow><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math>: potencial natural del ensemble canónico</li>
+        <li>Derivación de <math data-tex="S"><mi>S</mi></math>, <math data-tex="p"><mi>p</mi></math> y <math data-tex="\mu"><mi>μ</mi></math> como derivadas de <math data-tex="F"><mi>F</mi></math></li>
+        <li>Relaciones de Maxwell: igualdad de derivadas cruzadas de <math data-tex="F"><mi>F</mi></math></li>
+        <li>Gas ideal canónico: <math data-tex="Z_N = Z_1^N/N!"><msub><mi>Z</mi><mi>N</mi></msub><mo>=</mo><msubsup><mi>Z</mi><mn>1</mn><mi>N</mi></msubsup><mi>/</mi><mi>N</mi><mo>!</mo></math>, función de partición de una partícula <math data-tex="Z_1 = V/\lambda_{th}^3"><msub><mi>Z</mi><mn>1</mn></msub><mo>=</mo><mi>V</mi><mi>/</mi><msubsup><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow><mn>3</mn></msubsup></math></li>
+        <li>Aplicación: calor específico del gas ideal desde <math data-tex="\langle E \rangle"><mrow><mo>⟨</mo><mi>E</mi><mo>⟩</mo></mrow></math></li>
         <li>Condiciones de equilibrio entre dos sistemas en contacto térmico</li>
       </ul>
     </div>
@@ -102,20 +98,20 @@
     <h2><span class="section-icon">💡</span> Conceptos clave</h2>
     <div class="card-grid">
       <div class="concept-card">
-        <h3>Energía libre de Helmholtz $F$</h3>
-        <p>$F = U - TS$ es el potencial termodinámico con variables naturales $T$, $V$, $N$. En el ensemble canónico $F = -k_BT\ln Z$, de modo que toda la termodinámica se extrae derivando $\ln Z$. $F$ es mínima en el equilibrio a $T$, $V$, $N$ fijos.</p>
+        <h3>Energía libre de Helmholtz <math data-tex="F"><mi>F</mi></math></h3>
+        <p><math data-tex="F = U - TS"><mi>F</mi><mo>=</mo><mi>U</mi><mo>−</mo><mi>T</mi><mi>S</mi></math> es el potencial termodinámico con variables naturales <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math>. En el ensemble canónico <math data-tex="F = -k_BT\ln Z"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math>, de modo que toda la termodinámica se extrae derivando <math data-tex="\ln Z"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math>. <math data-tex="F"><mi>F</mi></math> es mínima en el equilibrio a <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math> fijos.</p>
       </div>
       <div class="concept-card">
-        <h3>Relaciones de Maxwell de $F$</h3>
-        <p>Como $dF = -S\,dT - p\,dV + \mu\,dN$ es diferencial exacto, las derivadas cruzadas son iguales: $(\partial S/\partial V)_T = (\partial p/\partial T)_V$. Esta identidad relaciona la expansión térmica con la dependencia de la entropía en el volumen.</p>
+        <h3>Relaciones de Maxwell de <math data-tex="F"><mi>F</mi></math></h3>
+        <p>Como <math data-tex="dF = -S\,dT - p\,dV + \mu\,dN"><mi>d</mi><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><mi>S</mi><mspace width="0.1667em"/><mi>d</mi><mi>T</mi><mo>−</mo><mi>p</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi><mo>+</mo><mi>μ</mi><mspace width="0.1667em"/><mi>d</mi><mi>N</mi></math> es diferencial exacto, las derivadas cruzadas son iguales: <math data-tex="(\partial S/\partial V)_T = (\partial p/\partial T)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>p</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>. Esta identidad relaciona la expansión térmica con la dependencia de la entropía en el volumen.</p>
       </div>
       <div class="concept-card">
         <h3>Gas ideal: longitud de onda térmica</h3>
-        <p>$\lambda_{th} = h/\sqrt{2\pi m k_BT}$ es la longitud de onda de de Broglie térmica. $Z_1 = V/\lambda_{th}^3$: cuando $V/N \gg \lambda_{th}^3$ el sistema es clásico (las funciones de onda no se solapan).</p>
+        <p><math data-tex="\lambda_{th} = h/\sqrt{2\pi m k_BT}"><msub><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow></msub><mo>=</mo><mi>h</mi><mi>/</mi><msqrt><mn>2</mn><mi>π</mi><mi>m</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></msqrt></math> es la longitud de onda de de Broglie térmica. <math data-tex="Z_1 = V/\lambda_{th}^3"><msub><mi>Z</mi><mn>1</mn></msub><mo>=</mo><mi>V</mi><mi>/</mi><msubsup><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow><mn>3</mn></msubsup></math>: cuando <math data-tex="V/N \gg \lambda_{th}^3"><mi>V</mi><mi>/</mi><mi>N</mi><mo>≫</mo><msubsup><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow><mn>3</mn></msubsup></math> el sistema es clásico (las funciones de onda no se solapan).</p>
       </div>
       <div class="concept-card">
-        <h3>Potencial químico $\mu$</h3>
-        <p>$\mu = (\partial F/\partial N)_{T,V}$ es el costo en energía libre de agregar una partícula. Para el gas ideal: $\mu = k_BT\ln(N\lambda_{th}^3/V) < 0$ a densidades bajas. En el equilibrio entre fases, $\mu$ es el mismo en ambas fases.</p>
+        <h3>Potencial químico <math data-tex="\mu"><mi>μ</mi></math></h3>
+        <p><math data-tex="\mu = (\partial F/\partial N)_{T,V}"><mi>μ</mi><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>N</mi></mrow><mo>)</mo></mrow><mrow><mi>T</mi><mo rspace="0em">,</mo><mi>V</mi></mrow></msub></math> es el costo en energía libre de agregar una partícula. Para el gas ideal: <math data-tex="\mu = k_BT\ln(N\lambda_{th}^3/V) &lt; 0"><mi>μ</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>N</mi><msubsup><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow><mn>3</mn></msubsup><mi>/</mi><mi>V</mi></mrow><mo>)</mo></mrow><mo>&lt;</mo><mn>0</mn></math> a densidades bajas. En el equilibrio entre fases, <math data-tex="\mu"><mi>μ</mi></math> es el mismo en ambas fases.</p>
       </div>
     </div>
   </section>
@@ -127,16 +123,16 @@
       <div class="formula-label">Diferencial de la energía libre de Helmholtz</div>
       <div class="formula-math"><img class="typst-formula" src="cat_14_1.svg" alt=""></div>
       <div class="formula-desc">
-        Variables naturales de $F$: $T$, $V$, $N$. De aquí se leen las derivadas:
-        $S = -(\partial F/\partial T)_V$, $p = -(\partial F/\partial V)_T$, $\mu = (\partial F/\partial N)_T$.
+        Variables naturales de <math data-tex="F"><mi>F</mi></math>: <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math>. De aquí se leen las derivadas:
+        <math data-tex="S = -(\partial F/\partial T)_V"><mi>S</mi><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>, <math data-tex="p = -(\partial F/\partial V)_T"><mi>p</mi><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>, <math data-tex="\mu = (\partial F/\partial N)_T"><mi>μ</mi><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>N</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>.
       </div>
     </div>
 
     <div class="formula-block u5">
-      <div class="formula-label">Entropía y presión desde $Z$</div>
+      <div class="formula-label">Entropía y presión desde <math data-tex="Z"><mi>Z</mi></math></div>
       <div class="formula-math"><img class="typst-formula" src="cat_14_2.svg" alt=""></div>
       <div class="formula-desc">
-        Ambas se obtienen de $F = -k_BT\ln Z$. Para el gas ideal se recupera $pV = Nk_BT$.
+        Ambas se obtienen de <math data-tex="F = -k_BT\ln Z"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math>. Para el gas ideal se recupera <math data-tex="pV = Nk_BT"><mi>p</mi><mi>V</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>.
       </div>
     </div>
 
@@ -144,15 +140,15 @@
       <div class="formula-label">Gas ideal — función de partición</div>
       <div class="formula-math"><img class="typst-formula" src="cat_14_3.svg" alt=""></div>
       <div class="formula-desc">
-        El factor $N!$ corrige el doble conteo de partículas indistinguibles. De $\ln Z_N$ se recupera $F$, $S = Nk_B[5/2 - \ln(N\lambda_{th}^3/V)]$ (entropía de Sackur-Tetrode) y $U = \tfrac{3}{2}Nk_BT$.
+        El factor <math data-tex="N!"><mi>N</mi><mo>!</mo></math> corrige el doble conteo de partículas indistinguibles. De <math data-tex="\ln Z_N"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><msub><mi>Z</mi><mi>N</mi></msub></math> se recupera <math data-tex="F"><mi>F</mi></math>, <math data-tex="S = Nk_B[5/2 - \ln(N\lambda_{th}^3/V)]"><mi>S</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mrow><mo>[</mo><mrow><mn>5</mn><mi>/</mi><mn>2</mn><mo>−</mo><mo form="prefix" lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>N</mi><msubsup><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow><mn>3</mn></msubsup><mi>/</mi><mi>V</mi></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></math> (entropía de Sackur-Tetrode) y <math data-tex="U = \tfrac{3}{2}Nk_BT"><mi>U</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>.
       </div>
     </div>
 
     <div class="formula-block u5">
-      <div class="formula-label">Relación de Maxwell de $F$</div>
+      <div class="formula-label">Relación de Maxwell de <math data-tex="F"><mi>F</mi></math></div>
       <div class="formula-math"><img class="typst-formula" src="cat_14_4.svg" alt=""></div>
       <div class="formula-desc">
-        Identidad que relaciona la variación de entropía con el volumen con el coeficiente de presión-temperatura. Útil para calcular $(\partial U/\partial V)_T = T(\partial p/\partial T)_V - p$ (ecuación de estado energética).
+        Identidad que relaciona la variación de entropía con el volumen con el coeficiente de presión-temperatura. Útil para calcular <math data-tex="(\partial U/\partial V)_T = T(\partial p/\partial T)_V - p"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mi>T</mi><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>p</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub><mo>−</mo><mi>p</mi></math> (ecuación de estado energética).
       </div>
     </div>
   </section>
@@ -162,10 +158,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Claves del ensemble canónico</div>
       <ul>
-        <li>El ensemble canónico es el más usado en la práctica porque las condiciones $T$, $V$, $N$ fijos se corresponden con experimentos de laboratorio reales (baño térmico).</li>
-        <li>La entropía de Sackur-Tetrode $S = Nk_B[5/2 - \ln(N\lambda_{th}^3/V)]$ es exactamente extensiva gracias al $N!$ en el denominador de $Z_N$ — esto resuelve la paradoja de Gibbs.</li>
-        <li>Las relaciones de Maxwell son consecuencia directa de que $F$ es una función de estado (diferencial exacto). Son herramientas potentes porque conectan cantidades que parecen independientes.</li>
-        <li>A altas temperaturas o bajas densidades ($N\lambda_{th}^3/V \ll 1$), el gas cuántico se comporta como gas clásico: el ensemble canónico y el de Maxwell-Boltzmann coinciden.</li>
+        <li>El ensemble canónico es el más usado en la práctica porque las condiciones <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math> fijos se corresponden con experimentos de laboratorio reales (baño térmico).</li>
+        <li>La entropía de Sackur-Tetrode <math data-tex="S = Nk_B[5/2 - \ln(N\lambda_{th}^3/V)]"><mi>S</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mrow><mo>[</mo><mrow><mn>5</mn><mi>/</mi><mn>2</mn><mo>−</mo><mo form="prefix" lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>N</mi><msubsup><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow><mn>3</mn></msubsup><mi>/</mi><mi>V</mi></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></math> es exactamente extensiva gracias al <math data-tex="N!"><mi>N</mi><mo>!</mo></math> en el denominador de <math data-tex="Z_N"><msub><mi>Z</mi><mi>N</mi></msub></math> — esto resuelve la paradoja de Gibbs.</li>
+        <li>Las relaciones de Maxwell son consecuencia directa de que <math data-tex="F"><mi>F</mi></math> es una función de estado (diferencial exacto). Son herramientas potentes porque conectan cantidades que parecen independientes.</li>
+        <li>A altas temperaturas o bajas densidades (<math data-tex="N\lambda_{th}^3/V \ll 1"><mi>N</mi><msubsup><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow><mn>3</mn></msubsup><mi>/</mi><mi>V</mi><mo>≪</mo><mn>1</mn></math>), el gas cuántico se comporta como gas clásico: el ensemble canónico y el de Maxwell-Boltzmann coinciden.</li>
       </ul>
     </div>
   </section>
@@ -175,38 +171,38 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q14_1" data-correct="2">
-        <div class="quiz-question">1. ¿Cuál es el criterio de equilibrio termodinámico a temperatura $T$, volumen $V$ y número de partículas $N$ fijos?</div>
+        <div class="quiz-question">1. ¿Cuál es el criterio de equilibrio termodinámico a temperatura <math data-tex="T"><mi>T</mi></math>, volumen <math data-tex="V"><mi>V</mi></math> y número de partículas <math data-tex="N"><mi>N</mi></math> fijos?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q14_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía interna $U$ es mínima</span></label>
-          <label class="quiz-option"><input type="radio" name="q14_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La entropía $S$ es máxima</span></label>
-          <label class="quiz-option"><input type="radio" name="q14_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía libre de Helmholtz $F = U - TS$ es mínima: el sistema balancea minimizar $U$ (preferir estados de baja energía) y maximizar $S$ (preferir estados de alta entropía), y $F$ captura exactamente ese balance a $T$ fija</span></label>
-          <label class="quiz-option"><input type="radio" name="q14_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La función de partición $Z$ es máxima</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_1" value="0"><span class="opt-letter">A</span><span class="opt-text">La energía interna <math data-tex="U"><mi>U</mi></math> es mínima</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La entropía <math data-tex="S"><mi>S</mi></math> es máxima</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La energía libre de Helmholtz <math data-tex="F = U - TS"><mi>F</mi><mo>=</mo><mi>U</mi><mo>−</mo><mi>T</mi><mi>S</mi></math> es mínima: el sistema balancea minimizar <math data-tex="U"><mi>U</mi></math> (preferir estados de baja energía) y maximizar <math data-tex="S"><mi>S</mi></math> (preferir estados de alta entropía), y <math data-tex="F"><mi>F</mi></math> captura exactamente ese balance a <math data-tex="T"><mi>T</mi></math> fija</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_1" value="3"><span class="opt-letter">D</span><span class="opt-text">La función de partición <math data-tex="Z"><mi>Z</mi></math> es máxima</span></label>
         </div>
-        <script type="text/explanation" id="q14_1-exp">En el ensemble canónico ($T$, $V$, $N$ fijos), el potencial natural es $F = U - TS = -k_BT\ln Z$. El sistema evoluciona hacia el estado de menor $F$: en el equilibrio $dF = 0$ a $T$, $V$, $N$ constantes. Físicamente, $F$ balancea la minimización de energía (que favorece los estados de menor $U$) contra la maximización de entropía (que favorece los estados con mayor $\Omega$). El equilibrio es el compromiso óptimo a la temperatura dada.</script>
+        <script type="text/explanation" id="q14_1-exp">En el ensemble canónico (<math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math> fijos), el potencial natural es <math data-tex="F = U - TS = -k_BT\ln Z"><mi>F</mi><mo>=</mo><mi>U</mi><mo>−</mo><mi>T</mi><mi>S</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math>. El sistema evoluciona hacia el estado de menor <math data-tex="F"><mi>F</mi></math>: en el equilibrio <math data-tex="dF = 0"><mi>d</mi><mi>F</mi><mo>=</mo><mn>0</mn></math> a <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="N"><mi>N</mi></math> constantes. Físicamente, <math data-tex="F"><mi>F</mi></math> balancea la minimización de energía (que favorece los estados de menor <math data-tex="U"><mi>U</mi></math>) contra la maximización de entropía (que favorece los estados con mayor <math data-tex="\Omega"><mi mathvariant="normal">Ω</mi></math>). El equilibrio es el compromiso óptimo a la temperatura dada.</script>
         <div class="quiz-feedback" id="q14_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q14_2" data-correct="1">
-        <div class="quiz-question">2. La entropía de Sackur-Tetrode del gas ideal incluye el factor $N!$ en el denominador de $Z_N = Z_1^N/N!$. ¿Qué problema resuelve este factor?</div>
+        <div class="quiz-question">2. La entropía de Sackur-Tetrode del gas ideal incluye el factor <math data-tex="N!"><mi>N</mi><mo>!</mo></math> en el denominador de <math data-tex="Z_N = Z_1^N/N!"><msub><mi>Z</mi><mi>N</mi></msub><mo>=</mo><msubsup><mi>Z</mi><mn>1</mn><mi>N</mi></msubsup><mi>/</mi><mi>N</mi><mo>!</mo></math>. ¿Qué problema resuelve este factor?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q14_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Penaliza los estados de alta energía, haciendo la distribución más realista</span></label>
-          <label class="quiz-option"><input type="radio" name="q14_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Resuelve la paradoja de Gibbs: sin él, la entropía de mezcla de dos gases idénticos sería positiva (absurdo). El $N!$ corrige el doble conteo de configuraciones de partículas indistinguibles, haciendo $S$ extensiva</span></label>
-          <label class="quiz-option"><input type="radio" name="q14_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Garantiza que la presión calculada desde $F$ siempre sea positiva para el gas ideal</span></label>
-          <label class="quiz-option"><input type="radio" name="q14_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Hace que la función de partición converja para todo valor de $T$ y $V$</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Resuelve la paradoja de Gibbs: sin él, la entropía de mezcla de dos gases idénticos sería positiva (absurdo). El <math data-tex="N!"><mi>N</mi><mo>!</mo></math> corrige el doble conteo de configuraciones de partículas indistinguibles, haciendo <math data-tex="S"><mi>S</mi></math> extensiva</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Garantiza que la presión calculada desde <math data-tex="F"><mi>F</mi></math> siempre sea positiva para el gas ideal</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Hace que la función de partición converja para todo valor de <math data-tex="T"><mi>T</mi></math> y <math data-tex="V"><mi>V</mi></math></span></label>
         </div>
-        <script type="text/explanation" id="q14_2-exp">Sin el $N!$, $Z_N = Z_1^N$ cuenta $N!$ veces el mismo estado físico (el resultado de permutar partículas indistinguibles). Esto produce una entropía no extensiva que crece incorrectamente al juntar dos sistemas idénticos (paradoja de Gibbs: la entropía de mezcla de gases iguales debería ser cero). El factor $N!$ en el denominador elimina exactamente ese doble conteo y da la entropía de Sackur-Tetrode, que es correctamente extensiva y consistent con la tercera ley.</script>
+        <script type="text/explanation" id="q14_2-exp">Sin el <math data-tex="N!"><mi>N</mi><mo>!</mo></math>, <math data-tex="Z_N = Z_1^N"><msub><mi>Z</mi><mi>N</mi></msub><mo>=</mo><msubsup><mi>Z</mi><mn>1</mn><mi>N</mi></msubsup></math> cuenta <math data-tex="N!"><mi>N</mi><mo>!</mo></math> veces el mismo estado físico (el resultado de permutar partículas indistinguibles). Esto produce una entropía no extensiva que crece incorrectamente al juntar dos sistemas idénticos (paradoja de Gibbs: la entropía de mezcla de gases iguales debería ser cero). El factor <math data-tex="N!"><mi>N</mi><mo>!</mo></math> en el denominador elimina exactamente ese doble conteo y da la entropía de Sackur-Tetrode, que es correctamente extensiva y consistent con la tercera ley.</script>
         <div class="quiz-feedback" id="q14_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q14_3" data-correct="1">
-        <div class="quiz-question">3. La relación de Maxwell $(\partial S/\partial V)_T = (\partial P/\partial T)_V$ se deriva de $F$. ¿Cuál es su origen matemático?</div>
+        <div class="quiz-question">3. La relación de Maxwell <math data-tex="(\partial S/\partial V)_T = (\partial P/\partial T)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math> se deriva de <math data-tex="F"><mi>F</mi></math>. ¿Cuál es su origen matemático?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q14_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Del teorema de equipartición aplicado a las variables de estado de $F$</span></label>
-          <label class="quiz-option"><input type="radio" name="q14_3" value="1"><span class="opt-letter">B</span><span class="opt-text">De que $dF = -S\,dT - P\,dV$ es un diferencial exacto: la igualdad de derivadas cruzadas (condición de Schwarz) da $-(\partial S/\partial V)_T = -(\partial P/\partial T)_V$, es decir $(\partial S/\partial V)_T = (\partial P/\partial T)_V$</span></label>
-          <label class="quiz-option"><input type="radio" name="q14_3" value="2"><span class="opt-letter">C</span><span class="opt-text">De la ecuación de estado del gas ideal $PV = Nk_BT$, que impone esta relación entre $S$, $V$ y $P$</span></label>
+          <label class="quiz-option"><input type="radio" name="q14_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Del teorema de equipartición aplicado a las variables de estado de <math data-tex="F"><mi>F</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q14_3" value="1"><span class="opt-letter">B</span><span class="opt-text">De que <math data-tex="dF = -S\,dT - P\,dV"><mi>d</mi><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><mi>S</mi><mspace width="0.1667em"/><mi>d</mi><mi>T</mi><mo>−</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> es un diferencial exacto: la igualdad de derivadas cruzadas (condición de Schwarz) da <math data-tex="-(\partial S/\partial V)_T = -(\partial P/\partial T)_V"><mo>−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>, es decir <math data-tex="(\partial S/\partial V)_T = (\partial P/\partial T)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q14_3" value="2"><span class="opt-letter">C</span><span class="opt-text">De la ecuación de estado del gas ideal <math data-tex="PV = Nk_BT"><mi>P</mi><mi>V</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>, que impone esta relación entre <math data-tex="S"><mi>S</mi></math>, <math data-tex="V"><mi>V</mi></math> y <math data-tex="P"><mi>P</mi></math></span></label>
           <label class="quiz-option"><input type="radio" name="q14_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Del principio de aumento de entropía aplicado a procesos isotérmicos</span></label>
         </div>
-        <script type="text/explanation" id="q14_3-exp">Como $F$ es una función de estado, su diferencial $dF = -S\,dT - P\,dV$ es exacto. La condición de Schwarz (igualdad de las derivadas cruzadas) exige: $\frac{\partial}{\partial V}\left(-S\right)_T = \frac{\partial}{\partial T}\left(-P\right)_V$, es decir $-\left(\frac{\partial S}{\partial V}\right)_T = -\left(\frac{\partial P}{\partial T}\right)_V$. Esto es una identidad exacta válida para cualquier sistema en equilibrio — no asume ningún modelo microscópico. Es la relación de Maxwell de $F$, y se usa para calcular $(\partial U/\partial V)_T = T(\partial P/\partial T)_V - P$.</script>
+        <script type="text/explanation" id="q14_3-exp">Como <math data-tex="F"><mi>F</mi></math> es una función de estado, su diferencial <math data-tex="dF = -S\,dT - P\,dV"><mi>d</mi><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><mi>S</mi><mspace width="0.1667em"/><mi>d</mi><mi>T</mi><mo>−</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> es exacto. La condición de Schwarz (igualdad de las derivadas cruzadas) exige: <math data-tex="\frac{\partial}{\partial V}\left(-S\right)_T = \frac{\partial}{\partial T}\left(-P\right)_V"><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>V</mi></mrow></mfrac><msub><mrow><mo>(</mo><mrow><mo>−</mo><mi>S</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><msub><mrow><mo>(</mo><mrow><mo>−</mo><mi>P</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>, es decir <math data-tex="-\left(\frac{\partial S}{\partial V}\right)_T = -\left(\frac{\partial P}{\partial T}\right)_V"><mo>−</mo><msub><mrow><mo>(</mo><mfrac><mrow><mi>∂</mi><mi>S</mi></mrow><mrow><mi>∂</mi><mi>V</mi></mrow></mfrac><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mfrac><mrow><mi>∂</mi><mi>P</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo>)</mo></mrow><mi>V</mi></msub></math>. Esto es una identidad exacta válida para cualquier sistema en equilibrio — no asume ningún modelo microscópico. Es la relación de Maxwell de <math data-tex="F"><mi>F</mi></math>, y se usa para calcular <math data-tex="(\partial U/\partial V)_T = T(\partial P/\partial T)_V - P"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mi>T</mi><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub><mo>−</mo><mi>P</mi></math>.</script>
         <div class="quiz-feedback" id="q14_3-fb"></div>
       </div>
 

@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 20 — Fuerzas sobre una carga puntual</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -63,20 +61,20 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
     <div class="unit-pill u6 bg-u6">Magnetismo · Aux 17–25</div>
     <h1>Auxiliar 20: Fuerzas sobre una carga puntual</h1>
-    <p class="desc">La fuerza de Lorentz $\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})$ describe cómo los campos eléctrico y magnético actúan simultáneamente sobre una carga. Cuando los campos se equilibran se obtiene un selector de velocidades; cuando solo actúa el campo magnético, la carga describe movimiento circular o helicoidal con radio de ciclotrón $r = mv_\perp/(|q|B)$.</p>
+    <p class="desc">La fuerza de Lorentz <math data-tex="\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})"><mover accent="true"><mi>F</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mi>q</mi><mrow><mo>(</mo><mrow><mover accent="true"><mi>E</mi><mo stretchy="true">⃗</mo></mover><mo>+</mo><mover accent="true"><mi>v</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></mrow><mo>)</mo></mrow></math> describe cómo los campos eléctrico y magnético actúan simultáneamente sobre una carga. Cuando los campos se equilibran se obtiene un selector de velocidades; cuando solo actúa el campo magnético, la carga describe movimiento circular o helicoidal con radio de ciclotrón <math data-tex="r = mv_\perp/(|q|B)"><mi>r</mi><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>⊥</mi></msub><mi>/</mi><mrow><mo>(</mo><mrow><mrow><mo>|</mo><mi>q</mi><mo>|</mo></mrow><mi>B</mi></mrow><mo>)</mo></mrow></math>.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Fuerza magnética sobre una carga puntual: $\vec{F}_\text{mag} = q(\vec{v}\times\vec{B})$</li>
-        <li>Fuerza de Lorentz completa: $\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})$</li>
+        <li>Fuerza magnética sobre una carga puntual: <math data-tex="\vec{F}_\text{mag} = q(\vec{v}\times\vec{B})"><msub><mover accent="true"><mi>F</mi><mo stretchy="true">⃗</mo></mover><mtext>mag</mtext></msub><mo>=</mo><mi>q</mi><mrow><mo>(</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></mrow><mo>)</mo></mrow></math></li>
+        <li>Fuerza de Lorentz completa: <math data-tex="\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})"><mover accent="true"><mi>F</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mi>q</mi><mrow><mo>(</mo><mrow><mover accent="true"><mi>E</mi><mo stretchy="true">⃗</mo></mover><mo>+</mo><mover accent="true"><mi>v</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></mrow><mo>)</mo></mrow></math></li>
         <li>Selector de velocidades: condición de equilibrio entre fuerza eléctrica y magnética</li>
         <li>Movimiento circular en campo magnético uniforme y radio de ciclotrón</li>
-        <li>Movimiento helicoidal: descomposición de la velocidad en componente paralela y perpendicular a $\vec{B}$</li>
-        <li>Fuerza sobre cables y distribuciones de corriente en campo magnético: $\vec{F} = \int Id\vec{\ell}\times\vec{B}$</li>
-        <li>Generalización a densidades superficiales $\vec{K}$ y volumétricas $\vec{J}$</li>
+        <li>Movimiento helicoidal: descomposición de la velocidad en componente paralela y perpendicular a <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math></li>
+        <li>Fuerza sobre cables y distribuciones de corriente en campo magnético: <math data-tex="\vec{F} = \int Id\vec{\ell}\times\vec{B}"><mover accent="true"><mi>F</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi>I</mi><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math></li>
+        <li>Generalización a densidades superficiales <math data-tex="\vec{K}"><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover></math> y volumétricas <math data-tex="\vec{J}"><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover></math></li>
       </ul>
     </div>
   </section>
@@ -86,19 +84,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Selector de velocidades</h3>
-        <p>Con $\vec{E}$ y $\vec{B}$ perpendiculares entre sí y perpendiculares a $\vec{v}$, la fuerza neta se anula solo cuando $v = E_0/B_0$. Partículas más lentas o más rápidas se desvían. El resultado es independiente de la masa y la carga de la partícula.</p>
+        <p>Con <math data-tex="\vec{E}"><mover accent="true"><mi>E</mi><mo stretchy="true">⃗</mo></mover></math> y <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> perpendiculares entre sí y perpendiculares a <math data-tex="\vec{v}"><mover accent="true"><mi>v</mi><mo stretchy="true">⃗</mo></mover></math>, la fuerza neta se anula solo cuando <math data-tex="v = E_0/B_0"><mi>v</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mi>/</mi><msub><mi>B</mi><mn>0</mn></msub></math>. Partículas más lentas o más rápidas se desvían. El resultado es independiente de la masa y la carga de la partícula.</p>
       </div>
       <div class="concept-card">
         <h3>Radio de ciclotrón</h3>
-        <p>En campo $\vec{B}$ uniforme, la componente de velocidad perpendicular al campo produce movimiento circular con radio $r = mv_\perp/(|q|B)$ y frecuencia de ciclotrón $\omega_c = |q|B/m$. La componente paralela a $\vec{B}$ no cambia.</p>
+        <p>En campo <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> uniforme, la componente de velocidad perpendicular al campo produce movimiento circular con radio <math data-tex="r = mv_\perp/(|q|B)"><mi>r</mi><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>⊥</mi></msub><mi>/</mi><mrow><mo>(</mo><mrow><mrow><mo>|</mo><mi>q</mi><mo>|</mo></mrow><mi>B</mi></mrow><mo>)</mo></mrow></math> y frecuencia de ciclotrón <math data-tex="\omega_c = |q|B/m"><msub><mi>ω</mi><mi>c</mi></msub><mo>=</mo><mrow><mo>|</mo><mi>q</mi><mo>|</mo></mrow><mi>B</mi><mi>/</mi><mi>m</mi></math>. La componente paralela a <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> no cambia.</p>
       </div>
       <div class="concept-card">
         <h3>Movimiento helicoidal</h3>
-        <p>Si la velocidad inicial tiene componente paralela a $\vec{B}$, esta no es afectada por la fuerza magnética. La partícula describe una hélice: giro circular en el plano perpendicular a $\vec{B}$ combinado con traslación uniforme a lo largo de $\vec{B}$.</p>
+        <p>Si la velocidad inicial tiene componente paralela a <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math>, esta no es afectada por la fuerza magnética. La partícula describe una hélice: giro circular en el plano perpendicular a <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> combinado con traslación uniforme a lo largo de <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Fuerza sobre corrientes</h3>
-        <p>La fuerza de Lorentz sobre portadores de carga en un cable se integra para obtener $\vec{F} = \int Id\vec{\ell}\times\vec{B}$. Para distribuciones continuas: $\vec{F} = \iint\vec{K}\times\vec{B}\,dS$ (superficial) y $\vec{F} = \iiint\vec{J}\times\vec{B}\,dV$ (volumétrica).</p>
+        <p>La fuerza de Lorentz sobre portadores de carga en un cable se integra para obtener <math data-tex="\vec{F} = \int Id\vec{\ell}\times\vec{B}"><mover accent="true"><mi>F</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi>I</mi><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math>. Para distribuciones continuas: <math data-tex="\vec{F} = \iint\vec{K}\times\vec{B}\,dS"><mover accent="true"><mi>F</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix" lspace="0em">∬</mo><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mspace width="0.1667em"/><mi>d</mi><mi>S</mi></math> (superficial) y <math data-tex="\vec{F} = \iiint\vec{J}\times\vec{B}\,dV"><mover accent="true"><mi>F</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix" lspace="0em">∭</mo><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> (volumétrica).</p>
       </div>
     </div>
   </section>
@@ -110,7 +108,7 @@
       <div class="formula-label">Fuerza de Lorentz</div>
       <div class="formula-math"><img class="typst-formula" src="aux_20_1.svg" alt=""></div>
       <div class="formula-desc">
-        La fuerza total sobre una carga $q$ en presencia de campo eléctrico y magnético. La fuerza magnética $q\vec{v}\times\vec{B}$ es siempre perpendicular a $\vec{v}$, por lo que no realiza trabajo sobre la carga y no modifica su rapidez.
+        La fuerza total sobre una carga <math data-tex="q"><mi>q</mi></math> en presencia de campo eléctrico y magnético. La fuerza magnética <math data-tex="q\vec{v}\times\vec{B}"><mi>q</mi><mover accent="true"><mi>v</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> es siempre perpendicular a <math data-tex="\vec{v}"><mover accent="true"><mi>v</mi><mo stretchy="true">⃗</mo></mover></math>, por lo que no realiza trabajo sobre la carga y no modifica su rapidez.
       </div>
     </div>
 
@@ -118,7 +116,7 @@
       <div class="formula-label">Condición del selector de velocidades</div>
       <div class="formula-math"><img class="typst-formula" src="aux_20_2.svg" alt=""></div>
       <div class="formula-desc">
-        Para que la fuerza neta sea cero, la fuerza eléctrica y la magnética deben cancelarse. Con $\vec{E} = -E_0\hat{z}$ y $\vec{B} = B_0\hat{y}$, una carga con velocidad $v\hat{x}$ experimenta $\vec{F}_\text{mag} = qvB_0\hat{z}$, que cancela $\vec{F}_\text{elec} = -qE_0\hat{z}$ cuando $v = E_0/B_0$.
+        Para que la fuerza neta sea cero, la fuerza eléctrica y la magnética deben cancelarse. Con <math data-tex="\vec{E} = -E_0\hat{z}"><mover accent="true"><mi>E</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix">−</mo><msub><mi>E</mi><mn>0</mn></msub><mover accent="true"><mi>z</mi><mo>̂</mo></mover></math> y <math data-tex="\vec{B} = B_0\hat{y}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><msub><mi>B</mi><mn>0</mn></msub><mover accent="true"><mi>y</mi><mo>̂</mo></mover></math>, una carga con velocidad <math data-tex="v\hat{x}"><mi>v</mi><mover accent="true"><mi>x</mi><mo>̂</mo></mover></math> experimenta <math data-tex="\vec{F}_\text{mag} = qvB_0\hat{z}"><msub><mover accent="true"><mi>F</mi><mo stretchy="true">⃗</mo></mover><mtext>mag</mtext></msub><mo>=</mo><mi>q</mi><mi>v</mi><msub><mi>B</mi><mn>0</mn></msub><mover accent="true"><mi>z</mi><mo>̂</mo></mover></math>, que cancela <math data-tex="\vec{F}_\text{elec} = -qE_0\hat{z}"><msub><mover accent="true"><mi>F</mi><mo stretchy="true">⃗</mo></mover><mtext>elec</mtext></msub><mo>=</mo><mo form="prefix">−</mo><mi>q</mi><msub><mi>E</mi><mn>0</mn></msub><mover accent="true"><mi>z</mi><mo>̂</mo></mover></math> cuando <math data-tex="v = E_0/B_0"><mi>v</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mi>/</mi><msub><mi>B</mi><mn>0</mn></msub></math>.
       </div>
     </div>
 
@@ -126,7 +124,7 @@
       <div class="formula-label">Radio de ciclotrón y frecuencia angular</div>
       <div class="formula-math"><img class="typst-formula" src="aux_20_3.svg" alt=""></div>
       <div class="formula-desc">
-        La fuerza magnética actúa como fuerza centrípeta: $|q|v_\perp B = mv_\perp^2/r$. El radio de ciclotrón $r$ depende del momento $mv_\perp$ y del producto $|q|B$. La frecuencia $\omega_c = |q|B/m$ es independiente de la velocidad (isocrona).
+        La fuerza magnética actúa como fuerza centrípeta: <math data-tex="|q|v_\perp B = mv_\perp^2/r"><mrow><mo>|</mo><mi>q</mi><mo>|</mo></mrow><msub><mi>v</mi><mi>⊥</mi></msub><mi>B</mi><mo>=</mo><mi>m</mi><msubsup><mi>v</mi><mi>⊥</mi><mn>2</mn></msubsup><mi>/</mi><mi>r</mi></math>. El radio de ciclotrón <math data-tex="r"><mi>r</mi></math> depende del momento <math data-tex="mv_\perp"><mi>m</mi><msub><mi>v</mi><mi>⊥</mi></msub></math> y del producto <math data-tex="|q|B"><mrow><mo>|</mo><mi>q</mi><mo>|</mo></mrow><mi>B</mi></math>. La frecuencia <math data-tex="\omega_c = |q|B/m"><msub><mi>ω</mi><mi>c</mi></msub><mo>=</mo><mrow><mo>|</mo><mi>q</mi><mo>|</mo></mrow><mi>B</mi><mi>/</mi><mi>m</mi></math> es independiente de la velocidad (isocrona).
       </div>
     </div>
 
@@ -134,15 +132,15 @@
       <div class="formula-label">Fuerza sobre distribuciones de corriente</div>
       <div class="formula-math"><img class="typst-formula" src="aux_20_4.svg" alt=""></div>
       <div class="formula-desc">
-        Se obtiene integrando la fuerza de Lorentz sobre todos los portadores. Para un cable la integral es sobre la longitud; para distribuciones superficiales y volumétricas se integra $\vec{K}\times\vec{B}$ y $\vec{J}\times\vec{B}$ respectivamente.
+        Se obtiene integrando la fuerza de Lorentz sobre todos los portadores. Para un cable la integral es sobre la longitud; para distribuciones superficiales y volumétricas se integra <math data-tex="\vec{K}\times\vec{B}"><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> y <math data-tex="\vec{J}\times\vec{B}"><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> respectivamente.
       </div>
     </div>
 
     <div class="formula-block u6">
-      <div class="formula-label">Distancia recorrida en $\hat{z}$ al penetrar una región magnética</div>
+      <div class="formula-label">Distancia recorrida en <math data-tex="\hat{z}"><mover accent="true"><mi>z</mi><mo>̂</mo></mover></math> al penetrar una región magnética</div>
       <div class="formula-math"><img class="typst-formula" src="aux_20_5.svg" alt=""></div>
       <div class="formula-desc">
-        Una carga que entra con velocidad $v$ a un ángulo $\theta$ respecto a $\vec{B}$ (apuntando en $\hat{z}$) describe un arco circular en el plano perpendicular a $\vec{B}$. La penetración máxima en $\hat{z}$ antes de salir de la región es el diámetro del arco proyectado: $2r\sin\theta = 2(mv\sin\theta)/(|q|B)$.
+        Una carga que entra con velocidad <math data-tex="v"><mi>v</mi></math> a un ángulo <math data-tex="\theta"><mi>θ</mi></math> respecto a <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> (apuntando en <math data-tex="\hat{z}"><mover accent="true"><mi>z</mi><mo>̂</mo></mover></math>) describe un arco circular en el plano perpendicular a <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math>. La penetración máxima en <math data-tex="\hat{z}"><mover accent="true"><mi>z</mi><mo>̂</mo></mover></math> antes de salir de la región es el diámetro del arco proyectado: <math data-tex="2r\sin\theta = 2(mv\sin\theta)/(|q|B)"><mn>2</mn><mi>r</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">sin</mo><mi>θ</mi><mo>=</mo><mn>2</mn><mrow><mo>(</mo><mrow><mi>m</mi><mi>v</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">sin</mo><mi>θ</mi></mrow><mo>)</mo></mrow><mi>/</mi><mrow><mo>(</mo><mrow><mrow><mo>|</mo><mi>q</mi><mo>|</mo></mrow><mi>B</mi></mrow><mo>)</mo></mrow></math>.
       </div>
     </div>
 
@@ -153,13 +151,13 @@
     <div class="tip-box">
       <div class="tip-title">✦ Estrategia para problemas de fuerza de Lorentz</div>
       <ul>
-        <li>Identificar los campos $\vec{E}$ y $\vec{B}$ presentes y la carga de la partícula (signo incluido).</li>
-        <li>Calcular $\vec{v}\times\vec{B}$ usando el producto vectorial con regla de la mano derecha; recordar que si $q &lt; 0$ el sentido de la fuerza se invierte.</li>
-        <li>En el selector de velocidades, la condición $v_\text{sel} = E_0/B_0$ es universal: no depende de $m$ ni de $q$. Para $v &lt; v_\text{sel}$ predomina la fuerza eléctrica (la partícula se desvía en el sentido de $\vec{E}$).</li>
-        <li>Para movimiento en campo $\vec{B}$ puro, descomponer $\vec{v}$ en componente paralela $v_\parallel = v\cos\theta$ (no afectada) y perpendicular $v_\perp = v\sin\theta$ (produce el giro).</li>
-        <li>El radio de ciclotrón $r = mv_\perp/(|q|B)$: aumenta con la masa y la velocidad, disminuye con la carga y el campo.</li>
-        <li>Para fuerzas sobre cables, verificar la orientación de $d\vec{\ell}$ (sentido de la corriente) y aplicar la regla de la mano derecha para $d\vec{\ell}\times\vec{B}$.</li>
-        <li>La fuerza magnética no hace trabajo: la energía cinética de la partícula no cambia en campo $\vec{B}$ puro.</li>
+        <li>Identificar los campos <math data-tex="\vec{E}"><mover accent="true"><mi>E</mi><mo stretchy="true">⃗</mo></mover></math> y <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> presentes y la carga de la partícula (signo incluido).</li>
+        <li>Calcular <math data-tex="\vec{v}\times\vec{B}"><mover accent="true"><mi>v</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> usando el producto vectorial con regla de la mano derecha; recordar que si <math data-tex="q &lt; 0"><mi>q</mi><mo>&lt;</mo><mn>0</mn></math> el sentido de la fuerza se invierte.</li>
+        <li>En el selector de velocidades, la condición <math data-tex="v_\text{sel} = E_0/B_0"><msub><mi>v</mi><mtext>sel</mtext></msub><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mi>/</mi><msub><mi>B</mi><mn>0</mn></msub></math> es universal: no depende de <math data-tex="m"><mi>m</mi></math> ni de <math data-tex="q"><mi>q</mi></math>. Para <math data-tex="v &lt; v_\text{sel}"><mi>v</mi><mo>&lt;</mo><msub><mi>v</mi><mtext>sel</mtext></msub></math> predomina la fuerza eléctrica (la partícula se desvía en el sentido de <math data-tex="\vec{E}"><mover accent="true"><mi>E</mi><mo stretchy="true">⃗</mo></mover></math>).</li>
+        <li>Para movimiento en campo <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> puro, descomponer <math data-tex="\vec{v}"><mover accent="true"><mi>v</mi><mo stretchy="true">⃗</mo></mover></math> en componente paralela <math data-tex="v_\parallel = v\cos\theta"><msub><mi>v</mi><mo>∥</mo></msub><mo>=</mo><mi>v</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">cos</mo><mi>θ</mi></math> (no afectada) y perpendicular <math data-tex="v_\perp = v\sin\theta"><msub><mi>v</mi><mi>⊥</mi></msub><mo>=</mo><mi>v</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">sin</mo><mi>θ</mi></math> (produce el giro).</li>
+        <li>El radio de ciclotrón <math data-tex="r = mv_\perp/(|q|B)"><mi>r</mi><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>⊥</mi></msub><mi>/</mi><mrow><mo>(</mo><mrow><mrow><mo>|</mo><mi>q</mi><mo>|</mo></mrow><mi>B</mi></mrow><mo>)</mo></mrow></math>: aumenta con la masa y la velocidad, disminuye con la carga y el campo.</li>
+        <li>Para fuerzas sobre cables, verificar la orientación de <math data-tex="d\vec{\ell}"><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover></math> (sentido de la corriente) y aplicar la regla de la mano derecha para <math data-tex="d\vec{\ell}\times\vec{B}"><mi>d</mi><mover accent="true"><mi>ℓ</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math>.</li>
+        <li>La fuerza magnética no hace trabajo: la energía cinética de la partícula no cambia en campo <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math> puro.</li>
       </ul>
     </div>
   </section>

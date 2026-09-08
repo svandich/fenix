@@ -25,7 +25,7 @@ La jerarquía en la sidebar es: sección (unidad) → auxiliar numerado. El dot 
 Se eligió una página por auxiliar (vs. todo en una sola página) porque:
 - Los auxiliares son unidades de estudio independientes (se pueden estudiar en sesiones separadas).
 - Permite compartir links directos a una explicación específica.
-- El tiempo de carga es más rápido por página (importante en celular con MathJax).
+- El tiempo de carga es más rápido por página (importante en celular).
 
 ### Color por unidad temática
 Los colores codifican la estructura conceptual del curso. En `electro/`:
@@ -70,16 +70,22 @@ en la sección de tips.
 Las fuentes (Inter y JetBrains Mono) se sirven localmente para:
 - Funcionar offline (útil para estudiar sin internet).
 - Evitar dependencias de terceros que puedan fallar o cambiar.
-- El único CDN externo que se mantiene es MathJax, porque compilar LaTeX localmente sería impracticable.
+- No queda ningún CDN externo: el math inline también se hornea en build (ver más abajo).
 
-### Fórmulas: Typst para display, MathJax para inline
+### Fórmulas: Typst a SVG para display, MathML para inline
 Las fórmulas de bloque se compilan con Typst a SVG y se sirven como imágenes estáticas: se ven
-idénticas siempre, no dependen de que cargue un CDN, y no producen el salto de layout que causa
+idénticas siempre, no dependen de que cargue un CDN, y no producen el salto de layout que causaba
 MathJax al reemplazar el texto crudo.
 
-MathJax se mantiene sólo para el math inline (`$...$`) dentro de la prosa, donde el costo de generar
-un SVG por cada símbolo suelto no se justifica. Requiere internet, pero si falla sólo se degrada a
-notación LaTeX legible en medio de una frase, no rompe la página.
+El math inline (`$...$`) dentro de la prosa **no** puede ser SVG: cada archivo incrusta sus propios
+contornos de glifo (8,4 MB en total, medido), lleva el color fijo adentro, no escala con el
+`font-size` del contexto, y rompe seleccionar, copiar y Ctrl+F por un símbolo. Va como MathML
+horneado en el HTML en tiempo de build: pesa lo mismo que el texto que reemplaza, hereda color y
+tamaño del CSS, es seleccionable y buscable, y no necesita JS ni red.
+
+El precio es un paso de traducción de LaTeX a Typst, que tiene modos de falla silenciosos.
+Ver [typst-inline-migration.md](typst-inline-migration.md) para cuáles son, cómo se neutralizaron y
+cómo se verificaron las 2261 expresiones contra MathJax.
 
 ---
 
@@ -87,4 +93,4 @@ notación LaTeX legible en medio de una frase, no rompe la página.
 
 - **Casi no hay JavaScript propio**: la sidebar activa se marca con la clase `active` directamente en el HTML. Requiere copiar el bloque de sidebar en cada página, pero evita cargar JS innecesario y simplifica el debug. La única excepción es `styles/quiz.js`, que corrige los quizzes; sin él la página sigue siendo legible.
 - **No hay framework CSS**: usar vanilla CSS con variables permite entender y modificar cualquier parte sin documentación externa.
-- **No hay build step para el HTML**: los HTML son estáticos y se abren directamente con el navegador. No hay npm ni webpack. El único paso de compilación es `./build.sh`, que convierte los `.typ` en SVG; su salida está trackeada en git, así que el sitio funciona sin ejecutarlo.
+- **No hay build step para el HTML**: los HTML son estáticos y se abren directamente con el navegador. No hay npm ni webpack. El único paso de compilación es `./build.sh`, que convierte los `.typ` en SVG y hornea el math inline como MathML; su salida está trackeada en git, así que el sitio funciona sin ejecutarlo.

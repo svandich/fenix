@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 28 — Síntesis Final y Movimiento Browniano</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -81,7 +77,7 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Unidad 8</div>
     <div class="unit-pill u7 bg-u7">Gases Reales y Transporte · Cát. 24–28</div>
     <h1>Cátedra 28: Síntesis Final y Movimiento Browniano</h1>
-    <p class="desc">Última clase del curso. Se cierra el tema de transiciones de fase (punto triple, diagrama $P$-$T$, el caso anómalo del helio) y se dedica el resto a una introducción extensa al movimiento browniano: su historia, desde Robert Brown hasta el año milagroso de Einstein, y la explicación física que conecta la fuerza de Stokes, la presión osmótica y la ley de Fick con la relación de difusión de Einstein.</p>
+    <p class="desc">Última clase del curso. Se cierra el tema de transiciones de fase (punto triple, diagrama <math data-tex="P"><mi>P</mi></math>-<math data-tex="T"><mi>T</mi></math>, el caso anómalo del helio) y se dedica el resto a una introducción extensa al movimiento browniano: su historia, desde Robert Brown hasta el año milagroso de Einstein, y la explicación física que conecta la fuerza de Stokes, la presión osmótica y la ley de Fick con la relación de difusión de Einstein.</p>
   </div>
 
   <section>
@@ -89,9 +85,9 @@
     <div class="card">
       <ul class="topic-list">
         <li>Cierre de transiciones de fase: el punto triple como intersección de las tres curvas de coexistencia (sólido-líquido-gas)</li>
-        <li>El diagrama $P$-$T$ genérico y el caso especial del helio, sin punto triple sólido-líquido-gas clásico por efectos cuánticos</li>
+        <li>El diagrama <math data-tex="P"><mi>P</mi></math>-<math data-tex="T"><mi>T</mi></math> genérico y el caso especial del helio, sin punto triple sólido-líquido-gas clásico por efectos cuánticos</li>
         <li>Historia del movimiento browniano: Robert Brown (1827), Bachelier (1900), Sutherland, hasta Einstein (1905, "año milagroso")</li>
-        <li>La hipótesis de Stokes: fuerza de arrastre sobre una partícula grande moviéndose en un fluido viscoso, $F=6\pi\eta r v$</li>
+        <li>La hipótesis de Stokes: fuerza de arrastre sobre una partícula grande moviéndose en un fluido viscoso, <math data-tex="F=6\pi\eta r v"><mi>F</mi><mo>=</mo><mn>6</mn><mi>π</mi><mi>η</mi><mi>r</mi><mi>v</mi></math></li>
         <li>La presión osmótica reinterpretada como una fuerza por unidad de volumen sobre las partículas suspendidas</li>
         <li>La ley de Fick y la combinación de ambos ingredientes en la relación de Einstein para el coeficiente de difusión</li>
       </ul>
@@ -103,7 +99,7 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Punto triple</h3>
-        <p>Es el único punto $(T_t,P_t)$ donde coexisten simultáneamente las tres fases (sólido, líquido, gas): la intersección de las tres curvas de coexistencia de pares de fases. El helio es la excepción notable: su punto crítico/triple está a temperatura tan baja que las fluctuaciones cuánticas destruyen la fase sólida clásica, y solo se observa líquido y gas (más una transición superfluida).</p>
+        <p>Es el único punto <math data-tex="(T_t,P_t)"><mrow><mo>(</mo><mrow><msub><mi>T</mi><mi>t</mi></msub><mo>,</mo><msub><mi>P</mi><mi>t</mi></msub></mrow><mo>)</mo></mrow></math> donde coexisten simultáneamente las tres fases (sólido, líquido, gas): la intersección de las tres curvas de coexistencia de pares de fases. El helio es la excepción notable: su punto crítico/triple está a temperatura tan baja que las fluctuaciones cuánticas destruyen la fase sólida clásica, y solo se observa líquido y gas (más una transición superfluida).</p>
       </div>
       <div class="concept-card">
         <h3>De Robert Brown a Einstein</h3>
@@ -111,11 +107,11 @@
       </div>
       <div class="concept-card">
         <h3>Fuerza de Stokes y presión osmótica</h3>
-        <p>Einstein combinó dos ingredientes de orígenes distintos: la fuerza de arrastre de Stokes $F=6\pi\eta r v$ sobre una esfera moviéndose en un fluido viscoso, y la presión osmótica reinterpretada como una fuerza efectiva sobre las partículas suspendidas, ligada al gradiente de su concentración.</p>
+        <p>Einstein combinó dos ingredientes de orígenes distintos: la fuerza de arrastre de Stokes <math data-tex="F=6\pi\eta r v"><mi>F</mi><mo>=</mo><mn>6</mn><mi>π</mi><mi>η</mi><mi>r</mi><mi>v</mi></math> sobre una esfera moviéndose en un fluido viscoso, y la presión osmótica reinterpretada como una fuerza efectiva sobre las partículas suspendidas, ligada al gradiente de su concentración.</p>
       </div>
       <div class="concept-card">
         <h3>La relación de Einstein</h3>
-        <p>Igualando el flujo de partículas arrastradas por la fuerza de Stokes con el flujo difusivo dado por la ley de Fick, Einstein obtuvo $D=k_BT/(6\pi\eta r)$: el coeficiente de difusión queda determinado por cantidades macroscópicas medibles (viscosidad, radio, temperatura), permitiendo extraer $k_B$ (y el número de Avogadro) de observaciones puramente mecánicas del movimiento browniano.</p>
+        <p>Igualando el flujo de partículas arrastradas por la fuerza de Stokes con el flujo difusivo dado por la ley de Fick, Einstein obtuvo <math data-tex="D=k_BT/(6\pi\eta r)"><mi>D</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mi>/</mi><mrow><mo>(</mo><mrow><mn>6</mn><mi>π</mi><mi>η</mi><mi>r</mi></mrow><mo>)</mo></mrow></math>: el coeficiente de difusión queda determinado por cantidades macroscópicas medibles (viscosidad, radio, temperatura), permitiendo extraer <math data-tex="k_B"><msub><mi>k</mi><mi>B</mi></msub></math> (y el número de Avogadro) de observaciones puramente mecánicas del movimiento browniano.</p>
       </div>
     </div>
   </section>
@@ -127,7 +123,7 @@
       <div class="formula-label">Fuerza de arrastre de Stokes</div>
       <div class="formula-math"><img class="typst-formula" src="cat_28_1.svg" alt=""></div>
       <div class="formula-desc">
-        Fuerza viscosa sobre una esfera de radio $r$ moviéndose a velocidad $v$ en un fluido de viscosidad $\eta$. Es el ingrediente mecánico de la explicación de Einstein.
+        Fuerza viscosa sobre una esfera de radio <math data-tex="r"><mi>r</mi></math> moviéndose a velocidad <math data-tex="v"><mi>v</mi></math> en un fluido de viscosidad <math data-tex="\eta"><mi>η</mi></math>. Es el ingrediente mecánico de la explicación de Einstein.
       </div>
     </div>
 
@@ -135,7 +131,7 @@
       <div class="formula-label">Presión osmótica y ley de Fick</div>
       <div class="formula-math"><img class="typst-formula" src="cat_28_2.svg" alt=""></div>
       <div class="formula-desc">
-        El flujo de partículas arrastradas por la fuerza osmótica (izquierda, vía Stokes) se iguala con el flujo difusivo de la ley de Fick (derecha, $D$ es el coeficiente de difusión a determinar).
+        El flujo de partículas arrastradas por la fuerza osmótica (izquierda, vía Stokes) se iguala con el flujo difusivo de la ley de Fick (derecha, <math data-tex="D"><mi>D</mi></math> es el coeficiente de difusión a determinar).
       </div>
     </div>
 
@@ -143,7 +139,7 @@
       <div class="formula-label">Relación de Einstein (coeficiente de difusión)</div>
       <div class="formula-math"><img class="typst-formula" src="cat_28_3.svg" alt=""></div>
       <div class="formula-desc">
-        Resultado central de 1905: conecta una cantidad microscópica ($k_B$, o equivalentemente $N_A$) con cantidades macroscópicas medibles ($\eta$, $r$, $T$, $D$). Permitió a Perrin (1908) determinar el número de Avogadro y confirmar experimentalmente la hipótesis atómica.
+        Resultado central de 1905: conecta una cantidad microscópica (<math data-tex="k_B"><msub><mi>k</mi><mi>B</mi></msub></math>, o equivalentemente <math data-tex="N_A"><msub><mi>N</mi><mi>A</mi></msub></math>) con cantidades macroscópicas medibles (<math data-tex="\eta"><mi>η</mi></math>, <math data-tex="r"><mi>r</mi></math>, <math data-tex="T"><mi>T</mi></math>, <math data-tex="D"><mi>D</mi></math>). Permitió a Perrin (1908) determinar el número de Avogadro y confirmar experimentalmente la hipótesis atómica.
       </div>
     </div>
 
@@ -151,7 +147,7 @@
       <div class="formula-label">Desplazamiento cuadrático medio</div>
       <div class="formula-math"><img class="typst-formula" src="cat_28_4.svg" alt=""></div>
       <div class="formula-desc">
-        Consecuencia directa de que la densidad de probabilidad de posición satisface una ecuación de difusión (tipo ecuación del calor): la distancia característica recorrida crece como $\sqrt{t}$, no linealmente con $t$ como en el movimiento balístico.
+        Consecuencia directa de que la densidad de probabilidad de posición satisface una ecuación de difusión (tipo ecuación del calor): la distancia característica recorrida crece como <math data-tex="\sqrt{t}"><msqrt><mi>t</mi></msqrt></math>, no linealmente con <math data-tex="t"><mi>t</mi></math> como en el movimiento balístico.
       </div>
     </div>
   </section>
@@ -164,7 +160,7 @@
         <li>El punto triple y el punto crítico no son curiosidades aisladas: son las dos singularidades genéricas del diagrama de fases de cualquier sustancia simple, y su existencia (o ausencia, como en el helio) está completamente determinada por el potencial de interacción microscópico entre sus partículas — el mismo tipo de potencial que dio origen a la ecuación de van der Waals dos clases atrás.</li>
         <li>El movimiento browniano es el puente histórico entre la termodinámica estadística (que asume la existencia de átomos) y la prueba experimental de esa existencia: antes de Einstein y Perrin, la hipótesis atómica era exactamente eso, una hipótesis útil pero no demostrada.</li>
         <li>La genialidad de Einstein no fue "ver" el movimiento browniano (eso ya lo había hecho Brown 80 años antes) sino conectar dos fenómenos macroscópicos aparentemente no relacionados —arrastre viscoso (mecánica de fluidos) y presión osmótica (termodinámica)— a través de un mismo flujo de partículas, derivando una predicción cuantitativa y verificable.</li>
-        <li>$\langle x^2\rangle \propto t$ (no $\propto t^2$) es la firma matemática de todo proceso difusivo/aleatorio, en contraste con el movimiento determinista donde la distancia recorrida crece linealmente con el tiempo; esta distinción es la base de toda la física estocástica moderna.</li>
+        <li><math data-tex="\langle x^2\rangle \propto t"><mrow><mo>⟨</mo><msup><mi>x</mi><mn>2</mn></msup><mo>⟩</mo></mrow><mo>∝</mo><mi>t</mi></math> (no <math data-tex="\propto t^2"><mo form="infix" lspace="0em">∝</mo><msup><mi>t</mi><mn>2</mn></msup></math>) es la firma matemática de todo proceso difusivo/aleatorio, en contraste con el movimiento determinista donde la distancia recorrida crece linealmente con el tiempo; esta distinción es la base de toda la física estocástica moderna.</li>
         <li>El programa completo del curso —desde la teoría cinética del gas ideal hasta el movimiento browniano— traza una sola idea: las leyes macroscópicas deterministas (termodinámica clásica) emergen como promedios estadísticos del comportamiento errático de un número enorme de partículas microscópicas.</li>
       </ul>
     </div>
@@ -182,7 +178,7 @@
           <label class="quiz-option"><input type="radio" name="q28_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque su punto crítico/triple ocurriría a una temperatura tan baja que las fluctuaciones cuánticas (energía de punto cero, debida a la masa pequeña del átomo de helio) destruyen el orden cristalino antes de que pueda formarse, dejando solo las fases líquida y gaseosa a presión normal</span></label>
           <label class="quiz-option"><input type="radio" name="q28_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el helio se descompone químicamente antes de alcanzar temperaturas suficientemente bajas para solidificar</span></label>
         </div>
-        <script type="text/explanation" id="q28_1-exp">Para casi todas las sustancias, el diagrama de fases $P$-$T$ tiene la estructura genérica con un punto triple sólido-líquido-gas. El helio es la excepción: debido a su masa atómica muy pequeña, la energía de punto cero (un efecto puramente cuántico, consecuencia del principio de incertidumbre) es comparable a la energía de interacción entre átomos a las temperaturas extremadamente bajas donde clásicamente se esperaría la solidificación. Esto impide que se forme una red cristalina estable a presión atmosférica: el helio permanece líquido hasta el cero absoluto (y de hecho exhibe superfluidez), y solo solidifica aplicando presiones del orden de 25 atmósferas. Es el ejemplo paradigmático de cómo los efectos cuánticos pueden alterar cualitativamente un diagrama de fases que de otro modo sería universal.</script>
+        <script type="text/explanation" id="q28_1-exp">Para casi todas las sustancias, el diagrama de fases <math data-tex="P"><mi>P</mi></math>-<math data-tex="T"><mi>T</mi></math> tiene la estructura genérica con un punto triple sólido-líquido-gas. El helio es la excepción: debido a su masa atómica muy pequeña, la energía de punto cero (un efecto puramente cuántico, consecuencia del principio de incertidumbre) es comparable a la energía de interacción entre átomos a las temperaturas extremadamente bajas donde clásicamente se esperaría la solidificación. Esto impide que se forme una red cristalina estable a presión atmosférica: el helio permanece líquido hasta el cero absoluto (y de hecho exhibe superfluidez), y solo solidifica aplicando presiones del orden de 25 atmósferas. Es el ejemplo paradigmático de cómo los efectos cuánticos pueden alterar cualitativamente un diagrama de fases que de otro modo sería universal.</script>
         <div class="quiz-feedback" id="q28_1-fb"></div>
       </div>
 
@@ -199,14 +195,14 @@
       </div>
 
       <div class="quiz-q" id="q28_3" data-correct="1">
-        <div class="quiz-question">3. En la derivación de Einstein de 1905, ¿cómo se combinan la fuerza de Stokes y la presión osmótica para llegar a la relación $D=k_BT/(6\pi\eta r)$?</div>
+        <div class="quiz-question">3. En la derivación de Einstein de 1905, ¿cómo se combinan la fuerza de Stokes y la presión osmótica para llegar a la relación <math data-tex="D=k_BT/(6\pi\eta r)"><mi>D</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mi>/</mi><mrow><mo>(</mo><mrow><mn>6</mn><mi>π</mi><mi>η</mi><mi>r</mi></mrow><mo>)</mo></mrow></math>?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q28_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Se suman directamente ambas fuerzas para obtener la fuerza neta sobre la partícula, que luego se identifica con $k_BT/r$</span></label>
-          <label class="quiz-option"><input type="radio" name="q28_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Se igualan dos expresiones para el mismo flujo de partículas: el flujo "de arrastre" (densidad de partículas por velocidad, con la velocidad fijada por el balance entre la fuerza osmótica y el arrastre de Stokes) y el flujo difusivo dado por la ley de Fick ($-D\,\partial n/\partial x$); usando la presión osmótica de un gas ideal $P=nk_BT$ para evaluar el gradiente de presión, ambas expresiones coinciden si y solo si $D=k_BT/(6\pi\eta r)$</span></label>
+          <label class="quiz-option"><input type="radio" name="q28_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Se suman directamente ambas fuerzas para obtener la fuerza neta sobre la partícula, que luego se identifica con <math data-tex="k_BT/r"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mi>/</mi><mi>r</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q28_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Se igualan dos expresiones para el mismo flujo de partículas: el flujo "de arrastre" (densidad de partículas por velocidad, con la velocidad fijada por el balance entre la fuerza osmótica y el arrastre de Stokes) y el flujo difusivo dado por la ley de Fick (<math data-tex="-D\,\partial n/\partial x"><mo>−</mo><mi>D</mi><mspace width="0.1667em"/><mi>∂</mi><mi>n</mi><mi>/</mi><mi>∂</mi><mi>x</mi></math>); usando la presión osmótica de un gas ideal <math data-tex="P=nk_BT"><mi>P</mi><mo>=</mo><mi>n</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> para evaluar el gradiente de presión, ambas expresiones coinciden si y solo si <math data-tex="D=k_BT/(6\pi\eta r)"><mi>D</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mi>/</mi><mrow><mo>(</mo><mrow><mn>6</mn><mi>π</mi><mi>η</mi><mi>r</mi></mrow><mo>)</mo></mrow></math></span></label>
           <label class="quiz-option"><input type="radio" name="q28_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Se obtiene resolviendo la ecuación de Newton para la partícula browniana sin necesidad de la ley de Fick</span></label>
           <label class="quiz-option"><input type="radio" name="q28_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Se deriva exclusivamente de consideraciones dimensionales, sin ningún ingrediente físico adicional</span></label>
         </div>
-        <script type="text/explanation" id="q28_3-exp">Einstein consideró dos formas de calcular el mismo flujo de partículas suspendidas. Primero, en estado estacionario, la fuerza osmótica por unidad de volumen (relacionada con el gradiente de presión osmótica, $-\partial P/\partial x$, y usando que para un "gas" diluido de partículas suspendidas $P=nk_BT$) se balancea con el arrastre de Stokes $6\pi\eta r v$ por partícula, fijando una velocidad de deriva; multiplicando por la densidad $n$ se obtiene un flujo de arrastre. Segundo, la ley de Fick dice que cualquier gradiente de concentración produce un flujo difusivo $J=-D\,\partial n/\partial x$. Como ambos flujos describen el mismo fenómeno físico (no puede haber flujo neto en equilibrio, pero la comparación de los coeficientes que multiplican $\partial n/\partial x$ debe ser consistente), igualando ambas expresiones se obtiene $D=k_BT/(6\pi\eta r)$: el coeficiente de difusión queda expresado en términos de cantidades mecánicas macroscópicas medibles y la constante de Boltzmann.</script>
+        <script type="text/explanation" id="q28_3-exp">Einstein consideró dos formas de calcular el mismo flujo de partículas suspendidas. Primero, en estado estacionario, la fuerza osmótica por unidad de volumen (relacionada con el gradiente de presión osmótica, <math data-tex="-\partial P/\partial x"><mo>−</mo><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>x</mi></math>, y usando que para un "gas" diluido de partículas suspendidas <math data-tex="P=nk_BT"><mi>P</mi><mo>=</mo><mi>n</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>) se balancea con el arrastre de Stokes <math data-tex="6\pi\eta r v"><mn>6</mn><mi>π</mi><mi>η</mi><mi>r</mi><mi>v</mi></math> por partícula, fijando una velocidad de deriva; multiplicando por la densidad <math data-tex="n"><mi>n</mi></math> se obtiene un flujo de arrastre. Segundo, la ley de Fick dice que cualquier gradiente de concentración produce un flujo difusivo <math data-tex="J=-D\,\partial n/\partial x"><mi>J</mi><mo>=</mo><mo form="prefix">−</mo><mi>D</mi><mspace width="0.1667em"/><mi>∂</mi><mi>n</mi><mi>/</mi><mi>∂</mi><mi>x</mi></math>. Como ambos flujos describen el mismo fenómeno físico (no puede haber flujo neto en equilibrio, pero la comparación de los coeficientes que multiplican <math data-tex="\partial n/\partial x"><mi>∂</mi><mi>n</mi><mi>/</mi><mi>∂</mi><mi>x</mi></math> debe ser consistente), igualando ambas expresiones se obtiene <math data-tex="D=k_BT/(6\pi\eta r)"><mi>D</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mi>/</mi><mrow><mo>(</mo><mrow><mn>6</mn><mi>π</mi><mi>η</mi><mi>r</mi></mrow><mo>)</mo></mrow></math>: el coeficiente de difusión queda expresado en términos de cantidades mecánicas macroscópicas medibles y la constante de Boltzmann.</script>
         <div class="quiz-feedback" id="q28_3-fb"></div>
       </div>
 

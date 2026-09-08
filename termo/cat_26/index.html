@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 26 — Ecuación de van der Waals</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -90,10 +86,10 @@
       <ul class="topic-list">
         <li>Simulaciones moleculares: el mismo potencial de interacción produce gas, líquido y sólido (cristal) al enfriar</li>
         <li>La anomalía del agua: se expande al congelar por la estructura hexagonal del hielo</li>
-        <li>Repaso del teorema del virial: $P = Nk_BT/V$ corregido por un término $\mathcal{O}(N^2/V^2)$ que viene de la interacción de pares (detalle completo en CC10)</li>
-        <li>Derivación intuitiva de van der Waals: corrección de volumen excluido ($V \to V-Nb$) y corrección de presión efectiva por atracción ($P \to P + aN^2/V^2$)</li>
-        <li>La isoterma $P$-$V$ de van der Waals deja de ser monótona por debajo de una temperatura crítica</li>
-        <li>El coeficiente de compresibilidad $\kappa_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T$ como criterio de estabilidad mecánica</li>
+        <li>Repaso del teorema del virial: <math data-tex="P = Nk_BT/V"><mi>P</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mi>/</mi><mi>V</mi></math> corregido por un término <math data-tex="\mathcal{O}(N^2/V^2)"><mi>𝒪︀</mi><mrow><mo>(</mo><mrow><msup><mi>N</mi><mn>2</mn></msup><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math> que viene de la interacción de pares (detalle completo en CC10)</li>
+        <li>Derivación intuitiva de van der Waals: corrección de volumen excluido (<math data-tex="V \to V-Nb"><mi>V</mi><mo stretchy="false">→</mo><mi>V</mi><mo>−</mo><mi>N</mi><mi>b</mi></math>) y corrección de presión efectiva por atracción (<math data-tex="P \to P + aN^2/V^2"><mi>P</mi><mo stretchy="false">→</mo><mi>P</mi><mo>+</mo><mi>a</mi><msup><mi>N</mi><mn>2</mn></msup><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup></math>)</li>
+        <li>La isoterma <math data-tex="P"><mi>P</mi></math>-<math data-tex="V"><mi>V</mi></math> de van der Waals deja de ser monótona por debajo de una temperatura crítica</li>
+        <li>El coeficiente de compresibilidad <math data-tex="\kappa_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T"><msub><mi>κ</mi><mi>T</mi></msub><mo>=</mo><mo form="prefix">−</mo><mfrac><mn>1</mn><mi>V</mi></mfrac><msub><mrow><mo>(</mo><mfrac><mrow><mi>∂</mi><mi>V</mi></mrow><mrow><mi>∂</mi><mi>P</mi></mrow></mfrac><mo>)</mo></mrow><mi>T</mi></msub></math> como criterio de estabilidad mecánica</li>
       </ul>
     </div>
   </section>
@@ -103,19 +99,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Del virial a van der Waals</h3>
-        <p>El teorema del virial (CC10) muestra que la corrección a la ecuación de gas ideal por interacciones de pares es $P = Nk_BT/V\,(1 + n\gamma_1)$, con $n=N/V$ la densidad y $\gamma_1$ una integral sobre el potencial de interacción. Aproximando esa integral por zonas (repulsiva dura, atractiva exponencial) se llega exactamente a la forma de van der Waals.</p>
+        <p>El teorema del virial (CC10) muestra que la corrección a la ecuación de gas ideal por interacciones de pares es <math data-tex="P = Nk_BT/V\,(1 + n\gamma_1)"><mi>P</mi><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mi>/</mi><mi>V</mi><mspace width="0.1667em"/><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mi>n</mi><msub><mi>γ</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></math>, con <math data-tex="n=N/V"><mi>n</mi><mo>=</mo><mi>N</mi><mi>/</mi><mi>V</mi></math> la densidad y <math data-tex="\gamma_1"><msub><mi>γ</mi><mn>1</mn></msub></math> una integral sobre el potencial de interacción. Aproximando esa integral por zonas (repulsiva dura, atractiva exponencial) se llega exactamente a la forma de van der Waals.</p>
       </div>
       <div class="concept-card">
         <h3>Efecto de tamaño (volumen excluido)</h3>
-        <p>Las partículas no pueden penetrarse: cada una "bloquea" un volumen característico $b$ a las demás. El volumen disponible para el movimiento ya no es $V$ sino $V - Nb$, lo que corrige la ecuación de gas ideal a $P(V-Nb) = Nk_BT$.</p>
+        <p>Las partículas no pueden penetrarse: cada una "bloquea" un volumen característico <math data-tex="b"><mi>b</mi></math> a las demás. El volumen disponible para el movimiento ya no es <math data-tex="V"><mi>V</mi></math> sino <math data-tex="V - Nb"><mi>V</mi><mo>−</mo><mi>N</mi><mi>b</mi></math>, lo que corrige la ecuación de gas ideal a <math data-tex="P(V-Nb) = Nk_BT"><mi>P</mi><mrow><mo>(</mo><mrow><mi>V</mi><mo>−</mo><mi>N</mi><mi>b</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Presión efectiva (atracción)</h3>
-        <p>Cada partícula siente la atracción de sus $N-1$ vecinas. Como la interacción tipo dipolo-dipolo decae como $1/r^6$, su efecto integrado sobre el volumen escala como $N/V$ por partícula, dando una corrección de presión $\propto N^2/V^2$. La presión que un observador mide en la pared es menor que la "presión cinética" pura: $P_\text{efectiva} = P + aN^2/V^2$.</p>
+        <p>Cada partícula siente la atracción de sus <math data-tex="N-1"><mi>N</mi><mo>−</mo><mn>1</mn></math> vecinas. Como la interacción tipo dipolo-dipolo decae como <math data-tex="1/r^6"><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>6</mn></msup></math>, su efecto integrado sobre el volumen escala como <math data-tex="N/V"><mi>N</mi><mi>/</mi><mi>V</mi></math> por partícula, dando una corrección de presión <math data-tex="\propto N^2/V^2"><mo form="infix" lspace="0em">∝</mo><msup><mi>N</mi><mn>2</mn></msup><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup></math>. La presión que un observador mide en la pared es menor que la "presión cinética" pura: <math data-tex="P_\text{efectiva} = P + aN^2/V^2"><msub><mi>P</mi><mtext>efectiva</mtext></msub><mo>=</mo><mi>P</mi><mo>+</mo><mi>a</mi><msup><mi>N</mi><mn>2</mn></msup><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Compresibilidad y estabilidad</h3>
-        <p>$\kappa_T = -\frac{1}{V}(\partial V/\partial P)_T > 0$ es la condición de estabilidad mecánica: al comprimir un sistema estable, su presión interna aumenta y se opone (fuerza restitutiva). Cuando la isoterma de van der Waals no es monótona, hay una región con $\kappa_T < 0$ —mecánicamente inestable— que el sistema evita separándose en dos fases.</p>
+        <p><math data-tex="\kappa_T = -\frac{1}{V}(\partial V/\partial P)_T &gt; 0"><msub><mi>κ</mi><mi>T</mi></msub><mo>=</mo><mo form="prefix">−</mo><mfrac><mn>1</mn><mi>V</mi></mfrac><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>></mo><mn>0</mn></math> es la condición de estabilidad mecánica: al comprimir un sistema estable, su presión interna aumenta y se opone (fuerza restitutiva). Cuando la isoterma de van der Waals no es monótona, hay una región con <math data-tex="\kappa_T &lt; 0"><msub><mi>κ</mi><mi>T</mi></msub><mo>&lt;</mo><mn>0</mn></math> —mecánicamente inestable— que el sistema evita separándose en dos fases.</p>
       </div>
     </div>
   </section>
@@ -127,7 +123,7 @@
       <div class="formula-label">Corrección del virial a la presión (interacción de pares)</div>
       <div class="formula-math"><img class="typst-formula" src="cat_26_1.svg" alt=""></div>
       <div class="formula-desc">
-        Resultado general del teorema del virial (derivado con detalle en CC10): la primera corrección a la ley de gas ideal viene de la interacción entre pares de partículas, con $\gamma_1$ una integral sobre el potencial $U(r)$.
+        Resultado general del teorema del virial (derivado con detalle en CC10): la primera corrección a la ley de gas ideal viene de la interacción entre pares de partículas, con <math data-tex="\gamma_1"><msub><mi>γ</mi><mn>1</mn></msub></math> una integral sobre el potencial <math data-tex="U(r)"><mi>U</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math>.
       </div>
     </div>
 
@@ -135,7 +131,7 @@
       <div class="formula-label">Volumen excluido y presión efectiva</div>
       <div class="formula-math"><img class="typst-formula" src="cat_26_2.svg" alt=""></div>
       <div class="formula-desc">
-        Los dos ingredientes intuitivos de van der Waals: el volumen disponible se reduce por el tamaño de las partículas ($b$), y la presión "real" se reduce por la atracción entre ellas ($a$).
+        Los dos ingredientes intuitivos de van der Waals: el volumen disponible se reduce por el tamaño de las partículas (<math data-tex="b"><mi>b</mi></math>), y la presión "real" se reduce por la atracción entre ellas (<math data-tex="a"><mi>a</mi></math>).
       </div>
     </div>
 
@@ -143,7 +139,7 @@
       <div class="formula-label">Ecuación de estado de van der Waals</div>
       <div class="formula-math"><img class="typst-formula" src="cat_26_3.svg" alt=""></div>
       <div class="formula-desc">
-        Derivada por van der Waals en 1873 (Premio Nobel 1910). Reduce al gas ideal cuando $a, b \to 0$. Las constantes $a$ y $b$ se tabulan experimentalmente para cada sustancia (agua, argón, nitrógeno, etc.).
+        Derivada por van der Waals en 1873 (Premio Nobel 1910). Reduce al gas ideal cuando <math data-tex="a, b \to 0"><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">→</mo><mn>0</mn></math>. Las constantes <math data-tex="a"><mi>a</mi></math> y <math data-tex="b"><mi>b</mi></math> se tabulan experimentalmente para cada sustancia (agua, argón, nitrógeno, etc.).
       </div>
     </div>
 
@@ -151,7 +147,7 @@
       <div class="formula-label">Coeficiente de compresibilidad isotérmica</div>
       <div class="formula-math"><img class="typst-formula" src="cat_26_4.svg" alt=""></div>
       <div class="formula-desc">
-        $\kappa_T > 0$ en las ramas estables de la isoterma (presión decreciente con el volumen); $\kappa_T < 0$ en la región intermedia de la curva de van der Waals para $T < T_c$, que es mecánicamente inestable.
+        <math data-tex="\kappa_T &gt; 0"><msub><mi>κ</mi><mi>T</mi></msub><mo>></mo><mn>0</mn></math> en las ramas estables de la isoterma (presión decreciente con el volumen); <math data-tex="\kappa_T &lt; 0"><msub><mi>κ</mi><mi>T</mi></msub><mo>&lt;</mo><mn>0</mn></math> en la región intermedia de la curva de van der Waals para <math data-tex="T &lt; T_c"><mi>T</mi><mo>&lt;</mo><msub><mi>T</mi><mi>c</mi></msub></math>, que es mecánicamente inestable.
       </div>
     </div>
   </section>
@@ -161,11 +157,11 @@
     <div class="tip-box">
       <div class="tip-title">✦ De la interacción microscópica a la ecuación de estado</div>
       <ul>
-        <li>Van der Waals no es una ecuación ad hoc: se puede derivar (de forma aproximada pero rigurosa) a partir del teorema del virial, suponiendo que la energía típica de interacción $U_0$ es mucho menor que $k_BT$ (gas diluido/poco interactuante).</li>
+        <li>Van der Waals no es una ecuación ad hoc: se puede derivar (de forma aproximada pero rigurosa) a partir del teorema del virial, suponiendo que la energía típica de interacción <math data-tex="U_0"><msub><mi>U</mi><mn>0</mn></msub></math> es mucho menor que <math data-tex="k_BT"><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> (gas diluido/poco interactuante).</li>
         <li>La derivación "con las manos" —volumen excluido más presión efectiva— da exactamente la misma estructura que el cálculo formal con diagramas de interacción, porque ambos ingredientes (repulsión de corto alcance, atracción de largo alcance) son los mismos.</li>
-        <li>Que la isoterma $P(V)$ deje de ser monótona para $T<T_c$ no es un error de la ecuación: es la señal matemática de que el sistema real se separa en dos fases en esa región, en vez de seguir la curva de van der Waals literalmente.</li>
-        <li>El criterio $\kappa_T>0$ es completamente general (no solo para van der Waals): cualquier ecuación de estado que prediga $\kappa_T<0$ en algún rango está señalando una región de coexistencia de fases, no un estado homogéneo real.</li>
-        <li>Esta clase deja el problema "a medio resolver" a propósito: el "loop" no físico de van der Waals para $T<T_c$ se resuelve en la próxima clase con la construcción de Maxwell.</li>
+        <li>Que la isoterma <math data-tex="P(V)"><mi>P</mi><mrow><mo>(</mo><mi>V</mi><mo>)</mo></mrow></math> deje de ser monótona para <math data-tex="T&lt;T_c"><mi>T</mi><mo>&lt;</mo><msub><mi>T</mi><mi>c</mi></msub></math> no es un error de la ecuación: es la señal matemática de que el sistema real se separa en dos fases en esa región, en vez de seguir la curva de van der Waals literalmente.</li>
+        <li>El criterio <math data-tex="\kappa_T&gt;0"><msub><mi>κ</mi><mi>T</mi></msub><mo>></mo><mn>0</mn></math> es completamente general (no solo para van der Waals): cualquier ecuación de estado que prediga <math data-tex="\kappa_T&lt;0"><msub><mi>κ</mi><mi>T</mi></msub><mo>&lt;</mo><mn>0</mn></math> en algún rango está señalando una región de coexistencia de fases, no un estado homogéneo real.</li>
+        <li>Esta clase deja el problema "a medio resolver" a propósito: el "loop" no físico de van der Waals para <math data-tex="T&lt;T_c"><mi>T</mi><mo>&lt;</mo><msub><mi>T</mi><mi>c</mi></msub></math> se resuelve en la próxima clase con la construcción de Maxwell.</li>
       </ul>
     </div>
   </section>
@@ -175,38 +171,38 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q26_1" data-correct="2">
-        <div class="quiz-question">1. En la ecuación de van der Waals $(P + aN^2/V^2)(V-Nb) = Nk_BT$, ¿qué representan físicamente las constantes $a$ y $b$?</div>
+        <div class="quiz-question">1. En la ecuación de van der Waals <math data-tex="(P + aN^2/V^2)(V-Nb) = Nk_BT"><mrow><mo>(</mo><mrow><mi>P</mi><mo>+</mo><mi>a</mi><msup><mi>N</mi><mn>2</mn></msup><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>V</mi><mo>−</mo><mi>N</mi><mi>b</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math>, ¿qué representan físicamente las constantes <math data-tex="a"><mi>a</mi></math> y <math data-tex="b"><mi>b</mi></math>?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q26_1" value="0"><span class="opt-letter">A</span><span class="opt-text">$a$ es la masa molar y $b$ es el número de Avogadro</span></label>
-          <label class="quiz-option"><input type="radio" name="q26_1" value="1"><span class="opt-letter">B</span><span class="opt-text">$a$ es el volumen excluido por partícula y $b$ da cuenta de la atracción entre partículas</span></label>
-          <label class="quiz-option"><input type="radio" name="q26_1" value="2"><span class="opt-letter">C</span><span class="opt-text">$b$ es el volumen excluido por partícula (efecto de tamaño: no pueden penetrarse) y $a$ da cuenta de la intensidad de la atracción entre partículas (reduce la presión efectiva medida en la pared)</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_1" value="0"><span class="opt-letter">A</span><span class="opt-text"><math data-tex="a"><mi>a</mi></math> es la masa molar y <math data-tex="b"><mi>b</mi></math> es el número de Avogadro</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_1" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="a"><mi>a</mi></math> es el volumen excluido por partícula y <math data-tex="b"><mi>b</mi></math> da cuenta de la atracción entre partículas</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_1" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="b"><mi>b</mi></math> es el volumen excluido por partícula (efecto de tamaño: no pueden penetrarse) y <math data-tex="a"><mi>a</mi></math> da cuenta de la intensidad de la atracción entre partículas (reduce la presión efectiva medida en la pared)</span></label>
           <label class="quiz-option"><input type="radio" name="q26_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Ambas son constantes universales, iguales para todos los gases</span></label>
         </div>
-        <script type="text/explanation" id="q26_1-exp">El parámetro $b$ surge del efecto de tamaño: como las partículas no pueden penetrarse (sus densidades de carga internas son muy altas), el volumen realmente disponible para el movimiento es $V-Nb$, no $V$. El parámetro $a$ surge del efecto de atracción: cada partícula siente la atracción de las $N-1$ restantes, lo que reduce la presión que efectivamente se mide en la pared respecto a la que tendría un gas ideal sin interacciones; esa reducción se escribe como $-aN^2/V^2$, así que la "presión efectiva" que aparece en la ecuación de estado es $P+aN^2/V^2$. Ambas constantes son específicas de cada sustancia (dependen del potencial de interacción microscópico) y se tabulan experimentalmente: por ejemplo el agua tiene valores de $a$ y $b$ muy distintos a los del argón o el nitrógeno.</script>
+        <script type="text/explanation" id="q26_1-exp">El parámetro <math data-tex="b"><mi>b</mi></math> surge del efecto de tamaño: como las partículas no pueden penetrarse (sus densidades de carga internas son muy altas), el volumen realmente disponible para el movimiento es <math data-tex="V-Nb"><mi>V</mi><mo>−</mo><mi>N</mi><mi>b</mi></math>, no <math data-tex="V"><mi>V</mi></math>. El parámetro <math data-tex="a"><mi>a</mi></math> surge del efecto de atracción: cada partícula siente la atracción de las <math data-tex="N-1"><mi>N</mi><mo>−</mo><mn>1</mn></math> restantes, lo que reduce la presión que efectivamente se mide en la pared respecto a la que tendría un gas ideal sin interacciones; esa reducción se escribe como <math data-tex="-aN^2/V^2"><mo>−</mo><mi>a</mi><msup><mi>N</mi><mn>2</mn></msup><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup></math>, así que la "presión efectiva" que aparece en la ecuación de estado es <math data-tex="P+aN^2/V^2"><mi>P</mi><mo>+</mo><mi>a</mi><msup><mi>N</mi><mn>2</mn></msup><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup></math>. Ambas constantes son específicas de cada sustancia (dependen del potencial de interacción microscópico) y se tabulan experimentalmente: por ejemplo el agua tiene valores de <math data-tex="a"><mi>a</mi></math> y <math data-tex="b"><mi>b</mi></math> muy distintos a los del argón o el nitrógeno.</script>
         <div class="quiz-feedback" id="q26_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q26_2" data-correct="1">
-        <div class="quiz-question">2. El teorema del virial da $P = \frac{Nk_BT}{V}(1+n\gamma_1)$ con $n=N/V$. ¿Bajo qué supuesto se deriva esta expansión, y qué tipo de interacción domina el primer término de corrección?</div>
+        <div class="quiz-question">2. El teorema del virial da <math data-tex="P = \frac{Nk_BT}{V}(1+n\gamma_1)"><mi>P</mi><mo>=</mo><mfrac><mrow><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></mrow><mi>V</mi></mfrac><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mi>n</mi><msub><mi>γ</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></math> con <math data-tex="n=N/V"><mi>n</mi><mo>=</mo><mi>N</mi><mi>/</mi><mi>V</mi></math>. ¿Bajo qué supuesto se deriva esta expansión, y qué tipo de interacción domina el primer término de corrección?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q26_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Se supone que el gas está a muy alta densidad, y domina la interacción de cuatro o más partículas simultáneamente</span></label>
           <label class="quiz-option"><input type="radio" name="q26_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Se supone que el gas está suficientemente diluido (la probabilidad de que tres partículas interactúen simultáneamente es baja), y el primer término de corrección viene exclusivamente de la interacción de pares</span></label>
           <label class="quiz-option"><input type="radio" name="q26_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Se supone que las partículas no interactúan en absoluto, recuperando siempre el gas ideal exacto</span></label>
           <label class="quiz-option"><input type="radio" name="q26_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Se supone que la temperatura es cercana al cero absoluto, donde domina la estadística cuántica</span></label>
         </div>
-        <script type="text/explanation" id="q26_2-exp">La expansión del virial es una expansión en la densidad $n=N/V$: cuando el gas está suficientemente diluido, la probabilidad de que tres o más partículas estén simultáneamente cerca (a distancia de interacción) es mucho menor que la de que solo dos lo estén. Esto permite separar la energía de interacción total en una suma de interacciones de pares (despreciando interacciones de a tres, cuatro, etc.), usando lo que en la clase complementaria se llamaron diagramas de interacción. El término $n\gamma_1$ es exactamente esa corrección de pares; $\gamma_1$ es una integral sobre el potencial de interacción $U(r)$ entre dos partículas, de la forma $\gamma_1 = 2\pi\int_0^\infty r^2\left(1-e^{-\beta U(r)}\right)dr$. Las correcciones de orden mayor (a tres, cuatro partículas) corresponden a potencias más altas de la densidad, y son despreciables en el límite diluido.</script>
+        <script type="text/explanation" id="q26_2-exp">La expansión del virial es una expansión en la densidad <math data-tex="n=N/V"><mi>n</mi><mo>=</mo><mi>N</mi><mi>/</mi><mi>V</mi></math>: cuando el gas está suficientemente diluido, la probabilidad de que tres o más partículas estén simultáneamente cerca (a distancia de interacción) es mucho menor que la de que solo dos lo estén. Esto permite separar la energía de interacción total en una suma de interacciones de pares (despreciando interacciones de a tres, cuatro, etc.), usando lo que en la clase complementaria se llamaron diagramas de interacción. El término <math data-tex="n\gamma_1"><mi>n</mi><msub><mi>γ</mi><mn>1</mn></msub></math> es exactamente esa corrección de pares; <math data-tex="\gamma_1"><msub><mi>γ</mi><mn>1</mn></msub></math> es una integral sobre el potencial de interacción <math data-tex="U(r)"><mi>U</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math> entre dos partículas, de la forma <math data-tex="\gamma_1 = 2\pi\int_0^\infty r^2\left(1-e^{-\beta U(r)}\right)dr"><msub><mi>γ</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn><mi>π</mi><msubsup><mo form="prefix">∫</mo><mn>0</mn><mi>∞</mi></msubsup><msup><mi>r</mi><mn>2</mn></msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mi>U</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></mrow></msup></mrow><mo>)</mo></mrow><mi>d</mi><mi>r</mi></math>. Las correcciones de orden mayor (a tres, cuatro partículas) corresponden a potencias más altas de la densidad, y son despreciables en el límite diluido.</script>
         <div class="quiz-feedback" id="q26_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q26_3" data-correct="3">
-        <div class="quiz-question">3. Para $T$ menor que cierta temperatura crítica, la isoterma $P(V)$ de van der Waals deja de ser monótona y aparece una región con $(\partial P/\partial V)_T > 0$. ¿Qué significa esto en términos del coeficiente de compresibilidad $\kappa_T$, y por qué es físicamente problemático?</div>
+        <div class="quiz-question">3. Para <math data-tex="T"><mi>T</mi></math> menor que cierta temperatura crítica, la isoterma <math data-tex="P(V)"><mi>P</mi><mrow><mo>(</mo><mi>V</mi><mo>)</mo></mrow></math> de van der Waals deja de ser monótona y aparece una región con <math data-tex="(\partial P/\partial V)_T &gt; 0"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>></mo><mn>0</mn></math>. ¿Qué significa esto en términos del coeficiente de compresibilidad <math data-tex="\kappa_T"><msub><mi>κ</mi><mi>T</mi></msub></math>, y por qué es físicamente problemático?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q26_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Significa $\kappa_T = 0$ exactamente, es decir, el gas se vuelve perfectamente incompresible en esa región</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Significa <math data-tex="\kappa_T = 0"><msub><mi>κ</mi><mi>T</mi></msub><mo>=</mo><mn>0</mn></math> exactamente, es decir, el gas se vuelve perfectamente incompresible en esa región</span></label>
           <label class="quiz-option"><input type="radio" name="q26_3" value="1"><span class="opt-letter">B</span><span class="opt-text">No es problemático: simplemente indica que el gas se comporta como un sólido en esa región</span></label>
-          <label class="quiz-option"><input type="radio" name="q26_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Significa que $\kappa_T$ se hace infinito, lo cual señala el punto crítico exacto en todo ese rango de volúmenes</span></label>
-          <label class="quiz-option"><input type="radio" name="q26_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Significa $\kappa_T < 0$: al comprimir el sistema (reducir $V$) la presión interna disminuye en vez de aumentar, por lo que no hay fuerza restitutiva. Un sistema homogéneo en ese estado sería mecánicamente inestable y se separa en dos fases coexistentes</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Significa que <math data-tex="\kappa_T"><msub><mi>κ</mi><mi>T</mi></msub></math> se hace infinito, lo cual señala el punto crítico exacto en todo ese rango de volúmenes</span></label>
+          <label class="quiz-option"><input type="radio" name="q26_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Significa <math data-tex="\kappa_T &lt; 0"><msub><mi>κ</mi><mi>T</mi></msub><mo>&lt;</mo><mn>0</mn></math>: al comprimir el sistema (reducir <math data-tex="V"><mi>V</mi></math>) la presión interna disminuye en vez de aumentar, por lo que no hay fuerza restitutiva. Un sistema homogéneo en ese estado sería mecánicamente inestable y se separa en dos fases coexistentes</span></label>
         </div>
-        <script type="text/explanation" id="q26_3-exp">El coeficiente de compresibilidad isotérmica se define $\kappa_T = -\frac{1}{V}(\partial V/\partial P)_T$, y su signo está ligado al signo de $(\partial P/\partial V)_T$: si $P$ decrece con $V$ (lo usual, $(\partial P/\partial V)_T<0$), entonces $\kappa_T>0$, estabilidad mecánica normal (al comprimir, la presión interna sube y se opone a seguir comprimiendo, como cualquier objeto elástico). Pero en la región anómala de van der Waals para $T<T_c$, $P$ crece con $V$, es decir $(\partial P/\partial V)_T>0$, lo que da $\kappa_T<0$: al comprimir el sistema, su presión interna cae, y entonces nada se opone a seguir comprimiéndolo —es una respuesta divergente, mecánicamente inestable—. Un sistema real nunca permanece homogéneo en esa región: se separa espontáneamente en dos fases (líquido y gas) con distinta densidad pero la misma presión, evitando así la zona inestable. Esto es exactamente lo que la próxima clase formaliza con la construcción de Maxwell.</script>
+        <script type="text/explanation" id="q26_3-exp">El coeficiente de compresibilidad isotérmica se define <math data-tex="\kappa_T = -\frac{1}{V}(\partial V/\partial P)_T"><msub><mi>κ</mi><mi>T</mi></msub><mo>=</mo><mo form="prefix">−</mo><mfrac><mn>1</mn><mi>V</mi></mfrac><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>, y su signo está ligado al signo de <math data-tex="(\partial P/\partial V)_T"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>: si <math data-tex="P"><mi>P</mi></math> decrece con <math data-tex="V"><mi>V</mi></math> (lo usual, <math data-tex="(\partial P/\partial V)_T&lt;0"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>&lt;</mo><mn>0</mn></math>), entonces <math data-tex="\kappa_T&gt;0"><msub><mi>κ</mi><mi>T</mi></msub><mo>></mo><mn>0</mn></math>, estabilidad mecánica normal (al comprimir, la presión interna sube y se opone a seguir comprimiendo, como cualquier objeto elástico). Pero en la región anómala de van der Waals para <math data-tex="T&lt;T_c"><mi>T</mi><mo>&lt;</mo><msub><mi>T</mi><mi>c</mi></msub></math>, <math data-tex="P"><mi>P</mi></math> crece con <math data-tex="V"><mi>V</mi></math>, es decir <math data-tex="(\partial P/\partial V)_T&gt;0"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>></mo><mn>0</mn></math>, lo que da <math data-tex="\kappa_T&lt;0"><msub><mi>κ</mi><mi>T</mi></msub><mo>&lt;</mo><mn>0</mn></math>: al comprimir el sistema, su presión interna cae, y entonces nada se opone a seguir comprimiéndolo —es una respuesta divergente, mecánicamente inestable—. Un sistema real nunca permanece homogéneo en esa región: se separa espontáneamente en dos fases (líquido y gas) con distinta densidad pero la misma presión, evitando así la zona inestable. Esto es exactamente lo que la próxima clase formaliza con la construcción de Maxwell.</script>
         <div class="quiz-feedback" id="q26_3-fb"></div>
       </div>
 

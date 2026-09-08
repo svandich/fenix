@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 24 — Vector de Magnetización pt. 2</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -63,21 +61,21 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Unidad 6</div>
     <div class="unit-pill u6 bg-u6">Materia magnética · Aux 23–25</div>
     <h1>Auxiliar 24: Vector de Magnetización — Parte 2</h1>
-    <p class="desc">Continuación del estudio del vector de magnetización: se introduce el potencial escalar magnético $\Phi_m$ como herramienta para calcular $\vec{H}$ en regiones sin corrientes libres, y se formaliza la analogía con la electrostática mediante cargas magnéticas equivalentes $\rho_m$ y $\sigma_m$.</p>
+    <p class="desc">Continuación del estudio del vector de magnetización: se introduce el potencial escalar magnético <math data-tex="\Phi_m"><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub></math> como herramienta para calcular <math data-tex="\vec{H}"><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover></math> en regiones sin corrientes libres, y se formaliza la analogía con la electrostática mediante cargas magnéticas equivalentes <math data-tex="\rho_m"><msub><mi>ρ</mi><mi>m</mi></msub></math> y <math data-tex="\sigma_m"><msub><mi>σ</mi><mi>m</mi></msub></math>.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Potencial escalar magnético $\Phi_m$: definición $\vec{H} = -\nabla\Phi_m$ en regiones sin corriente libre</li>
-        <li>Relación entre $\vec{B}$, $\vec{H}$ y $\vec{M}$: $\vec{B} = \mu_0(\vec{H} + \vec{M})$</li>
-        <li>Ecuación de Poisson magnética: $\nabla^2\Phi_m = \nabla\cdot\vec{M}$</li>
-        <li>Cargas magnéticas equivalentes: densidad volumétrica $\rho_m = -\nabla\cdot\vec{M}$ y superficial $\sigma_m = \vec{M}\cdot\hat{n}$</li>
-        <li>Equivalencia entre la formulación de cargas magnéticas y la de corrientes ligadas $\vec{J}_b$, $\vec{K}_b$</li>
+        <li>Potencial escalar magnético <math data-tex="\Phi_m"><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub></math>: definición <math data-tex="\vec{H} = -\nabla\Phi_m"><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub></math> en regiones sin corriente libre</li>
+        <li>Relación entre <math data-tex="\vec{B}"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover></math>, <math data-tex="\vec{H}"><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover></math> y <math data-tex="\vec{M}"><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover></math>: <math data-tex="\vec{B} = \mu_0(\vec{H} + \vec{M})"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mrow><mo>(</mo><mrow><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover><mo>+</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover></mrow><mo>)</mo></mrow></math></li>
+        <li>Ecuación de Poisson magnética: <math data-tex="\nabla^2\Phi_m = \nabla\cdot\vec{M}"><msup><mo>∇</mo><mn>2</mn></msup><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub><mo>=</mo><mo form="prefix">∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover></math></li>
+        <li>Cargas magnéticas equivalentes: densidad volumétrica <math data-tex="\rho_m = -\nabla\cdot\vec{M}"><msub><mi>ρ</mi><mi>m</mi></msub><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover></math> y superficial <math data-tex="\sigma_m = \vec{M}\cdot\hat{n}"><msub><mi>σ</mi><mi>m</mi></msub><mo>=</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>n</mi><mo>̂</mo></mover></math></li>
+        <li>Equivalencia entre la formulación de cargas magnéticas y la de corrientes ligadas <math data-tex="\vec{J}_b"><msub><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover><mi>b</mi></msub></math>, <math data-tex="\vec{K}_b"><msub><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover><mi>b</mi></msub></math></li>
         <li>Campo magnético en el eje de un cilindro uniformemente magnetizado</li>
         <li>Campo en el centro de la abertura de un toroide magnetizado (superposición toroide + espira)</li>
-        <li>Campo de una esfera magnética rodeada por un medio de permeabilidad $\mu$</li>
+        <li>Campo de una esfera magnética rodeada por un medio de permeabilidad <math data-tex="\mu"><mi>μ</mi></math></li>
       </ul>
     </div>
   </section>
@@ -87,15 +85,15 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Potencial escalar magnético</h3>
-        <p>En regiones donde $\vec{J}_f = 0$, se tiene $\nabla\times\vec{H} = 0$, por lo que $\vec{H}$ es irrotacional y puede escribirse como $\vec{H} = -\nabla\Phi_m$. Esto simplifica enormemente el cálculo de $\vec{H}$ cuando existe simetría.</p>
+        <p>En regiones donde <math data-tex="\vec{J}_f = 0"><msub><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover><mi>f</mi></msub><mo>=</mo><mn>0</mn></math>, se tiene <math data-tex="\nabla\times\vec{H} = 0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mn>0</mn></math>, por lo que <math data-tex="\vec{H}"><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover></math> es irrotacional y puede escribirse como <math data-tex="\vec{H} = -\nabla\Phi_m"><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub></math>. Esto simplifica enormemente el cálculo de <math data-tex="\vec{H}"><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover></math> cuando existe simetría.</p>
       </div>
       <div class="concept-card">
         <h3>Analogía electrostática</h3>
-        <p>La ecuación $\nabla^2\Phi_m = -\rho_m$ es idéntica a la de Poisson eléctrica. Las cargas magnéticas equivalentes $\rho_m$ y $\sigma_m$ no son reales (no existen monopolos), sino una herramienta matemática que permite reutilizar toda la maquinaria de la electrostática.</p>
+        <p>La ecuación <math data-tex="\nabla^2\Phi_m = -\rho_m"><msup><mo>∇</mo><mn>2</mn></msup><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mi>ρ</mi><mi>m</mi></msub></math> es idéntica a la de Poisson eléctrica. Las cargas magnéticas equivalentes <math data-tex="\rho_m"><msub><mi>ρ</mi><mi>m</mi></msub></math> y <math data-tex="\sigma_m"><msub><mi>σ</mi><mi>m</mi></msub></math> no son reales (no existen monopolos), sino una herramienta matemática que permite reutilizar toda la maquinaria de la electrostática.</p>
       </div>
       <div class="concept-card">
         <h3>Cargas superficiales magnéticas</h3>
-        <p>En la superficie de un material magnetizado, $\sigma_m = \vec{M}\cdot\hat{n}$ actúa como una distribución de carga magnética. Para un cilindro magnetizado axialmente, aparecen $\pm\sigma_m$ en las tapas, análogos a las cargas en un capacitor.</p>
+        <p>En la superficie de un material magnetizado, <math data-tex="\sigma_m = \vec{M}\cdot\hat{n}"><msub><mi>σ</mi><mi>m</mi></msub><mo>=</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>n</mi><mo>̂</mo></mover></math> actúa como una distribución de carga magnética. Para un cilindro magnetizado axialmente, aparecen <math data-tex="\pm\sigma_m"><mo>±</mo><msub><mi>σ</mi><mi>m</mi></msub></math> en las tapas, análogos a las cargas en un capacitor.</p>
       </div>
       <div class="concept-card">
         <h3>Superposición de configuraciones</h3>
@@ -111,7 +109,7 @@
       <div class="formula-label">Potencial escalar magnético y campo auxiliar</div>
       <div class="formula-math"><img class="typst-formula" src="aux_24_1.svg" alt=""></div>
       <div class="formula-desc">
-        Válido en regiones sin corrientes libres ($\vec{J}_f = 0$). El signo negativo es por analogía con el potencial eléctrico. A partir de $\Phi_m$ se recupera $\vec{B} = \mu_0(\vec{H}+\vec{M})$.
+        Válido en regiones sin corrientes libres (<math data-tex="\vec{J}_f = 0"><msub><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover><mi>f</mi></msub><mo>=</mo><mn>0</mn></math>). El signo negativo es por analogía con el potencial eléctrico. A partir de <math data-tex="\Phi_m"><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub></math> se recupera <math data-tex="\vec{B} = \mu_0(\vec{H}+\vec{M})"><mover accent="true"><mi>B</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mrow><mo>(</mo><mrow><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover><mo>+</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover></mrow><mo>)</mo></mrow></math>.
       </div>
     </div>
 
@@ -119,7 +117,7 @@
       <div class="formula-label">Cargas magnéticas equivalentes</div>
       <div class="formula-math"><img class="typst-formula" src="aux_24_2.svg" alt=""></div>
       <div class="formula-desc">
-        $\rho_m$ (A/m²) es la densidad volumétrica y $\sigma_m$ (A/m) la densidad superficial de carga magnética equivalente. Para magnetización uniforme $\rho_m = 0$ en el interior; solo aparece $\sigma_m$ en las superficies donde $\vec{M}$ tiene componente normal.
+        <math data-tex="\rho_m"><msub><mi>ρ</mi><mi>m</mi></msub></math> (A/m²) es la densidad volumétrica y <math data-tex="\sigma_m"><msub><mi>σ</mi><mi>m</mi></msub></math> (A/m) la densidad superficial de carga magnética equivalente. Para magnetización uniforme <math data-tex="\rho_m = 0"><msub><mi>ρ</mi><mi>m</mi></msub><mo>=</mo><mn>0</mn></math> en el interior; solo aparece <math data-tex="\sigma_m"><msub><mi>σ</mi><mi>m</mi></msub></math> en las superficies donde <math data-tex="\vec{M}"><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover></math> tiene componente normal.
       </div>
     </div>
 
@@ -127,7 +125,7 @@
       <div class="formula-label">Ecuación de Poisson magnética</div>
       <div class="formula-math"><img class="typst-formula" src="aux_24_3.svg" alt=""></div>
       <div class="formula-desc">
-        Análoga a $\nabla^2 V = -\rho/\epsilon_0$ en electrostática. Su solución formal es $\Phi_m(\vec{r}) = \frac{1}{4\pi}\int \frac{\rho_m(\vec{r}\,')}{\left|\vec{r}-\vec{r}\,'\right|}\,dV' + \frac{1}{4\pi}\oint \frac{\sigma_m(\vec{r}\,')}{\left|\vec{r}-\vec{r}\,'\right|}\,dS'$.
+        Análoga a <math data-tex="\nabla^2 V = -\rho/\epsilon_0"><msup><mo>∇</mo><mn>2</mn></msup><mi>V</mi><mo>=</mo><mo form="prefix">−</mo><mi>ρ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></math> en electrostática. Su solución formal es <math data-tex="\Phi_m(\vec{r}) = \frac{1}{4\pi}\int \frac{\rho_m(\vec{r}\,&#x27;)}{\left|\vec{r}-\vec{r}\,&#x27;\right|}\,dV&#x27; + \frac{1}{4\pi}\oint \frac{\sigma_m(\vec{r}\,&#x27;)}{\left|\vec{r}-\vec{r}\,&#x27;\right|}\,dS&#x27;"><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub><mrow><mo>(</mo><mover accent="true"><mi>r</mi><mo stretchy="true">⃗</mo></mover><mo>)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi></mrow></mfrac><mo form="prefix">∫</mo><mfrac><mrow><msub><mi>ρ</mi><mi>m</mi></msub><mrow><mo>(</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="true">⃗</mo></mover><mspace width="0.1667em"/><msup><mrow></mrow><mo>′</mo></msup></mrow><mo>)</mo></mrow></mrow><mrow><mo>|</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0em" rspace="0em">−</mo><mover accent="true"><mi>r</mi><mo stretchy="true">⃗</mo></mover><mspace width="0.1667em"/><msup><mrow></mrow><mo>′</mo></msup></mrow><mo>|</mo></mrow></mfrac><mspace width="0.1667em"/><mi>d</mi><msup><mi>V</mi><mo>′</mo></msup><mo>+</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi></mrow></mfrac><mo form="prefix">∮</mo><mfrac><mrow><msub><mi>σ</mi><mi>m</mi></msub><mrow><mo>(</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="true">⃗</mo></mover><mspace width="0.1667em"/><msup><mrow></mrow><mo>′</mo></msup></mrow><mo>)</mo></mrow></mrow><mrow><mo>|</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0em" rspace="0em">−</mo><mover accent="true"><mi>r</mi><mo stretchy="true">⃗</mo></mover><mspace width="0.1667em"/><msup><mrow></mrow><mo>′</mo></msup></mrow><mo>|</mo></mrow></mfrac><mspace width="0.1667em"/><mi>d</mi><msup><mi>S</mi><mo>′</mo></msup></math>.
       </div>
     </div>
 
@@ -135,7 +133,7 @@
       <div class="formula-label">Campo en el eje de un cilindro magnetizado</div>
       <div class="formula-math"><img class="typst-formula" src="aux_24_4.svg" alt=""></div>
       <div class="formula-desc">
-        Para un cilindro de longitud $L$ y radio $R$ uniformemente magnetizado a lo largo de su eje, el campo en el centro se obtiene sumando la contribución de las dos tapas como discos de $\pm\sigma_m = M$. En el límite $R \ll L$ se recupera $B \approx \mu_0 M$.
+        Para un cilindro de longitud <math data-tex="L"><mi>L</mi></math> y radio <math data-tex="R"><mi>R</mi></math> uniformemente magnetizado a lo largo de su eje, el campo en el centro se obtiene sumando la contribución de las dos tapas como discos de <math data-tex="\pm\sigma_m = M"><mo>±</mo><msub><mi>σ</mi><mi>m</mi></msub><mo>=</mo><mi>M</mi></math>. En el límite <math data-tex="R \ll L"><mi>R</mi><mo>≪</mo><mi>L</mi></math> se recupera <math data-tex="B \approx \mu_0 M"><mi>B</mi><mo>≈</mo><msub><mi>μ</mi><mn>0</mn></msub><mi>M</mi></math>.
       </div>
     </div>
 
@@ -143,7 +141,7 @@
       <div class="formula-label">Equivalencia corrientes ligadas — cargas magnéticas</div>
       <div class="formula-math"><img class="typst-formula" src="aux_24_5.svg" alt=""></div>
       <div class="formula-desc">
-        Ambas formulaciones describen la misma física. Las corrientes ligadas $\vec{J}_b = \nabla\times\vec{M}$ y $\vec{K}_b = \vec{M}\times\hat{n}$ producen exactamente el mismo campo que las cargas $\rho_m$ y $\sigma_m$. Se elige la más conveniente según la geometría del problema.
+        Ambas formulaciones describen la misma física. Las corrientes ligadas <math data-tex="\vec{J}_b = \nabla\times\vec{M}"><msub><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover><mi>b</mi></msub><mo>=</mo><mo form="prefix">∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover></math> y <math data-tex="\vec{K}_b = \vec{M}\times\hat{n}"><msub><mover accent="true"><mi>K</mi><mo stretchy="true">⃗</mo></mover><mi>b</mi></msub><mo>=</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mover accent="true"><mi>n</mi><mo>̂</mo></mover></math> producen exactamente el mismo campo que las cargas <math data-tex="\rho_m"><msub><mi>ρ</mi><mi>m</mi></msub></math> y <math data-tex="\sigma_m"><msub><mi>σ</mi><mi>m</mi></msub></math>. Se elige la más conveniente según la geometría del problema.
       </div>
     </div>
 
@@ -154,11 +152,11 @@
     <div class="tip-box">
       <div class="tip-title">✦ Estrategia para usar el potencial escalar magnético</div>
       <ul>
-        <li>Verificar que no hay corrientes libres en la región de interés: si $\vec{J}_f \neq 0$, el potencial escalar no es válido y hay que volver a $\vec{A}$ o a Ampère directo.</li>
-        <li>Identificar las distribuciones de carga magnética: $\rho_m = -\nabla\cdot\vec{M}$ en el volumen y $\sigma_m = \vec{M}\cdot\hat{n}$ en cada superficie de discontinuidad.</li>
-        <li>Para magnetización uniforme dentro de un volumen, $\rho_m = 0$; las únicas fuentes son las $\sigma_m$ superficiales.</li>
-        <li>Calcular $\Phi_m$ con la integral tipo Coulomb (igual que el potencial eléctrico con $\rho_m/4\pi$ en lugar de $\rho/4\pi\epsilon_0$), luego $\vec{H} = -\nabla\Phi_m$.</li>
-        <li>Para el toroide con abertura: tratar como toroide completo (campo $B_t = \mu_0 M$ dentro) más espira cuadrada de corriente $I = Ma$ inversa; el campo neto en el centro de la abertura es $B = B_t + B_\text{espira}$.</li>
+        <li>Verificar que no hay corrientes libres en la región de interés: si <math data-tex="\vec{J}_f \neq 0"><msub><mover accent="true"><mi>J</mi><mo stretchy="true">⃗</mo></mover><mi>f</mi></msub><mo>≠</mo><mn>0</mn></math>, el potencial escalar no es válido y hay que volver a <math data-tex="\vec{A}"><mover accent="true"><mi>A</mi><mo stretchy="true">⃗</mo></mover></math> o a Ampère directo.</li>
+        <li>Identificar las distribuciones de carga magnética: <math data-tex="\rho_m = -\nabla\cdot\vec{M}"><msub><mi>ρ</mi><mi>m</mi></msub><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover></math> en el volumen y <math data-tex="\sigma_m = \vec{M}\cdot\hat{n}"><msub><mi>σ</mi><mi>m</mi></msub><mo>=</mo><mover accent="true"><mi>M</mi><mo stretchy="true">⃗</mo></mover><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>n</mi><mo>̂</mo></mover></math> en cada superficie de discontinuidad.</li>
+        <li>Para magnetización uniforme dentro de un volumen, <math data-tex="\rho_m = 0"><msub><mi>ρ</mi><mi>m</mi></msub><mo>=</mo><mn>0</mn></math>; las únicas fuentes son las <math data-tex="\sigma_m"><msub><mi>σ</mi><mi>m</mi></msub></math> superficiales.</li>
+        <li>Calcular <math data-tex="\Phi_m"><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub></math> con la integral tipo Coulomb (igual que el potencial eléctrico con <math data-tex="\rho_m/(4\pi)"><msub><mi>ρ</mi><mi>m</mi></msub><mi>/</mi><mrow><mo>(</mo><mrow><mn>4</mn><mi>π</mi></mrow><mo>)</mo></mrow></math> en lugar de <math data-tex="\rho/(4\pi\epsilon_0)"><mi>ρ</mi><mi>/</mi><mrow><mo>(</mo><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></math>), luego <math data-tex="\vec{H} = -\nabla\Phi_m"><mover accent="true"><mi>H</mi><mo stretchy="true">⃗</mo></mover><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub></math>.</li>
+        <li>Para el toroide con abertura: tratar como toroide completo (campo <math data-tex="B_t = \mu_0 M"><msub><mi>B</mi><mi>t</mi></msub><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mi>M</mi></math> dentro) más espira cuadrada de corriente <math data-tex="I = Ma"><mi>I</mi><mo>=</mo><mi>M</mi><mi>a</mi></math> inversa; el campo neto en el centro de la abertura es <math data-tex="B = B_t + B_\text{espira}"><mi>B</mi><mo>=</mo><msub><mi>B</mi><mi>t</mi></msub><mo>+</mo><msub><mi>B</mi><mtext>espira</mtext></msub></math>.</li>
         <li>La equivalencia entre corrientes ligadas y cargas magnéticas es exacta: elegir según conveniencia. Las cargas son útiles cuando hay simetría que permite usar resultados electrostáticos directamente.</li>
       </ul>
     </div>

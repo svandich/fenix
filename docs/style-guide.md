@@ -39,7 +39,7 @@ Si se necesita un 8.º color, agregar `--unit-8` en `:root` y las clases `.u8`, 
 |----------|--------|-----|
 | Body | `'Inter'` (local) | Todo el texto de la página |
 | Monospace | `'JetBrains Mono'` (local) | Números de auxiliar, snippets en `.formula-desc` |
-| MathJax | CDN jsdelivr | Fórmulas LaTeX renderizadas |
+| Math | `math`, con fallback a `Latin Modern Math` / `STIX Two Math` / `Cambria Math` / `serif` | Contenido de los `<math>` inline |
 
 Las fuentes están en `styles/fonts/`. El `@font-face` en `main.css` las carga con `font-display: swap`.
 
@@ -167,19 +167,28 @@ La sidebar es idéntica en todas las páginas. La única diferencia es cuál `na
 
 ---
 
-## MathJax
+## Math inline (MathML)
 
-Se carga por CDN en cada página, **sólo para math inline**:
+No hay ningún script de math en el `<head>`. El math inline se escribe `$...$` en la prosa y
+`./build.sh` lo hornea como MathML, dejando el LaTeX en `data-tex`:
+
 ```html
-<script>
-  MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+la temperatura <math data-tex="T"><mi>T</mi></math> del sistema
 ```
 
-Las fórmulas inline usan `$...$` dentro de la prosa. Las de bloque **no** usan MathJax: se compilan
-con Typst a SVG (`.typst-formula`). El `skipHtmlTags` con `script` es lo que evita que MathJax
-procese los `<script type="text/explanation">` de los quizzes antes de tiempo.
+Las de bloque van por otro camino: se compilan con Typst a SVG (`.typst-formula`).
+
+Reglas de CSS asociadas, en `main.css` bajo `/* ===== MATH INLINE (MathML) ===== */`:
+
+- `math { font-family: … }` — pila de fuentes matemáticas con fallback a `serif`, para que el math
+  no se lea como texto corrido donde no haya una fuente matemática instalada.
+- `math .mv-b`, `math .mv-bi` — el peso de `\mathbf`. Va por CSS porque al hornear se bajan los
+  alfanuméricos matemáticos (U+1D400+) a letra base, que Inter sí trae.
+- El bloque siguiente es la normalización de MathML que emite el propio Typst (tablas, fracciones,
+  acentos). **Generado: no editarlo a mano.**
+
+Los quizzes también llevan MathML: sus `<script type="text/explanation">` guardan el `<math>` ya
+horneado, y `quiz.js` lo inyecta con `innerHTML` sin tipografiar nada.
 
 ### `.typst-formula`
 Clase de los `<img>` de fórmulas compiladas: `display: block`, centrado, `max-width: 100%`.

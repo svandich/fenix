@@ -17,7 +17,7 @@ Repositorio de apuntes interactivos para cursos de ingeniería. Cada curso es un
 repo-root/
 ├── styles/main.css           ← CSS compartido por todos los cursos
 ├── styles/fonts/             ← Inter + JetBrains Mono (locales)
-├── basicos/                  ← index.html (página única, sin sidebar, usa MathJax display)
+├── basicos/                  ← index.html (página única, sin sidebar)
 ├── electro/                  ← index.html + aux_N/index.html × 25
 ├── termo/                    ← index.html + cat_N/index.html × 28 + cc_N/index.html × 11
 ├── termoquimica/             ← index.html + clase_N/index.html × 8 + aux_N/index.html × 4
@@ -32,6 +32,8 @@ repo-root/
 │   ├── compile-typst.sh      ← Compila todos los .typ → SVG
 │   ├── make-diagrams.py      ← Genera los diagramas (no fórmulas) de termoquimica → SVG
 │   ├── check-lr-parens.py    ← Detecta lr((A)/(B)), que renderiza sin paréntesis
+│   ├── latex2typst.py        ← Traduce el LaTeX del math inline a sintaxis Typst
+│   ├── inline-mathml.py      ← Hornea el math inline ($...$) como MathML en las 80 páginas
 │   ├── courses.py            ← Manifiesto: fuente de verdad de sidebar y prev/next
 │   └── sync-nav.py           ← Regenera sidebar y prev/next en las 79 páginas
 ├── docs/
@@ -39,8 +41,8 @@ repo-root/
 │   ├── style-guide.md        ← Variables CSS, componentes, clases
 │   ├── design-logic.md       ← Por qué se tomaron las decisiones de diseño
 │   ├── sidebar-maintenance.md   ← Cómo funciona sync-nav.py y el manifiesto de cursos
-│   └── typst-inline-migration.md ← Por qué el math inline sigue en MathJax y no en Typst
-├── build.sh                  ← ./build.sh [curso] — compila Typst → SVG
+│   └── typst-inline-migration.md ← Cómo se migró el math inline a MathML y cómo se verificó
+├── build.sh                  ← ./build.sh [curso] — Typst → SVG, y math inline → MathML
 ├── .gitignore                ← Excluye node_modules/
 └── CLAUDE.md                 ← Este archivo
 ```
@@ -49,7 +51,8 @@ Ver [docs/structure.md](docs/structure.md) para el árbol completo y las reglas 
 
 ## Sistema de fórmulas: Typst + SVG
 
-Las fórmulas de display (`$$...$$`) se renderizan con **Typst**, no con MathJax.
+Las fórmulas de display se renderizan con **Typst** a SVG; el math inline (`$...$`) se hornea como
+**MathML** en el propio HTML. No hay MathJax ni ninguna otra dependencia de red.
 
 **Flujo de trabajo:**
 1. Editar la fórmula en `typst/<curso>/<página>.typ` (ej. `cat_3.typ`, `cc_1.typ`, `aux_5.typ`, `clase_2.typ`)
@@ -70,7 +73,30 @@ idempotente: recompilar sin tocar ningún `.typ` deja los SVGs byte a byte igual
   - Ejemplos: `cat_3.typ` → `termo/cat_3/cat_3_1.svg`; `cc_1.typ` → `termo/cc_1/cc_1_1.svg`; `aux_5.typ` → `electro/aux_5/aux_5_1.svg`; `clase_2.typ` → `termoquimica/clase_2/clase_2_1.svg`
 - En el HTML, cada fórmula es `<div class="formula-math"><img class="typst-formula" src="<página>_P.svg" alt=""></div>`
 
-**MathJax** se mantiene en `<head>` para el math inline (`$...$`) en texto de descripciones. Las fórmulas de display ya no usan MathJax.
+## Math inline: LaTeX → MathML
+
+El math inline dentro del texto se escribe en LaTeX, entre `$...$`, como siempre. `./build.sh` lo
+traduce a Typst, lo compila a MathML y lo hornea en el HTML:
+
+```html
+<!-- lo que se escribe -->            <!-- lo que queda tras ./build.sh -->
+partículas a $T$ y $P$               partículas a <math data-tex="T"><mi>T</mi></math> y …
+```
+
+- El LaTeX original queda en el atributo `data-tex`, así que el paso es **idempotente** (en la corrida
+  siguiente relee de ahí) y **reversible**. No hay que escribir MathML a mano nunca.
+- Para editar una fórmula inline ya horneada: cambiar el `data-tex` y correr `./build.sh`. O borrar el
+  `<math>` entero y volver a escribir `$...$`.
+- `./scripts/inline-mathml.py --check` sale con código 1 si quedó algún `$...$` sin hornear
+  (sirve para pre-commit).
+- El traductor (`scripts/latex2typst.py`) cubre los 84 macros que usa el repo y **falla con error**
+  ante uno desconocido, en vez de traducirlo mal en silencio. Si hace falta un macro nuevo, se agrega
+  a las tablas `SYMBOLS` / `ACCENTS` / `FONTS` de ese archivo.
+- Los símbolos se emiten como codepoint Unicode literal (`\epsilon` → `ϵ`), no como nombre Typst,
+  justamente porque Typst invierte `epsilon`/`epsilon.alt` respecto de LaTeX.
+
+Ver [docs/typst-inline-migration.md](docs/typst-inline-migration.md) para cómo se verificó la
+traducción de las 2261 expresiones contra MathJax, y qué dos cosas cambian de aspecto a propósito.
 
 **Sintaxis Typst relevante** (diferencias con LaTeX):
 | LaTeX | Typst |
@@ -143,7 +169,8 @@ python3 scripts/make-diagrams.py     # regenera los 8 diagramas de termoquimica/
    - Las fórmulas de display van como `<img class="typst-formula" src="<página>_P.svg" alt="">` (SVGs en la misma carpeta).
    - CSS: `href="../../styles/main.css"` (dos niveles arriba).
 6. Crear el archivo `typst/<curso>/<página>.typ` con las fórmulas correspondientes.
-7. Compilar: `./build.sh <curso>`.
+7. Compilar: `./build.sh <curso>`. Esto genera los SVG de las fórmulas de display y hornea el
+   math inline (`$...$`) de la página nueva como MathML.
 8. Sincronizar la navegación: `./scripts/sync-nav.py <curso>`. Esto escribe la sidebar y el
    prev/next en las 13, 26 o 40 páginas del curso, incluido su `index.html`.
 9. Actualizar `index.html` del curso con una fila nueva en la tabla del temario (link: `<página>/`).
@@ -179,15 +206,19 @@ Ver [docs/structure.md](docs/structure.md) para más detalle.
   Los 348 SVG del repo están compilados con esta versión exacta. Subir de versión cambia los hashes
   de los ids de glifo y reescribe todos los archivos, sin cambio visual: esperá un diff enorme y
   revisá que el render no haya cambiado antes de commitear.
-- MathJax 3 CDN para math inline (`$...$`) en texto de descripciones.
-- `styles/quiz.js` — único JS propio: corrige los quizzes de repaso al vuelo.
+- **MathML** para el math inline, horneado en build. Sin JS, sin CDN. Soporte de navegador:
+  Firefox siempre, Chrome 109+, Safari 14.1+.
+- `styles/quiz.js` — único JS propio: corrige los quizzes de repaso al vuelo. Ya no tipografía nada;
+  el MathML de las explicaciones lo renderiza el navegador solo.
+- `scripts/inline-mathml.py` — hornea el math inline de las 80 páginas. `--check` sale con código 1
+  si algo quedó sin hornear; `--diff` muestra lo que aplicaría.
 - `scripts/sync-nav.py` — genera la sidebar y el prev/next de las 79 páginas desde `scripts/courses.py`.
   `./scripts/sync-nav.py --check` sale con código 1 si algo quedó desincronizado (sirve para pre-commit).
 
 ## Abrir localmente
 
-Abrir cualquier `index.html` directamente en el navegador (no requiere servidor).
-MathJax necesita conexión a internet para cargar desde CDN.
+Abrir cualquier `index.html` directamente en el navegador (no requiere servidor, y **no requiere
+conexión a internet**: no queda ninguna dependencia externa).
 Los SVGs están trackeados en git junto al HTML de cada página — regenerar con `./build.sh` si se editan los `.typ`.
 
 ## Convenios que difieren entre cursos

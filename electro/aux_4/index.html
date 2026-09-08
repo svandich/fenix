@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 4 — Potencial Eléctrico</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -63,18 +61,18 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Unidad 2</div>
     <div class="unit-pill u2 bg-u2">Potencial y conductores · Aux 4–9</div>
     <h1>Auxiliar 4: Potencial Eléctrico</h1>
-    <p class="desc">El potencial $V$ es la magnitud escalar que resume el campo vectorial $\mathbf{E}$. Es más fácil de calcular y permite obtener el campo tomando su gradiente.</p>
+    <p class="desc">El potencial <math data-tex="V"><mi>V</mi></math> es la magnitud escalar que resume el campo vectorial <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math>. Es más fácil de calcular y permite obtener el campo tomando su gradiente.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Definición de potencial eléctrico $V(\mathbf{r})$</li>
-        <li>Relación $\mathbf{E} = -\nabla V$ e irrotacionalidad $\nabla\times\mathbf{E} = 0$</li>
+        <li>Definición de potencial eléctrico <math data-tex="V(\mathbf{r})"><mi>V</mi><mrow><mo>(</mo><mi class="mv-bi">r</mi><mo>)</mo></mrow></math></li>
+        <li>Relación <math data-tex="\mathbf{E} = -\nabla V"><mi class="mv-bi">E</mi><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mi>V</mi></math> e irrotacionalidad <math data-tex="\nabla\times\mathbf{E} = 0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math></li>
         <li>Potencial de cargas puntuales y distribuciones continuas</li>
-        <li>Diferencia de potencial: $V(b) - V(a) = -\int_a^b \mathbf{E}\cdot d\boldsymbol{\ell}$</li>
-        <li>Superficies equipotenciales y su relación con $\mathbf{E}$</li>
+        <li>Diferencia de potencial: <math data-tex="V(b) - V(a) = -\int_a^b \mathbf{E}\cdot d\boldsymbol{\ell}"><mi>V</mi><mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow><mo>−</mo><mi>V</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mo form="prefix">−</mo><msubsup><mo form="prefix">∫</mo><mi>a</mi><mi>b</mi></msubsup><mi class="mv-bi">E</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mi>ℓ</mi></math></li>
+        <li>Superficies equipotenciales y su relación con <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math></li>
       </ul>
     </div>
   </section>
@@ -84,19 +82,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Potencial como energía por carga</h3>
-        <p>$V(\mathbf{r})$ es la energía potencial que tendría una carga unitaria en ese punto. Mover una carga $q$ de $a$ a $b$ requiere trabajo $W = q(V_b - V_a)$.</p>
+        <p><math data-tex="V(\mathbf{r})"><mi>V</mi><mrow><mo>(</mo><mi class="mv-bi">r</mi><mo>)</mo></mrow></math> es la energía potencial que tendría una carga unitaria en ese punto. Mover una carga <math data-tex="q"><mi>q</mi></math> de <math data-tex="a"><mi>a</mi></math> a <math data-tex="b"><mi>b</mi></math> requiere trabajo <math data-tex="W = q(V_b - V_a)"><mi>W</mi><mo>=</mo><mi>q</mi><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>b</mi></msub><mo>−</mo><msub><mi>V</mi><mi>a</mi></msub></mrow><mo>)</mo></mrow></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Irrotacionalidad</h3>
-        <p>El campo eléctrostático es conservativo: $\nabla\times\mathbf{E} = 0$. Esto garantiza que la diferencia de potencial no depende del camino de integración.</p>
+        <p>El campo eléctrostático es conservativo: <math data-tex="\nabla\times\mathbf{E} = 0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math>. Esto garantiza que la diferencia de potencial no depende del camino de integración.</p>
       </div>
       <div class="concept-card">
         <h3>Superposición de potenciales</h3>
-        <p>Como $V$ es escalar, la superposición es algebraica (no vectorial). Basta sumar los potenciales de cada carga, sin preocuparse por componentes.</p>
+        <p>Como <math data-tex="V"><mi>V</mi></math> es escalar, la superposición es algebraica (no vectorial). Basta sumar los potenciales de cada carga, sin preocuparse por componentes.</p>
       </div>
       <div class="concept-card">
         <h3>Equipotenciales</h3>
-        <p>Son superficies de $V$ constante. El campo $\mathbf{E}$ siempre es perpendicular a ellas y apunta hacia potencial decreciente. Las superficies de un conductor son equipotenciales.</p>
+        <p>Son superficies de <math data-tex="V"><mi>V</mi></math> constante. El campo <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> siempre es perpendicular a ellas y apunta hacia potencial decreciente. Las superficies de un conductor son equipotenciales.</p>
       </div>
     </div>
   </section>
@@ -108,7 +106,7 @@
       <div class="formula-label">Potencial de carga puntual (referencia en ∞)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_4_1.svg" alt=""></div>
       <div class="formula-desc">
-        Convenio usual: $V(\infty) = 0$. El potencial es positivo para cargas positivas y negativo para negativas.
+        Convenio usual: <math data-tex="V(\infty) = 0"><mi>V</mi><mrow><mo>(</mo><mi>∞</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></math>. El potencial es positivo para cargas positivas y negativo para negativas.
       </div>
     </div>
 
@@ -116,7 +114,7 @@
       <div class="formula-label">Campo a partir del potencial</div>
       <div class="formula-math"><img class="typst-formula" src="aux_4_2.svg" alt=""></div>
       <div class="formula-desc">
-        En coordenadas esféricas: $E_r = -\partial V/\partial r$. En coordenadas cartesianas: $E_x = -\partial V/\partial x$, etc.
+        En coordenadas esféricas: <math data-tex="E_r = -\partial V/\partial r"><msub><mi>E</mi><mi>r</mi></msub><mo>=</mo><mo form="prefix">−</mo><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>r</mi></math>. En coordenadas cartesianas: <math data-tex="E_x = -\partial V/\partial x"><msub><mi>E</mi><mi>x</mi></msub><mo>=</mo><mo form="prefix">−</mo><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>x</mi></math>, etc.
       </div>
     </div>
 
@@ -142,9 +140,9 @@
     <div class="tip-box">
       <div class="tip-title">✦ Estrategia para calcular V y E</div>
       <ul>
-        <li>Si ya tienes $\mathbf{E}$: integra a lo largo de un camino conveniente para obtener $V$.</li>
-        <li>Si tienes la distribución de carga: calcula $V$ por superposición escalar (más fácil) y luego deriva para obtener $\mathbf{E} = -\nabla V$.</li>
-        <li>La referencia de $V$ es libre; convencionalmente $V(\infty) = 0$, pero en planos o cilindros infinitos se elige otra referencia.</li>
+        <li>Si ya tienes <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math>: integra a lo largo de un camino conveniente para obtener <math data-tex="V"><mi>V</mi></math>.</li>
+        <li>Si tienes la distribución de carga: calcula <math data-tex="V"><mi>V</mi></math> por superposición escalar (más fácil) y luego deriva para obtener <math data-tex="\mathbf{E} = -\nabla V"><mi class="mv-bi">E</mi><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mi>V</mi></math>.</li>
+        <li>La referencia de <math data-tex="V"><mi>V</mi></math> es libre; convencionalmente <math data-tex="V(\infty) = 0"><mi>V</mi><mrow><mo>(</mo><mi>∞</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></math>, pero en planos o cilindros infinitos se elige otra referencia.</li>
         <li>Equipotenciales ⊥ líneas de campo. Donde el campo es intenso, las equipotenciales están más juntas.</li>
       </ul>
     </div>

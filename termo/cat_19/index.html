@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 19 — Gran Ensemble Canónico</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -81,17 +77,17 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Potenciales y sistemas</div>
     <div class="unit-pill u5 bg-u5">Potenciales y sistemas · Cát. 18–20</div>
     <h1>Cátedra 19: Gran Ensemble Canónico</h1>
-    <p class="desc">Sistemas abiertos que intercambian partículas con un reservorio: la gran función de partición $\Xi$ generaliza $Z$ a $N$ variable, y conduce naturalmente a las estadísticas cuánticas de Fermi-Dirac y Bose-Einstein.</p>
+    <p class="desc">Sistemas abiertos que intercambian partículas con un reservorio: la gran función de partición <math data-tex="\Xi"><mi mathvariant="normal">Ξ</mi></math> generaliza <math data-tex="Z"><mi>Z</mi></math> a <math data-tex="N"><mi>N</mi></math> variable, y conduce naturalmente a las estadísticas cuánticas de Fermi-Dirac y Bose-Einstein.</p>
   </div>
 
   <section>
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Ensemble gran canónico ($\mu VT$): $T$ y $\mu$ fijos, $N$ y $E$ fluctúan</li>
-        <li>Gran función de partición $\Xi = \sum_{N,r} e^{\beta(\mu N - E_{N,r})}$</li>
-        <li>Gran potencial $\Omega = -k_BT\ln\Xi = -pV$</li>
-        <li>Número medio de partículas $\langle N\rangle = k_BT\,\partial\ln\Xi/\partial\mu$</li>
+        <li>Ensemble gran canónico (<math data-tex="\mu VT"><mi>μ</mi><mi>V</mi><mi>T</mi></math>): <math data-tex="T"><mi>T</mi></math> y <math data-tex="\mu"><mi>μ</mi></math> fijos, <math data-tex="N"><mi>N</mi></math> y <math data-tex="E"><mi>E</mi></math> fluctúan</li>
+        <li>Gran función de partición <math data-tex="\Xi = \sum_{N,r} e^{\beta(\mu N - E_{N,r})}"><mi mathvariant="normal">Ξ</mi><mo>=</mo><msub><mo form="prefix" lspace="0em">∑</mo><mrow><mi>N</mi><mo rspace="0em">,</mo><mi>r</mi></mrow></msub><msup><mi>e</mi><mrow><mi>β</mi><mrow><mo>(</mo><mrow><mi>μ</mi><mi>N</mi><mo lspace="0em" rspace="0em">−</mo><msub><mi>E</mi><mrow><mi>N</mi><mo rspace="0em">,</mo><mi>r</mi></mrow></msub></mrow><mo>)</mo></mrow></mrow></msup></math></li>
+        <li>Gran potencial <math data-tex="\Omega = -k_BT\ln\Xi = -pV"><mi mathvariant="normal">Ω</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi mathvariant="normal">Ξ</mi><mo>=</mo><mo form="prefix">−</mo><mi>p</mi><mi>V</mi></math></li>
+        <li>Número medio de partículas <math data-tex="\langle N\rangle = k_BT\,\partial\ln\Xi/\partial\mu"><mrow><mo>⟨</mo><mi>N</mi><mo>⟩</mo></mrow><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mspace width="0.1667em"/><mi>∂</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi mathvariant="normal">Ξ</mi><mi>/</mi><mi>∂</mi><mi>μ</mi></math></li>
         <li>Estadística de Fermi-Dirac: fermiones (electrones, protones) — principio de exclusión</li>
         <li>Estadística de Bose-Einstein: bosones (fotones, fonones) — condensación</li>
       </ul>
@@ -103,19 +99,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Ensemble gran canónico</h3>
-        <p>El sistema puede intercambiar tanto energía como partículas con el reservorio. Las variables fijas son $T$, $V$ y $\mu$ (potencial químico del reservorio). En el equilibrio: $\mu_{sistema} = \mu_{reservorio}$. Es el ensemble más natural para partículas cuánticas.</p>
+        <p>El sistema puede intercambiar tanto energía como partículas con el reservorio. Las variables fijas son <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math> y <math data-tex="\mu"><mi>μ</mi></math> (potencial químico del reservorio). En el equilibrio: <math data-tex="\mu_{sistema} = \mu_{reservorio}"><msub><mi>μ</mi><mrow><mi>s</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>e</mi><mi>m</mi><mi>a</mi></mrow></msub><mo>=</mo><msub><mi>μ</mi><mrow><mi>r</mi><mi>e</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>v</mi><mi>o</mi><mi>r</mi><mi>i</mi><mi>o</mi></mrow></msub></math>. Es el ensemble más natural para partículas cuánticas.</p>
       </div>
       <div class="concept-card">
-        <h3>Fugacidad $z = e^{\beta\mu}$</h3>
-        <p>Variable natural del gran ensemble: $\Xi = \sum_N z^N Z_N$. Para gases clásicos a alta temperatura, $z \ll 1$; para fermiones a baja temperatura, $z \to \infty$ (límite cuántico). La fugacidad es la "actividad" del gas en química.</p>
+        <h3>Fugacidad <math data-tex="z = e^{\beta\mu}"><mi>z</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>β</mi><mi>μ</mi></mrow></msup></math></h3>
+        <p>Variable natural del gran ensemble: <math data-tex="\Xi = \sum_N z^N Z_N"><mi mathvariant="normal">Ξ</mi><mo>=</mo><msub><mo form="prefix" lspace="0em">∑</mo><mi>N</mi></msub><msup><mi>z</mi><mi>N</mi></msup><msub><mi>Z</mi><mi>N</mi></msub></math>. Para gases clásicos a alta temperatura, <math data-tex="z \ll 1"><mi>z</mi><mo>≪</mo><mn>1</mn></math>; para fermiones a baja temperatura, <math data-tex="z \to \infty"><mi>z</mi><mo stretchy="false">→</mo><mi>∞</mi></math> (límite cuántico). La fugacidad es la "actividad" del gas en química.</p>
       </div>
       <div class="concept-card">
         <h3>Distribución de Fermi-Dirac</h3>
-        <p>Ocupación media del nivel $\varepsilon$ por fermiones: $\bar{n}_{FD}(\varepsilon) = 1/(e^{\beta(\varepsilon-\mu)}+1) \in [0,1]$. A $T=0$: $\bar{n}_{FD} = 1$ para $\varepsilon < \mu = \varepsilon_F$ (energía de Fermi) y $0$ para $\varepsilon > \mu$. El Mar de Fermi.</p>
+        <p>Ocupación media del nivel <math data-tex="\varepsilon"><mi>ε</mi></math> por fermiones: <math data-tex="\bar{n}_{FD}(\varepsilon) = 1/(e^{\beta(\varepsilon-\mu)}+1) \in [0,1]"><msub><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mrow><mi>F</mi><mi>D</mi></mrow></msub><mrow><mo>(</mo><mi>ε</mi><mo>)</mo></mrow><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mrow><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>∈</mo><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow></math>. A <math data-tex="T=0"><mi>T</mi><mo>=</mo><mn>0</mn></math>: <math data-tex="\bar{n}_{FD} = 1"><msub><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mrow><mi>F</mi><mi>D</mi></mrow></msub><mo>=</mo><mn>1</mn></math> para <math data-tex="\varepsilon &lt; \mu = \varepsilon_F"><mi>ε</mi><mo>&lt;</mo><mi>μ</mi><mo>=</mo><msub><mi>ε</mi><mi>F</mi></msub></math> (energía de Fermi) y <math data-tex="0"><mn>0</mn></math> para <math data-tex="\varepsilon &gt; \mu"><mi>ε</mi><mo>></mo><mi>μ</mi></math>. El Mar de Fermi.</p>
       </div>
       <div class="concept-card">
         <h3>Distribución de Bose-Einstein</h3>
-        <p>Ocupación media del nivel $\varepsilon$ por bosones: $\bar{n}_{BE}(\varepsilon) = 1/(e^{\beta(\varepsilon-\mu)}-1) \in [0,\infty)$. Sin límite de ocupación. A $T \to 0$, si $\mu \to 0^-$, todos los bosones colapsan al estado fundamental: condensación de Bose-Einstein.</p>
+        <p>Ocupación media del nivel <math data-tex="\varepsilon"><mi>ε</mi></math> por bosones: <math data-tex="\bar{n}_{BE}(\varepsilon) = 1/(e^{\beta(\varepsilon-\mu)}-1) \in [0,\infty)"><msub><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mrow><mi>B</mi><mi>E</mi></mrow></msub><mrow><mo>(</mo><mi>ε</mi><mo>)</mo></mrow><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mrow><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>∈</mo><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mi>∞</mi></mrow><mo>)</mo></mrow></math>. Sin límite de ocupación. A <math data-tex="T \to 0"><mi>T</mi><mo stretchy="false">→</mo><mn>0</mn></math>, si <math data-tex="\mu \to 0^-"><mi>μ</mi><mo stretchy="false">→</mo><msup><mn>0</mn><mo>−</mo></msup></math>, todos los bosones colapsan al estado fundamental: condensación de Bose-Einstein.</p>
       </div>
     </div>
   </section>
@@ -127,7 +123,7 @@
       <div class="formula-label">Gran función de partición</div>
       <div class="formula-math"><img class="typst-formula" src="cat_19_1.svg" alt=""></div>
       <div class="formula-desc">
-        Suma sobre todos los valores de $N$ y todos los microestados $r$ para cada $N$. $z = e^{\beta\mu}$ es la fugacidad. $Z_N$ es la función de partición canónica con $N$ partículas fijas.
+        Suma sobre todos los valores de <math data-tex="N"><mi>N</mi></math> y todos los microestados <math data-tex="r"><mi>r</mi></math> para cada <math data-tex="N"><mi>N</mi></math>. <math data-tex="z = e^{\beta\mu}"><mi>z</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>β</mi><mi>μ</mi></mrow></msup></math> es la fugacidad. <math data-tex="Z_N"><msub><mi>Z</mi><mi>N</mi></msub></math> es la función de partición canónica con <math data-tex="N"><mi>N</mi></math> partículas fijas.
       </div>
     </div>
 
@@ -135,7 +131,7 @@
       <div class="formula-label">Variables termodinámicas del gran canónico</div>
       <div class="formula-math"><img class="typst-formula" src="cat_19_2.svg" alt=""></div>
       <div class="formula-desc">
-        Análogo a $F = -k_BT\ln Z$ del canónico, aquí $pV = k_BT\ln\Xi$. Toda la termodinámica se extrae de $\ln\Xi$ derivando respecto de $\beta$, $z$ y $V$.
+        Análogo a <math data-tex="F = -k_BT\ln Z"><mi>F</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>Z</mi></math> del canónico, aquí <math data-tex="pV = k_BT\ln\Xi"><mi>p</mi><mi>V</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi mathvariant="normal">Ξ</mi></math>. Toda la termodinámica se extrae de <math data-tex="\ln\Xi"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><mi mathvariant="normal">Ξ</mi></math> derivando respecto de <math data-tex="\beta"><mi>β</mi></math>, <math data-tex="z"><mi>z</mi></math> y <math data-tex="V"><mi>V</mi></math>.
       </div>
     </div>
 
@@ -143,7 +139,7 @@
       <div class="formula-label">Distribuciones cuánticas</div>
       <div class="formula-math"><img class="typst-formula" src="cat_19_3.svg" alt=""></div>
       <div class="formula-desc">
-        El $+1$ (fermiones) impone el principio de exclusión: $\bar{n} \leq 1$. El $-1$ (bosones) permite cualquier ocupación. En el límite $e^{\beta(\varepsilon-\mu)} \gg 1$ (alta $T$ o baja densidad), ambas $\to e^{-\beta(\varepsilon-\mu)}$: distribución de Maxwell-Boltzmann.
+        El <math data-tex="+1"><mo>+</mo><mn>1</mn></math> (fermiones) impone el principio de exclusión: <math data-tex="\bar{n} \leq 1"><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mo>≤</mo><mn>1</mn></math>. El <math data-tex="-1"><mo>−</mo><mn>1</mn></math> (bosones) permite cualquier ocupación. En el límite <math data-tex="e^{\beta(\varepsilon-\mu)} \gg 1"><msup><mi>e</mi><mrow><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>≫</mo><mn>1</mn></math> (alta <math data-tex="T"><mi>T</mi></math> o baja densidad), ambas <math data-tex="\to e^{-\beta(\varepsilon-\mu)}"><mo form="infix" lspace="0em" stretchy="false">→</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup></math>: distribución de Maxwell-Boltzmann.
       </div>
     </div>
 
@@ -151,7 +147,7 @@
       <div class="formula-label">Temperatura de Fermi y de Bose</div>
       <div class="formula-math"><img class="typst-formula" src="cat_19_4.svg" alt=""></div>
       <div class="formula-desc">
-        $T_F$: temperatura por encima de la cual los electrones se comportan clásicamente ($T_F \sim 10^4$ K en metales — siempre cuánticos a temperatura ambiente). $T_{BE}$: temperatura de condensación para bosones de masa $m$.
+        <math data-tex="T_F"><msub><mi>T</mi><mi>F</mi></msub></math>: temperatura por encima de la cual los electrones se comportan clásicamente (<math data-tex="T_F \sim 10^4"><msub><mi>T</mi><mi>F</mi></msub><mo>∼</mo><msup><mn>10</mn><mn>4</mn></msup></math> K en metales — siempre cuánticos a temperatura ambiente). <math data-tex="T_{BE}"><msub><mi>T</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>: temperatura de condensación para bosones de masa <math data-tex="m"><mi>m</mi></math>.
       </div>
     </div>
   </section>
@@ -161,10 +157,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Claves del gran ensemble y estadísticas cuánticas</div>
       <ul>
-        <li>El gran ensemble es matemáticamente más cómodo para partículas cuánticas indistinguibles: la suma sobre $N$ "absorbe" el factorial $N!$ que aparece en el canónico, y las distribuciones de Fermi-Dirac y Bose-Einstein emergen naturalmente.</li>
-        <li>Para fermiones a $T \ll T_F$ (caso de los electrones en metales), solo los estados cerca de $\varepsilon_F$ contribuyen a propiedades térmicas — el "mar de Fermi" está completamente lleno y solo los electrones en la "superficie de Fermi" se excitan.</li>
-        <li>Para bosones, el límite $\mu \to 0^-$ marca la condensación: por debajo de $T_{BE}$, una fracción macroscópica de partículas ocupa el estado fundamental (condensado de Bose-Einstein). Es un orden colectivo cuántico.</li>
-        <li>En el límite clásico ($z \ll 1$), ambas estadísticas cuánticas coinciden con Maxwell-Boltzmann: $\bar{n} \approx e^{-\beta(\varepsilon-\mu)} \ll 1$ — la ocupación de cada estado es mucho menor que 1.</li>
+        <li>El gran ensemble es matemáticamente más cómodo para partículas cuánticas indistinguibles: la suma sobre <math data-tex="N"><mi>N</mi></math> "absorbe" el factorial <math data-tex="N!"><mi>N</mi><mo>!</mo></math> que aparece en el canónico, y las distribuciones de Fermi-Dirac y Bose-Einstein emergen naturalmente.</li>
+        <li>Para fermiones a <math data-tex="T \ll T_F"><mi>T</mi><mo>≪</mo><msub><mi>T</mi><mi>F</mi></msub></math> (caso de los electrones en metales), solo los estados cerca de <math data-tex="\varepsilon_F"><msub><mi>ε</mi><mi>F</mi></msub></math> contribuyen a propiedades térmicas — el "mar de Fermi" está completamente lleno y solo los electrones en la "superficie de Fermi" se excitan.</li>
+        <li>Para bosones, el límite <math data-tex="\mu \to 0^-"><mi>μ</mi><mo stretchy="false">→</mo><msup><mn>0</mn><mo>−</mo></msup></math> marca la condensación: por debajo de <math data-tex="T_{BE}"><msub><mi>T</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>, una fracción macroscópica de partículas ocupa el estado fundamental (condensado de Bose-Einstein). Es un orden colectivo cuántico.</li>
+        <li>En el límite clásico (<math data-tex="z \ll 1"><mi>z</mi><mo>≪</mo><mn>1</mn></math>), ambas estadísticas cuánticas coinciden con Maxwell-Boltzmann: <math data-tex="\bar{n} \approx e^{-\beta(\varepsilon-\mu)} \ll 1"><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mo>≈</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>≪</mo><mn>1</mn></math> — la ocupación de cada estado es mucho menor que 1.</li>
       </ul>
     </div>
   </section>
@@ -179,33 +175,33 @@
           <label class="quiz-option"><input type="radio" name="q19_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Fermi-Dirac es para partículas pesadas (protones) y Bose-Einstein para partículas ligeras (electrones)</span></label>
           <label class="quiz-option"><input type="radio" name="q19_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Fermi-Dirac (fermiones) tiene ocupación máxima 1 por estado, imposibilitando la doble ocupación (principio de exclusión); Bose-Einstein (bosones) no tiene límite de ocupación, permitiendo que muchas partículas compartan el mismo estado — origen de la condensación</span></label>
           <label class="quiz-option"><input type="radio" name="q19_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Fermi-Dirac aplica a temperaturas bajas y Bose-Einstein a temperaturas altas</span></label>
-          <label class="quiz-option"><input type="radio" name="q19_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Solo difieren en el valor del potencial químico $\mu$: positivo para fermiones, negativo para bosones</span></label>
+          <label class="quiz-option"><input type="radio" name="q19_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Solo difieren en el valor del potencial químico <math data-tex="\mu"><mi>μ</mi></math>: positivo para fermiones, negativo para bosones</span></label>
         </div>
-        <script type="text/explanation" id="q19_1-exp">La distinción fundamental es el spin y la estadística cuántica: fermiones (spin semientero: electrones, protones, neutrones) obedecen el principio de exclusión de Pauli — ningún estado puede ser ocupado por más de un fermión. Esto da $\bar{n}_{FD} = 1/(e^{\beta(\varepsilon-\mu)}+1) \leq 1$. Bosones (spin entero: fotones, fonones, $^4$He) no tienen esta restricción: $\bar{n}_{BE} = 1/(e^{\beta(\varepsilon-\mu)}-1)$ puede ser arbitrariamente grande. Esto permite la condensación de Bose-Einstein: una fracción macroscópica de bosones ocupa el mismo estado de menor energía.</script>
+        <script type="text/explanation" id="q19_1-exp">La distinción fundamental es el spin y la estadística cuántica: fermiones (spin semientero: electrones, protones, neutrones) obedecen el principio de exclusión de Pauli — ningún estado puede ser ocupado por más de un fermión. Esto da <math data-tex="\bar{n}_{FD} = 1/(e^{\beta(\varepsilon-\mu)}+1) \leq 1"><msub><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mrow><mi>F</mi><mi>D</mi></mrow></msub><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mrow><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>≤</mo><mn>1</mn></math>. Bosones (spin entero: fotones, fonones, <math data-tex="^4"><msup><mrow></mrow><mn>4</mn></msup></math>He) no tienen esta restricción: <math data-tex="\bar{n}_{BE} = 1/(e^{\beta(\varepsilon-\mu)}-1)"><msub><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mrow><mi>B</mi><mi>E</mi></mrow></msub><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mrow><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></math> puede ser arbitrariamente grande. Esto permite la condensación de Bose-Einstein: una fracción macroscópica de bosones ocupa el mismo estado de menor energía.</script>
         <div class="quiz-feedback" id="q19_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="q19_2" data-correct="1">
-        <div class="quiz-question">2. En un metal, los electrones tienen temperatura de Fermi $T_F \sim 10^4$ K. A temperatura ambiente ($T \ll T_F$), el gas de electrones se encuentra en...</div>
+        <div class="quiz-question">2. En un metal, los electrones tienen temperatura de Fermi <math data-tex="T_F \sim 10^4"><msub><mi>T</mi><mi>F</mi></msub><mo>∼</mo><msup><mn>10</mn><mn>4</mn></msup></math> K. A temperatura ambiente (<math data-tex="T \ll T_F"><mi>T</mi><mo>≪</mo><msub><mi>T</mi><mi>F</mi></msub></math>), el gas de electrones se encuentra en...</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q19_2" value="0"><span class="opt-letter">A</span><span class="opt-text">El límite clásico: se comporta como un gas de Maxwell-Boltzmann a temperatura ordinaria</span></label>
-          <label class="quiz-option"><input type="radio" name="q19_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El régimen cuántico degenerado: todos los estados con $\varepsilon < \varepsilon_F$ están completamente llenos ($\bar{n} \approx 1$) y los de $\varepsilon > \varepsilon_F$ están vacíos ($\bar{n} \approx 0$); solo los electrones en una capa de espesor $\sim k_BT$ alrededor de $\varepsilon_F$ participan en procesos térmicos</span></label>
+          <label class="quiz-option"><input type="radio" name="q19_2" value="1"><span class="opt-letter">B</span><span class="opt-text">El régimen cuántico degenerado: todos los estados con <math data-tex="\varepsilon &lt; \varepsilon_F"><mi>ε</mi><mo>&lt;</mo><msub><mi>ε</mi><mi>F</mi></msub></math> están completamente llenos (<math data-tex="\bar{n} \approx 1"><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mo>≈</mo><mn>1</mn></math>) y los de <math data-tex="\varepsilon &gt; \varepsilon_F"><mi>ε</mi><mo>></mo><msub><mi>ε</mi><mi>F</mi></msub></math> están vacíos (<math data-tex="\bar{n} \approx 0"><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mo>≈</mo><mn>0</mn></math>); solo los electrones en una capa de espesor <math data-tex="\sim k_BT"><mo form="infix" lspace="0em">∼</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi></math> alrededor de <math data-tex="\varepsilon_F"><msub><mi>ε</mi><mi>F</mi></msub></math> participan en procesos térmicos</span></label>
           <label class="quiz-option"><input type="radio" name="q19_2" value="2"><span class="opt-letter">C</span><span class="opt-text">El estado de condensación de Bose-Einstein, ya que los electrones son las partículas más ligeras del metal</span></label>
-          <label class="quiz-option"><input type="radio" name="q19_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Un estado intermedio entre cuántico y clásico porque $T \sim T_F/100$ no es suficientemente bajo</span></label>
+          <label class="quiz-option"><input type="radio" name="q19_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Un estado intermedio entre cuántico y clásico porque <math data-tex="T \sim T_F/100"><mi>T</mi><mo>∼</mo><msub><mi>T</mi><mi>F</mi></msub><mi>/</mi><mn>100</mn></math> no es suficientemente bajo</span></label>
         </div>
-        <script type="text/explanation" id="q19_2-exp">Cuando $T \ll T_F$, los electrones están en el régimen fuertemente degenerado. La distribución de Fermi-Dirac a $T=0$ es un escalón: $\bar{n} = 1$ para $\varepsilon < \varepsilon_F$ y $\bar{n} = 0$ para $\varepsilon > \varepsilon_F$. A $T \neq 0$ pero $T \ll T_F$, la "superficie de Fermi" se suaviza en una capa de espesor $\sim k_BT \ll \varepsilon_F$. Solo los electrones en esa capa se excitan térmicamente, lo que explica por qué $C_V^{elec} \propto T$ (lineal, mucho menor que la predicción clásica $\frac{3}{2}Nk_B$) — resultado crucial para entender las propiedades eléctricas y térmicas de los metales.</script>
+        <script type="text/explanation" id="q19_2-exp">Cuando <math data-tex="T \ll T_F"><mi>T</mi><mo>≪</mo><msub><mi>T</mi><mi>F</mi></msub></math>, los electrones están en el régimen fuertemente degenerado. La distribución de Fermi-Dirac a <math data-tex="T=0"><mi>T</mi><mo>=</mo><mn>0</mn></math> es un escalón: <math data-tex="\bar{n} = 1"><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mo>=</mo><mn>1</mn></math> para <math data-tex="\varepsilon &lt; \varepsilon_F"><mi>ε</mi><mo>&lt;</mo><msub><mi>ε</mi><mi>F</mi></msub></math> y <math data-tex="\bar{n} = 0"><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mo>=</mo><mn>0</mn></math> para <math data-tex="\varepsilon &gt; \varepsilon_F"><mi>ε</mi><mo>></mo><msub><mi>ε</mi><mi>F</mi></msub></math>. A <math data-tex="T \neq 0"><mi>T</mi><mo>≠</mo><mn>0</mn></math> pero <math data-tex="T \ll T_F"><mi>T</mi><mo>≪</mo><msub><mi>T</mi><mi>F</mi></msub></math>, la "superficie de Fermi" se suaviza en una capa de espesor <math data-tex="\sim k_BT \ll \varepsilon_F"><mo form="infix" lspace="0em">∼</mo><msub><mi>k</mi><mi>B</mi></msub><mi>T</mi><mo>≪</mo><msub><mi>ε</mi><mi>F</mi></msub></math>. Solo los electrones en esa capa se excitan térmicamente, lo que explica por qué <math data-tex="C_V^{elec} \propto T"><msubsup><mi>C</mi><mi>V</mi><mrow><mi>e</mi><mi>l</mi><mi>e</mi><mi>c</mi></mrow></msubsup><mo>∝</mo><mi>T</mi></math> (lineal, mucho menor que la predicción clásica <math data-tex="\frac{3}{2}Nk_B"><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>N</mi><msub><mi>k</mi><mi>B</mi></msub></math>) — resultado crucial para entender las propiedades eléctricas y térmicas de los metales.</script>
         <div class="quiz-feedback" id="q19_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q19_3" data-correct="2">
         <div class="quiz-question">3. A alta temperatura o baja densidad, las distribuciones de Fermi-Dirac y Bose-Einstein convergen a la misma distribución. ¿Cuál es y cuándo aplica?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q19_3" value="0"><span class="opt-letter">A</span><span class="opt-text">La distribución uniforme (todos los estados igualmente probables), cuando $T \to \infty$</span></label>
+          <label class="quiz-option"><input type="radio" name="q19_3" value="0"><span class="opt-letter">A</span><span class="opt-text">La distribución uniforme (todos los estados igualmente probables), cuando <math data-tex="T \to \infty"><mi>T</mi><mo stretchy="false">→</mo><mi>∞</mi></math></span></label>
           <label class="quiz-option"><input type="radio" name="q19_3" value="1"><span class="opt-letter">B</span><span class="opt-text">La distribución de Planck (cuerpo negro), que es el caso más general para cualquier partícula</span></label>
-          <label class="quiz-option"><input type="radio" name="q19_3" value="2"><span class="opt-letter">C</span><span class="opt-text">La distribución de Maxwell-Boltzmann: cuando $e^{\beta(\varepsilon-\mu)} \gg 1$ (baja densidad o alta $T$), ambas dan $\bar{n} \approx e^{-\beta(\varepsilon-\mu)} \ll 1$ — la ocupación por estado es mucho menor que 1 y la estadística cuántica es irrelevante</span></label>
+          <label class="quiz-option"><input type="radio" name="q19_3" value="2"><span class="opt-letter">C</span><span class="opt-text">La distribución de Maxwell-Boltzmann: cuando <math data-tex="e^{\beta(\varepsilon-\mu)} \gg 1"><msup><mi>e</mi><mrow><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>≫</mo><mn>1</mn></math> (baja densidad o alta <math data-tex="T"><mi>T</mi></math>), ambas dan <math data-tex="\bar{n} \approx e^{-\beta(\varepsilon-\mu)} \ll 1"><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mo>≈</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>≪</mo><mn>1</mn></math> — la ocupación por estado es mucho menor que 1 y la estadística cuántica es irrelevante</span></label>
           <label class="quiz-option"><input type="radio" name="q19_3" value="3"><span class="opt-letter">D</span><span class="opt-text">La distribución de Bose-Einstein, que es el caso más general del que se derivan las demás</span></label>
         </div>
-        <script type="text/explanation" id="q19_3-exp">Cuando $e^{\beta(\varepsilon-\mu)} \gg 1$ (equivalente a baja densidad $N\lambda_{th}^3/V \ll 1$ o alta temperatura), el $\pm 1$ en el denominador de las distribuciones cuánticas es despreciable: $\bar{n}_\pm = 1/(e^{\beta(\varepsilon-\mu)}\pm 1) \approx e^{-\beta(\varepsilon-\mu)}$. Ambas convergen a la distribución de Maxwell-Boltzmann clásica. La condición $N\lambda_{th}^3/V \ll 1$ significa que las funciones de onda de las partículas no se solapan: la mecánica cuántica es irrelevante a escala microscópica y el sistema es efectivamente clásico.</script>
+        <script type="text/explanation" id="q19_3-exp">Cuando <math data-tex="e^{\beta(\varepsilon-\mu)} \gg 1"><msup><mi>e</mi><mrow><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>≫</mo><mn>1</mn></math> (equivalente a baja densidad <math data-tex="N\lambda_{th}^3/V \ll 1"><mi>N</mi><msubsup><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow><mn>3</mn></msubsup><mi>/</mi><mi>V</mi><mo>≪</mo><mn>1</mn></math> o alta temperatura), el <math data-tex="\pm 1"><mo>±</mo><mn>1</mn></math> en el denominador de las distribuciones cuánticas es despreciable: <math data-tex="\bar{n}_\pm = 1/(e^{\beta(\varepsilon-\mu)}\pm 1) \approx e^{-\beta(\varepsilon-\mu)}"><msub><mover accent="true"><mi>n</mi><mo>̄</mo></mover><mo>±</mo></msub><mo>=</mo><mn>1</mn><mi>/</mi><mrow><mo>(</mo><mrow><msup><mi>e</mi><mrow><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>±</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>≈</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>β</mi><mrow><mo>(</mo><mrow><mi>ε</mi><mo lspace="0em" rspace="0em">−</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msup></math>. Ambas convergen a la distribución de Maxwell-Boltzmann clásica. La condición <math data-tex="N\lambda_{th}^3/V \ll 1"><mi>N</mi><msubsup><mi>λ</mi><mrow><mi>t</mi><mi>h</mi></mrow><mn>3</mn></msubsup><mi>/</mi><mi>V</mi><mo>≪</mo><mn>1</mn></math> significa que las funciones de onda de las partículas no se solapan: la mecánica cuántica es irrelevante a escala microscópica y el sistema es efectivamente clásico.</script>
         <div class="quiz-feedback" id="q19_3-fb"></div>
       </div>
 

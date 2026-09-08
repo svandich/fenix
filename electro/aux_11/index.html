@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 11 — Dipolos</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -70,12 +68,12 @@
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Momento dipolar eléctrico $\mathbf{p} = q\mathbf{d}$</li>
+        <li>Momento dipolar eléctrico <math data-tex="\mathbf{p} = q\mathbf{d}"><mi class="mv-bi">p</mi><mo>=</mo><mi>q</mi><mi class="mv-bi">d</mi></math></li>
         <li>Potencial y campo eléctrico del dipolo en zona lejana</li>
-        <li>Torque $\boldsymbol{\tau} = \mathbf{p}\times\mathbf{E}$ y energía $U = -\mathbf{p}\cdot\mathbf{E}$</li>
+        <li>Torque <math data-tex="\boldsymbol{\tau} = \mathbf{p}\times\mathbf{E}"><mi class="mv-bi">τ</mi><mo>=</mo><mi class="mv-bi">p</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mi class="mv-bi">E</mi></math> y energía <math data-tex="U = -\mathbf{p}\cdot\mathbf{E}"><mi>U</mi><mo>=</mo><mo form="prefix">−</mo><mi class="mv-bi">p</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">E</mi></math></li>
         <li>Interacción entre dos dipolos</li>
-        <li>Esferas dieléctricas polarizadas: vector de polarización $\mathbf{P}$</li>
-        <li>Cargas de polarización: $\rho_p = -\nabla\cdot\mathbf{P}$ y $\sigma_p = \mathbf{P}\cdot\hat{n}$</li>
+        <li>Esferas dieléctricas polarizadas: vector de polarización <math data-tex="\mathbf{P}"><mi class="mv-bi">P</mi></math></li>
+        <li>Cargas de polarización: <math data-tex="\rho_p = -\nabla\cdot\mathbf{P}"><msub><mi>ρ</mi><mi>p</mi></msub><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">P</mi></math> y <math data-tex="\sigma_p = \mathbf{P}\cdot\hat{n}"><msub><mi>σ</mi><mi>p</mi></msub><mo>=</mo><mi class="mv-bi">P</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>n</mi><mo>̂</mo></mover></math></li>
       </ul>
     </div>
   </section>
@@ -85,19 +83,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Momento dipolar</h3>
-        <p>$\mathbf{p} = q\mathbf{d}$ apunta de la carga negativa a la positiva. Para distribuciones continuas: $\mathbf{p} = \int \mathbf{r}'\rho(\mathbf{r}')\,dV'$. Unidades: C·m o Debye.</p>
+        <p><math data-tex="\mathbf{p} = q\mathbf{d}"><mi class="mv-bi">p</mi><mo>=</mo><mi>q</mi><mi class="mv-bi">d</mi></math> apunta de la carga negativa a la positiva. Para distribuciones continuas: <math data-tex="\mathbf{p} = \int \mathbf{r}&#x27;\rho(\mathbf{r}&#x27;)\,dV&#x27;"><mi class="mv-bi">p</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><msup><mi class="mv-bi">r</mi><mo>′</mo></msup><mi>ρ</mi><mrow><mo>(</mo><msup><mi class="mv-bi">r</mi><mo>′</mo></msup><mo>)</mo></mrow><mspace width="0.1667em"/><mi>d</mi><msup><mi>V</mi><mo>′</mo></msup></math>. Unidades: C·m o Debye.</p>
       </div>
       <div class="concept-card">
         <h3>Potencial lejano del dipolo</h3>
-        <p>Para $r \gg d$, el potencial decae como $1/r^2$ (más rápido que el de carga puntual). El campo decae como $1/r^3$. La anisotropía angular distingue los polos.</p>
+        <p>Para <math data-tex="r \gg d"><mi>r</mi><mo>≫</mo><mi>d</mi></math>, el potencial decae como <math data-tex="1/r^2"><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></math> (más rápido que el de carga puntual). El campo decae como <math data-tex="1/r^3"><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>3</mn></msup></math>. La anisotropía angular distingue los polos.</p>
       </div>
       <div class="concept-card">
         <h3>Torque y energía</h3>
-        <p>En un campo externo $\mathbf{E}$, el torque tiende a alinear el dipolo con el campo. La energía es mínima cuando $\mathbf{p} \parallel \mathbf{E}$ (configuración estable).</p>
+        <p>En un campo externo <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math>, el torque tiende a alinear el dipolo con el campo. La energía es mínima cuando <math data-tex="\mathbf{p} \parallel \mathbf{E}"><mi class="mv-bi">p</mi><mo>∥</mo><mi class="mv-bi">E</mi></math> (configuración estable).</p>
       </div>
       <div class="concept-card">
         <h3>Polarización P</h3>
-        <p>$\mathbf{P}$ = momento dipolar por unidad de volumen. Genera cargas de polarización $\rho_p = -\nabla\cdot\mathbf{P}$ y $\sigma_p = \mathbf{P}\cdot\hat{n}$, que se tratan igual que cargas reales.</p>
+        <p><math data-tex="\mathbf{P}"><mi class="mv-bi">P</mi></math> = momento dipolar por unidad de volumen. Genera cargas de polarización <math data-tex="\rho_p = -\nabla\cdot\mathbf{P}"><msub><mi>ρ</mi><mi>p</mi></msub><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">P</mi></math> y <math data-tex="\sigma_p = \mathbf{P}\cdot\hat{n}"><msub><mi>σ</mi><mi>p</mi></msub><mo>=</mo><mi class="mv-bi">P</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mover accent="true"><mi>n</mi><mo>̂</mo></mover></math>, que se tratan igual que cargas reales.</p>
       </div>
     </div>
   </section>
@@ -109,7 +107,7 @@
       <div class="formula-label">Potencial del dipolo (zona lejana)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_11_1.svg" alt=""></div>
       <div class="formula-desc">
-        $\theta$ es el ángulo entre $\mathbf{p}$ y el vector de posición $\mathbf{r}$. En el plano ecuatorial ($\theta = 90°$), $V = 0$.
+        <math data-tex="\theta"><mi>θ</mi></math> es el ángulo entre <math data-tex="\mathbf{p}"><mi class="mv-bi">p</mi></math> y el vector de posición <math data-tex="\mathbf{r}"><mi class="mv-bi">r</mi></math>. En el plano ecuatorial (<math data-tex="\theta = 90°"><mi>θ</mi><mo>=</mo><mn>90</mn><mi>°</mi></math>), <math data-tex="V = 0"><mi>V</mi><mo>=</mo><mn>0</mn></math>.
       </div>
     </div>
 
@@ -117,7 +115,7 @@
       <div class="formula-label">Campo eléctrico del dipolo</div>
       <div class="formula-math"><img class="typst-formula" src="aux_11_2.svg" alt=""></div>
       <div class="formula-desc">
-        En esféricas: $E_r = \frac{2p\cos\theta}{4\pi\varepsilon_0 r^3}$ y $E_\theta = \frac{p\sin\theta}{4\pi\varepsilon_0 r^3}$.
+        En esféricas: <math data-tex="E_r = \frac{2p\cos\theta}{4\pi\varepsilon_0 r^3}"><msub><mi>E</mi><mi>r</mi></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mi>p</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">cos</mo><mi>θ</mi></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ε</mi><mn>0</mn></msub><msup><mi>r</mi><mn>3</mn></msup></mrow></mfrac></math> y <math data-tex="E_\theta = \frac{p\sin\theta}{4\pi\varepsilon_0 r^3}"><msub><mi>E</mi><mi>θ</mi></msub><mo>=</mo><mfrac><mrow><mi>p</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">sin</mo><mi>θ</mi></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ε</mi><mn>0</mn></msub><msup><mi>r</mi><mn>3</mn></msup></mrow></mfrac></math>.
       </div>
     </div>
 
@@ -125,7 +123,7 @@
       <div class="formula-label">Torque y energía en campo externo</div>
       <div class="formula-math"><img class="typst-formula" src="aux_11_3.svg" alt=""></div>
       <div class="formula-desc">
-        La fuerza sobre el dipolo en campo no uniforme es $\mathbf{F} = \nabla(\mathbf{p}\cdot\mathbf{E})$.
+        La fuerza sobre el dipolo en campo no uniforme es <math data-tex="\mathbf{F} = \nabla(\mathbf{p}\cdot\mathbf{E})"><mi class="mv-bi">F</mi><mo>=</mo><mo form="prefix">∇</mo><mrow><mo>(</mo><mrow><mi class="mv-bi">p</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">E</mi></mrow><mo>)</mo></mrow></math>.
       </div>
     </div>
 
@@ -133,7 +131,7 @@
       <div class="formula-label">Cargas de polarización</div>
       <div class="formula-math"><img class="typst-formula" src="aux_11_4.svg" alt=""></div>
       <div class="formula-desc">
-        $\hat{n}$ apunta hacia afuera del dieléctrico. Estas cargas aparecen en el interior y la superficie cuando la polarización no es uniforme.
+        <math data-tex="\hat{n}"><mover accent="true"><mi>n</mi><mo>̂</mo></mover></math> apunta hacia afuera del dieléctrico. Estas cargas aparecen en el interior y la superficie cuando la polarización no es uniforme.
       </div>
     </div>
   </section>
@@ -143,10 +141,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Conexión dipolo–dieléctrico</div>
       <ul>
-        <li>Un dieléctrico polarizado es un conjunto de dipolos microscópicos: $\mathbf{P}$ es su promedio macroscópico.</li>
-        <li>Si $\mathbf{P}$ es uniforme: $\rho_p = 0$ en el volumen, pero $\sigma_p \neq 0$ en la superficie.</li>
-        <li>El campo total de un dieléctrico polarizado = campo generado por $\rho_p$ y $\sigma_p$ en el vacío.</li>
-        <li>La esfera uniformemente polarizada: campo interno constante $\mathbf{E} = -\mathbf{P}/(3\varepsilon_0)$.</li>
+        <li>Un dieléctrico polarizado es un conjunto de dipolos microscópicos: <math data-tex="\mathbf{P}"><mi class="mv-bi">P</mi></math> es su promedio macroscópico.</li>
+        <li>Si <math data-tex="\mathbf{P}"><mi class="mv-bi">P</mi></math> es uniforme: <math data-tex="\rho_p = 0"><msub><mi>ρ</mi><mi>p</mi></msub><mo>=</mo><mn>0</mn></math> en el volumen, pero <math data-tex="\sigma_p \neq 0"><msub><mi>σ</mi><mi>p</mi></msub><mo>≠</mo><mn>0</mn></math> en la superficie.</li>
+        <li>El campo total de un dieléctrico polarizado = campo generado por <math data-tex="\rho_p"><msub><mi>ρ</mi><mi>p</mi></msub></math> y <math data-tex="\sigma_p"><msub><mi>σ</mi><mi>p</mi></msub></math> en el vacío.</li>
+        <li>La esfera uniformemente polarizada: campo interno constante <math data-tex="\mathbf{E} = -\mathbf{P}/(3\varepsilon_0)"><mi class="mv-bi">E</mi><mo>=</mo><mo form="prefix">−</mo><mi class="mv-bi">P</mi><mi>/</mi><mrow><mo>(</mo><mrow><mn>3</mn><msub><mi>ε</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></math>.</li>
       </ul>
     </div>
   </section>

@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 10 — Pre-control</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -70,9 +68,9 @@
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Obtener $\mathbf{E}$ y $\rho$ a partir de un potencial $V(\mathbf{r})$ dado</li>
-        <li>Verificar si $V$ satisface Laplace o Poisson en diferentes regiones</li>
-        <li>Condiciones de borde en interfaces: continuidad de $V$ y discontinuidad de $E_n$</li>
+        <li>Obtener <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> y <math data-tex="\rho"><mi>ρ</mi></math> a partir de un potencial <math data-tex="V(\mathbf{r})"><mi>V</mi><mrow><mo>(</mo><mi class="mv-bi">r</mi><mo>)</mo></mrow></math> dado</li>
+        <li>Verificar si <math data-tex="V"><mi>V</mi></math> satisface Laplace o Poisson en diferentes regiones</li>
+        <li>Condiciones de borde en interfaces: continuidad de <math data-tex="V"><mi>V</mi></math> y discontinuidad de <math data-tex="E_n"><msub><mi>E</mi><mi>n</mi></msub></math></li>
         <li>Modelo del átomo de hidrógeno: distribución de carga nube electrónica</li>
         <li>Problemas de geometrías asimétricas con potencial conocido</li>
       </ul>
@@ -84,7 +82,7 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>De V a ρ</h3>
-        <p>Dado $V$, se obtiene $\mathbf{E} = -\nabla V$ y luego $\rho = \varepsilon_0 \nabla \cdot \mathbf{E} = -\varepsilon_0 \nabla^2 V$. Esto permite "leer" la distribución de carga directamente del potencial.</p>
+        <p>Dado <math data-tex="V"><mi>V</mi></math>, se obtiene <math data-tex="\mathbf{E} = -\nabla V"><mi class="mv-bi">E</mi><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∇</mo><mi>V</mi></math> y luego <math data-tex="\rho = \varepsilon_0 \nabla \cdot \mathbf{E} = -\varepsilon_0 \nabla^2 V"><mi>ρ</mi><mo>=</mo><msub><mi>ε</mi><mn>0</mn></msub><mo form="prefix">∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">E</mi><mo>=</mo><mo form="prefix">−</mo><msub><mi>ε</mi><mn>0</mn></msub><msup><mo form="prefix">∇</mo><mn>2</mn></msup><mi>V</mi></math>. Esto permite "leer" la distribución de carga directamente del potencial.</p>
       </div>
       <div class="concept-card">
         <h3>Laplace vs Poisson por región</h3>
@@ -92,11 +90,11 @@
       </div>
       <div class="concept-card">
         <h3>Condiciones de borde</h3>
-        <p>En una interfaz: el potencial $V$ es continuo siempre. La componente normal de $\mathbf{E}$ tiene una discontinuidad de $\sigma/\varepsilon_0$ si hay carga superficial.</p>
+        <p>En una interfaz: el potencial <math data-tex="V"><mi>V</mi></math> es continuo siempre. La componente normal de <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> tiene una discontinuidad de <math data-tex="\sigma/\varepsilon_0"><mi>σ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math> si hay carga superficial.</p>
       </div>
       <div class="concept-card">
         <h3>Unicidad</h3>
-        <p>La solución de Poisson/Laplace es única si se conocen las condiciones de borde. Esto justifica que cualquier $V$ que satisfaga la ecuación y las condiciones es <em>la</em> solución.</p>
+        <p>La solución de Poisson/Laplace es única si se conocen las condiciones de borde. Esto justifica que cualquier <math data-tex="V"><mi>V</mi></math> que satisfaga la ecuación y las condiciones es <em>la</em> solución.</p>
       </div>
     </div>
   </section>
@@ -116,7 +114,7 @@
       <div class="formula-label">Condiciones de borde en interfaz</div>
       <div class="formula-math"><img class="typst-formula" src="aux_10_2.svg" alt=""></div>
       <div class="formula-desc">
-        La componente tangencial de $\mathbf{E}$ siempre es continua. La normal salta en $\sigma/\varepsilon_0$.
+        La componente tangencial de <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> siempre es continua. La normal salta en <math data-tex="\sigma/\varepsilon_0"><mi>σ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math>.
       </div>
     </div>
 
@@ -124,7 +122,7 @@
       <div class="formula-label">Laplaciano en esféricas (simetría esférica)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_10_3.svg" alt=""></div>
       <div class="formula-desc">
-        Útil para potenciales de la forma $V(r)$. Si $V = A/r + B$, entonces $\nabla^2 V = 0$ para $r \neq 0$.
+        Útil para potenciales de la forma <math data-tex="V(r)"><mi>V</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math>. Si <math data-tex="V = A/r + B"><mi>V</mi><mo>=</mo><mi>A</mi><mi>/</mi><mi>r</mi><mo>+</mo><mi>B</mi></math>, entonces <math data-tex="\nabla^2 V = 0"><msup><mo>∇</mo><mn>2</mn></msup><mi>V</mi><mo>=</mo><mn>0</mn></math> para <math data-tex="r \neq 0"><mi>r</mi><mo>≠</mo><mn>0</mn></math>.
       </div>
     </div>
   </section>
@@ -134,9 +132,9 @@
     <div class="tip-box">
       <div class="tip-title">✦ Estrategia tipo control</div>
       <ul>
-        <li>Si dan $V$: deriva para obtener $\mathbf{E}$, luego aplica divergencia para $\rho$. Identifica las regiones.</li>
-        <li>Verifica condiciones de borde en todas las interfaces: $V$ continuo, $E_n$ con salto $\sigma/\varepsilon_0$.</li>
-        <li>El potencial de un conductor es constante → el campo dentro es cero → $\rho$ interna es cero.</li>
+        <li>Si dan <math data-tex="V"><mi>V</mi></math>: deriva para obtener <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math>, luego aplica divergencia para <math data-tex="\rho"><mi>ρ</mi></math>. Identifica las regiones.</li>
+        <li>Verifica condiciones de borde en todas las interfaces: <math data-tex="V"><mi>V</mi></math> continuo, <math data-tex="E_n"><msub><mi>E</mi><mi>n</mi></msub></math> con salto <math data-tex="\sigma/\varepsilon_0"><mi>σ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math>.</li>
+        <li>El potencial de un conductor es constante → el campo dentro es cero → <math data-tex="\rho"><mi>ρ</mi></math> interna es cero.</li>
         <li>Un potencial físicamente válido debe ser finito en todo punto (excepto en la posición exacta de una carga puntual).</li>
       </ul>
     </div>

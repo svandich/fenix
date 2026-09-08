@@ -1,76 +1,111 @@
-# Migrar el math inline de LaTeX a Typst
+# Migrar el math inline de LaTeX a MathML, vía Typst
 
-**Estado: no hecha, y la recomendación es no hacerla así.** Este documento existe para que la decisión
-quede tomada con números y no se vuelva a discutir de memoria.
+**Estado: hecha.** Las 5784 expresiones inline de las 80 páginas ya no son `$...$` interpretado por
+MathJax en el navegador: son `<math>` horneado en el HTML. No queda ninguna dependencia de red.
 
-La idea evaluada: sacar MathJax del `<head>` de las 80 páginas y renderizar también el math inline
-(`$...$`) con Typst, aprovechando que el repo ya tiene el pipeline Typst → SVG andando para las
-fórmulas de display.
-
-La conclusión corta: **el destino es correcto, el camino no**. Typst puede emitir MathML y eso resuelve
-el problema de verdad, pero llegar por Typst obliga a traducir 2261 expresiones de LaTeX a otra
-sintaxis, y ese paso tiene un modo de falla que este repo ya sufrió sin darse cuenta (§5).
+Este documento era, hasta ahora, el argumento de por qué *no* hacerla por este camino. El análisis de
+riesgo sigue vigente y sigue abajo, porque es lo que dictó cómo se construyó el traductor: cada modo
+de falla silenciosa que estaba identificado tiene ahora una decisión de diseño que lo hace imposible,
+o un chequeo que lo habría detectado. Dos de esos chequeos encontraron errores reales (§7).
 
 ---
 
-## 1. Por qué se plantea
-
-`MathJax` es la única dependencia de red que queda. El repo se auto-hospeda todo lo demás — Inter y
-JetBrains Mono viven en `styles/fonts/` (548 KB) justamente para no depender de nadie — pero
-`CLAUDE.md`, en *Abrir localmente*, tiene que admitir que "MathJax necesita conexión a internet para
-cargar desde CDN". Abrir un `index.html` sin red deja todas las fórmulas inline en crudo.
-
-Además hoy hay **tres configuraciones distintas** de MathJax repartidas por las páginas, lo que no
-rompe nada pero indica que ese `<head>` nunca se normalizó.
-
----
-
-## 2. Alcance real
-
-Medido sobre las 80 páginas (`electro/`, `termo/`, `termoquimica/`, `basicos/`):
+## 1. Qué se hizo
 
 | | |
 |---|---|
-| Expresiones inline `$...$` | **5784** instancias |
-| Expresiones distintas (deduplicadas) | **2261** |
-| Macros LaTeX distintos en uso | **84** |
-| Páginas a tocar | **80** |
+| Expresiones inline convertidas | **5784** instancias, **2261** distintas |
+| Páginas tocadas | **80** (79 tenían MathJax; `electro/index.html` no tiene math) |
+| Macros LaTeX soportados | **84**, exactamente los que usa el repo |
+| MathJax | eliminado del `<head>` de las 79 páginas y de `styles/quiz.js` |
+| Peso del HTML | 1310 KB → 1875 KB (+564 KB, repartido en 80 archivos) |
+| Peso que deja de bajarse | 1134 KB de MathJax por CDN, más sus fuentes |
+| `styles/main.css` | 18,9 KB → 21,3 KB (normalización de MathML + fuente math) |
 
-Los más usados: `\partial` (470), `\Delta` (457), `\vec` (394), `\text` (289), `\mu` (269),
-`\bar` (249), `\mathrm` (198), `\ln` (175), `\mathbf` (174).
+El pipeline quedó en dos scripts:
 
-Esto no es convertible a mano ni a entidades HTML: hay que renderizarlo con algo.
+```
+scripts/latex2typst.py     traduce el subconjunto de LaTeX del repo a math de Typst
+scripts/inline-mathml.py   extrae, traduce, compila con Typst y hornea el MathML en las páginas
+```
+
+`./build.sh` corre los dos pasos (Typst → SVG para las fórmulas de display, y el horneado del
+inline). Es idempotente: correrlo sin tocar nada no genera diff.
+
+### El LaTeX no se perdió
+
+Cada `<math>` guarda su fuente en `data-tex`:
+
+```html
+<math data-tex="\left(\frac{\partial S}{\partial V}\right)_T"><msub><mrow><mo>(</mo>…</math>
+```
+
+De ahí salen tres cosas: el script es **idempotente** (en la corrida siguiente lee de `data-tex` y
+regenera), la migración es **reversible**, y escribir una página nueva sigue siendo escribir `$...$`
+en el HTML — el horneado lo hace `./build.sh`. `./scripts/inline-mathml.py --check` sale con código 1
+si quedó algo sin hornear (sirve para pre-commit, igual que `sync-nav.py --check`).
 
 ---
 
-## 3. Qué habría que hacer, paso a paso
+## 2. Por qué se planteó
 
-1. **Extraer** las 5784 ocurrencias de los 80 HTML y deduplicarlas a 2261 expresiones.
-2. **Traducir** cada una de LaTeX a sintaxis Typst. No hay traductor confiable: la tabla de
-   equivalencias de `CLAUDE.md` cubre 15 casos de los 84 macros en uso, y varias equivalencias no son
-   1:1 (§4).
-3. **Compilar** cada expresión con `typst compile --format html` para obtener MathML.
-4. **Empalmar** el MathML de vuelta en los 80 HTML, en el lugar exacto de cada `$...$`.
-5. **Meter** el CSS de normalización de MathML (~1,5 KB, lo emite Typst) en `styles/main.css`.
-6. **Reescribir** `styles/quiz.js:45-47`, que hoy llama `MathJax.typesetPromise()` para re-tipografiar
-   la explicación del quiz después de inyectarla.
-7. **Revisar a ojo** las 2261 expresiones, porque los errores de traducción no se detectan solos (§4).
+`MathJax` era la única dependencia de red que quedaba. El repo se auto-hospeda todo lo demás — Inter
+y JetBrains Mono viven en `styles/fonts/` (548 KB) justamente para no depender de nadie — pero
+`CLAUDE.md`, en *Abrir localmente*, tenía que admitir que "MathJax necesita conexión a internet para
+cargar desde CDN". Abrir un `index.html` sin red dejaba todas las fórmulas inline en crudo.
 
-Los pasos 1, 3, 4, 5 y 6 son mecánicos. El 2 y el 7 son el problema.
+Además había **tres configuraciones distintas** de MathJax repartidas por las páginas, lo que no
+rompía nada pero indicaba que ese `<head>` nunca se normalizó. Ahora no hay ninguna.
 
 ---
 
-## 4. Riesgos
+## 3. Las alternativas, con números
+
+| Opción | Peso | Sin red | Sin JS | Texto real | Traducción |
+|---|---|---|---|---|---|
+| MathJax por CDN (antes) | 1134 KB + fuentes | ✗ | ✗ | ✓ | — |
+| KaTeX auto-hospedado | 549 KB | ✓ | ✗ | ✓ | ninguna |
+| LaTeX → MathML en build (Temml/KaTeX) | ~0 KB | ✓ | ✓ | ✓ | ninguna |
+| **Typst → MathML (elegida)** | **~0 KB** | ✓ | ✓ | ✓ | **2261 expresiones** |
+| Typst → SVG inline | 8,4 MB | ✓ | ✓ | ✗ | 2261 expresiones |
+
+**Typst → SVG estaba descartado de entrada.** Cada SVG incrusta sus propios contornos de glifo (3,8 KB
+promedio medido), el color va fijo en el archivo (`fill="#e6edf3"`, así que el math dentro de
+`.formula-desc` saldría del color equivocado), no escala con el `font-size` del contexto, y la línea
+base no se puede recuperar de un solo `transform`. Además rompe seleccionar, copiar y Ctrl+F.
+
+**Typst → MathML es lo que se usó.** El MathML que emite es de verdad: texto seleccionable, buscable,
+que hereda `color` y `font-size` del CSS. Soporte de navegador suficiente (Firefox siempre,
+Chrome 109+, Safari 14.1+).
+
+**LaTeX → MathML directo (Temml, o `output: "mathml"` de KaTeX) llegaba al mismo destino sin traducir
+nada**, y sigue siendo la opción con menos superficie de error. Se descartó porque en esta máquina no
+hay `npm` — sólo `node` — así que instalar Temml no era posible sin agregar una dependencia de red
+nueva, que es exactamente lo que la migración venía a sacar. Typst ya estaba instalado y ya era parte
+del build. El precio de esa decisión es el paso de traducción, y la §5 es cómo se pagó.
+
+Typst sigue avisando en cada corrida:
+
+```
+warning: html export is under active development and incomplete
+ = hint: do not rely on this feature for production use cases
+```
+
+Es una advertencia real. La mitigación es que el MathML está **horneado**: si una versión futura de
+Typst cambia lo que emite, las páginas publicadas no se mueven. Se regeneran cuando alguien corre
+`./build.sh`, y ahí el arnés de §5 se puede volver a correr para ver qué cambió.
+
+---
+
+## 4. Los riesgos, y qué se hizo con cada uno
 
 Lo que decide el riesgo no es cuántos errores puede haber, sino **si el error grita o se calla**.
 
 ### 4.1 Riesgos que gritan (aceptables)
 
 **Letras adyacentes.** En LaTeX `$PV$` es P·V. En Typst `PV` es un identificador de dos letras y hay
-que escribir `P V`. Afecta a **942 instancias / 615 expresiones distintas** (`BT` 209, `Nk` 133,
-`dV` 86, `PV` 76, `RT` 69, `nRT` 38…).
-
-La buena noticia: Typst **falla con error** en vez de renderizar mal.
+que escribir `P V`. Afectaba a **942 instancias / 615 expresiones distintas** (`BT` 209, `Nk` 133,
+`dV` 86, `PV` 76, `RT` 69, `nRT` 38…). Typst **falla con error** en vez de renderizar mal:
 
 ```
 error: unknown variable: PV
@@ -78,137 +113,154 @@ error: unknown variable: PV
           between each letter: `P V`
 ```
 
-Verifiqué además si alguna de esas 615 secuencias colisiona con un operador predefinido de Typst
-(`Pr`, `det`, `ker`, `deg`, `hom`, `arg`, `max`, `mod`…), que sí se renderizaría en silencio —
-`$Pr$` sale como la "Pr" recta de probabilidad y `$P r$` como P·r en cursiva. **En este corpus la
-colisión no ocurre: 0 casos.** Es el mejor resultado posible para este riesgo.
+El traductor separa siempre las letras, así que el caso no se da. Y se había verificado que ninguna
+de esas 615 secuencias colisiona con un operador predefinido de Typst (`Pr`, `det`, `ker`, `deg`,
+`hom`, `arg`, `max`, `mod`…), que sí se renderizaría en silencio: **0 casos** en este corpus.
 
-### 4.2 Riesgos que se callan (el problema)
+### 4.2 Riesgos que se callan
 
-Estos renderizan algo, no levantan error, y sólo se detectan mirando la imagen:
+Estos renderizan algo, no levantan error, y sólo se detectan comparando. Uno por uno:
 
-| Riesgo | Instancias | Distintas |
+| Riesgo | Instancias | Cómo quedó neutralizado |
 |---|---|---|
-| Sub/superíndices de varios caracteres (`P_{\text{op}}` → `P_"op"`) | 519 | 371 |
-| `\text` / `\mathrm` → comillas o `upright()` | 380 | 246 |
-| Acentos (`\bar`, `\hat`, `\dot`) → `macron` / `overline` / `hat` / `dot` | 283 | 154 |
-| `\vec` → `arrow()` | 272 | 114 |
-| `\varepsilon` vs `\epsilon` → **se invierten** respecto de LaTeX | 153 | 102 |
-| Paréntesis alrededor de una fracción → trampa `lr(()/())` | 16 | 14 |
+| `\varepsilon` vs `\epsilon` → **se invierten** respecto de LaTeX | 153 | Los símbolos se emiten como **codepoint Unicode literal**, no como nombre Typst |
+| Sub/superíndices de varios caracteres | 519 | El argumento se envuelve siempre en `(...)`; el arnés compara la estructura |
+| `\text` / `\mathrm` → comillas o `upright()` | 380 | `\text` → string, `\mathrm` → math recto; el arnés compara el `<mtext>` resultante |
+| Acentos (`\bar`, `\hat`, `\dot`) | 283 | Tabla explícita; el arnés compara el glifo del acento |
+| `\vec` → `arrow()` | 272 | Ídem |
+| Paréntesis alrededor de una fracción → trampa `lr(()/())` | 16 | Se emite `frac(a, b)`, no `(a)/(b)`: la trampa deja de existir |
 
-`\varepsilon` merece subrayado: en LaTeX `\epsilon` es la lunada (ϵ) y `\varepsilon` la abierta (ε);
-en Typst `epsilon` es la abierta y `epsilon.alt` la lunada. La correspondencia está **dada vuelta**, y
-un traductor mecánico que mapee `\epsilon → epsilon` produce el glifo equivocado en 153 lugares sin
-avisar.
+**El caso de `epsilon` merece el subrayado que ya tenía**: en LaTeX `\epsilon` es la lunada (ϵ) y
+`\varepsilon` la abierta (ε); en Typst `epsilon` es la abierta y `epsilon.alt` la lunada. La
+correspondencia está dada vuelta, y un traductor que mapee `\epsilon → epsilon` produce el glifo
+equivocado en 153 lugares sin avisar. Por eso `scripts/latex2typst.py` no escribe nombres de símbolo:
+escribe el carácter. `\epsilon` → `ϵ` (U+03F5), `\varepsilon` → `ε` (U+03B5), y Typst se limita a
+llevarlos al plano matemático correcto. Lo mismo con `\phi`/`\varphi`. El arnés lo confirma
+expresión por expresión (§5).
+
+**Un riesgo que no estaba en la lista**: en LaTeX `a/b` es una barra; en Typst `a/b` es una
+**fracción**. Son 679 barras en el corpus. El traductor las escapa a `\/`. No estaba identificado
+antes de escribir el traductor, y habría cambiado silenciosamente la forma de 679 expresiones.
 
 ---
 
-## 5. La prueba de que el riesgo silencioso es real
+## 5. Cómo se verificó
 
-**Ya corregido**, pero vale como evidencia: este repo cayó en uno de estos errores, en el pipeline de
-display, y estuvo publicado un buen tiempo sin que nadie lo notara.
+La traducción no se puede dar por buena leyéndola. El plan original era diff por imagen; lo que se
+hizo es mejor y más barato: **comparar el MathML contra un oráculo independiente**.
+
+Se bajó `mathjax-full@3.2.2` del registro de npm y se corrió bajo `node` (`MathJax.tex2mml`) para
+producir, desde el **LaTeX original**, el MathML de referencia de las 2261 expresiones. Es el mismo
+motor que renderizaba estas páginas hasta ahora, así que compararlo es comparar contra lo que el
+lector veía.
+
+Sobre eso, tres pasadas:
+
+1. **Compilación.** Las 2261 expresiones traducidas compilan con `typst compile --format html` sin un
+   solo error ni warning propio.
+2. **Glifos.** Se compara el flujo de texto visible de ambos MathML, normalizando lo que no cambia el
+   render (plano alfanumérico matemático, acentos combinantes vs. espaciadores, `⁡` invisible).
+   **2257 de 2261 idénticas.** Las 4 que difieren son `\boldsymbol`, y difieren porque la referencia
+   offline de MathJax no tenía cargada esa extensión y escupió el macro como texto: la salida buena
+   es la nuestra.
+3. **Estructura.** Se comparan los árboles MathML. Quedan 226 diferencias, todas en cinco clases
+   revisadas una por una y ninguna visible:
+   - subíndice colgado del grupo `(…)` entero en vez de sólo del `)` (Typst agrupa mejor);
+   - MathJax junta letras rectas contiguas en un `<mi>` (`\mathrm{CO_2}` → `<mi>CO</mi>`), Typst las
+     separa — mismo render;
+   - `\mathcal{E}` → `ℰ` (U+2130) contra `<mi mathvariant="script">E</mi>`;
+   - `0{,}082` como un `<mn>` contra tres tokens;
+   - `\mathbf` (ver §6).
+
+   Con el espaciado incluido en la comparación aparecen 14 diferencias más, todas de redondeo
+   (`0.1667em` vs `0.167em`) o del `\ ` explícito. Ninguna es un hueco de más o de menos.
+
+Y una revisión a ojo, que es donde se cierra: 39 expresiones representativas (todas las clases de
+riesgo de §4.2) renderizadas al lado de su fuente LaTeX.
+
+### 5.1 Reproducir el arnés
+
+Los scripts de verificación no están en el repo — dependen de bajar MathJax de npm, que es
+precisamente la dependencia que la migración elimina. El procedimiento, si hace falta repetirlo:
+
+1. `curl -L https://registry.npmjs.org/mathjax-full/-/mathjax-full-3.2.2.tgz | tar xz`
+2. Con `node`, `MathJax.tex2mml(tex)` sobre cada valor de `data-tex` → MathML de referencia.
+3. Contra eso, el `<math>` que ya está en las páginas.
+4. Normalizar antes de comparar: plano matemático → letra base **sin fundir** `ϵ`/`ε` ni `ϕ`/`φ`
+   (NFKC los funde, y son justo los que hay que vigilar), acentos combinantes ≡ espaciadores,
+   `⁡`/`⁢` fuera, `munder` ≡ `msub`.
+
+---
+
+## 6. Las dos cosas que cambian a propósito
+
+**`\mathbf` ahora es negrita cursiva.** MathJax renderizaba `\mathbf{E}` como **E** recta; el
+traductor emite `bold(E)`, que es negrita cursiva ***E***. Se eligió así porque es lo que ya hacen las
+fórmulas de display del repo: `CLAUDE.md` mapea `\mathbf{E}` → `bold(E)` y los 348 SVG están
+compilados con esa convención. Antes de la migración, un mismo vector se veía distinto en el párrafo
+y en la fórmula de abajo. Ahora no. Son 174 instancias.
+
+**Los alfanuméricos matemáticos bajan a letra base.** Typst emite `𝑃` (U+1D447, MATHEMATICAL ITALIC
+CAPITAL P) donde MathJax emite `<mi>P</mi>` y deja que el navegador lo incline. `inline-mathml.py`
+normaliza a la forma de MathJax, porque esos codepoints sólo existen en fuentes matemáticas y este
+repo auto-hospeda Inter, que no los trae: sin la normalización, un sistema sin fuente matemática
+instalada mostraría cajitas. Con la letra base, el math hereda la tipografía de la página, y además
+`Ctrl+F` de "PV" encuentra `$PV$`. La negrita, que sí necesitaba el codepoint, va por CSS
+(`math .mv-bi { font-weight: 700 }`).
+
+`styles/main.css` fija además una pila de fuentes matemáticas para `math` (`Latin Modern Math`,
+`STIX Two Math`, `Cambria Math`, `math`, `serif`). Si se quiere que el inline calce exactamente con
+la New Computer Modern de los SVG de display, el paso siguiente sería auto-hospedar un `.woff2`
+matemático (~500 KB); no se hizo porque duplicaría el peso de `styles/fonts/`.
+
+---
+
+## 7. Los dos errores que el arnés encontró
+
+Valen como prueba de que el riesgo silencioso era real, porque los dos renderizaban algo, ninguno dio
+error, y ninguno se veía leyendo el traductor.
+
+**`\tfrac72R` salía como 7/2·R con el 72 arriba.** El traductor juntaba las cifras contiguas en un
+número, así que `\frac32` se leía como `frac(32, …)`. En LaTeX un argumento sin llaves es **un solo
+token**: `\frac32` es 3/2. Afectaba a 16 instancias, todas fracciones de capacidades caloríficas
+(`\bar C_P = \tfrac72R`) y coeficientes estequiométricos (`\tfrac32\mathrm{O_2}`) — es decir, números
+que un lector no tiene cómo saber que están mal.
+
+**Las primas dejaban de ser primas.** `q'` se traducía a `q '`, y Typst sólo eleva la prima si está
+pegada a su base: con el espacio quedaba una comilla a la altura de la línea. Peor, `Q_y'` no se
+arregla pegándola al final (`Q_(y)'` hace que Typst dibuje los paréntesis del subíndice); hay que
+insertarla antes de los índices, `Q'_(y)`. Por eso `_Atom` guarda la base y los índices por separado.
+
+Y un tercero, de espaciado, que el arnés también marcó: Typst convierte un espacio de fuente
+adyacente a un string en 0.2222em reales, cosa que LaTeX no hace. `0{,}082` salía como `0 , 082` y
+`\mathrm{Fe}(s)` como `Fe (s)`.
+
+### El precedente
+
+Ya antes de esta migración el repo había caído en un error de esta familia, en el pipeline de
+display, y estuvo publicado un buen tiempo sin que nadie lo notara:
 
 ```typst
-lr((partial V)/(partial t))_P     ← lo que estuvo escrito hasta ahora
+lr((partial V)/(partial t))_P     ← lo que estuvo escrito
+lr(( (partial V)/(partial t) ))_P ← lo correcto
 ```
 
-Renderiza **sin los paréntesis**. Typst se los come como agrupación de la fracción. La forma correcta
-necesita un par interno:
+La primera forma renderiza **sin los paréntesis**: Typst se los come como agrupación de la fracción.
+Eran **52 ocurrencias en 12 archivos `.typ`**, y se reproducía sola, porque `CLAUDE.md` documentaba el
+patrón roto como la receta recomendada. Ya está corregido, y `scripts/check-lr-parens.py` lo detecta
+(no se puede con grep: la forma correcta contiene a la incorrecta como subcadena).
 
-```typst
-lr(( (partial V)/(partial t) ))_P
-```
-
-- **52 ocurrencias, en 12 archivos `.typ`**: `clase_6` (14), `clase_5` (8), `aux_4` (7), `cc_7` (6),
-  `cat_18` (4), `cat_15` (3), `clase_3` (3), `cat_14` (2), `aux_2` (2), `cat_17` (1), `cc_2` (1),
-  `clase_1` (1).
-- No es cosmético: en termodinámica, `∂U/∂V` con un `_T` colgando y sin paréntesis es ambiguo sobre a
-  qué aplica el subíndice. Es exactamente la notación que el curso enseña a leer bien.
-- Y se reproducía solo: **`CLAUDE.md` documentaba el patrón roto como la receta recomendada**, así que
-  volvía a aparecer cada vez que alguien agregaba una derivada parcial. La receta ya está corregida.
-
-Esto es un solo macro, escrito a mano, por gente que conocía el material, y aun así pasó y sobrevivió.
-El paso 2 de §3 propone hacer esa misma clase de traducción **2261 veces**.
-
-Detectarlo tampoco es trivial: **no se puede con grep**, porque la forma correcta
-(`lr(( (A)/(B) ))`) contiene a la incorrecta (`lr((A)/(B))`) como subcadena. Hace falta emparejar
-paréntesis. Por eso el chequeo quedó como `scripts/check-lr-parens.py`, que sale con código 1 si
-encuentra alguno.
-
-> Las 52 están corregidas y `CLAUDE.md` ya documenta la forma buena. Que hiciera falta un script
-> dedicado para *detectar* un error de traducción de un solo macro es, en sí, el argumento de este
-> documento.
+El math inline no puede volver a caer en eso: `latex2typst.py` emite `frac(a, b)`, que es una llamada
+a función y no se come nada.
 
 ---
 
-## 6. Alternativas, con números
+## 8. Lo que queda anotado
 
-Las cuatro opciones y lo que cuesta cada una. Tamaños medidos, no estimados.
-
-| Opción | Peso | Sin red | Sin JS | Texto real | Traducción |
-|---|---|---|---|---|---|
-| MathJax por CDN (hoy) | 1134 KB + fuentes | ✗ | ✗ | ✓ | — |
-| KaTeX auto-hospedado | **549 KB** | ✓ | ✗ | ✓ | ninguna |
-| LaTeX → MathML en build | **~0 KB** | ✓ | ✓ | ✓ | ninguna |
-| Typst → MathML | ~0 KB | ✓ | ✓ | ✓ | **2261 expresiones** |
-| Typst → SVG inline | **8,4 MB** | ✓ | ✓ | ✗ | 2261 expresiones |
-
-**Typst → SVG queda descartado de entrada.** Cada SVG incrusta sus propios contornos de glifo (3,8 KB
-promedio medido), el color va fijo en el archivo (`fill="#e6edf3"`, así que el math dentro de
-`.formula-desc` saldría del color equivocado), no escala con el `font-size` del contexto, y la línea
-base no se puede recuperar de un solo `transform`. Además rompe seleccionar, copiar y Ctrl+F.
-
-**Typst → MathML sí funciona.** Verificado con el `typst 0.15.1` de esta máquina:
-
-```html
-Sea <math><mi>𝑇</mi></math> la temperatura y
-<math><msub><mfrac><mrow><mi>𝜕</mi><mi>𝑈</mi></mrow>
-<mrow><mi>𝜕</mi><mi>𝑉</mi></mrow></mfrac><mi>𝑇</mi></msub></math>
-```
-
-Es MathML de verdad: texto seleccionable, buscable, que hereda `color` y `font-size` del CSS. Soporte
-de navegador suficiente (Firefox siempre, Chrome 109+, Safari 14.1+).
-
-Pero Typst avisa en cada corrida:
-
-```
-warning: html export is under active development and incomplete
- = hint: do not rely on this feature for production use cases
-```
-
-**LaTeX → MathML en build llega al mismo destino sin el paso peligroso.** Herramientas como Temml
-(hecha para esto) o el modo `output: "mathml"` de KaTeX consumen el LaTeX que ya está escrito y
-escupen MathML. Se corre una vez en build, el MathML queda horneado en el HTML, y no se envía JS.
-Mismo resultado final, **sin traducir nada**, sin depender de una feature marcada como incompleta.
-`node v26.8.1` ya está instalado en esta máquina.
-
----
-
-## 7. Recomendación
-
-1. **Arreglar los 53 `lr()`** y corregir la receta de `CLAUDE.md` línea 88. Es un bug real, está
-   publicado, y no depende de ninguna de estas decisiones.
-2. **Si el objetivo es sacar el CDN:** LaTeX → MathML en build. Es el mismo destino que Typst, con
-   cero traducción y cero riesgo silencioso.
-3. **Si sólo se quiere algo rápido y reversible:** KaTeX auto-hospedado (549 KB). Los 84 macros en uso
-   están todos soportados; lo verifiqué contra el inventario completo. No cierra la puerta a MathML
-   después, porque ambos consumen el mismo LaTeX.
-4. **Typst para inline:** dejarlo anotado para cuando `--format html` salga de "incomplete". No aporta
-   nada sobre la opción 2 y carga con la traducción de 2261 expresiones.
-
----
-
-## 8. Si igual se hace, cómo verificarlo
-
-La traducción no se puede dar por buena leyéndola. Hace falta comparar renders:
-
-1. Antes de tocar nada, renderizar las 2261 expresiones con el MathJax actual y guardarlas como PNG.
-2. Renderizar las 2261 traducidas.
-3. Diff por imagen, y **revisar a ojo todo lo que no calce pixel a pixel**.
-
-Sin ese arnés no hay forma de saber si alguna de las 519 con subíndices multicarácter, las 153 con
-`\varepsilon` o las 14 con paréntesis sobre fracción salió mal: todas renderizan *algo*.
-
-Nota: la comprobación barata de que no hay `$` sueltos ya está hecha — **cero** en las 80 páginas (el
-único candidato era una expresión de más de 200 caracteres, límite del script, no un delimitador
-impar). Ese riesgo no existe.
+- `typst compile --format html` sigue marcado como incompleto. El MathML horneado aísla a las páginas
+  de eso, pero conviene volver a correr el arnés de §5 cada vez que se suba la versión de Typst.
+- Si alguna vez hay `npm` en la máquina, **Temml es mejor traductor que el nuestro**: consume el
+  `data-tex` que ya está guardado en cada `<math>` y no traduce nada. La migración dejó el LaTeX
+  justamente para que ese cambio sea barato.
+- El único JS propio que queda es `styles/quiz.js`, y ya no tipografía nada: inyecta la explicación
+  con `innerHTML` y el navegador renderiza el MathML solo.

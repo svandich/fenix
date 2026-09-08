@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 2 — Historia: Calor y Máquinas de Vapor</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -113,7 +109,7 @@
       </div>
       <div class="concept-card">
         <h3>Experimento de Joule</h3>
-        <p>Joule midió el trabajo realizado por pesas que hacen girar paletas en un líquido, y el aumento de temperatura resultante. Descubrió que $\Delta U - W \neq 0$: la diferencia es el calor. Esto estableció la equivalencia trabajo ↔ calor.</p>
+        <p>Joule midió el trabajo realizado por pesas que hacen girar paletas en un líquido, y el aumento de temperatura resultante. Descubrió que <math data-tex="\Delta U - W \neq 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>−</mo><mi>W</mi><mo>≠</mo><mn>0</mn></math>: la diferencia es el calor. Esto estableció la equivalencia trabajo ↔ calor.</p>
       </div>
       <div class="concept-card">
         <h3>Calor latente</h3>
@@ -129,7 +125,7 @@
       <div class="formula-label">Calor sensible (sin cambio de fase)</div>
       <div class="formula-math"><img class="typst-formula" src="cat_2_1.svg" alt=""></div>
       <div class="formula-desc">
-        $m$ masa · $c$ calor específico [J/(kg·K)] · $\Delta T$ cambio de temperatura.
+        <math data-tex="m"><mi>m</mi></math> masa · <math data-tex="c"><mi>c</mi></math> calor específico [J/(kg·K)] · <math data-tex="\Delta T"><mi mathvariant="normal">Δ</mi><mi>T</mi></math> cambio de temperatura.
         Válido solo cuando no hay transición de fase.
       </div>
     </div>
@@ -138,7 +134,7 @@
       <div class="formula-label">Equivalente mecánico del calor (Joule, 1843)</div>
       <div class="formula-math"><img class="typst-formula" src="cat_2_2.svg" alt=""></div>
       <div class="formula-desc">
-        Joule midió la caída de pesas de masa $m$ desde altura $h$: $W = 2mgh$, y el correspondiente aumento $\Delta T$ del líquido.
+        Joule midió la caída de pesas de masa <math data-tex="m"><mi>m</mi></math> desde altura <math data-tex="h"><mi>h</mi></math>: <math data-tex="W = 2mgh"><mi>W</mi><mo>=</mo><mn>2</mn><mi>m</mi><mi>g</mi><mi>h</mi></math>, y el correspondiente aumento <math data-tex="\Delta T"><mi mathvariant="normal">Δ</mi><mi>T</mi></math> del líquido.
       </div>
     </div>
 
@@ -146,7 +142,7 @@
       <div class="formula-label">Dilatación térmica lineal</div>
       <div class="formula-math"><img class="typst-formula" src="cat_2_3.svg" alt=""></div>
       <div class="formula-desc">
-        Principio detrás de los termómetros de líquido. $\alpha$ coeficiente de dilatación lineal [K$^{-1}$].
+        Principio detrás de los termómetros de líquido. <math data-tex="\alpha"><mi>α</mi></math> coeficiente de dilatación lineal [K<math data-tex="^{-1}"><msup><mrow></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup></math>].
         El mercurio en un capilar sube o baja según la temperatura.
       </div>
     </div>
@@ -158,7 +154,7 @@
       <div class="tip-title">✦ Lecciones del contexto histórico</div>
       <ul>
         <li><strong>Calor ≠ temperatura.</strong> La confusión entre ambos duró más de un siglo. El calor es energía en tránsito; la temperatura es el estado del sistema.</li>
-        <li>El experimento de Joule es conceptualmente profundo: muestra que el déficit $\Delta U - W$ no es cero, y ese déficit <em>tiene</em> que ser el calor (por conservación de energía).</li>
+        <li>El experimento de Joule es conceptualmente profundo: muestra que el déficit <math data-tex="\Delta U - W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>−</mo><mi>W</mi></math> no es cero, y ese déficit <em>tiene</em> que ser el calor (por conservación de energía).</li>
         <li>La teoría del calórico fracasó porque el calor generado por fricción no tiene límite: si fuera un fluido, en algún momento se acabaría.</li>
         <li>La Revolución Industrial no fue solo tecnológica: transformó la sociedad, creó el proletariado urbano y motivó las primeras leyes laborales.</li>
         <li>El calor latente explica por qué el hielo enfría tan bien las bebidas: absorbe mucha energía sin subir de temperatura.</li>
@@ -202,7 +198,7 @@
           <label class="quiz-option"><input type="radio" name="q2_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Que los termómetros no funcionan correctamente durante las transiciones de fase</span></label>
           <label class="quiz-option"><input type="radio" name="q2_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Que la temperatura de los líquidos siempre permanece constante</span></label>
         </div>
-        <script type="text/explanation" id="q2_3-exp">El calor latente de fusión del hielo ($L \approx 334$ kJ/kg) va a romper los enlaces del cristal, no a aumentar la energía cinética de las moléculas. La temperatura mide la energía cinética media: si esa no cambia, $T$ no cambia. El calor es energía que fluye; la temperatura es el estado del sistema.</script>
+        <script type="text/explanation" id="q2_3-exp">El calor latente de fusión del hielo (<math data-tex="L \approx 334"><mi>L</mi><mo>≈</mo><mn>334</mn></math> kJ/kg) va a romper los enlaces del cristal, no a aumentar la energía cinética de las moléculas. La temperatura mide la energía cinética media: si esa no cambia, <math data-tex="T"><mi>T</mi></math> no cambia. El calor es energía que fluye; la temperatura es el estado del sistema.</script>
         <div class="quiz-feedback" id="q2_3-fb"></div>
       </div>
 

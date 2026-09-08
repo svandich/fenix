@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 3 — Ley de Gauss Parte 2</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -72,7 +70,7 @@
       <ul class="topic-list">
         <li>Esferas macizas con cavidades internas</li>
         <li>Cascarones esféricos concéntricos con distintas cargas</li>
-        <li>Cilindros infinitos con densidades de carga que varían con $r$</li>
+        <li>Cilindros infinitos con densidades de carga que varían con <math data-tex="r"><mi>r</mi></math></li>
         <li>Planos infinitos cargados (conductor y no conductor)</li>
         <li>Superposición para construir geometrías complejas</li>
       </ul>
@@ -87,12 +85,12 @@
         <p>Se trata como superposición de una esfera maciza menos una esfera maciza en la región de la cavidad. El campo en la cavidad de una distribución uniforme es constante.</p>
       </div>
       <div class="concept-card">
-        <h3>Densidad variable $\rho(r)$</h3>
-        <p>Si $\rho$ depende de $r$, la carga encerrada se obtiene integrando: $Q_{\text{enc}} = \int_0^r \rho(r')\,4\pi r'^2\,dr'$. Gauss sigue aplicando si hay simetría esférica.</p>
+        <h3>Densidad variable <math data-tex="\rho(r)"><mi>ρ</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math></h3>
+        <p>Si <math data-tex="\rho"><mi>ρ</mi></math> depende de <math data-tex="r"><mi>r</mi></math>, la carga encerrada se obtiene integrando: <math data-tex="Q_{\text{enc}} = \int_0^r \rho(r&#x27;)\,4\pi r&#x27;^2\,dr&#x27;"><msub><mi>Q</mi><mtext>enc</mtext></msub><mo>=</mo><msubsup><mo form="prefix" lspace="0em">∫</mo><mn>0</mn><mi>r</mi></msubsup><mi>ρ</mi><mrow><mo>(</mo><msup><mi>r</mi><mo>′</mo></msup><mo>)</mo></mrow><mspace width="0.1667em"/><mn>4</mn><mi>π</mi><msup><mi>r</mi><mrow><mo form="postfix">′</mo><mn>2</mn></mrow></msup><mspace width="0.1667em"/><mi>d</mi><msup><mi>r</mi><mo>′</mo></msup></math>. Gauss sigue aplicando si hay simetría esférica.</p>
       </div>
       <div class="concept-card">
         <h3>Plano infinito conductor</h3>
-        <p>El campo sale perpendicular a ambas caras. Para un plano conductor con densidad $\sigma$, el campo a cada lado es $E = \sigma/(2\varepsilon_0)$, resultando en $\sigma/\varepsilon_0$ total.</p>
+        <p>El campo sale perpendicular a ambas caras. Para un plano conductor con densidad <math data-tex="\sigma"><mi>σ</mi></math>, el campo a cada lado es <math data-tex="E = \sigma/(2\varepsilon_0)"><mi>E</mi><mo>=</mo><mi>σ</mi><mi>/</mi><mrow><mo>(</mo><mrow><mn>2</mn><msub><mi>ε</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></math>, resultando en <math data-tex="\sigma/\varepsilon_0"><mi>σ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math> total.</p>
       </div>
       <div class="concept-card">
         <h3>Múltiples regiones</h3>
@@ -108,7 +106,7 @@
       <div class="formula-label">Carga encerrada con densidad variable</div>
       <div class="formula-math"><img class="typst-formula" src="aux_3_1.svg" alt=""></div>
       <div class="formula-desc">
-        Para simetría esférica con $\rho = \rho(r)$. Análogamente, para simetría cilíndrica: $Q_{\text{enc}} = \int_0^r \rho(r')\,2\pi r' L\,dr'$.
+        Para simetría esférica con <math data-tex="\rho = \rho(r)"><mi>ρ</mi><mo>=</mo><mi>ρ</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math>. Análogamente, para simetría cilíndrica: <math data-tex="Q_{\text{enc}} = \int_0^r \rho(r&#x27;)\,2\pi r&#x27; L\,dr&#x27;"><msub><mi>Q</mi><mtext>enc</mtext></msub><mo>=</mo><msubsup><mo form="prefix" lspace="0em">∫</mo><mn>0</mn><mi>r</mi></msubsup><mi>ρ</mi><mrow><mo>(</mo><msup><mi>r</mi><mo>′</mo></msup><mo>)</mo></mrow><mspace width="0.1667em"/><mn>2</mn><mi>π</mi><msup><mi>r</mi><mo>′</mo></msup><mi>L</mi><mspace width="0.1667em"/><mi>d</mi><msup><mi>r</mi><mo>′</mo></msup></math>.
       </div>
     </div>
 
@@ -116,7 +114,7 @@
       <div class="formula-label">Campo de plano infinito (no conductor, σ total)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_3_2.svg" alt=""></div>
       <div class="formula-desc">
-        Para un conductor, la carga se distribuye en superficies y el campo exterior es $\sigma/\varepsilon_0$ (con $E=0$ dentro).
+        Para un conductor, la carga se distribuye en superficies y el campo exterior es <math data-tex="\sigma/\varepsilon_0"><mi>σ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math> (con <math data-tex="E=0"><mi>E</mi><mo>=</mo><mn>0</mn></math> dentro).
       </div>
     </div>
 
@@ -137,8 +135,8 @@
         <li>Define claramente cada región y su límite antes de calcular.</li>
         <li>Para cada región, escoge una superficie gaussiana concéntrica e integra solo la carga interior.</li>
         <li>El campo debe ser continuo en regiones sin carga superficial.</li>
-        <li>En interfaces con $\sigma \neq 0$, el campo tiene una discontinuidad de $\sigma/\varepsilon_0$.</li>
-        <li>Verifica que tu resultado $\mathbf{E}(r)$ sea continuo donde no hay carga superficial.</li>
+        <li>En interfaces con <math data-tex="\sigma \neq 0"><mi>σ</mi><mo>≠</mo><mn>0</mn></math>, el campo tiene una discontinuidad de <math data-tex="\sigma/\varepsilon_0"><mi>σ</mi><mi>/</mi><msub><mi>ε</mi><mn>0</mn></msub></math>.</li>
+        <li>Verifica que tu resultado <math data-tex="\mathbf{E}(r)"><mi class="mv-bi">E</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math> sea continuo donde no hay carga superficial.</li>
       </ul>
     </div>
   </section>

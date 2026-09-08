@@ -637,6 +637,101 @@ section h3 {
   margin: 0 auto;
 }
 
+/* ===== MATH INLINE (MathML) =====
+   El math inline se hornea como MathML con ./scripts/inline-mathml.py; no hay
+   MathJax ni ninguna otra dependencia de red. Ver docs/typst-inline-migration.md. */
+math {
+  /* Los navegadores mapean `font-family: math` a la fuente matematica del
+     sistema. Si no hay ninguna, esta pila cae a la serif del navegador antes
+     que a Inter, para que el math no se lea como texto corrido. */
+  font-family: "Latin Modern Math", "STIX Two Math", "Cambria Math",
+               "TeX Gyre Termes Math", math, serif;
+  font-size: 1.05em;
+}
+
+/* Los alfanumericos matematicos (U+1D400+) se bajan a letra base al hornear,
+   asi que el peso de \mathbf va por CSS y no por codepoint. */
+math .mv-b,
+math .mv-bi { font-weight: 700; }
+
+/* Normalizacion de MathML que emite Typst junto con el HTML (typst 0.15.1).
+   Generado: no editar a mano. */
+/* Alignment */
+  mtable.right-align mtd,
+  mtable mtd.right-align,
+  mtable.left-align mtd.right-align,
+  mtable.aligned mtd:nth-child(odd) {
+    justify-items: end;
+    text-align: right;
+  }
+  mtable.cases mtd,
+  mtable.left-align mtd,
+  mtable mtd.left-align,
+  mtable.aligned mtd:nth-child(even),
+  math:is(:not([display])) > mtable.multiline-equation mtd {
+    justify-items: start;
+    text-align: left;
+  }
+  mtable.cases mtd,
+  mtable.aligned mtd,
+  mtable mtd.flushed,
+  mtable mtd.left-flush {
+    padding-left: 0;
+  }
+  mtable.cases mtd,
+  mtable.aligned mtd,
+  mtable mtd.flushed,
+  mtable mtd.right-flush {
+    padding-right: 0;
+  }
+
+/* Tables */
+  mtable {
+    math-style: inherit;
+  }
+  mtd {
+    math-depth: auto-add;
+    math-style: compact;
+    math-shift: compact;
+  }
+
+/* Equations */
+  mtable.multiline-equation mtd {
+    math-depth: inherit;
+    math-style: inherit;
+    math-shift: inherit;
+    padding: 0;
+  }
+  math > mtable.multiline-equation mtr:not(:last-child) mtd {
+    padding-bottom: 0.5em;
+  }
+
+/* Fractions */
+  mfrac {
+    padding-inline: 0;
+    margin-inline: 0.1em;
+  }
+
+/* Accents */
+  mover[accent="true" i] > :first-child {
+    font-feature-settings: "dtls";
+  }
+  mover.dotted[accent="true" i] > :first-child {
+    font-feature-settings: "dtls" 0;
+  }
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+  munder > :nth-child(2),
+  munderover > :nth-child(2) {
+    math-shift: compact
+  }
+  munder[accentunder="true" i] > :not(:first-child),
+  mover[accent="true" i] > :not(:first-child) {
+    math-depth: inherit;
+    math-style: inherit;
+    math-shift: inherit;
+  }
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }

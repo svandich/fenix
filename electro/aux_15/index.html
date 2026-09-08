@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 15 — Corrientes y Resistencias</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -70,12 +68,12 @@
     <h2><span class="section-icon">📋</span> Temas que cubre</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>Densidad de corriente $\mathbf{J}$ y corriente total $I = \int\mathbf{J}\cdot d\mathbf{S}$</li>
-        <li>Ley de Ohm local: $\mathbf{J} = \sigma_c\mathbf{E}$ (conductividad $\sigma_c$, no confundir con densidad de carga)</li>
-        <li>Ecuación de continuidad: $\nabla\cdot\mathbf{J} = -\partial\rho/\partial t$</li>
-        <li>Estado estacionario: $\nabla\cdot\mathbf{J} = 0$</li>
-        <li>Resistencia $R = V/I$ para geometrías simples y complejas</li>
-        <li>Potencia disipada: efecto Joule $P = \int\mathbf{E}\cdot\mathbf{J}\,dV = I^2R$</li>
+        <li>Densidad de corriente <math data-tex="\mathbf{J}"><mi class="mv-bi">J</mi></math> y corriente total <math data-tex="I = \int\mathbf{J}\cdot d\mathbf{S}"><mi>I</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi class="mv-bi">J</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mi class="mv-bi">S</mi></math></li>
+        <li>Ley de Ohm local: <math data-tex="\mathbf{J} = \sigma_c\mathbf{E}"><mi class="mv-bi">J</mi><mo>=</mo><msub><mi>σ</mi><mi>c</mi></msub><mi class="mv-bi">E</mi></math> (conductividad <math data-tex="\sigma_c"><msub><mi>σ</mi><mi>c</mi></msub></math>, no confundir con densidad de carga)</li>
+        <li>Ecuación de continuidad: <math data-tex="\nabla\cdot\mathbf{J} = -\partial\rho/\partial t"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">J</mi><mo>=</mo><mo form="prefix">−</mo><mi>∂</mi><mi>ρ</mi><mi>/</mi><mi>∂</mi><mi>t</mi></math></li>
+        <li>Estado estacionario: <math data-tex="\nabla\cdot\mathbf{J} = 0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">J</mi><mo>=</mo><mn>0</mn></math></li>
+        <li>Resistencia <math data-tex="R = V/I"><mi>R</mi><mo>=</mo><mi>V</mi><mi>/</mi><mi>I</mi></math> para geometrías simples y complejas</li>
+        <li>Potencia disipada: efecto Joule <math data-tex="P = \int\mathbf{E}\cdot\mathbf{J}\,dV = I^2R"><mi>P</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi class="mv-bi">E</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">J</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi><mo>=</mo><msup><mi>I</mi><mn>2</mn></msup><mi>R</mi></math></li>
       </ul>
     </div>
   </section>
@@ -85,19 +83,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Densidad de corriente J</h3>
-        <p>$\mathbf{J}$ [A/m²] es el flujo de carga por unidad de área. La corriente $I$ que pasa por una superficie es el flujo de $\mathbf{J}$ a través de ella. El sentido positivo es el de movimiento de cargas positivas.</p>
+        <p><math data-tex="\mathbf{J}"><mi class="mv-bi">J</mi></math> [A/m²] es el flujo de carga por unidad de área. La corriente <math data-tex="I"><mi>I</mi></math> que pasa por una superficie es el flujo de <math data-tex="\mathbf{J}"><mi class="mv-bi">J</mi></math> a través de ella. El sentido positivo es el de movimiento de cargas positivas.</p>
       </div>
       <div class="concept-card">
         <h3>Ley de Ohm local</h3>
-        <p>$\mathbf{J} = \sigma_c\mathbf{E}$ es la versión diferencial de $V = RI$. La conductividad $\sigma_c = 1/\rho_r$ (resistividad) depende del material y la temperatura, no de $I$ ni $V$.</p>
+        <p><math data-tex="\mathbf{J} = \sigma_c\mathbf{E}"><mi class="mv-bi">J</mi><mo>=</mo><msub><mi>σ</mi><mi>c</mi></msub><mi class="mv-bi">E</mi></math> es la versión diferencial de <math data-tex="V = RI"><mi>V</mi><mo>=</mo><mi>R</mi><mi>I</mi></math>. La conductividad <math data-tex="\sigma_c = 1/\rho_r"><msub><mi>σ</mi><mi>c</mi></msub><mo>=</mo><mn>1</mn><mi>/</mi><msub><mi>ρ</mi><mi>r</mi></msub></math> (resistividad) depende del material y la temperatura, no de <math data-tex="I"><mi>I</mi></math> ni <math data-tex="V"><mi>V</mi></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Ecuación de continuidad</h3>
-        <p>Expresa la conservación local de carga: la corriente que sale de un volumen iguala la tasa de disminución de carga dentro. En estado estacionario, no hay acumulación: $\nabla\cdot\mathbf{J} = 0$.</p>
+        <p>Expresa la conservación local de carga: la corriente que sale de un volumen iguala la tasa de disminución de carga dentro. En estado estacionario, no hay acumulación: <math data-tex="\nabla\cdot\mathbf{J} = 0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">J</mi><mo>=</mo><mn>0</mn></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Efecto Joule</h3>
-        <p>Cuando $\mathbf{J}$ fluye con $\mathbf{E}$, el campo hace trabajo sobre las cargas que se disipa como calor. La densidad de potencia es $p = \mathbf{E}\cdot\mathbf{J} = \sigma_c E^2 = J^2/\sigma_c$.</p>
+        <p>Cuando <math data-tex="\mathbf{J}"><mi class="mv-bi">J</mi></math> fluye con <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math>, el campo hace trabajo sobre las cargas que se disipa como calor. La densidad de potencia es <math data-tex="p = \mathbf{E}\cdot\mathbf{J} = \sigma_c E^2 = J^2/\sigma_c"><mi>p</mi><mo>=</mo><mi class="mv-bi">E</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">J</mi><mo>=</mo><msub><mi>σ</mi><mi>c</mi></msub><msup><mi>E</mi><mn>2</mn></msup><mo>=</mo><msup><mi>J</mi><mn>2</mn></msup><mi>/</mi><msub><mi>σ</mi><mi>c</mi></msub></math>.</p>
       </div>
     </div>
   </section>
@@ -109,7 +107,7 @@
       <div class="formula-label">Corriente y densidad de corriente</div>
       <div class="formula-math"><img class="typst-formula" src="aux_15_1.svg" alt=""></div>
       <div class="formula-desc">
-        $\sigma_c$ [S/m] es la conductividad eléctrica del material. No confundir con la densidad superficial de carga $\sigma$ [C/m²].
+        <math data-tex="\sigma_c"><msub><mi>σ</mi><mi>c</mi></msub></math> [S/m] es la conductividad eléctrica del material. No confundir con la densidad superficial de carga <math data-tex="\sigma"><mi>σ</mi></math> [C/m²].
       </div>
     </div>
 
@@ -117,7 +115,7 @@
       <div class="formula-label">Ecuación de continuidad</div>
       <div class="formula-math"><img class="typst-formula" src="aux_15_2.svg" alt=""></div>
       <div class="formula-desc">
-        En estado estacionario, las líneas de $\mathbf{J}$ son cerradas (conservación de carga). Condición de borde: $J_{1n} = J_{2n}$ en interfaces (sin acumulación).
+        En estado estacionario, las líneas de <math data-tex="\mathbf{J}"><mi class="mv-bi">J</mi></math> son cerradas (conservación de carga). Condición de borde: <math data-tex="J_{1n} = J_{2n}"><msub><mi>J</mi><mrow><mn>1</mn><mi>n</mi></mrow></msub><mo>=</mo><msub><mi>J</mi><mrow><mn>2</mn><mi>n</mi></mrow></msub></math> en interfaces (sin acumulación).
       </div>
     </div>
 
@@ -125,7 +123,7 @@
       <div class="formula-label">Resistencia de conductor cilíndrico</div>
       <div class="formula-math"><img class="typst-formula" src="aux_15_3.svg" alt=""></div>
       <div class="formula-desc">
-        $\rho_r$ = resistividad [Ω·m] · $\ell$ = longitud · $A$ = área de sección transversal. Para geometrías complejas se integra $R = \int d\ell / (\sigma_c A)$.
+        <math data-tex="\rho_r"><msub><mi>ρ</mi><mi>r</mi></msub></math> = resistividad [Ω·m] · <math data-tex="\ell"><mi>ℓ</mi></math> = longitud · <math data-tex="A"><mi>A</mi></math> = área de sección transversal. Para geometrías complejas se integra <math data-tex="R = \int d\ell / (\sigma_c A)"><mi>R</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi>d</mi><mi>ℓ</mi><mi>/</mi><mrow><mo>(</mo><mrow><msub><mi>σ</mi><mi>c</mi></msub><mi>A</mi></mrow><mo>)</mo></mrow></math>.
       </div>
     </div>
 
@@ -143,10 +141,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Analogía con electrostática</div>
       <ul>
-        <li>$\nabla\cdot\mathbf{J} = 0$ ↔ $\nabla\cdot\mathbf{E} = 0$ (Laplace): ambas son ecuaciones de flujo conservativo.</li>
-        <li>$\mathbf{J} = \sigma_c\mathbf{E}$ ↔ $\mathbf{D} = \varepsilon\mathbf{E}$: misma estructura matemática, distintas constantes de proporcionalidad.</li>
-        <li>Las condiciones de borde son análogas: $J_{n}$ continua ↔ $D_{n}$ continua (sin cargas libres).</li>
-        <li>Para calcular $R$: encuentra $\mathbf{E}$ a partir de Gauss o simetría, luego $V = -\int\mathbf{E}\cdot d\boldsymbol{\ell}$ e $I = \int\mathbf{J}\cdot d\mathbf{S}$, finalmente $R = V/I$.</li>
+        <li><math data-tex="\nabla\cdot\mathbf{J} = 0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">J</mi><mo>=</mo><mn>0</mn></math> ↔ <math data-tex="\nabla\cdot\mathbf{E} = 0"><mo>∇</mo><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math> (Laplace): ambas son ecuaciones de flujo conservativo.</li>
+        <li><math data-tex="\mathbf{J} = \sigma_c\mathbf{E}"><mi class="mv-bi">J</mi><mo>=</mo><msub><mi>σ</mi><mi>c</mi></msub><mi class="mv-bi">E</mi></math> ↔ <math data-tex="\mathbf{D} = \varepsilon\mathbf{E}"><mi class="mv-bi">D</mi><mo>=</mo><mi>ε</mi><mi class="mv-bi">E</mi></math>: misma estructura matemática, distintas constantes de proporcionalidad.</li>
+        <li>Las condiciones de borde son análogas: <math data-tex="J_{n}"><msub><mi>J</mi><mi>n</mi></msub></math> continua ↔ <math data-tex="D_{n}"><msub><mi>D</mi><mi>n</mi></msub></math> continua (sin cargas libres).</li>
+        <li>Para calcular <math data-tex="R"><mi>R</mi></math>: encuentra <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> a partir de Gauss o simetría, luego <math data-tex="V = -\int\mathbf{E}\cdot d\boldsymbol{\ell}"><mi>V</mi><mo>=</mo><mo form="prefix">−</mo><mo form="prefix">∫</mo><mi class="mv-bi">E</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mi>ℓ</mi></math> e <math data-tex="I = \int\mathbf{J}\cdot d\mathbf{S}"><mi>I</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi class="mv-bi">J</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>d</mi><mi class="mv-bi">S</mi></math>, finalmente <math data-tex="R = V/I"><mi>R</mi><mo>=</mo><mi>V</mi><mi>/</mi><mi>I</mi></math>.</li>
       </ul>
     </div>
   </section>

@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clase 4 — Ley Cero, Trabajo y Calor</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -82,9 +78,9 @@
       </p>
       <ul class="topic-list">
         <li><strong>Ley cero</strong> — el equilibrio térmico es transitivo. Define la <em>temperatura</em> y hace posible el termómetro. Es la que se ve en esta clase.</li>
-        <li><strong>Primera ley</strong> — la energía del universo se conserva. Define la <em>energía interna</em> $U$ y, con ella, la entalpía. Clases 4 a 8.</li>
-        <li><strong>Segunda ley</strong> — la entropía del universo nunca disminuye. Define la <em>entropía</em> $S$ y dice qué procesos ocurren solos. Viene después en el programa.</li>
-        <li><strong>Tercera ley</strong> — la entropía de un cristal perfecto tiende a cero cuando $T \to 0$. Fija el <em>cero</em> de la escala de entropías, y permite tabular $S$ absolutas.</li>
+        <li><strong>Primera ley</strong> — la energía del universo se conserva. Define la <em>energía interna</em> <math data-tex="U"><mi>U</mi></math> y, con ella, la entalpía. Clases 4 a 8.</li>
+        <li><strong>Segunda ley</strong> — la entropía del universo nunca disminuye. Define la <em>entropía</em> <math data-tex="S"><mi>S</mi></math> y dice qué procesos ocurren solos. Viene después en el programa.</li>
+        <li><strong>Tercera ley</strong> — la entropía de un cristal perfecto tiende a cero cuando <math data-tex="T \to 0"><mi>T</mi><mo stretchy="false">→</mo><mn>0</mn></math>. Fija el <em>cero</em> de la escala de entropías, y permite tabular <math data-tex="S"><mi>S</mi></math> absolutas.</li>
       </ul>
       <p style="font-size:12.5px;color:var(--text-dimmed);line-height:1.6;margin-top:12px">
         La numeración es histórica, no lógica: la ley cero se enunció al final y se le puso ese número porque es
@@ -106,27 +102,27 @@
       </div>
       <div class="concept-card">
         <h3>Propiedad termométrica</h3>
-        <p>Cualquier magnitud que varíe de forma monótona con el estado térmico sirve para medir $T$: la longitud de una columna de mercurio, la resistencia de un alambre, la presión de un gas a $V$ fijo. La escala depende de cuál se elija — y por eso hay que buscar una que no dependa de la sustancia.</p>
+        <p>Cualquier magnitud que varíe de forma monótona con el estado térmico sirve para medir <math data-tex="T"><mi>T</mi></math>: la longitud de una columna de mercurio, la resistencia de un alambre, la presión de un gas a <math data-tex="V"><mi>V</mi></math> fijo. La escala depende de cuál se elija — y por eso hay que buscar una que no dependa de la sustancia.</p>
       </div>
       <div class="concept-card">
         <h3>Punto fijo</h3>
-        <p>Un estado reproducible al que se le asigna un número por convenio. La escala moderna usa uno solo: el punto triple del agua, $273{,}16$ K exactos. Con un punto fijo y una propiedad termométrica queda definida toda la escala.</p>
+        <p>Un estado reproducible al que se le asigna un número por convenio. La escala moderna usa uno solo: el punto triple del agua, <math data-tex="273{,}16"><mn>273</mn><mtext>,</mtext><mn>16</mn></math> K exactos. Con un punto fijo y una propiedad termométrica queda definida toda la escala.</p>
       </div>
       <div class="concept-card">
         <h3>Trabajo</h3>
-        <p>Cantidad que fluye por la frontera durante un cambio de estado y que puede usarse íntegramente para elevar un cuerpo en el entorno. Se manifiesta <em>en el entorno</em>: la medida es $mgh$. Sólo existe durante el cambio de estado — no es una propiedad del sistema.</p>
+        <p>Cantidad que fluye por la frontera durante un cambio de estado y que puede usarse íntegramente para elevar un cuerpo en el entorno. Se manifiesta <em>en el entorno</em>: la medida es <math data-tex="mgh"><mi>m</mi><mi>g</mi><mi>h</mi></math>. Sólo existe durante el cambio de estado — no es una propiedad del sistema.</p>
       </div>
       <div class="concept-card">
         <h3>Calor</h3>
-        <p>Lo que fluye entre dos sistemas al alcanzar el equilibrio térmico, desde el de mayor $T$ al de menor $T$. También se mide por su efecto en el entorno: gramos de agua que suben un grado. Igual que el trabajo, sólo existe en la frontera y durante el proceso.</p>
+        <p>Lo que fluye entre dos sistemas al alcanzar el equilibrio térmico, desde el de mayor <math data-tex="T"><mi>T</mi></math> al de menor <math data-tex="T"><mi>T</mi></math>. También se mide por su efecto en el entorno: gramos de agua que suben un grado. Igual que el trabajo, sólo existe en la frontera y durante el proceso.</p>
       </div>
       <div class="concept-card">
-        <h3>Presión de oposición $P_{\text{op}}$</h3>
-        <p>El trabajo se calcula con la presión <em>externa</em>, no con la del sistema. $P_{\text{op}}$ es arbitraria: la fija quien opera el pistón. Sólo en el límite cuasiestático se cumple $P_{\text{op}} = P_{\text{sist}}$.</p>
+        <h3>Presión de oposición <math data-tex="P_{\text{op}}"><msub><mi>P</mi><mtext>op</mtext></msub></math></h3>
+        <p>El trabajo se calcula con la presión <em>externa</em>, no con la del sistema. <math data-tex="P_{\text{op}}"><msub><mi>P</mi><mtext>op</mtext></msub></math> es arbitraria: la fija quien opera el pistón. Sólo en el límite cuasiestático se cumple <math data-tex="P_{\text{op}} = P_{\text{sist}}"><msub><mi>P</mi><mtext>op</mtext></msub><mo>=</mo><msub><mi>P</mi><mtext>sist</mtext></msub></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Reversible vs. irreversible</h3>
-        <p>Si el ciclo expansión–compresión deja el <em>entorno</em> modificado ($W_{\text{ciclo}} \neq 0$), el proceso fue irreversible. Si el entorno vuelve exactamente a su estado original ($W_{\text{ciclo}} = 0$), fue reversible. El sistema vuelve a su estado en ambos casos: lo que distingue es el entorno.</p>
+        <p>Si el ciclo expansión–compresión deja el <em>entorno</em> modificado (<math data-tex="W_{\text{ciclo}} \neq 0"><msub><mi>W</mi><mtext>ciclo</mtext></msub><mo>≠</mo><mn>0</mn></math>), el proceso fue irreversible. Si el entorno vuelve exactamente a su estado original (<math data-tex="W_{\text{ciclo}} = 0"><msub><mi>W</mi><mtext>ciclo</mtext></msub><mo>=</mo><mn>0</mn></math>), fue reversible. El sistema vuelve a su estado en ambos casos: lo que distingue es el entorno.</p>
       </div>
     </div>
   </section>
@@ -146,9 +142,9 @@
       <div class="formula-label">Escala empírica a partir de una propiedad termométrica</div>
       <div class="formula-math"><img class="typst-formula" src="clase_4_2.svg" alt=""></div>
       <div class="formula-desc">
-        $X$ es la propiedad elegida y $X_0$, $X_{100}$ sus valores en los dos puntos fijos (hielo y vapor a 1 atm).
+        <math data-tex="X"><mi>X</mi></math> es la propiedad elegida y <math data-tex="X_0"><msub><mi>X</mi><mn>0</mn></msub></math>, <math data-tex="X_{100}"><msub><mi>X</mi><mn>100</mn></msub></math> sus valores en los dos puntos fijos (hielo y vapor a 1 atm).
         El problema de fondo: dos termómetros con propiedades distintas coinciden en los puntos fijos pero
-        <em>discrepan entre ellos</em>, porque ninguna $X$ es exactamente lineal en $T$.
+        <em>discrepan entre ellos</em>, porque ninguna <math data-tex="X"><mi>X</mi></math> es exactamente lineal en <math data-tex="T"><mi>T</mi></math>.
       </div>
     </div>
 
@@ -156,8 +152,8 @@
       <div class="formula-label">Termómetro de gas y escala absoluta</div>
       <div class="formula-math"><img class="typst-formula" src="clase_4_3.svg" alt=""></div>
       <div class="formula-desc">
-        La salida del problema anterior: al extrapolar a $P \to 0$ todos los gases dan la misma lectura, porque todos
-        tienden al comportamiento ideal. $P_{\text{pt}}$ es la presión en el punto triple del agua, único punto fijo
+        La salida del problema anterior: al extrapolar a <math data-tex="P \to 0"><mi>P</mi><mo stretchy="false">→</mo><mn>0</mn></math> todos los gases dan la misma lectura, porque todos
+        tienden al comportamiento ideal. <math data-tex="P_{\text{pt}}"><msub><mi>P</mi><mtext>pt</mtext></msub></math> es la presión en el punto triple del agua, único punto fijo
         de la escala. Así la temperatura absoluta queda definida sin referirse a ninguna sustancia particular.
       </div>
     </div>
@@ -167,10 +163,10 @@
         <img src="fig_clase_4_termometria.svg" alt="Rectas de presión frente a temperatura para tres cargas de gas, extrapoladas al cero absoluto">
       </div>
       <div class="figure-cap">
-        <strong>Por qué el cero absoluto no es un convenio.</strong> Cada carga de gas da una recta $P$ vs. $t$ de
+        <strong>Por qué el cero absoluto no es un convenio.</strong> Cada carga de gas da una recta <math data-tex="P"><mi>P</mi></math> vs. <math data-tex="t"><mi>t</mi></math> de
         pendiente distinta, pero todas cortan el eje en el mismo punto. Ese intercepto común — que ningún experimento
         alcanza, porque los gases licúan mucho antes — es lo que fija el cero de la escala Kelvin. La parte punteada
-        es extrapolación: la termodinámica clásica define $T = 0$ como un límite, no como un estado medible.
+        es extrapolación: la termodinámica clásica define <math data-tex="T = 0"><mi>T</mi><mo>=</mo><mn>0</mn></math> como un límite, no como un estado medible.
       </div>
     </div>
 
@@ -178,8 +174,8 @@
       <div class="formula-label">Trabajo de expansión en una etapa</div>
       <div class="formula-math"><img class="typst-formula" src="clase_4_4.svg" alt=""></div>
       <div class="formula-desc">
-        $P_{\text{op}}$ presión de oposición · $A$ área del pistón · $h$ desplazamiento.
-        El signo lo fija $\Delta V$: expansión $\Rightarrow \Delta V > 0 \Rightarrow W > 0$ (el sistema produce trabajo); compresión $\Rightarrow W < 0$.
+        <math data-tex="P_{\text{op}}"><msub><mi>P</mi><mtext>op</mtext></msub></math> presión de oposición · <math data-tex="A"><mi>A</mi></math> área del pistón · <math data-tex="h"><mi>h</mi></math> desplazamiento.
+        El signo lo fija <math data-tex="\Delta V"><mi mathvariant="normal">Δ</mi><mi>V</mi></math>: expansión <math data-tex="\Rightarrow \Delta V &gt; 0 \Rightarrow W &gt; 0"><mo form="infix" lspace="0em" stretchy="false">⇒</mo><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>></mo><mn>0</mn><mo stretchy="false">⇒</mo><mi>W</mi><mo>></mo><mn>0</mn></math> (el sistema produce trabajo); compresión <math data-tex="\Rightarrow W &lt; 0"><mo form="infix" lspace="0em" stretchy="false">⇒</mo><mi>W</mi><mo>&lt;</mo><mn>0</mn></math>.
       </div>
     </div>
 
@@ -187,7 +183,7 @@
       <div class="formula-label">Expansión en dos etapas</div>
       <div class="formula-math"><img class="typst-formula" src="clase_4_5.svg" alt=""></div>
       <div class="formula-desc">
-        Para el <em>mismo</em> cambio de estado, dos etapas producen más trabajo que una: el área bajo la curva escalonada crece. Prueba directa de que $W$ depende de la trayectoria.
+        Para el <em>mismo</em> cambio de estado, dos etapas producen más trabajo que una: el área bajo la curva escalonada crece. Prueba directa de que <math data-tex="W"><mi>W</mi></math> depende de la trayectoria.
       </div>
     </div>
 
@@ -195,7 +191,7 @@
       <div class="formula-label">Trabajo en varias etapas — forma diferencial</div>
       <div class="formula-math"><img class="typst-formula" src="clase_4_6.svg" alt=""></div>
       <div class="formula-desc">
-        Se escribe $\bar\delta W$ (no $dW$) porque no es diferencial exacta: al integrar se obtiene $W$, no un "$\Delta W$". Conociendo $P_{\text{op}} = f(V)$ la integral se evalúa.
+        Se escribe <math data-tex="\bar\delta W"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi></math> (no <math data-tex="dW"><mi>d</mi><mi>W</mi></math>) porque no es diferencial exacta: al integrar se obtiene <math data-tex="W"><mi>W</mi></math>, no un "<math data-tex="\Delta W"><mi mathvariant="normal">Δ</mi><mi>W</mi></math>". Conociendo <math data-tex="P_{\text{op}} = f(V)"><msub><mi>P</mi><mtext>op</mtext></msub><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mi>V</mi><mo>)</mo></mrow></math> la integral se evalúa.
       </div>
     </div>
 
@@ -203,7 +199,7 @@
       <div class="formula-label">Trabajo máximo (expansión cuasiestática)</div>
       <div class="formula-math"><img class="typst-formula" src="clase_4_7.svg" alt=""></div>
       <div class="formula-desc">
-        Si la expansión es suficientemente lenta, el sistema está en equilibrio con el entorno en todo momento ($P_{\text{ext}} = P_{\text{int}}$) y se extrae el trabajo máximo posible. En compresión, la misma expresión da el trabajo <em>mínimo</em> que hay que gastar.
+        Si la expansión es suficientemente lenta, el sistema está en equilibrio con el entorno en todo momento (<math data-tex="P_{\text{ext}} = P_{\text{int}}"><msub><mi>P</mi><mtext>ext</mtext></msub><mo>=</mo><msub><mi>P</mi><mtext>int</mtext></msub></math>) y se extrae el trabajo máximo posible. En compresión, la misma expresión da el trabajo <em>mínimo</em> que hay que gastar.
       </div>
     </div>
 
@@ -212,9 +208,9 @@
         <img src="fig_clase_4_trabajo.svg" alt="Trabajo de expansión en una etapa, tres etapas y en el límite cuasiestático">
       </div>
       <div class="figure-cap">
-        <strong>Por qué el trabajo depende del camino.</strong> Los tres paneles van del mismo $V_1$ al mismo $V_2$ con
+        <strong>Por qué el trabajo depende del camino.</strong> Los tres paneles van del mismo <math data-tex="V_1"><msub><mi>V</mi><mn>1</mn></msub></math> al mismo <math data-tex="V_2"><msub><mi>V</mi><mn>2</mn></msub></math> con
         el mismo gas: cambia sólo cómo se baja la presión de oposición. El área es distinta en cada uno, y ésa es la
-        razón de que $W$ no sea una función de estado. La escalera nunca supera a la curva, así que el trabajo
+        razón de que <math data-tex="W"><mi>W</mi></math> no sea una función de estado. La escalera nunca supera a la curva, así que el trabajo
         reversible es una cota superior — no un caso más.
       </div>
     </div>
@@ -241,12 +237,12 @@
     <div class="tip-box">
       <div class="tip-title">✦ Lo esencial de la clase 4</div>
       <ul>
-        <li><strong>Convenio de signos de este curso:</strong> $W > 0$ cuando el sistema <em>produce</em> trabajo (se expande), y la primera ley se escribirá $\Delta U = Q - W$. Muchos textos de física usan el convenio opuesto — al comparar con otras fuentes, revisar primero cuál usan.</li>
-        <li>El trabajo se calcula con $P_{\text{op}}$, la presión <em>externa</em>. Usar la presión del sistema es válido sólo si el proceso es cuasiestático.</li>
-        <li>$W$ depende del camino: mismo estado inicial y final, distinto número de etapas, distinto trabajo. Esa es la razón de escribir $\bar\delta W$ y no $dW$.</li>
-        <li>Más etapas $\Rightarrow$ más trabajo producido en expansión y menos trabajo gastado en compresión. El límite de infinitas etapas es el proceso reversible.</li>
+        <li><strong>Convenio de signos de este curso:</strong> <math data-tex="W &gt; 0"><mi>W</mi><mo>></mo><mn>0</mn></math> cuando el sistema <em>produce</em> trabajo (se expande), y la primera ley se escribirá <math data-tex="\Delta U = Q - W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>−</mo><mi>W</mi></math>. Muchos textos de física usan el convenio opuesto — al comparar con otras fuentes, revisar primero cuál usan.</li>
+        <li>El trabajo se calcula con <math data-tex="P_{\text{op}}"><msub><mi>P</mi><mtext>op</mtext></msub></math>, la presión <em>externa</em>. Usar la presión del sistema es válido sólo si el proceso es cuasiestático.</li>
+        <li><math data-tex="W"><mi>W</mi></math> depende del camino: mismo estado inicial y final, distinto número de etapas, distinto trabajo. Esa es la razón de escribir <math data-tex="\bar\delta W"><mover accent="true"><mi>δ</mi><mo>̄</mo></mover><mi>W</mi></math> y no <math data-tex="dW"><mi>d</mi><mi>W</mi></math>.</li>
+        <li>Más etapas <math data-tex="\Rightarrow"><mo lspace="0em" rspace="0em" stretchy="false">⇒</mo></math> más trabajo producido en expansión y menos trabajo gastado en compresión. El límite de infinitas etapas es el proceso reversible.</li>
         <li>La irreversibilidad se detecta mirando el <em>entorno</em> tras un ciclo completo, no el sistema: el sistema siempre vuelve a su estado.</li>
-        <li>Ni $Q$ ni $W$ son propiedades del sistema: no tiene sentido decir "este gas contiene tanto calor". Sólo existen mientras hay un cambio de estado en curso.</li>
+        <li>Ni <math data-tex="Q"><mi>Q</mi></math> ni <math data-tex="W"><mi>W</mi></math> son propiedades del sistema: no tiene sentido decir "este gas contiene tanto calor". Sólo existen mientras hay un cambio de estado en curso.</li>
       </ul>
     </div>
   </section>
@@ -256,14 +252,14 @@
     <div class="quiz">
 
       <div class="quiz-q" id="q4_1" data-correct="2">
-        <div class="quiz-question">1. Un gas se expande de $V_1$ a $V_2$ contra una presión de oposición constante, primero en una etapa y luego en dos. ¿Qué se observa?</div>
+        <div class="quiz-question">1. Un gas se expande de <math data-tex="V_1"><msub><mi>V</mi><mn>1</mn></msub></math> a <math data-tex="V_2"><msub><mi>V</mi><mn>2</mn></msub></math> contra una presión de oposición constante, primero en una etapa y luego en dos. ¿Qué se observa?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q4_1" value="0"><span class="opt-letter">A</span><span class="opt-text">El trabajo es el mismo, porque los estados inicial y final coinciden</span></label>
           <label class="quiz-option"><input type="radio" name="q4_1" value="1"><span class="opt-letter">B</span><span class="opt-text">La expansión en una etapa produce más trabajo</span></label>
           <label class="quiz-option"><input type="radio" name="q4_1" value="2"><span class="opt-letter">C</span><span class="opt-text">La expansión en dos etapas produce más trabajo</span></label>
           <label class="quiz-option"><input type="radio" name="q4_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende de si el gas es ideal o real</span></label>
         </div>
-        <script type="text/explanation" id="q4_1-exp">El trabajo es el área bajo la curva $P_{\text{op}}$ vs. $V$. Con dos etapas se empieza oponiendo una presión mayor y se baja después, de modo que la región sombreada crece respecto del único escalón. Si esto no ocurriera, $W$ sería función de estado — y no lo es. Llevado al límite de infinitas etapas se llega a $W_{\text{máx}} = nRT\ln(V_f/V_i)$.</script>
+        <script type="text/explanation" id="q4_1-exp">El trabajo es el área bajo la curva <math data-tex="P_{\text{op}}"><msub><mi>P</mi><mtext>op</mtext></msub></math> vs. <math data-tex="V"><mi>V</mi></math>. Con dos etapas se empieza oponiendo una presión mayor y se baja después, de modo que la región sombreada crece respecto del único escalón. Si esto no ocurriera, <math data-tex="W"><mi>W</mi></math> sería función de estado — y no lo es. Llevado al límite de infinitas etapas se llega a <math data-tex="W_{\text{máx}} = nRT\ln(V_f/V_i)"><msub><mi>W</mi><mtext>máx</mtext></msub><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></math>.</script>
         <div class="quiz-feedback" id="q4_1-fb"></div>
       </div>
 
@@ -273,9 +269,9 @@
           <label class="quiz-option"><input type="radio" name="q4_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Que el sistema no vuelve a su estado inicial</span></label>
           <label class="quiz-option"><input type="radio" name="q4_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Que la energía no se conserva durante el ciclo</span></label>
           <label class="quiz-option"><input type="radio" name="q4_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Que el trabajo del ciclo es positivo</span></label>
-          <label class="quiz-option"><input type="radio" name="q4_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Que $W_{\text{ciclo}} = (P_2-P_1)(V_2-V_1) < 0$: el entorno quedó modificado</span></label>
+          <label class="quiz-option"><input type="radio" name="q4_2" value="3"><span class="opt-letter">D</span><span class="opt-text">Que <math data-tex="W_{\text{ciclo}} = (P_2-P_1)(V_2-V_1) &lt; 0"><msub><mi>W</mi><mtext>ciclo</mtext></msub><mo>=</mo><mrow><mo>(</mo><mrow><msub><mi>P</mi><mn>2</mn></msub><mo>−</mo><msub><mi>P</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><msub><mi>V</mi><mn>2</mn></msub><mo>−</mo><msub><mi>V</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow><mo>&lt;</mo><mn>0</mn></math>: el entorno quedó modificado</span></label>
         </div>
-        <script type="text/explanation" id="q4_2-exp">El sistema sí vuelve a su estado inicial — es un ciclo — y la energía se conserva siempre. Lo que delata la irreversibilidad es que el entorno tuvo que aportar trabajo neto: $W_{\text{ciclo}} < 0$. En el ciclo cuasiestático las dos integrales $\int P\,dV$ se cancelan exactamente y el entorno queda intacto. La irreversibilidad viene de que el proceso abrupto perturba el equilibrio interno del sistema.</script>
+        <script type="text/explanation" id="q4_2-exp">El sistema sí vuelve a su estado inicial — es un ciclo — y la energía se conserva siempre. Lo que delata la irreversibilidad es que el entorno tuvo que aportar trabajo neto: <math data-tex="W_{\text{ciclo}} &lt; 0"><msub><mi>W</mi><mtext>ciclo</mtext></msub><mo>&lt;</mo><mn>0</mn></math>. En el ciclo cuasiestático las dos integrales <math data-tex="\int P\,dV"><mo lspace="0em">∫</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> se cancelan exactamente y el entorno queda intacto. La irreversibilidad viene de que el proceso abrupto perturba el equilibrio interno del sistema.</script>
         <div class="quiz-feedback" id="q4_2-fb"></div>
       </div>
 
@@ -287,7 +283,7 @@
           <label class="quiz-option"><input type="radio" name="q4_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque sólo se aplica a sistemas aislados</span></label>
           <label class="quiz-option"><input type="radio" name="q4_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque es equivalente a la conservación de la energía</span></label>
         </div>
-        <script type="text/explanation" id="q4_3-exp">La primera ley habla de energía interna y de calor, y el calor se define como lo que fluye del cuerpo de mayor $T$ al de menor $T$: ya supone que "temperatura" significa algo. La ley cero es la que garantiza que el equilibrio térmico es una relación transitiva, y por eso permite etiquetar estados con un número — la temperatura — y construir termómetros. Se enunció después de las demás (de ahí el "cero"), pero es lógicamente previa a todas.</script>
+        <script type="text/explanation" id="q4_3-exp">La primera ley habla de energía interna y de calor, y el calor se define como lo que fluye del cuerpo de mayor <math data-tex="T"><mi>T</mi></math> al de menor <math data-tex="T"><mi>T</mi></math>: ya supone que "temperatura" significa algo. La ley cero es la que garantiza que el equilibrio térmico es una relación transitiva, y por eso permite etiquetar estados con un número — la temperatura — y construir termómetros. Se enunció después de las demás (de ahí el "cero"), pero es lógicamente previa a todas.</script>
         <div class="quiz-feedback" id="q4_3-fb"></div>
       </div>
 

@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cát. 9 — Segunda Ley: Clausius y Kelvin</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -104,7 +100,7 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Principio de Clausius</h3>
-        <p>Es imposible construir un proceso cuyo único efecto sea transferir calor de un cuerpo frío a uno caliente. Esto no viola la Primera Ley (la energía se conservaría), pero nunca se observa en la naturaleza: el calor siempre fluye espontáneamente de $T_c$ a $T_f$, con $T_c > T_f$.</p>
+        <p>Es imposible construir un proceso cuyo único efecto sea transferir calor de un cuerpo frío a uno caliente. Esto no viola la Primera Ley (la energía se conservaría), pero nunca se observa en la naturaleza: el calor siempre fluye espontáneamente de <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math> a <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math>, con <math data-tex="T_c &gt; T_f"><msub><mi>T</mi><mi>c</mi></msub><mo>></mo><msub><mi>T</mi><mi>f</mi></msub></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Enunciado de Kelvin-Planck</h3>
@@ -112,11 +108,11 @@
       </div>
       <div class="concept-card">
         <h3>Máquina térmica</h3>
-        <p>Opera entre dos focos: uno caliente a temperatura $T_c$ y uno frío a $T_f$ (con $T_c > T_f$). Absorbe calor $Q_c$ del foco caliente, produce trabajo $W$ y expulsa calor $Q_f$ al foco frío. La eficiencia $\eta = W/Q_c < 1$.</p>
+        <p>Opera entre dos focos: uno caliente a temperatura <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math> y uno frío a <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math> (con <math data-tex="T_c &gt; T_f"><msub><mi>T</mi><mi>c</mi></msub><mo>></mo><msub><mi>T</mi><mi>f</mi></msub></math>). Absorbe calor <math data-tex="Q_c"><msub><mi>Q</mi><mi>c</mi></msub></math> del foco caliente, produce trabajo <math data-tex="W"><mi>W</mi></math> y expulsa calor <math data-tex="Q_f"><msub><mi>Q</mi><mi>f</mi></msub></math> al foco frío. La eficiencia <math data-tex="\eta = W/Q_c &lt; 1"><mi>η</mi><mo>=</mo><mi>W</mi><mi>/</mi><msub><mi>Q</mi><mi>c</mi></msub><mo>&lt;</mo><mn>1</mn></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Refrigerador (bomba de calor)</h3>
-        <p>Opera como una máquina térmica al revés: consume trabajo externo $W$ para extraer calor $Q_f$ del foco frío y expulsar calor $Q_c = Q_f + W$ al foco caliente. No viola Clausius porque requiere trabajo externo.</p>
+        <p>Opera como una máquina térmica al revés: consume trabajo externo <math data-tex="W"><mi>W</mi></math> para extraer calor <math data-tex="Q_f"><msub><mi>Q</mi><mi>f</mi></msub></math> del foco frío y expulsar calor <math data-tex="Q_c = Q_f + W"><msub><mi>Q</mi><mi>c</mi></msub><mo>=</mo><msub><mi>Q</mi><mi>f</mi></msub><mo>+</mo><mi>W</mi></math> al foco caliente. No viola Clausius porque requiere trabajo externo.</p>
       </div>
     </div>
   </section>
@@ -128,8 +124,8 @@
       <div class="formula-label">Balance energético de una máquina térmica</div>
       <div class="formula-math"><img class="typst-formula" src="cat_9_1.svg" alt=""></div>
       <div class="formula-desc">
-        $Q_c$ calor absorbido del foco caliente · $Q_f$ calor expulsado al foco frío · $W$ trabajo útil producido.
-        La Primera Ley exige $Q_c = W + Q_f$.
+        <math data-tex="Q_c"><msub><mi>Q</mi><mi>c</mi></msub></math> calor absorbido del foco caliente · <math data-tex="Q_f"><msub><mi>Q</mi><mi>f</mi></msub></math> calor expulsado al foco frío · <math data-tex="W"><mi>W</mi></math> trabajo útil producido.
+        La Primera Ley exige <math data-tex="Q_c = W + Q_f"><msub><mi>Q</mi><mi>c</mi></msub><mo>=</mo><mi>W</mi><mo>+</mo><msub><mi>Q</mi><mi>f</mi></msub></math>.
       </div>
     </div>
 
@@ -137,8 +133,8 @@
       <div class="formula-label">Eficiencia de una máquina térmica</div>
       <div class="formula-math"><img class="typst-formula" src="cat_9_2.svg" alt=""></div>
       <div class="formula-desc">
-        La Segunda Ley impone $Q_f > 0$, por lo tanto $\eta < 1$.
-        No existe máquina con $\eta = 1$ (eso violaría el enunciado de Kelvin).
+        La Segunda Ley impone <math data-tex="Q_f &gt; 0"><msub><mi>Q</mi><mi>f</mi></msub><mo>></mo><mn>0</mn></math>, por lo tanto <math data-tex="\eta &lt; 1"><mi>η</mi><mo>&lt;</mo><mn>1</mn></math>.
+        No existe máquina con <math data-tex="\eta = 1"><mi>η</mi><mo>=</mo><mn>1</mn></math> (eso violaría el enunciado de Kelvin).
       </div>
     </div>
 
@@ -161,7 +157,7 @@
         <li>Los dos enunciados (Clausius y Kelvin) parecen distintos pero son lógicamente equivalentes: si pudieras violar uno, podrías violar el otro.</li>
         <li>La Segunda Ley no dice que no se puede enfriar un refrigerador (eso viola Clausius). Dice que <em>si</em> lo haces, necesitas trabajo externo.</li>
         <li>La "flecha del tiempo" termodinámica viene de la Segunda Ley: los procesos macroscópicos irreversibles evolucionan en la dirección que aumenta el desorden (entropía).</li>
-        <li>La eficiencia $\eta$ siempre se calcula con respecto a $Q_c$ (calor absorbido del foco caliente), no con respecto al trabajo total.</li>
+        <li>La eficiencia <math data-tex="\eta"><mi>η</mi></math> siempre se calcula con respecto a <math data-tex="Q_c"><msub><mi>Q</mi><mi>c</mi></msub></math> (calor absorbido del foco caliente), no con respecto al trabajo total.</li>
       </ul>
     </div>
   </section>
@@ -190,19 +186,19 @@
           <label class="quiz-option"><input type="radio" name="q9_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Sí, porque viola la conservación de energía al transferir más calor del que recibe</span></label>
           <label class="quiz-option"><input type="radio" name="q9_2" value="3"><span class="opt-letter">D</span><span class="opt-text">No, porque el principio de Clausius solo aplica a máquinas térmicas, no a refrigeradores</span></label>
         </div>
-        <script type="text/explanation" id="q9_2-exp">Clausius dice que es imposible que el único efecto de un proceso sea transferir calor de frío a caliente. El refrigerador tiene un efecto adicional: consume trabajo eléctrico $W$. Por eso no lo viola. La energía se conserva: $Q_c = Q_f + W$ (el foco caliente recibe el calor extraído del frío más el trabajo eléctrico convertido en calor).</script>
+        <script type="text/explanation" id="q9_2-exp">Clausius dice que es imposible que el único efecto de un proceso sea transferir calor de frío a caliente. El refrigerador tiene un efecto adicional: consume trabajo eléctrico <math data-tex="W"><mi>W</mi></math>. Por eso no lo viola. La energía se conserva: <math data-tex="Q_c = Q_f + W"><msub><mi>Q</mi><mi>c</mi></msub><mo>=</mo><msub><mi>Q</mi><mi>f</mi></msub><mo>+</mo><mi>W</mi></math> (el foco caliente recibe el calor extraído del frío más el trabajo eléctrico convertido en calor).</script>
         <div class="quiz-feedback" id="q9_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="q9_3" data-correct="2">
-        <div class="quiz-question">3. La eficiencia de una máquina térmica es $\eta = W/Q_c$. ¿Puede alcanzar $\eta = 1$?</div>
+        <div class="quiz-question">3. La eficiencia de una máquina térmica es <math data-tex="\eta = W/Q_c"><mi>η</mi><mo>=</mo><mi>W</mi><mi>/</mi><msub><mi>Q</mi><mi>c</mi></msub></math>. ¿Puede alcanzar <math data-tex="\eta = 1"><mi>η</mi><mo>=</mo><mn>1</mn></math>?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="q9_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Sí, si la máquina está perfectamente aislada del entorno</span></label>
           <label class="quiz-option"><input type="radio" name="q9_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Sí, si todos los procesos internos son completamente reversibles</span></label>
-          <label class="quiz-option"><input type="radio" name="q9_3" value="2"><span class="opt-letter">C</span><span class="opt-text">No, porque la Segunda Ley exige que siempre se expulse calor al foco frío ($Q_f > 0$)</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_3" value="2"><span class="opt-letter">C</span><span class="opt-text">No, porque la Segunda Ley exige que siempre se expulse calor al foco frío (<math data-tex="Q_f &gt; 0"><msub><mi>Q</mi><mi>f</mi></msub><mo>></mo><mn>0</mn></math>)</span></label>
           <label class="quiz-option"><input type="radio" name="q9_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Sí, en sistemas cuánticos operando a temperatura cercana al cero absoluto</span></label>
         </div>
-        <script type="text/explanation" id="q9_3-exp">De la Primera Ley: $Q_c = W + Q_f$. Si $\eta = 1$ entonces $W = Q_c$, lo que requiere $Q_f = 0$: no se expulsa calor al foco frío. Pero eso es exactamente lo que prohíbe el enunciado de Kelvin-Planck: "ningún proceso puede extraer calor de un único foco y convertirlo íntegramente en trabajo". Siempre $Q_f > 0$, por tanto siempre $\eta < 1$.</script>
+        <script type="text/explanation" id="q9_3-exp">De la Primera Ley: <math data-tex="Q_c = W + Q_f"><msub><mi>Q</mi><mi>c</mi></msub><mo>=</mo><mi>W</mi><mo>+</mo><msub><mi>Q</mi><mi>f</mi></msub></math>. Si <math data-tex="\eta = 1"><mi>η</mi><mo>=</mo><mn>1</mn></math> entonces <math data-tex="W = Q_c"><mi>W</mi><mo>=</mo><msub><mi>Q</mi><mi>c</mi></msub></math>, lo que requiere <math data-tex="Q_f = 0"><msub><mi>Q</mi><mi>f</mi></msub><mo>=</mo><mn>0</mn></math>: no se expulsa calor al foco frío. Pero eso es exactamente lo que prohíbe el enunciado de Kelvin-Planck: "ningún proceso puede extraer calor de un único foco y convertirlo íntegramente en trabajo". Siempre <math data-tex="Q_f &gt; 0"><msub><mi>Q</mi><mi>f</mi></msub><mo>></mo><mn>0</mn></math>, por tanto siempre <math data-tex="\eta &lt; 1"><mi>η</mi><mo>&lt;</mo><mn>1</mn></math>.</script>
         <div class="quiz-feedback" id="q9_3-fb"></div>
       </div>
 

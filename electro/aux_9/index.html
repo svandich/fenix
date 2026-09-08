@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 9 — Método de Carga Imagen</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>MathJax = { tex: { inlineMath: [['$','$']] } };</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -85,19 +83,19 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Idea central</h3>
-        <p>Por el teorema de unicidad, si encontramos cualquier distribución de cargas que satisfaga las condiciones de borde ($V=0$ en el conductor), esa es la solución. La imagen es esa distribución.</p>
+        <p>Por el teorema de unicidad, si encontramos cualquier distribución de cargas que satisfaga las condiciones de borde (<math data-tex="V=0"><mi>V</mi><mo>=</mo><mn>0</mn></math> en el conductor), esa es la solución. La imagen es esa distribución.</p>
       </div>
       <div class="concept-card">
         <h3>Imagen en plano</h3>
-        <p>Para una carga $+q$ a distancia $d$ de un plano conductor ($V=0$), la imagen es $-q$ a distancia $d$ al otro lado del plano. El campo en la región del conductor se calcula con ambas.</p>
+        <p>Para una carga <math data-tex="+q"><mo>+</mo><mi>q</mi></math> a distancia <math data-tex="d"><mi>d</mi></math> de un plano conductor (<math data-tex="V=0"><mi>V</mi><mo>=</mo><mn>0</mn></math>), la imagen es <math data-tex="-q"><mo>−</mo><mi>q</mi></math> a distancia <math data-tex="d"><mi>d</mi></math> al otro lado del plano. El campo en la región del conductor se calcula con ambas.</p>
       </div>
       <div class="concept-card">
         <h3>Imagen en esfera</h3>
-        <p>Para una carga $q$ a distancia $s$ del centro de una esfera de radio $R$, la imagen está a $R^2/s$ del centro (dentro de la esfera) con carga $q' = -Rq/s$.</p>
+        <p>Para una carga <math data-tex="q"><mi>q</mi></math> a distancia <math data-tex="s"><mi>s</mi></math> del centro de una esfera de radio <math data-tex="R"><mi>R</mi></math>, la imagen está a <math data-tex="R^2/s"><msup><mi>R</mi><mn>2</mn></msup><mi>/</mi><mi>s</mi></math> del centro (dentro de la esfera) con carga <math data-tex="q&#x27; = -Rq/s"><msup><mi>q</mi><mo>′</mo></msup><mo>=</mo><mo form="prefix">−</mo><mi>R</mi><mi>q</mi><mi>/</mi><mi>s</mi></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Fuerza de imagen</h3>
-        <p>La carga real "siente" la fuerza de atracción de su imagen. Para el plano: $F = q^2/(4\pi\varepsilon_0 (2d)^2)$ atractiva hacia el plano.</p>
+        <p>La carga real "siente" la fuerza de atracción de su imagen. Para el plano: <math data-tex="F = q^2/(4\pi\varepsilon_0 (2d)^2)"><mi>F</mi><mo>=</mo><msup><mi>q</mi><mn>2</mn></msup><mi>/</mi><mrow><mo>(</mo><mrow><mn>4</mn><mi>π</mi><msub><mi>ε</mi><mn>0</mn></msub><msup><mrow><mo>(</mo><mrow><mn>2</mn><mi>d</mi></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow></math> atractiva hacia el plano.</p>
       </div>
     </div>
   </section>
@@ -109,7 +107,7 @@
       <div class="formula-label">Imagen en plano conductor — posición y carga</div>
       <div class="formula-math"><img class="typst-formula" src="aux_9_1.svg" alt=""></div>
       <div class="formula-desc">
-        El potencial en la región real ($z > 0$) es $V = \frac{q}{4\pi\varepsilon_0}\!\left(\frac{1}{r_+} - \frac{1}{r_-}\right)$, donde $r_\pm$ son las distancias a $q$ y $q'$.
+        El potencial en la región real (<math data-tex="z &gt; 0"><mi>z</mi><mo>></mo><mn>0</mn></math>) es <math data-tex="V = \frac{q}{4\pi\varepsilon_0}\!\left(\frac{1}{r_+} - \frac{1}{r_-}\right)"><mi>V</mi><mo>=</mo><mfrac><mi>q</mi><mrow><mn>4</mn><mi>π</mi><msub><mi>ε</mi><mn>0</mn></msub></mrow></mfrac><mspace width="-0.1667em"/><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><msub><mi>r</mi><mo>+</mo></msub></mfrac><mo>−</mo><mfrac><mn>1</mn><msub><mi>r</mi><mo>−</mo></msub></mfrac></mrow><mo>)</mo></mrow></math>, donde <math data-tex="r_\pm"><msub><mi>r</mi><mo>±</mo></msub></math> son las distancias a <math data-tex="q"><mi>q</mi></math> y <math data-tex="q&#x27;"><msup><mi>q</mi><mo>′</mo></msup></math>.
       </div>
     </div>
 
@@ -117,7 +115,7 @@
       <div class="formula-label">Imagen en esfera conductora (radio R, a tierra, carga q a distancia s)</div>
       <div class="formula-math"><img class="typst-formula" src="aux_9_2.svg" alt=""></div>
       <div class="formula-desc">
-        La imagen siempre queda dentro de la esfera ($R^2/s < R$ si $s > R$). La condición $V=0$ en la esfera se verifica evaluando el potencial total.
+        La imagen siempre queda dentro de la esfera (<math data-tex="R^2/s &lt; R"><msup><mi>R</mi><mn>2</mn></msup><mi>/</mi><mi>s</mi><mo>&lt;</mo><mi>R</mi></math> si <math data-tex="s &gt; R"><mi>s</mi><mo>></mo><mi>R</mi></math>). La condición <math data-tex="V=0"><mi>V</mi><mo>=</mo><mn>0</mn></math> en la esfera se verifica evaluando el potencial total.
       </div>
     </div>
 
@@ -125,7 +123,7 @@
       <div class="formula-label">Densidad de carga inducida en el plano</div>
       <div class="formula-math"><img class="typst-formula" src="aux_9_3.svg" alt=""></div>
       <div class="formula-desc">
-        La densidad integra a $-q$ sobre todo el plano, como se espera por inducción total.
+        La densidad integra a <math data-tex="-q"><mo>−</mo><mi>q</mi></math> sobre todo el plano, como se espera por inducción total.
       </div>
     </div>
   </section>
@@ -135,10 +133,10 @@
     <div class="tip-box">
       <div class="tip-title">✦ Clave del método imagen</div>
       <ul>
-        <li>La imagen solo es válida para calcular $V$ y $\mathbf{E}$ en la región física (fuera del conductor).</li>
-        <li>Dentro del conductor: $V = 0$ (o constante), $\mathbf{E} = 0$ — no uses la imagen allí.</li>
-        <li>La fuerza sobre la carga real se calcula como la interacción entre $q$ y $q'$ (ley de Coulomb).</li>
-        <li>Verifica siempre que tu solución satisface $V = 0$ en toda la superficie del conductor.</li>
+        <li>La imagen solo es válida para calcular <math data-tex="V"><mi>V</mi></math> y <math data-tex="\mathbf{E}"><mi class="mv-bi">E</mi></math> en la región física (fuera del conductor).</li>
+        <li>Dentro del conductor: <math data-tex="V = 0"><mi>V</mi><mo>=</mo><mn>0</mn></math> (o constante), <math data-tex="\mathbf{E} = 0"><mi class="mv-bi">E</mi><mo>=</mo><mn>0</mn></math> — no uses la imagen allí.</li>
+        <li>La fuerza sobre la carga real se calcula como la interacción entre <math data-tex="q"><mi>q</mi></math> y <math data-tex="q&#x27;"><msup><mi>q</mi><mo>′</mo></msup></math> (ley de Coulomb).</li>
+        <li>Verifica siempre que tu solución satisface <math data-tex="V = 0"><mi>V</mi><mo>=</mo><mn>0</mn></math> en toda la superficie del conductor.</li>
       </ul>
     </div>
   </section>

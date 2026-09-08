@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 1 — Campo Eléctrico</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 </head>
 <body>
 
@@ -74,7 +70,7 @@
       <ul class="topic-list">
         <li>Ley de Coulomb: fuerza entre cargas puntuales</li>
         <li>Principio de superposición del campo eléctrico</li>
-        <li>Densidades de carga: lineal $\lambda$, superficial $\sigma$, volumétrica $\rho$</li>
+        <li>Densidades de carga: lineal <math data-tex="\lambda"><mi>λ</mi></math>, superficial <math data-tex="\sigma"><mi>σ</mi></math>, volumétrica <math data-tex="\rho"><mi>ρ</mi></math></li>
         <li>Cálculo del campo por integración sobre distribuciones continuas</li>
         <li>Equilibrio electrostático de cargas</li>
       </ul>
@@ -86,7 +82,7 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Ley de Coulomb</h3>
-        <p>Toda carga puntual $q'$ crea un campo en el espacio. El campo en $\mathbf{r}$ debido a una carga en $\mathbf{r}'$ apunta desde $q'$ hacia el punto de observación y decae como $1/r^2$.</p>
+        <p>Toda carga puntual <math data-tex="q&#x27;"><msup><mi>q</mi><mo>′</mo></msup></math> crea un campo en el espacio. El campo en <math data-tex="\mathbf{r}"><mi class="mv-bi">r</mi></math> debido a una carga en <math data-tex="\mathbf{r}&#x27;"><msup><mi class="mv-bi">r</mi><mo>′</mo></msup></math> apunta desde <math data-tex="q&#x27;"><msup><mi>q</mi><mo>′</mo></msup></math> hacia el punto de observación y decae como <math data-tex="1/r^2"><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Superposición</h3>
@@ -94,11 +90,11 @@
       </div>
       <div class="concept-card">
         <h3>Densidades de carga</h3>
-        <p>Para objetos extensos, la carga se distribuye en el espacio. Se usan $\lambda$ [C/m] para hilos, $\sigma$ [C/m²] para superficies, y $\rho$ [C/m³] para volúmenes.</p>
+        <p>Para objetos extensos, la carga se distribuye en el espacio. Se usan <math data-tex="\lambda"><mi>λ</mi></math> [C/m] para hilos, <math data-tex="\sigma"><mi>σ</mi></math> [C/m²] para superficies, y <math data-tex="\rho"><mi>ρ</mi></math> [C/m³] para volúmenes.</p>
       </div>
       <div class="concept-card">
         <h3>Integración vectorial</h3>
-        <p>Cada elemento $dq$ contribuye $d\mathbf{E}$ al campo total. Se integra cada componente por separado; la simetría del problema suele cancelar algunas componentes.</p>
+        <p>Cada elemento <math data-tex="dq"><mi>d</mi><mi>q</mi></math> contribuye <math data-tex="d\mathbf{E}"><mi>d</mi><mi class="mv-bi">E</mi></math> al campo total. Se integra cada componente por separado; la simetría del problema suele cancelar algunas componentes.</p>
       </div>
     </div>
   </section>
@@ -119,7 +115,7 @@
       <div class="formula-label">Campo de distribución continua</div>
       <div class="formula-math"><img class="typst-formula" src="aux_1_2.svg" alt=""></div>
       <div class="formula-desc">
-        Reemplaza $\rho\,dV'$ por $\sigma\,dA'$ (superficie) o $\lambda\,d\ell'$ (línea) según la distribución.
+        Reemplaza <math data-tex="\rho\,dV&#x27;"><mi>ρ</mi><mspace width="0.1667em"/><mi>d</mi><msup><mi>V</mi><mo>′</mo></msup></math> por <math data-tex="\sigma\,dA&#x27;"><mi>σ</mi><mspace width="0.1667em"/><mi>d</mi><msup><mi>A</mi><mo>′</mo></msup></math> (superficie) o <math data-tex="\lambda\,d\ell&#x27;"><mi>λ</mi><mspace width="0.1667em"/><mi>d</mi><msup><mi>ℓ</mi><mo>′</mo></msup></math> (línea) según la distribución.
       </div>
     </div>
 
@@ -138,10 +134,10 @@
       <div class="tip-title">✦ Estrategia para resolver problemas</div>
       <ul>
         <li>Dibuja el sistema: identifica la simetría antes de integrar.</li>
-        <li>Define un elemento diferencial de carga $dq$ en coordenadas adecuadas.</li>
-        <li>Escribe $d\mathbf{E}$ para ese elemento y argumenta qué componentes se cancelan por simetría.</li>
+        <li>Define un elemento diferencial de carga <math data-tex="dq"><mi>d</mi><mi>q</mi></math> en coordenadas adecuadas.</li>
+        <li>Escribe <math data-tex="d\mathbf{E}"><mi>d</mi><mi class="mv-bi">E</mi></math> para ese elemento y argumenta qué componentes se cancelan por simetría.</li>
         <li>Integra solo la componente sobreviviente. El resultado debe ser vectorial.</li>
-        <li>Verifica dimensiones: $[\mathbf{E}]$ = N/C = V/m.</li>
+        <li>Verifica dimensiones: <math data-tex="[\mathbf{E}]"><mrow><mo>[</mo><mi class="mv-bi">E</mi><mo>]</mo></mrow></math> = N/C = V/m.</li>
       </ul>
     </div>
   </section>

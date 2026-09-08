@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aux 3 — Primera Ley</title>
   <link rel="stylesheet" href="../../styles/main.css">
-  <script>
-    MathJax = { tex: { inlineMath: [['$','$']] }, options: { skipHtmlTags: ['script','noscript','style','textarea'] } };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
   <script src="../../styles/quiz.js" defer></script>
 </head>
 <body>
@@ -49,20 +45,20 @@
     <div class="breadcrumb"><a href="../">Temario</a> › Primera ley</div>
     <div class="unit-pill u3 bg-u3">Primera ley · Clases 4–6</div>
     <h1>Auxiliar 3: Primera Ley</h1>
-    <p class="desc">Seis problemas de primera ley: trayectorias en el diagrama $P$–$V$, trabajo reversible e irreversible de un gas de Van der Waals, y ciclos armados con procesos isocóricos, isotérmicos e isobáricos.</p>
+    <p class="desc">Seis problemas de primera ley: trayectorias en el diagrama <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math>, trabajo reversible e irreversible de un gas de Van der Waals, y ciclos armados con procesos isocóricos, isotérmicos e isobáricos.</p>
   </div>
 
 <section>
     <h2><span class="section-icon">📋</span> Temas que ejercita</h2>
     <div class="card">
       <ul class="topic-list">
-        <li>$\Delta U$ como función de estado frente a $Q$ y $W$ dependientes del camino</li>
-        <li>Lectura de trayectorias en un diagrama $P$–$V$ y balance de energía por tramo</li>
-        <li>Trabajo reversible de un gas de Van der Waals: integración de $P(V)$</li>
+        <li><math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> como función de estado frente a <math data-tex="Q"><mi>Q</mi></math> y <math data-tex="W"><mi>W</mi></math> dependientes del camino</li>
+        <li>Lectura de trayectorias en un diagrama <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math> y balance de energía por tramo</li>
+        <li>Trabajo reversible de un gas de Van der Waals: integración de <math data-tex="P(V)"><mi>P</mi><mrow><mo>(</mo><mi>V</mi><mo>)</mo></mrow></math></li>
         <li>Trabajo irreversible: expansión rápida y expansión contra el vacío</li>
-        <li>Determinación de un parámetro ($b$) a partir de un trabajo medido</li>
-        <li>Procesos isocórico, isotérmico e isobárico: $Q$, $W$ y $\Delta U$ en cada uno</li>
-        <li>Construcción y cierre de un ciclo en el diagrama $P$–$V$</li>
+        <li>Determinación de un parámetro (<math data-tex="b"><mi>b</mi></math>) a partir de un trabajo medido</li>
+        <li>Procesos isocórico, isotérmico e isobárico: <math data-tex="Q"><mi>Q</mi></math>, <math data-tex="W"><mi>W</mi></math> y <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> en cada uno</li>
+        <li>Construcción y cierre de un ciclo en el diagrama <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math></li>
         <li>Aplicación a un sistema macroscópico (calentamiento de una sala)</li>
       </ul>
     </div>
@@ -73,27 +69,27 @@
     <div class="card-grid">
       <div class="concept-card">
         <h3>Convenio de signos</h3>
-        <p>En este curso $\Delta U = Q - W$, con $W > 0$ cuando el sistema <em>produce</em> trabajo (se expande) y $Q > 0$ cuando entra calor al sistema. Fijarlo antes de escribir la primera ecuación evita errores de signo en cadena.</p>
+        <p>En este curso <math data-tex="\Delta U = Q - W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>−</mo><mi>W</mi></math>, con <math data-tex="W &gt; 0"><mi>W</mi><mo>></mo><mn>0</mn></math> cuando el sistema <em>produce</em> trabajo (se expande) y <math data-tex="Q &gt; 0"><mi>Q</mi><mo>></mo><mn>0</mn></math> cuando entra calor al sistema. Fijarlo antes de escribir la primera ecuación evita errores de signo en cadena.</p>
       </div>
       <div class="concept-card">
-        <h3>$\Delta U$ no depende del camino</h3>
-        <p>Es la propiedad que resuelve el P1: si se conoce $\Delta U$ por una trayectoria, vale para todas las demás entre los mismos dos estados. $Q$ y $W$ sí cambian de un camino a otro.</p>
+        <h3><math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> no depende del camino</h3>
+        <p>Es la propiedad que resuelve el P1: si se conoce <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> por una trayectoria, vale para todas las demás entre los mismos dos estados. <math data-tex="Q"><mi>Q</mi></math> y <math data-tex="W"><mi>W</mi></math> sí cambian de un camino a otro.</p>
       </div>
       <div class="concept-card">
         <h3>Reversible vs. irreversible</h3>
-        <p>Reversible ⟶ $W = \int P_{\text{sist}}\,dV$, usando la ecuación de estado. Irreversible rápido ⟶ $W = P_{\text{op}}\Delta V$ con la presión externa. Contra el vacío ⟶ $P_{\text{op}} = 0$, luego $W = 0$.</p>
+        <p>Reversible ⟶ <math data-tex="W = \int P_{\text{sist}}\,dV"><mi>W</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><msub><mi>P</mi><mtext>sist</mtext></msub><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>, usando la ecuación de estado. Irreversible rápido ⟶ <math data-tex="W = P_{\text{op}}\Delta V"><mi>W</mi><mo>=</mo><msub><mi>P</mi><mtext>op</mtext></msub><mi mathvariant="normal">Δ</mi><mi>V</mi></math> con la presión externa. Contra el vacío ⟶ <math data-tex="P_{\text{op}} = 0"><msub><mi>P</mi><mtext>op</mtext></msub><mo>=</mo><mn>0</mn></math>, luego <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Los tres procesos básicos</h3>
-        <p>Isocórico: $W = 0$, $Q = \Delta U = nC_V\Delta T$. Isobárico: $W = P\Delta V$, $Q = \Delta H = nC_P\Delta T$. Isotérmico (gas ideal): $\Delta U = 0$, $Q = W = nRT\ln(V_f/V_i)$.</p>
+        <p>Isocórico: <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math>, <math data-tex="Q = \Delta U = nC_V\Delta T"><mi>Q</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>n</mi><msub><mi>C</mi><mi>V</mi></msub><mi mathvariant="normal">Δ</mi><mi>T</mi></math>. Isobárico: <math data-tex="W = P\Delta V"><mi>W</mi><mo>=</mo><mi>P</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></math>, <math data-tex="Q = \Delta H = nC_P\Delta T"><mi>Q</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mi>n</mi><msub><mi>C</mi><mi>P</mi></msub><mi mathvariant="normal">Δ</mi><mi>T</mi></math>. Isotérmico (gas ideal): <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math>, <math data-tex="Q = W = nRT\ln(V_f/V_i)"><mi>Q</mi><mo>=</mo><mi>W</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></math>.</p>
       </div>
       <div class="concept-card">
         <h3>Cerrar un ciclo</h3>
-        <p>Sobre un ciclo completo $\Delta U = 0$, luego $W_{\text{neto}} = Q_{\text{neto}}$. Es el chequeo final de cualquier problema de ciclos: si no cierra, hay un error de signo en algún tramo.</p>
+        <p>Sobre un ciclo completo <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math>, luego <math data-tex="W_{\text{neto}} = Q_{\text{neto}}"><msub><mi>W</mi><mtext>neto</mtext></msub><mo>=</mo><msub><mi>Q</mi><mtext>neto</mtext></msub></math>. Es el chequeo final de cualquier problema de ciclos: si no cierra, hay un error de signo en algún tramo.</p>
       </div>
       <div class="concept-card">
         <h3>Gas diatómico</h3>
-        <p>$\bar C_V = \tfrac52R$ y $\bar C_P = \tfrac72R$, con $\gamma = 7/5$. Se usa en el P3 y en el P5. Para monoatómico: $\tfrac32R$ y $\tfrac52R$, $\gamma = 5/3$.</p>
+        <p><math data-tex="\bar C_V = \tfrac52R"><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>V</mi></msub><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>R</mi></math> y <math data-tex="\bar C_P = \tfrac72R"><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>P</mi></msub><mo>=</mo><mfrac><mn>7</mn><mn>2</mn></mfrac><mi>R</mi></math>, con <math data-tex="\gamma = 7/5"><mi>γ</mi><mo>=</mo><mn>7</mn><mi>/</mi><mn>5</mn></math>. Se usa en el P3 y en el P5. Para monoatómico: <math data-tex="\tfrac32R"><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>R</mi></math> y <math data-tex="\tfrac52R"><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>R</mi></math>, <math data-tex="\gamma = 5/3"><mi>γ</mi><mo>=</mo><mn>5</mn><mi>/</mi><mn>3</mn></math>.</p>
       </div>
     </div>
   </section>
@@ -105,7 +101,7 @@
       <div class="formula-label">Primera ley y dependencia del camino</div>
       <div class="formula-math"><img class="typst-formula" src="aux_3_1.svg" alt=""></div>
       <div class="formula-desc">
-        La base del P1: se calcula $\Delta U$ por el camino conocido y se reutiliza en todos los demás.
+        La base del P1: se calcula <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> por el camino conocido y se reutiliza en todos los demás.
       </div>
     </div>
 
@@ -121,8 +117,8 @@
       <div class="formula-label">Trabajo reversible de un gas de Van der Waals</div>
       <div class="formula-math"><img class="typst-formula" src="aux_3_3.svg" alt=""></div>
       <div class="formula-desc">
-        El primer término es el análogo del gas ideal con el volumen corregido por $nb$; el segundo es la contribución de las fuerzas atractivas.
-        Con $a = b = 0$ se recupera $nRT\ln(V_f/V_i)$.
+        El primer término es el análogo del gas ideal con el volumen corregido por <math data-tex="nb"><mi>n</mi><mi>b</mi></math>; el segundo es la contribución de las fuerzas atractivas.
+        Con <math data-tex="a = b = 0"><mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mn>0</mn></math> se recupera <math data-tex="nRT\ln(V_f/V_i)"><mi>n</mi><mi>R</mi><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></math>.
       </div>
     </div>
 
@@ -138,7 +134,7 @@
       <div class="formula-label">Cierre del ciclo</div>
       <div class="formula-math"><img class="typst-formula" src="aux_3_5.svg" alt=""></div>
       <div class="formula-desc">
-        Consecuencia de que $U$ sea función de estado. Es el chequeo de consistencia de cualquier problema de ciclos.
+        Consecuencia de que <math data-tex="U"><mi>U</mi></math> sea función de estado. Es el chequeo de consistencia de cualquier problema de ciclos.
       </div>
     </div>
   </section>
@@ -149,24 +145,24 @@
     <div class="problem-block u3">
       <div class="problem-head">
         <span class="problem-num">P1</span>
-        <span class="problem-title">Trayectorias en el diagrama $P$–$V$</span>
+        <span class="problem-title">Trayectorias en el diagrama <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math></span>
         <span class="problem-badge">Resuelto en aula</span>
       </div>
       <div class="problem-statement">
-        Un sistema se lleva del estado $a$ al $b$ por la trayectoria $acb$: entran 90 J de calor al sistema y este efectúa 60 J de trabajo.
+        Un sistema se lleva del estado <math data-tex="a"><mi>a</mi></math> al <math data-tex="b"><mi>b</mi></math> por la trayectoria <math data-tex="acb"><mi>a</mi><mi>c</mi><mi>b</mi></math>: entran 90 J de calor al sistema y este efectúa 60 J de trabajo.
         <ol>
-          <li>¿Cuánto calor entra por la trayectoria $adb$ si el trabajo efectuado por el sistema es 15 J? Considerar que $U$ es independiente del camino y que $U_{a\Rightarrow b} = U_b - U_a$.</li>
-          <li>Cuando el sistema regresa de $b$ a $a$ siguiendo la trayectoria curva, el valor absoluto del trabajo efectuado por el sistema es 35 J. ¿El sistema absorbe o desprende calor? ¿Cuánto?</li>
+          <li>¿Cuánto calor entra por la trayectoria <math data-tex="adb"><mi>a</mi><mi>d</mi><mi>b</mi></math> si el trabajo efectuado por el sistema es 15 J? Considerar que <math data-tex="U"><mi>U</mi></math> es independiente del camino y que <math data-tex="U_{a\Rightarrow b} = U_b - U_a"><msub><mi>U</mi><mrow><mi>a</mi><mo lspace="0em" rspace="0em" stretchy="false">⇒</mo><mi>b</mi></mrow></msub><mo>=</mo><msub><mi>U</mi><mi>b</mi></msub><mo>−</mo><msub><mi>U</mi><mi>a</mi></msub></math>.</li>
+          <li>Cuando el sistema regresa de <math data-tex="b"><mi>b</mi></math> a <math data-tex="a"><mi>a</mi></math> siguiendo la trayectoria curva, el valor absoluto del trabajo efectuado por el sistema es 35 J. ¿El sistema absorbe o desprende calor? ¿Cuánto?</li>
         </ol>
       </div>
       <div class="problem-strategy">
         <div class="strategy-title">Estrategia</div>
         <ol>
-          <li>Calcular $\Delta U_{a\to b}$ por la trayectoria $acb$ con $\Delta U = Q - W$. Ese número es el mismo para cualquier camino entre $a$ y $b$.</li>
-          <li>(a) Aplicar la primera ley al camino $adb$ con el mismo $\Delta U$ y el $W$ dado, y despejar $Q$.</li>
-          <li>(b) Para el retorno $b \to a$: $\Delta U_{b\to a} = -\Delta U_{a\to b}$.</li>
-          <li>Determinar el signo del trabajo de retorno: es una compresión (el sistema vuelve a menor volumen), así que $W < 0$ y vale $-35$ J con el convenio del curso. El enunciado da sólo el valor absoluto — asignar el signo es parte del problema.</li>
-          <li>Despejar $Q$ y leer su signo: positivo significa que el sistema absorbe calor; negativo, que lo desprende.</li>
+          <li>Calcular <math data-tex="\Delta U_{a\to b}"><mi mathvariant="normal">Δ</mi><msub><mi>U</mi><mrow><mi>a</mi><mo lspace="0em" rspace="0em" stretchy="false">→</mo><mi>b</mi></mrow></msub></math> por la trayectoria <math data-tex="acb"><mi>a</mi><mi>c</mi><mi>b</mi></math> con <math data-tex="\Delta U = Q - W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>−</mo><mi>W</mi></math>. Ese número es el mismo para cualquier camino entre <math data-tex="a"><mi>a</mi></math> y <math data-tex="b"><mi>b</mi></math>.</li>
+          <li>(a) Aplicar la primera ley al camino <math data-tex="adb"><mi>a</mi><mi>d</mi><mi>b</mi></math> con el mismo <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> y el <math data-tex="W"><mi>W</mi></math> dado, y despejar <math data-tex="Q"><mi>Q</mi></math>.</li>
+          <li>(b) Para el retorno <math data-tex="b \to a"><mi>b</mi><mo stretchy="false">→</mo><mi>a</mi></math>: <math data-tex="\Delta U_{b\to a} = -\Delta U_{a\to b}"><mi mathvariant="normal">Δ</mi><msub><mi>U</mi><mrow><mi>b</mi><mo lspace="0em" rspace="0em" stretchy="false">→</mo><mi>a</mi></mrow></msub><mo>=</mo><mo form="prefix">−</mo><mi mathvariant="normal">Δ</mi><msub><mi>U</mi><mrow><mi>a</mi><mo lspace="0em" rspace="0em" stretchy="false">→</mo><mi>b</mi></mrow></msub></math>.</li>
+          <li>Determinar el signo del trabajo de retorno: es una compresión (el sistema vuelve a menor volumen), así que <math data-tex="W &lt; 0"><mi>W</mi><mo>&lt;</mo><mn>0</mn></math> y vale <math data-tex="-35"><mo>−</mo><mn>35</mn></math> J con el convenio del curso. El enunciado da sólo el valor absoluto — asignar el signo es parte del problema.</li>
+          <li>Despejar <math data-tex="Q"><mi>Q</mi></math> y leer su signo: positivo significa que el sistema absorbe calor; negativo, que lo desprende.</li>
         </ol>
       </div>
     </div>
@@ -178,23 +174,23 @@
         <span class="problem-badge">Resuelto en aula</span>
       </div>
       <div class="problem-statement">
-        Benceno gaseoso a $27\,^\circ$C se describe adecuadamente por $\left(P + \frac{an^2}{V^2}\right)(V - nb) = nRT$. Encontrar las expresiones del trabajo mecánico $W$ realizado por 1 mol al expandirse desde $V_i = 1$ L hasta $V_f = 25$ L en los casos:
+        Benceno gaseoso a <math data-tex="27\,^\circ"><mn>27</mn><mspace width="0.1667em"/><msup><mrow></mrow><mo>∘</mo></msup></math>C se describe adecuadamente por <math data-tex="\left(P + \frac{an^2}{V^2}\right)(V - nb) = nRT"><mrow><mo>(</mo><mrow><mi>P</mi><mo>+</mo><mfrac><mrow><mi>a</mi><msup><mi>n</mi><mn>2</mn></msup></mrow><msup><mi>V</mi><mn>2</mn></msup></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>V</mi><mo>−</mo><mi>n</mi><mi>b</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi></math>. Encontrar las expresiones del trabajo mecánico <math data-tex="W"><mi>W</mi></math> realizado por 1 mol al expandirse desde <math data-tex="V_i = 1"><msub><mi>V</mi><mi>i</mi></msub><mo>=</mo><mn>1</mn></math> L hasta <math data-tex="V_f = 25"><msub><mi>V</mi><mi>f</mi></msub><mo>=</mo><mn>25</mn></math> L en los casos:
         <ol>
           <li>La tasa de expansión es muy grande (rápida).</li>
-          <li>Estimar la constante $b$ si la tasa de expansión es despreciable, el proceso es isotérmico y el trabajo entre $V_i$ y $V_f$ es $W = 64{,}807$ L·atm.</li>
-          <li>Encontrar $W$ para una expansión violenta contra el vacío.</li>
+          <li>Estimar la constante <math data-tex="b"><mi>b</mi></math> si la tasa de expansión es despreciable, el proceso es isotérmico y el trabajo entre <math data-tex="V_i"><msub><mi>V</mi><mi>i</mi></msub></math> y <math data-tex="V_f"><msub><mi>V</mi><mi>f</mi></msub></math> es <math data-tex="W = 64{,}807"><mi>W</mi><mo>=</mo><mn>64</mn><mtext>,</mtext><mn>807</mn></math> L·atm.</li>
+          <li>Encontrar <math data-tex="W"><mi>W</mi></math> para una expansión violenta contra el vacío.</li>
         </ol>
-        Datos: $a = 18\ \mathrm{L^2atm/mol^2}$, $R = 0{,}082\ \mathrm{L\,atm/(mol\,K)}$.
+        Datos: <math data-tex="a = 18\ \mathrm{L^2atm/mol^2}"><mi>a</mi><mo>=</mo><mn>18</mn><mspace width="0.2778em"/><msup><mi mathvariant="normal">L</mi><mn>2</mn></msup><mi mathvariant="normal">a</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">m</mi><mi>/</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><msup><mi mathvariant="normal">l</mi><mn>2</mn></msup></math>, <math data-tex="R = 0{,}082\ \mathrm{L\,atm/(mol\,K)}"><mi>R</mi><mo>=</mo><mn>0</mn><mtext>,</mtext><mn>082</mn><mspace width="0.2778em"/><mi mathvariant="normal">L</mi><mspace width="0.1667em"/><mi mathvariant="normal">a</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">m</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mspace width="0.1667em"/><mi mathvariant="normal">K</mi></mrow><mo>)</mo></mrow></math>.
       </div>
       <div class="problem-strategy">
         <div class="strategy-title">Estrategia</div>
         <ol>
-          <li>(a) "Muy rápida" significa que el sistema no alcanza el equilibrio: el trabajo se calcula con la presión de oposición constante, $W = P_{\text{op}}(V_f - V_i)$, donde $P_{\text{op}}$ es la presión externa (típicamente la presión final del gas).</li>
-          <li>(b) "Tasa despreciable" significa reversible: despejar $P$ de la ecuación de Van der Waals e integrar $\int_{V_i}^{V_f} P\,dV$.</li>
-          <li>La integral tiene dos términos: $\int \frac{nRT}{V-nb}dV$ da un logaritmo, y $\int \frac{an^2}{V^2}dV$ da la diferencia de recíprocos.</li>
-          <li>Igualar la expresión obtenida al valor dado (64,807 L·atm) y despejar $b$. Es la única incógnita, pero aparece dentro del logaritmo: hay que resolver numéricamente o despejar exponenciando.</li>
-          <li>(c) Contra el vacío $P_{\text{op}} = 0$, luego $W = 0$ sin importar la ecuación de estado ni cuánto se expanda el gas.</li>
-          <li>Comparar los tres resultados: reversible $>$ irreversible rápido $>$ contra el vacío. Ese orden debe cumplirse siempre.</li>
+          <li>(a) "Muy rápida" significa que el sistema no alcanza el equilibrio: el trabajo se calcula con la presión de oposición constante, <math data-tex="W = P_{\text{op}}(V_f - V_i)"><mi>W</mi><mo>=</mo><msub><mi>P</mi><mtext>op</mtext></msub><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mo>−</mo><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></math>, donde <math data-tex="P_{\text{op}}"><msub><mi>P</mi><mtext>op</mtext></msub></math> es la presión externa (típicamente la presión final del gas).</li>
+          <li>(b) "Tasa despreciable" significa reversible: despejar <math data-tex="P"><mi>P</mi></math> de la ecuación de Van der Waals e integrar <math data-tex="\int_{V_i}^{V_f} P\,dV"><msubsup><mo lspace="0em">∫</mo><msub><mi>V</mi><mi>i</mi></msub><msub><mi>V</mi><mi>f</mi></msub></msubsup><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>.</li>
+          <li>La integral tiene dos términos: <math data-tex="\int \frac{nRT}{V-nb}dV"><mo lspace="0em">∫</mo><mfrac><mrow><mi>n</mi><mi>R</mi><mi>T</mi></mrow><mrow><mi>V</mi><mo lspace="0em" rspace="0em">−</mo><mi>n</mi><mi>b</mi></mrow></mfrac><mi>d</mi><mi>V</mi></math> da un logaritmo, y <math data-tex="\int \frac{an^2}{V^2}dV"><mo lspace="0em">∫</mo><mfrac><mrow><mi>a</mi><msup><mi>n</mi><mn>2</mn></msup></mrow><msup><mi>V</mi><mn>2</mn></msup></mfrac><mi>d</mi><mi>V</mi></math> da la diferencia de recíprocos.</li>
+          <li>Igualar la expresión obtenida al valor dado (64,807 L·atm) y despejar <math data-tex="b"><mi>b</mi></math>. Es la única incógnita, pero aparece dentro del logaritmo: hay que resolver numéricamente o despejar exponenciando.</li>
+          <li>(c) Contra el vacío <math data-tex="P_{\text{op}} = 0"><msub><mi>P</mi><mtext>op</mtext></msub><mo>=</mo><mn>0</mn></math>, luego <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math> sin importar la ecuación de estado ni cuánto se expanda el gas.</li>
+          <li>Comparar los tres resultados: reversible <math data-tex="&gt;"><mo lspace="0em" rspace="0em">></mo></math> irreversible rápido <math data-tex="&gt;"><mo lspace="0em" rspace="0em">></mo></math> contra el vacío. Ese orden debe cumplirse siempre.</li>
         </ol>
       </div>
     </div>
@@ -206,23 +202,23 @@
         <span class="problem-badge">Resuelto en aula</span>
       </div>
       <div class="problem-statement">
-        0,5 mol de un gas ideal diatómico ($C_V = \tfrac52R$) están inicialmente a 4,1 atm y 300 K. El gas sufre un calentamiento isocórico hasta duplicar su presión inicial, luego una expansión isotérmica hasta duplicar su volumen, y finalmente un enfriamiento isobárico hasta recuperar su estado inicial. Procesos cuasiestáticos.
+        0,5 mol de un gas ideal diatómico (<math data-tex="C_V = \tfrac52R"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mi>R</mi></math>) están inicialmente a 4,1 atm y 300 K. El gas sufre un calentamiento isocórico hasta duplicar su presión inicial, luego una expansión isotérmica hasta duplicar su volumen, y finalmente un enfriamiento isobárico hasta recuperar su estado inicial. Procesos cuasiestáticos.
         <ol>
-          <li>Diagrama $P$–$V$.</li>
-          <li>Calcular $P$, $V$ y $T$ en cada uno de los estados.</li>
+          <li>Diagrama <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math>.</li>
+          <li>Calcular <math data-tex="P"><mi>P</mi></math>, <math data-tex="V"><mi>V</mi></math> y <math data-tex="T"><mi>T</mi></math> en cada uno de los estados.</li>
           <li>Calcular el trabajo neto del ciclo y el calor asociado al calentamiento isocórico.</li>
         </ol>
       </div>
       <div class="problem-strategy">
         <div class="strategy-title">Estrategia</div>
         <ol>
-          <li>(b) Estado 1: aplicar $PV = nRT$ con los datos dados para obtener $V_1$.</li>
-          <li>Estado 2 (isocórico): $V_2 = V_1$ y $P_2 = 2P_1$. Por la ley de estado, $T_2 = 2T_1$.</li>
-          <li>Estado 3 (isotérmico desde 2): $T_3 = T_2$ y $V_3 = 2V_2$, de donde $P_3 = P_2/2 = P_1$. Verificar que este estado efectivamente conecta con el inicial por una isóbara — el ciclo debe cerrar.</li>
+          <li>(b) Estado 1: aplicar <math data-tex="PV = nRT"><mi>P</mi><mi>V</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi></math> con los datos dados para obtener <math data-tex="V_1"><msub><mi>V</mi><mn>1</mn></msub></math>.</li>
+          <li>Estado 2 (isocórico): <math data-tex="V_2 = V_1"><msub><mi>V</mi><mn>2</mn></msub><mo>=</mo><msub><mi>V</mi><mn>1</mn></msub></math> y <math data-tex="P_2 = 2P_1"><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><mn>2</mn><msub><mi>P</mi><mn>1</mn></msub></math>. Por la ley de estado, <math data-tex="T_2 = 2T_1"><msub><mi>T</mi><mn>2</mn></msub><mo>=</mo><mn>2</mn><msub><mi>T</mi><mn>1</mn></msub></math>.</li>
+          <li>Estado 3 (isotérmico desde 2): <math data-tex="T_3 = T_2"><msub><mi>T</mi><mn>3</mn></msub><mo>=</mo><msub><mi>T</mi><mn>2</mn></msub></math> y <math data-tex="V_3 = 2V_2"><msub><mi>V</mi><mn>3</mn></msub><mo>=</mo><mn>2</mn><msub><mi>V</mi><mn>2</mn></msub></math>, de donde <math data-tex="P_3 = P_2/2 = P_1"><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><msub><mi>P</mi><mn>2</mn></msub><mi>/</mi><mn>2</mn><mo>=</mo><msub><mi>P</mi><mn>1</mn></msub></math>. Verificar que este estado efectivamente conecta con el inicial por una isóbara — el ciclo debe cerrar.</li>
           <li>(a) Dibujar: una vertical hacia arriba (isocórico), una hipérbola descendente (isotérmico) y una horizontal hacia la izquierda (isobárico).</li>
-          <li>(c) Trabajo por tramo: isocórico $W = 0$; isotérmico $W = nRT_2\ln(V_3/V_2)$; isobárico $W = P_1(V_1 - V_3)$, negativo por ser compresión.</li>
-          <li>Sumar los tres para el trabajo neto. Como el ciclo recorre el diagrama en sentido antihorario, esperar $W_{\text{neto}} < 0$.</li>
-          <li>Calor del tramo isocórico: $Q = \Delta U = nC_V(T_2 - T_1)$, con $W = 0$.</li>
+          <li>(c) Trabajo por tramo: isocórico <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math>; isotérmico <math data-tex="W = nRT_2\ln(V_3/V_2)"><mi>W</mi><mo>=</mo><mi>n</mi><mi>R</mi><msub><mi>T</mi><mn>2</mn></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mn>3</mn></msub><mi>/</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></math>; isobárico <math data-tex="W = P_1(V_1 - V_3)"><mi>W</mi><mo>=</mo><msub><mi>P</mi><mn>1</mn></msub><mrow><mo>(</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>−</mo><msub><mi>V</mi><mn>3</mn></msub></mrow><mo>)</mo></mrow></math>, negativo por ser compresión.</li>
+          <li>Sumar los tres para el trabajo neto. Como el ciclo recorre el diagrama en sentido antihorario, esperar <math data-tex="W_{\text{neto}} &lt; 0"><msub><mi>W</mi><mtext>neto</mtext></msub><mo>&lt;</mo><mn>0</mn></math>.</li>
+          <li>Calor del tramo isocórico: <math data-tex="Q = \Delta U = nC_V(T_2 - T_1)"><mi>Q</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>n</mi><msub><mi>C</mi><mi>V</mi></msub><mrow><mo>(</mo><mrow><msub><mi>T</mi><mn>2</mn></msub><mo>−</mo><msub><mi>T</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></math>, con <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math>.</li>
         </ol>
       </div>
     </div>
@@ -230,25 +226,25 @@
     <div class="problem-block u3">
       <div class="problem-head">
         <span class="problem-num">P4</span>
-        <span class="problem-title">Sistema con presión dada por una función de $V$</span>
+        <span class="problem-title">Sistema con presión dada por una función de <math data-tex="V"><mi>V</mi></math></span>
         <span class="problem-badge">Propuesto</span>
       </div>
       <div class="problem-statement">
-        Un gas tiene presión $P = \dfrac{5\,[\mathrm{bar\cdot m^3}]}{V} + 1{,}5\,[\mathrm{bar}]$, con $P$ en bar y $V$ en m$^3$. El sistema pasa de 0,15 m$^3$ a 0,05 m$^3$ y libera 45 kJ de calor.
+        Un gas tiene presión <math data-tex="P = \dfrac{5\,[\mathrm{bar\cdot m^3}]}{V} + 1{,}5\,[\mathrm{bar}]"><mi>P</mi><mo>=</mo><mfrac displaystyle="true"><mrow><mn>5</mn><mspace width="0.1667em"/><mrow><mo>[</mo><mrow><mi mathvariant="normal">b</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><msup><mi mathvariant="normal">m</mi><mn>3</mn></msup></mrow><mo>]</mo></mrow></mrow><mi>V</mi></mfrac><mo>+</mo><mn>1</mn><mtext>,</mtext><mn>5</mn><mspace width="0.1667em"/><mrow><mo>[</mo><mrow><mi mathvariant="normal">b</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi></mrow><mo>]</mo></mrow></math>, con <math data-tex="P"><mi>P</mi></math> en bar y <math data-tex="V"><mi>V</mi></math> en m<math data-tex="^3"><msup><mrow></mrow><mn>3</mn></msup></math>. El sistema pasa de 0,15 m<math data-tex="^3"><msup><mrow></mrow><mn>3</mn></msup></math> a 0,05 m<math data-tex="^3"><msup><mrow></mrow><mn>3</mn></msup></math> y libera 45 kJ de calor.
         <ol>
-          <li>Determinar el cambio de energía interna. Considerar $1\ \mathrm{bar\cdot m^3} = 10^5$ J.</li>
-          <li>Si la presión fuese una presión constante $P^*$, ¿cómo afecta esto al desarrollo? ¿A qué se asocia esta situación? Explicitar.</li>
+          <li>Determinar el cambio de energía interna. Considerar <math data-tex="1\ \mathrm{bar\cdot m^3} = 10^5"><mn>1</mn><mspace width="0.2778em"/><mi mathvariant="normal">b</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><msup><mi mathvariant="normal">m</mi><mn>3</mn></msup><mo>=</mo><msup><mn>10</mn><mn>5</mn></msup></math> J.</li>
+          <li>Si la presión fuese una presión constante <math data-tex="P^*"><msup><mi>P</mi><mo>∗</mo></msup></math>, ¿cómo afecta esto al desarrollo? ¿A qué se asocia esta situación? Explicitar.</li>
         </ol>
       </div>
       <div class="problem-strategy">
         <div class="strategy-title">Estrategia</div>
         <ol>
-          <li>(a) Integrar $W = \int_{V_1}^{V_2} P\,dV$ con la $P(V)$ dada: el primer término da un logaritmo y el segundo un producto.</li>
-          <li>Cuidar los límites: el volumen <em>disminuye</em>, así que $W$ debe salir negativo (se hace trabajo sobre el sistema).</li>
-          <li>Convertir el trabajo de bar·m$^3$ a joules con el factor indicado por el enunciado.</li>
-          <li>El calor liberado significa $Q < 0$: asignarle el signo antes de sustituir.</li>
-          <li>Aplicar $\Delta U = Q - W$ con ambos signos ya fijados.</li>
-          <li>(b) Con $P^*$ constante la integral colapsa a $W = P^*\Delta V$, lo que corresponde a un proceso irreversible contra presión externa constante — o a un proceso isobárico cuasiestático. Discutir cuál de las dos lecturas aplica y qué las diferencia.</li>
+          <li>(a) Integrar <math data-tex="W = \int_{V_1}^{V_2} P\,dV"><mi>W</mi><mo>=</mo><msubsup><mo form="prefix" lspace="0em">∫</mo><msub><mi>V</mi><mn>1</mn></msub><msub><mi>V</mi><mn>2</mn></msub></msubsup><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> con la <math data-tex="P(V)"><mi>P</mi><mrow><mo>(</mo><mi>V</mi><mo>)</mo></mrow></math> dada: el primer término da un logaritmo y el segundo un producto.</li>
+          <li>Cuidar los límites: el volumen <em>disminuye</em>, así que <math data-tex="W"><mi>W</mi></math> debe salir negativo (se hace trabajo sobre el sistema).</li>
+          <li>Convertir el trabajo de bar·m<math data-tex="^3"><msup><mrow></mrow><mn>3</mn></msup></math> a joules con el factor indicado por el enunciado.</li>
+          <li>El calor liberado significa <math data-tex="Q &lt; 0"><mi>Q</mi><mo>&lt;</mo><mn>0</mn></math>: asignarle el signo antes de sustituir.</li>
+          <li>Aplicar <math data-tex="\Delta U = Q - W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>−</mo><mi>W</mi></math> con ambos signos ya fijados.</li>
+          <li>(b) Con <math data-tex="P^*"><msup><mi>P</mi><mo>∗</mo></msup></math> constante la integral colapsa a <math data-tex="W = P^*\Delta V"><mi>W</mi><mo>=</mo><msup><mi>P</mi><mo>∗</mo></msup><mi mathvariant="normal">Δ</mi><mi>V</mi></math>, lo que corresponde a un proceso irreversible contra presión externa constante — o a un proceso isobárico cuasiestático. Discutir cuál de las dos lecturas aplica y qué las diferencia.</li>
         </ol>
       </div>
     </div>
@@ -260,19 +256,19 @@
         <span class="problem-badge">Propuesto</span>
       </div>
       <div class="problem-statement">
-        Una sala está inicialmente a $25\,^\circ$C y 1 atm. Hay 118 personas, cada una desprendiendo en promedio 125 W. Todos los objetos de la sala están perfectamente aislados y no absorben calor. La sala mide 20 × 20 × 5 m.
+        Una sala está inicialmente a <math data-tex="25\,^\circ"><mn>25</mn><mspace width="0.1667em"/><msup><mrow></mrow><mo>∘</mo></msup></math>C y 1 atm. Hay 118 personas, cada una desprendiendo en promedio 125 W. Todos los objetos de la sala están perfectamente aislados y no absorben calor. La sala mide 20 × 20 × 5 m.
         <ol>
-          <li>Cantidad de calor necesaria para elevar la temperatura hasta $37\,^\circ$C, suponiendo presión constante y aire como gas ideal diatómico con $C_P = \tfrac72R$.</li>
+          <li>Cantidad de calor necesaria para elevar la temperatura hasta <math data-tex="37\,^\circ"><mn>37</mn><mspace width="0.1667em"/><msup><mrow></mrow><mo>∘</mo></msup></math>C, suponiendo presión constante y aire como gas ideal diatómico con <math data-tex="C_P = \tfrac72R"><msub><mi>C</mi><mi>P</mi></msub><mo>=</mo><mfrac><mn>7</mn><mn>2</mn></mfrac><mi>R</mi></math>.</li>
           <li>Minutos necesarios para alcanzar esa temperatura.</li>
         </ol>
       </div>
       <div class="problem-strategy">
         <div class="strategy-title">Estrategia</div>
         <ol>
-          <li>Calcular el volumen de la sala y, con $PV = nRT$ en las condiciones iniciales, los moles de aire.</li>
-          <li>(a) A presión constante, $Q = \Delta H = n\bar C_P\Delta T$ con $\Delta T = 12$ K.</li>
-          <li>Notar la sutileza: a $P$ constante y volumen fijo, parte del aire sale de la sala al calentarse. El enunciado pide ignorar esto y usar los moles iniciales.</li>
-          <li>(b) Potencia total $= 118 \times 125$ W. Dividir el calor por la potencia para obtener el tiempo en segundos y convertir a minutos.</li>
+          <li>Calcular el volumen de la sala y, con <math data-tex="PV = nRT"><mi>P</mi><mi>V</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi></math> en las condiciones iniciales, los moles de aire.</li>
+          <li>(a) A presión constante, <math data-tex="Q = \Delta H = n\bar C_P\Delta T"><mi>Q</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mi>n</mi><msub><mover accent="true"><mi>C</mi><mo>̄</mo></mover><mi>P</mi></msub><mi mathvariant="normal">Δ</mi><mi>T</mi></math> con <math data-tex="\Delta T = 12"><mi mathvariant="normal">Δ</mi><mi>T</mi><mo>=</mo><mn>12</mn></math> K.</li>
+          <li>Notar la sutileza: a <math data-tex="P"><mi>P</mi></math> constante y volumen fijo, parte del aire sale de la sala al calentarse. El enunciado pide ignorar esto y usar los moles iniciales.</li>
+          <li>(b) Potencia total <math data-tex="= 118 \times 125"><mo form="infix" lspace="0em">=</mo><mn>118</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mn>125</mn></math> W. Dividir el calor por la potencia para obtener el tiempo en segundos y convertir a minutos.</li>
           <li>Chequeo de orden de magnitud: el resultado debe dar unos pocos minutos — coherente con lo rápido que se carga el ambiente en una sala llena.</li>
         </ol>
       </div>
@@ -285,16 +281,16 @@
         <span class="problem-badge">Propuesto</span>
       </div>
       <div class="problem-statement">
-        La ecuación de estado de un gas es $\bar V\left(P + \dfrac{10^6\ \mathrm{kPa\,m^6/kmol^2}}{\bar V^2}\right) = RT$, con $\bar V$ en m$^3$/kmol y $P$ en kPa. 0,5 kmol de este gas se expanden de 2 a 4 m$^3$ a temperatura constante de 300 K. Determinar el trabajo en kJ efectuado durante el proceso.
+        La ecuación de estado de un gas es <math data-tex="\bar V\left(P + \dfrac{10^6\ \mathrm{kPa\,m^6/kmol^2}}{\bar V^2}\right) = RT"><mover accent="true"><mi>V</mi><mo>̄</mo></mover><mrow><mo>(</mo><mrow><mi>P</mi><mo>+</mo><mfrac displaystyle="true"><mrow><msup><mn>10</mn><mn>6</mn></msup><mspace width="0.2778em"/><mi mathvariant="normal">k</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">a</mi><mspace width="0.1667em"/><msup><mi mathvariant="normal">m</mi><mn>6</mn></msup><mi>/</mi><mi mathvariant="normal">k</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><msup><mi mathvariant="normal">l</mi><mn>2</mn></msup></mrow><msup><mover accent="true"><mi>V</mi><mo>̄</mo></mover><mn>2</mn></msup></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mi>R</mi><mi>T</mi></math>, con <math data-tex="\bar V"><mover accent="true"><mi>V</mi><mo>̄</mo></mover></math> en m<math data-tex="^3"><msup><mrow></mrow><mn>3</mn></msup></math>/kmol y <math data-tex="P"><mi>P</mi></math> en kPa. 0,5 kmol de este gas se expanden de 2 a 4 m<math data-tex="^3"><msup><mrow></mrow><mn>3</mn></msup></math> a temperatura constante de 300 K. Determinar el trabajo en kJ efectuado durante el proceso.
       </div>
       <div class="problem-strategy">
         <div class="strategy-title">Estrategia</div>
         <ol>
-          <li>Despejar $P$ de la ecuación dada: es una Van der Waals con $b = 0$ y $a = 10^6$ kPa·m$^6$/kmol$^2$.</li>
+          <li>Despejar <math data-tex="P"><mi>P</mi></math> de la ecuación dada: es una Van der Waals con <math data-tex="b = 0"><mi>b</mi><mo>=</mo><mn>0</mn></math> y <math data-tex="a = 10^6"><mi>a</mi><mo>=</mo><msup><mn>10</mn><mn>6</mn></msup></math> kPa·m<math data-tex="^6"><msup><mrow></mrow><mn>6</mn></msup></math>/kmol<math data-tex="^2"><msup><mrow></mrow><mn>2</mn></msup></math>.</li>
           <li>Convertir los volúmenes totales a volúmenes molares dividiendo por 0,5 kmol, o bien trabajar con la forma extensiva de la ecuación desde el principio. Mantener una sola convención.</li>
-          <li>Integrar $W = \int P\,dV$ a $T$ constante: sale un logaritmo más un término en $1/\bar V$.</li>
-          <li>Verificar unidades: kPa·m$^3$ = kJ, así que el resultado sale directamente en kilojoules.</li>
-          <li>Comparar con el resultado que daría el gas ideal ($nRT\ln 2$): el término atractivo debe reducir el trabajo obtenido.</li>
+          <li>Integrar <math data-tex="W = \int P\,dV"><mi>W</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> a <math data-tex="T"><mi>T</mi></math> constante: sale un logaritmo más un término en <math data-tex="1/\bar V"><mn>1</mn><mi>/</mi><mover accent="true"><mi>V</mi><mo>̄</mo></mover></math>.</li>
+          <li>Verificar unidades: kPa·m<math data-tex="^3"><msup><mrow></mrow><mn>3</mn></msup></math> = kJ, así que el resultado sale directamente en kilojoules.</li>
+          <li>Comparar con el resultado que daría el gas ideal (<math data-tex="nRT\ln 2"><mi>n</mi><mi>R</mi><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mn>2</mn></math>): el término atractivo debe reducir el trabajo obtenido.</li>
         </ol>
       </div>
     </div>
@@ -306,11 +302,11 @@
       <div class="tip-title">✦ Cómo abordar este auxiliar</div>
       <ul>
         <li>Antes de cualquier cálculo: escribir el convenio de signos y la primera ley en la forma que se va a usar. La mitad de los errores de este auxiliar son de signo.</li>
-        <li>Identificar siempre si el proceso es reversible o irreversible: decide si $W$ se calcula integrando $P_{\text{sist}}(V)$ o multiplicando por $P_{\text{op}}$.</li>
-        <li>Para problemas de trayectorias, calcular primero $\Delta U$ por el camino con datos completos y reutilizarlo en los demás.</li>
-        <li>En ciclos, tabular estado por estado ($P$, $V$, $T$) antes de calcular energías. Y verificar que el ciclo cierre.</li>
-        <li>Chequeo final de todo ciclo: $\sum\Delta U_i = 0$. Si no da cero, hay un signo mal puesto.</li>
-        <li>$\Delta U = nC_V\Delta T$ y $\Delta H = nC_P\Delta T$ valen para gas ideal en <em>cualquier</em> proceso, no sólo a $V$ o $P$ constante. Ahorra mucho trabajo.</li>
+        <li>Identificar siempre si el proceso es reversible o irreversible: decide si <math data-tex="W"><mi>W</mi></math> se calcula integrando <math data-tex="P_{\text{sist}}(V)"><msub><mi>P</mi><mtext>sist</mtext></msub><mrow><mo>(</mo><mi>V</mi><mo>)</mo></mrow></math> o multiplicando por <math data-tex="P_{\text{op}}"><msub><mi>P</mi><mtext>op</mtext></msub></math>.</li>
+        <li>Para problemas de trayectorias, calcular primero <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> por el camino con datos completos y reutilizarlo en los demás.</li>
+        <li>En ciclos, tabular estado por estado (<math data-tex="P"><mi>P</mi></math>, <math data-tex="V"><mi>V</mi></math>, <math data-tex="T"><mi>T</mi></math>) antes de calcular energías. Y verificar que el ciclo cierre.</li>
+        <li>Chequeo final de todo ciclo: <math data-tex="\sum\Delta U_i = 0"><mo lspace="0em">∑</mo><mi mathvariant="normal">Δ</mi><msub><mi>U</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn></math>. Si no da cero, hay un signo mal puesto.</li>
+        <li><math data-tex="\Delta U = nC_V\Delta T"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>n</mi><msub><mi>C</mi><mi>V</mi></msub><mi mathvariant="normal">Δ</mi><mi>T</mi></math> y <math data-tex="\Delta H = nC_P\Delta T"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mi>n</mi><msub><mi>C</mi><mi>P</mi></msub><mi mathvariant="normal">Δ</mi><mi>T</mi></math> valen para gas ideal en <em>cualquier</em> proceso, no sólo a <math data-tex="V"><mi>V</mi></math> o <math data-tex="P"><mi>P</mi></math> constante. Ahorra mucho trabajo.</li>
       </ul>
     </div>
   </section>
@@ -323,35 +319,35 @@
         <div class="quiz-question">1. Un gas se expande del mismo estado inicial al mismo estado final por tres caminos: reversible, irreversible contra presión constante, y contra el vacío. ¿Qué ordenamiento del trabajo producido es correcto?</div>
         <div class="quiz-options">
           <label class="quiz-option"><input type="radio" name="qa3_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Los tres producen el mismo trabajo, porque los estados coinciden</span></label>
-          <label class="quiz-option"><input type="radio" name="qa3_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Contra el vacío $>$ irreversible $>$ reversible</span></label>
-          <label class="quiz-option"><input type="radio" name="qa3_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Reversible $>$ irreversible $>$ contra el vacío ($=0$)</span></label>
+          <label class="quiz-option"><input type="radio" name="qa3_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Contra el vacío <math data-tex="&gt;"><mo lspace="0em" rspace="0em">></mo></math> irreversible <math data-tex="&gt;"><mo lspace="0em" rspace="0em">></mo></math> reversible</span></label>
+          <label class="quiz-option"><input type="radio" name="qa3_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Reversible <math data-tex="&gt;"><mo lspace="0em" rspace="0em">></mo></math> irreversible <math data-tex="&gt;"><mo lspace="0em" rspace="0em">></mo></math> contra el vacío (<math data-tex="=0"><mo form="infix" lspace="0em">=</mo><mn>0</mn></math>)</span></label>
           <label class="quiz-option"><input type="radio" name="qa3_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende de si el gas es ideal o de Van der Waals</span></label>
         </div>
-        <script type="text/explanation" id="qa3_1-exp">El trabajo es el área bajo la curva de $P_{\text{op}}$ vs. $V$. En el proceso reversible $P_{\text{op}}$ iguala en todo momento a la presión del sistema, que es la mayor posible: se obtiene el área máxima. Contra una presión externa constante menor, el área es un rectángulo más pequeño. Contra el vacío $P_{\text{op}} = 0$ y no hay área alguna: $W = 0$ aunque el gas se expanda. Esto vale para cualquier ecuación de estado — es un resultado sobre el camino, no sobre el gas. Es exactamente lo que compara el P2.</script>
+        <script type="text/explanation" id="qa3_1-exp">El trabajo es el área bajo la curva de <math data-tex="P_{\text{op}}"><msub><mi>P</mi><mtext>op</mtext></msub></math> vs. <math data-tex="V"><mi>V</mi></math>. En el proceso reversible <math data-tex="P_{\text{op}}"><msub><mi>P</mi><mtext>op</mtext></msub></math> iguala en todo momento a la presión del sistema, que es la mayor posible: se obtiene el área máxima. Contra una presión externa constante menor, el área es un rectángulo más pequeño. Contra el vacío <math data-tex="P_{\text{op}} = 0"><msub><mi>P</mi><mtext>op</mtext></msub><mo>=</mo><mn>0</mn></math> y no hay área alguna: <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math> aunque el gas se expanda. Esto vale para cualquier ecuación de estado — es un resultado sobre el camino, no sobre el gas. Es exactamente lo que compara el P2.</script>
         <div class="quiz-feedback" id="qa3_1-fb"></div>
       </div>
 
       <div class="quiz-q" id="qa3_2" data-correct="0">
         <div class="quiz-question">2. En un ciclo cerrado, ¿qué relación se cumple siempre?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="qa3_2" value="0"><span class="opt-letter">A</span><span class="opt-text">$\Delta U = 0$, y por lo tanto $W_{\text{neto}} = Q_{\text{neto}}$</span></label>
-          <label class="quiz-option"><input type="radio" name="qa3_2" value="1"><span class="opt-letter">B</span><span class="opt-text">$W_{\text{neto}} = 0$, porque el sistema vuelve a su estado inicial</span></label>
-          <label class="quiz-option"><input type="radio" name="qa3_2" value="2"><span class="opt-letter">C</span><span class="opt-text">$Q_{\text{neto}} = 0$, porque no hay cambio neto de temperatura</span></label>
-          <label class="quiz-option"><input type="radio" name="qa3_2" value="3"><span class="opt-letter">D</span><span class="opt-text">$\Delta H = \Delta U$, porque $P$ y $V$ vuelven a sus valores iniciales</span></label>
+          <label class="quiz-option"><input type="radio" name="qa3_2" value="0"><span class="opt-letter">A</span><span class="opt-text"><math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math>, y por lo tanto <math data-tex="W_{\text{neto}} = Q_{\text{neto}}"><msub><mi>W</mi><mtext>neto</mtext></msub><mo>=</mo><msub><mi>Q</mi><mtext>neto</mtext></msub></math></span></label>
+          <label class="quiz-option"><input type="radio" name="qa3_2" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="W_{\text{neto}} = 0"><msub><mi>W</mi><mtext>neto</mtext></msub><mo>=</mo><mn>0</mn></math>, porque el sistema vuelve a su estado inicial</span></label>
+          <label class="quiz-option"><input type="radio" name="qa3_2" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="Q_{\text{neto}} = 0"><msub><mi>Q</mi><mtext>neto</mtext></msub><mo>=</mo><mn>0</mn></math>, porque no hay cambio neto de temperatura</span></label>
+          <label class="quiz-option"><input type="radio" name="qa3_2" value="3"><span class="opt-letter">D</span><span class="opt-text"><math data-tex="\Delta H = \Delta U"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi></math>, porque <math data-tex="P"><mi>P</mi></math> y <math data-tex="V"><mi>V</mi></math> vuelven a sus valores iniciales</span></label>
         </div>
-        <script type="text/explanation" id="qa3_2-exp">$U$ es función de estado, así que sobre cualquier ciclo cerrado $\Delta U = 0$ — y también $\Delta H = 0$, pero eso no significa que sean iguales entre sí en cada tramo. De $\Delta U = Q - W$ sale $W_{\text{neto}} = Q_{\text{neto}}$: todo el trabajo neto producido proviene del calor neto absorbido. Ni $W$ ni $Q$ se anulan por separado; si lo hicieran, no existirían las máquinas térmicas. Verificar $\sum\Delta U_i = 0$ tramo a tramo es el mejor chequeo de un problema de ciclos.</script>
+        <script type="text/explanation" id="qa3_2-exp"><math data-tex="U"><mi>U</mi></math> es función de estado, así que sobre cualquier ciclo cerrado <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math> — y también <math data-tex="\Delta H = 0"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mn>0</mn></math>, pero eso no significa que sean iguales entre sí en cada tramo. De <math data-tex="\Delta U = Q - W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>−</mo><mi>W</mi></math> sale <math data-tex="W_{\text{neto}} = Q_{\text{neto}}"><msub><mi>W</mi><mtext>neto</mtext></msub><mo>=</mo><msub><mi>Q</mi><mtext>neto</mtext></msub></math>: todo el trabajo neto producido proviene del calor neto absorbido. Ni <math data-tex="W"><mi>W</mi></math> ni <math data-tex="Q"><mi>Q</mi></math> se anulan por separado; si lo hicieran, no existirían las máquinas térmicas. Verificar <math data-tex="\sum\Delta U_i = 0"><mo lspace="0em">∑</mo><mi mathvariant="normal">Δ</mi><msub><mi>U</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn></math> tramo a tramo es el mejor chequeo de un problema de ciclos.</script>
         <div class="quiz-feedback" id="qa3_2-fb"></div>
       </div>
 
       <div class="quiz-q" id="qa3_3" data-correct="1">
-        <div class="quiz-question">3. En el P1, se conoce $\Delta U_{a\to b}$ por la trayectoria $acb$. ¿Por qué sirve para la trayectoria $adb$?</div>
+        <div class="quiz-question">3. En el P1, se conoce <math data-tex="\Delta U_{a\to b}"><mi mathvariant="normal">Δ</mi><msub><mi>U</mi><mrow><mi>a</mi><mo lspace="0em" rspace="0em" stretchy="false">→</mo><mi>b</mi></mrow></msub></math> por la trayectoria <math data-tex="acb"><mi>a</mi><mi>c</mi><mi>b</mi></math>. ¿Por qué sirve para la trayectoria <math data-tex="adb"><mi>a</mi><mi>d</mi><mi>b</mi></math>?</div>
         <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="qa3_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque ambas trayectorias tienen la misma área bajo la curva $P$–$V$</span></label>
-          <label class="quiz-option"><input type="radio" name="qa3_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque $U$ es función de estado: $\Delta U$ depende sólo de $a$ y $b$</span></label>
+          <label class="quiz-option"><input type="radio" name="qa3_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque ambas trayectorias tienen la misma área bajo la curva <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="qa3_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque <math data-tex="U"><mi>U</mi></math> es función de estado: <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> depende sólo de <math data-tex="a"><mi>a</mi></math> y <math data-tex="b"><mi>b</mi></math></span></label>
           <label class="quiz-option"><input type="radio" name="qa3_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque en ambos casos el calor absorbido es el mismo</span></label>
           <label class="quiz-option"><input type="radio" name="qa3_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el trabajo es independiente del camino</span></label>
         </div>
-        <script type="text/explanation" id="qa3_3-exp">$\Delta U$ queda determinado por los estados extremos, no por el camino. Las áreas bajo $acb$ y $adb$ son distintas — por eso el trabajo vale 60 J en un caso y 15 J en el otro — y el calor también difiere. Lo único que se conserva entre ambos caminos es la diferencia de energía interna, y eso basta para despejar el calor faltante con la primera ley.</script>
+        <script type="text/explanation" id="qa3_3-exp"><math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> queda determinado por los estados extremos, no por el camino. Las áreas bajo <math data-tex="acb"><mi>a</mi><mi>c</mi><mi>b</mi></math> y <math data-tex="adb"><mi>a</mi><mi>d</mi><mi>b</mi></math> son distintas — por eso el trabajo vale 60 J en un caso y 15 J en el otro — y el calor también difiere. Lo único que se conserva entre ambos caminos es la diferencia de energía interna, y eso basta para despejar el calor faltante con la primera ley.</script>
         <div class="quiz-feedback" id="qa3_3-fb"></div>
       </div>
 
