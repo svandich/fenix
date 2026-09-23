@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 372" width="760" height="372" font-family="'Inter', system-ui, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6e7681"/></marker><marker id="ahl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8b949e"/></marker></defs>
+<rect x="58.0" y="40.0" width="152.0" height="40.0" fill="#1c2128" rx="6" stroke="#ef4444" stroke-width="1.6"/>
+<text x="134.0" y="65.0" font-family="'Inter', system-ui, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle" font-weight="600">Foco caliente  T<tspan font-size="8.3" dy="3.45">c</tspan><tspan font-size="11.5" dy="-3.45">&#8203;</tspan></text>
+<rect x="58.0" y="238.0" width="152.0" height="40.0" fill="#1c2128" rx="6" stroke="#58a6ff" stroke-width="1.6"/>
+<text x="134.0" y="263.0" font-family="'Inter', system-ui, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle" font-weight="600">Foco frío  T<tspan font-size="8.3" dy="3.45">f</tspan><tspan font-size="11.5" dy="-3.45">&#8203;</tspan></text>
+<circle cx="134.0" cy="159.0" r="34" fill="#22272e" stroke="#d29922" stroke-width="1.8"/>
+<text x="134.0" y="164.0" font-family="'Inter', system-ui, sans-serif" font-size="16" fill="#d29922" text-anchor="middle" font-weight="700">M</text>
+<path d="M 134 84 L 134 121" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#ahl)"/>
+<text x="144.0" y="106.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="start" font-weight="600">q<tspan font-size="8.6" dy="3.60">c</tspan><tspan font-size="12" dy="-3.60">&#8203;</tspan></text>
+<path d="M 134 197 L 134 234" stroke="#58a6ff" stroke-width="2" fill="none" marker-end="url(#ahl)"/>
+<text x="144.0" y="220.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#58a6ff" text-anchor="start" font-weight="600">|q<tspan font-size="8.6" dy="3.60">f</tspan><tspan font-size="12" dy="-3.60">&#8203;</tspan>|</text>
+<path d="M 168 159 L 256 159" stroke="#3fb950" stroke-width="2" fill="none" marker-end="url(#ahl)"/>
+<text x="240.0" y="150.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#3fb950" text-anchor="middle" font-weight="600">W</text>
+<text x="134.0" y="20.0" font-family="'Inter', system-ui, sans-serif" font-size="11.5" fill="#8b949e" text-anchor="middle" font-weight="600">Máquina real</text>
+<text x="134.0" y="302.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#3fb950" text-anchor="middle" font-weight="700">✓  posible</text>
+<text x="134.0" y="322.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">η = 1 − |q<tspan font-size="7.2" dy="3.00">f</tspan><tspan font-size="10" dy="-3.00">&#8203;</tspan>|/q<tspan font-size="7.2" dy="3.00">c</tspan><tspan font-size="10" dy="-3.00">&#8203;</tspan> &lt; 1</text>
+<rect x="298.0" y="40.0" width="152.0" height="40.0" fill="#1c2128" rx="6" stroke="#ef4444" stroke-width="1.6"/>
+<text x="374.0" y="65.0" font-family="'Inter', system-ui, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle" font-weight="600">Foco caliente  T<tspan font-size="8.3" dy="3.45">c</tspan><tspan font-size="11.5" dy="-3.45">&#8203;</tspan></text>
+<rect x="298.0" y="238.0" width="152.0" height="40.0" fill="#1c2128" rx="6" stroke="#58a6ff" stroke-width="1.6"/>
+<text x="374.0" y="263.0" font-family="'Inter', system-ui, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle" font-weight="600">Foco frío  T<tspan font-size="8.3" dy="3.45">f</tspan><tspan font-size="11.5" dy="-3.45">&#8203;</tspan></text>
+<circle cx="374.0" cy="159.0" r="34" fill="#22272e" stroke="#d29922" stroke-width="1.8"/>
+<text x="374.0" y="164.0" font-family="'Inter', system-ui, sans-serif" font-size="16" fill="#d29922" text-anchor="middle" font-weight="700">M</text>
+<path d="M 374 84 L 374 121" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#ahl)"/>
+<text x="384.0" y="106.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="start" font-weight="600">q<tspan font-size="8.6" dy="3.60">c</tspan><tspan font-size="12" dy="-3.60">&#8203;</tspan></text>
+<text x="374.0" y="220.0" font-family="'Inter', system-ui, sans-serif" font-size="11" fill="#6e7681" text-anchor="middle" font-weight="400">sin q<tspan font-size="7.9" dy="3.30">f</tspan><tspan font-size="11" dy="-3.30">&#8203;</tspan></text>
+<path d="M 408 159 L 496 159" stroke="#3fb950" stroke-width="2" fill="none" marker-end="url(#ahl)"/>
+<text x="480.0" y="150.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#3fb950" text-anchor="middle" font-weight="600">W</text>
+<text x="374.0" y="20.0" font-family="'Inter', system-ui, sans-serif" font-size="11.5" fill="#8b949e" text-anchor="middle" font-weight="600">Kelvin-Planck</text>
+<text x="374.0" y="302.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle" font-weight="700">✗  imposible</text>
+<text x="374.0" y="322.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">todo el calor → trabajo</text>
+<rect x="538.0" y="40.0" width="152.0" height="40.0" fill="#1c2128" rx="6" stroke="#ef4444" stroke-width="1.6"/>
+<text x="614.0" y="65.0" font-family="'Inter', system-ui, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle" font-weight="600">Foco caliente  T<tspan font-size="8.3" dy="3.45">c</tspan><tspan font-size="11.5" dy="-3.45">&#8203;</tspan></text>
+<rect x="538.0" y="238.0" width="152.0" height="40.0" fill="#1c2128" rx="6" stroke="#58a6ff" stroke-width="1.6"/>
+<text x="614.0" y="263.0" font-family="'Inter', system-ui, sans-serif" font-size="11.5" fill="#e6edf3" text-anchor="middle" font-weight="600">Foco frío  T<tspan font-size="8.3" dy="3.45">f</tspan><tspan font-size="11.5" dy="-3.45">&#8203;</tspan></text>
+<path d="M 614 234 L 614 84" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#ahl)"/>
+<text x="624.0" y="162.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="start" font-weight="600">q</text>
+<text x="614.0" y="20.0" font-family="'Inter', system-ui, sans-serif" font-size="11.5" fill="#8b949e" text-anchor="middle" font-weight="600">Clausius</text>
+<text x="614.0" y="302.0" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle" font-weight="700">✗  imposible</text>
+<text x="614.0" y="322.0" font-family="'Inter', system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle" font-weight="400">sin W de por medio</text>
+<text x="380.0" y="354.0" font-family="'Inter', system-ui, sans-serif" font-size="10.5" fill="#6e7681" text-anchor="middle" font-weight="400">Los dos enunciados son equivalentes: quien violara uno podría acoplarse a una máquina normal y violar el otro.</text>
+</svg>

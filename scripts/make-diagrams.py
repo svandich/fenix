@@ -669,6 +669,256 @@ def fig_kirchhoff():
     cv.save(os.path.join(BASE, "clase_8", "fig_clase_8_kirchhoff.svg"))
 
 
+def _adiabat(Pa, Va, Vb, gamma, n=90):
+    """Puntos (V, P) de la adiabática reversible que pasa por (Va, Pa)."""
+    K = Pa * Va ** gamma
+    return [(Va + (Vb - Va) * i / n, K / (Va + (Vb - Va) * i / n) ** gamma)
+            for i in range(n + 1)]
+
+
+def _isotherm(Pa, Va, Vb, n=90):
+    """Puntos (V, P) de la isoterma de gas ideal que pasa por (Va, Pa)."""
+    K = Pa * Va
+    return [(Va + (Vb - Va) * i / n, K / (Va + (Vb - Va) * i / n))
+            for i in range(n + 1)]
+
+
+def fig_maquina():
+    """Clase 9 — máquina térmica entre dos focos y las dos prohibiciones."""
+    cv = Canvas(760, 372)
+
+    def engine(x0, title, qf, work, forbidden, note):
+        """Un esquema foco caliente → máquina → foco frío."""
+        bw, cx = 152, x0 + 76
+        cv.rect(x0, 40, bw, 40, "#1c2128", RED, 1.6, rx=6)
+        cv.text(cx, 65, "Foco caliente  T_c", 11.5, TEXT, "middle", "600")
+        cv.rect(x0, 238, bw, 40, "#1c2128", BLUE, 1.6, rx=6)
+        cv.text(cx, 263, "Foco frío  T_f", 11.5, TEXT, "middle", "600")
+        cv.circle(cx, 159, 34, "#22272e", U3, 1.8)
+        cv.text(cx, 164, "M", 16, U3, "middle", "700")
+
+        def arrow(y1, y2, col):
+            cv.add(f'<path d="M {cx} {y1} L {cx} {y2}" stroke="{col}" '
+                   f'stroke-width="2" fill="none" marker-end="url(#ahl)"/>')
+
+        arrow(84, 121, RED)
+        cv.text(cx + 10, 106, "q_c", 12, RED, "start", "600")
+        if qf:
+            arrow(197, 234, BLUE)
+            cv.text(cx + 10, 220, "|q_f|", 12, BLUE, "start", "600")
+        else:
+            cv.text(cx, 220, "sin q_f", 11, DIM)
+        if work:
+            cv.add(f'<path d="M {cx + 34} 159 L {x0 + bw + 46} 159" '
+                   f'stroke="{U2}" stroke-width="2" fill="none" '
+                   f'marker-end="url(#ahl)"/>')
+            cv.text(x0 + bw + 30, 150, "W", 12, U2, "middle", "600")
+        cv.text(cx, 20, title, 11.5, MUTED, "middle", "600")
+        if forbidden:
+            cv.text(cx, 302, "✗  imposible", 12, RED, "middle", "700")
+        else:
+            cv.text(cx, 302, "✓  posible", 12, U2, "middle", "700")
+        cv.text(cx, 322, note, 10, DIM)
+
+    engine(58, "Máquina real", True, True, False, "η = 1 − |q_f|/q_c &lt; 1")
+    engine(298, "Kelvin-Planck", False, True, True, "todo el calor → trabajo")
+
+    # Clausius: calor que sube solo, sin trabajo.
+    x0, bw, cx = 538, 152, 614
+    cv.rect(x0, 40, bw, 40, "#1c2128", RED, 1.6, rx=6)
+    cv.text(cx, 65, "Foco caliente  T_c", 11.5, TEXT, "middle", "600")
+    cv.rect(x0, 238, bw, 40, "#1c2128", BLUE, 1.6, rx=6)
+    cv.text(cx, 263, "Foco frío  T_f", 11.5, TEXT, "middle", "600")
+    cv.add(f'<path d="M {cx} 234 L {cx} 84" stroke="{RED}" stroke-width="2" '
+           f'fill="none" marker-end="url(#ahl)"/>')
+    cv.text(cx + 10, 162, "q", 12, RED, "start", "600")
+    cv.text(cx, 20, "Clausius", 11.5, MUTED, "middle", "600")
+    cv.text(cx, 302, "✗  imposible", 12, RED, "middle", "700")
+    cv.text(cx, 322, "sin W de por medio", 10, DIM)
+
+    cv.text(380, 354, "Los dos enunciados son equivalentes: quien violara uno "
+            "podría acoplarse a una máquina normal y violar el otro.", 10.5,
+            DIM)
+    cv.save(os.path.join(BASE, "clase_9", "fig_clase_9_maquina.svg"))
+
+
+def fig_carnot():
+    """Clase 9 — ciclo de Carnot en P–V, calculado con gas ideal."""
+    cv = Canvas(760, 428)
+    Tc, Tf, gamma = 1.0, 0.7, 1.4       # RT en unidades arbitrarias
+    VA, VB = 1.0, 2.0
+    ratio = (Tc / Tf) ** (1 / (gamma - 1))
+    VC, VD = VB * ratio, VA * ratio
+    P = lambda V, T: T / V
+
+    ax = Axes(cv, 68, 46, 566, 262, (0, 5.6), (0, 1.15))
+    ax.frame("V", "P")
+
+    loop = (_isotherm(P(VA, Tc), VA, VB) + _adiabat(P(VB, Tc), VB, VC, gamma)
+            + _isotherm(P(VC, Tf), VC, VD) + _adiabat(P(VD, Tf), VD, VA, gamma))
+    ax.area(loop, U3, 0.20)
+
+    # isotermas completas de fondo, para ubicar T_c y T_f
+    for T, col in ((Tc, RED), (Tf, BLUE)):
+        ax.curve(ax.clip([(0.85 + i * 0.012, P(0.85 + i * 0.012, T))
+                          for i in range(420)]), col, 1.1, dash="4 4",
+                 opacity=0.4)
+
+    ax.curve(_isotherm(P(VA, Tc), VA, VB), RED, 2.4)
+    ax.curve(_adiabat(P(VB, Tc), VB, VC, gamma), U3, 2.4)
+    ax.curve(_isotherm(P(VC, Tf), VC, VD), BLUE, 2.4)
+    ax.curve(_adiabat(P(VD, Tf), VD, VA, gamma), U3, 2.4)
+
+    for V, T, lab, dx, dy in ((VA, Tc, "A", -13, -6), (VB, Tc, "B", 1, -14),
+                              (VC, Tf, "C", 13, 3), (VD, Tf, "D", -13, -4)):
+        cv.circle(ax.px(V), ax.py(P(V, T)), 4.5, TEXT)
+        cv.text(ax.px(V) + dx, ax.py(P(V, T)) + dy, lab, 12.5, TEXT, "middle",
+                "700")
+
+    # etiquetas de etapa, todas fuera de las curvas
+    cv.text(ax.px(1.55), ax.py(0.83), "① isoterma T_c   q_c &gt; 0", 10.5, RED,
+            "start", "600")
+    cv.text(ax.px(3.7), ax.py(0.41), "② adiabática   q = 0", 10.5, U3, "start",
+            "600")
+    cv.text(ax.px(3.0), ax.py(0.10), "③ isoterma T_f   q_f &lt; 0", 10.5, BLUE,
+            "start", "600")
+    cv.text(ax.px(1.25), ax.py(0.14), "④ adiabática   q = 0", 10.5, U3,
+            "start", "600")
+
+    # leader hacia el área encerrada
+    cv.line(ax.px(2.62), ax.py(0.58), ax.px(2.55), ax.py(0.325), DIM, 1,
+            dash="3 3")
+    cv.text(ax.px(2.68), ax.py(0.62), "W_{neto} = área encerrada", 10.5, U3,
+            "start", "600")
+
+    cv.legend(524, 62, [(RED, "isoterma T_c"), (BLUE, "isoterma T_f"),
+                        (U3, "adiabáticas")])
+
+    cv.text(380, 356, "Dos isotermas y dos adiabáticas, todas reversibles. El "
+            "área encerrada es el trabajo neto, y el rendimiento sólo depende "
+            "de las dos", 10.5, DIM)
+    cv.text(380, 374, "temperaturas: η = 1 − T_f/T_c. Ninguna máquina que "
+            "opere entre esos mismos focos puede superarlo (teorema de "
+            "Carnot).", 10.5, DIM)
+    cv.text(380, 402, "q_c/T_c = −q_f/T_f     ⟹     ΔS_{ciclo} = 0", 12.5,
+            TEXT, "middle", "600")
+    cv.save(os.path.join(BASE, "clase_9", "fig_clase_9_carnot.svg"))
+
+
+def fig_otto():
+    """Clase 9 — ciclo de Otto idealizado, con su razón de compresión."""
+    cv = Canvas(700, 400)
+    gamma, r, Pa, Va = 1.4, 4.0, 1.0, 4.0
+    Vb = Va / r
+    Pb = Pa * r ** gamma
+    Pc = 2.5 * Pb
+    Pd = Pc / r ** gamma
+
+    ax = Axes(cv, 70, 44, 520, 262, (0, 4.9), (0, 19.0))
+    ax.frame("V", "P")
+
+    comp = _adiabat(Pa, Va, Vb, gamma)
+    exp_ = _adiabat(Pc, Vb, Va, gamma)
+    ax.area(comp + [(Vb, Pc)] + exp_ + [(Va, Pa)], U3, 0.14)
+    ax.curve(comp, U1, 2.3)
+    ax.curve(exp_, U4, 2.3)
+    ax.curve([(Vb, Pb), (Vb, Pc)], RED, 2.3)
+    ax.curve([(Va, Pd), (Va, Pa)], BLUE, 2.3)
+
+    for V, Pp, lab, dx, dy in ((Va, Pa, "a", 14, 15), (Vb, Pb, "b", -12, 12),
+                               (Vb, Pc, "c", -12, -8), (Va, Pd, "d", 13, -7)):
+        cv.circle(ax.px(V), ax.py(Pp), 4.5, TEXT)
+        cv.text(ax.px(V) + dx, ax.py(Pp) + dy, lab, 12.5, TEXT, "middle", "700")
+
+    cv.text(ax.px(Vb) - 16, ax.py((Pb + Pc) / 2), "Q_H &gt; 0", 10.5, RED, "end",
+            "600")
+    cv.text(ax.px(Va) + 16, ax.py((Pa + Pd) / 2) + 4, "Q_C &lt; 0", 10.5, BLUE,
+            "start", "600")
+    cv.text(ax.px(2.35), ax.py(0.55), "compresión adiabática", 10.5, U1,
+            "middle", "600")
+    cv.text(ax.px(2.55), ax.py(8.4), "expansión adiabática", 10.5, U4,
+            "middle", "600")
+
+    cv.line(ax.px(Vb), ax.py(0), ax.px(Vb), ax.py(Pb), DIM, 1, dash="3 3")
+    cv.line(ax.px(Va), ax.py(0), ax.px(Va), ax.py(Pa), DIM, 1, dash="3 3")
+    cv.text(ax.px(Vb), ax.py(0) + 18, "V", 10.5, MUTED)
+    cv.text(ax.px(Va), ax.py(0) + 18, "rV", 10.5, MUTED)
+
+    cv.text(350, 348, "Los dos intercambios de calor ocurren a volumen "
+            "constante, así que ambos valen nC_V ΔT y el cociente sólo deja "
+            "temperaturas.", 10.5, DIM)
+    cv.text(350, 366, "Usando TV^{γ−1} = cte. en las dos adiabáticas, todo se "
+            "reduce a la razón de compresión r = V_{máx}/V_{mín}:", 10.5, DIM)
+    cv.text(350, 390, "η = 1 − 1/r^{γ−1}", 13, TEXT, "middle", "600")
+    cv.save(os.path.join(BASE, "clase_9", "fig_clase_9_otto.svg"))
+
+
+def fig_atkinson():
+    """Auxiliar 6 — ciclo de Atkinson del P3, con los datos del enunciado."""
+    cv = Canvas(700, 414)
+    R, gamma, cv_m = 8.314, 1.4, 2.5 * 8.314
+    P1, V1, T1 = 0.1e6, 500e-6, 288.15
+    n = P1 * V1 / (R * T1)
+
+    V2 = 50e-6
+    T2 = T1 * (V1 / V2) ** (gamma - 1)
+    P2 = n * R * T2 / V2
+    T3 = T2 + 1000.0 / (n * cv_m)           # 1 kJ a volumen constante
+    P3 = n * R * T3 / V2
+    P4 = P1
+    T4 = T3 * (P4 / P3) ** ((gamma - 1) / gamma)
+    V4 = n * R * T4 / P4
+
+    MPa, cm3 = 1e-6, 1e6
+    ax = Axes(cv, 74, 46, 520, 260, (0, 1550), (0, 12.0))
+    ax.frame("V  [cm³]", "P  [MPa]")
+
+    adi1 = [(v * cm3, p * MPa) for v, p in _adiabat(P1, V1, V2, gamma)]
+    adi2 = [(v * cm3, p * MPa) for v, p in _adiabat(P3, V2, V4, gamma)]
+    ax.area(adi1 + [(V2 * cm3, P3 * MPa)] + adi2 + [(V1 * cm3, P1 * MPa)],
+            U3, 0.16)
+    ax.curve(adi1, U1, 2.3)
+    ax.curve([(V2 * cm3, P2 * MPa), (V2 * cm3, P3 * MPa)], RED, 2.3)
+    ax.curve(adi2, U4, 2.3)
+    ax.curve([(V4 * cm3, P1 * MPa), (V1 * cm3, P1 * MPa)], BLUE, 2.3)
+
+    pts = ((V1, P1, T1, "1", 0, 20), (V2, P2, T2, "2", 84, -2),
+           (V2, P3, T3, "3", 26, -6), (V4, P4, T4, "4", 4, -14))
+    # el punto 2 queda encajonado entre las dos adiabáticas: se saca con guía
+    cv.line(ax.px(V2 * cm3) + 7, ax.py(P2 * MPa) - 1,
+            ax.px(V2 * cm3) + 44, ax.py(P2 * MPa) - 5, DIM, 1, dash="3 3")
+    for v, p, t, lab, dx, dy in pts:
+        cv.circle(ax.px(v * cm3), ax.py(p * MPa), 4.5, TEXT)
+        cv.text(ax.px(v * cm3) + dx, ax.py(p * MPa) + dy,
+                f"{lab} · {t:.0f} K", 10.5, TEXT, "middle", "700")
+
+    cv.text(ax.px(V2 * cm3) + 26, ax.py((P2 + P3) / 2 * MPa), "Q = +1 kJ",
+            10.5, RED, "start", "600")
+
+    # leyenda de las cuatro etapas
+    lx, ly = 356, 66
+    cv.rect(lx, ly, 232, 92, "#1c2128", GRID, 1, rx=6, opacity=0.92)
+    etapas = ((U1, "1→2  compresión adiabática"),
+              (RED, "2→3  calentamiento isocórico"),
+              (U4, "3→4  expansión adiabática"),
+              (BLUE, "4→1  compresión isobárica"))
+    for i, (col, lab) in enumerate(etapas):
+        yy = ly + 22 + 18 * i
+        cv.line(lx + 12, yy - 4, lx + 32, yy - 4, col, 2.2)
+        cv.text(lx + 39, yy, lab, 10.5, TEXT, "start")
+
+    cv.text(350, 348, "Sólo hay calor en las etapas 2→3 (isocórica, +1 kJ) y "
+            "4→1 (isobárica, negativa): las adiabáticas no aportan nada al "
+            "balance.", 10.5, DIM)
+    cv.text(350, 366, "Por eso η = 1 + Q_{4→1}/Q_{2→3}, y la variación de "
+            "entropía del ciclo completo es cero por ser S función de estado.",
+            10.5, DIM)
+    cv.text(350, 396, f"n = {n * 1000:.2f} mmol   ·   "
+            f"η = {1 + (n * 3.5 * R * (T1 - T4)) / 1000:.3f}", 12.5, TEXT,
+            "middle", "600")
+    cv.save(os.path.join(BASE, "aux_6", "fig_aux_6_atkinson.svg"))
+
+
 if __name__ == "__main__":
     print("Generando diagramas…")
     fig_gas_ideal()
@@ -679,4 +929,8 @@ if __name__ == "__main__":
     fig_trabajo()
     fig_adiabatica()
     fig_kirchhoff()
+    fig_maquina()
+    fig_carnot()
+    fig_otto()
+    fig_atkinson()
     print("Listo.")

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 9 — Segunda Ley y Entropía</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–9 · Aux 1–6</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u4"></span><span class="num">A5</span> Pre-Control 1</a>
+    <div class="nav-section-title">Segunda ley</div>
+    <a class="nav-link active" href="../clase_9/"><span class="dot dot-u5"></span><span class="num">09</span> Carnot y Entropía</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u5"></span><span class="num">A6</span> Ciclos y Entropía</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Segunda ley</div>
+    <div class="unit-pill u5 bg-u5">Segunda ley · Clase 9</div>
+    <h1>Clase 9: Segunda Ley, Ciclo de Carnot y Entropía</h1>
+    <p class="desc">La primera ley no distingue entre lo que ocurre y lo que nunca ocurre: un vaso roto que se recompone la cumple igual de bien. La segunda ley pone esa dirección, primero como una prohibición sobre máquinas térmicas y después, vía el ciclo de Carnot, como una función de estado nueva: la entropía.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Procesos espontáneos: ocurren sin necesidad de efectuar trabajo — y la termodinámica no dice nada de su velocidad</li>
+        <li>Depósitos térmicos (fuente y sumidero) y máquina térmica como sistema compuesto</li>
+        <li>Enunciado de Kelvin-Planck (1851/1893) y enunciado de Clausius (1854)</li>
+        <li>Teorema de Carnot (1824): ninguna máquina supera a la reversible que opera entre los mismos focos</li>
+        <li>Procesos reversibles e irreversibles: qué cae en cada lista y por qué</li>
+        <li>El ciclo de Carnot: dos isotermas y dos adiabáticas, todas reversibles</li>
+        <li>Eficiencia del ciclo de Carnot y la relación <math data-tex="q_c/T_c = -q_f/T_f"><msub><mi>q</mi><mi>c</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mi>q</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>f</mi></msub></math></li>
+        <li>Motor de combustión interna de 4 tiempos y el ciclo de Otto idealizado</li>
+        <li>Definición termodinámica de entropía: <math data-tex="dS = \delta q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mi>δ</mi><msub><mi>q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math></li>
+        <li><math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> de un gas ideal en expansión isotérmica, y <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> de los alrededores</li>
+        <li>Interpretación molecular: niveles de energía, distribución de Boltzmann, microestados</li>
+        <li>Entropía estadística <math data-tex="S = k_B \ln W"><mi>S</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>W</mi></math> y su consistencia con la definición termodinámica</li>
+        <li>Demostración de que <math data-tex="S"><mi>S</mi></math> es función de estado: aproximación de un ciclo reversible cualquiera por ciclos de Carnot</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Proceso espontáneo</h3>
+        <p>El que ocurre sin necesidad de efectuar trabajo sobre el sistema: una tendencia natural. Ojo con la trampa habitual — la termodinámica dice si un proceso <em>puede</em> ocurrir, no <em>cuán rápido</em>. El diamante es termodinámicamente inestable frente al grafito y aun así dura eones.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Máquina térmica</h3>
+        <p>Sistema compuesto por dos piezas: la <strong>máquina</strong>, un sistema cerrado donde un fluido describe un proceso cíclico cuasiestático, y los <strong>focos</strong>, sistemas de temperatura constante que no se alteran al extraerles o entregarles calor (el mar, el ambiente, un fluido en ebullición). El resultado neto es producción de trabajo.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Kelvin-Planck vs. Clausius</h3>
+        <p>Kelvin-Planck prohíbe convertir calor íntegramente en trabajo en un ciclo; Clausius prohíbe que el calor pase solo de frío a caliente. Son <em>equivalentes</em>: quien violara uno podría acoplarse a una máquina normal y violar el otro. Ambos son negativos — dicen qué no se puede, no qué se puede.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Teorema de Carnot</h3>
+        <p>Ninguna máquina térmica que funcione entre dos focos puede tener rendimiento mayor que una máquina reversible operando entre esos mismos focos. Enunciado en 1824, <em>antes</em> que la primera y la segunda ley: es otra forma de enunciar el segundo principio.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Reversible vs. irreversible</h3>
+        <p>Reversibles: expansión controlada, movimiento sin fricción, deformación elástica, circuitos sin resistencia, descarga controlada de una pila. Irreversibles: resistencia eléctrica, ondas de choque, histéresis, flujo viscoso, fricción, expansión libre, estrangulamiento, <strong>reacciones químicas espontáneas</strong> y <strong>mezcla de fluidos distintos</strong>.</p>
+      </div>
+      <div class="concept-card">
+        <h3>El camino reversible</h3>
+        <p><math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> se calcula integrando <math data-tex="\delta q_{\text{rev}}/T"><mi>δ</mi><msub><mi>q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math>, no <math data-tex="\delta q/T"><mi>δ</mi><mi>q</mi><mi>/</mi><mi>T</mi></math>. Si el proceso real es irreversible hay que <em>inventar</em> un camino reversible entre los mismos estados inicial y final. Como <math data-tex="S"><mi>S</mi></math> es función de estado, el resultado vale igual.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Microestados</h3>
+        <p><math data-tex="W"><mi>W</mi></math> es el número de microestados compatibles con un mismo macroestado. Cuantas más maneras hay de repartir las moléculas sin cambiar lo que se mide, mayor la entropía. Es el puente entre lo que se mide en el laboratorio y lo que hacen las moléculas.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Por qué <math data-tex="S"><mi>S</mi></math> es función de estado</h3>
+        <p>Cualquier ciclo reversible se aproxima por una suma de ciclos de Carnot; los tramos internos se cancelan de a pares y sólo sobrevive el perímetro. Como cada ciclo de Carnot aporta cero, la integral cíclica de <math data-tex="dS"><mi>d</mi><mi>S</mi></math> es cero, y eso es exactamente la definición de diferencial exacta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Las dos formulaciones de la segunda ley</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Kelvin-Planck: es imposible una máquina cíclica cuyo único efecto sea extraer calor de un foco y convertirlo íntegramente en trabajo. Clausius: es imposible un dispositivo cíclico cuyo único efecto sea pasar calor de un cuerpo frío a otro más caliente. "Único efecto" es la parte importante: un refrigerador sí mueve calor hacia arriba, pero consumiendo trabajo.
+      </div>
+    </div>
+
+    <div class="figure">
+      <div class="figure-scroll">
+        <img src="fig_clase_9_maquina.svg" alt="Máquina térmica entre dos focos y los dos dispositivos que la segunda ley prohíbe">
+      </div>
+      <div class="figure-cap">
+        <strong>Lo que la segunda ley prohíbe.</strong> Una máquina real toma <math data-tex="q_c"><msub><mi>q</mi><mi>c</mi></msub></math> del foco caliente, produce <math data-tex="W"><mi>W</mi></math> y está
+        <em>obligada</em> a botar <math data-tex="|q_f|"><mrow><mo>|</mo><msub><mi>q</mi><mi>f</mi></msub><mo>|</mo></mrow></math> al foco frío. El móvil de segunda especie de Kelvin-Planck se saltaría ese desecho; el de
+        Clausius subiría calor sin pagar trabajo. Los dos enunciados prohíben cosas distintas, pero son lógicamente equivalentes.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Eficiencia de una máquina térmica</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Trabajo desarrollado dividido por calor absorbido. Con el convenio de signos de este curso <math data-tex="q_f &lt; 0"><msub><mi>q</mi><mi>f</mi></msub><mo>&lt;</mo><mn>0</mn></math> (sale del sistema), así que <math data-tex="\eta &lt; 1"><mi>η</mi><mo>&lt;</mo><mn>1</mn></math> siempre. Que <math data-tex="\eta = 1"><mi>η</mi><mo>=</mo><mn>1</mn></math> exigiría <math data-tex="q_f = 0"><msub><mi>q</mi><mi>f</mi></msub><mo>=</mo><mn>0</mn></math>: justo lo que prohíbe Kelvin-Planck.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Las cuatro etapas del ciclo de Carnot</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Un gas ideal en un cilindro de base conductora y paredes aislantes, entre dos receptáculos de gran capacidad calorífica a <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math> y <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math>. Todas las etapas son reversibles — sin eso el resultado no vale.
+      </div>
+    </div>
+
+    <div class="figure">
+      <div class="figure-scroll">
+        <img src="fig_clase_9_carnot.svg" alt="Ciclo de Carnot en el plano presión–volumen">
+      </div>
+      <div class="figure-cap">
+        <strong>El ciclo de Carnot en <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math>.</strong> Las curvas están calculadas con gas ideal: las isotermas son <math data-tex="PV = "><mi>P</mi><mi>V</mi><mo form="infix" rspace="0em">=</mo></math> cte. y
+        las adiabáticas <math data-tex="PV^\gamma = "><mi>P</mi><msup><mi>V</mi><mi>γ</mi></msup><mo form="infix" rspace="0em">=</mo></math> cte., con <math data-tex="\gamma = 1{,}4"><mi>γ</mi><mo>=</mo><mn>1</mn><mtext>,</mtext><mn>4</mn></math>. El lazo es delgado a propósito: así es de verdad. Las adiabáticas caen
+        más rápido que las isotermas, y por eso el ciclo se cierra.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Eficiencia de Carnot</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Sólo dependen las temperaturas de los focos: ni del fluido, ni del tamaño de la máquina, ni de cuánto calor se mueva. La segunda igualdad — que sale de comparar ambas expresiones de <math data-tex="\eta"><mi>η</mi></math> — es el germen de la entropía.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Ciclo de Otto: los dos intercambios de calor</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Modelo idealizado del motor a gasolina de 4 tiempos. Tanto la "ignición" (<math data-tex="b \to c"><mi>b</mi><mo stretchy="false">→</mo><mi>c</mi></math>) como el "enfriamiento" (<math data-tex="d \to a"><mi>d</mi><mo stretchy="false">→</mo><mi>a</mi></math>) ocurren a volumen constante, por eso ambos llevan <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Eficiencia del ciclo de Otto</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_6.svg" alt=""></div>
+      <div class="formula-desc">
+        Al dividir los dos calores, las <math data-tex="nC_V"><mi>n</mi><msub><mi>C</mi><mi>V</mi></msub></math> se cancelan y quedan sólo temperaturas; usando <math data-tex="TV^{\gamma-1} ="><mi>T</mi><msup><mi>V</mi><mrow><mi>γ</mi><mo lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow></msup><mo form="infix" rspace="0em">=</mo></math> cte. en las dos adiabáticas, todo colapsa en la razón de compresión <math data-tex="r"><mi>r</mi></math>. Subir <math data-tex="r"><mi>r</mi></math> sube el rendimiento: por eso los motores de alta compresión, y por eso el límite lo pone la detonación del combustible, no la termodinámica.
+      </div>
+    </div>
+
+    <div class="figure">
+      <div class="figure-scroll">
+        <img src="fig_clase_9_otto.svg" alt="Ciclo de Otto idealizado en el plano presión–volumen">
+      </div>
+      <div class="figure-cap">
+        <strong>Ciclo de Otto.</strong> Dos adiabáticas (compresión y expansión) y dos isocóricas (los intercambios de calor). Es el
+        modelo termodinámico del motor de 4 tiempos: <math data-tex="a \to b"><mi>a</mi><mo stretchy="false">→</mo><mi>b</mi></math> comprime la mezcla, <math data-tex="b \to c"><mi>b</mi><mo stretchy="false">→</mo><mi>c</mi></math> es la chispa, <math data-tex="c \to d"><mi>c</mi><mo stretchy="false">→</mo><mi>d</mi></math> la carrera
+        de potencia y <math data-tex="d \to a"><mi>d</mi><mo stretchy="false">→</mo><mi>a</mi></math> la salida de gases. No es un ciclo de Carnot: su rendimiento es menor que el de Carnot entre las mismas temperaturas extremas.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Definición termodinámica de entropía</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_7.svg" alt=""></div>
+      <div class="formula-desc">
+        El subíndice "rev" no es decorativo: para calcular <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> entre dos estados hay que encontrar un camino <em>reversible</em> entre ellos, aunque el proceso real no lo sea.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Expansión isotérmica de un gas ideal</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_8.svg" alt=""></div>
+      <div class="formula-desc">
+        En una isoterma <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math>, luego <math data-tex="q_{\text{rev}} = W = nRT\ln(V_f/V_i)"><msub><mi>q</mi><mtext>rev</mtext></msub><mo>=</mo><mi>W</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></math>, y dividir por <math data-tex="T"><mi>T</mi></math> deja la expresión. Al expandirse aumenta la entropía: más volumen, más microestados.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Entropía de los alrededores</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_9.svg" alt=""></div>
+      <div class="formula-desc">
+        Los alrededores se tratan como un foco: tan grandes que su temperatura no cambia, así que <math data-tex="T_{\text{alr}}"><msub><mi>T</mi><mtext>alr</mtext></msub></math> sale de la integral y el calor entra sin importar si el proceso fue reversible o no. Con esto se calcula, por ejemplo, <math data-tex="\Delta S_{\text{alr}}"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>alr</mtext></msub></math> al formarse un mol de <math data-tex="\mathrm{N_2O_4}"><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub><msub><mi mathvariant="normal">O</mi><mn>4</mn></msub></math> desde dos de <math data-tex="\mathrm{NO_2}"><mi mathvariant="normal">N</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> en condiciones estándar a 298 K.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Distribución de Boltzmann</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_10.svg" alt=""></div>
+      <div class="formula-desc">
+        Población promedio del nivel de energía <math data-tex="E_i"><msub><mi>E</mi><mi>i</mi></msub></math>. A cualquier temperatura los estados más poblados son los de menor energía; al subir <math data-tex="T"><mi>T</mi></math> la población se reparte hacia arriba.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Entropía estadística de Boltzmann</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_11.svg" alt=""></div>
+      <div class="formula-desc">
+        Ejemplo del apunte: 4 moléculas diatómicas en posiciones fijas, cada una con dos orientaciones de igual energía. Hay <math data-tex="2^4 = 16"><msup><mn>2</mn><mn>4</mn></msup><mo>=</mo><mn>16</mn></math> microestados, y <math data-tex="S = k_B\ln 16"><mi>S</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mn>16</mn></math>. [Lectura: Petrucci 20.2]
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">La entropía del ciclo de Carnot se anula</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_12.svg" alt=""></div>
+      <div class="formula-desc">
+        Las dos adiabáticas no aportan (<math data-tex="q = 0"><mi>q</mi><mo>=</mo><mn>0</mn></math>) y las dos isotermas aportan <math data-tex="q_c/T_c"><msub><mi>q</mi><mi>c</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub></math> y <math data-tex="q_f/T_f"><msub><mi>q</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>f</mi></msub></math>, que ya sabíamos que son opuestos.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">De Carnot a cualquier ciclo reversible</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_9_13.svg" alt=""></div>
+      <div class="formula-desc">
+        Un ciclo reversible cualquiera se aproxima por una sumatoria de ciclos de Carnot; el ajuste es exacto en el límite de ciclos infinitesimales. Los tramos interiores se recorren dos veces en sentidos opuestos y se cancelan, y sólo sobrevive el perímetro. Conclusión: <math data-tex="dS"><mi>d</mi><mi>S</mi></math> es diferencial exacta y <math data-tex="S"><mi>S</mi></math> es función de estado.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 9</div>
+      <ul>
+        <li>La primera ley dice que la energía se conserva; la segunda, en qué dirección se mueven las cosas. Un vaso que se recompone solo conserva la energía perfectamente y sin embargo no ocurre.</li>
+        <li>Los dos enunciados son prohibiciones, y de una prohibición sale una cota: Carnot. De la cota sale una igualdad para el caso reversible, <math data-tex="q_c/T_c = -q_f/T_f"><msub><mi>q</mi><mi>c</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mi>q</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>f</mi></msub></math>, y de ahí la entropía. Ese es el hilo completo de la clase.</li>
+        <li><math data-tex="\eta = 1 - T_f/T_c"><mi>η</mi><mo>=</mo><mn>1</mn><mo>−</mo><msub><mi>T</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub></math> exige temperaturas <em>absolutas</em>. Meter °C ahí es el error más frecuente y puede hasta dar rendimientos mayores que 1.</li>
+        <li>Para <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> de un proceso irreversible: inventar un camino reversible entre los mismos extremos e integrar ahí. El <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> del sistema sale igual; lo que cambia con la irreversibilidad es el de los alrededores.</li>
+        <li>La entropía del sistema puede perfectamente disminuir (un gas que se comprime, un líquido que congela). Lo que no puede disminuir es la del universo.</li>
+        <li>"Desorden" es una analogía cómoda pero engañosa: lo que cuenta <math data-tex="W"><mi>W</mi></math> son microestados accesibles, no lo revuelta que se vea una habitación.</li>
+        <li>El ciclo de Otto no es de Carnot: su rendimiento depende de la razón de compresión y queda por debajo del de Carnot entre las mismas temperaturas extremas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q9_1" data-correct="2">
+        <div class="quiz-question">1. Una máquina térmica opera entre 500 K y 300 K y su inventor afirma que rinde un 45 %. ¿Qué se puede decir?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q9_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Es posible, pero sólo si el fluido de trabajo es un gas ideal</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Es imposible: viola la primera ley</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Es imposible: el máximo entre esos focos es 40 %, y un 45 % lo supera — viola el teorema de Carnot</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Es posible sólo si el ciclo es irreversible</span></label>
+        </div>
+        <script type="text/explanation" id="q9_1-exp"><math data-tex="\eta_{\text{Carnot}} = 1 - 300/500 = 0{,}40"><msub><mi>η</mi><mtext>Carnot</mtext></msub><mo>=</mo><mn>1</mn><mo>−</mo><mn>300</mn><mi>/</mi><mn>500</mn><mo>=</mo><mn>0</mn><mtext>,</mtext><mn>40</mn></math>, es decir 40 %. Ninguna máquina que opere entre esos dos focos puede superarlo, reversible o no, y con cualquier fluido: el teorema de Carnot no deja rendijas. La primera ley, en cambio, está perfectamente contenta con un 45 % — la energía se conserva igual. Ese es justamente el punto de la segunda ley: prohíbe cosas que la primera permite.</script>
+        <div class="quiz-feedback" id="q9_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q9_2" data-correct="1">
+        <div class="quiz-question">2. Un gas ideal se expande contra el vacío (expansión libre, adiabática, irreversible) duplicando su volumen. ¿Cuánto vale <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> del gas?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q9_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Cero, porque <math data-tex="q = 0"><mi>q</mi><mo>=</mo><mn>0</mn></math> y <math data-tex="\Delta S = q/T"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>=</mo><mi>q</mi><mi>/</mi><mi>T</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q9_2" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="nR\ln 2 &gt; 0"><mi>n</mi><mi>R</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mn>2</mn><mo>></mo><mn>0</mn></math>, calculado sobre una expansión isotérmica reversible entre los mismos estados</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Negativo, porque el proceso es irreversible</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_2" value="3"><span class="opt-letter">D</span><span class="opt-text">No se puede calcular sin conocer la presión externa</span></label>
+        </div>
+        <script type="text/explanation" id="q9_2-exp">La definición es <math data-tex="dS = \delta q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mi>δ</mi><msub><mi>q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math>, y en la expansión libre el calor real es cero pero el proceso <em>no</em> es reversible, así que ese cero no sirve. Como <math data-tex="S"><mi>S</mi></math> es función de estado, se reemplaza el proceso por uno reversible con los mismos extremos. En la expansión libre de un gas ideal <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math>, luego <math data-tex="T"><mi>T</mi></math> no cambia: el camino cómodo es una isoterma reversible, y ahí <math data-tex="\Delta S = nR\ln(V_f/V_i) = nR\ln 2"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>=</mo><mi>n</mi><mi>R</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow><mo>=</mo><mi>n</mi><mi>R</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mn>2</mn></math>. La opción A es el error clásico de olvidar el subíndice "rev".</script>
+        <div class="quiz-feedback" id="q9_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q9_3" data-correct="3">
+        <div class="quiz-question">3. ¿Qué papel juega la aproximación de un ciclo reversible cualquiera por una suma de ciclos de Carnot?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q9_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Sirve para calcular el rendimiento de motores reales</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Demuestra que todo ciclo reversible tiene el mismo rendimiento que el de Carnot</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Permite medir <math data-tex="W"><mi>W</mi></math> contando microestados</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Extiende <math data-tex="\oint dS = 0"><mo lspace="0em">∮</mo><mi>d</mi><mi>S</mi><mo>=</mo><mn>0</mn></math> de Carnot a cualquier ciclo reversible, y con eso prueba que <math data-tex="S"><mi>S</mi></math> es función de estado</span></label>
+        </div>
+        <script type="text/explanation" id="q9_3-exp">Para un ciclo de Carnot se probó directamente que <math data-tex="\oint dS = q_c/T_c + q_f/T_f = 0"><mo lspace="0em">∮</mo><mi>d</mi><mi>S</mi><mo>=</mo><msub><mi>q</mi><mi>c</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub><mo>+</mo><msub><mi>q</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>f</mi></msub><mo>=</mo><mn>0</mn></math>. Al teselar un ciclo cualquiera con ciclos de Carnot infinitesimales, los tramos interiores se recorren dos veces en sentidos opuestos y se cancelan de a pares; sólo queda el perímetro, cuya integral es entonces la suma de ceros. Que <math data-tex="\oint dS = 0"><mo lspace="0em">∮</mo><mi>d</mi><mi>S</mi><mo>=</mo><mn>0</mn></math> para todo camino cerrado es exactamente la definición de diferencial exacta, y por lo tanto de función de estado. Ojo con B: distintos ciclos reversibles tienen rendimientos distintos — el de Carnot es el máximo sólo entre <em>dos focos fijos</em>.</script>
+        <div class="quiz-feedback" id="q9_3-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q9_4" data-correct="0">
+        <div class="quiz-question">4. Según <math data-tex="S = k_B\ln W"><mi>S</mi><mo>=</mo><msub><mi>k</mi><mi>B</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">ln</mo><mi>W</mi></math>, ¿por qué la misma cantidad de calor produce menos cambio de entropía a temperatura alta que a temperatura baja?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q9_4" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque a <math data-tex="T"><mi>T</mi></math> alta el sistema ya tiene muchos microestados poblados, y agregar energía cambia poco el reparto</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_4" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque <math data-tex="k_B"><msub><mi>k</mi><mi>B</mi></msub></math> depende de la temperatura</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_4" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a <math data-tex="T"><mi>T</mi></math> alta el calor deja de ser una forma de energía</span></label>
+          <label class="quiz-option"><input type="radio" name="q9_4" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque a <math data-tex="T"><mi>T</mi></math> alta los procesos son siempre reversibles</span></label>
+        </div>
+        <script type="text/explanation" id="q9_4-exp">Es la lectura molecular del <math data-tex="1/T"><mn>1</mn><mi>/</mi><mi>T</mi></math> que aparece en <math data-tex="dS = \delta q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mi>δ</mi><msub><mi>q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math>. A temperatura baja las moléculas se apiñan en los niveles bajos, y un poco de energía abre muchísimas configuraciones nuevas: <math data-tex="W"><mi>W</mi></math> crece mucho en términos relativos. A temperatura alta la población ya está desparramada y la misma energía apenas mueve la aguja. Dicho de otro modo: estornudar en una biblioteca en silencio cambia mucho más el ambiente que estornudar en un recital.</script>
+        <div class="quiz-feedback" id="q9_4-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_5/"><div class="nav-dir">← Anterior</div><div class="nav-title">Pre-Control 1</div></a>
+    <a href="../aux_6/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Ciclos y Entropía</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

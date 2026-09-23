@@ -1,6 +1,6 @@
 # Mantención de sidebars y navegación
 
-La sidebar y el bloque prev/next están **copiados literalmente en cada una de las 79 páginas** del
+La sidebar y el bloque prev/next están **copiados literalmente en cada una de las 82 páginas** del
 repo. No se editan a mano: los genera `scripts/sync-nav.py` desde el manifiesto `scripts/courses.py`.
 
 | Curso | index | páginas | total |
@@ -24,7 +24,7 @@ repo. No se editan a mano: los genera `scripts/sync-nav.py` desde el manifiesto 
 
 Para agregar una página: crear su carpeta, agregar una línea a `pages` en `scripts/courses.py` (y a
 `nav_order` si el curso lo define), y correr `./scripts/sync-nav.py <curso>`. El script escribe la
-sidebar y el prev/next en las 13, 26 o 40 páginas del curso, incluido su `index.html`.
+sidebar y el prev/next en las 16, 26 o 40 páginas del curso, incluido su `index.html`.
 
 El script **no toca nada fuera de esos dos bloques**. La tabla del temario en `<curso>/index.html` es
 contenido de la página y se sigue editando a mano.
@@ -39,7 +39,7 @@ contenido de la página y se sigue editando a mano.
 'termoquimica': {
     'icon': '🧪',
     'name': 'Termodinámica Química',
-    'subtitle': 'IQ2212 · Clases 1–8 · Aux 1–4',
+    'subtitle': 'IQ2212 · Clases 1–9 · Aux 1–6',
     'blocks': ['Gases ideales', 'Gases reales', 'Primera ley', 'Termoquímica'],
     # slug, num, etiqueta sidebar, unidad, bloque, título para el prev/next
     'pages': [
@@ -199,7 +199,7 @@ MOZ_HEADLESS=1 firefox --profile /tmp/ffprof --no-remote \
 - **Codificación**: los archivos son UTF-8 con acentos, `–` (en dash) y emoji. Abrir siempre con
   `encoding='utf-8'` explícito, en lectura y en escritura.
 - **No usar un parser HTML** que reserialice el documento (BeautifulSoup, lxml): reordena atributos y
-  reescribe entidades, produciendo un diff gigante en las 79 páginas. Sustitución textual del bloque
+  reescribe entidades, produciendo un diff gigante en las 82 páginas. Sustitución textual del bloque
   delimitado, y nada más.
 - **El reemplazo va como función**, no como string: `pattern.sub(lambda _m: nuevo, texto)`. Si se pasa
   el bloque generado como string, `re` interpreta `\1` y `\g<...>` dentro de él.

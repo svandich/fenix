@@ -122,12 +122,13 @@ COURSES = {
     'termoquimica': {
         'icon': '🧪',
         'name': 'Termodinámica Química',
-        'subtitle': 'IQ2212 · Clases 1–8 · Aux 1–4',
+        'subtitle': 'IQ2212 · Clases 1–9 · Aux 1–6',
         'blocks': [
             'Gases ideales',
             'Gases reales',
             'Primera ley',
             'Termoquímica',
+            'Segunda ley',
         ],
         # slug, num, etiqueta sidebar, unidad, bloque, título para el prev/next
         'pages': [
@@ -143,6 +144,9 @@ COURSES = {
             ('aux_4'  , 'A4', 'Primera Ley II'       , 'u3', 'Primera ley'  , 'Primera Ley II'),
             ('clase_7', '07', 'Calor de Reacción'    , 'u4', 'Termoquímica' , 'Calor de Reacción y Entalpías de Formación'),
             ('clase_8', '08', 'Hess y Kirchhoff'     , 'u4', 'Termoquímica' , 'Ley de Hess y Ecuación de Kirchhoff'),
+            ('aux_5'  , 'A5', 'Pre-Control 1'        , 'u4', 'Termoquímica' , 'Pre-Control 1'),
+            ('clase_9', '09', 'Carnot y Entropía'    , 'u5', 'Segunda ley'  , 'Segunda Ley, Ciclo de Carnot y Entropía'),
+            ('aux_6'  , 'A6', 'Ciclos y Entropía'    , 'u5', 'Segunda ley'  , 'Ciclos y Entropía'),
         ],
     },
 }

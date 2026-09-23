@@ -9,7 +9,7 @@ Repositorio de apuntes interactivos para cursos de ingeniería. Cada curso es un
 | `basicos/` | Prerrequisitos de Cálculo (1 página) | Completo |
 | `electro/` | Electromagnetismo (Aux 1–25) | Incompleto |
 | `termo/` | Termodinámica — DFI, física (Cat 1–28 + CC 1–11) | Completo |
-| `termoquimica/` | Termodinámica Química — IQ2212, DIQBM (Clases 1–8 + Aux 1–4) | En curso |
+| `termoquimica/` | Termodinámica Química — IQ2212, DIQBM (Clases 1–9 + Aux 1–6) | En curso |
 
 ## Estructura
 
@@ -20,22 +20,22 @@ repo-root/
 ├── basicos/                  ← index.html (página única, sin sidebar)
 ├── electro/                  ← index.html + aux_N/index.html × 25
 ├── termo/                    ← index.html + cat_N/index.html × 28 + cc_N/index.html × 11
-├── termoquimica/             ← index.html + clase_N/index.html × 8 + aux_N/index.html × 4
+├── termoquimica/             ← index.html + clase_N/index.html × 9 + aux_N/index.html × 6
 ├── typst/
 │   ├── electro/aux_N.typ     ← Fuentes Typst de fórmulas (electro, N=1–25)
 │   ├── termo/cat_N.typ       ← Fuentes Typst de cátedras (N=1–28)
 │   ├── termo/cc_N.typ        ← Fuentes Typst de clases complementarias (N=1–11)
-│   ├── termoquimica/clase_N.typ ← Fuentes Typst de cátedras IQ2212 (N=1–8)
-│   └── termoquimica/aux_N.typ   ← Fuentes Typst de auxiliares IQ2212 (N=1–4)
+│   ├── termoquimica/clase_N.typ ← Fuentes Typst de cátedras IQ2212 (N=1–9)
+│   └── termoquimica/aux_N.typ   ← Fuentes Typst de auxiliares IQ2212 (N=1–6)
 │   (los SVGs compilados viven en <curso>/<página>/ junto con el index.html)
 ├── scripts/
 │   ├── compile-typst.sh      ← Compila todos los .typ → SVG
 │   ├── make-diagrams.py      ← Genera los diagramas (no fórmulas) de termoquimica → SVG
 │   ├── check-lr-parens.py    ← Detecta lr((A)/(B)), que renderiza sin paréntesis
 │   ├── latex2typst.py        ← Traduce el LaTeX del math inline a sintaxis Typst
-│   ├── inline-mathml.py      ← Hornea el math inline ($...$) como MathML en las 80 páginas
+│   ├── inline-mathml.py      ← Hornea el math inline ($...$) como MathML en las 83 páginas
 │   ├── courses.py            ← Manifiesto: fuente de verdad de sidebar y prev/next
-│   └── sync-nav.py           ← Regenera sidebar y prev/next en las 79 páginas
+│   └── sync-nav.py           ← Regenera sidebar y prev/next en las 82 páginas
 ├── docs/
 │   ├── structure.md          ← Árbol de carpetas y convenciones
 │   ├── style-guide.md        ← Variables CSS, componentes, clases
@@ -135,7 +135,7 @@ Las **fórmulas** se compilan con Typst; los **diagramas** (curvas, ejes, esquem
 — gas ideal, Van der Waals reducida, construcción de Maxwell — en vez de trazarlas a ojo.
 
 ```
-python3 scripts/make-diagrams.py     # regenera los 8 diagramas de termoquimica/
+python3 scripts/make-diagrams.py     # regenera los 12 diagramas de termoquimica/
 ```
 
 - Salida: `<curso>/<página>/fig_<página>_<nombre>.svg`, junto al HTML, igual que las fórmulas.
@@ -147,7 +147,7 @@ python3 scripts/make-diagrams.py     # regenera los 8 diagramas de termoquimica/
 
 ## Cómo agregar una página nueva a un curso existente
 
-> ⚠️ La sidebar y el bloque prev/next están **copiados en cada página** del curso (79 archivos en
+> ⚠️ La sidebar y el bloque prev/next están **copiados en cada página** del curso (82 archivos en
 > total), pero **no se editan a mano**: los genera `./scripts/sync-nav.py` desde el manifiesto
 > `scripts/courses.py`. Agregar una página es agregar una línea al manifiesto y correr el script.
 > Ver [docs/sidebar-maintenance.md](docs/sidebar-maintenance.md).
@@ -172,7 +172,7 @@ python3 scripts/make-diagrams.py     # regenera los 8 diagramas de termoquimica/
 7. Compilar: `./build.sh <curso>`. Esto genera los SVG de las fórmulas de display y hornea el
    math inline (`$...$`) de la página nueva como MathML.
 8. Sincronizar la navegación: `./scripts/sync-nav.py <curso>`. Esto escribe la sidebar y el
-   prev/next en las 13, 26 o 40 páginas del curso, incluido su `index.html`.
+   prev/next en las 16, 26 o 40 páginas del curso, incluido su `index.html`.
 9. Actualizar `index.html` del curso con una fila nueva en la tabla del temario (link: `<página>/`).
    Esta tabla es contenido de la página y el script no la toca.
 
@@ -203,16 +203,16 @@ Ver [docs/structure.md](docs/structure.md) para más detalle.
 - HTML/CSS vanilla — sin frameworks, sin build step para el HTML.
 - Fuentes locales en `styles/fonts/` (Inter, JetBrains Mono).
 - **Typst 0.15.1** — CLI local para compilar fórmulas de display a SVG (`pacman -S typst` en Arch).
-  Los 348 SVG del repo están compilados con esta versión exacta. Subir de versión cambia los hashes
+  Los 372 SVG del repo están compilados con esta versión exacta. Subir de versión cambia los hashes
   de los ids de glifo y reescribe todos los archivos, sin cambio visual: esperá un diff enorme y
   revisá que el render no haya cambiado antes de commitear.
 - **MathML** para el math inline, horneado en build. Sin JS, sin CDN. Soporte de navegador:
   Firefox siempre, Chrome 109+, Safari 14.1+.
 - `styles/quiz.js` — único JS propio: corrige los quizzes de repaso al vuelo. Ya no tipografía nada;
   el MathML de las explicaciones lo renderiza el navegador solo.
-- `scripts/inline-mathml.py` — hornea el math inline de las 80 páginas. `--check` sale con código 1
+- `scripts/inline-mathml.py` — hornea el math inline de las 83 páginas. `--check` sale con código 1
   si algo quedó sin hornear; `--diff` muestra lo que aplicaría.
-- `scripts/sync-nav.py` — genera la sidebar y el prev/next de las 79 páginas desde `scripts/courses.py`.
+- `scripts/sync-nav.py` — genera la sidebar y el prev/next de las 82 páginas desde `scripts/courses.py`.
   `./scripts/sync-nav.py --check` sale con código 1 si algo quedó desincronizado (sirve para pre-commit).
 
 ## Abrir localmente

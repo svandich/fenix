@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auxiliar 5 — Pre-Control 1</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–9 · Aux 1–6</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+    <a class="nav-link active" href="../aux_5/"><span class="dot dot-u4"></span><span class="num">A5</span> Pre-Control 1</a>
+    <div class="nav-section-title">Segunda ley</div>
+    <a class="nav-link" href="../clase_9/"><span class="dot dot-u5"></span><span class="num">09</span> Carnot y Entropía</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u5"></span><span class="num">A6</span> Ciclos y Entropía</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Termoquímica</div>
+    <div class="unit-pill u4 bg-u4">Pre-Control 1 · Clases 1–8</div>
+    <h1>Auxiliar 5: Pre-Control 1</h1>
+    <p class="desc">Cinco problemas de controles pasados que barren todo lo que entra al Control 1: entalpías de formación y combustión, ley de Hess, un ciclo completo con la primera ley, coeficientes térmicos de un gas de Van der Waals, y una temperatura de llama adiabática con cambio de fase.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que ejercita</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Reacción de combustión completa: balance y productos en el estado de agregación correcto</li>
+        <li>Calor de reacción a partir de entalpías estándar de formación</li>
+        <li>Escalado del calor de reacción a una cantidad dada (volumen y densidad, o masa y masa molar)</li>
+        <li>Estequiometría del aire: del <math data-tex="\mathrm{O_2}"><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> requerido al volumen de aire, vía la fracción molar y el gas ideal</li>
+        <li>Ley de Hess con reacciones de combustión y descomposición como datos</li>
+        <li>Ciclo de tres etapas: isocórico irreversible, isotérmico reversible y una recta en el plano <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math></li>
+        <li>Capacidad calorífica dependiente de la temperatura, <math data-tex="C_P/R = 1 + aT"><msub><mi>C</mi><mi>P</mi></msub><mi>/</mi><mi>R</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>a</mi><mi>T</mi></math></li>
+        <li>Coeficientes de expansión térmica <math data-tex="\alpha"><mi>α</mi></math> y <math data-tex="\beta"><mi>β</mi></math> y compresibilidad isotérmica <math data-tex="\kappa"><mi>κ</mi></math> para Van der Waals</li>
+        <li>Temperatura de llama adiabática, con evaporación del agua en el camino</li>
+        <li>Construcción del ciclo termoquímico cuando los productos cambian de fase</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Herramientas que hay que tener a mano</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Entalpía de reacción</h3>
+        <p>Productos menos reactivos, cada uno con su coeficiente estequiométrico. El estado de agregación importa: <math data-tex="\mathrm{H_2O}(l)"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math> y <math data-tex="\mathrm{H_2O}(g)"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow></math> difieren en <math data-tex="\Delta H_{\text{vap}}"><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mtext>vap</mtext></msub></math>, y varios enunciados juegan justamente con eso.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ley de Hess</h3>
+        <p>Escribir la reacción objetivo, y luego buscar la combinación lineal de las reacciones dadas que la reproduce. Invertir cambia el signo; multiplicar por <math data-tex="n"><mi>n</mi></math> escala. Cuando los datos son combustiones y descomposiciones, conviene armar una tabla y cancelar especie por especie.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Temperatura de llama</h3>
+        <p>La que alcanzan los productos si toda la energía liberada se queda en ellos: cámara adiabática, <math data-tex="\Delta H_{\text{total}} = 0"><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mtext>total</mtext></msub><mo>=</mo><mn>0</mn></math>. Se plantea el ciclo "reaccionar a 298 K y después calentar los productos" y se despeja la temperatura final del segundo tramo.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Cambio de fase en el camino</h3>
+        <p>Si los productos pasan de 373 K, el agua se evapora: el tramo de calentamiento se parte en tres — calentar el líquido hasta 373 K, evaporarlo (<math data-tex="\Delta H_{\text{vap}}"><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mtext>vap</mtext></msub></math>), y calentar el vapor hasta <math data-tex="T_{\text{llama}}"><msub><mi>T</mi><mtext>llama</mtext></msub></math>. Olvidar el término de fase es el error que más puntos cuesta.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Coeficientes térmicos</h3>
+        <p><math data-tex="\alpha"><mi>α</mi></math> y <math data-tex="\beta"><mi>β</mi></math> son derivadas de la ecuación de estado; <math data-tex="\kappa = \alpha/(P\beta)"><mi>κ</mi><mo>=</mo><mi>α</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>P</mi><mi>β</mi></mrow><mo>)</mo></mrow></math> las junta. La estrategia con Van der Waals es no despejar <math data-tex="V"><mi>V</mi></math> (la cúbica es intratable): derivar implícitamente y despejar la derivada.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Trabajo en una recta <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math></h3>
+        <p>Si <math data-tex="P"><mi>P</mi></math> varía linealmente con <math data-tex="V"><mi>V</mi></math>, el área bajo la recta es un trapecio: <math data-tex="W = \tfrac12(P_1+P_2)(V_2-V_1)"><mi>W</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mo>(</mo><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>+</mo><msub><mi>P</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><msub><mi>V</mi><mn>2</mn></msub><mo>−</mo><msub><mi>V</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></math>. No hace falta integrar nada. Sirve para cerrar ciclos "de vuelta al estado inicial" sin especificar el proceso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas que se usan</h2>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Calor de reacción estándar</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Punto de partida del P1 y del P5. Los elementos en su forma más estable tienen <math data-tex="\Delta H_f^\circ = 0"><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup><mo>=</mo><mn>0</mn></math>, así que sólo entran los compuestos.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Álgebra de la ley de Hess</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_2.svg" alt=""></div>
+      <div class="formula-desc">
+        Las tres únicas operaciones permitidas. Con ellas se arma la reacción del P2 a partir de las cuatro reacciones que entrega el enunciado.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Balance de la cámara adiabática</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_3.svg" alt=""></div>
+      <div class="formula-desc">
+        La entalpía total del proceso es cero porque la cámara es adiabática y opera a presión constante. Lo que libera la reacción se lo lleva íntegro el calentamiento de los productos: ésa es la ecuación que define <math data-tex="T_{\text{llama}}"><msub><mi>T</mi><mtext>llama</mtext></msub></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Calentamiento con cambio de fase</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Estructura del tramo de calentamiento del P5 cuando <math data-tex="T_{\text{llama}} &gt; 373"><msub><mi>T</mi><mtext>llama</mtext></msub><mo>></mo><mn>373</mn></math> K. Los <math data-tex="\mathrm{CO_2}"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> sólo aportan el término de <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math>; el agua aporta los tres.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Coeficientes térmicos</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Definiciones que da el enunciado del P4, más la relación entre ellas. La última igualdad de <math data-tex="\kappa"><mi>κ</mi></math> es la definición usual; el enunciado pide llegar a ella vía <math data-tex="\alpha/(P\beta)"><mi>α</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>P</mi><mi>β</mi></mrow><mo>)</mo></mrow></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Derivadas de Van der Waals</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_6.svg" alt=""></div>
+      <div class="formula-desc">
+        <math data-tex="(\partial P/\partial T)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math> sale directo porque <math data-tex="P"><mi>P</mi></math> está despejada. <math data-tex="(\partial V/\partial T)_P"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub></math> se obtiene derivando implícitamente la ecuación de estado respecto de <math data-tex="T"><mi>T</mi></math> a <math data-tex="P"><mi>P</mi></math> fija y despejando: nunca hace falta resolver la cúbica en <math data-tex="V"><mi>V</mi></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Etapas del ciclo</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_7.svg" alt=""></div>
+      <div class="formula-desc">
+        Las dos primeras etapas del P3. Que el tramo isocórico sea irreversible no cambia <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> ni <math data-tex="Q"><mi>Q</mi></math>: a volumen constante no hay trabajo, y <math data-tex="U"><mi>U</mi></math> es función de estado.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Capacidad calorífica dependiente de <math data-tex="T"><mi>T</mi></math></div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_8.svg" alt=""></div>
+      <div class="formula-desc">
+        Con <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> función de <math data-tex="T"><mi>T</mi></math> ya no se puede sacar de la integral. Para un gas ideal <math data-tex="C_V = C_P - R"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><msub><mi>C</mi><mi>P</mi></msub><mo>−</mo><mi>R</mi></math>, y el resultado sale cuadrático en las temperaturas.
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Trabajo de un tramo recto en <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math></div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_9.svg" alt=""></div>
+      <div class="formula-desc">
+        El área del trapecio bajo la recta. Es la tercera etapa del P3, la que cierra el ciclo "variando linealmente la presión con el volumen".
+      </div>
+    </div>
+
+    <div class="formula-block u4">
+      <div class="formula-label">Volumen de aire</div>
+      <div class="formula-math"><img class="typst-formula" src="aux_5_10.svg" alt=""></div>
+      <div class="formula-desc">
+        El aire es 21 % de <math data-tex="\mathrm{O_2}"><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> <em>en volumen</em>, que para gases ideales es lo mismo que en moles. Se calculan los moles de <math data-tex="\mathrm{O_2}"><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> que pide la estequiometría, se dividen por 0,21 y se convierten a volumen con las condiciones que indique el enunciado.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">✏️</span> Problemas</h2>
+
+    <div class="problem-block u4">
+      <div class="problem-head">
+        <span class="problem-num">P1</span>
+        <span class="problem-title"><math data-tex="\Delta H_{\text{rxn}}^\circ"><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mtext>rxn</mtext><mo>∘</mo></msubsup></math> — combustión del octano</span>
+        <span class="problem-badge">Control 2 Primavera 2024</span>
+      </div>
+      <div class="problem-statement">
+        Los productos de la combustión completa del octano, <math data-tex="\mathrm{C_8H_{18}}"><msub><mi mathvariant="normal">C</mi><mn>8</mn></msub><msub><mi mathvariant="normal">H</mi><mn>18</mn></msub></math>, son dióxido de carbono y agua <strong>en estado gaseoso</strong>. La densidad del octano es 800 kg/m³. El aire contiene un 21 % de oxígeno en volumen. Los gases se comportan idealmente, con <math data-tex="R = 8{,}206\times10^{-5}"><mi>R</mi><mo>=</mo><mn>8</mn><mtext>,</mtext><mn>206</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>5</mn></mrow></msup></math> m³·atm/(mol·K).
+        <p>(I) El calor de la reacción de combustión, en kJ. (II) La energía liberada en la combustión de 100 dm³ de octano. (III) El volumen de aire necesario para esa combustión, medido a 30 °C y presión atmosférica, en m³. (IV) Explicar qué es y cómo se calcula la temperatura de llama.</p>
+        <p>Datos: <math data-tex="\Delta H_f^\circ"><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup></math> = −250, −394 y −242 kJ/mol para <math data-tex="\mathrm{C_8H_{18}}(l)"><msub><mi mathvariant="normal">C</mi><mn>8</mn></msub><msub><mi mathvariant="normal">H</mi><mn>18</mn></msub><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math>, <math data-tex="\mathrm{CO_2}(g)"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow></math> y <math data-tex="\mathrm{H_2O}(g)"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow></math>; masas molares 114, 44 y 18 g/mol.</p>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Balancear la combustión completa: <math data-tex="\mathrm{C_8H_{18}} + \tfrac{25}{2}\mathrm{O_2} \to 8\,\mathrm{CO_2} + 9\,\mathrm{H_2O}"><msub><mi mathvariant="normal">C</mi><mn>8</mn></msub><msub><mi mathvariant="normal">H</mi><mn>18</mn></msub><mo>+</mo><mfrac><mn>25</mn><mn>2</mn></mfrac><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub><mo stretchy="false">→</mo><mn>8</mn><mspace width="0.1667em"/><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub><mo>+</mo><mn>9</mn><mspace width="0.1667em"/><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi></math>. Ojo con el coeficiente fraccionario del <math data-tex="\mathrm{O_2}"><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> — si se prefiere entero, multiplicar toda la reacción por 2 y acordarse de que entonces <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math> es por 2 moles de octano.</li>
+          <li>(I) Aplicar <math data-tex="\Delta H^\circ = \sum\nu\Delta H_f^\circ(\text{prod}) - \sum\nu\Delta H_f^\circ(\text{reac})"><mi mathvariant="normal">Δ</mi><msup><mi>H</mi><mo>∘</mo></msup><mo>=</mo><mo form="prefix" lspace="0em">∑</mo><mi>ν</mi><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup><mrow><mo>(</mo><mtext>prod</mtext><mo>)</mo></mrow><mo>−</mo><mo form="prefix" lspace="0em">∑</mo><mi>ν</mi><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup><mrow><mo>(</mo><mtext>reac</mtext><mo>)</mo></mrow></math>. El <math data-tex="\mathrm{O_2}"><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> es un elemento en su forma estable: aporta cero. El agua va como <em>gas</em>, no como líquido.</li>
+          <li>(II) Convertir 100 dm³ de octano a masa con la densidad, y de masa a moles con la masa molar. Multiplicar por el <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math> por mol. Cuidado con las unidades: 800 kg/m³ = 0,8 kg/dm³.</li>
+          <li>(III) De la estequiometría, los moles de <math data-tex="\mathrm{O_2}"><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> son <math data-tex="\tfrac{25}{2}"><mfrac><mn>25</mn><mn>2</mn></mfrac></math> veces los de octano. Los moles de aire son <math data-tex="n_{\mathrm{O_2}}/0{,}21"><msub><mi>n</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></msub><mi>/</mi><mn>0</mn><mtext>,</mtext><mn>21</mn></math>.</li>
+          <li>Con el gas ideal a 303,15 K y 1 atm, obtener el volumen de aire. El <math data-tex="R"><mi>R</mi></math> que da el enunciado ya viene en m³·atm/(mol·K): el resultado sale directo en m³.</li>
+          <li>(IV) La temperatura de llama es la que alcanzarían los productos si la combustión ocurriera adiabáticamente y todo el calor liberado se invirtiera en calentarlos. Se plantea <math data-tex="\Delta H_{\text{rxn}}(298) + \int_{298}^{T}\sum n_i C_{P,i}\,dT = 0"><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mtext>rxn</mtext></msub><mrow><mo>(</mo><mn>298</mn><mo>)</mo></mrow><mo>+</mo><msubsup><mo form="prefix" lspace="0em">∫</mo><mn>298</mn><mi>T</mi></msubsup><mo form="prefix" lspace="0em">∑</mo><msub><mi>n</mi><mi>i</mi></msub><msub><mi>C</mi><mrow><mi>P</mi><mo rspace="0em">,</mo><mi>i</mi></mrow></msub><mspace width="0.1667em"/><mi>d</mi><mi>T</mi><mo>=</mo><mn>0</mn></math> y se despeja <math data-tex="T"><mi>T</mi></math>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u4">
+      <div class="problem-head">
+        <span class="problem-num">P2</span>
+        <span class="problem-title">Ley de Hess — hidracina y metanol</span>
+        <span class="problem-badge">Control 1 2023</span>
+      </div>
+      <div class="problem-statement">
+        La hidracina (<math data-tex="\mathrm{N_2H_4}(l)"><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub><msub><mi mathvariant="normal">H</mi><mn>4</mn></msub><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math>) y el metanol (<math data-tex="\mathrm{CH_4O}(l)"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>4</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math>) reaccionan para formar formaldehído según
+        <math data-tex="\mathrm{N_2H_4}(l) + \mathrm{CH_4O}(l) \to \mathrm{CH_2O}(g) + \mathrm{N_2}(g) + 3\,\mathrm{H_2}(g)"><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub><msub><mi mathvariant="normal">H</mi><mn>4</mn></msub><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow><mo>+</mo><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>4</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow><mo stretchy="false">→</mo><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow><mo>+</mo><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow><mo>+</mo><mn>3</mn><mspace width="0.1667em"/><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow></math>.
+        Determinar la entalpía estándar de esta reacción cuando reacciona 1 kg de hidracina.
+        <p>Datos: la combustión del formaldehído (todas las especies gaseosas) libera 726,6 kJ/mol; la descomposición del amoniaco gaseoso en <math data-tex="\mathrm{H_2}"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub></math> y <math data-tex="\mathrm{N_2}"><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub></math> requiere 57,7 kJ/mol; <math data-tex="\mathrm{CH_2O}(g) + \mathrm{H_2}(g) \to \mathrm{CH_4O}(l)"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow><mo>+</mo><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow><mo stretchy="false">→</mo><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>4</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math> con <math data-tex="\Delta H = 81{,}2"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mn>81</mn><mtext>,</mtext><mn>2</mn></math> kJ/mol; <math data-tex="2\,\mathrm{NH_3}(g) \to \mathrm{N_2H_4}(l) + \mathrm{H_2}(g)"><mn>2</mn><mspace width="0.1667em"/><mi mathvariant="normal">N</mi><msub><mi mathvariant="normal">H</mi><mn>3</mn></msub><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow><mo stretchy="false">→</mo><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub><msub><mi mathvariant="normal">H</mi><mn>4</mn></msub><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow><mo>+</mo><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow></math> con <math data-tex="\Delta H = 22{,}5"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mn>22</mn><mtext>,</mtext><mn>5</mn></math> kJ/mol. <math data-tex="PM_\mathrm{N} = 23"><mi>P</mi><msub><mi>M</mi><mi mathvariant="normal">N</mi></msub><mo>=</mo><mn>23</mn></math>, <math data-tex="PM_\mathrm{H} = 1"><mi>P</mi><msub><mi>M</mi><mi mathvariant="normal">H</mi></msub><mo>=</mo><mn>1</mn></math>, <math data-tex="PM_\mathrm{C} = 12"><mi>P</mi><msub><mi>M</mi><mi mathvariant="normal">C</mi></msub><mo>=</mo><mn>12</mn></math>, <math data-tex="PM_\mathrm{O} = 16"><mi>P</mi><msub><mi>M</mi><mi mathvariant="normal">O</mi></msub><mo>=</mo><mn>16</mn></math> g/mol.</p>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Escribir explícitamente cada dato como una ecuación química con su <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math>. "Libera 726,6 kJ/mol" significa <math data-tex="\Delta H = -726{,}6"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mo form="prefix">−</mo><mn>726</mn><mtext>,</mtext><mn>6</mn></math>; "requiere 57,7 kJ/mol" significa <math data-tex="\Delta H = +57{,}7"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mo form="prefix">+</mo><mn>57</mn><mtext>,</mtext><mn>7</mn></math>. Los signos son la mitad del problema.</li>
+          <li>La descomposición del amoniaco está escrita por mol de <math data-tex="\mathrm{NH_3}"><mi mathvariant="normal">N</mi><msub><mi mathvariant="normal">H</mi><mn>3</mn></msub></math>: <math data-tex="\mathrm{NH_3}(g) \to \tfrac12\mathrm{N_2} + \tfrac32\mathrm{H_2}"><mi mathvariant="normal">N</mi><msub><mi mathvariant="normal">H</mi><mn>3</mn></msub><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow><mo stretchy="false">→</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub></math>, con <math data-tex="\Delta H = +57{,}7"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mo form="prefix">+</mo><mn>57</mn><mtext>,</mtext><mn>7</mn></math> kJ. Para combinarla con la cuarta reacción (que tiene 2 <math data-tex="\mathrm{NH_3}"><mi mathvariant="normal">N</mi><msub><mi mathvariant="normal">H</mi><mn>3</mn></msub></math>) hay que duplicarla.</li>
+          <li>Buscar la combinación lineal que deje exactamente la reacción objetivo. Una ruta cómoda: invertir la reacción de <math data-tex="\mathrm{N_2H_4}"><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub><msub><mi mathvariant="normal">H</mi><mn>4</mn></msub></math> para consumirla, invertir la de <math data-tex="\mathrm{CH_4O}"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>4</mn></msub><mi mathvariant="normal">O</mi></math> para consumirlo, y usar la del amoniaco para eliminar el <math data-tex="\mathrm{NH_3}"><mi mathvariant="normal">N</mi><msub><mi mathvariant="normal">H</mi><mn>3</mn></msub></math> intermedio.</li>
+          <li>Verificar la cancelación especie por especie, incluidos los estados de agregación: un <math data-tex="\mathrm{H_2O}(l)"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math> no cancela con un <math data-tex="\mathrm{H_2O}(g)"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow></math>.</li>
+          <li>La combustión del formaldehído sólo hace falta si se usa como puente; comprobar si el camino elegido la necesita, y si no, no forzarla.</li>
+          <li>Convertir: 1 kg de hidracina son <math data-tex="1000/PM_{\mathrm{N_2H_4}}"><mn>1000</mn><mi>/</mi><mi>P</mi><msub><mi>M</mi><mrow><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub><msub><mi mathvariant="normal">H</mi><mn>4</mn></msub></mrow></msub></math> moles, con <math data-tex="PM = 2(23) + 4(1)"><mi>P</mi><mi>M</mi><mo>=</mo><mn>2</mn><mrow><mo>(</mo><mn>23</mn><mo>)</mo></mrow><mo>+</mo><mn>4</mn><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></math> según los datos del enunciado. Multiplicar el <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math> por mol por ese número.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u4">
+      <div class="problem-head">
+        <span class="problem-num">P3</span>
+        <span class="problem-title">Primera ley — ciclo con fuente térmica</span>
+        <span class="problem-badge">C2 Otoño 2026</span>
+      </div>
+      <div class="problem-statement">
+        Un mol de gas ideal en un cierto estado termodinámico. Se dispone de una fuente de gran capacidad calorífica a temperatura <math data-tex="T_F"><msub><mi>T</mi><mi>F</mi></msub></math>. El gas realiza el ciclo siguiente: se pone en contacto térmico con la fuente y alcanza <math data-tex="T_F"><msub><mi>T</mi><mi>F</mi></msub></math> mediante un proceso <strong>isocórico irreversible</strong>; luego se expande isotérmica y reversiblemente hasta que el volumen y la presión valen el doble de sus valores iniciales; finalmente retorna al estado inicial variando linealmente la presión con el volumen. El calor específico molar a presión constante es <math data-tex="C_P/R = 1 + aT"><msub><mi>C</mi><mi>P</mi></msub><mi>/</mi><mi>R</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>a</mi><mi>T</mi></math>.
+        <p>(i) Representar el ciclo en un diagrama <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math>. (ii) Determinar, para cada etapa, el trabajo, el calor y la variación de energía interna, en función de <math data-tex="a"><mi>a</mi></math>, <math data-tex="T_F"><msub><mi>T</mi><mi>F</mi></msub></math> y <math data-tex="R"><mi>R</mi></math>.</p>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Ordenar los estados. Estado 1: <math data-tex="(P_1, V_1, T_1)"><mrow><mo>(</mo><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>,</mo><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><msub><mi>T</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow></math>. Estado 2: mismo volumen <math data-tex="V_1"><msub><mi>V</mi><mn>1</mn></msub></math>, temperatura <math data-tex="T_F"><msub><mi>T</mi><mi>F</mi></msub></math>. Estado 3: <math data-tex="V_3 = 2V_1"><msub><mi>V</mi><mn>3</mn></msub><mo>=</mo><mn>2</mn><msub><mi>V</mi><mn>1</mn></msub></math> y <math data-tex="P_3 = 2P_1"><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mn>2</mn><msub><mi>P</mi><mn>1</mn></msub></math> — cuidado, aquí "el doble de sus respectivos valores iniciales" se refiere al estado <em>inicial del ciclo</em>, no al del tramo.</li>
+          <li>Esa condición amarra las temperaturas: como <math data-tex="P_3V_3 = 4P_1V_1"><msub><mi>P</mi><mn>3</mn></msub><msub><mi>V</mi><mn>3</mn></msub><mo>=</mo><mn>4</mn><msub><mi>P</mi><mn>1</mn></msub><msub><mi>V</mi><mn>1</mn></msub></math> y la etapa 2→3 es isotérmica a <math data-tex="T_F"><msub><mi>T</mi><mi>F</mi></msub></math>, se obtiene una relación entre <math data-tex="T_1"><msub><mi>T</mi><mn>1</mn></msub></math> y <math data-tex="T_F"><msub><mi>T</mi><mi>F</mi></msub></math>. Despejarla antes de calcular nada.</li>
+          <li>Etapa 1→2 (isocórica): <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math>, <math data-tex="\Delta U = Q = \int nC_V\,dT"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi>n</mi><msub><mi>C</mi><mi>V</mi></msub><mspace width="0.1667em"/><mi>d</mi><mi>T</mi></math> con <math data-tex="C_V = C_P - R = aRT"><msub><mi>C</mi><mi>V</mi></msub><mo>=</mo><msub><mi>C</mi><mi>P</mi></msub><mo>−</mo><mi>R</mi><mo>=</mo><mi>a</mi><mi>R</mi><mi>T</mi></math>. Integrar, no evaluar <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> a una temperatura.</li>
+          <li>Etapa 2→3 (isotérmica reversible): <math data-tex="\Delta U = \int nC_V\,dT = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi>n</mi><msub><mi>C</mi><mi>V</mi></msub><mspace width="0.1667em"/><mi>d</mi><mi>T</mi><mo>=</mo><mn>0</mn></math> porque <math data-tex="T"><mi>T</mi></math> no cambia, luego <math data-tex="Q = W = nRT_F\ln(V_3/V_2)"><mi>Q</mi><mo>=</mo><mi>W</mi><mo>=</mo><mi>n</mi><mi>R</mi><msub><mi>T</mi><mi>F</mi></msub><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mn>3</mn></msub><mi>/</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow></math>.</li>
+          <li>Etapa 3→1 (recta en <math data-tex="P"><mi>P</mi></math>–<math data-tex="V"><mi>V</mi></math>): el trabajo es el área del trapecio, <math data-tex="W = \tfrac12(P_3+P_1)(V_1-V_3)"><mi>W</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mo>(</mo><mrow><msub><mi>P</mi><mn>3</mn></msub><mo>+</mo><msub><mi>P</mi><mn>1</mn></msub></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><msub><mi>V</mi><mn>1</mn></msub><mo>−</mo><msub><mi>V</mi><mn>3</mn></msub></mrow><mo>)</mo></mrow></math>, negativo porque el volumen disminuye. <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> se calcula integrando <math data-tex="nC_V\,dT"><mi>n</mi><msub><mi>C</mi><mi>V</mi></msub><mspace width="0.1667em"/><mi>d</mi><mi>T</mi></math> entre <math data-tex="T_F"><msub><mi>T</mi><mi>F</mi></msub></math> y <math data-tex="T_1"><msub><mi>T</mi><mn>1</mn></msub></math>, y <math data-tex="Q"><mi>Q</mi></math> sale del balance.</li>
+          <li>Comprobación: <math data-tex="\sum\Delta U = 0"><mo lspace="0em">∑</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math> en el ciclo completo, y <math data-tex="\sum Q = \sum W"><mo lspace="0em">∑</mo><mi>Q</mi><mo>=</mo><mo form="prefix" lspace="0em">∑</mo><mi>W</mi></math>. Si no cierra, el error está en los signos del convenio <math data-tex="\Delta U = Q - W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>−</mo><mi>W</mi></math>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u4">
+      <div class="problem-head">
+        <span class="problem-num">P4</span>
+        <span class="problem-title">Gases reales — coeficientes térmicos de Van der Waals</span>
+        <span class="problem-badge">C1 Otoño 2025</span>
+      </div>
+      <div class="problem-statement">
+        Un gas obedece a <math data-tex="\left(P + \frac{a}{V^2}\right)(V - b) = RT"><mrow><mo>(</mo><mrow><mi>P</mi><mo>+</mo><mfrac><mi>a</mi><msup><mi>V</mi><mn>2</mn></msup></mfrac></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>V</mi><mo>−</mo><mi>b</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>R</mi><mi>T</mi></math>.
+        <p>(i) Determinar, usando <math data-tex="V"><mi>V</mi></math> y <math data-tex="T"><mi>T</mi></math> como variables independientes, los coeficientes de expansión térmica a presión y a volumen constante, <math data-tex="\alpha"><mi>α</mi></math> y <math data-tex="\beta"><mi>β</mi></math>, y luego el coeficiente de compresibilidad isotérmica mediante <math data-tex="\kappa = \alpha/(P\beta)"><mi>κ</mi><mo>=</mo><mi>α</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>P</mi><mi>β</mi></mrow><mo>)</mo></mrow></math>. Los coeficientes se definen como <math data-tex="\alpha = \frac{1}{V}(\partial V/\partial T)_P"><mi>α</mi><mo>=</mo><mfrac><mn>1</mn><mi>V</mi></mfrac><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub></math> y <math data-tex="\beta = \frac{1}{P}(\partial P/\partial T)_V"><mi>β</mi><mo>=</mo><mfrac><mn>1</mn><mi>P</mi></mfrac><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>.</p>
+        <p>(ii) Demostrar que para <math data-tex="a = 0"><mi>a</mi><mo>=</mo><mn>0</mn></math> el coeficiente de compresibilidad isotérmica queda <math data-tex="\kappa = V\alpha^2/(R\beta)"><mi>κ</mi><mo>=</mo><mi>V</mi><msup><mi>α</mi><mn>2</mn></msup><mi>/</mi><mrow><mo>(</mo><mrow><mi>R</mi><mi>β</mi></mrow><mo>)</mo></mrow></math>.</p>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>Despejar <math data-tex="P"><mi>P</mi></math> de la ecuación de estado: <math data-tex="P = RT/(V-b) - a/V^2"><mi>P</mi><mo>=</mo><mi>R</mi><mi>T</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>V</mi><mo>−</mo><mi>b</mi></mrow><mo>)</mo></mrow><mo>−</mo><mi>a</mi><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup></math>. Con eso <math data-tex="(\partial P/\partial T)_V = R/(V-b)"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub><mo>=</mo><mi>R</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>V</mi><mo>−</mo><mi>b</mi></mrow><mo>)</mo></mrow></math> sale de una línea, y <math data-tex="\beta = R/[P(V-b)]"><mi>β</mi><mo>=</mo><mi>R</mi><mi>/</mi><mrow><mo>[</mo><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mi>V</mi><mo>−</mo><mi>b</mi></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></math>.</li>
+          <li>Para <math data-tex="\alpha"><mi>α</mi></math> no despejar <math data-tex="V"><mi>V</mi></math>: derivar la ecuación de estado implícitamente respecto de <math data-tex="T"><mi>T</mi></math> a <math data-tex="P"><mi>P</mi></math> constante y despejar <math data-tex="(\partial V/\partial T)_P"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub></math>. Aparece <math data-tex="R"><mi>R</mi></math> arriba y <math data-tex="P - a/V^2 + 2ab/V^3"><mi>P</mi><mo>−</mo><mi>a</mi><mi>/</mi><msup><mi>V</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>a</mi><mi>b</mi><mi>/</mi><msup><mi>V</mi><mn>3</mn></msup></math> abajo.</li>
+          <li>Alternativa equivalente y más corta: usar la regla cíclica, <math data-tex="(\partial V/\partial T)_P = -(\partial P/\partial T)_V/(\partial P/\partial V)_T"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub><mi>/</mi><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>, con las dos derivadas de <math data-tex="P"><mi>P</mi></math> que ya se tienen.</li>
+          <li>Armar <math data-tex="\kappa = \alpha/(P\beta)"><mi>κ</mi><mo>=</mo><mi>α</mi><mi>/</mi><mrow><mo>(</mo><mrow><mi>P</mi><mi>β</mi></mrow><mo>)</mo></mrow></math> sustituyendo ambas expresiones; el <math data-tex="P"><mi>P</mi></math> y buena parte de los factores se cancelan.</li>
+          <li>(ii) Poner <math data-tex="a = 0"><mi>a</mi><mo>=</mo><mn>0</mn></math>: la ecuación se reduce a <math data-tex="P(V-b) = RT"><mi>P</mi><mrow><mo>(</mo><mrow><mi>V</mi><mo>−</mo><mi>b</mi></mrow><mo>)</mo></mrow><mo>=</mo><mi>R</mi><mi>T</mi></math>. Escribir <math data-tex="\alpha"><mi>α</mi></math>, <math data-tex="\beta"><mi>β</mi></math> y <math data-tex="\kappa"><mi>κ</mi></math> en ese caso y verificar que <math data-tex="\kappa = V\alpha^2/(R\beta)"><mi>κ</mi><mo>=</mo><mi>V</mi><msup><mi>α</mi><mn>2</mn></msup><mi>/</mi><mrow><mo>(</mo><mrow><mi>R</mi><mi>β</mi></mrow><mo>)</mo></mrow></math> es una identidad, no un resultado nuevo.</li>
+          <li>Chequeo de cordura: con <math data-tex="a = b = 0"><mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mn>0</mn></math> (gas ideal) debe salir <math data-tex="\alpha = 1/T"><mi>α</mi><mo>=</mo><mn>1</mn><mi>/</mi><mi>T</mi></math>, <math data-tex="\beta = 1/T"><mi>β</mi><mo>=</mo><mn>1</mn><mi>/</mi><mi>T</mi></math> y <math data-tex="\kappa = 1/P"><mi>κ</mi><mo>=</mo><mn>1</mn><mi>/</mi><mi>P</mi></math>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="problem-block u4">
+      <div class="problem-head">
+        <span class="problem-num">P5</span>
+        <span class="problem-title">Termoquímica con cambio de fase — combustión del metanol</span>
+        <span class="problem-badge">C2 Primavera 2026</span>
+      </div>
+      <div class="problem-statement">
+        Una empresa estudia el metanol (<math data-tex="\mathrm{CH_3OH}"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>3</mn></msub><mi mathvariant="normal">O</mi><mi mathvariant="normal">H</mi></math>) como combustible alternativo.
+        <p>(a) Escribir la reacción de combustión completa del metanol a 298 K y 1 bar. (b) Calcular la entalpía molar estándar de esa reacción a 298 K, en kJ/mol. (c) Plantear el ciclo termoquímico del calor absorbido por los productos si la reacción ocurre en una cámara adiabática y el metanol se consume completamente, especificando temperaturas y entalpías de cada etapa. (d) Calcular la temperatura, en °C, que alcanzan los productos.</p>
+        <p>Datos: <math data-tex="\Delta_f H_m^\circ(298)"><msub><mi mathvariant="normal">Δ</mi><mi>f</mi></msub><msubsup><mi>H</mi><mi>m</mi><mo>∘</mo></msubsup><mrow><mo>(</mo><mn>298</mn><mo>)</mo></mrow></math> = −238,66 (<math data-tex="\mathrm{CH_3OH}(l)"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>3</mn></msub><mi mathvariant="normal">O</mi><mi mathvariant="normal">H</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math>), −393,51 (<math data-tex="\mathrm{CO_2}"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math>), −285,83 (<math data-tex="\mathrm{H_2O}(l)"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math>), −241,82 (<math data-tex="\mathrm{H_2O}(g)"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow></math>) kJ/mol; <math data-tex="C_{P,m}"><msub><mi>C</mi><mrow><mi>P</mi><mo rspace="0em">,</mo><mi>m</mi></mrow></msub></math> = 22,26 (<math data-tex="\mathrm{CO_2}"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math>), 75,29 (<math data-tex="\mathrm{H_2O}(l)"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math>), 32,24 (<math data-tex="\mathrm{H_2O}(g)"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow></math>) J/(mol·K); <math data-tex="\Delta_{\text{vap}}H_m^\circ(\mathrm{H_2O})"><msub><mi mathvariant="normal">Δ</mi><mtext>vap</mtext></msub><msubsup><mi>H</mi><mi>m</mi><mo>∘</mo></msubsup><mrow><mo>(</mo><mrow><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi></mrow><mo>)</mo></mrow></math> = 40,7 kJ/mol. Indicación: la temperatura de los productos es mayor a 373 K.</p>
+      </div>
+      <div class="problem-strategy">
+        <div class="strategy-title">Estrategia</div>
+        <ol>
+          <li>(a) Balancear: <math data-tex="\mathrm{CH_3OH}(l) + \tfrac32\mathrm{O_2}(g) \to \mathrm{CO_2}(g) + 2\,\mathrm{H_2O}(l)"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>3</mn></msub><mi mathvariant="normal">O</mi><mi mathvariant="normal">H</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow><mo stretchy="false">→</mo><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub><mrow><mo>(</mo><mi>g</mi><mo>)</mo></mrow><mo>+</mo><mn>2</mn><mspace width="0.1667em"/><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mrow><mo>(</mo><mi>l</mi><mo>)</mo></mrow></math>. Con los datos entregados, el agua producto se escribe líquida a 298 K.</li>
+          <li>(b) <math data-tex="\Delta H^\circ = [\Delta H_f^\circ(\mathrm{CO_2}) + 2\Delta H_f^\circ(\mathrm{H_2O},l)] - \Delta H_f^\circ(\mathrm{CH_3OH},l)"><mi mathvariant="normal">Δ</mi><msup><mi>H</mi><mo>∘</mo></msup><mo>=</mo><mrow><mo>[</mo><mrow><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup><mrow><mo>(</mo><mrow><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow><mo>+</mo><mn>2</mn><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup><mrow><mo>(</mo><mrow><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mo>,</mo><mi>l</mi></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow><mo>−</mo><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup><mrow><mo>(</mo><mrow><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">H</mi><mn>3</mn></msub><mi mathvariant="normal">O</mi><mi mathvariant="normal">H</mi><mo>,</mo><mi>l</mi></mrow><mo>)</mo></mrow></math>. El <math data-tex="\mathrm{O_2}"><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> aporta cero.</li>
+          <li>(c) El ciclo tiene dos ramas: reaccionar a 298 K (ahí se libera <math data-tex="\Delta H^\circ"><mi mathvariant="normal">Δ</mi><msup><mi>H</mi><mo>∘</mo></msup></math>) y después calentar los productos desde 298 K hasta <math data-tex="T"><mi>T</mi></math>. Como la cámara es adiabática y opera a <math data-tex="P"><mi>P</mi></math> constante, la suma de ambas entalpías es cero.</li>
+          <li>Como <math data-tex="T &gt; 373"><mi>T</mi><mo>></mo><mn>373</mn></math> K, el tramo de calentamiento del agua se parte en tres: <math data-tex="2C_{P}(\mathrm{H_2O},l)(373-298)"><mn>2</mn><msub><mi>C</mi><mi>P</mi></msub><mrow><mo>(</mo><mrow><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mo>,</mo><mi>l</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mn>373</mn><mo>−</mo><mn>298</mn></mrow><mo>)</mo></mrow></math>, después <math data-tex="2\Delta_{\text{vap}}H"><mn>2</mn><msub><mi mathvariant="normal">Δ</mi><mtext>vap</mtext></msub><mi>H</mi></math>, y después <math data-tex="2C_{P}(\mathrm{H_2O},g)(T-373)"><mn>2</mn><msub><mi>C</mi><mi>P</mi></msub><mrow><mo>(</mo><mrow><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mo>,</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>T</mi><mo>−</mo><mn>373</mn></mrow><mo>)</mo></mrow></math>. El <math data-tex="\mathrm{CO_2}"><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> se calienta de una sola vez: <math data-tex="C_P(\mathrm{CO_2})(T-298)"><msub><mi>C</mi><mi>P</mi></msub><mrow><mo>(</mo><mrow><mi mathvariant="normal">C</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mi>T</mi><mo>−</mo><mn>298</mn></mrow><mo>)</mo></mrow></math>.</li>
+          <li>(d) Armar <math data-tex="-\Delta H^\circ = \Delta H_{\text{calent.}}(T)"><mo>−</mo><mi mathvariant="normal">Δ</mi><msup><mi>H</mi><mo>∘</mo></msup><mo>=</mo><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mtext>calent.</mtext></msub><mrow><mo>(</mo><mi>T</mi><mo>)</mo></mrow></math> y despejar <math data-tex="T"><mi>T</mi></math>. Queda lineal en <math data-tex="T"><mi>T</mi></math> porque las <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> son constantes.</li>
+          <li>Unidades: <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math> en kJ/mol y <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> en J/(mol·K). Pasar todo a joules antes de despejar, y recién al final convertir a °C restando 273,15.</li>
+          <li>Chequeo: si el resultado diera menos de 373 K, la hipótesis del enunciado sería falsa y habría que rehacer el ciclo sin la evaporación.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="qa5_1" data-correct="2">
+        <div class="quiz-question">1. En el P1, el enunciado aclara que el agua sale <em>gaseosa</em>. ¿Por qué importa tanto?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa5_1" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque si fuera líquida no se podría aplicar la ley de Hess</span></label>
+          <label class="quiz-option"><input type="radio" name="qa5_1" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque cambia el balance estequiométrico de la reacción</span></label>
+          <label class="quiz-option"><input type="radio" name="qa5_1" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque <math data-tex="\Delta H_f^\circ"><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup></math> del agua gaseosa y líquida difieren en <math data-tex="\Delta H_{\text{vap}}"><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mtext>vap</mtext></msub></math>, y con 9 moles de agua el error se multiplica por 9</span></label>
+          <label class="quiz-option"><input type="radio" name="qa5_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque el agua líquida no tiene entalpía de formación tabulada</span></label>
+        </div>
+        <script type="text/explanation" id="qa5_1-exp">La entalpía de formación del agua gaseosa es unos 44 kJ/mol menos negativa que la del agua líquida — exactamente <math data-tex="\Delta H_{\text{vap}}"><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mtext>vap</mtext></msub></math> a 298 K. En la combustión del octano se forman 9 moles de agua, así que elegir mal el estado de agregación desplaza el resultado en unos 400 kJ por mol de octano. El balance estequiométrico no cambia: sólo cambia el dato de tabla que se usa. En la práctica, la distinción separa el "poder calorífico inferior" (agua gaseosa, lo que sale por el escape de un motor) del "superior" (agua líquida, condensada).</script>
+        <div class="quiz-feedback" id="qa5_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qa5_2" data-correct="1">
+        <div class="quiz-question">2. En el P3 la primera etapa es isocórica <em>irreversible</em>. ¿Qué consecuencia tiene esa palabra para el cálculo de <math data-tex="Q"><mi>Q</mi></math> y <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math>?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa5_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Hay que usar la presión externa en lugar de la del sistema al calcular <math data-tex="W"><mi>W</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="qa5_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Ninguna: a volumen constante <math data-tex="W = 0"><mi>W</mi><mo>=</mo><mn>0</mn></math> igual, y <math data-tex="\Delta U = Q"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi></math> se calcula con <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> entre los mismos estados</span></label>
+          <label class="quiz-option"><input type="radio" name="qa5_2" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math> deja de ser calculable y hay que estimarlo</span></label>
+          <label class="quiz-option"><input type="radio" name="qa5_2" value="3"><span class="opt-letter">D</span><span class="opt-text"><math data-tex="Q"><mi>Q</mi></math> pasa a ser cero</span></label>
+        </div>
+        <script type="text/explanation" id="qa5_2-exp">Si <math data-tex="dV = 0"><mi>d</mi><mi>V</mi><mo>=</mo><mn>0</mn></math> entonces <math data-tex="P_{\text{ext}}\,dV = 0"><msub><mi>P</mi><mtext>ext</mtext></msub><mspace width="0.1667em"/><mi>d</mi><mi>V</mi><mo>=</mo><mn>0</mn></math> sea cual sea <math data-tex="P_{\text{ext}}"><msub><mi>P</mi><mtext>ext</mtext></msub></math>: la distinción entre presión interna y externa, que es donde la irreversibilidad suele morder, aquí no tiene dónde aplicarse. Y <math data-tex="U"><mi>U</mi></math> es función de estado, así que <math data-tex="\Delta U = \int nC_V\,dT"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mo form="prefix" lspace="0em">∫</mo><mi>n</mi><msub><mi>C</mi><mi>V</mi></msub><mspace width="0.1667em"/><mi>d</mi><mi>T</mi></math> vale igual. La irreversibilidad de esta etapa es física real — el gas se pone en contacto con una fuente a temperatura muy distinta — y se notará al calcular <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> en la clase 9, pero no afecta el balance de primera ley.</script>
+        <div class="quiz-feedback" id="qa5_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="qa5_3" data-correct="0">
+        <div class="quiz-question">3. En el P5, ¿por qué el ciclo termoquímico se plantea reaccionando a 298 K y calentando después, en vez de reaccionar directo a la temperatura final?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="qa5_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Porque los <math data-tex="\Delta H_f^\circ"><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup></math> de tabla están a 298 K: es el único camino donde todos los datos existen</span></label>
+          <label class="quiz-option"><input type="radio" name="qa5_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Porque la reacción sólo es espontánea a 298 K</span></label>
+          <label class="quiz-option"><input type="radio" name="qa5_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Porque a temperatura alta <math data-tex="H"><mi>H</mi></math> deja de ser función de estado</span></label>
+          <label class="quiz-option"><input type="radio" name="qa5_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Porque la cámara adiabática obliga a que la reacción ocurra a 298 K</span></label>
+        </div>
+        <script type="text/explanation" id="qa5_3-exp">En la cámara real no hay ninguna etapa a 298 K: la reacción y el calentamiento ocurren juntos y de forma irreversible. El ciclo es una construcción, y es legítima precisamente porque <math data-tex="H"><mi>H</mi></math> es función de estado — la misma idea de Hess y de Kirchhoff. Se elige ese camino porque las entalpías de formación están tabuladas a 298 K y las <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> permiten recorrer el tramo térmico; cualquier otro camino entre los mismos extremos daría el mismo número, pero sin datos con qué evaluarlo.</script>
+        <div class="quiz-feedback" id="qa5_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../clase_8/"><div class="nav-dir">← Anterior</div><div class="nav-title">Ley de Hess y Ecuación de Kirchhoff</div></a>
+    <a href="../clase_9/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Segunda Ley, Ciclo de Carnot y Entropía</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>
