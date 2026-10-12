@@ -27,8 +27,8 @@ Hay 7 colores de unidad definidos. Cada curso les reasigna su propio significado
 | `--unit-2` | `#3fb950` | Potencial y conductores (Aux 4–9) | Gas ideal y cinética (Cát. 3–5) | Gases reales |
 | `--unit-3` | `#d29922` | Pre-control y dipolos (Aux 10–11) | Primera ley (Cát. 6–8) | Primera ley |
 | `--unit-4` | `#f0883e` | Dieléctricos (Aux 12–14) | Segunda ley (Cát. 9–10) | Termoquímica |
-| `--unit-5` | `#bc8cff` | Corrientes y circuitos (Aux 15–16) | Estadística y fases (Cát. 11–20) | — (libre) |
-| `--unit-6` | `#f472b6` | Magnetismo (Aux 17–18) | Ciclos y máquinas (Cát. 21–23) | — (libre) |
+| `--unit-5` | `#bc8cff` | Corrientes y circuitos (Aux 15–16) | Estadística y fases (Cát. 11–20) | Segunda ley |
+| `--unit-6` | `#f472b6` | Magnetismo (Aux 17–18) | Ciclos y máquinas (Cát. 21–23) | Energías libres |
 | `--unit-7` | `#ef4444` | — | Gases reales y transporte (Cát. 24–28) | — (libre) |
 
 Si se necesita un 8.º color, agregar `--unit-8` en `:root` y las clases `.u8`, `.dot-u8`, `.bg-u8` junto a las existentes.

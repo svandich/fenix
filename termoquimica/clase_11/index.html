@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 11 — Tercera Ley y Energías Libres</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–11 · Aux 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u4"></span><span class="num">A5</span> Pre-Control 1</a>
+    <div class="nav-section-title">Segunda ley</div>
+    <a class="nav-link" href="../clase_9/"><span class="dot dot-u5"></span><span class="num">09</span> Carnot y Entropía</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u5"></span><span class="num">A6</span> Ciclos y Entropía</a>
+    <a class="nav-link" href="../clase_10/"><span class="dot dot-u5"></span><span class="num">10</span> Segunda Ley y Entropía</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u5"></span><span class="num">A7</span> Segunda Ley</a>
+    <div class="nav-section-title">Energías libres</div>
+    <a class="nav-link active" href="../clase_11/"><span class="dot dot-u6"></span><span class="num">11</span> Energías Libres</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Energías libres</div>
+    <div class="unit-pill u6 bg-u6">Energías libres · Clase 11</div>
+    <h1>Clase 11: Tercera Ley, Energías Libres y Relaciones de Maxwell</h1>
+    <p class="desc">La clase cierra la entropía (tercera ley, entropías absolutas, <math data-tex="S"><mi>S</mi></math> en función de <math data-tex="T"><mi>T</mi></math>, <math data-tex="V"><mi>V</mi></math> y <math data-tex="P"><mi>P</mi></math>) y la convierte en una herramienta práctica: criterios de espontaneidad que miran sólo al sistema, las energías de Helmholtz y Gibbs, las cuatro ecuaciones fundamentales, las relaciones de Maxwell, la fugacidad y la ecuación de Gibbs-Helmholtz.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Repaso: definición de entropía, desigualdad de Clausius y <math data-tex="\Delta S_{\text{universo}} \ge 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>universo</mtext></msub><mo>≥</mo><mn>0</mn></math></li>
+        <li>Tercera ley (Planck, 1913): <math data-tex="S = 0"><mi>S</mi><mo>=</mo><mn>0</mn></math> a 0 K para un cristal perfecto</li>
+        <li>Entropías absolutas, incluyendo cambios de fase; valores tabulados a 298,15 K y 1 atm</li>
+        <li><math data-tex="\Delta S^\circ"><mi mathvariant="normal">Δ</mi><msup><mi>S</mi><mo>∘</mo></msup></math> de reacción y su dependencia con la temperatura</li>
+        <li><math data-tex="S(T,V)"><mi>S</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>V</mi></mrow><mo>)</mo></mrow></math> y <math data-tex="S(T,P)"><mi>S</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>P</mi></mrow><mo>)</mo></mrow></math> en función de los coeficientes <math data-tex="\alpha"><mi>α</mi></math> y <math data-tex="\kappa"><mi>κ</mi></math></li>
+        <li><math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> de un gas ideal entre dos estados cualesquiera</li>
+        <li>Criterios de espontaneidad y equilibrio a <math data-tex="V"><mi>V</mi></math> constante y a <math data-tex="P"><mi>P</mi></math> constante</li>
+        <li>Energías libres de Helmholtz (<math data-tex="A = U - TS"><mi>A</mi><mo>=</mo><mi>U</mi><mo>−</mo><mi>T</mi><mi>S</mi></math>) y de Gibbs (<math data-tex="G = H - TS"><mi>G</mi><mo>=</mo><mi>H</mi><mo>−</mo><mi>T</mi><mi>S</mi></math>)</li>
+        <li>Potenciales termodinámicos, variables naturales y ecuaciones fundamentales</li>
+        <li>Relaciones de Maxwell y diagrama mnemotécnico</li>
+        <li><math data-tex="A"><mi>A</mi></math> como trabajo máximo; <math data-tex="G"><mi>G</mi></math> como trabajo máximo distinto de expansión</li>
+        <li>Ecuaciones termodinámicas de estado y <math data-tex="(\partial U/\partial V)_T"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>, <math data-tex="(\partial H/\partial P)_T"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>H</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math> medibles</li>
+        <li>Propiedades de <math data-tex="A"><mi>A</mi></math> y <math data-tex="G"><mi>G</mi></math>; potencial químico de gases ideales y fugacidad de gases reales</li>
+        <li>Ecuación de Gibbs-Helmholtz</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Tercera ley</h3>
+        <p>A 0 K la entropía de una sustancia pura perfectamente cristalina es cero. A diferencia de <math data-tex="H"><mi>H</mi></math>, la entropía tiene un cero absoluto. Por eso las tablas dan <math data-tex="S^\circ"><msup><mi>S</mi><mo>∘</mo></msup></math> absolutas, y los elementos puros <em>no</em> tienen <math data-tex="S^\circ = 0"><msup><mi>S</mi><mo>∘</mo></msup><mo>=</mo><mn>0</mn></math> a 298 K.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Cambios de fase</h3>
+        <p>Fundir o vaporizar siempre aumenta la entropía. Para llegar a la entropía de un líquido o de un gas se suman los tramos de calentamiento de cada fase más un salto <math data-tex="\Delta H_{\text{tr}}/T_{\text{tr}}"><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mtext>tr</mtext></msub><mi>/</mi><msub><mi>T</mi><mtext>tr</mtext></msub></math> en cada transición.</p>
+      </div>
+      <div class="concept-card">
+        <h3><math data-tex="S"><mi>S</mi></math> con <math data-tex="V"><mi>V</mi></math> y con <math data-tex="P"><mi>P</mi></math></h3>
+        <p>A <math data-tex="T"><mi>T</mi></math> constante, <math data-tex="S"><mi>S</mi></math> casi no cambia con <math data-tex="V"><mi>V</mi></math> ni con <math data-tex="P"><mi>P</mi></math> en sólidos y líquidos: en un líquido típico, subir 1 atm cambia <math data-tex="S"><mi>S</mi></math> en unos <math data-tex="-0{,}01"><mo>−</mo><mn>0</mn><mtext>,</mtext><mn>01</mn></math> J/(mol·K). En gases el efecto sí importa. A <math data-tex="P"><mi>P</mi></math> constante, <math data-tex="S"><mi>S</mi></math> siempre crece con <math data-tex="T"><mi>T</mi></math>.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Espontaneidad sin mirar al entorno</h3>
+        <p><math data-tex="\Delta S_{\text{universo}}"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>universo</mtext></msub></math> exige calcular el entorno. Si se fija <math data-tex="T"><mi>T</mi></math> y <math data-tex="V"><mi>V</mi></math>, o <math data-tex="T"><mi>T</mi></math> y <math data-tex="P"><mi>P</mi></math>, el calor cedido al entorno es <math data-tex="dU"><mi>d</mi><mi>U</mi></math> o <math data-tex="dH"><mi>d</mi><mi>H</mi></math>, y el criterio queda escrito sólo con variables del sistema. Así nacen <math data-tex="A"><mi>A</mi></math> y <math data-tex="G"><mi>G</mi></math>.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Helmholtz y Gibbs</h3>
+        <p><math data-tex="A = U - TS"><mi>A</mi><mo>=</mo><mi>U</mi><mo>−</mo><mi>T</mi><mi>S</mi></math> decrece en todo proceso espontáneo a <math data-tex="T"><mi>T</mi></math> y <math data-tex="V"><mi>V</mi></math> constantes; <math data-tex="G = H - TS"><mi>G</mi><mo>=</mo><mi>H</mi><mo>−</mo><mi>T</mi><mi>S</mi></math>, a <math data-tex="T"><mi>T</mi></math> y <math data-tex="P"><mi>P</mi></math> constantes. En el equilibrio son mínimas. Como la química suele trabajar a <math data-tex="T"><mi>T</mi></math> y <math data-tex="P"><mi>P</mi></math> fijas, <math data-tex="G"><mi>G</mi></math> es la que más se usa.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Variables naturales</h3>
+        <p><math data-tex="U(S,V)"><mi>U</mi><mrow><mo>(</mo><mrow><mi>S</mi><mo>,</mo><mi>V</mi></mrow><mo>)</mo></mrow></math>, <math data-tex="H(S,P)"><mi>H</mi><mrow><mo>(</mo><mrow><mi>S</mi><mo>,</mo><mi>P</mi></mrow><mo>)</mo></mrow></math>, <math data-tex="A(T,V)"><mi>A</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>V</mi></mrow><mo>)</mo></mrow></math>, <math data-tex="G(T,P)"><mi>G</mi><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>P</mi></mrow><mo>)</mo></mrow></math>. Pasar de un potencial a otro es restar <math data-tex="TS"><mi>T</mi><mi>S</mi></math> o sumar <math data-tex="PV"><mi>P</mi><mi>V</mi></math>, como en el cuadrado de Schroeder. Con sus variables naturales, cada potencial contiene toda la información termodinámica del sistema.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Relaciones de Maxwell</h3>
+        <p>Salen de que las derivadas cruzadas de cada ecuación fundamental son iguales. Su uso práctico es cambiar derivadas de <math data-tex="S"><mi>S</mi></math>, que no se miden, por derivadas de <math data-tex="P"><mi>P</mi></math>, <math data-tex="V"><mi>V</mi></math> y <math data-tex="T"><mi>T</mi></math>, que sí se miden. El diagrama VFT-VUS (con <math data-tex="F = A"><mi>F</mi><mo>=</mo><mi>A</mi></math>) sirve para recordarlas.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Trabajo máximo</h3>
+        <p>A <math data-tex="T"><mi>T</mi></math> constante, el trabajo reversible es <math data-tex="-dA"><mo>−</mo><mi>d</mi><mi>A</mi></math>: <math data-tex="A"><mi>A</mi></math> es la "función trabajo". A <math data-tex="T"><mi>T</mi></math> y <math data-tex="P"><mi>P</mi></math> constantes, <math data-tex="-\Delta G"><mo>−</mo><mi mathvariant="normal">Δ</mi><mi>G</mi></math> es el máximo trabajo <em>distinto de expansión</em> (eléctrico, por ejemplo) que puede entregar un proceso. Es el que entrega una pila.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Fugacidad</h3>
+        <p>Para un gas real se conserva la forma <math data-tex="\mu = \mu^\circ + RT\ln(\cdot)"><mi>μ</mi><mo>=</mo><msup><mi>μ</mi><mo>∘</mo></msup><mo>+</mo><mi>R</mi><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mo lspace="0em" rspace="0em">⋅</mo><mo>)</mo></mrow></math> reemplazando <math data-tex="p"><mi>p</mi></math> por una "presión efectiva" <math data-tex="f"><mi>f</mi></math>. Bajo la temperatura de Boyle, <math data-tex="Z &lt; 1"><mi>Z</mi><mo>&lt;</mo><mn>1</mn></math> a presiones moderadas y <math data-tex="f &lt; p"><mi>f</mi><mo>&lt;</mo><mi>p</mi></math>; sobre ella, <math data-tex="f &gt; p"><mi>f</mi><mo>></mo><mi>p</mi></math>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Tercera ley: entropía absoluta</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Válido para un sólido que no cambia de fase entre 0 y <math data-tex="T"><mi>T</mi></math>. A una temperatura cualquiera, <math data-tex="(\partial S/\partial T)_P = C_P/T"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub><mo>=</mo><msub><mi>C</mi><mi>P</mi></msub><mi>/</mi><mi>T</mi></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Entropía absoluta de un gas</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_2.svg" alt=""></div>
+      <div class="formula-desc">
+        <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math> es la temperatura de fusión y <math data-tex="T_e"><msub><mi>T</mi><mi>e</mi></msub></math> la de ebullición. Para un líquido se cortan los dos últimos términos y la integral del líquido llega hasta <math data-tex="T"><mi>T</mi></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Entropía de reacción</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_3.svg" alt=""></div>
+      <div class="formula-desc">
+        Igual que Kirchhoff para <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math>, pero con <math data-tex="\Delta C_P/T"><mi mathvariant="normal">Δ</mi><msub><mi>C</mi><mi>P</mi></msub><mi>/</mi><mi>T</mi></math> en el integrando. Válido si no hay cambios de fase entre <math data-tex="T_0"><msub><mi>T</mi><mn>0</mn></msub></math> y <math data-tex="T"><mi>T</mi></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Entropía en función de <math data-tex="T"><mi>T</mi></math> y <math data-tex="V"><mi>V</mi></math></div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Con <math data-tex="\alpha = \frac{1}{V}(\partial V/\partial T)_P"><mi>α</mi><mo>=</mo><mfrac><mn>1</mn><mi>V</mi></mfrac><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub></math> y <math data-tex="\kappa = -\frac{1}{V}(\partial V/\partial P)_T"><mi>κ</mi><mo>=</mo><mo form="prefix">−</mo><mfrac><mn>1</mn><mi>V</mi></mfrac><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>P</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>. Como <math data-tex="\kappa &gt; 0"><mi>κ</mi><mo>></mo><mn>0</mn></math>, el signo lo pone <math data-tex="\alpha"><mi>α</mi></math>: casi siempre <math data-tex="S"><mi>S</mi></math> crece con <math data-tex="V"><mi>V</mi></math>. El agua entre 0 y 4 °C (<math data-tex="\alpha &lt; 0"><mi>α</mi><mo>&lt;</mo><mn>0</mn></math>) es la excepción.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Entropía en función de <math data-tex="T"><mi>T</mi></math> y <math data-tex="P"><mi>P</mi></math></div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_5.svg" alt=""></div>
+      <div class="formula-desc">
+        Órdenes de magnitud: <math data-tex="\alpha \sim 10^{-4}"><mi>α</mi><mo>∼</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>4</mn></mrow></msup></math> K⁻¹ en sólidos y <math data-tex="\sim 10^{-3}"><mo form="infix" lspace="0em">∼</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></math> K⁻¹ en líquidos. Por eso en fases condensadas el término en <math data-tex="dP"><mi>d</mi><mi>P</mi></math> suele despreciarse.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Gas ideal entre dos estados</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_6.svg" alt=""></div>
+      <div class="formula-desc">
+        Salen de <math data-tex="dS = \frac{1}{T}dU + \frac{P}{T}dV"><mi>d</mi><mi>S</mi><mo>=</mo><mfrac><mn>1</mn><mi>T</mi></mfrac><mi>d</mi><mi>U</mi><mo>+</mo><mfrac><mi>P</mi><mi>T</mi></mfrac><mi>d</mi><mi>V</mi></math> y <math data-tex="dS = \frac{1}{T}dH - \frac{V}{T}dP"><mi>d</mi><mi>S</mi><mo>=</mo><mfrac><mn>1</mn><mi>T</mi></mfrac><mi>d</mi><mi>H</mi><mo>−</mo><mfrac><mi>V</mi><mi>T</mi></mfrac><mi>d</mi><mi>P</mi></math> con <math data-tex="PV = nRT"><mi>P</mi><mi>V</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi></math>. Aquí <math data-tex="C_V"><msub><mi>C</mi><mi>V</mi></msub></math> y <math data-tex="C_P"><msub><mi>C</mi><mi>P</mi></msub></math> son capacidades totales, no molares.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Criterios de espontaneidad</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_7.svg" alt=""></div>
+      <div class="formula-desc">
+        A <math data-tex="V"><mi>V</mi></math> constante <math data-tex="\delta q = dU"><mi>δ</mi><mi>q</mi><mo>=</mo><mi>d</mi><mi>U</mi></math>, así que <math data-tex="T\,dS \ge dU"><mi>T</mi><mspace width="0.1667em"/><mi>d</mi><mi>S</mi><mo>≥</mo><mi>d</mi><mi>U</mi></math>; a <math data-tex="P"><mi>P</mi></math> constante <math data-tex="\delta q = dH"><mi>δ</mi><mi>q</mi><mo>=</mo><mi>d</mi><mi>H</mi></math>, así que <math data-tex="T\,dS \ge dH"><mi>T</mi><mspace width="0.1667em"/><mi>d</mi><mi>S</mi><mo>≥</mo><mi>d</mi><mi>H</mi></math>. La igualdad corresponde al equilibrio y la desigualdad estricta al proceso espontáneo.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Energías libres de Helmholtz y Gibbs</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_8.svg" alt=""></div>
+      <div class="formula-desc">
+        Vienen de reordenar <math data-tex="dU - T\,dS \le 0"><mi>d</mi><mi>U</mi><mo>−</mo><mi>T</mi><mspace width="0.1667em"/><mi>d</mi><mi>S</mi><mo>≤</mo><mn>0</mn></math> y <math data-tex="dH - T\,dS \le 0"><mi>d</mi><mi>H</mi><mo>−</mo><mi>T</mi><mspace width="0.1667em"/><mi>d</mi><mi>S</mi><mo>≤</mo><mn>0</mn></math> a <math data-tex="T"><mi>T</mi></math> constante. En el equilibrio, <math data-tex="dA = 0"><mi>d</mi><mi>A</mi><mo>=</mo><mn>0</mn></math> o <math data-tex="dG = 0"><mi>d</mi><mi>G</mi><mo>=</mo><mn>0</mn></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Ecuaciones fundamentales</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_9.svg" alt=""></div>
+      <div class="formula-desc">
+        La primera combina primera y segunda ley (<math data-tex="\delta q_{\text{rev}} = T\,dS"><mi>δ</mi><msub><mi>q</mi><mtext>rev</mtext></msub><mo>=</mo><mi>T</mi><mspace width="0.1667em"/><mi>d</mi><mi>S</mi></math>, <math data-tex="\delta W_{\text{rev}} = P\,dV"><mi>δ</mi><msub><mi>W</mi><mtext>rev</mtext></msub><mo>=</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>). Las otras tres salen de diferenciar <math data-tex="H = U + PV"><mi>H</mi><mo>=</mo><mi>U</mi><mo>+</mo><mi>P</mi><mi>V</mi></math>, <math data-tex="A = U - TS"><mi>A</mi><mo>=</mo><mi>U</mi><mo>−</mo><mi>T</mi><mi>S</mi></math> y <math data-tex="G = H - TS"><mi>G</mi><mo>=</mo><mi>H</mi><mo>−</mo><mi>T</mi><mi>S</mi></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Relaciones de Maxwell</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_10.svg" alt=""></div>
+      <div class="formula-desc">
+        Una por cada ecuación fundamental, en el mismo orden: <math data-tex="U"><mi>U</mi></math>, <math data-tex="H"><mi>H</mi></math>, <math data-tex="A"><mi>A</mi></math>, <math data-tex="G"><mi>G</mi></math>. Las dos de abajo son las útiles en la práctica, porque reemplazan derivadas de <math data-tex="S"><mi>S</mi></math> a <math data-tex="T"><mi>T</mi></math> constante por coeficientes medibles.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Trabajo máximo</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_11.svg" alt=""></div>
+      <div class="formula-desc">
+        Con <math data-tex="\delta w_{\text{rev}} = -dU + T\,dS"><mi>δ</mi><msub><mi>w</mi><mtext>rev</mtext></msub><mo>=</mo><mo form="prefix">−</mo><mi>d</mi><mi>U</mi><mo>+</mo><mi>T</mi><mspace width="0.1667em"/><mi>d</mi><mi>S</mi></math> a <math data-tex="T"><mi>T</mi></math> constante se obtiene la primera. Separando el trabajo en expansión (<math data-tex="P\,dV"><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>) y adicional (<math data-tex="dw_e"><mi>d</mi><msub><mi>w</mi><mi>e</mi></msub></math>) se obtiene <math data-tex="dG_{T,P} = -dw_e"><mi>d</mi><msub><mi>G</mi><mrow><mi>T</mi><mo rspace="0em">,</mo><mi>P</mi></mrow></msub><mo>=</mo><mo form="prefix">−</mo><mi>d</mi><msub><mi>w</mi><mi>e</mi></msub></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Ecuaciones termodinámicas de estado</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_12.svg" alt=""></div>
+      <div class="formula-desc">
+        Se obtienen de <math data-tex="dU = T\,dS - P\,dV"><mi>d</mi><mi>U</mi><mo>=</mo><mi>T</mi><mspace width="0.1667em"/><mi>d</mi><mi>S</mi><mo>−</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math> y <math data-tex="dH = T\,dS + V\,dP"><mi>d</mi><mi>H</mi><mo>=</mo><mi>T</mi><mspace width="0.1667em"/><mi>d</mi><mi>S</mi><mo>+</mo><mi>V</mi><mspace width="0.1667em"/><mi>d</mi><mi>P</mi></math> a <math data-tex="T"><mi>T</mi></math> constante, usando Maxwell. Valen para cualquier sustancia. Con el gas ideal, la primera da <math data-tex="(\partial U/\partial V)_T = T\cdot nR/V - P = 0"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><mi>T</mi><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo><mi>n</mi><mi>R</mi><mi>/</mi><mi>V</mi><mo>−</mo><mi>P</mi><mo>=</mo><mn>0</mn></math>: la ley de Joule.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Derivadas de <math data-tex="U"><mi>U</mi></math> y <math data-tex="H"><mi>H</mi></math> en cantidades medibles</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_13.svg" alt=""></div>
+      <div class="formula-desc">
+        Usando <math data-tex="(\partial P/\partial T)_V = \alpha/\kappa"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub><mo>=</mo><mi>α</mi><mi>/</mi><mi>κ</mi></math> y <math data-tex="(\partial V/\partial T)_P = V\alpha"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub><mo>=</mo><mi>V</mi><mi>α</mi></math>. Así <math data-tex="dU = C_V\,dT + \frac{\alpha T - \kappa P}{\kappa}dV"><mi>d</mi><mi>U</mi><mo>=</mo><msub><mi>C</mi><mi>V</mi></msub><mspace width="0.1667em"/><mi>d</mi><mi>T</mi><mo>+</mo><mfrac><mrow><mi>α</mi><mi>T</mi><mo lspace="0em" rspace="0em">−</mo><mi>κ</mi><mi>P</mi></mrow><mi>κ</mi></mfrac><mi>d</mi><mi>V</mi></math> y <math data-tex="dH = C_P\,dT + V(1 - \alpha T)\,dP"><mi>d</mi><mi>H</mi><mo>=</mo><msub><mi>C</mi><mi>P</mi></msub><mspace width="0.1667em"/><mi>d</mi><mi>T</mi><mo>+</mo><mi>V</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>α</mi><mi>T</mi></mrow><mo>)</mo></mrow><mspace width="0.1667em"/><mi>d</mi><mi>P</mi></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Propiedades de <math data-tex="A"><mi>A</mi></math> y <math data-tex="G"><mi>G</mi></math></div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_14.svg" alt=""></div>
+      <div class="formula-desc">
+        Como <math data-tex="S &gt; 0"><mi>S</mi><mo>></mo><mn>0</mn></math>, <math data-tex="A"><mi>A</mi></math> y <math data-tex="G"><mi>G</mi></math> disminuyen al subir <math data-tex="T"><mi>T</mi></math>, más rápido en gases que en líquidos y sólidos (<math data-tex="S_g &gt; S_l &gt; S_s"><msub><mi>S</mi><mi>g</mi></msub><mo>></mo><msub><mi>S</mi><mi>l</mi></msub><mo>></mo><msub><mi>S</mi><mi>s</mi></msub></math>). Como <math data-tex="V &gt; 0"><mi>V</mi><mo>></mo><mn>0</mn></math>, <math data-tex="G"><mi>G</mi></math> crece con <math data-tex="P"><mi>P</mi></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label"><math data-tex="G"><mi>G</mi></math> con la presión y potencial químico</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_15.svg" alt=""></div>
+      <div class="formula-desc">
+        <math data-tex="G^\circ(T)"><msup><mi>G</mi><mo>∘</mo></msup><mrow><mo>(</mo><mi>T</mi><mo>)</mo></mrow></math> es el valor a <math data-tex="p^\circ = 1"><msup><mi>p</mi><mo>∘</mo></msup><mo>=</mo><mn>1</mn></math> atm. En líquidos y sólidos <math data-tex="V"><mi>V</mi></math> casi no depende de <math data-tex="P"><mi>P</mi></math> y <math data-tex="V(p - p^\circ)"><mi>V</mi><mrow><mo>(</mo><mrow><mi>p</mi><mo>−</mo><msup><mi>p</mi><mo>∘</mo></msup></mrow><mo>)</mo></mrow></math> es pequeño, así que <math data-tex="G \approx G^\circ(T)"><mi>G</mi><mo>≈</mo><msup><mi>G</mi><mo>∘</mo></msup><mrow><mo>(</mo><mi>T</mi><mo>)</mo></mrow></math>. En un gas ideal <math data-tex="\mu = G/n"><mi>μ</mi><mo>=</mo><mi>G</mi><mi>/</mi><mi>n</mi></math> crece logarítmicamente con <math data-tex="p"><mi>p</mi></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Fugacidad de un gas real</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_16.svg" alt=""></div>
+      <div class="formula-desc">
+        Se obtiene integrando <math data-tex="d\mu = \bar V\,dp"><mi>d</mi><mi>μ</mi><mo>=</mo><mover accent="true"><mi>V</mi><mo>̄</mo></mover><mspace width="0.1667em"/><mi>d</mi><mi>p</mi></math> para el gas real y el ideal desde <math data-tex="p^* \to 0"><msup><mi>p</mi><mo>∗</mo></msup><mo stretchy="false">→</mo><mn>0</mn></math>, donde ambos coinciden, con <math data-tex="\bar V = Z\bar V^{\text{id}}"><mover accent="true"><mi>V</mi><mo>̄</mo></mover><mo>=</mo><mi>Z</mi><msup><mover accent="true"><mi>V</mi><mo>̄</mo></mover><mtext>id</mtext></msup></math>. La integral se evalúa gráficamente como el área bajo <math data-tex="(Z-1)/p"><mrow><mo>(</mo><mrow><mi>Z</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mi>/</mi><mi>p</mi></math> versus <math data-tex="p"><mi>p</mi></math>.
+      </div>
+    </div>
+
+    <div class="formula-block u6">
+      <div class="formula-label">Ecuación de Gibbs-Helmholtz</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_11_17.svg" alt=""></div>
+      <div class="formula-desc">
+        Sale de derivar <math data-tex="G/T"><mi>G</mi><mi>/</mi><mi>T</mi></math> y usar <math data-tex="(\partial G/\partial T)_P = -S"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>G</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub><mo>=</mo><mo form="prefix">−</mo><mi>S</mi></math> con <math data-tex="G = H - TS"><mi>G</mi><mo>=</mo><mi>H</mi><mo>−</mo><mi>T</mi><mi>S</mi></math>. Es la versión de Kirchhoff para <math data-tex="G"><mi>G</mi></math>: con <math data-tex="\Delta H"><mi mathvariant="normal">Δ</mi><mi>H</mi></math> conocido, da cómo cambia <math data-tex="\Delta G"><mi mathvariant="normal">Δ</mi><mi>G</mi></math> de una reacción con la temperatura.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 11</div>
+      <ul>
+        <li><math data-tex="A"><mi>A</mi></math> y <math data-tex="G"><mi>G</mi></math> no son conceptos nuevos: son <math data-tex="\Delta S_{\text{universo}} \ge 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>universo</mtext></msub><mo>≥</mo><mn>0</mn></math> reescrito para condiciones de laboratorio. <math data-tex="\Delta G_{T,P} = -T\,\Delta S_{\text{universo}}"><mi mathvariant="normal">Δ</mi><msub><mi>G</mi><mrow><mi>T</mi><mo rspace="0em">,</mo><mi>P</mi></mrow></msub><mo>=</mo><mo form="prefix">−</mo><mi>T</mi><mspace width="0.1667em"/><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>universo</mtext></msub></math>.</li>
+        <li>Elegir el criterio según qué se mantiene fijo: <math data-tex="(T,V)"><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>V</mi></mrow><mo>)</mo></mrow></math> → <math data-tex="\Delta A &lt; 0"><mi mathvariant="normal">Δ</mi><mi>A</mi><mo>&lt;</mo><mn>0</mn></math>; <math data-tex="(T,P)"><mrow><mo>(</mo><mrow><mi>T</mi><mo>,</mo><mi>P</mi></mrow><mo>)</mo></mrow></math> → <math data-tex="\Delta G &lt; 0"><mi mathvariant="normal">Δ</mi><mi>G</mi><mo>&lt;</mo><mn>0</mn></math>; aislado <math data-tex="(U,V)"><mrow><mo>(</mo><mrow><mi>U</mi><mo>,</mo><mi>V</mi></mrow><mo>)</mo></mrow></math> → <math data-tex="\Delta S &gt; 0"><mi mathvariant="normal">Δ</mi><mi>S</mi><mo>></mo><mn>0</mn></math>.</li>
+        <li>A diferencia de <math data-tex="\Delta H^\circ_f"><mi mathvariant="normal">Δ</mi><msubsup><mi>H</mi><mi>f</mi><mo>∘</mo></msubsup></math>, las <math data-tex="S^\circ"><msup><mi>S</mi><mo>∘</mo></msup></math> tabuladas son absolutas: en <math data-tex="\Delta S^\circ"><mi mathvariant="normal">Δ</mi><msup><mi>S</mi><mo>∘</mo></msup></math> de reacción los elementos sí aportan.</li>
+        <li>Para derivar una relación entre derivadas: identificar el potencial cuyas variables naturales son las que se mantienen fijas, escribir su ecuación fundamental y aplicar Maxwell.</li>
+        <li>Las ecuaciones de la clase usan <math data-tex="p"><mi>p</mi></math> minúscula como en las diapositivas; es la misma presión <math data-tex="P"><mi>P</mi></math> del resto del curso.</li>
+        <li>El convenio de signos sigue siendo <math data-tex="\Delta U = Q - W"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi>Q</mi><mo>−</mo><mi>W</mi></math>. Por eso <math data-tex="dU = T\,dS - P\,dV"><mi>d</mi><mi>U</mi><mo>=</mo><mi>T</mi><mspace width="0.1667em"/><mi>d</mi><mi>S</mi><mo>−</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>: el trabajo reversible producido es <math data-tex="+P\,dV"><mo>+</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q11_1" data-correct="1">
+        <div class="quiz-question">1. Una reacción ocurre en un recipiente abierto a la atmósfera, a temperatura constante. ¿Qué función decide si es espontánea sin calcular nada del entorno?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q11_1" value="0"><span class="opt-letter">A</span><span class="opt-text"><math data-tex="\Delta A &lt; 0"><mi mathvariant="normal">Δ</mi><mi>A</mi><mo>&lt;</mo><mn>0</mn></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="\Delta G &lt; 0"><mi mathvariant="normal">Δ</mi><mi>G</mi><mo>&lt;</mo><mn>0</mn></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="\Delta S_{\text{sis}} &gt; 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>sis</mtext></msub><mo>></mo><mn>0</mn></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_1" value="3"><span class="opt-letter">D</span><span class="opt-text"><math data-tex="\Delta H &lt; 0"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>&lt;</mo><mn>0</mn></math></span></label>
+        </div>
+        <script type="text/explanation" id="q11_1-exp">Recipiente abierto a la atmósfera significa <math data-tex="P"><mi>P</mi></math> constante, y además <math data-tex="T"><mi>T</mi></math> es constante: el criterio es <math data-tex="dG_{T,P} \le 0"><mi>d</mi><msub><mi>G</mi><mrow><mi>T</mi><mo rspace="0em">,</mo><mi>P</mi></mrow></msub><mo>≤</mo><mn>0</mn></math>. <math data-tex="\Delta A"><mi mathvariant="normal">Δ</mi><mi>A</mi></math> sirve a <math data-tex="T"><mi>T</mi></math> y <math data-tex="V"><mi>V</mi></math> constantes. <math data-tex="\Delta S_{\text{sis}}"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>sis</mtext></msub></math> sólo es criterio en un sistema aislado. <math data-tex="\Delta H &lt; 0"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>&lt;</mo><mn>0</mn></math> favorece la espontaneidad pero no la decide: una reacción endotérmica puede ser espontánea si <math data-tex="T\Delta S"><mi>T</mi><mi mathvariant="normal">Δ</mi><mi>S</mi></math> es suficientemente grande.</script>
+        <div class="quiz-feedback" id="q11_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q11_2" data-correct="0">
+        <div class="quiz-question">2. ¿A qué es igual <math data-tex="(\partial S/\partial V)_T"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub></math>?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q11_2" value="0"><span class="opt-letter">A</span><span class="opt-text"><math data-tex="(\partial P/\partial T)_V = \alpha/\kappa"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub><mo>=</mo><mi>α</mi><mi>/</mi><mi>κ</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="1"><span class="opt-letter">B</span><span class="opt-text"><math data-tex="-(\partial P/\partial T)_V"><mo>−</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="2"><span class="opt-letter">C</span><span class="opt-text"><math data-tex="(\partial V/\partial T)_P = V\alpha"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>P</mi></msub><mo>=</mo><mi>V</mi><mi>α</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_2" value="3"><span class="opt-letter">D</span><span class="opt-text"><math data-tex="C_V/T"><msub><mi>C</mi><mi>V</mi></msub><mi>/</mi><mi>T</mi></math></span></label>
+        </div>
+        <script type="text/explanation" id="q11_2-exp">Las variables fijas son <math data-tex="T"><mi>T</mi></math> y <math data-tex="V"><mi>V</mi></math>, las naturales de <math data-tex="A"><mi>A</mi></math>. De <math data-tex="dA = -S\,dT - P\,dV"><mi>d</mi><mi>A</mi><mo>=</mo><mo form="prefix">−</mo><mi>S</mi><mspace width="0.1667em"/><mi>d</mi><mi>T</mi><mo>−</mo><mi>P</mi><mspace width="0.1667em"/><mi>d</mi><mi>V</mi></math>, igualando derivadas cruzadas: <math data-tex="(\partial S/\partial V)_T = (\partial P/\partial T)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>V</mi></mrow><mo>)</mo></mrow><mi>T</mi></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>. Con la regla cíclica, eso vale <math data-tex="\alpha/\kappa"><mi>α</mi><mi>/</mi><mi>κ</mi></math>. C es la Maxwell que viene de <math data-tex="G"><mi>G</mi></math>, con otro signo y otra derivada. D es <math data-tex="(\partial S/\partial T)_V"><msub><mrow><mo>(</mo><mrow><mi>∂</mi><mi>S</mi><mi>/</mi><mi>∂</mi><mi>T</mi></mrow><mo>)</mo></mrow><mi>V</mi></msub></math>.</script>
+        <div class="quiz-feedback" id="q11_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q11_3" data-correct="2">
+        <div class="quiz-question">3. Un gas real está por debajo de su temperatura de Boyle, a presión moderada. ¿Cómo es su fugacidad comparada con la presión?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q11_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Igual, porque la fugacidad es otro nombre de la presión</span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Mayor: <math data-tex="f &gt; p"><mi>f</mi><mo>></mo><mi>p</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Menor: <math data-tex="f &lt; p"><mi>f</mi><mo>&lt;</mo><mi>p</mi></math></span></label>
+          <label class="quiz-option"><input type="radio" name="q11_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende sólo del volumen del recipiente</span></label>
+        </div>
+        <script type="text/explanation" id="q11_3-exp">Bajo la temperatura de Boyle dominan las atracciones y <math data-tex="Z &lt; 1"><mi>Z</mi><mo>&lt;</mo><mn>1</mn></math>, así que <math data-tex="(Z-1)/p &lt; 0"><mrow><mo>(</mo><mrow><mi>Z</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mi>/</mi><mi>p</mi><mo>&lt;</mo><mn>0</mn></math> y la integral de <math data-tex="\ln f = \ln p + \int_0^p \frac{Z-1}{p}dp"><mo lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>f</mi><mo>=</mo><mo form="prefix" lspace="0em" rspace="0.16666666666666666em">ln</mo><mi>p</mi><mo>+</mo><msubsup><mo form="prefix" lspace="0em">∫</mo><mn>0</mn><mi>p</mi></msubsup><mfrac><mrow><mi>Z</mi><mo lspace="0em" rspace="0em">−</mo><mn>1</mn></mrow><mi>p</mi></mfrac><mi>d</mi><mi>p</mi></math> es negativa: <math data-tex="f &lt; p"><mi>f</mi><mo>&lt;</mo><mi>p</mi></math>. Las atracciones hacen que el gas se comporte como uno ideal a menor presión. Sobre la temperatura de Boyle ocurre lo contrario.</script>
+        <div class="quiz-feedback" id="q11_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_7/"><div class="nav-dir">← Anterior</div><div class="nav-title">Segunda Ley</div></a>
+    <a href="../" class="next"><div class="nav-dir">Volver →</div><div class="nav-title">Temario general</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

@@ -122,13 +122,14 @@ COURSES = {
     'termoquimica': {
         'icon': '🧪',
         'name': 'Termodinámica Química',
-        'subtitle': 'IQ2212 · Clases 1–9 · Aux 1–6',
+        'subtitle': 'IQ2212 · Clases 1–11 · Aux 1–7',
         'blocks': [
             'Gases ideales',
             'Gases reales',
             'Primera ley',
             'Termoquímica',
             'Segunda ley',
+            'Energías libres',
         ],
         # slug, num, etiqueta sidebar, unidad, bloque, título para el prev/next
         'pages': [
@@ -147,6 +148,9 @@ COURSES = {
             ('aux_5'  , 'A5', 'Pre-Control 1'        , 'u4', 'Termoquímica' , 'Pre-Control 1'),
             ('clase_9', '09', 'Carnot y Entropía'    , 'u5', 'Segunda ley'  , 'Segunda Ley, Ciclo de Carnot y Entropía'),
             ('aux_6'  , 'A6', 'Ciclos y Entropía'    , 'u5', 'Segunda ley'  , 'Ciclos y Entropía'),
+            ('clase_10', '10', 'Segunda Ley y Entropía', 'u5', 'Segunda ley'  , 'Máquinas Térmicas, Segunda Ley y Entropía'),
+            ('aux_7'   , 'A7', 'Segunda Ley'          , 'u5', 'Segunda ley'  , 'Segunda Ley'),
+            ('clase_11', '11', 'Energías Libres'      , 'u6', 'Energías libres', 'Tercera Ley, Energías Libres y Relaciones de Maxwell'),
         ],
     },
 }

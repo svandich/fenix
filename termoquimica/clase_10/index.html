@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 10 — Segunda Ley y Entropía</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="../../styles/quiz.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="../">
+      <span class="icon">🧪</span>
+      <div><div class="name">Termodinámica Química</div><div class="subtitle">IQ2212 · Clases 1–11 · Aux 1–7</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <div class="nav-section-title">Índice</div>
+    <a class="nav-link" href="../"><span class="dot" style="background:var(--text-muted)"></span><span>Temario general</span></a>
+    <div class="nav-section-title">Gases ideales</div>
+    <a class="nav-link" href="../clase_1/"><span class="dot dot-u1"></span><span class="num">01</span> Gas Ideal y Dalton</a>
+    <a class="nav-link" href="../aux_1/"><span class="dot dot-u1"></span><span class="num">A1</span> Gases Ideales</a>
+    <div class="nav-section-title">Gases reales</div>
+    <a class="nav-link" href="../clase_2/"><span class="dot dot-u2"></span><span class="num">02</span> Van der Waals</a>
+    <a class="nav-link" href="../clase_3/"><span class="dot dot-u2"></span><span class="num">03</span> Estados Correspond.</a>
+    <a class="nav-link" href="../aux_2/"><span class="dot dot-u2"></span><span class="num">A2</span> Gases Reales</a>
+    <div class="nav-section-title">Primera ley</div>
+    <a class="nav-link" href="../clase_4/"><span class="dot dot-u3"></span><span class="num">04</span> Ley Cero, Q y W</a>
+    <a class="nav-link" href="../clase_5/"><span class="dot dot-u3"></span><span class="num">05</span> Energía y Entalpía</a>
+    <a class="nav-link" href="../clase_6/"><span class="dot dot-u3"></span><span class="num">06</span> Cp−Cv y Joule-Thomson</a>
+    <a class="nav-link" href="../aux_3/"><span class="dot dot-u3"></span><span class="num">A3</span> Primera Ley</a>
+    <a class="nav-link" href="../aux_4/"><span class="dot dot-u3"></span><span class="num">A4</span> Primera Ley II</a>
+    <div class="nav-section-title">Termoquímica</div>
+    <a class="nav-link" href="../clase_7/"><span class="dot dot-u4"></span><span class="num">07</span> Calor de Reacción</a>
+    <a class="nav-link" href="../clase_8/"><span class="dot dot-u4"></span><span class="num">08</span> Hess y Kirchhoff</a>
+    <a class="nav-link" href="../aux_5/"><span class="dot dot-u4"></span><span class="num">A5</span> Pre-Control 1</a>
+    <div class="nav-section-title">Segunda ley</div>
+    <a class="nav-link" href="../clase_9/"><span class="dot dot-u5"></span><span class="num">09</span> Carnot y Entropía</a>
+    <a class="nav-link" href="../aux_6/"><span class="dot dot-u5"></span><span class="num">A6</span> Ciclos y Entropía</a>
+    <a class="nav-link active" href="../clase_10/"><span class="dot dot-u5"></span><span class="num">10</span> Segunda Ley y Entropía</a>
+    <a class="nav-link" href="../aux_7/"><span class="dot dot-u5"></span><span class="num">A7</span> Segunda Ley</a>
+    <div class="nav-section-title">Energías libres</div>
+    <a class="nav-link" href="../clase_11/"><span class="dot dot-u6"></span><span class="num">11</span> Energías Libres</a>
+  </div>
+</nav>
+
+<main class="main">
+<div class="content">
+
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Temario</a> › Segunda ley</div>
+    <div class="unit-pill u5 bg-u5">Segunda ley · Clase 10 · Aux 7</div>
+    <h1>Clase 10: Máquinas Térmicas, Segunda Ley y Entropía</h1>
+    <p class="desc">La primera ley dice qué procesos conservan la energía; la segunda dice cuáles de ellos ocurren solos. Se parte de las máquinas térmicas y sus dos enunciados clásicos, se llega al ciclo de Carnot como límite de eficiencia, y de ahí sale la entropía y el criterio <math data-tex="\Delta S_{\text{universo}} \ge 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>universo</mtext></msub><mo>≥</mo><mn>0</mn></math>.</p>
+  </div>
+
+  <section>
+    <h2><span class="section-icon">📋</span> Temas que cubre</h2>
+    <div class="card">
+      <ul class="topic-list">
+        <li>Máquinas térmicas: la máquina (fluido en un ciclo cuasiestático) y los focos (reservorios a <math data-tex="T"><mi>T</mi></math> constante)</li>
+        <li>Procesos espontáneos y no espontáneos</li>
+        <li>Enunciados de Kelvin-Planck (~1851) y de Clausius (~1854)</li>
+        <li>Teorema de Carnot (1824): ninguna máquina entre dos focos supera a la reversible</li>
+        <li>Ciclo de Carnot: dos isotermas y dos adiabáticas, todas reversibles</li>
+        <li>Eficiencia de una máquina térmica y de Carnot: <math data-tex="\eta = 1 - T_f/T_c"><mi>η</mi><mo>=</mo><mn>1</mn><mo>−</mo><msub><mi>T</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub></math></li>
+        <li>Definición termodinámica de entropía: <math data-tex="dS = \delta q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mi>δ</mi><msub><mi>q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math></li>
+        <li>Entropía de un gas ideal en expansión isotérmica y entropía del entorno</li>
+        <li>Desigualdad de Clausius y sus consecuencias para sistemas aislados y no aislados</li>
+        <li><math data-tex="\Delta S_{\text{universo}} \ge 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>universo</mtext></msub><mo>≥</mo><mn>0</mn></math> como criterio de espontaneidad</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">💡</span> Conceptos clave</h2>
+    <div class="card-grid">
+      <div class="concept-card">
+        <h3>Máquina térmica</h3>
+        <p>Un sistema compuesto: un fluido que recorre un ciclo cuasiestático, y focos a temperatura constante (el mar, la atmósfera, un fluido en ebullición) que no cambian por mucho calor que se les saque o se les entregue. La máquina recibe calor de unos focos, cede a otros, y la diferencia sale como trabajo neto.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Kelvin-Planck</h3>
+        <p>Es imposible una máquina cíclica cuyo <em>único</em> efecto sea extraer calor de un foco y convertirlo íntegramente en trabajo. Siempre hay que ceder algo de calor a un foco más frío: ninguna máquina térmica tiene eficiencia 1.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Clausius</h3>
+        <p>Es imposible un dispositivo cíclico cuyo único efecto sea pasar calor de un cuerpo frío a uno más caliente. Un refrigerador lo hace, pero no como único efecto: consume trabajo. Los dos enunciados son equivalentes: violar uno permite violar el otro.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Teorema de Carnot</h3>
+        <p>Ninguna máquina que opere entre dos focos puede rendir más que una reversible entre esos mismos focos. Consecuencia: todas las máquinas reversibles entre <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math> y <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math> tienen la misma eficiencia, que depende sólo de las temperaturas y no del fluido.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Ciclo de Carnot</h3>
+        <p>Cuatro etapas reversibles: (1) expansión isotérmica A→B a <math data-tex="T_c"><msub><mi>T</mi><mi>c</mi></msub></math>, absorbe <math data-tex="q_c"><msub><mi>q</mi><mi>c</mi></msub></math>; (2) expansión adiabática B→C, <math data-tex="q = 0"><mi>q</mi><mo>=</mo><mn>0</mn></math>; (3) compresión isotérmica C→D a <math data-tex="T_f"><msub><mi>T</mi><mi>f</mi></msub></math>, cede <math data-tex="q_f"><msub><mi>q</mi><mi>f</mi></msub></math>; (4) compresión adiabática D→A, <math data-tex="q = 0"><mi>q</mi><mo>=</mo><mn>0</mn></math>.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Entropía</h3>
+        <p><math data-tex="S"><mi>S</mi></math> es una función de estado definida por <math data-tex="dS = \delta q_{\text{rev}}/T"><mi>d</mi><mi>S</mi><mo>=</mo><mi>δ</mi><msub><mi>q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math>. Para calcular <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> entre dos estados hay que <em>inventar</em> un camino reversible que los una, aunque el proceso real sea irreversible: como <math data-tex="S"><mi>S</mi></math> es de estado, el resultado vale igual.</p>
+      </div>
+      <div class="concept-card">
+        <h3>El entorno como foco</h3>
+        <p>El entorno es tan grande que cualquier calor que reciba lo recibe "reversiblemente" a <math data-tex="T"><mi>T</mi></math> constante. Por eso <math data-tex="\Delta S_{\text{alr}} = q_{\text{alr}}/T_{\text{alr}}"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>alr</mtext></msub><mo>=</mo><msub><mi>q</mi><mtext>alr</mtext></msub><mi>/</mi><msub><mi>T</mi><mtext>alr</mtext></msub></math>, sin importar cuán irreversible haya sido el proceso del sistema.</p>
+      </div>
+      <div class="concept-card">
+        <h3>Sistemas aislados</h3>
+        <p>Si no entra calor, la desigualdad de Clausius da <math data-tex="dS \ge 0"><mi>d</mi><mi>S</mi><mo>≥</mo><mn>0</mn></math>. La entropía de un sistema aislado crece mientras ocurran cambios y alcanza un máximo en el equilibrio; nunca disminuye en un cambio espontáneo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">📐</span> Fórmulas fundamentales</h2>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Eficiencia de una máquina térmica</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_10_1.svg" alt=""></div>
+      <div class="formula-desc">
+        Trabajo producido sobre calor absorbido del foco caliente. Con el convenio del curso (<math data-tex="W &gt; 0"><mi>W</mi><mo>></mo><mn>0</mn></math> producido por el sistema), en un ciclo <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math> y por lo tanto <math data-tex="W = q_c + q_f"><mi>W</mi><mo>=</mo><msub><mi>q</mi><mi>c</mi></msub><mo>+</mo><msub><mi>q</mi><mi>f</mi></msub></math>, con <math data-tex="q_f &lt; 0"><msub><mi>q</mi><mi>f</mi></msub><mo>&lt;</mo><mn>0</mn></math> porque es calor cedido.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Eficiencia de Carnot</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_10_2.svg" alt=""></div>
+      <div class="formula-desc">
+        La relación <math data-tex="q_c/T_c = -q_f/T_f"><msub><mi>q</mi><mi>c</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub><mo>=</mo><mo form="prefix">−</mo><msub><mi>q</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>f</mi></msub></math> sale de las dos isotermas y las dos adiabáticas de un gas ideal. Es la cota superior para cualquier máquina entre esos focos, y sólo vale 1 si <math data-tex="T_f = 0"><msub><mi>T</mi><mi>f</mi></msub><mo>=</mo><mn>0</mn></math> K.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Definición termodinámica de entropía</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_10_3.svg" alt=""></div>
+      <div class="formula-desc">
+        La relación <math data-tex="q_c/T_c + q_f/T_f = 0"><msub><mi>q</mi><mi>c</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub><mo>+</mo><msub><mi>q</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>f</mi></msub><mo>=</mo><mn>0</mn></math> en el ciclo de Carnot dice que <math data-tex="\delta q_{\text{rev}}/T"><mi>δ</mi><msub><mi>q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math> suma cero en un ciclo reversible: es el diferencial de una función de estado.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Gas ideal en expansión isotérmica</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_10_4.svg" alt=""></div>
+      <div class="formula-desc">
+        Como <math data-tex="\Delta U = 0"><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mn>0</mn></math> a <math data-tex="T"><mi>T</mi></math> constante, <math data-tex="q_{\text{rev}} = W_{\text{rev}} = nRT\ln(V_f/V_i)"><msub><mi>q</mi><mtext>rev</mtext></msub><mo>=</mo><msub><mi>W</mi><mtext>rev</mtext></msub><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>f</mi></msub><mi>/</mi><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></math>, y se divide por <math data-tex="T"><mi>T</mi></math>. Expandirse aumenta la entropía; comprimirse la disminuye.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Entropía del entorno</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_10_5.svg" alt=""></div>
+      <div class="formula-desc">
+        <math data-tex="q_{\text{alr}} = -q_{\text{sis}}"><msub><mi>q</mi><mtext>alr</mtext></msub><mo>=</mo><mo form="prefix">−</mo><msub><mi>q</mi><mtext>sis</mtext></msub></math>. A presión constante, <math data-tex="q_{\text{sis}} = \Delta H"><msub><mi>q</mi><mtext>sis</mtext></msub><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>H</mi></math>, así que <math data-tex="\Delta S_{\text{alr}} = -\Delta H/T"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>alr</mtext></msub><mo>=</mo><mo form="prefix">−</mo><mi mathvariant="normal">Δ</mi><mi>H</mi><mi>/</mi><mi>T</mi></math>. Ejemplo de la clase: formar 1 mol de <math data-tex="\mathrm{N_2O_4}"><msub><mi mathvariant="normal">N</mi><mn>2</mn></msub><msub><mi mathvariant="normal">O</mi><mn>4</mn></msub></math> desde 2 mol de <math data-tex="\mathrm{NO_2}"><mi mathvariant="normal">N</mi><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub></math> a 298 K; con <math data-tex="\Delta H^\circ \approx -57{,}2"><mi mathvariant="normal">Δ</mi><msup><mi>H</mi><mo>∘</mo></msup><mo>≈</mo><mo form="prefix">−</mo><mn>57</mn><mtext>,</mtext><mn>2</mn></math> kJ resulta <math data-tex="\Delta S_{\text{alr}} \approx +192"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>alr</mtext></msub><mo>≈</mo><mo form="prefix">+</mo><mn>192</mn></math> J/K.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Desigualdad de Clausius</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_10_6.svg" alt=""></div>
+      <div class="formula-desc">
+        El trabajo producido es máximo en un proceso reversible. Como <math data-tex="U"><mi>U</mi></math> es de estado, ambos caminos dan el mismo <math data-tex="\Delta U"><mi mathvariant="normal">Δ</mi><mi>U</mi></math>; por lo tanto un camino reversible también absorbe más calor. Dividiendo por <math data-tex="T"><mi>T</mi></math> queda la desigualdad, con igualdad sólo en el caso reversible.
+      </div>
+    </div>
+
+    <div class="formula-block u5">
+      <div class="formula-label">Segunda ley: criterio de espontaneidad</div>
+      <div class="formula-math"><img class="typst-formula" src="clase_10_7.svg" alt=""></div>
+      <div class="formula-desc">
+        <math data-tex="&gt; 0"><mo form="infix" lspace="0em">></mo><mn>0</mn></math>: proceso irreversible (espontáneo) · <math data-tex="= 0"><mo form="infix" lspace="0em">=</mo><mn>0</mn></math>: reversible (equilibrio) · <math data-tex="&lt; 0"><mo form="infix" lspace="0em">&lt;</mo><mn>0</mn></math>: imposible. El criterio es sobre el <em>universo</em>; la entropía del sistema por sí sola puede bajar.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🎯</span> Qué hay que entender</h2>
+    <div class="tip-box">
+      <div class="tip-title">✦ Lo esencial de la clase 10</div>
+      <ul>
+        <li>La primera ley dice qué cambios están <em>permitidos</em> (conservan <math data-tex="U"><mi>U</mi></math> del sistema aislado); la segunda dice cuáles de ellos son <em>espontáneos</em>. Son preguntas distintas.</li>
+        <li><math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> del sistema se calcula siempre por un camino reversible imaginado, aunque el proceso real sea irreversible. El calor del proceso real no sirve para calcular <math data-tex="\Delta S_{\text{sis}}"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>sis</mtext></msub></math> si el proceso es irreversible.</li>
+        <li><math data-tex="\Delta S_{\text{alr}}"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>alr</mtext></msub></math>, en cambio, se calcula con el calor <em>real</em> que recibe el entorno, porque el entorno siempre lo recibe reversiblemente.</li>
+        <li>Un <math data-tex="\Delta S_{\text{sis}} &lt; 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>sis</mtext></msub><mo>&lt;</mo><mn>0</mn></math> no prohíbe nada: el agua se congela espontáneamente bajo 0 °C, porque el calor liberado hace crecer <math data-tex="S"><mi>S</mi></math> del entorno más de lo que baja <math data-tex="S"><mi>S</mi></math> del sistema.</li>
+        <li>La eficiencia de Carnot usa temperaturas absolutas. Con grados Celsius el resultado no tiene sentido.</li>
+        <li>Ojo con el signo de <math data-tex="q_f"><msub><mi>q</mi><mi>f</mi></msub></math>: es negativo (calor que sale del fluido). Con el convenio del curso, <math data-tex="W = q_c + q_f = q_c - |q_f|"><mi>W</mi><mo>=</mo><msub><mi>q</mi><mi>c</mi></msub><mo>+</mo><msub><mi>q</mi><mi>f</mi></msub><mo>=</mo><msub><mi>q</mi><mi>c</mi></msub><mo>−</mo><mrow><mo>|</mo><msub><mi>q</mi><mi>f</mi></msub><mo>|</mo></mrow></math>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="section-icon">🧠</span> Quiz de repaso</h2>
+    <div class="quiz">
+
+      <div class="quiz-q" id="q10_1" data-correct="2">
+        <div class="quiz-question">1. Una máquina de Carnot opera entre 500 K y 300 K. ¿Cuál es su eficiencia?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q10_1" value="0"><span class="opt-letter">A</span><span class="opt-text">0,6</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_1" value="1"><span class="opt-letter">B</span><span class="opt-text">1,67</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_1" value="2"><span class="opt-letter">C</span><span class="opt-text">0,4</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_1" value="3"><span class="opt-letter">D</span><span class="opt-text">Depende del gas que use la máquina</span></label>
+        </div>
+        <script type="text/explanation" id="q10_1-exp"><math data-tex="\eta = 1 - T_f/T_c = 1 - 300/500 = 0{,}4"><mi>η</mi><mo>=</mo><mn>1</mn><mo>−</mo><msub><mi>T</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub><mo>=</mo><mn>1</mn><mo>−</mo><mn>300</mn><mi>/</mi><mn>500</mn><mo>=</mo><mn>0</mn><mtext>,</mtext><mn>4</mn></math>. La opción A es <math data-tex="T_f/T_c"><msub><mi>T</mi><mi>f</mi></msub><mi>/</mi><msub><mi>T</mi><mi>c</mi></msub></math>, la fracción del calor que se <em>cede</em> al foco frío. B es mayor que 1, imposible por Kelvin-Planck. D es justamente lo que el teorema de Carnot descarta: toda máquina reversible entre los mismos focos tiene la misma eficiencia.</script>
+        <div class="quiz-feedback" id="q10_1-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q10_2" data-correct="1">
+        <div class="quiz-question">2. Un gas se expande irreversiblemente entre dos estados. ¿Cómo se calcula su <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math>?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q10_2" value="0"><span class="opt-letter">A</span><span class="opt-text">Dividiendo el calor real del proceso por la temperatura</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="1"><span class="opt-letter">B</span><span class="opt-text">Integrando <math data-tex="\delta q_{\text{rev}}/T"><mi>δ</mi><msub><mi>q</mi><mtext>rev</mtext></msub><mi>/</mi><mi>T</mi></math> por cualquier camino reversible entre los mismos estados</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="2"><span class="opt-letter">C</span><span class="opt-text">Es cero, porque el proceso es irreversible</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_2" value="3"><span class="opt-letter">D</span><span class="opt-text">No se puede calcular sin conocer el camino real</span></label>
+        </div>
+        <script type="text/explanation" id="q10_2-exp"><math data-tex="S"><mi>S</mi></math> es función de estado: <math data-tex="\Delta S"><mi mathvariant="normal">Δ</mi><mi>S</mi></math> depende sólo de los estados inicial y final. La definición exige un camino reversible, así que se inventa uno que conecte los mismos estados. El calor real no sirve (A): por Clausius, <math data-tex="\delta q_{\text{irrev}}/T"><mi>δ</mi><msub><mi>q</mi><mtext>irrev</mtext></msub><mi>/</mi><mi>T</mi></math> es <em>menor</em> que <math data-tex="dS"><mi>d</mi><mi>S</mi></math>. Por eso tampoco hace falta conocer el camino real (D).</script>
+        <div class="quiz-feedback" id="q10_2-fb"></div>
+      </div>
+
+      <div class="quiz-q" id="q10_3" data-correct="3">
+        <div class="quiz-question">3. En un proceso espontáneo a <math data-tex="P"><mi>P</mi></math> constante, el sistema tiene <math data-tex="\Delta S_{\text{sis}} &lt; 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>sis</mtext></msub><mo>&lt;</mo><mn>0</mn></math>. ¿Qué se puede concluir?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q10_3" value="0"><span class="opt-letter">A</span><span class="opt-text">Que el proceso viola la segunda ley</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_3" value="1"><span class="opt-letter">B</span><span class="opt-text">Que el proceso es reversible</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_3" value="2"><span class="opt-letter">C</span><span class="opt-text">Que el proceso es endotérmico</span></label>
+          <label class="quiz-option"><input type="radio" name="q10_3" value="3"><span class="opt-letter">D</span><span class="opt-text">Que es exotérmico, y <math data-tex="-\Delta H/T"><mo>−</mo><mi mathvariant="normal">Δ</mi><mi>H</mi><mi>/</mi><mi>T</mi></math> supera a <math data-tex="|\Delta S_{\text{sis}}|"><mrow><mo>|</mo><mrow><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>sis</mtext></msub></mrow><mo>|</mo></mrow></math></span></label>
+        </div>
+        <script type="text/explanation" id="q10_3-exp">La segunda ley exige <math data-tex="\Delta S_{\text{sis}} + \Delta S_{\text{alr}} \ge 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>sis</mtext></msub><mo>+</mo><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>alr</mtext></msub><mo>≥</mo><mn>0</mn></math>. Si <math data-tex="\Delta S_{\text{sis}} &lt; 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>sis</mtext></msub><mo>&lt;</mo><mn>0</mn></math>, el entorno tiene que compensar con <math data-tex="\Delta S_{\text{alr}} = -\Delta H/T &gt; 0"><mi mathvariant="normal">Δ</mi><msub><mi>S</mi><mtext>alr</mtext></msub><mo>=</mo><mo form="prefix">−</mo><mi mathvariant="normal">Δ</mi><mi>H</mi><mi>/</mi><mi>T</mi><mo>></mo><mn>0</mn></math>, lo que requiere <math data-tex="\Delta H &lt; 0"><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>&lt;</mo><mn>0</mn></math>: el sistema libera calor. Es el caso del agua que se congela bajo 0 °C.</script>
+        <div class="quiz-feedback" id="q10_3-fb"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page-nav">
+    <a href="../aux_6/"><div class="nav-dir">← Anterior</div><div class="nav-title">Ciclos y Entropía</div></a>
+    <a href="../aux_7/" class="next"><div class="nav-dir">Siguiente →</div><div class="nav-title">Segunda Ley</div></a>
+  </div>
+
+</div>
+</main>
+</body>
+</html>

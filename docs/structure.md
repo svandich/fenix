@@ -33,8 +33,8 @@ repo-root/
 │
 ├── termoquimica/            ← Termodinámica Química (IQ2212, DIQBM)
 │   ├── index.html
-│   ├── clase_N/             ← Cátedras 1–9
-│   └── aux_N/               ← Auxiliares 1–6
+│   ├── clase_N/             ← Cátedras 1–11
+│   └── aux_N/               ← Auxiliares 1–7
 │
 ├── typst/                   ← Fuentes de las fórmulas
 │   ├── electro/aux_N.typ
@@ -49,7 +49,7 @@ repo-root/
 │   ├── latex2typst.py       ← Traduce el LaTeX del math inline a sintaxis Typst
 │   ├── inline-mathml.py     ← Hornea el math inline ($...$) como MathML
 │   ├── courses.py           ← Manifiesto: fuente de verdad de sidebar y prev/next
-│   └── sync-nav.py          ← Regenera sidebar y prev/next en las 82 páginas
+│   └── sync-nav.py          ← Regenera sidebar y prev/next en las 85 páginas
 │
 ├── build.sh                 ← ./build.sh [curso] — Typst → SVG + math inline → MathML
 │
@@ -99,7 +99,7 @@ Los SVGs de fórmulas viven **junto** al `index.html` que los usa, así que se r
 |-------|--------------------|-------|
 | `electro/` | `aux_N/` | 1–25 |
 | `termo/` | `cat_N/` · `cc_N/` | 1–28 · 1–11 |
-| `termoquimica/` | `clase_N/` · `aux_N/` | 1–9 · 1–6 |
+| `termoquimica/` | `clase_N/` · `aux_N/` | 1–11 · 1–7 |
 | `basicos/` | — (página única) | — |
 
 `N` va sin cero a la izquierda. El SVG número `P` del archivo `<página>.typ` se llama `<página>_P.svg`.
