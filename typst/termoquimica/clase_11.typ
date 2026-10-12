@@ -47,7 +47,7 @@ lr(( (partial S)/(partial V) ))_T = lr(( (partial p)/(partial T) ))_V quad quad 
 
 #pagebreak()
 
-$ d w_"rev" = -d A_T quad => quad |w_"máx"| = |Delta A_T| quad quad |w_(e,"máx")| = |Delta G_(T,p)| $
+$ delta w_"rev" = -d A_T quad => quad |w_"máx"| = |Delta A_T| quad quad |w_(e,"máx")| = |Delta G_(T,p)| $
 
 #pagebreak()
 
